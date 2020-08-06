@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers // Sharon y Vivian 
 
 ## Índice
 
