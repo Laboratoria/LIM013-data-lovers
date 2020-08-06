@@ -1,3 +1,3 @@
-# Data Lovers
+# Data Lovers.
 
 Realizaremos un cambio.
