@@ -13,14 +13,14 @@
     "deploy": "gh-pages -d src"
   },
   "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-jest": "^24.9.0",
-    "eslint": "^5.9.0",
-    "gh-pages": "^2.1.1",
+    "eslint": "^5.16.0",
+    "gh-pages": "^2.2.0",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0",
     "opener": "^1.5.1",
-    "serve": "^11.0.0"
+    "serve": "^11.3.2"
   }
 }

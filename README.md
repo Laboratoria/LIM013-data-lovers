@@ -4,7 +4,7 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [3. Investigación UX](#3-investigación-ux)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
@@ -16,115 +16,75 @@
 
 ## 1. Preámbulo
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+El humor negro, la ciencia ficción, la sátira y muchas escenas existencialistas son los ingredientes perfectos que hacen de “Rick y Morty” una de las series más atractivas en los últimos años y una opción que cada día está conquistado a más personas en el mundo.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+“Rick y Morty” también contiene muchas escenas que parten de lo absurdo, de lo cruel y lo horrible, pero que gustan porque nadie las vio venir. “Rick siempre sabe más que todos en la audiencia. Todos los que ven el show han estado en esa posición”, recalcó Harmon. Además, a muchos de los televidentes les gusta Rick porque a pesar de su rebeldía y del egoísmo en su máxima expresión, al final siempre gana.
 
 ## 2. Resumen del proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+En este  ̈Data lovers ̈ seleccionamos el tema Rick and Morty, una serie de Netflix estadounidense animada para adultos. Nuestro principal Objetivo es construir una guía digital para que los usuarios puedan buscar y filtrar de forma efectiva los datos de los personajes, los capítulos, entre otros, para lograrlo realizamos entrevistas y definimos las necesidades de los usuarios.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+## 3. Investigación UX
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+Primero elaboramos nuestro arquetipo y qué necesita saber o ver exactamente; luego construimos una interfaz que le va ayudar a interactuar y entender mejor esos datos. Nuestra página web permitirá visualizar la data, filtrarla, ordenarla
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+### Arquetipo:
 
-Estos son datos que te proponemos:
+### Problema a solucionar:
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+Debido a la gran magintud de data, en ocasiones se complica la  búsqueda de los diversos datos de los personajes y la serie de Rick y Morty, es por ello que se plantea una interfaz intuitiva y que satisfaga las necesidades de los usuarios.
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+### Objetivos:
 
-## 3. Objetivos de aprendizaje
+Lograr que el usuario pueda buscar y filtrar el contenido con éxito.
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+* Que los filtros sean intuitivos para el usuario.
+* Que la página sea usable.
+* Que sea una interfaz amigable para el usuario.
 
-### HTML y CSS
+### Modelo de las entrevistas a usuarios (Prototipo de baja fidelidad):
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-* [ ] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* Duración: De 20 a 30 minutos
+* Medios de comunicación: WhatsApp y Zoom.
 
-### DOM y Web APIs
+#### Primera parte:
 
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
+Presentación de nosotras y explicarle de que trata la entrevista. (Lenguaje casual).
 
-### JavaScript
+Preguntas para conocer al usuario:
 
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
-* [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
+* Háblanos un poco de ti
+* ¿Cuéntanos a que te dedicas?
+* ¿Qué haces en tus tiempos libres?
+* ¿Cuál es tu hobbie?
 
-### Testing
+#### Segunda parte:
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* ¿Con qué asocias a Rick y Morty?
+* ¿Por qué te gusta Rick y Morty?
+* ¿Conoces alguna plataforma web que te brinde información adicional sobre la serie?¿Cuál es?
+* ¿Qué datos de los personajes más te interesan saber?¿Por qué?
+* ¿Con qué característica reconoces de tu personaje favorito?
 
-### Estructura del código y guía de estilo
+#### Segunda parte:
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+Test de los prototipos de baja fidelidad.
 
-### Git y GitHub
+Lista de Tareas:
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |tags)
+1. Ver a todos los personajes de la serie.
+2. Filtrar a los personajes por especies (Humanos y Aliens).
+3. Ordenarlos de la A a la Z.
+4. Buscar solo al personaje de Rick.
+5. Buscar la lista de los capítulos de la serie.
+6. Seleccionar el capítulo 1 de la primera temporada.
 
-### UX
+* En base al diseño mostrado ¿Cuándo utilizarías esta web?
+* ¿Cómo te gustaría ordenar la lista de personajes en tu búsqueda?
+* ¿Qué dato o elemento adicional te gustaría que aparezca?
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-* [ ] Planear y ejecutar tests de usabilidad.
+### Diseños de prototipos:
 
 ## 4. Consideraciones generales
 
