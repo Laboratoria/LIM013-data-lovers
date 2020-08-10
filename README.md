@@ -86,6 +86,8 @@ Lista de Tareas:
 
 ### Diseños de prototipos:
 
+### Entrevistados
+
 ## 4. Consideraciones generales
 
 * Este proyecto se debe resolver en duplas.
