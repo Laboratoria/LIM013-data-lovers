@@ -38,6 +38,16 @@ Lograr que el usuario pueda buscar y filtrar el contenido con éxito.
 * Que la página sea usable.
 * Que sea una interfaz amigable para el usuario.
 
+### Userflow:
+
+![](img-readme/userflow.jpg)
+
+### Diseños de prototipos:
+
+![](img-readme/1proto.jpg)
+
+![](img-readme/2proto.jpg)
+
 ### Modelo de las entrevistas a usuarios (Prototipo de baja fidelidad):
 
 * Duración: De 20 a 30 minutos
@@ -45,9 +55,7 @@ Lograr que el usuario pueda buscar y filtrar el contenido con éxito.
 
 #### Primera parte:
 
-Presentación de nosotras y explicarle de que trata la entrevista. (Lenguaje casual).
-
-Preguntas para conocer al usuario:
+Presentación de nosotras y explicarle de que trata la entrevista. (Lenguaje casual). Preguntas para conocer al usuario:
 
 * Háblanos un poco de ti
 * ¿Cuéntanos a que te dedicas?
@@ -62,11 +70,11 @@ Preguntas para conocer al usuario:
 * ¿Qué datos de los personajes más te interesan saber?¿Por qué?
 * ¿Con qué característica reconoces de tu personaje favorito?
 
-#### Segunda parte:
+#### Tercera parte:
 
 Test de los prototipos de baja fidelidad.
 
-Lista de Tareas:
+Lista de Tareas (Prototipos):
 
 1. Ver a todos los personajes de la serie.
 2. Filtrar a los personajes por especies (Humanos y Aliens).
@@ -79,36 +87,29 @@ Lista de Tareas:
 * ¿Cómo te gustaría ordenar la lista de personajes en tu búsqueda?
 * ¿Qué dato o elemento adicional te gustaría que aparezca?
 
-### Userflow:
-
-![](img-readme/userflow.jpg)
-
-### Diseños de prototipos:
-
-![](img-readme/1proto.jpg)
 
 ### Entrevistados
 
-* Entrevistado 1: Erick Olivas
-- Edad: 33
-- Profesión: Lead UI
-- Medio de entrevista zoom.
-- Evidencia: Grabación de entrevista.
+Entrevistado 1: Erick Olivas
+* Edad: 33
+* Profesión: Lead UI
+* Medio de entrevista zoom.
+* Evidencia: Grabación de entrevista.
 
-* Entrevistado 2: Fares Akel
-- Profesión: Front end
-- Medio de entrevista zoom.
-- Evidencia: Grabación de entrevista.
+Entrevistado 2: Fares Akel
+* Profesión: Front end
+* Medio de entrevista zoom.
+* Evidencia: Grabación de entrevista.
 
-* Entrevistado 3: Ximena Bedoya
-- Profesión: Especialista en marketing
-- Medio de entrevista zoom.
-- Evidencia: Grabación de entrevista.
+Entrevistado 3: Ximena Bedoya
+* Profesión: Especialista en marketing
+* Medio de entrevista zoom.
+* Evidencia: Grabación de entrevista.
 
-* Entrevistado 4:Esau Ocrospoma
-- Profesión: Ingeniero en Software.
-- Medio de entrevista whatsApp.
-- Evidencia: screenshop.
+Entrevistado 4: Esau Ocrospoma
+* Profesión: Ingeniero en Software.
+* Medio de entrevista whatsApp.
+* Evidencia: Screenshop.
 
 ![](img-readme/whatsApp.jpg)
 
@@ -124,10 +125,10 @@ Lista de Tareas:
 
 ### Resultados del test del prototipo:
 
-- El flujo fue entendido por los usuarios.
+* El flujo fue entendido por los usuarios.
 
-- En la versión web cambiar la hamburguesa por un menú visible.
+* En la versión web cambiar la hamburguesa por un menú visible.
 
-- Colocar los filtros visibles, pero sin que invadan la página web.
+* Colocar los filtros visibles, pero sin que invadan la página web.
 
-- Colocar boton ver mas (a partir de 10 perfiles del personaje).
+* Colocar boton ver mas (a partir de 10 perfiles del personaje).
