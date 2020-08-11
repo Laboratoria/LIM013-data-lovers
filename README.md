@@ -83,5 +83,7 @@ Lista de Tareas:
 
 ### Diseños de prototipos:
 
+![](img-readme/1proto.jpg)
+
 ### Entrevistados
 
