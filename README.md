@@ -87,3 +87,45 @@ Lista de Tareas:
 
 ### Entrevistados
 
+Entrevistado 1: Erick Olivas
+Edad: 33
+Profesión: Lead UI
+Medio de entrevista zoom.
+Evidencia: Grabación de entrevista.
+
+Entrevistado 2: Fares Akel
+Profesión: Front end
+Medio de entrevista zoom.
+Evidencia: Grabación de entrevista.
+
+Entrevistado 3: Ximena Bedoya
+Profesión: Especialista en marketing
+Medio de entrevista zoom.
+Evidencia: Grabación de entrevista.
+
+Entrevistado 4:Esau Ocrospoma
+Profesión: Ingeniero en Software.
+Medio de entrevista whatsApp.
+Evidencia: screenshop.
+
+![](img-readme/userflow.jpg)
+
+### Conclusiones de las entrevistas:
+
+A los entrevistados les gusta Rick y Morty por su humor negro y por la temática científica y futurista.
+
+No han encontrado una web que le brinde información de los personajes y de las series, solo vídeos en Youtube.
+
+A los entrevistados les gustaría ver los capítulos dónde salen los personajes.
+
+Les gustaría tener información sobre datos curiosos de la serie.
+
+### Resultados del test del prototipo:
+
+- El flujo fue entendido por los usuarios.
+
+- En la versión web cambiar la hamburguesa por un menú visible.
+
+- Colocar los filtros visibles, pero sin que invadan la página web.
+
+- Colocar boton ver mas (a partir de 10 perfiles del personaje).
