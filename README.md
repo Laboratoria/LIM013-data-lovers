@@ -108,7 +108,7 @@ Profesión: Ingeniero en Software.
 Medio de entrevista whatsApp.
 Evidencia: screenshop.
 
-![](img-readme/userflow.jpg)
+![](img-readme/whatsApp.jpg)
 
 ### Conclusiones de las entrevistas:
 
