@@ -55,9 +55,7 @@ Lograr que el usuario pueda buscar y filtrar el contenido con éxito.
 
 #### Primera parte:
 
-Presentación de nosotras y explicarle de que trata la entrevista. (Lenguaje casual).
-
-Preguntas para conocer al usuario:
+Presentación de nosotras y explicarle de que trata la entrevista. (Lenguaje casual). Preguntas para conocer al usuario:
 
 * Háblanos un poco de ti
 * ¿Cuéntanos a que te dedicas?
@@ -72,7 +70,7 @@ Preguntas para conocer al usuario:
 * ¿Qué datos de los personajes más te interesan saber?¿Por qué?
 * ¿Con qué característica reconoces de tu personaje favorito?
 
-#### Segunda parte:
+#### Tercera parte:
 
 Test de los prototipos de baja fidelidad.
 
