@@ -17,10 +17,25 @@
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-jest": "^24.9.0",
     "eslint": "^5.16.0",
+    "express": "^4.17.1",
     "gh-pages": "^2.2.0",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0",
     "opener": "^1.5.1",
     "serve": "^11.3.2"
-  }
+  },
+  "description": "## Índice",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SinaisAna/LIM013-data-lovers.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/SinaisAna/LIM013-data-lovers/issues"
+  },
+  "homepage": "https://github.com/SinaisAna/LIM013-data-lovers#readme"
 }
