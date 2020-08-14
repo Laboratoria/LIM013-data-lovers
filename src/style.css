@@ -1,13 +1,59 @@
-.logolol{
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.logo{
     width: 200px;
     height: 100px;
 }
-.img_youtube{
+.redSocial{
     width: 20px;
     height: 20px;
 }
-.img_facebook{
-    width: 20px;
-    height: 20px;
+.container{
+    width: 90%;
+    /*Para que no pase los 1000 px de ancho*/
+    max-width:1000px;
+    margin:auto;
+    /*Flex*/
+    display:flex;
+    /*flex-direction:row;
+    flex-wrap: wrap; ó en lugar de estas propiedades podemos colocar un atajo
+    el cual sería flex-flow:row wrap*/
+    flex-flow:row wrap;
 }
+/*El header es el padre de logo y menu de navegación y es hijo del container*/
+header{
+    background: black;
+    /*Agregamos 100% de with para que abarque todo el ancho del documento*/
+    width:100%;
+    padding: 20px;
+    /*Flex*/
+    /*Le ponemos un display flex porque el header va a ser un elemento padre*/
+    display: flex;
+    justify-content: space-between;
+    /*Para centrar verticalmente el nav usamos align-items: center;*/
+    align-items: center;
+    flex-direction: row;
+    /*Coloca debajo los elementos conforme vayan reduciendo el tamaño de la pantalla*/
+    flex-wrap: wrap;
+}
+header nav{
+    width: 50%;
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav a {
+    background: black;
+    color: goldenrod;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+    /**/
+}
+
 
