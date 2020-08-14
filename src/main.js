@@ -1,12 +1,18 @@
 //import { example } from './data.js';
 
 const bienvenido =()=>{
-	document.querySelector('#conter').style.display="none";
-	document.querySelector('#contenido').style.display="block";
+	document.querySelector('#conter').classList.add("ocultar");
+	document.querySelector('#contenido').classList.remove("ocultar");
+	document.querySelector('#content-nav').classList.remove("ocultar");
 	console.log(document.querySelector('#contenido'))
 }
+const btnIntro= document.getElementById("btnIntro")
+const btnIngresar = document.createElement("button");
+btnIngresar.textContent ="Ingresar";
+btnIngresar.addEventListener("click", bienvenido);
+btnIntro.appendChild(btnIngresar);
 
-document.querySelector('#primerBoton').addEventListener('click',bienvenido);
+//document.querySelector('#primerBoton').addEventListener('click',bienvenido);
 
 const paginaPrin =()=>{
 	document.querySelector('#contenido').style.display="block";
