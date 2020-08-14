@@ -5,15 +5,15 @@
 }
 @font-face{
     font-family: FFMarkPro;
-    src: url("FontFont_FF.Mark.Pro.otf");
+    src: url("../resources/FontFont_FF.Mark.Pro.otf");
 }
 @font-face{
     font-family: FFMarkProBold;
-    src: url("FontFont_FF.Mark.Pro.Bold.otf");
+    src: url("../resources/FontFont_FF.Mark.Pro.Bold.otf");
 }
 @font-face{
     font-family: FFMarkProBlack;
-    src: url("FontFont_FF.Mark.Pro.Black.otf");
+    src: url("../resources/FontFont_FF.Mark.Pro.Black.otf");
 }
 
 body{
@@ -77,16 +77,29 @@ header nav a{
     flex-grow: 1;
 }
 .main{
-   
     padding: 20px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 70%;
+    height: auto;
 }
 .main img{
-    padding:50px 20px;
-    width: 600px;
-    height: auto;
+    padding:10px 0px;
+    width: 900px;
+    height: 650px;
+}
+
+.main a{
+    background:rgb(51, 235, 235,0.5);
+    color: #fff;
+    padding: 20px;
+    width: 400px;
+    top: 70%;
+    left: 15%;
+    text-decoration: none;
+    position: absolute;
+    font-size:12px;
+    text-align: center;
 }
 
 aside{
@@ -147,4 +160,21 @@ footer i{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+@media screen and (max-width:1366px){
+    .main img{
+        width: 800px;
+        height: 390px;
+    }
+}
+@media screen and (max-width:1000px){
+    .main img{
+        width: 600px;
+        height: 590px;    
+    }
+    .main a{
+        top: 70%;
+        left: 10%;
+    }
+
 }
