@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: FFMarkPro;
+    src: url("../resources/FontFont_FF.Mark.Pro.otf");
+}
+@font-face{
+    font-family: FFMarkProBold;
+    src: url("../resources/FontFont_FF.Mark.Pro.Bold.otf");
+}
+@font-face{
+    font-family: FFMarkProBlack;
+    src: url("../resources/FontFont_FF.Mark.Pro.Black.otf");
+}
+
+body{
+    /* Ruta relativa o completa a la imagen */
+    background-image: url(../imagenes/fondo.png);
+    /* Centramos el fondo horizontal y verticalmente */
+    background-position: center center;
+    /* El fonde no se repite */
+    background-repeat: no-repeat;
+    /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
+    background-attachment: fixed;
+    /* El fonde se re-escala automáticamente */
+    background-size: cover;
+    /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
+    background-color: #FFF;
+}
+.contenedor{
+    width: 100%;
+    font-family: FFMarkPro;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+header{
+    background: #000;
+    width: 100%;
+    padding: 0 10px;
+    font-family: FFMarkProBlack;
+
+    /*FLEX*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+header .logo img{
+    width: 200px;
+    vertical-align: top;
+}
+header nav{
+    width: 50%;
+    
+    /*FLEX*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav a{
+    color:#986E1E;
+    text-align: center;
+    text-decoration: none;
+   
+    font-weight: 900;
+
+    /*FLEX HIJO*/
+    flex-grow: 1;
+}
+.main{
+    padding: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 70%;
+    height: auto;
+}
+.main img{
+    padding:10px 0px;
+    width: 900px;
+    height: 650px;
+}
+
+.main a{
+    background:rgb(51, 235, 235,0.5);
+    color: #fff;
+    padding: 20px;
+    width: 400px;
+    top: 70%;
+    left: 15%;
+    text-decoration: none;
+    position: absolute;
+    font-size:12px;
+    text-align: center;
+}
+
+aside{
+    /* background: #212E33; */
+    padding: 20px;
+    flex: 1 1 30%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+aside h2{
+    text-align: center;
+    color: #fff;
+}
+aside .guia p{
+    background: #212E33;
+    height: 50px;
+    margin: 10px;
+    padding:10px;
+}
+aside .guia a{
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+footer{
+    background: #986E1E;  
+    width: 100%;
+    padding:5px 10px;
+    /*FLEX*/
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+footer .nombres{
+   line-height: 50px;
+   color:#fff;
+}
+footer .social a{
+    flex-grow: 1;
+    color: #986E1E;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+} 
+footer i{
+    background:#000;
+    border-radius: 50%;
+    padding: 15px 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@media screen and (max-width:1366px){
+    .main img{
+        width: 800px;
+        height: 390px;
+    }
+}
+@media screen and (max-width:1000px){
+    .main img{
+        width: 600px;
+        height: 590px;    
+    }
+    .main a{
+        top: 70%;
+        left: 10%;
+    }
+
+}
