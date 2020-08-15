@@ -1,0 +1,41 @@
+/* Inicio de estilos de header */
+@media (min-width:800px){
+.menu-toggle{
+    display: none;
+} 
+
+.menu{
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    margin-right: 80px;
+    margin-top: 20px;
+    clip-path: initial;
+} 
+
+.menu li{
+    display: inline-block;
+    border: none;
+}
+
+.menu a{
+    padding: 0;
+    margin-left: 3em;
+    color: #6A6A6A;
+    font-weight: 600;
+}
+
+.menu a:hover{
+    color: #464655;
+    background: transparent;
+}
+
+.menu a:visited{
+    color: #619369;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+}
+
+}
+/* Fin de estilos de header */
