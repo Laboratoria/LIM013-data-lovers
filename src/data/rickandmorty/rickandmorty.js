@@ -1,4 +1,4 @@
-export default {
+window.rickAndMorty = {
   "info": {
       "count": 493,
       "pages": 25,

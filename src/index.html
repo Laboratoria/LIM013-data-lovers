@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href=" fontello.css">
   </head>
   <body>
+    <!-- DATA -->
+   <script src="./data/rickandmorty/rickandmorty.js"></script>
 
   	<!-- PANTALLA 1 -->
         <section class="conter" id="conter">
@@ -16,16 +19,59 @@
     	</section>
 
      <!-- PANTALLA 2 -->
+    
 
-        <section class="contenido" id="contenido">
-        	<input type="search" name="" placeholder="buscar">
-          <input type="submit" value="Buscar">
-        	<input type="button" value="Personajes" class="Personajes" >
-        	<input type="button" value="capitulos" class="capitulos" >
-        	<input type="button" value="Creditos" class="Creditos" >
 
-        </section>
+    <header class="ocultar" id="contenedor">
+    <div class="contenedor" >
+    <img src="imagen/morty.jpg">
+    <input type="checkbox" id="menu-bar">
+    <label class="icon-menu" for="menu-bar"></label>
+      <nav class="menu">
+          <a herf="">Personajes</a>
+          <a herf="">Capitulos</a>
+          <a herf="">Creditos</a>
+      </nav>
+    </div>
+    </header>
 
+     <section class="ocultar" id="box">
+       <div class="box">
+         <form class="btn">
+           <input type="button" class="btn" id="especies" value="Especies">
+           <input type="button" class="btn" id="origen" value="Origen">
+           <input type="button" class="btn" id="estado" value="Estado">
+           <input type="button" class="btn" id="genero" value="Genero">
+         </form>
+
+       </div>
+     </section>
+
+
+     <section class="ocultar" id="check">
+      <div class="check">
+        <label><input type="" id="human" value="Humanos">Humanos</label>
+        <label><input type="checkbox" id="alien" value="Alien">Aliens</label>
+        <label><input type="checkbox" id="vampire" value="Vampiro">Vampiro</label>
+        <label><input type="checkbox" id="humanoid" value="humanoide">Humanoide</label>
+        <label><input type="checkbox" id="dead" value="Muerto">Muerto</label>
+        <label><input type="checkbox" id="robot" value="Robot">Robot</label>
+        <label><input type="checkbox" id="parasite" value="Parasito">Parasito</label>
+        <label><input type="checkbox" id="mithological" value="Mitologico">Mitologico</label>
+        <label><input type="checkbox" id="disease" value="Enfermedad">Enfermedad</label>
+        <label><input type="checkbox" id="Poppybutthole" value="Poppybutthole">Poppybutthole</label>
+        <label><input type="checkbox" id="animal" value="Animal">Animal</label>
+        <label><input type="checkbox" id="cronenberg" value="Cronenberg">Cronenberg</label>
+        <label><input type="checkbox" id="krootabulan" value="Krootabulan">Krootabulan</label>
+      </div>
+    </section>
+
+
+     <section class="container">
+      <div class="all-data" id="all-data"></div>
+     </section>
+
+     <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>

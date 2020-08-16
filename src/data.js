@@ -1,9 +1,19 @@
 // estas funciones son de ejemplo
+const datajs = {
 
-export const example = () => {
+ filterHumans: function(data){
+
+    let items = data.filter(data => data.species === "Human");
+    return items;
+},
+
+}
+export default datajs;
+
+/*export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};
+};*/

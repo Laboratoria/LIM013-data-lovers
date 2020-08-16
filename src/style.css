@@ -1,37 +1,288 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing:border-box;
 }
 .conter{
 background-image: url(imagen/portada.png);
 height: 100vh;
 background-repeat: no-repeat;
 background-size:100% 100%;
+display: relative;
+justify-content: center;
+background-attachment: fixed;
+
 }
+
+
 .boton{
 	background-color: transparent;
     border: 2px solid black;
     color: black;
-    padding: 15px 32px;
+    padding: 5px 9px;
     text-align: center;
     text-decoration:none;
     display: inline-block;
     font-size: 16px;
     border-radius: 6px;
     position:relative;
-    left: 60%;
+    left: 40%;
     top:70%;
     font-family: 'Reenie Beanie', cursive;
     font-size: 30px;
     font-weight:lighter;
 }
 
+@media (min-width:600px){
+	.boton{
+	padding: 15px 32px;
+    position:relative;
+    left: 60%;
+    top:70%;
+    }
+}
+
 .cajaPri{
 	position:relative;
-    left: 50%;
-    top:20%;
-	width: 500px;
-	height: 500px;
+    left: 10%;
+    top:10%;
+	width: 300px;
+	height: 300px;
+	font-size: 15px;
 	color: white;
+	background-position: center;
+
 }
+
+@media (min-width:600px) {
+	.cajaPri{
+		width: 400px;
+		height: 500px;
+		background-position: center;
+		text-align: center:
+        position:relative;
+        left: 50%;
+        top:30%;
+	}
+}
+
+
+.ocultar{
+	display:none;
+}
+
+img{
+	flex-direction: row;
+    width:18%;
+	height: 10%;
+	float: left;
+	display: block;
+}
+
+
+header{
+	width: 100%;
+	height: 60px;
+	background: white;
+	color: black;
+
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 100;
+}
+
+.contenedor {
+  width: 98%;
+  margin: auto;
+
+}
+
+
+#menu-bar{
+	display:none;
+}
+
+
+header label{
+  float: right;
+  font-size: 28px;
+  margin:6px 0;
+  cursor:pointer;
+
+}
+
+.menu {
+	position:absolute;
+	top:50px;
+	left:0;
+	width: 100%;
+	height: 100vh;
+	background:white;
+	transition: all 0.5s;
+	transform: translateX(-100%);
+}
+
+header .contenedor{
+	display: table;
+}
+
+.menu a {
+	display:block;
+	color:black;
+	height:50px;
+	text-decoration: none;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+
+}
+
+.menu a:hover{
+	background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu {
+	transform: translateX(0%);
+}
+
+@media (min-width:1024px) {
+	.menu{
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateX(0%);
+		float:right;
+		display: flex;
+	}
+	.menu a {
+		border:none;
+	}
+
+	header label{
+		display:none;
+	}
+}
+
+@media (min-width:1024px){
+	.contenedor {
+		width: 1000px;
+	}
+}
+
+@media(min-width: 1024px){
+	.menu a{
+		font-size: 20px;
+	}
+
+	.contenedor{
+		overflow: hidden;
+	}
+
+	img{
+		height: auto;
+	}
+}
+
+.all-data{
+	justify-content: center;
+
+
+}
+
+.app-title{
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.6rem; 
+}
+
+.person{
+  max-width: 400px;
+  padding: 15px;
+  margin:15px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center
+  transform-style: preserve-3d;
+  text-align: center;
+
+
+}
+
+.person:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width:1024px){
+	.person {
+		width: 1000px;
+	}
+}
+
+@media (max-width:620px){
+	.person {
+		width: 40%;
+	}
+}
+
+.photo {
+  width: 20%;
+  margin-right: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  height: auto;
+  width: 300px;
+  margin: auto;
+}
+
+.name{
+  font-weight: normal;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.imagenes {
+    width: 100%;
+}
+
+.info{
+width:200px;
+height: 300px
+}
+ .person img{
+ 	width: 220px;
+ 	height:180px;
+
+ }
+
+ .box {
+  max-width: 900px;
+  padding: 20px;
+  margin: 70px auto;
+  text-align: center;
+ }
+
+.btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 9px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+  .check {
+   max-width: 900px;
+  padding: 20px;
+  margin: 70px auto;
+  text-align: center;
+  }
 
