@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+  <script src="./data/rickandmorty/rickandmorty.js"></script>
   <header class="ocultar" id="container-header">
     <div class="logo">
       <a href="index.html"><img src="imagen/logo.png"></a>
@@ -62,7 +64,6 @@
         <li><label class="contentItem">Mitológico<input type="checkbox"><span class="checkmark"></span></label></li>
         <li><label class="contentItem">Animal<input type="checkbox"><span class="checkmark"></span></label></li>
         <li><label class="contentItem">Otros<input type="checkbox"><span class="checkmark"></span></label></li>
-
       </ul>
 
       <!-- Lugar de origen -->
@@ -106,10 +107,13 @@
       </div>
     </div>
 
-  </section>
+     <section class="container">
+      <div class="all-data" id="all-data"></div>
+     </section>
 
+  </section>
+  <script src="data.js" type="module"></script>
   <script src="main.js" type="module"></script>
 </body>
-</html>
 
 </html>

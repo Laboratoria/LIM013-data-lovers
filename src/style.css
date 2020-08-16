@@ -1,9 +1,6 @@
 /* Inicio de estilos de generales */
 *{
 	margin: 0;
-
-	padding: 0;
-
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
@@ -126,23 +123,10 @@
 
 /* Inicio de estilos pantalla 1*/
 .conter{
-<<<<<<< HEAD
-background-image: url(imagen/portada.png);
-height: 100vh;
-background-repeat: no-repeat;
-background-size:100% 100%;
-display: relative;
-justify-content: center;
-background-attachment: fixed;
-
-}
-
-
-.boton{
-	background-color: transparent;
-    border: 2px solid black;
-    color: black;
-    padding: 5px 9px;
+    background-image: url(imagen/portada.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
 }
 
 .btn-i button{
@@ -152,7 +136,7 @@ background-attachment: fixed;
     text-align: center;
     font-size: 18px;
     position:relative;
-    left: 40%;
+    left: 60%;
     top:70%;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
@@ -164,63 +148,13 @@ background-attachment: fixed;
     outline: 0px;
 }
 
-@media (min-width:600px){
-	.boton{
-	padding: 15px 32px;
-    position:relative;
-    left: 60%;
-    top:70%;
-    }
-}
-
 .cajaPri{
 	position:relative;
-    left: 10%;
-    top:10%;
-	width: 300px;
-	height: 300px;
-	font-size: 15px;
+    left: 50%;
+    top:20%;
+	width: 500px;
+	height: 500px;
 	color: white;
-	background-position: center;
-
-}
-
-@media (min-width:600px) {
-	.cajaPri{
-		width: 400px;
-		height: 500px;
-		background-position: center;
-		text-align: center:
-        position:relative;
-        left: 50%;
-        top:30%;
-	}
-}
-
-
-.ocultar{
-	display:none;
-}
-
-img{
-	flex-direction: row;
-    width:18%;
-	height: 10%;
-	float: left;
-	display: block;
-}
-
-
-header{
-	width: 100%;
-	height: 60px;
-	background: white;
-	color: black;
-
-	position: fixed;
-	top:0;
-	left:0;
-	z-index: 100;
 }
 /* Fin de estilos pantalla 1*/
 
@@ -381,5 +315,82 @@ header{
      right:0px;	
      pointer-events: none;
  }
+
+ .all-data{
+    justify-content: center;
+
+
+}
+
+.app-title{
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.6rem; 
+}
+
+.person{
+  max-width: 400px;
+  padding: 15px;
+  margin:15px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center
+  transform-style: preserve-3d;
+  text-align: center;
+
+
+}
+
+.person:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width:1024px){
+    .person {
+        width: 1000px;
+    }
+}
+
+@media (max-width:620px){
+    .person {
+        width: 40%;
+    }
+}
+
+.photo {
+  width: 20%;
+  margin-right: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  height: auto;
+  width: 300px;
+  margin: auto;
+}
+
+.name{
+  font-weight: normal;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.imagenes {
+    width: 100%;
+}
+
+.info{
+width:200px;
+height: 300px
+}
+ .person img{
+    width: 220px;
+    height:180px;
+
+ }
 /* Fin de estilos pantalla 2*/
->>>>>>> 02e1059dee318d03b0f4be2bc0cca6f4d55913a6
