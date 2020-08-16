@@ -27,12 +27,11 @@ body{
     background-attachment: fixed;
     /* El fonde se re-escala automáticamente */
     background-size: cover;
-    /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
-    background-color: #FFF;
 }
 .contenedor{
-    width: 100%;
+    width: 90%;
     font-family: FFMarkPro;
+    margin: 15px auto;
 
     /*FLEX*/
     display: flex;
@@ -61,7 +60,7 @@ header .logo img{
 header nav{
     width: 50%;
     
-    /*FLEX*/
+   /*  FLEX */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -73,7 +72,7 @@ header nav a{
    
     font-weight: 900;
 
-    /*FLEX HIJO*/
+    /* FLEX HIJO */
     flex-grow: 1;
 }
 .main{
@@ -94,7 +93,7 @@ header nav a{
     color: #fff;
     padding: 20px;
     width: 400px;
-    top: 70%;
+    top: 70vh;
     left: 15%;
     text-decoration: none;
     position: absolute;
@@ -151,8 +150,9 @@ footer .social a{
 } 
 footer i{
     background:#000;
-    border-radius: 50%;
     padding: 15px 10px;
+    width: 40px;
+    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -161,8 +161,8 @@ footer i{
 
 @media screen and (max-width:1366px){
     .main img{
-        width: 800px;
-        height: 390px;
+        width: 700px;
+        height: 380px;
     }
 }
 @media screen and (max-width:1000px){
@@ -174,5 +174,41 @@ footer i{
         top: 70%;
         left: 10%;
     }
+
+}
+
+/*Responsive Menu*/
+
+.checkbtn{
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right:40px ;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+@media (max-width:858px){
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 70%;
+        right: -80%;
+        /* height: 100vh; */
+        background: #2c3e50;
+        top: 80px;
+        /* right: -100%; */
+        text-align: center;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+      }
 
 }
