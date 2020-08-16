@@ -1,77 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href=" fontello.css">
-  </head>
-  <body>
-    <!-- DATA -->
-   <script src="./data/rickandmorty/rickandmorty.js"></script>
+<html lang="es">
 
-  	<!-- PANTALLA 1 -->
-        <section class="conter" id="conter">
-        	<div class="cajaPri">
-    				<h1>El humor negro, la ciencia ficción, la sátira y muchas escenas existencialistas son los ingredientes perfectos que hacen de “Rick y Morty” una de las series más atractivas en los últimos años y una opción que cada día está conquistado a más personas en el mundo</h1>
-    		</div>
-    		<input type="button" class="boton" id="primerBoton" value="Click" >		
-    	</section>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_mobile.css" />
+  <link rel="icon" type="image/png" href="imagen/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+</head>
 
-     <!-- PANTALLA 2 -->
-    
-
-
-    <header class="ocultar" id="contenedor">
-    <div class="contenedor" >
-    <img src="imagen/morty.jpg">
-    <input type="checkbox" id="menu-bar">
-    <label class="icon-menu" for="menu-bar"></label>
-      <nav class="menu">
-          <a herf="">Personajes</a>
-          <a herf="">Capitulos</a>
-          <a herf="">Creditos</a>
-      </nav>
+<body>
+  <header class="ocultar" id="container-header">
+    <div class="logo">
+      <a href="index.html"><img src="imagen/logo.png"></a>
     </div>
-    </header>
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="#contenido">Personajes</a></li>
+        <li><a>Capítulos</a></li>
+        <li><a>Nosotras</a></li>
+      </ul>
+    </nav>
+    <div id="menu-toggle" class="menu-toggle">
+      <div id="tongle" class="hamburger"></div>
+    </div>
+  </header>
 
-     <section class="ocultar" id="box">
-       <div class="box">
-         <form class="btn">
-           <input type="button" class="btn" id="especies" value="Especies">
-           <input type="button" class="btn" id="origen" value="Origen">
-           <input type="button" class="btn" id="estado" value="Estado">
-           <input type="button" class="btn" id="genero" value="Genero">
-         </form>
+  <!-- Pantalla 1 -->
+  <section class="conter" id="conter">
+    <div class="cajaPri">
+      <h1>El humor negro, la ciencia ficción, la sátira y muchas escenas existencialistas son los ingredientes perfectos
+        que hacen de “Rick y Morty” una de las series más atractivas en los últimos años y una opción que cada día está
+        conquistado a más personas en el mundo</h1>
+    </div>
+    <div class="btn-i" id="btnIntro"></div>
+  </section>
+  <!-- Pantalla 2 -->
+  <section class="contenido ocultar" id="contenido">
+    <!-- Control buttons -->
+    <div class="btnControls">
+      <button id="btn-especies" class="btnOptions">Especies</button>
+      <button id="btn-origen" class="btnOptions">Lugar de origen</button>
+      <button id="btn-genero" class="btnOptions">Género</button>
+      <button id="btn-estado" class="btnOptions">Estado</button>
+    </div>
 
-       </div>
-     </section>
+    <!-- Control Checkbox -->
+    <div id="content-cb" class="content-cb ocultar">
+      <ul id="especies" class="listElements ocultar">
+        <!-- Especies -->
+        <li><label class="contentItem">Humanos<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Aliens<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Humanoide<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Vampiro<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Robots<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Parásito<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Mitológico<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Animal<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Otros<input type="checkbox"><span class="checkmark"></span></label></li>
 
+      </ul>
 
-     <section class="ocultar" id="check">
-      <div class="check">
-        <label><input type="" id="human" value="Humanos">Humanos</label>
-        <label><input type="checkbox" id="alien" value="Alien">Aliens</label>
-        <label><input type="checkbox" id="vampire" value="Vampiro">Vampiro</label>
-        <label><input type="checkbox" id="humanoid" value="humanoide">Humanoide</label>
-        <label><input type="checkbox" id="dead" value="Muerto">Muerto</label>
-        <label><input type="checkbox" id="robot" value="Robot">Robot</label>
-        <label><input type="checkbox" id="parasite" value="Parasito">Parasito</label>
-        <label><input type="checkbox" id="mithological" value="Mitologico">Mitologico</label>
-        <label><input type="checkbox" id="disease" value="Enfermedad">Enfermedad</label>
-        <label><input type="checkbox" id="Poppybutthole" value="Poppybutthole">Poppybutthole</label>
-        <label><input type="checkbox" id="animal" value="Animal">Animal</label>
-        <label><input type="checkbox" id="cronenberg" value="Cronenberg">Cronenberg</label>
-        <label><input type="checkbox" id="krootabulan" value="Krootabulan">Krootabulan</label>
+      <!-- Lugar de origen -->
+      <ul id="origen" class="listElements ocultar">
+        <li><label class="contentItem">Humanos<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Aliens<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Humanoide<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Vampiro<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Robots<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Parásito<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Mitológico<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Animal<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Otros<input type="checkbox"><span class="checkmark"></span></label></li>
+      </ul>
+
+      <!-- Género -->
+      <ul id="genero" class="listElements ocultar">
+        <li><label class="contentItem">Masculino<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Femenino<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Desconocido<input type="checkbox"><span class="checkmark"></span></label></li>
+      </ul>
+
+      <!-- Estado -->
+      <ul id="estado" class="listElements ocultar">
+        <li><label class="contentItem">Vivo<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
+        <li><label class="contentItem">Desconocido<input type="checkbox"><span class="checkmark"></span></label></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="content-order">
+      <div class="caja">
+        <select name="order" id="listOrder">
+          <option value="ordenarPor">Ordenar por</option>
+          <option value="az">A - Z</option>
+          <option value="za">Z - A</option>
+          <option value="protagonismo">Protagonismo</option>
+        </select>
       </div>
-    </section>
+    </div>
 
+  </section>
 
-     <section class="container">
-      <div class="all-data" id="all-data"></div>
-     </section>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
 
-     <script src="data.js" type="module"></script>
-    <script src="main.js" type="module"></script>
-  </body>
 </html>

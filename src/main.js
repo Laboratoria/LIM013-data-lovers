@@ -1,38 +1,69 @@
-import datajs  from './data.js';
-const data = window.rickAndMorty.results;
-var datagen=data;
-console.log(data);
 
-const bienvenido =()=>{
-	document.querySelector('#conter').classList.add('ocultar');
-	document.querySelector('#contenedor').classList.remove('ocultar');
-    document.querySelector('#box').classList.remove('ocultar');
-	function obtenerPersonajes (data) {
-		return `<div class="person">
-		<div class="imagenes">
-		<img class="photo" src="${data.image}">
-		</div>
-		<div class="info">
-		<h2 class="name">${data.name}</h2>
-		<p class="origin">Genero:${data.gender}</p>
-		<p class="origin">Origen:${data.origin.name}</p>
-		<p class="origin">Especie:${data.species}</p>
-		<p class="origin">Estado:${data.status}</p>
-		</div>
-		</div>`
-	}
-	document.getElementById("all-data").innerHTML =`
-	<h1 class="app-title">Total de Personajes(${data.length})</h1>
-	${data.map(obtenerPersonajes).join(" ")}
-	`
-	console.log("all-data");
+//Botón de inicio
+const btnIntro = document.getElementById("btnIntro")
+const btnIngresar = document.createElement("button");
+btnIngresar.textContent = "Ingresar";
+btnIngresar.addEventListener("click", bienvenido);
+btnIntro.appendChild(btnIngresar);
+
+//Funciónes de barra de navegación-menu
+const cambiarClase = () => {
+	let siteNav = document.getElementById('menu');
+	siteNav.classList.toggle('menu-open');
+	let menuOpen = document.getElementById('menu-toggle');
+	menuOpen.classList.toggle('menu-open');
 }
+const tongle = document.getElementById("tongle");
+tongle.addEventListener("click", cambiarClase);
 
-document.querySelector('#primerBoton').addEventListener('click',bienvenido);
+//Función de los botonde de filtro y checkbox
+const checkboxE = () => {
+	document.querySelector('#content-cb').classList.remove("ocultar");
+	document.querySelector('#especies').classList.remove("ocultar");
+	document.querySelector('#origen').classList.add("ocultar");
+	document.querySelector('#genero').classList.add("ocultar");
+	document.querySelector('#estado').classList.add("ocultar");
+}
+const btnEspecies = document.getElementById("btn-especies")
+btnEspecies.addEventListener("click", checkboxE);
+
+const checkboxO = () => {
+	document.querySelector('#content-cb').classList.remove("ocultar");
+	document.querySelector('#origen').classList.remove("ocultar");
+	document.querySelector('#especies').classList.add("ocultar");
+	document.querySelector('#genero').classList.add("ocultar");
+	document.querySelector('#estado').classList.add("ocultar");
+}
+const btnOrigen = document.getElementById("btn-origen")
+btnOrigen.addEventListener("click", checkboxO);
+
+const checkboxG = () => {
+	document.querySelector('#content-cb').classList.remove("ocultar");
+	document.querySelector('#genero').classList.remove("ocultar");
+	document.querySelector('#especies').classList.add("ocultar");
+	document.querySelector('#origen').classList.add("ocultar");
+	document.querySelector('#estado').classList.add("ocultar");
+}
+const btnGenero = document.getElementById("btn-genero")
+btnGenero.addEventListener("click", checkboxG);
+
+const checkboxEs = () => {
+	document.querySelector('#content-cb').classList.remove("ocultar");
+	document.querySelector('#estado').classList.remove("ocultar");
+	document.querySelector('#especies').classList.add("ocultar");
+	document.querySelector('#origen').classList.add("ocultar");
+	document.querySelector('#genero').classList.add("ocultar");
+}
+const btnEstado = document.getElementById("btn-estado")
+btnEstado.addEventListener("click", checkboxEs);
+
+
 
 const checki =()=>{
 document.querySelector('#check').classList.remove('ocultar');
 
+const paginaPrin = () => {
+	document.querySelector('#contenido').style.display = "block";
 }
 
 document.querySelector('#especies').addEventListener('click',checki);
