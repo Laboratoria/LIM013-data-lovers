@@ -36,6 +36,17 @@
     font-family: 'Open Sans', sans-serif;
     background: transparent;
 }
-
 }
 /* Fin de estilos de header */
+
+/* Estilos ordenar por */
+@media (max-width:600px){
+.content-order {
+    width: 50%;
+    text-align: left;
+}
+
+.caja {
+    margin: 0 10px;
+}
+}

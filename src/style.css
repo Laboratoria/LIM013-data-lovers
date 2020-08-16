@@ -232,6 +232,8 @@
     height: 0;
     width: 0;
 }
+
+/* Estilos de box del checkbox*/
 .checkmark {
     position: absolute;
     top: 0;
@@ -242,29 +244,28 @@
     border:1px solid #C4C4C4;
     border-radius: 3px;
 }
-/* On mouse-over, add a grey background color */
 .contentItem:hover input ~ .checkmark {
     background-color: #ddd;
 }
-/* When the checkbox is checked, add a blue background */
+
 .contentItem input:checked ~ .checkmark {
     background-color: #459AE2;
     border: #459AE2;
 }
-/* Create the checkmark/indicator (hidden when not checked) */
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-/* Show the checkmark when checked */
+
 .contentItem input:checked ~ .checkmark:after {
   display: block;
 }
-/* Estilos de checkmark/indicator */
+
 .contentItem .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -274,7 +275,7 @@
   transform: rotate(45deg);
 }
 
-/* Estilos Ordenar por */
+/* Estilos ordenar por */
 .content-order {
    width: 100%;
    text-align: right;
@@ -314,4 +315,4 @@
      right:0px;	
      pointer-events: none;
  }
-/* Fin de estilos PANTALLA 2*/
+/* Fin de estilos pantalla 2*/
