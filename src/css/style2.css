@@ -1,0 +1,218 @@
+/* body{
+    margin: 0;
+    font-family: "Overpass";
+}
+header{
+    width: 100%;
+    background: #4e94ab;
+}
+#btn-menu{
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+header label:hover{
+    cursor: pointer;
+    background:rgba(0,0,0,0.3);
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.menu li{
+    border-right: 1px solid #fff;
+}
+.menu li:hover{
+    background:rgba(0,0,0,0.3);
+}
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+main{
+  padding: 20px;  
+}
+
+@media (max-width:768px){
+    header label{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        background: #4e94ab;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+    .menu ul{
+        flex-direction: column;
+    }
+  
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+} */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: FFMarkProBlack;
+  src: url("../resources/FontFont_FF.Mark.Pro.Black.otf");
+}
+
+.contenedor,
+header {
+  width: 90%;
+  font-family: FFMarkPro;
+  margin: 15px auto;
+
+  /*FLEX*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body {
+  /* Ruta relativa o completa a la imagen */
+  background-image: url(../imagenes/fondo.png);
+  /* Centramos el fondo horizontal y verticalmente */
+  background-position: center center;
+  /* El fonde no se repite */
+  background-repeat: no-repeat;
+  /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
+  background-attachment: fixed;
+  /* El fonde se re-escala automáticamente */
+  background-size: cover;
+}
+
+.logo img {
+  width: 200px;
+  vertical-align: top;
+  float: left;
+}
+
+nav {
+  font-family: FFMarkProBlack;
+  background: #000;
+  height: 80%;
+  width: 100%;
+  display: inline-block;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #986E1E;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.checkbtn {
+  display: none;
+  font-size: 30px;
+  color: #986E1E;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width:952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:858px) {
+
+  .contenedor,
+  header {
+    margin: 0;
+    width: 100%;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    right: -60%;
+    /* height: 100vh; */
+    background: #000;
+    top: 100px;
+    /* right: -100%; */
+    text-align: center;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    border-bottom: 1px solid #986E1E;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked~ul {
+    margin: 0;
+    right: 0;
+  }
+
+}
