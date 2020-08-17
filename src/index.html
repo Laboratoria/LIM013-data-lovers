@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style_mobile.css" />
   <link rel="icon" type="image/png" href="imagen/favicon.png" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap">
+
 </head>
 
 <body>
 
   <script src="./data/rickandmorty/rickandmorty.js"></script>
+  
   <header class="ocultar" id="container-header">
     <div class="logo">
       <a href="index.html"><img src="imagen/logo.png"></a>
@@ -54,44 +54,69 @@
     <div id="content-cb" class="content-cb ocultar">
       <ul id="especies" class="listElements ocultar">
         <!-- Especies -->
-        <li><label class="contentItem">Humanos<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Aliens<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Humanoide<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Vampiro<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Robots<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Parásito<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Mitológico<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Animal<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Otros<input type="checkbox"><span class="checkmark"></span></label></li>
+         <li><input type="radio" value="1" name="1" onclick="proceso()"></li>
+        <label>Humanos</label>
+         <li><input type="radio" value="2" name="1"></li>
+        <label>Aliens</label>
+         <li><input type="radio" value="3" name="1"></li>
+        <label>Humanoide</label>
+         <li><input type="radio" value="4" name="1"></li>
+        <label>Vampiro</label>
+         <li><input type="radio" value="5" name="1"></li>
+        <label>Muerto</label>
+         <li><input type="radio" value="6" name="1"></li>
+        <label>Robots</label>
+         <li><input type="radio" value="7" name="1"></li>
+        <label>Parásito</label>
+         <li><input type="radio" value="8" name="1"></li>
+        <label>Mitológico</label>
+         <li><input type="radio" value="9" name="1"></li>
+        <label>Animal</label>
+         <li><input type="radio" value="10" name="1"></li>
+        <label>Otros</label>
       </ul>
 
       <!-- Lugar de origen -->
-      <ul id="origen" class="listElements ocultar">
-        <li><label class="contentItem">Humanos<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Aliens<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Humanoide<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Vampiro<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Robots<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Parásito<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Mitológico<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Animal<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Otros<input type="checkbox"><span class="checkmark"></span></label></li>
+        <ul id="origen" class="listElements ocultar">
+        <li><input type="radio" value="1" name="2"></li>
+        <label>Tierra</label>
+          <li><input type="radio" value="2" name="2"></li>
+        <label>Abadango</label>
+          <li><input type="radio" value="3" name="2"></li>
+        <label>Desconocido</label>
+          <li><input type="radio" value="4" name="2"></li>
+        <label>Venzenulon 7</label>
+          <li><input type="radio" value="5" name="2"></li>
+        <label>Pluto</label>
+          <li><input type="radio" value="6" name="2"></li>
+        <label>Nuptia 4</label>
+          <li><input type="radio" value="7" name="2"></li>
+        <label>bepis 9</label>
+          <li><input type="radio" value="8" name="2"></li>
+        <label>signos 5 extensión</label>
+          <li><input type="radio" value="9" name="2"></li>
+        <label>Otros</label>
       </ul>
 
       <!-- Género -->
       <ul id="genero" class="listElements ocultar">
-        <li><label class="contentItem">Masculino<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Femenino<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Desconocido<input type="checkbox"><span class="checkmark"></span></label></li>
+          <li><input type="radio" value="1" name="3"></li>
+        <label>Masculino</label>
+          <li><input type="radio" value="2" name="3"></li>
+        <label>Femenino</label>
+          <li><input type="radio" value="3" name="3"></li>
+        <label>Desconocido</label>
       </ul>
 
       <!-- Estado -->
       <ul id="estado" class="listElements ocultar">
-        <li><label class="contentItem">Vivo<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Muerto<input type="checkbox"><span class="checkmark"></span></label></li>
-        <li><label class="contentItem">Desconocido<input type="checkbox"><span class="checkmark"></span></label></li>
+          <li><input type="radio" value="1" name="4"></li>
+        <label>Vivo</label>
+          <li><input type="radio" value="2" name="4"></li>
+        <label>Muerto</label>
+          <li><input type="radio" value="3" name="4"
+            ></li>
+        <label>Desconocido</label>
       </ul>
     </div>
     </div>
@@ -108,7 +133,7 @@
     </div>
 
      <section class="container">
-      <div class="all-data" id="all-data"></div>
+      <div class="alldata" id="alldata"></div>
      </section>
 
   </section>
