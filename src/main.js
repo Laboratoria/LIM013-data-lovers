@@ -66,10 +66,6 @@ const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
 
-const paginaPrin = () => {
-	document.querySelector('#contenido').style.display = "block";
-}
-
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
