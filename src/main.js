@@ -1,4 +1,4 @@
-//import datajs  from './data.js';
+import datajs  from './data.js';
 const data = window.rickAndMorty.results;
 console.log(data);
 
@@ -20,11 +20,10 @@ const bienvenido =()=>{
 		</div>
 		</div>`
 	}
-	document.getElementById("all-data").innerHTML =`
+	document.getElementById("alldata").innerHTML =`
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
-	console.log("all-data");
 }
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
@@ -50,6 +49,7 @@ const checkboxE = () => {
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+
 }
 const btnEspecies = document.getElementById("btn-especies")
 btnEspecies.addEventListener("click", checkboxE);
@@ -83,6 +83,11 @@ const checkboxEs = () => {
 }
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
+
+
+
+
+
 
 
 // import data from './data/lol/lol.js';
