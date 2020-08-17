@@ -315,4 +315,82 @@
      right:0px;	
      pointer-events: none;
  }
+
+ .all-data{
+    justify-content: center;
+
+
+}
+
+.app-title{
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.6rem; 
+}
+
+.person{
+  max-width: 400px;
+  padding: 15px;
+  margin:15px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center
+  transform-style: preserve-3d;
+  text-align: center;
+
+
+}
+
+.person:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width:1024px){
+    .person {
+        width: 1000px;
+    }
+}
+
+@media (max-width:620px){
+    .person {
+        width: 40%;
+    }
+}
+
+.photo {
+  width: 20%;
+  margin-right: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  height: auto;
+  width: 300px;
+  margin: auto;
+}
+
+.name{
+  font-weight: normal;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.imagenes {
+    width: 100%;
+}
+
+.info{
+width:200px;
+height: 300px
+}
+ .person img{
+    width: 220px;
+    height:180px;
+
+ }
 /* Fin de estilos pantalla 2*/
