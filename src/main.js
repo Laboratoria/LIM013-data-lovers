@@ -6,6 +6,8 @@ const bienvenido =()=>{
 	document.querySelector('#conter').classList.add("ocultar");
 	document.querySelector('#contenido').classList.remove("ocultar");
 	document.querySelector('#container-header').classList.remove("ocultar");
+	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
+
 	function obtenerPersonajes (data) {
 		return `<div class="person">
 		<div class="imagenes">
@@ -86,10 +88,28 @@ btnEstado.addEventListener("click", checkboxEs);
 
 
 
+//Buscador de cotenid o
 
+//Declarando variebles
+let contenBus = document.getElementById('ctn-bars-search');
+const coverBus = document.getElementById("cover-ctn-search");
+const inputSeatch = document.getElementById('inputSeatch');
+const boxSear = document.getElementById('box-search');
 
+const MuestraBusca = () =>{
+	contenBus.style.top= "80px";
+	coverBus.style.display = "block";
+	inputSeatch.focus();
+}
+ document.getElementById("ctn-icon-search").addEventListener("click",MuestraBusca);
 
+ const ocultaBusca = () =>{
+ 	contenBus.style.top = "-10px";
+ 	coverBus.style.display = 'none';
+ 	inputSeatch.value = "";
+ }
 
+ document.getElementById("cover-ctn-search").addEventListener("click",ocultaBusca);
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
