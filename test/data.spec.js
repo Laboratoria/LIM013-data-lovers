@@ -1,6 +1,7 @@
-import { example, anotherExample } from '../src/data.js';
+import { dataTest } from './dataTest.js';
+import { orderDes,orderAs, orderAscName,orderDescName} from '../src/data.js'
 
-
+/*
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
@@ -21,3 +22,4 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+*/
