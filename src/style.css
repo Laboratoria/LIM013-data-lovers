@@ -1,0 +1,292 @@
+/*Universal style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #212529;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*Container styles*/
+
+#container {
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+/*Header styles*/
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 120px;
+}
+
+#logo {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    flex-basis: 10%;
+    height: 100%;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+#logo h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px #9e9e9e;
+}
+
+#search {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    flex-basis: 29%;
+    height: 100%;
+    align-items: center;
+}
+
+#search-box {
+    width: 330px;
+    background: #212529;
+    border-radius: 5px;
+}
+
+#search input {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 14px;
+    background: #212529;
+    padding: 0px 10px;
+    color: #e7e7e9;
+}
+
+#search i {
+    margin-left: 10px;
+    color: #f8f9fa;
+}
+
+#menu {
+    flex-grow: 1;
+    flex-basis: 10%;
+    height: 100%;
+}
+
+#menu>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    list-style: none;
+}
+
+
+/*General information  styles*/
+
+#information iframe {
+    width: 100%;
+    height: 380px;
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
+}
+
+#information h2,
+#information h3 {
+    width: 100%;
+    text-align: center;
+}
+
+#information h2 {
+    margin-top: 30px;
+}
+
+#information h3 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+h3 strong {
+    color: #fe0707;
+}
+
+
+/*Buttons (ORDER & FILTER) styles*/
+
+#button-order-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 12%;
+}
+
+.btn-order-filter {
+    background-color: #212529;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px #212529 solid;
+}
+
+.btn-order-filter i {
+    color: white;
+    margin-left: 30px;
+}
+
+#button-order {
+    flex-direction: column;
+}
+
+#button-order .drop-down {
+    position: absolute;
+}
+
+#button-order:hover>ul {
+    margin-top: 2px;
+    border-radius: 10px;
+    visibility: visible;
+    width: 150px;
+    border: 1px #e7e7e9 solid;
+    background-color: #fff;
+}
+
+#button-order:hover .fa-caret-down {
+    transform: rotate(-180deg);
+}
+
+#button-order ul li {
+    height: 30px;
+    padding: 4px 8px;
+    text-align: center;
+    border-bottom: 1px #e7e7e9 solid;
+}
+
+#button-order ul li:hover {
+    background-color: #e7e7e9;
+}
+
+#button-order ul {
+    visibility: hidden;
+}
+
+#button-order ul li a {
+    color: #6e6d7a;
+}
+
+
+/*Number of pokemons styles*/
+
+p {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 12%;
+}
+
+
+/*List of pokemon styles*/
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px 8%;
+    justify-content: space-between;
+}
+
+.pokemon {
+    margin: 2%;
+    border: 2px #212529 solid;
+    border-radius: 15px;
+}
+
+.img-pokemon {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.info-pokemon {
+    display: flex;
+    flex-flow: row wrap;
+    background: #212529;
+    justify-content: space-between;
+    height: 40px;
+    border-radius: 0px 0px 12px 12px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.info-pokemon span {
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 74%;
+}
+
+.info-pokemon .type {
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.info-pokemon span strong {
+    color: #9e9e9e;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+}
+
+
+/*Button SEE MORE styles*/
+
+#more {
+    width: 200px;
+    height: 50px;
+    background-color: #fe0707;
+    color: #212529;
+    font-family: "Russo One", sans-serif;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0px;
+    font-size: 22px;
+    transition: all 0.2s ease;
+}
+
+#more:hover {
+    color: #e7e7e9;
+    background-color: #212529;
+}
+
+#box-more {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Removing pseudo-class focus with border*/
+
+button[type="button"] {
+    outline: none;
+}
+
+input[type="search"]:focus {
+    outline: none;
+    background-color: #fff;
+}
