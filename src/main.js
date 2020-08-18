@@ -5,6 +5,34 @@
 
 //console.log(example, data);
 
+//DOM de slides//
+const slideprev = document.getElementById('prev');
+    slideprev.addEventListener('click', () => {
+    plusSlides(-1)
+    });
+const slidenext = document.getElementById('next');
+    slidenext.addEventListener('click', () => {
+    plusSlides(1)
+    });
+
+//DOM de currents//
+const slide1 = document.getElementById('dot1');
+      slide1.addEventListener('click', () => {
+    currentSlide(1)
+    });
+const slide2 = document.getElementById('dot2');
+      slide2.addEventListener('click', () => {
+    currentSlide(2)
+    });
+const slide3 = document.getElementById('dot3');
+      slide3.addEventListener('click', () => {
+    currentSlide(3)
+    });
+const slide4 = document.getElementById('dot4');
+      slide4.addEventListener('click', () => {
+    currentSlide(4)
+    });
+
 //slides de modo de juego//
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -40,35 +68,3 @@ function showSlides(num) {
   dots[slideIndex - 1].className += ' active-slide-img';
 }
 
-//DOM de slides//
-const slideprev = document.getElementById('prev');
-    slideprev.addEventListener('click', () => {
-    plusSlides(-1)
-    });
-
-const slidenext = document.getElementById('next');
-    slidenext.addEventListener('click', () => {
-    plusSlides(1)
-    });
-
-//DOM de currents//
-
-const slide1 = document.getElementById('dot1');
-      slide1.addEventListener('click', () => {
-    currentSlide(1)
-    });
-
-const slide2 = document.getElementById('dot2');
-      slide2.addEventListener('click', () => {
-    currentSlide(2)
-    });
-
-const slide3 = document.getElementById('dot3');
-      slide3.addEventListener('click', () => {
-    currentSlide(3)
-    });
-
-const slide4 = document.getElementById('dot4');
-      slide4.addEventListener('click', () => {
-    currentSlide(4)
-    });
