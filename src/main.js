@@ -1,11 +1,12 @@
-import datajs  from './data.js';
+import datajs from './data.js';
 const data = window.rickAndMorty.results;
 console.log(data);
 
-const bienvenido =()=>{
+const bienvenido = () => {
 	document.querySelector('#conter').classList.add("ocultar");
 	document.querySelector('#contenido').classList.remove("ocultar");
 	document.querySelector('#container-header').classList.remove("ocultar");
+	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
 
 	function obtenerPersonajes (data) {
@@ -22,7 +23,7 @@ const bienvenido =()=>{
 		</div>
 		</div>`
 	}
-	document.getElementById("alldata").innerHTML =`
+	document.getElementById("alldata").innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
@@ -86,6 +87,14 @@ const checkboxEs = () => {
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
+//Filtro de especie humanos
+const btnH = () => {
+	document.querySelector('#alldata').classList.add("ocultar");
+	document.querySelector('#dataHuman').classList.remove("ocultar");
+	datajs.filterHumans(data)
+}
+const btnHuman = document.getElementById("btn-human")
+btnHuman.addEventListener("click", btnH);
 
 
 //Buscador de cotenid o

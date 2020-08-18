@@ -84,7 +84,7 @@
 .menu-toggle{
     padding: 1em;
     position: absolute;
-    top: .5em;
+    top: .9em;
     right: .5em;
 }
 
@@ -377,11 +377,9 @@ font-size: 12px;
   overflow: hidden;
   display: inline-block;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
   transform-style: preserve-3d;
   text-align: center;
-
-
 }
 
 .person:hover {
@@ -434,3 +432,17 @@ height: 300px
 
  }
 /* Fin de estilos pantalla 2*/
+
+/* Inicio de estilos footer*/
+.footer{
+    padding: 50px 80px;
+    text-align: center;
+    background-color:white;
+    color: #6A6A6A;
+}
+
+.footer p{
+    margin-top: 30px;
+    font-size: 15px;
+}
+/* Fin de estilos footer*/
