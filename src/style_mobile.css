@@ -64,7 +64,13 @@
     transition: all 300ms;
 }
 
-
+@media screen and (max-width: 800px){
+#ctn-icon-search{
+    position: absolute;
+    right: 87px;
+    height: 38%;
+   }
+}
 #ctn-bars-search{
     position: fixed;
     top: -10px;
@@ -83,6 +89,11 @@
     font-size: 18px
 
 }
+@media screen and (max-width: 800px){
+    #ctn-bars-search input{
+        width: 80%;
+    }
+}
 
 #cover-ctn-search{
 width: 100%;
@@ -93,6 +104,7 @@ background: rgba(0, 0, 0, 0.5);
 z-index: 7;
 display: none;
 }
+
 
 #box-search{
     position: fixed;
@@ -116,4 +128,9 @@ display: none;
 
 #box-search li a:hover {
     color: green;
+}
+@media screen and (max-width: 800px){
+   .box-search{
+        width: 80%;
+    }
 }

@@ -1,14 +1,18 @@
-import datajs  from './data.js';
+import datajs from './data.js';
 const data = window.rickAndMorty.results;
 console.log(data);
 
-const bienvenido =()=>{
+const bienvenido = () => {
 	document.querySelector('#conter').classList.add("ocultar");
 	document.querySelector('#contenido').classList.remove("ocultar");
 	document.querySelector('#container-header').classList.remove("ocultar");
+	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
 
-	function obtenerPersonajes (data) {
+
+}
+
+const obtenerPersonajes = (data) => {
 		return `<div class="person">
 		<div class="imagenes">
 		<img class="photo" src="${data.image}">
@@ -22,11 +26,11 @@ const bienvenido =()=>{
 		</div>
 		</div>`
 	}
-	document.getElementById("alldata").innerHTML =`
+	document.getElementById("alldata").innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
-}
+
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
@@ -86,6 +90,14 @@ const checkboxEs = () => {
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
+//Filtro de especie humanos
+const btnH = () => {
+	document.querySelector('#alldata').classList.add("ocultar");
+	document.querySelector('#dataHuman').classList.remove("ocultar");
+	datajs.filterHumans(data)
+}
+const btnHuman = document.getElementById("btn-human")
+btnHuman.addEventListener("click", btnH);
 
 
 //Buscador de cotenid o
@@ -98,18 +110,43 @@ const boxSear = document.getElementById('box-search');
 
 const MuestraBusca = () =>{
 	contenBus.style.top= "80px";
-	coverBus.style.display = "block";
+	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
  document.getElementById("ctn-icon-search").addEventListener("click",MuestraBusca);
 
  const ocultaBusca = () =>{
  	contenBus.style.top = "-10px";
- 	coverBus.style.display = 'none';
+ 	boxSear.style.display = 'none';
  	inputSeatch.value = "";
  }
 
  document.getElementById("cover-ctn-search").addEventListener("click",ocultaBusca);
+
+
+ let texto = document.getElementById('inputSeatch');
+ let buimg = document.getElementById('local');
+
+ const pruevas = () =>{
+  	 //alert(texto.value.toLowerCase());
+  	 let textoMin = texto.value.toLowerCase();
+  	 for(var i=0;i<data.length;i++){
+  	 	let dataMin = data[i].name.toLowerCase();
+  	 	if(dataMin.indexOf(textoMin) !== -1){
+  	 		boxSear.innerHTML+='<li><a onclick="nuevo">'+data[i].name+' de '+data[i].name+'</a> </li>';
+  	 	}
+  	 }
+}
+ 
+document.getElementById("local").addEventListener("click",pruevas);
+
+
+const nuevo = () =>{
+	console.log(nuevo);
+  datoOb.obtenerPersonajes();
+}
+
+document.getElementById("alldata").addEventListener("click",nuevo);
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
