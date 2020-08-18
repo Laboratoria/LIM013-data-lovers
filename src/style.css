@@ -162,13 +162,13 @@
 
 .cajaPri{
 	position:relative;
-font-size: 12px;
+    font-size: 12px;
     left: 10%;
     top:9%;
 	width: 300px;
 	height: 200px;
 	color: white;
-  text-align:center; 
+    text-align:center; 
 }
 
 
@@ -179,9 +179,9 @@ font-size: 12px;
     font-size: 14px;
     background-position: center;
     text-align: center;
-        position:relative;
-        left: 50%;
-        top:30%;
+    position:relative;
+    left: 50%;
+    top:30%;
   }
 }
 
@@ -328,9 +328,9 @@ font-size: 12px;
     overflow: hidden;
     width: 180px;
     position:relative;
- }
+}
 
- .caja select {
+.caja select {
     background-color: white;
     border: none;
     color: #6A6A6A;
@@ -339,27 +339,36 @@ font-size: 12px;
     padding: 8px;
     width: 250px;
  }
- .caja select:focus{ outline: none;}
+
+.caja select:focus{ 
+    outline: none;
+}
  
- .caja::after{
-     content:"\025be";
-     color: #459AE2;
-     display:table-cell;
-     padding-top:7px;
-     text-align:center;
-     width:30px;
-     height:40px;
-     border-left:1px solid #C4C4C4;
-     position:absolute;
-     top:0;
-     right:0px;	
-     pointer-events: none;
+.caja::after{
+    content:"\025be";
+    color: #459AE2;
+    display:table-cell;
+    padding-top:7px;
+    text-align:center;
+    width:30px;
+    height:40px;
+    border-left:1px solid #C4C4C4;
+    position:absolute;
+    top:0;
+    right:0px;	
+    pointer-events: none;
  }
 
- .alldata{
+/* Estilos de cards de personajes*/
+.container-data{
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.alldata{
+    margin: 10px 60px;
     justify-content: center;
-
-
 }
 
 .app-title{
@@ -371,8 +380,8 @@ font-size: 12px;
 .person{
   max-width: 400px;
   padding: 15px;
-  margin:15px auto;
-  background-color: #fff;
+  margin:15px 20px;
+  background-color: #F0F0F0;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
   overflow: hidden;
   display: inline-block;
@@ -387,6 +396,16 @@ font-size: 12px;
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width:700px){
+    .alldata{
+        margin: 10px;
+    }
+
+    .person{
+        margin:15px 10px;
+      }
+}
+/*
 @media (max-width:1024px){
     .person {
         width: 1000px;
@@ -398,39 +417,40 @@ font-size: 12px;
         width: 40%;
     }
 }
-
+*/
 .photo {
-  width: 20%;
-  margin-right: 15px;
+  width: 180px;
+  height: auto;
   max-width: 100%;
-  height: auto;
   border-radius: 50%;
-  display: block;
-  height: auto;
-  width: 300px;
-  margin: auto;
+  
 }
 
 .name{
   font-weight: normal;
   margin: 20px;
   text-align: center;
-
+  font-size: 20px;
+  color: #459AE2;
 }
 
 .imagenes {
     width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .info{
-width:200px;
-height: 300px
+    width:200px;
+    height: 200px;
 }
- .person img{
-    width: 220px;
-    height:180px;
 
- }
+.Text-datos{
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+    color: #6A6A6A;
+}
 /* Fin de estilos pantalla 2*/
 
 /* Inicio de estilos footer*/
