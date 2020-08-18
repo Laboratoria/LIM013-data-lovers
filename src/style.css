@@ -186,7 +186,7 @@ font-size: 12px;
 }
 
 
-@media (min-width:700px) {
+@media (min-width:1024px) {
   .cajaPri{
     width: 500px;
     height: 500px;
