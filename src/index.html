@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>HOLA MUNDO!!</h1>
-    <h2>Poke</h2>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Pokedex</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!--All content begins here-->
+  <div id="container">
+
+    <!--Header containing logo, title and navigation menu-->
+    <header id="header">
+      <div id="logo">
+        <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" />
+        <h1 id="pokedex">POKEDEX</h1>
+      </div>
+      <div id="search">
+        <div id="search-box">
+          <i class="fas fa-search"></i>
+          <input type="search" placeholder="Search by number or name" />
+        </div>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li>
+            <a href="#">Calculate CP <i class="fas fa-angle-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Compare two pokemon <i class="fas fa-angle-down"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--End of header-->
+
+    <!--div that contains general information about the page-->
+    <div id="information">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/pChaiOKV1vA?controls=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h2>Find all the information of your favorite pokemon</h2>
+      <h3>Discover the<strong> pokemon’s </strong>world</h3>
+    </div>
+    <!--end of div "information"-->
+
+    <!--Buttons section (order & filter)-->
+    <div id="button-order-filter">
+      <!--only button order-->
+      <div id="button-order">
+        <button type="button" id="order" class="btn-order-filter">
+          ORDER <i class="fas fa-caret-down"></i>
+        </button>
+        <ul class="drop-down">
+          <li id="lower-number"><a href="#">Lower number</a></li>
+          <li id="top-number"><a href="#">Top number</a></li>
+          <li><a href="#">A - Z</a></li>
+          <li><a href="#">Z - A</a></li>
+        </ul>
+      </div>
+      <!--End button order-->
+
+      <!--Only button filter-->
+      <button type="button" id="filter" class="btn-order-filter">
+        FILTER <i class="fas fa-filter"></i>
+      </button>
+      <!--End button filter-->
+    </div>
+    <!--End of buttons section (order & filter)-->
+
+    <!--paragraph with pokemon number on screen-->
+    <p id="count">8 Pokemons of 251</p>
+    <!--End of paragraph with pokemon number on screen-->
+
+    <!--All the pokemon with their information-->
+    <div id="content"></div>
+    <!--End div all the pokemon with their information-->
+
+    <!--Button to see more pokemon-->
+    <div id="box-more">
+      <button type="button" id="more">See more</button>
+    </div>
+    <!--End button to see more-->
+
+  </div>
+  <!--All content ends here-->
+  <script src="main.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/0451b6060d.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
