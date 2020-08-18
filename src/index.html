@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style_mobile.css" />
   <link rel="icon" type="image/png" href="imagen/favicon.png" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap">
 
 </head>
 
@@ -54,7 +55,7 @@
     <div id="content-cb" class="content-cb ocultar">
       <ul id="especies" class="listElements ocultar">
         <!-- Especies -->
-        <li><input type="radio" value="1" name="1" onclick="proceso()"></li>
+        <li><input id="btn-human" type="radio" value="1" name="1"></li>
         <label>Humanos</label>
         <li><input type="radio" value="2" name="1"></li>
         <label>Aliens</label>
@@ -119,7 +120,7 @@
       </ul>
     </div>
     </div>
-
+    <!-- Cards -->
     <div class="content-order">
       <div class="caja">
         <select name="order" id="listOrder">
@@ -133,6 +134,7 @@
 
     <section class="container">
       <div class="alldata" id="alldata"></div>
+      <div class="alldata ocultar" id="dataHuman"></div>
     </section>
 
   </section>
