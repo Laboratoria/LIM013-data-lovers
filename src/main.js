@@ -7,7 +7,6 @@ const bienvenido = () => {
 	document.querySelector('#contenido').classList.remove("ocultar");
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
-	function obtenerPersonajes(data) {
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
 
 	function obtenerPersonajes (data) {
