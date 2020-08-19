@@ -6,10 +6,10 @@ let containerMain = document.getElementById("containerMain");
 
 //crear dinamicamente elemntos section y asignarle imagen
 //map()=método para recorrer un objeto sin modificar el objeto original
-container.innerHTML=`<section class="containerPicture">
+containerMain.innerHTML=`<section class="containerPicture">
 ${data.pokemon.map((picture)=>{
     return `<section class="picture">
-    <img class="picture" src="${picture.img}">
+    <img class="img" src="${picture.img}">
     </section>` ;
 }).join('')}
 </section>`
