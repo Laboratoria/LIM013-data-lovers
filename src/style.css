@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -106,7 +105,7 @@ body {
 }
 
 .card {
-    background: orangered;
+    background: black;
 }
 
 footer {
@@ -132,11 +131,20 @@ footer {
 .containerPicture{
     display: flex;
     flex-flow: row wrap;
+<<<<<<< HEAD
     justify-content: center;
+=======
+    width: 100%;
+    height: 690px;
+    margin: 0px 25px;
+>>>>>>> 59341a1618aac05cb9281657206d414b0a5a1bae
 }
 .picture{
-
-    margin: 20px;
-    background: coral;
+    width: 180px;
+    height: 210px;
+    margin: 5px;
+    
+    background-image: url(images/hexagono2.png);
+    background-size: cover;
 }
 
