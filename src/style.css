@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2b1ff10493ca894fe595290b9b1ab16bf05cfe6
 * {
     margin: 0;
     padding: 0;
@@ -131,6 +135,7 @@ footer {
 .containerPicture{
     display: flex;
     flex-flow: row wrap;
+<<<<<<< HEAD
     width: 100%;
     height: 690px;
     margin: 0px 25px;
@@ -143,3 +148,12 @@ footer {
     background-image: url(images/hexagono2.png);
     background-size: cover;
 }
+=======
+}
+.picture{
+
+    margin: 20px;
+    background: coral;
+}
+
+>>>>>>> c2b1ff10493ca894fe595290b9b1ab16bf05cfe6
