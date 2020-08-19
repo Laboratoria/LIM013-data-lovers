@@ -4,6 +4,25 @@ import data from './data/pokemon/pokemon.js';  //fijo
 // import data from './data/rickandmorty/rickandmorty.js';
 
 let allPokemon= data.pokemon;
+
+//mostrar pokémon 
+
+function pokemonTemplate(poke){
+    return`
+    <div class='poke'>
+    <img class='poke-img' src='${poke.img}'>
+    <p class= 'poke-name'> ${poke.name}<p>    
+    </div>
+    `
+}
+
+document.getElementById('root').innerHTML = `
+<h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
+${allPokemon.map(pokemonTemplate).join('')}
+`
+
+
+
 const section = document.querySelector('section');
 section.innerHTML=`
 <select id='list'> 
@@ -24,25 +43,12 @@ list.addEventListener('change',(event)=> {
         function pokemonFilter(poke){
         return poke.type.includes(selectValue) 
     }
-    
     allPokemon = allPokemon.filter(pokemonFilter);
     console.log(allPokemon);
            
     //mostrar pokémons
     
-    function pokemonTemplate(poke){
-        return`
-        <div class='poke'>
-        <img class='poke-img' src='${poke.img}'>
-        <p class= 'poke-name'> ${poke.name}<p>    
-        </div>
-        `
-    }
     
-    document.getElementById('root').innerHTML = `
-    <h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
-    ${allPokemon.map(pokemonTemplate).join('')}
-    `
 })
 
 console.log(example, data);
