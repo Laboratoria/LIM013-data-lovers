@@ -4,33 +4,10 @@ import data from './data/pokemon/pokemon.js';  //fijo
 // import data from './data/rickandmorty/rickandmorty.js';
 
 let allPokemon= data.pokemon;
-const section = document.querySelector('section');
-section.innerHTML=`
-<select id='list'> 
-<option value=''>All</option>
-<option value='grass'>Hierba</option>
-<option value='fire'>Fuego</option>
-<option value='fairy'>Hada</option>
-<option value='electric'>Electrico</option>
-<option value='rock'>Roca</option>
-<option value='water'>Agua</option>
-</select>
-`
-let list= document.getElementById('list');
-list.addEventListener('change',(event)=> {
-    let selectValue = list.value;
-    console.log(selectValue);
+
+//mostrar pokémons
     
-        function pokemonFilter(poke){
-        return poke.type.includes(selectValue) 
-    }
-    
-    allPokemon = allPokemon.filter(pokemonFilter);
-    console.log(allPokemon);
-           
-    //mostrar pokémons
-    
-    function pokemonTemplate(poke){
+   function pokemonTemplate(poke){
         return`
         <div class='poke'>
         <img class='poke-img' src='${poke.img}'>
@@ -39,10 +16,44 @@ list.addEventListener('change',(event)=> {
         `
     }
     
-    document.getElementById('root').innerHTML = `
+    let root = document.getElementById('root');
+    root.innerHTML = `
     <h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
     ${allPokemon.map(pokemonTemplate).join('')}
     `
+   
+ // Seleccionar por tipo
+
+let list= document.getElementById('list');
+list.addEventListener('change',(event)=> {
+    let selectValue = list.value;
+    console.log(selectValue);
+ 
+  // Para ver si arreglo incluye valor seleccionado
+        function pokemonFilter(poke){
+        return poke.type.includes(selectValue) 
+    }
+   // Filtra los pokemones 
+
+    let typePokemon = allPokemon.filter(pokemonFilter);
+    console.log(typePokemon);
+
+   // Crea estructura para pokemon filtrado      
+      function pokemonTemplateFilter(type){
+        return`
+        <div class='poke'>
+        <img class='poke-img' src='${type.img}'>
+        <p class= 'poke-name'> ${type.name}<p>    
+        </div>
+        `
+    }
+   // Mostrar Pokemones filtrados
+    root.innerHTML = `
+    <h2 class= 'rootTitle'>Pokemons (${typePokemon.length}results) <h2>
+    ${typePokemon.map(pokemonTemplateFilter).join('')}
+    `
+    
+
 })
 
 console.log(example, data);
