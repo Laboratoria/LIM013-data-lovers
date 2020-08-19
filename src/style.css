@@ -1,0 +1,18 @@
+
+.containerPicture{
+    display: flex;
+  
+
+    flex-flow: row wrap;
+  
+  
+  
+   
+   
+}
+.picture{
+
+    margin: 20px;
+  
+    background: coral;
+}
