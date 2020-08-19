@@ -1,17 +1,5 @@
-// estas funciones son de ejemplo
-import data from './data/pokemon/pokemon.js';
-
-//export const example = () => {
-//  return 'example';
-//};
-
-//export const anotherExample = () => {
-//  return 'OMG';
-//};
-
-//Función para ordenar descendentemente por número
-export let orderDesc = () => {
-  data.pokemon.sort((b, a) => {
+export let order1_n = (data) => {
+  return data.sort((a,b) => {
     if (a.num < b.num) {
       return -1;
     }
@@ -24,8 +12,8 @@ export let orderDesc = () => {
 //Fin función para ordenar descendentemente por número
 
 //Función para ordenar ascendentemente por número
-export let orderAsc = () => {
-  data.pokemon.sort((a, b) => {
+export let ordern_1 = (data) => {
+  return data.sort((b,a) => {
     if (a.num < b.num) {
       return -1;
     }
@@ -38,8 +26,8 @@ export let orderAsc = () => {
 //Fin función para ordenar ascendentemente por number
 
 //Función para ordenar ascendentemente por Name
-export let orderAscName= () => {
-  data.pokemon.sort((a, b) => {
+export let orderA_Z= (data) => {
+  return data.sort((a, b) => {
     if (a.name < b.name) {
       return -1;
     }
@@ -52,8 +40,8 @@ export let orderAscName= () => {
 //Fin función para ordenar ascendentemente por name
 
 //Función para ordenar descendente por Name
-export let  orderDescName= () => {
-  data.pokemon.sort((b, a) => {
+export let  orderZ_A= (data) => {
+  return data.sort((b, a) => {
     if (a.name < b.name) {
       return -1;
     }
