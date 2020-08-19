@@ -58,7 +58,7 @@ body {
     display: block;
     font-size: 30px;
     text-decoration: bold;
-    width: 35%;
+    width: 55%;
 }
   
 .topnav .search-container {
@@ -143,4 +143,3 @@ footer {
     background-image: url(images/hexagono2.png);
     background-size: cover;
 }
-
