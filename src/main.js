@@ -125,7 +125,7 @@ const MuestraBusca = () =>{
 
 
  let texto = document.getElementById('inputSeatch');
- let buimg = document.getElementById('local');
+
 
  const pruevas = () =>{
   	 //alert(texto.value.toLowerCase());
@@ -133,20 +133,19 @@ const MuestraBusca = () =>{
   	 for(var i=0;i<data.length;i++){
   	 	let dataMin = data[i].name.toLowerCase();
   	 	if(dataMin.indexOf(textoMin) !== -1){
-  	 		boxSear.innerHTML+='<li><a onclick="nuevo">'+data[i].name+' de '+data[i].name+'</a> </li>';
+  	 		boxSear.innerHTML+='<li><a onclick="nuevo">'+data[i].name+'</a> </li>';
   	 	}
   	 }
 }
  
 document.getElementById("local").addEventListener("click",pruevas);
 
-
 const nuevo = () =>{
-	console.log(nuevo);
-  datoOb.obtenerPersonajes();
+  
 }
 
-document.getElementById("alldata").addEventListener("click",nuevo);
+document.getElementById("boxResult").addEventListener("click",nuevo);
+
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
