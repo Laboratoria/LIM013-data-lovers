@@ -1,8 +1,8 @@
 // estas funciones son de ejemplo
 const datajs = {
 
-  filterHumans: function (data) {
-    let nuevadata = data.filter(data => { return data.species === "Human" });
+  filterHumans: function (data, condition) {
+    let nuevadata = data.filter(data => { return data.species === condition });
     console.log(nuevadata)
     function obtenerHumanos(nuevadata) {
       return `<div class="person">

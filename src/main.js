@@ -94,13 +94,16 @@ btnEstado.addEventListener("click", checkboxEs);
 const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	datajs.filterHumans(data)
+	let inpuH= document.getElementById('btn-human')
+	let dataH=inpuH.getAttribute("data-target");
+	console.log(dataH)
+	datajs.filterHumans(data,dataH)
 }
 const btnHuman = document.getElementById("btn-human")
 btnHuman.addEventListener("click", btnH);
 
 
-//Buscador de cotenid o
+//Buscador de cotenido
 
 //Declarando variebles
 let contenBus = document.getElementById('ctn-bars-search');
