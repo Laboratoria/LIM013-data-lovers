@@ -28,9 +28,9 @@ body{
     /* El fonde se re-escala automáticamente */
     background-size: cover;
 }
-.contenedor{
+.container{
     width: 90%;
-    margin: auto;
+    margin: 15px auto;
     font-family: FFMarkPro;
 
     /*FLEX*/
@@ -59,7 +59,7 @@ header .logo img{
 }
 header nav{
     /*Se cambió del 50% al 70%*/
-    width: 70%;
+    width: 50%;
     
     /*FLEX*/
     display: flex;
@@ -73,7 +73,8 @@ header nav a{
     text-align: center;
     text-decoration: none;
     padding:18px;
-    font-size: 20px;
+
+    font-size: 18px;
 
     /*FLEX HIJO*/
     flex-grow: 1;
@@ -86,7 +87,7 @@ header nav a:hover{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 70%;
-    /*height: auto;******************************/
+   
 }
 .main img{
     padding:10px 0px;

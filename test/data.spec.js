@@ -21,3 +21,19 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+
+
+/*describe('operaciones', () => {
+  it('function sumar', () => {
+    expect(a+b).toBe(z);
+  });
+
+  it('returns `example`', () => {
+    expect(example()).toBe('example');
+  });
+});
+
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4);
+});
+*/
