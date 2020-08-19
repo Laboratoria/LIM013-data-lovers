@@ -5,8 +5,6 @@ import data from './data/pokemon/pokemon.js';  //fijo
 
 let allPokemon= data.pokemon;
 
-//mostrar pokémon 
-
 function pokemonTemplate(poke){
     return`
     <div class='poke'>
