@@ -28,7 +28,7 @@ body{
     /* El fonde se re-escala automáticamente */
     background-size: cover;
 }
-.contenedor{
+.container{
     width: 90%;
     margin: 15px auto;
     font-family: FFMarkPro;
@@ -86,7 +86,7 @@ header nav a:hover{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 70%;
-    /*height: auto;******************************/
+   
 }
 .main img{
     padding:10px 0px;
