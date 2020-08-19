@@ -1,25 +1,49 @@
 *{
-    margin: 0px;
-    padding: 0px;  
-    }
+margin: 0px;
+padding: 0px;  
+}
 
-    header {
-        background-color: #3060B0;
-        height: 70px;
-        width: 100%;
-    }
+header {
+background-color: #3060B0;
+height: 70px;
+width: 100%;
+}
 
-    /*main {
-     display: flex;   
-    }*/
+main {
+background-color: #EEE8E8;  
+}
 
-    .rootTitle{
-    text-align: center;
-    }
+.buscaPokemon{
+text-align: center;
+font-family: 'Baloo Tamma 2', cursive; 
+}
 
-   .root {
+.rootTitle{
+text-align: center;
+font-family: 'Baloo Tamma 2', cursive; 
+}
+
+/*.root {
+   
+/* flex-direction: row;
+  
+}*/
+
+.pokedex{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+}
+
+.poke{
+    max-width:30%;
+    padding:16px;
+    margin: 40px;
+    background-color:#ffffff;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius:12px;
     display: flex;
-   /* flex-direction: row;*/
-    flex-flow: row wrap;
-    
-   }
+    flex-direction:column;
+    align-items:center
+    }

@@ -18,27 +18,39 @@ let allPokemon= data.pokemon;
     
     let root = document.getElementById('root');
     root.innerHTML = `
-    <h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
-    ${allPokemon.map(pokemonTemplate).join('')}
+    <h3 class= 'rootTitle'>Pokemons (${allPokemon.length} results) <h3>
+    <div class = 'pokedex'>${allPokemon.map(pokemonTemplate).join('')}</div>
     `
-   
- // Seleccionar por tipo
+    
+
+
+    /*let root = document.getElementById('root');
+    root.innerHTML = `
+    <h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
+    `
+    let pokedex = document.getElementById('pokedex');
+    pokedex.innerHTML =`
+    ${allPokemon.map(pokemonTemplate).join('')}
+    `*/
+     // Seleccionar por tipo
 
 let list= document.getElementById('list');
-list.addEventListener('change',(event)=> {
+list.addEventListener('change',()=> {
+    let typePokemon = allPokemon;
     let selectValue = list.value;
+    // Para ver si arreglo incluye valor seleccionado
+    function pokemonFilter(poke){ 
+       return poke.type.includes(selectValue) 
+    }
+    // filtra si la seleccion es diferente a all pokemon
+    if (selectValue !== "allPokemon"){
+       typePokemon = allPokemon.filter(pokemonFilter);  // Filtra los pokemones
+        console.log(typePokemon);
+    }
     console.log(selectValue);
  
-  // Para ver si arreglo incluye valor seleccionado
-        function pokemonFilter(poke){
-        return poke.type.includes(selectValue) 
-    }
-   // Filtra los pokemones 
 
-    let typePokemon = allPokemon.filter(pokemonFilter);
-    console.log(typePokemon);
-
-   // Crea estructura para pokemon filtrado      
+   // Crea estructura de all pokemon o pokemon filtrado      
       function pokemonTemplateFilter(type){
         return`
         <div class='poke'>
@@ -49,11 +61,9 @@ list.addEventListener('change',(event)=> {
     }
    // Mostrar Pokemones filtrados
     root.innerHTML = `
-    <h2 class= 'rootTitle'>Pokemons (${typePokemon.length}results) <h2>
-    ${typePokemon.map(pokemonTemplateFilter).join('')}
+    <h3 class = 'rootTitle'>Pokemons (${typePokemon.length} results) <h3>
+    <div class = 'pokedex'>${typePokemon.map(pokemonTemplateFilter).join('')}</div>
     `
-    
-
 })
 
 console.log(example, data);
