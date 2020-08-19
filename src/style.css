@@ -8,7 +8,25 @@ body {
     background-attachment: fixed;  
     background-size: cover;
 }
+.menu-bar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: none; 
+}
 
+.menu-option {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 35px;
+  font-family: 'Marcellus SC', serif;
+  font-style: Regular;
+  line-height: 44px;
+  vertical-align: top;
+  color: #BBA341;
+}
 
 .mySlides {display: none}
 img {vertical-align: middle;}
