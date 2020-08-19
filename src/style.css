@@ -2,11 +2,24 @@
     margin: 0px;
     padding: 0px;  
     }
-    
-    .body{
-    display: flex;
+
+    header {
+        background-color: #3060B0;
+        height: 70px;
+        width: 100%;
     }
-    
+
+    /*main {
+     display: flex;   
+    }*/
+
     .rootTitle{
     text-align: center;
     }
+
+   .root {
+    display: flex;
+   /* flex-direction: row;*/
+    flex-flow: row wrap;
+    
+   }
