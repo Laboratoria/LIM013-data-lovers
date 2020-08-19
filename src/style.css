@@ -36,9 +36,7 @@
 
 .logo{
     margin: 0px 0px 0px 80px;
-    width:100%;
     float: left;
-    width: 25%;
 }
 
 .menu{
@@ -119,6 +117,69 @@
 .hamburger::after{
     transform: translateY(3px);
 }
+
+/*buscador de contenido*/
+#ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 38%;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#ctn-bars-search{
+    position: fixed;
+    top: -10px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#ctn-bars-search input{
+    display: block;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#box-search{
+    position: fixed;
+    top:180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: #fff;
+    z-index:8;
+    overflow: hidden;
+    display: none;
+}
+
+#box-search li a{
+    display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover {
+    color: green;
+}
+
+#cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
+}
 /* Fin de estilos de header */
 
 /* Inicio de estilos pantalla 1*/
@@ -150,16 +211,6 @@
     outline: 0px;
 }
 
-@media (max-width: 700px){
-  .btn-i button{
-    position:relative;
-    left: 30%;
-    top:70%;
-     padding: 5px 9px;
-     margin-top: 100px;
-  }
-}
-
 .cajaPri{
 	position:relative;
     font-size: 12px;
@@ -170,32 +221,6 @@
 	color: white;
     text-align:center; 
 }
-
-
-@media (min-width:700px) {
-  .cajaPri{
-    width: 500px;
-    height: 500px;
-    font-size: 14px;
-    background-position: center;
-    text-align: center;
-    position:relative;
-    left: 50%;
-    top:30%;
-  }
-}
-
-
-@media (min-width:1024px) {
-  .cajaPri{
-    width: 500px;
-    height: 500px;
-    font-size: 14px;
-    background-position: center;
-    text-align: center;
-       
-  }
-}
 /* Fin de estilos pantalla 1*/
 
 /* Inicio de estilos pantalla 2*/
@@ -203,6 +228,7 @@
     padding: 120px 0px;
     width: 100%;
 }
+
 /* Estilos de botones de filtros */
 .btnControls{
     width: 100%;
@@ -284,6 +310,7 @@
     border:1px solid #C4C4C4;
     border-radius: 3px;
 }
+
 .contentItem:hover input ~ .checkmark {
     background-color: #ddd;
 }
@@ -321,6 +348,7 @@
    text-align: right;
    padding: 20px 0;
 }
+
 .caja {
     margin:0px 80px 0px auto;	
     border:1px solid #C4C4C4;
@@ -338,7 +366,7 @@
     height: 40px;
     padding: 8px;
     width: 250px;
- }
+}
 
 .caja select:focus{ 
     outline: none;
@@ -357,7 +385,7 @@
     top:0;
     right:0px;	
     pointer-events: none;
- }
+}
 
 /* Estilos de cards de personajes*/
 .container-data{
@@ -372,23 +400,25 @@
 }
 
 .app-title{
-  text-align: center;
-  font-weight: normal;
-  font-size: 2.6rem; 
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    color: #6A6A6A;
+    margin-bottom: 30px;
 }
 
 .person{
-  max-width: 400px;
-  padding: 15px;
-  margin:15px 20px;
-  background-color: #F0F0F0;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
-  overflow: hidden;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: center;
-  transform-style: preserve-3d;
-  text-align: center;
+    max-width: 400px;
+    padding: 15px;
+    margin:15px 20px;
+    background-color: #F0F0F0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    transform-style: preserve-3d;
+    text-align: center;
 }
 
 .person:hover {
@@ -396,53 +426,30 @@
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width:700px){
-    .alldata{
-        margin: 10px;
-    }
-
-    .person{
-        margin:15px 10px;
-      }
-}
-/*
-@media (max-width:1024px){
-    .person {
-        width: 1000px;
-    }
-}
-
-@media (max-width:620px){
-    .person {
-        width: 40%;
-    }
-}
-*/
 .photo {
-  width: 180px;
-  height: auto;
-  max-width: 100%;
-  border-radius: 50%;
-  
+    width: 180px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.info{
+    width: 230px;
+    height: 200px;
 }
 
 .name{
-  font-weight: normal;
-  margin: 20px;
-  text-align: center;
-  font-size: 20px;
-  color: #459AE2;
+    font-weight: normal;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #459AE2;
 }
 
 .imagenes {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-}
-
-.info{
-    width:200px;
-    height: 200px;
 }
 
 .Text-datos{
