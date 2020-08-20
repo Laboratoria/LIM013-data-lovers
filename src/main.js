@@ -8,15 +8,15 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
-    document.getElementById("alldata").innerHTML = `
+  
+  document.getElementById("alldata").innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
-
 }
 
 const obtenerPersonajes = (data) => {
-		return `<div class="person">
+	return `<div class="person">
 		<div class="imagenes">
 		<img class="photo" src="${data.image}">
 		</div>
@@ -28,9 +28,7 @@ const obtenerPersonajes = (data) => {
 		<p class="Text-datos">Estado:${data.status}</p>
 		</div>
 		</div>`
-	}
-	
-
+}
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
@@ -91,17 +89,41 @@ const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
 //Filtro de especie humanos
+const radioEspecies = document.querySelector("#especies").children;
+const pruebacontI = document.getElementById("especies")
+const pruebaInputs = pruebacontI.getElementsByTagName("input");
+console.log(pruebaInputs)
 const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	datajs.filterHumans(data)
+	for (let i = 0; i < pruebaInputs.length; i++) {
+		if (pruebaInputs[i].checked == true) {
+			let dataH = pruebaInputs[i].getAttribute("value");
+			console.log(dataH)
+			datajs.filterHumans(data, dataH)
+		}
+
+
+		//let inpuH= document.getElementById('btn-human')
+	}
+}
+/*const btnH = () => {
+	document.querySelector('#alldata').classList.add("ocultar");
+	document.querySelector('#dataHuman').classList.remove("ocultar");
+	let inpuH= document.getElementById('btn-human')
+	let dataH=inpuH.getAttribute("value");
+	console.log(dataH)
+	datajs.filterHumans(data,dataH)
 }
 const btnHuman = document.getElementById("btn-human")
-btnHuman.addEventListener("click", btnH);
+btnHuman.addEventListener("click", btnH);*/
+
+for (let i = 0; i < radioEspecies.length; i++) {
+	radioEspecies[i].addEventListener("click", btnH);
+}
 
 
 //Buscador de cotenido
-
  let texto = document.getElementById('inputSeatch')
  const pruevas = () =>{
   	 //alert(texto.value.toLowerCase());
@@ -113,10 +135,8 @@ btnHuman.addEventListener("click", btnH);
   	 		let content = boxSear.innerHTML;
   	 		content = data[i].name;
   	 		console.log(content);
-
-  	     }
+  	   }
     }
-
 }
  
 document.getElementById("local").addEventListener("click",pruevas);
@@ -133,7 +153,7 @@ const MuestraBusca = () =>{
 	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
- document.getElementById("ctn-icon-search").addEventListener("click",MuestraBusca);
+document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
 
  const ocultaBusca = () =>{
  	contenBus.style.top = "-10px";
@@ -141,9 +161,7 @@ const MuestraBusca = () =>{
  	boxSear.style.display = "none";
  	inputSeatch.value = " ";
  }
-
- document.getElementById("cover-ctn-search").addEventListener("click",ocultaBusca);
-
+document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
 const acenA_Z = () =>{
 	console.log("entro");
@@ -155,8 +173,6 @@ const acenA_Z = () =>{
 	`
 }
 document.getElementById("order-asc").addEventListener("click",acenA_Z);
-
-
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
