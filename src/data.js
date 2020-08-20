@@ -1,48 +1,44 @@
 const datajs = {
 
-  filterHumans: function (data, condition) {
-    let nuevadata = data.filter(data => { return data.species === condition });
-    function obtenerHumanos(nuevadata) {
-      return `<div class="person">
-		<div class="imagenes">
-		<img class="photo" src="${nuevadata.image}">
-		</div>
-		<div class="info">
-		<h2 class="name">${nuevadata.name}</h2>
-		<p class="Text-datos">Genero:${nuevadata.gender}</p>
-		<p class="Text-datos">Origen:${nuevadata.origin.name}</p>
-		<p class="Text-datos">Especie:${nuevadata.species}</p>
-		<p class="Text-datos">Estado:${nuevadata.status}</p>
-		</div>
-		</div>`
+  filterSpecies: function (data, condition) {
+    for (let i = 0; i < condition.length; i++) {
+      if (condition[i].checked == true) {
+        const dataH = condition[i].getAttribute("value");
+        if (condition[i].name == "esp") {
+          return data.filter(data => { return data.species === dataH });
+        } else if (condition[i].name == "orig") {
+          return data.filter(data => { return data.origin.name === dataH });
+        } else if (condition[i].name == "gener") {
+          return data.filter(data => { return data.gender === dataH });
+        } else if (condition[i].name == "estd") {
+          return data.filter(data => { return data.status === dataH });
+        }
+      }
     }
-    document.getElementById("dataHuman").innerHTML = `
-	<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-  ${nuevadata.map(obtenerHumanos).join(" ")}`
   },
-  
-nameA_Z: function(data) {
-        return data.sort((a, b) => {
-            if (a.name < b.name) {
-                return -1;
-            }
-            if (a.name > b.name) {
-                return 1;
-            }
-            return 0;
-        });
-    },
-    nameZ_A: function(data) {
-        return data.sort((b, a) => {
-            if (a.name < b.name) {
-                return -1;
-            }
-            if (a.name > b.name) {
-                return 1;
-            }
-            return 0;
-        });
-    },
+
+  nameA_Z: function (data) {
+    return data.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  },
+  nameZ_A: function (data) {
+    return data.sort((b, a) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  },
 
 }
 

@@ -8,11 +8,10 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
-  
-  document.getElementById("alldata").innerHTML = `
-	<h1 class="app-title">Total de Personajes(${data.length})</h1>
-	${data.map(obtenerPersonajes).join(" ")}
-	`
+
+	document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${data.length})</h1>
+		${data.map(obtenerPersonajes).join(" ")}`
 }
 
 const obtenerPersonajes = (data) => {
@@ -47,14 +46,13 @@ const cambiarClase = () => {
 const tongle = document.getElementById("tongle");
 tongle.addEventListener("click", cambiarClase);
 
-//Función de los botonde de filtro y checkbox
+//Función de los botonde de filtro e inputs de radio
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
 	document.querySelector('#especies').classList.remove("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
-
 }
 const btnEspecies = document.getElementById("btn-especies")
 btnEspecies.addEventListener("click", checkboxE);
@@ -89,45 +87,43 @@ const checkboxEs = () => {
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
-//Filtro de especie humanos
-const radioEspecies = document.querySelector("#especies").children;
-const pruebacontI = document.getElementById("especies")
+//Filtro de especies
+const botonesFiltros = document.querySelector("#content-cb").children;
+const pruebacontI = document.getElementById("content-cb");
 const pruebaInputs = pruebacontI.getElementsByTagName("input");
-console.log(pruebaInputs)
 const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	for (let i = 0; i < pruebaInputs.length; i++) {
-		if (pruebaInputs[i].checked == true) {
-			let dataH = pruebaInputs[i].getAttribute("value");
-			console.log(dataH)
-			datajs.filterHumans(data, dataH)
+	const nuevadata = datajs.filterSpecies(data, pruebaInputs);
+	document.getElementById("dataHuman").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
+		${nuevadata.map(obtenerPersonajes).join(" ")}`
+}
+
+for (let i = 0; i < botonesFiltros.length; i++) {
+	const inputsFiltros = botonesFiltros[i].children;
+	for (let j = 0; j < inputsFiltros.length; j++) {
+		inputsFiltros[j].addEventListener("click", btnH);
+	}
+}
+
+//Buscador de cotenido
+let texto = document.getElementById('inputSeatch')
+const pruevas = () => {
+	//alert(texto.value.toLowerCase());
+	let textoMin = texto.value.toLowerCase();
+	for (var i = 0; i < data.length; i++) {
+		let dataMin = data[i].name.toLowerCase();
+		if (dataMin.indexOf(textoMin) !== -1) {
+			boxSear.innerHTML += '<li><a>' + data[i].name + '</a> </li>';
+			let content = boxSear.innerHTML;
+			content = data[i].name;
+			console.log(content);
 		}
 	}
 }
 
-for (let i = 0; i < radioEspecies.length; i++) {
-	radioEspecies[i].addEventListener("click", btnH);
-}
-
-
-//Buscador de cotenido
- let texto = document.getElementById('inputSeatch')
- const pruevas = () =>{
-  	 //alert(texto.value.toLowerCase());
-  	 let textoMin = texto.value.toLowerCase();
-  	 for(var i=0;i<data.length;i++){
-  	 	let dataMin = data[i].name.toLowerCase();
-  	 	if(dataMin.indexOf(textoMin) !== -1){
-  	 		boxSear.innerHTML+='<li><a>'+data[i].name+'</a> </li>';
-  	 		let content = boxSear.innerHTML;
-  	 		content = data[i].name;
-  	 		console.log(content);
-  	   }
-    }
-}
- 
-document.getElementById("local").addEventListener("click",pruevas);
+document.getElementById("local").addEventListener("click", pruevas);
 
 //Declarando variebles
 let contenBus = document.getElementById('ctn-bars-search');
@@ -135,32 +131,32 @@ const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
 const boxSear = document.getElementById('box-search');
 
-const MuestraBusca = () =>{
-	contenBus.style.top= "80px";
+const MuestraBusca = () => {
+	contenBus.style.top = "80px";
 	coverBus.style.display = "block";
 	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
 document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
 
- const ocultaBusca = () =>{
- 	contenBus.style.top = "-10px";
- 	coverBus.style.display = "none";
- 	boxSear.style.display = "none";
- 	inputSeatch.value = " ";
- }
+const ocultaBusca = () => {
+	contenBus.style.top = "-10px";
+	coverBus.style.display = "none";
+	boxSear.style.display = "none";
+	inputSeatch.value = " ";
+}
 document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
-const acenA_Z = () =>{
+const acenA_Z = () => {
 	console.log("entro");
 	datajs.nameA_Z(data);
-	document.getElementById('alldata'). innerHTML = " ";
-    document.getElementById('alldata').innerHTML = `
+	document.getElementById('alldata').innerHTML = " ";
+	document.getElementById('alldata').innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
 }
-document.getElementById("order-asc").addEventListener("click",acenA_Z);
+document.getElementById("order-asc").addEventListener("click", acenA_Z);
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';

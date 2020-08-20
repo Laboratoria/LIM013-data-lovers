@@ -233,13 +233,13 @@
 }
 
 /* Estilos de botones de filtros */
-.btnControls{
+.btn-controls{
     width: 100%;
     text-align: center;
     margin: 20px 0;
 }
 
-.btnControls button {
+.btn-controls button {
     width: 140px;
     color: #6A6A6A;
     border: 1px solid #C4C4C4;
@@ -252,11 +252,11 @@
     font-weight: 600;
 }
 
-.btnControls button:hover {
+.btn-controls button:hover {
     background-color: #ddd;
 }
   
-.btnControls button:focus {
+.btn-controls button:focus {
     border: none;
     border: 1px solid #459AE2;
     background-color: #459AE2;
