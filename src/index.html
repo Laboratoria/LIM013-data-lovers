@@ -8,31 +8,45 @@
     <script src="https://use.fontawesome.com/972b224447.js"></script>
   </head>
   <body>
-    <div id="root">
-      <section class="mainContainer">
-        <header class="header">
-          <!-- Navigation bar -->
-          <div class="topnav">
+    <section class="mainContainer">
+    <header class="header">
+    <!-- Navigation bar -->
+      <section class="topnav">
+    <!--navigation logo y menu-->
+        <section class="flexNav">
+    <!--menu deploy-->
+          <section class="menu-deploy">
+            <i class="fa fa-bars"></i>
+          </section>
             <!-- Links -->
-              <a class="active" href="#videos">Videos</a>
-              <a href="#links">Links</a>
-              <a href="#game">Go app</a>
+          <nav class="listItem" id="listItem">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Links</a></li>
+              <li><a href="#">Go app</a></li>
+            </ul>
+          </nav>
             <!-- Brand/Logo -->
-            <div class="logo">
-              <a class="navbar-brand" href="#">P O K É D E X</a>
-            </div>
+          <section class="logo">
+            <a class="navbar-brand">P O K É D E X</a>
+          </section>
+        </section>
+            
             <!-- Search form -->
-            <div class="search-container">
-              <form action="/action_page.php">
-                <input type="text" placeholder="Search by Name or Number" name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </div>
-          </div>
-        </header>
+        <section class="search-container">
+          <form>
+            <input type="text" placeholder="Search by Name or Number" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </section>
+            
+      </section>
+    </header>
+    
     <!--MAIN contenido principal del body(cuerpo)-->
         <main class="displayContainer">
-          <!-- Dark folder: Type menú -->
+           <!-- Dark folder: Type menú -->
           <section class="typeContainer">
 
           </section>
@@ -45,7 +59,8 @@
               <button type="image" name="lessPwr" id="lessPwr" class="orderByLessPwrButton"></button>
               <button type="image" name="morePwr" id="morePwr" class="orderByMorePwrButton"></button>
             </section>
-            <!-- Pokémon display -->
+         <!-- Order by menu -->
+         <!-- Pokémon display -->
             <section class="scrollArea" id="scrollArea"> 
               <section class="pokemonDisplay" id="pokemonDisplay">
 
@@ -60,15 +75,14 @@
         <aside class="card">
   
         </aside>
-      </section>
-
+    </section>
+  
         <footer class="footer">
         <p class="footer1">@POKÉDEX | Developed by: Team 14 | Data-Lovers | Laboratoria</p>
         <p class="footer2">Legal Notice | Private Policy | Cookies Policy</p>
         </footer>
 
-      
-    </div>
+   </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
