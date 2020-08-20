@@ -1,5 +1,5 @@
 import datajs from './data.js';
-const data = window.rickAndMorty.results;
+let data = window.rickAndMorty.results;
 console.log(data);
 
 const bienvenido = () => {
@@ -8,8 +8,11 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
-
-
+  
+  document.getElementById("alldata").innerHTML = `
+	<h1 class="app-title">Total de Personajes(${data.length})</h1>
+	${data.map(obtenerPersonajes).join(" ")}
+	`
 }
 
 const obtenerPersonajes = (data) => {
@@ -26,11 +29,6 @@ const obtenerPersonajes = (data) => {
 		</div>
 		</div>`
 }
-document.getElementById("alldata").innerHTML = `
-	<h1 class="app-title">Total de Personajes(${data.length})</h1>
-	${data.map(obtenerPersonajes).join(" ")}
-	`
-
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
@@ -125,8 +123,23 @@ for (let i = 0; i < radioEspecies.length; i++) {
 }
 
 
-
 //Buscador de cotenido
+ let texto = document.getElementById('inputSeatch')
+ const pruevas = () =>{
+  	 //alert(texto.value.toLowerCase());
+  	 let textoMin = texto.value.toLowerCase();
+  	 for(var i=0;i<data.length;i++){
+  	 	let dataMin = data[i].name.toLowerCase();
+  	 	if(dataMin.indexOf(textoMin) !== -1){
+  	 		boxSear.innerHTML+='<li><a>'+data[i].name+'</a> </li>';
+  	 		let content = boxSear.innerHTML;
+  	 		content = data[i].name;
+  	 		console.log(content);
+  	   }
+    }
+}
+ 
+document.getElementById("local").addEventListener("click",pruevas);
 
 //Declarando variebles
 let contenBus = document.getElementById('ctn-bars-search');
@@ -134,45 +147,33 @@ const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
 const boxSear = document.getElementById('box-search');
 
-const MuestraBusca = () => {
-	contenBus.style.top = "80px";
+const MuestraBusca = () =>{
+	contenBus.style.top= "80px";
+	coverBus.style.display = "block";
 	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
 document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
 
-const ocultaBusca = () => {
-	contenBus.style.top = "-10px";
-	boxSear.style.display = 'none';
-	inputSeatch.value = "";
-}
-
+ const ocultaBusca = () =>{
+ 	contenBus.style.top = "-10px";
+ 	coverBus.style.display = "none";
+ 	boxSear.style.display = "none";
+ 	inputSeatch.value = " ";
+ }
 document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
-
-let texto = document.getElementById('inputSeatch');
-let buimg = document.getElementById('local');
-
-const pruevas = () => {
-	//alert(texto.value.toLowerCase());
-	let textoMin = texto.value.toLowerCase();
-	for (var i = 0; i < data.length; i++) {
-		let dataMin = data[i].name.toLowerCase();
-		if (dataMin.indexOf(textoMin) !== -1) {
-			boxSear.innerHTML += '<li><a onclick="nuevo">' + data[i].name + ' de ' + data[i].name + '</a> </li>';
-		}
-	}
+const acenA_Z = () =>{
+	console.log("entro");
+	datajs.nameA_Z(data);
+	document.getElementById('alldata'). innerHTML = " ";
+    document.getElementById('alldata').innerHTML = `
+	<h1 class="app-title">Total de Personajes(${data.length})</h1>
+	${data.map(obtenerPersonajes).join(" ")}
+	`
 }
+document.getElementById("order-asc").addEventListener("click",acenA_Z);
 
-document.getElementById("local").addEventListener("click", pruevas);
-
-
-const nuevo = () => {
-	console.log(nuevo);
-	datoOb.obtenerPersonajes();
-}
-
-document.getElementById("alldata").addEventListener("click", nuevo);
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
