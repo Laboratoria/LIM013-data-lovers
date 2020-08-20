@@ -89,21 +89,22 @@ btnEstado.addEventListener("click", checkboxEs);
 
 //Filtro de especies
 const botonesFiltros = document.querySelector("#content-cb").children;
-const pruebacontI = document.getElementById("content-cb");
-const pruebaInputs = pruebacontI.getElementsByTagName("input");
-const btnH = () => {
+const contentUl = document.getElementById("content-cb");
+const inputName = contentUl.getElementsByTagName("input");
+const btnF = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	const nuevadata = datajs.filterSpecies(data, pruebaInputs);
+	const filtroData = datajs.filterSpecies(data, inputName);
 	document.getElementById("dataHuman").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-		${nuevadata.map(obtenerPersonajes).join(" ")}`
+		`<h1 class="app-title">Total de Personajes(${filtroData.length})</h1>
+		${filtroData.map(obtenerPersonajes).join(" ")}`
 }
 
 for (let i = 0; i < botonesFiltros.length; i++) {
 	const inputsFiltros = botonesFiltros[i].children;
+	console.log(inputsFiltros)
 	for (let j = 0; j < inputsFiltros.length; j++) {
-		inputsFiltros[j].addEventListener("click", btnH);
+		inputsFiltros[j].addEventListener("click", btnF);
 	}
 }
 

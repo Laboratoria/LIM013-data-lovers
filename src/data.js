@@ -3,15 +3,15 @@ const datajs = {
   filterSpecies: function (data, condition) {
     for (let i = 0; i < condition.length; i++) {
       if (condition[i].checked == true) {
-        const dataH = condition[i].getAttribute("value");
+        const dataF = condition[i].getAttribute("value");
         if (condition[i].name == "esp") {
-          return data.filter(data => { return data.species === dataH });
+          return data.filter(data => { return data.species === dataF });
         } else if (condition[i].name == "orig") {
-          return data.filter(data => { return data.origin.name === dataH });
+          return data.filter(data => { return data.origin.name === dataF });
         } else if (condition[i].name == "gener") {
-          return data.filter(data => { return data.gender === dataH });
+          return data.filter(data => { return data.gender === dataF });
         } else if (condition[i].name == "estd") {
-          return data.filter(data => { return data.status === dataH });
+          return data.filter(data => { return data.status === dataF });
         }
       }
     }
