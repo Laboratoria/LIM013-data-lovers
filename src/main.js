@@ -91,16 +91,39 @@ const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
 //Filtro de especie humanos
+const radioEspecies = document.querySelector("#especies").children;
+const pruebacontI=document.getElementById("especies")
+const pruebaInputs =pruebacontI.getElementsByTagName("input");
+console.log(pruebaInputs)
 const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
+	for(let i=0; i<pruebaInputs.length; i++){
+		if(pruebaInputs[i].checked==true){
+				let dataH=pruebaInputs[i].getAttribute("value");
+	console.log(dataH)
+	datajs.filterHumans(data,dataH)
+		}
+		
+	
+	//let inpuH= document.getElementById('btn-human')
+}
+}
+/*const btnH = () => {
+	document.querySelector('#alldata').classList.add("ocultar");
+	document.querySelector('#dataHuman').classList.remove("ocultar");
 	let inpuH= document.getElementById('btn-human')
-	let dataH=inpuH.getAttribute("data-target");
+	let dataH=inpuH.getAttribute("value");
 	console.log(dataH)
 	datajs.filterHumans(data,dataH)
 }
 const btnHuman = document.getElementById("btn-human")
-btnHuman.addEventListener("click", btnH);
+btnHuman.addEventListener("click", btnH);*/
+
+for(let i=0; i<radioEspecies.length; i++){
+	radioEspecies[i].addEventListener("click", btnH);
+}
+
 
 
 //Buscador de cotenido
