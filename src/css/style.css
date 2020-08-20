@@ -84,7 +84,7 @@ header nav a {
 
   font-size: 18px;
 
-  /*FLEX HIJO*/
+ /*FLEX HIJO*/
   flex-grow: 1;
 }
 
@@ -161,7 +161,7 @@ footer {
   background: #986E1E;
   width: 100%;
   padding: 5px 10px;
-  /*FLEX*/
+ /*FLEX*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -293,7 +293,7 @@ footer i:hover {
 }
 
 @media screen and (max-width:800px) {
-  .contenedor {
+  .container{
     flex-direction: column;
   }
 
@@ -414,7 +414,7 @@ input[type=button] {
 }
 
 .legends .img-container {
-  width: 200px;
+  width: 190px;
   height: 180px;
   border-radius: 15px 15px 0px 0px;
   -webkit-border-radius: 15px 15px 0px 0px;
