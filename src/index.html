@@ -8,7 +8,7 @@
     <script src="https://use.fontawesome.com/972b224447.js"></script>
   </head>
   <body>
-    <header class="top">
+    <header class="header">
     <!-- Navigation bar -->
       <section class="topnav">
     <!--navigation logo y menu-->
@@ -45,18 +45,32 @@
     
     <!--MAIN contenido principal del body(cuerpo)-->
         <main class="displayContainer">
-         <!-- Type menú -->
-         <section class="typeContainer">
+           <!-- Dark folder: Type menú -->
+          <section class="typeContainer">
 
-         </section>
+          </section>
+          <!-- Type menú -->
+          <section class="typeContainer">
+
+          </section>
+          <!-- Light folder: Display -->
+          <section class="displayAll">
+            <!-- Order by menu -->
+            <section class="orderBy">
+              <button type="image" name="alphaAsc" id="alphaAsc" class="orderByAlphaAscButton"></button>
+              <button type="image" name="alphaDesc" id="alphaDesc" class="orderByAlphaDescButton"></button>
+              <button type="image" name="lessPwr" id="lessPwr" class="orderByLessPwrButton"></button>
+              <button type="image" name="morePwr" id="morePwr" class="orderByMorePwrButton"></button>
+            </section>
          <!-- Order by menu -->
          <!-- Pokémon display -->
-         <section class="displayAll">
-          <section class="containerMain" id="containerMain">
-       
-                  
+            <section class="scrollArea" id="scrollArea"> 
+              <section class="pokemonDisplay" id="pokemonDisplay">
+
+              </section>
+             
+            </section>
           </section>
-         </section>
       
         </main>
 
@@ -64,12 +78,14 @@
         <aside class="card">
   
         </aside>
-        <footer>
+    </section>
+  
+        <footer class="footer">
         <p class="footer1">@POKÉDEX | Developed by: Team 14 | Data-Lovers | Laboratoria</p>
         <p class="footer2">Legal Notice | Private Policy | Cookies Policy</p>
         </footer>
-      </section>
-    </div>
+
+   </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
