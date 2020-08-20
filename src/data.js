@@ -1,4 +1,4 @@
-export const order = {
+const order = {
     num1_N: function(data) {
         return data.sort((a, b) => {
             if (a.num < b.num) {
@@ -32,7 +32,7 @@ export const order = {
             return 0;
         });
     },
-    nameZ_A = (data) => {
+    nameZ_A: function(data) {
         return data.sort((b, a) => {
             if (a.name < b.name) {
                 return -1;
@@ -42,5 +42,6 @@ export const order = {
             }
             return 0;
         });
-    }
-}
+    },
+};
+export default order;

@@ -9,7 +9,7 @@ describe("order", () => {
         expect(typeof order.num1_N).toBe("function");
     });
     it("show ascending  numerical order'num'", () => {
-        expect(order1_n(input1_n)).toEqual(output1_n);
+        expect(order.num1_N(input1_n)).toEqual(output1_n);
     });
 
 
@@ -19,7 +19,7 @@ describe("order", () => {
     });
 
     it("show descending  numerical order'num'", () => {
-        expect(ordern_1(imputN_1)).toEqual(outputNum_1);
+        expect(order.numN_1(imputN_1)).toEqual(outputNum_1);
     });
 });
 
@@ -32,13 +32,13 @@ describe("order", () => {
         expect(typeof order.nameA_Z).toBe("function");
     });
     it("show ascending  name order 'a-z' ", () => {
-        expect(orderA_Z(imputA_Z)).toEqual(ouputA_Z);
+        expect(order.nameA_Z(imputA_Z)).toEqual(ouputA_Z);
     });
 
     it("is a function order name descendiente", () => {
         expect(typeof order.nameZ_A).toBe("function");
     });
     it("show ascending  name order 'a-z' ", () => {
-        expect(orderZ_A(imputZ_A)).toEqual(outputZ_A);
+        expect(order.nameZ_A(imputZ_A)).toEqual(outputZ_A);
     });
 });
