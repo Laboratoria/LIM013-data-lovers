@@ -47,12 +47,23 @@ const tongle = document.getElementById("tongle");
 tongle.addEventListener("click", cambiarClase);
 
 //Función de los botonde de filtro e inputs de radio
+function resetRadioButtons(groupName) {
+	const arRadioBtn = document.getElementsByName(groupName);
+	for (let i = 0; i < arRadioBtn.length; i++) {
+		let radButton = arRadioBtn[i];
+		radButton.checked = false;
+	}
+}
+
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
 	document.querySelector('#especies').classList.remove("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
 }
 const btnEspecies = document.getElementById("btn-especies")
 btnEspecies.addEventListener("click", checkboxE);
@@ -63,6 +74,9 @@ const checkboxO = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
 }
 const btnOrigen = document.getElementById("btn-origen")
 btnOrigen.addEventListener("click", checkboxO);
@@ -73,6 +87,9 @@ const checkboxG = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("estd");
 }
 const btnGenero = document.getElementById("btn-genero")
 btnGenero.addEventListener("click", checkboxG);
@@ -83,12 +100,15 @@ const checkboxEs = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
 }
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
 //Filtro de especies
-/*const botonesFiltros = document.querySelector("#content-cb").children;
+const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
@@ -106,68 +126,7 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 	for (let j = 0; j < inputsFiltros.length; j++) {
 		inputsFiltros[j].addEventListener("click", btnF);
 	}
-}*/
-
-const radioEspecies = document.querySelector("#especies").children;
-const contentE = document.getElementById("especies");
-const inputE = contentE.getElementsByTagName("input");
-const btnE = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let nuevadata = datajs.filterSpecies(data, inputE);
-	document.getElementById("dataHuman").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-        ${nuevadata.map(obtenerPersonajes).join(" ")}`
 }
-for (let i = 0; i < radioEspecies.length; i++) {
-	radioEspecies[i].addEventListener("click", btnE);
-}
-
-const radioOrigen = document.querySelector("#origen").children;
-const contentO = document.getElementById("origen");
-const inputO = contentO.getElementsByTagName("input");
-const btnO = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let nuevadata = datajs.filterSpecies(data, inputO);
-	document.getElementById("dataHuman").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-        ${nuevadata.map(obtenerPersonajes).join(" ")}`
-}
-for (let i = 0; i < radioOrigen.length; i++) {
-	radioOrigen[i].addEventListener("click", btnO);
-}
-
-const radioGenero = document.querySelector("#genero").children;
-const contentG = document.getElementById("genero");
-const inputG = contentG.getElementsByTagName("input");
-const btnG = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let nuevadata = datajs.filterSpecies(data, inputG);
-	document.getElementById("dataHuman").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-			${nuevadata.map(obtenerPersonajes).join(" ")}`
-}
-for (let i = 0; i < radioGenero.length; i++) {
-	radioGenero[i].addEventListener("click", btnG);
-}
-
-const radioEstado = document.querySelector("#estado").children;
-const contentEs = document.getElementById("estado");
-const inputEs = contentEs.getElementsByTagName("input");
-const btnEs = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let nuevadata = datajs.filterSpecies(data, inputEs);
-	document.getElementById("dataHuman").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
-			${nuevadata.map(obtenerPersonajes).join(" ")}`
-}
-for (let i = 0; i < radioEstado.length; i++) {
-	radioEstado[i].addEventListener("click", btnEs);
-}
-
 
 //Buscador de cotenido
 let texto = document.getElementById('inputSeatch')
