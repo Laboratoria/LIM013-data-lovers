@@ -39,9 +39,9 @@
     <input type="text" id="inputSeatch" placeholder="Buscar" />
   </div>
 
-  <ul id="box-search">
-    <li><a href="#"><img src="imagen/iconArt.png" id="local"></a></li>
-  </ul>
+ <ul id="box-search">
+   <li><a><img src="imagen/iconArt.png" id="local"></a></li>
+ </ul>
 
   <div id="cover-ctn-search"></div>
   <!-- Pantalla 1 -->
@@ -136,18 +136,18 @@
     <div class="content-order">
       <div class="caja">
         <select name="order" id="listOrder">
-          <option value="ordenarPor">Ordenar por</option>
-          <option value="az">A - Z</option>
-          <option value="za">Z - A</option>
-          <option value="protagonismo">Protagonismo</option>
+        <ul class="drop-down">
+          <li id="order-asc"><a href="#">A - Z</a></li>
+          <li id= "order-desc"><a href="#">Z - A</a></li>
+        </ul>
         </select>
       </div>
     </div>
 
-    <section class="container-data">
+    <main class="container-data">
       <div class="alldata" id="alldata"></div>
       <div class="alldata ocultar" id="dataHuman"></div>
-    </section>
+    </main>
 
   </section>
   <footer id="content-footer" class="ocultar">

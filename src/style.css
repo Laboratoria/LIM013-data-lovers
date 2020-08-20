@@ -156,8 +156,10 @@
     width: 1200px;
     background: #fff;
     z-index:8;
-    overflow: hidden;
+    max-height: 60%;
+    overflow-x:hidden;
     display: none;
+
 }
 
 #box-search li a{
@@ -165,6 +167,7 @@
     width: 1200px;
     color: #777777;
     padding: 12px 20px;
+
 }
 
 #box-search li a:hover {

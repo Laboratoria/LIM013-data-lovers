@@ -20,6 +20,29 @@ const datajs = {
 	<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
   ${nuevadata.map(obtenerHumanos).join(" ")}`
   },
+  
+nameA_Z: function(data) {
+        return data.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        });
+    },
+    nameZ_A: function(data) {
+        return data.sort((b, a) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        });
+    },
 
 }
 
