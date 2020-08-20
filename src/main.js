@@ -8,8 +8,10 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
-
-
+	document.getElementById("alldata").innerHTML = `
+	<h1 class="app-title">Total de Personajes(${data.length})</h1>
+	${data.map(obtenerPersonajes).join(" ")}
+	`
 }
 
 const obtenerPersonajes = (data) => {
@@ -26,10 +28,6 @@ const obtenerPersonajes = (data) => {
 		</div>
 		</div>`
 }
-document.getElementById("alldata").innerHTML = `
-	<h1 class="app-title">Total de Personajes(${data.length})</h1>
-	${data.map(obtenerPersonajes).join(" ")}
-	`
 
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
@@ -104,21 +102,8 @@ const btnH = () => {
 			console.log(dataH)
 			datajs.filterHumans(data, dataH)
 		}
-
-
-		//let inpuH= document.getElementById('btn-human')
 	}
 }
-/*const btnH = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let inpuH= document.getElementById('btn-human')
-	let dataH=inpuH.getAttribute("value");
-	console.log(dataH)
-	datajs.filterHumans(data,dataH)
-}
-const btnHuman = document.getElementById("btn-human")
-btnHuman.addEventListener("click", btnH);*/
 
 for (let i = 0; i < radioEspecies.length; i++) {
 	radioEspecies[i].addEventListener("click", btnH);
