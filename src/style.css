@@ -1,32 +1,96 @@
 
 * {box-sizing: border-box}
 body {
-    margin:0;
-    background-image: url('./img/FondoLOL.png');
-    border-block-color: black;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
+  margin:0;
+  background-image: url('./img/FondoLOL.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.header {
+  padding: 60px;
+}
+
+.title-lol {
+  display: block;
+  margin: auto;
+  width: 400px;
+  height: auto;
+}
+
+.logoHome{
+  position: relative;
 }
 .menu-bar {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  background-color: none; 
+  flex-wrap: nowrap;
+  background-color: #BBA341;
+  justify-content: space-around;
+  align-items: center; 
+  width: 80%;
+  margin:5px;
+  border-radius: 25px 0px;
+  opacity: 0.7;
+  overflow: hidden;
+  padding: 0;
+  justify-content: space-evenly;
+  left: 0;
 }
 
-.menu-option {
-  width: 100px;
-  margin: 10px;
-  text-align: center;
+.menu-bar a{
+  color: #000000;
+  Text-decoration: none;
   line-height: 44px;
   font-size: 35px;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  font-style: Regular;
+  line-height: 44px;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.menu-bar a:hover {
+  color:#BBA341;
+  background-color: #222423;
+  background-size: auto;
+}
+
+.menu-play {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: rgba(12, 166, 190, 0.85);
+  justify-content: space-around;
+  align-items: center;  
+  width: 80%;
+  margin: 10px;
+  border-radius: 25px 0px;
+  opacity: 0.7;
+  overflow: hidden;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+.menu-play a {
+  
+  color: #000000;
+  Text-decoration: none;
+  line-height: 44px;
+  font-size: 35px;
+  font-weight: normal;
   font-family: 'Marcellus SC', serif;
   font-style: Regular;
   line-height: 44px;
   vertical-align: top;
-  color: #BBA341;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
 }
+
 
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -54,7 +118,7 @@ h2 {
   font-family: 'Marcellus SC', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 38px;
   line-height: 44px;
   
   color: #BBA341;
@@ -124,6 +188,15 @@ h2 {
   background-color: #8b7932;
 }
 
+/* Riot_Games_logo */
+
+.riot {
+  background: url(Riot_Games_logo.png);
+  border: 1px solid #BBA341;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+}
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -143,16 +216,17 @@ h2 {
 }
 
 /* On smaller screens, decrease text size */
+@media (max-width: 700px) {
+  .title-lol{
+    width: 55%;
+}
+
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
-/* Riot_Games_logo */
-
-riot {
-  background: url(Riot_Games_logo.png);
-  border: 1px solid #BBA341;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 20px;
 }
+
+
+
+
 
