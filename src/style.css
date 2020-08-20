@@ -17,26 +17,36 @@ body {
   margin: auto;
   width: 400px;
   height: auto;
+  
 }
 
 .logoHome{
+  display: block;
+  margin: auto;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 5%;
+  width: auto;
   position: relative;
 }
+
 .menu-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: #BBA341;
-  justify-content: space-around;
   align-items: center; 
-  width: 80%;
   margin:5px;
   border-radius: 25px 0px;
   opacity: 0.7;
   overflow: hidden;
   padding: 0;
   justify-content: space-evenly;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: auto;
 }
 
 .menu-bar a{
@@ -57,22 +67,25 @@ body {
   color:#BBA341;
   background-color: #222423;
   background-size: auto;
+  border-block-color: #222423;
 }
 
 .menu-play {
-  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: rgba(12, 166, 190, 0.85);
   justify-content: space-around;
   align-items: center;  
-  width: 80%;
+  width: auto;
   margin: 10px;
   border-radius: 25px 0px;
   opacity: 0.7;
   overflow: hidden;
   padding: 0;
   justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  right:10%;
 }
 
 .menu-play a {
