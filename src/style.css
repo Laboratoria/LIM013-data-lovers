@@ -1,49 +1,79 @@
 *{
-margin: 0px;
-padding: 0px;  
-}
-
-header {
-background-color: #3060B0;
-height: 70px;
-width: 100%;
-}
-
-main {
-background-color: #EEE8E8;  
-}
-
-.buscaPokemon{
-text-align: center;
-font-family: 'Baloo Tamma 2', cursive; 
-}
-
-.rootTitle{
-text-align: center;
-font-family: 'Baloo Tamma 2', cursive; 
-}
-
-/*.root {
-   
-/* flex-direction: row;
-  
-}*/
-
-.pokedex{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:row;
-}
-
-.poke{
-    max-width:30%;
-    padding:16px;
-    margin: 40px;
-    background-color:#ffffff;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border-radius:12px;
-    display: flex;
-    flex-direction:column;
-    align-items:center
+    margin: 0px;
+    padding: 0px;  
     }
+    
+    header {
+    background-color: #3060B0;
+    padding:10px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    }
+    
+    .logo{
+    width: 250px;
+    margin:0px 16px;
+    }
+    
+    main {
+    background-color: #EEE8E8;  
+    width:100%;
+    }
+    
+    .findPokemon{
+        text-align: center;
+        font-family: 'Baloo Tamma 2'; 
+        color: #616161;
+        font-size: 45px;
+        padding: 12px; 
+    }
+    
+    
+    
+    /*.root {
+       
+    /* flex-direction: row;
+      
+    }*/
+    
+    .selector{
+    display:flex;
+    justify-content:center;
+    
+    }
+    .pokedex{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+    }
+    
+    .poke{
+        max-width:30%;
+        padding:16px;
+        margin: 40px;
+        background-color:#ffffff;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius:12px;
+        display: flex;
+        flex-direction:column;
+        align-items:center
+        }
+    
+        .poke-name {
+            font-size: 20px;
+            font-family: 'Baloo Tamma 2';
+            font-weight: 600;
+            color: #616161;
+        
+        }    
+        
+        .poke-num {
+            font-size: 14px;
+            font-family: 'Baloo Tamma 2';
+            color: #ffffff;
+            background-color:#3060b0;
+            border-radius:8px;
+            padding: 1px 6px;
+        }
