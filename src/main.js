@@ -61,45 +61,27 @@ console.log('result',result);
 
 getLegends();
 
+search.addEventListener('click', (e) => {
+  //console.log('event',e.target.id)
+  const rol = e.target.id
+  //console.log('rol',rol)
+  const arrayLegends = Object.values(datos)
+  const result = arrayLegends.filter(
+    (objLegend) => {
+      return objLegend.tags.includes(rol);
+    }
+  )
+  console.log('result',result)
+  return result
+})
 
-/* const roles = ['Marksman', 'Support', 'Mage', 'Fighter']
-const rol = roles.filter(
-  rol => rol == 'Mage'
+/*ORDENAR */
+const roles = ['marksman', 'support', 'Fighter', 'Diana']
+console.log('organizar',roles.sort())
+const asc = roles.sort(
+  (a, b) => (a.toLowerCase() > b.toLowerCase()) ? 1 :
+  (a.toLowerCase() < b.toLowerCase()) ? -1 :
+  0
 )
-console.log('rol', rol)
-const obj = {
-  nombre: "name",
-  edad: 42
-};
-const obj_2 = {
-  nombre: "name2",
-  edad: 54
-}
-const arrayDePersonas = [
-  obj,
-  obj_2,
-  {
-    nombre: 'diana',
-    edad: 10
-  },
-  {
-    nombre: 'Dani',
-    edad: 18
-  }
-];
-console.log(arrayDePersonas.filter(
-  (objPersona) => {
-    return objPersona.edad >= 18
-  }
-)) */
-
-
-// const result = legendas.filter(
-//   legenda => legenda ==  'Akali'
-// )
-// console.log('result',result);
-
-
-
 
 
