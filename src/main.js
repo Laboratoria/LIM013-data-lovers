@@ -10,28 +10,18 @@ let allPokemon= data.pokemon;
    function pokemonTemplate(poke){
         return`
         <div class='poke'>
-        <img class='poke-img' src='${poke.img}'>
-        <p class= 'poke-name'> ${poke.name}<p>    
+        <p class = 'poke-num'> ${poke.num}</p>
+        <img class ='poke-img' src='${poke.img}'>
+        <p class= 'poke-name'> ${poke.name}</p>    
         </div>
         `
     }
     
     let root = document.getElementById('root');
     root.innerHTML = `
-    <h3 class= 'rootTitle'>Pokemons (${allPokemon.length} results) <h3>
     <div class = 'pokedex'>${allPokemon.map(pokemonTemplate).join('')}</div>
     `
-    
 
-
-    /*let root = document.getElementById('root');
-    root.innerHTML = `
-    <h2 class= 'rootTitle'>Pokemons (${allPokemon.length}results) <h2>
-    `
-    let pokedex = document.getElementById('pokedex');
-    pokedex.innerHTML =`
-    ${allPokemon.map(pokemonTemplate).join('')}
-    `*/
      // Seleccionar por tipo
 
 let list= document.getElementById('list');
@@ -54,6 +44,7 @@ list.addEventListener('change',()=> {
       function pokemonTemplateFilter(type){
         return`
         <div class='poke'>
+        <p class = 'poke-num'> ${type.num}</p>
         <img class='poke-img' src='${type.img}'>
         <p class= 'poke-name'> ${type.name}<p>    
         </div>
@@ -61,7 +52,6 @@ list.addEventListener('change',()=> {
     }
    // Mostrar Pokemones filtrados
     root.innerHTML = `
-    <h3 class = 'rootTitle'>Pokemons (${typePokemon.length} results) <h3>
     <div class = 'pokedex'>${typePokemon.map(pokemonTemplateFilter).join('')}</div>
     `
 })
