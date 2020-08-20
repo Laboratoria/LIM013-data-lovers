@@ -77,7 +77,8 @@ main button:hover {
 	background: #07dffc;
 	padding:10px 25px;
 	margin: 0% 0% 10% 40%;
-	font-size:20px;
+	font-size:20
+	px;
 	letter-spacing: 2px;
 }
 footer {
