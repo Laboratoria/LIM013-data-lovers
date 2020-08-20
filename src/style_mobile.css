@@ -1,136 +1,160 @@
 /* Inicio de estilos de header */
 @media (min-width:800px){
-.menu-toggle{
-    display: none;
-} 
+    .menu-toggle{
+        display: none;
+    } 
 
-.menu{
-    height: auto;
-    position: relative;
-    background: transparent;
-    float: right;
-    margin-right: 80px;
-    margin-top: 20px;
-    clip-path: initial;
-} 
+    .menu{
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 80px;
+        margin-top: 20px;
+        clip-path: initial;
+    } 
 
-.menu li{
-    display: inline-block;
-    border: none;
+    .menu li{
+        display: inline-block;
+        border: none;
+    }
+
+    .menu a{
+        padding: 0;
+        margin-left: 3em;
+        color: #6A6A6A;
+        font-weight: 600;
+    }
+
+    .menu a:hover{
+        color: #464655;
+        background: transparent;
+    }
+
+    .menu a:visited{
+        color: #619369;
+        font-family: 'Open Sans', sans-serif;
+        background: transparent;
+    }
 }
 
-.menu a{
-    padding: 0;
-    margin-left: 3em;
-    color: #6A6A6A;
-    font-weight: 600;
+@media (max-width:800px){
+    .logo{
+        margin: 0px 0px 0px 20px;
+    }
 }
-
-.menu a:hover{
-    color: #464655;
-    background: transparent;
-}
-
-.menu a:visited{
-    color: #619369;
-    font-family: 'Open Sans', sans-serif;
-    background: transparent;
-}
-}
-/* Fin de estilos de header */
-
-/* Estilos ordenar por */
-@media (max-width:600px){
-.content-order {
-    width: 50%;
-    text-align: left;
-}
-
-.caja {
-    margin: 0 10px;
-}
-}
-
 
 /*buscador de contenido*/
-#ctn-icon-search{
-    position: absolute;
-    right: 20px;
-    height: 38%;
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-    cursor: pointer;
-    transition: all 300ms;
-}
-
 @media screen and (max-width: 800px){
-#ctn-icon-search{
-    position: absolute;
-    right: 87px;
-    height: 38%;
-   }
+    #ctn-icon-search{
+        position: absolute;
+        right: 87px;
+        height: 38%;
+    }
 }
-#ctn-bars-search{
-    position: fixed;
-    top: -10px;
-    width: 100%;
-    background: #fff;
-    padding: 20px;
-    z-index: 9;
-    transition: all 600ms;
-}
-
-#ctn-bars-search input{
-    display: block;
-    width: 1200px;
-    margin: auto;
-    padding: 10px;
-    font-size: 18px
-
-}
+    
 @media screen and (max-width: 800px){
     #ctn-bars-search input{
         width: 80%;
     }
 }
 
-#cover-ctn-search{
-width: 100%;
-height: 100%;
-position: fixed;
-left: 0;
-background: rgba(0, 0, 0, 0.5);
-z-index: 7;
-display: none;
-}
-
-
-#box-search{
-    position: fixed;
-    top:180px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1200px;
-    background: #fff;
-    z-index:8;
-    overflow: hidden;
-    display: none;
-
-}
-
-#box-search li a{
-    display: block;
-    width: 1200px;
-    color: #777777;
-    padding: 12px 20px;
-}
-
-#box-search li a:hover {
-    color: green;
-}
 @media screen and (max-width: 800px){
-   .box-search{
+    .box-search{
         width: 80%;
     }
+}   
+/* Fin de estilos de header */
+
+/* Inicio de estilos pantalla 1 */
+@media (max-width: 700px){
+    .btn-i button{
+      position:relative;
+      left: 30%;
+      top:70%;
+       padding: 5px 9px;
+       margin-top: 100px;
+    }
 }
+
+@media (min-width:700px) {
+    .cajaPri{
+        width: 500px;
+        height: 500px;
+        font-size: 14px;
+        background-position: center;
+        text-align: center;
+        position:relative;
+        left: 50%;
+        top:30%;
+    }
+}
+    
+@media (min-width:1024px) {
+    .cajaPri{
+        width: 500px;
+        height: 500px;
+        font-size: 14px;
+        background-position: center;
+        text-align: center;   
+    }
+}  
+/* Fin de estilos pantalla 1 */
+
+/* Inicio de estilos pantalla 2 */
+/* Estilos ordenar por */
+@media (max-width:600px){
+    .content-order {
+        width: 50%;
+        text-align: left;
+    }
+
+    .caja {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width:700px){
+    .alldata{
+        margin: 10px;
+    }
+
+    .person{
+        margin:15px 10px;
+      }
+}
+
+@media (max-width:750px){
+    .alldata{
+        margin: 10px;
+    }
+
+    .app-title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .person{
+        max-width: 150px;
+        margin:15px 10px;
+    }
+
+    .photo {
+        width: 130px;
+    }
+
+    .info{
+        width:150px;
+        height: 150px;
+    }
+
+    .name{
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .Text-datos{
+        font-size: 13px;
+    }
+}
+/* Fin de estilos pantalla 2 */

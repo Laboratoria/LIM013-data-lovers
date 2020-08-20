@@ -40,7 +40,7 @@
   </div>
 
  <ul id="box-search">
-   <li><a href="#" id="boxResult"><img src="imagen/iconArt.png" id="local"></a></li>
+   <li><a><img src="imagen/iconArt.png" id="local"></a></li>
  </ul>
 
  <div id="cover-ctn-search"></div>
@@ -67,25 +67,25 @@
     <div id="content-cb" class="content-cb ocultar">
       <ul id="especies" class="listElements ocultar">
         <!-- Especies -->
-        <li><input id="btn-human" type="radio" value="1" name="1"></li>
+        <li data-target="Humans" ><input id="btn-human" type="radio" value="1" name="1"></li>
         <label>Humanos</label>
-        <li><input type="radio" value="2" name="1"></li>
+        <li data-target="Alien" ><input type="radio" value="2" name="1"></li>
         <label>Aliens</label>
-        <li><input type="radio" value="3" name="1"></li>
+        <li data-target="Humanoid"><input type="radio" value="3" name="1"></li>
         <label>Humanoide</label>
-        <li><input type="radio" value="4" name="1"></li>
+        <li data-target="Vampire" ><input type="radio" value="4" name="1"></li>
         <label>Vampiro</label>
-        <li><input type="radio" value="5" name="1"></li>
-        <label>Muerto</label>
-        <li><input type="radio" value="6" name="1"></li>
+        <li data-target="Disease"><input type="radio" value="5" name="1"></li>
+        <label>Enfermedad</label>
+        <li data-target="Robot" ><input type="radio" value="6" name="1"></li>
         <label>Robots</label>
-        <li><input type="radio" value="7" name="1"></li>
+        <li data-target="Parasite"><input type="radio" value="7" name="1"></li>
         <label>Parásito</label>
-        <li><input type="radio" value="8" name="1"></li>
+        <li data-target="Mytholog"><input type="radio" value="8" name="1"></li>
         <label>Mitológico</label>
-        <li><input type="radio" value="9" name="1"></li>
+        <li data-target="Animal"><input type="radio" value="9" name="1"></li>
         <label>Animal</label>
-        <li><input type="radio" value="10" name="1"></li>
+        <li data-target="Humanoid" ><input type="radio" value="10" name="1"></li>
         <label>Otros</label>
       </ul>
 
@@ -136,18 +136,18 @@
     <div class="content-order">
       <div class="caja">
         <select name="order" id="listOrder">
-          <option value="ordenarPor">Ordenar por</option>
-          <option value="az">A - Z</option>
-          <option value="za">Z - A</option>
-          <option value="protagonismo">Protagonismo</option>
+        <ul class="drop-down">
+          <li id="order-asc"><a href="#">A - Z</a></li>
+          <li id= "order-desc"><a href="#">Z - A</a></li>
+        </ul>
         </select>
       </div>
     </div>
 
-    <section class="container">
+    <main class="container-data">
       <div class="alldata" id="alldata"></div>
       <div class="alldata ocultar" id="dataHuman"></div>
-    </section>
+    </main>
 
   </section>
   <footer id="content-footer" class="ocultar">

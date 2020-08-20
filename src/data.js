@@ -11,10 +11,10 @@ const datajs = {
 		</div>
 		<div class="info">
 		<h2 class="name">${nuevadata.name}</h2>
-		<p class="origin">Genero:${nuevadata.gender}</p>
-		<p class="origin">Origen:${nuevadata.origin.name}</p>
-		<p class="origin">Especie:${nuevadata.species}</p>
-		<p class="origin">Estado:${nuevadata.status}</p>
+		<p class="Text-datos">Genero:${nuevadata.gender}</p>
+		<p class="Text-datos">Origen:${nuevadata.origin.name}</p>
+		<p class="Text-datos">Especie:${nuevadata.species}</p>
+		<p class="Text-datos">Estado:${nuevadata.status}</p>
 		</div>
 		</div>`
     }
@@ -26,7 +26,28 @@ const datajs = {
     //console.log(filterHumans);
     //return items;
   },
-
+nameA_Z: function(data) {
+        return data.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        });
+    },
+    nameZ_A: function(data) {
+        return data.sort((b, a) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        });
+    },
 
 }
 
