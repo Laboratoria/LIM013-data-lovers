@@ -21,7 +21,7 @@ const datajs = {
     document.getElementById("dataHuman").innerHTML = `
 	<h1 class="app-title">Total de Personajes(${nuevadata.length})</h1>
   ${nuevadata.map(obtenerHumanos).join(" ")}`
-  
+
     //let items = data.filter(data => data.species === "Human");
     //console.log(filterHumans);
     //return items;

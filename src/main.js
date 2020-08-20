@@ -13,7 +13,7 @@ const bienvenido = () => {
 }
 
 const obtenerPersonajes = (data) => {
-		return `<div class="person">
+	return `<div class="person">
 		<div class="imagenes">
 		<img class="photo" src="${data.image}">
 		</div>
@@ -25,8 +25,8 @@ const obtenerPersonajes = (data) => {
 		<p class="Text-datos">Estado:${data.status}</p>
 		</div>
 		</div>`
-	}
-	document.getElementById("alldata").innerHTML = `
+}
+document.getElementById("alldata").innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
@@ -92,22 +92,22 @@ btnEstado.addEventListener("click", checkboxEs);
 
 //Filtro de especie humanos
 const radioEspecies = document.querySelector("#especies").children;
-const pruebacontI=document.getElementById("especies")
-const pruebaInputs =pruebacontI.getElementsByTagName("input");
+const pruebacontI = document.getElementById("especies")
+const pruebaInputs = pruebacontI.getElementsByTagName("input");
 console.log(pruebaInputs)
 const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	for(let i=0; i<pruebaInputs.length; i++){
-		if(pruebaInputs[i].checked==true){
-				let dataH=pruebaInputs[i].getAttribute("value");
-	console.log(dataH)
-	datajs.filterHumans(data,dataH)
+	for (let i = 0; i < pruebaInputs.length; i++) {
+		if (pruebaInputs[i].checked == true) {
+			let dataH = pruebaInputs[i].getAttribute("value");
+			console.log(dataH)
+			datajs.filterHumans(data, dataH)
 		}
-		
-	
-	//let inpuH= document.getElementById('btn-human')
-}
+
+
+		//let inpuH= document.getElementById('btn-human')
+	}
 }
 /*const btnH = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
@@ -120,7 +120,7 @@ const btnH = () => {
 const btnHuman = document.getElementById("btn-human")
 btnHuman.addEventListener("click", btnH);*/
 
-for(let i=0; i<radioEspecies.length; i++){
+for (let i = 0; i < radioEspecies.length; i++) {
 	radioEspecies[i].addEventListener("click", btnH);
 }
 
@@ -134,45 +134,45 @@ const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
 const boxSear = document.getElementById('box-search');
 
-const MuestraBusca = () =>{
-	contenBus.style.top= "80px";
+const MuestraBusca = () => {
+	contenBus.style.top = "80px";
 	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
- document.getElementById("ctn-icon-search").addEventListener("click",MuestraBusca);
+document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
 
- const ocultaBusca = () =>{
- 	contenBus.style.top = "-10px";
- 	boxSear.style.display = 'none';
- 	inputSeatch.value = "";
- }
-
- document.getElementById("cover-ctn-search").addEventListener("click",ocultaBusca);
-
-
- let texto = document.getElementById('inputSeatch');
- let buimg = document.getElementById('local');
-
- const pruevas = () =>{
-  	 //alert(texto.value.toLowerCase());
-  	 let textoMin = texto.value.toLowerCase();
-  	 for(var i=0;i<data.length;i++){
-  	 	let dataMin = data[i].name.toLowerCase();
-  	 	if(dataMin.indexOf(textoMin) !== -1){
-  	 		boxSear.innerHTML+='<li><a onclick="nuevo">'+data[i].name+' de '+data[i].name+'</a> </li>';
-  	 	}
-  	 }
+const ocultaBusca = () => {
+	contenBus.style.top = "-10px";
+	boxSear.style.display = 'none';
+	inputSeatch.value = "";
 }
- 
-document.getElementById("local").addEventListener("click",pruevas);
+
+document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
 
-const nuevo = () =>{
+let texto = document.getElementById('inputSeatch');
+let buimg = document.getElementById('local');
+
+const pruevas = () => {
+	//alert(texto.value.toLowerCase());
+	let textoMin = texto.value.toLowerCase();
+	for (var i = 0; i < data.length; i++) {
+		let dataMin = data[i].name.toLowerCase();
+		if (dataMin.indexOf(textoMin) !== -1) {
+			boxSear.innerHTML += '<li><a onclick="nuevo">' + data[i].name + ' de ' + data[i].name + '</a> </li>';
+		}
+	}
+}
+
+document.getElementById("local").addEventListener("click", pruevas);
+
+
+const nuevo = () => {
 	console.log(nuevo);
-  datoOb.obtenerPersonajes();
+	datoOb.obtenerPersonajes();
 }
 
-document.getElementById("alldata").addEventListener("click",nuevo);
+document.getElementById("alldata").addEventListener("click", nuevo);
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
