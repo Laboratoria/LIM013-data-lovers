@@ -16,8 +16,7 @@ body {
   display: block;
   margin: auto;
   width: 400px;
-  height: auto;
-  
+  height: auto; 
 }
 
 .logoHome{
@@ -36,7 +35,9 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: #BBA341;
+  justify-content: space-around;
   align-items: center; 
+  width: 50%;
   margin:5px;
   border-radius: 25px 0px;
   opacity: 0.7;
@@ -46,7 +47,7 @@ body {
   position: absolute;
   top: 50%;
   left: 20%;
-  width: auto;
+  
 }
 
 .menu-bar a{
@@ -58,6 +59,7 @@ body {
   font-family: 'Marcellus SC', serif;
   font-style: Regular;
   line-height: 44px;
+  vertical-align: top;
   width: 100%;
   margin: 10px;
   text-align: center;
@@ -67,10 +69,11 @@ body {
   color:#BBA341;
   background-color: #222423;
   background-size: auto;
-  border-block-color: #222423;
+  border-radius: 25px 0px;
 }
 
 .menu-play {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: rgba(12, 166, 190, 0.85);
@@ -103,6 +106,30 @@ body {
   margin: 10px;
   text-align: center;
 }
+
+
+.mode-play h2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #BBA341;
+  align-items: center; 
+  width: 40%;
+  margin:5px;
+  border-radius: 0px 25px ;
+  overflow: hidden;
+  padding: 0;
+  justify-content: space-evenly;
+  top: 80%;
+  right: 20%;
+  font-family: 'Marcellus SC', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 44px;
+  color: black;
+}
+
 
 
 .mySlides {display: none}
