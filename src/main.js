@@ -1,6 +1,4 @@
-
-//Usaremos este import cuando tengamos funciones en data.js
-import { orderAsc, orderDesc, orderAscName, orderDescName} from './data.js';
+import order from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 let x = 0;
@@ -55,7 +53,7 @@ document.getElementById("more").addEventListener("click", () => {
 document.getElementById("lower-number").addEventListener('click', () => {
     x = 0;
     count = 8;
-    orderDesc(data.pokemon);
+    order.num1_N(data.pokemon);
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
@@ -64,7 +62,7 @@ document.getElementById("lower-number").addEventListener('click', () => {
 document.getElementById("top-number").addEventListener('click', () => {
     x = 0;
     count = 8;
-    orderAsc(data.pokemon);
+    order.numN_1(data.pokemon);
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
@@ -73,7 +71,7 @@ document.getElementById("top-number").addEventListener('click', () => {
 document.getElementById("order-asc").addEventListener('click', () => {
     x = 0;
     count = 8;
-    orderAscName(data.pokemon);
+    order.nameA_Z(data.pokemon);
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
@@ -81,7 +79,7 @@ document.getElementById("order-asc").addEventListener('click', () => {
 document.getElementById("order-desc").addEventListener('click', () => {
     x = 0;
     count = 8;
-   orderDescName(data.pokemon);
+    order.nameZ_A(data.pokemon);
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
