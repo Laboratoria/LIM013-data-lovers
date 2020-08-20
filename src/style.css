@@ -37,11 +37,22 @@
       
     }*/
     
-    .selector{
-    display:flex;
-    justify-content:center;
-    
+    .selector{ 
+        display:flex;
+        justify-content:center;
+        font-family: 'Baloo Tamma 2';
+        color: #6d6d6d;
+        font-weight: bold;
+        font-size: 22px;
     }
+
+    #list {
+        border-radius:10px;
+        padding: 2px 10px;
+        font-family: 'Baloo Tamma 2';
+        font-size: 16px;
+    }
+
     .pokedex{
         display:flex;
         flex-wrap:wrap;
