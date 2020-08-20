@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>LoLpedia</title>
+    <title>LOLPEDIA</title>
     <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png"/>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
@@ -38,20 +38,17 @@
     <main>
       <section class="home" id="home">
         <aside class="container-box">
-          <h2>League of Legends</h2>
-          <p>League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Fusiona la velocidad y la intensidad de la estrategia en tiempo real con elementos de juegos de rol. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria. Compite con honor y recibe menciones especiales de los demás jugadores para recompensar tu forma de jugar.</p>
-          <figure>
-            <img src="./img/divider.png" class="box-divider" alt="lolDivider">
-          </figure>                      
-          <h2>Comunidades de League of Legends</h2>
+          <p>League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Fusiona la velocidad y la intensidad de la estrategia en tiempo real con elementos de juegos de rol. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria.</p>
+          <img src="./img/divider.png" style="width:100%" height=auto class="box-divider" alt="lolDivider">                      
+          <h2>Comunidades de League of Legends</h2>          
           <p>Existen muchas comunidades de este juego donde encontraras mucha información, hacer amigos y pulir tus habilidades. Algunas comunidades son:
             <nav class="comunidad-nav">
               <ul class="community-ul">
-                <li class="li-community"><a href="https://na.op.gg/champion/statistics">OP.GG</a></li>
-                <li class="li-community"><a href="https://blitz.gg/">BLITZ.GG</a></li>
-                <li class="li-community"><a href="https://www.millenium.gg/juegos/juego-6">MILLENIUM.GG</a></li>
-                <li class="li-community"><a href="https://www.salsalol.com/">SALSALOL</a></li>
-                <li class="li-community"><a href="https://nexus.leagueoflegends.com/en-us/2009/10/join-the-community/">Mucho más</a></li>
+                <a href="https://na.op.gg/champion/statistics">OP.GG</a>
+                <a href="https://blitz.gg/">BLITZ.GG</a>
+                <a href="https://www.millenium.gg/juegos/juego-6">MILLENIUM.GG</a>
+                <a href="https://www.salsalol.com/">SALSALOL</a>
+                <a href="https://nexus.leagueoflegends.com/en-us/2009/10/join-the-community/">OTROS</a>
               </ul>
             </nav>
           </p>
@@ -117,11 +114,14 @@
 
         <article class="video-container"> 
           <h2>Vídeo instructivo</h2>
-          <p>Hay mucho que aprender sobre LoL, así que vamos a empezar por el instructivo. Mira el vídeo para familiarizarte con el modo de juego más popular.</p>
           <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target = _blank ></iframe>
         </article>
       </section>
 
+      <div class="riot">
+        <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" id="imgriot" width="120" height=auto></a>
+      </div>
+      
       <section class="top-second" id="topfive">
         <article class="top-box">
           <h2>Top 5 Campeones</h2>
@@ -137,16 +137,15 @@
     <footer>
       <div class="footer">
 
-        <div>
-          <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" width="40" height=auto></a>
-        </div>            
-        <div id="redes">         
-            <a href="https://www.facebook.com/LeagueofLegendsES/?fref=nf" target = _blank><img src="./img/fblogo.png" width="33" height=auto></a>
-            <a href="https://www.instagram.com/leagueoflegends/" target = _blank><img src="./img/instaLOGO11.png" width="33" height=auto></a>
-            <a href="https://twitter.com/lol_es" target = _blank><img src="./img/twittLOGO.png" width="33" height=auto></a>        
-        </div>
-        <div>
-          <p class="derechos">© 2020 LOLPEDIA G9. Todos los derechos reservados</p>
+        <div class="left">
+          <p class="derechos">© 2020 |Todos los derechos reservados</p>
+        </div>                
+        <div class="redes">         
+          <a href="#">
+            <img src="./img/happyporo.png" id="compartir" class="animated wobble"></a>               
+            <a href="https://www.facebook.com/LeagueofLegendsES/?fref=nf" class="nav-link" target = _blank><img src="./img/fblogo.png" class="imgredes"></a>
+            <a href="https://www.instagram.com/leagueoflegends/" class="nav-link" target = _blank><img src="./img/instaLOGO11.png" class="imgredes"></a>
+            <a href="https://twitter.com/lol_es" class="nav-link" target = _blank><img src="./img/twittLOGO.png" class="imgredes"></a>     
         </div>
       </div>
     </footer>

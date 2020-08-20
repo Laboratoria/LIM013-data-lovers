@@ -3,6 +3,7 @@
 body {
   margin:0;
   background-image: url('./img/FondoLOL.png');
+  border-block-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -130,7 +131,54 @@ body {
   text-align: center;
 }
 
+.container-box {
+  background-color: rgba(10, 3, 3, 0.404);
+  width: 46%;
+  height: auto;
+  margin: 1%;
+  float: left;
+  border: 5px inset #BBA341;
+  overflow: auto;
+  font-family: 'Marcellus SC', serif;
+  border-radius: 0px 20px;
+}
 
+.box-divider{
+  width: 100%;
+}
+
+.container-box p{
+  padding: 1% 1.25%;
+  font-size: 22px;
+  text-align: justify;
+  color: #EADA9D; 
+}
+/*container box a*/
+.container-box a{
+  color: #5fc2c9;
+  text-decoration: none;
+  letter-spacing: .25rem; 
+}
+
+.container-box a:hover{
+  color: #59e7e0;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772, 0 0 0.2em #07cbe9;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.container-box h2{
+  padding: 1%;
+  font-size: 38px;
+  text-align: center;
+  color: #EADA9D;
+  font-weight: bold; 
+}
+
+.comunidad-nav{
+  text-align: center; 
+  word-spacing: 1rem;
+}
 
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -246,10 +294,21 @@ h2 {
 
 }
 
+.lol-video{
+  max-width: 45%;
+  position: absolute;
+  margin: 1%;
+  background-color: rgba(10, 3, 3, 0.404);
+  height: auto;
+  border: 5px inset #BBA341;
+  overflow: auto;
+  border-radius: 0px 20px;
+  top: 150%;
+  right: 4%;
+}
+
 .video-container h2{
   display: block;
-  flex-direction: row;
-  flex-wrap: nowrap;
   background-color: #BBA341;
   align-items: normal; 
   width: 45%;
@@ -257,7 +316,7 @@ h2 {
   border-radius: 0px 25px ;
   padding: 1%;
   justify-content: center;
-  bottom:20%;
+  top:150%;
   right: 5%;
   font-family: 'Marcellus SC', serif;
   font-style: normal;
@@ -274,12 +333,85 @@ h2 {
 
 /* Riot_Games_logo */
 
-.riot {
-  background: url(Riot_Games_logo.png);
-  border: 1px solid #BBA341;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 20px;
+.riot{
+  text-align: center;
 }
+
+#imgriot:hover {
+  -webkit-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+  -ms-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+  -moz-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+  box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;  
+}
+/*footer*/
+
+.left{
+  display: flex;
+  align-items: left;
+  padding: 1rem;
+  float: left;
+}
+.derechos{
+  color:#EADA9D;
+  font-size: 25px;
+}
+
+.left:hover{
+  color:#EADA9D;
+  text-shadow: 0.0625rem 0.0625rem 0.375rem #feb412;
+}
+
+.redes{
+ text-align: right;
+ display: flex;
+ padding: 1rem;
+ float: right;
+ margin-top: 1rem;
+ 
+}
+.imgredes:hover{
+    border-radius: 50%;
+    box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+  }
+
+.imgredes{
+  width: 3rem;
+  height: auto;
+}
+.nav-link{
+  width: min-content;
+}
+#compartir {
+  height: 3rem;
+  width: 3rem;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0%); } 
+  15% { transform: translateX(-25%) rotate(-5deg); } 
+  30% { transform: translateX(20%) rotate(3deg); } 
+  45% { transform: translateX(-15%) rotate(-3deg); } 
+  60% { transform: translateX(10%) rotate(2deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0%); } 
+}
+@-webkit-keyframes wobble { 
+  0% { -webkit-transform: translateX(0%); } 
+  15% { -webkit-transform: translateX(-25%) rotate(-5deg); } 
+  30% { -webkit-transform: translateX(20%) rotate(3deg); } 
+  45% { -webkit-transform: translateX(-15%) rotate(-3deg); } 
+  60% { -webkit-transform: translateX(10%) rotate(2deg); } 
+  75% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  100% { -webkit-transform: translateX(0%); } 
+}
+
 
 /* Fading animation */
 .fade {
@@ -309,6 +441,8 @@ h2 {
   .prev, .next,.text {font-size: 11px}
 }
 }
+
+
 
 /*segunda pantalla------------------------------------------------------------*/
 .top-second{
