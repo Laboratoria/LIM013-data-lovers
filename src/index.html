@@ -10,17 +10,17 @@
   <body>
     <div id="root">
       <section class="mainContainer">
-        <header class="top">
+        <header class="header">
           <!-- Navigation bar -->
           <div class="topnav">
             <!-- Links -->
-            <a class="active" href="#videos">Videos</a>
-            <a href="#links">Links</a>
-            <a href="#game">Go app</a>
+              <a class="active" href="#videos">Videos</a>
+              <a href="#links">Links</a>
+              <a href="#game">Go app</a>
             <!-- Brand/Logo -->
-          <div class="logo">
-            <a class="navbar-brand" href="#">P O K É D E X</a>
-          </div>
+            <div class="logo">
+              <a class="navbar-brand" href="#">P O K É D E X</a>
+            </div>
             <!-- Search form -->
             <div class="search-container">
               <form action="/action_page.php">
@@ -32,18 +32,27 @@
         </header>
     <!--MAIN contenido principal del body(cuerpo)-->
         <main class="displayContainer">
-         <!-- Type menú -->
-         <section class="typeContainer">
+          <!-- Dark folder: Type menú -->
+          <section class="typeContainer">
 
-         </section>
-         <!-- Order by menu -->
-         <!-- Pokémon display -->
-         <section class="displayAll">
-          <section class="containerMain" id="containerMain">
-       
-                  
           </section>
-         </section>
+          <!-- Light folder: Display -->
+          <section class="displayAll">
+            <!-- Order by menu -->
+            <section class="orderBy">
+              <button type="image" name="alphaAsc" id="alphaAsc" class="orderByAlphaAscButton"></button>
+              <button type="image" name="alphaDesc" id="alphaDesc" class="orderByAlphaDescButton"></button>
+              <button type="image" name="lessPwr" id="lessPwr" class="orderByLessPwrButton"></button>
+              <button type="image" name="morePwr" id="morePwr" class="orderByMorePwrButton"></button>
+            </section>
+            <!-- Pokémon display -->
+            <section class="scrollArea" id="scrollArea"> 
+              <section class="pokemonDisplay" id="pokemonDisplay">
+
+              </section>
+             
+            </section>
+          </section>
       
         </main>
 
@@ -51,11 +60,14 @@
         <aside class="card">
   
         </aside>
-        <footer>
+      </section>
+
+        <footer class="footer">
         <p class="footer1">@POKÉDEX | Developed by: Team 14 | Data-Lovers | Laboratoria</p>
         <p class="footer2">Legal Notice | Private Policy | Cookies Policy</p>
         </footer>
-      </section>
+
+      
     </div>
     <script src="main.js" type="module"></script>
   </body>
