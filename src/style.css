@@ -77,7 +77,7 @@ body {
 }
 .logo a {
     color: #00C1EC;
-    font-size: 30px;
+    font-size: 32px;
     text-decoration: bold;
 }
 /*Container Serch*/
@@ -100,7 +100,7 @@ body {
 
 }
 .search-container button{
-float: right;
+    float: right;
     padding: 6px 11px;
     margin-top: 0px;
     background: #88D9E5;
@@ -125,13 +125,17 @@ border-radius: 0px 5px 5px 0px;
 /*Navigator bar responsive*/
 .menu-deploy{
     display: block;
-    margin-left: 2%;
+    margin-left: 5%;
     border: none;
     }
 .logo{
     min-width: 95%;
     margin-right: 3%;
+    font-size: 16px;
     }
+.logo a{
+    font-size: 24px;
+}
 .listItem{
     position: absolute;
     top: 60px;
