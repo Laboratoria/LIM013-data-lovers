@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <select id="selectByName" class="btn-selectByName">
+      <option value="0">Ordenar</option>
+      <option value="ascendente">A-Z</option>
+      <option value="descendente">Z-A</option>
+      <option value="numeroInferior">Número inferior</option>
+      <option value="numeroSuperior">Número superior</option>
+    </select>
+
+    <select id="selectByType" class="btn-selectByType">
+      <option value="0">Filtrar</option>
+      <option value="grass">grass</option>
+      <option value="poison">poison</option>
+      <option value="ice">ice</option>
+      <option value="water">Water</option>
+    </select>
+
+    <input id="searchByName" class="input-searchByName">
+
+    <div id="card"></div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
