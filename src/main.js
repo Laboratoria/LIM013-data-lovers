@@ -21,10 +21,10 @@ const obtenerPersonajes = (data) => {
 		</div>
 		<div class="info">
 		<h2 class="name">${data.name}</h2>
-		<p class="Text-datos">Genero:${data.gender}</p>
-		<p class="Text-datos">Origen:${data.origin.name}</p>
-		<p class="Text-datos">Especie:${data.species}</p>
-		<p class="Text-datos">Estado:${data.status}</p>
+		<p class="Text-datos">Genero: ${data.gender}</p>
+		<p class="Text-datos">Origen: ${data.origin.name}</p>
+		<p class="Text-datos">Especie: ${data.species}</p>
+		<p class="Text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
 }
