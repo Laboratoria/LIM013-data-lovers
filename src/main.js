@@ -188,6 +188,12 @@ const salida2 = () => {
 
 document.getElementById("exit").addEventListener("click", salida2);
 
+const letras = () => {
+	document.querySelector('#letritas').classList.remove("ocultar");
+}
+
+document.getElementById("orden").addEventListener("click", letras);
+
 const acenA_Z = () => {
 	console.log("entro");
 	datajs.nameA_Z(data);
