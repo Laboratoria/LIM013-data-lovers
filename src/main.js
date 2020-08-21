@@ -122,7 +122,6 @@ const btnF = () => {
 
 for (let i = 0; i < botonesFiltros.length; i++) {
 	const inputsFiltros = botonesFiltros[i].children;
-	console.log(inputsFiltros)
 	for (let j = 0; j < inputsFiltros.length; j++) {
 		inputsFiltros[j].addEventListener("click", btnF);
 	}
