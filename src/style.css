@@ -379,10 +379,7 @@ h2 {
 
 .redes{
   text-align: right;
-  display: flex;
   padding: 1rem;
-  float: right;
-  margin-top: 1rem;
   
 }
 .imgredes:hover{
