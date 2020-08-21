@@ -88,14 +88,6 @@ const checkboxEs = () => {
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
-
-const letras = () => {
-document.querySelector('#letritas').classList.remove("ocultar");	
-}
-document.getElementById("orden").addEventListener("click",letras);
-
-
-
 //Filtro de especie humanos
 const radioEspecies = document.querySelector("#especies").children;
 const pruebacontI = document.getElementById("especies");
@@ -193,6 +185,12 @@ const salida2 = () =>{
 }
 
 document.getElementById("exit").addEventListener("click",salida2);
+
+const letras = () => {
+document.querySelector('#letritas').classList.remove("ocultar");	
+}
+document.getElementById("orden").addEventListener("click",letras);
+
 
     const acenA_Z = () =>{
 	console.log("entro");
