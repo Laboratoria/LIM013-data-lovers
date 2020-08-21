@@ -51,13 +51,8 @@ const result = arrayLegends.filter(
     //console.log('objLegend.tags',objLegend.tags[0]); 
   }
 )
-
-/* function hola (){
-} */
-
-/* const hola = () => {
-} */
 console.log('result',result);
+
 
 getLegends();
 
@@ -76,12 +71,12 @@ search.addEventListener('click', (e) => {
 })
 
 /*ORDENAR */
-const roles = ['marksman', 'support', 'Fighter', 'Diana']
-console.log('organizar',roles.sort())
+/*const roles = ['marksman', 'support', 'Fighter', 'Tank','Mage','Assassin' ]
+roles.sort()
 const asc = roles.sort(
   (a, b) => (a.toLowerCase() > b.toLowerCase()) ? 1 :
   (a.toLowerCase() < b.toLowerCase()) ? -1 :
   0
 )
-
+*/
 
