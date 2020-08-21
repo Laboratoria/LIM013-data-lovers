@@ -12,9 +12,6 @@
 </head>
 
 <body>
-
-  <script src="./data/rickandmorty/rickandmorty.js"></script>
-
   <header class="ocultar" id="container-header">
     <div class="logo">
       <a href="index.html"><img src="imagen/logo.png"></a>
@@ -29,20 +26,24 @@
     <div id="menu-toggle" class="menu-toggle">
       <div id="tongle" class="hamburger"></div>
     </div>
-    <div id="icon-menu">
+    <div id="icon-menu" >
       <img src="imagen/iconArt.png" id="ctn-icon-search">
     </div>
   </header>
 
   <div id="ctn-bars-search" class="ocultar">
-    <input type="text" id="inputSeatch" placeholder="Buscar" />
+    <div>
+    <img src="imagen/cerca.png" width="20px" id="exit">
+    </div>
+    <input type="text" id="inputSeatch" placeholder="Buscar"/>
   </div>
 
-  <ul id="box-search">
-    <li><a><img src="imagen/iconArt.png" id="local"></a></li>
-  </ul>
+ <ul id="box-search">
+   <li><a><img src="imagen/iconArt.png" id="local"></a></li>
+   <li id="resultadoBusqueda"></li>
+ </ul>
 
-  <div id="cover-ctn-search"></div>
+ <div id="cover-ctn-search"></div>
   <!-- Pantalla 1 -->
   <section class="conter" id="conter">
     <div class="cajaPri">
@@ -63,7 +64,7 @@
     </div>
 
     <!-- Control Checkbox -->
-    <div id="content-cb" class="content-cb ocultar">
+       <div id="content-cb" class="content-cb ocultar">
       <ul id="especies" class="listElements ocultar">
         <!-- Especies -->
         <li><input id="btn-human" type="radio" value="Human" name="esp"></li>
@@ -132,14 +133,13 @@
     </div>
     </div>
     <!-- Cards -->
-    <div class="content-order">
-      <div class="caja">
-        <select name="order" id="listOrder">
-          <ul class="drop-down">
-            <li id="order-asc"><a href="#">A - Z</a></li>
-            <li id="order-desc"><a href="#">Z - A</a></li>
+    <div  class="content-order">
+      <div  class="caja">
+        <button id="orden">ordenar por</button>
+          <ul class="ocultar" id="letritas">
+            <li><input id="bos-1" type="radio" value=A-Z name="escri"><label for="bos-1"> A-Z</label></li>
+            <li><input id="bos-2" type="radio" value=Z-A name="escri"><label for="bos-2"> Z-A</label></li>           
           </ul>
-        </select>
       </div>
     </div>
 
@@ -159,6 +159,7 @@
   </footer>
   <script src="data.js" type="module"></script>
   <script src="main.js" type="module"></script>
+  <script src="./data/rickandmorty/rickandmorty.js"></script>
 </body>
 
 </html>

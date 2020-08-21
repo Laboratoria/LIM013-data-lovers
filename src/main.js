@@ -128,31 +128,43 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 	}
 }
 
-//Buscador de cotenido
-let texto = document.getElementById('inputSeatch')
-const pruevas = () => {
-	//alert(texto.value.toLowerCase());
-	let textoMin = texto.value.toLowerCase();
-	for (var i = 0; i < data.length; i++) {
-		let dataMin = data[i].name.toLowerCase();
-		if (dataMin.indexOf(textoMin) !== -1) {
-			boxSear.innerHTML += '<li><a>' + data[i].name + '</a> </li>';
-			let content = boxSear.innerHTML;
-			content = data[i].name;
-			console.log(content);
-		}
-	}
-}
-
-document.getElementById("local").addEventListener("click", pruevas);
-
-//Declarando variebles
+//Declarando variables
 let contenBus = document.getElementById('ctn-bars-search');
 const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
 const boxSear = document.getElementById('box-search');
+const resultadobusqueda = document.getElementById('resultadoBusqueda');
+const mostrarindividual = () => {
+	console.log("hola");
+}
+const pruebas = () => {
+	let texto = document.getElementById('inputSeatch');
+	texto = texto.value.replace(/ /g, "");
+
+	if (texto != "") {
+		let textoMin = texto.toLowerCase();
+
+		resultadobusqueda.innerHTML = "";
+		for (var i = 0; i < data.length; i++) {
+			let dataMin = data[i].name;
+			dataMin = dataMin.toLowerCase();
+
+			if (dataMin.indexOf(textoMin) >= 0) {
+				let idB = "idbus" + data[i].id;
+				resultadobusqueda.innerHTML += '<li><a id="' + idB + '" value="' + data[i].id + '">' + data[i].name + '</a> </li>';
+
+				document.getElementById(idB).addEventListener("onclick", mostrarindividual);
+
+			}
+		}
+	}
+}
+
+document.getElementById("local").addEventListener("click", pruebas);
 
 const MuestraBusca = () => {
+
+	resultadobusqueda.innerHTML = "";
 	contenBus.style.top = "80px";
 	coverBus.style.display = "block";
 	boxSear.style.display = "block";
@@ -168,6 +180,15 @@ const ocultaBusca = () => {
 }
 document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
+const salida2 = () => {
+	contenBus.style.top = "-10px";
+	coverBus.style.display = "none";
+	boxSear.style.display = "none";
+	inputSeatch.value = " ";
+}
+
+document.getElementById("exit").addEventListener("click", salida2);
+
 const acenA_Z = () => {
 	console.log("entro");
 	datajs.nameA_Z(data);
@@ -177,8 +198,25 @@ const acenA_Z = () => {
 	${data.map(obtenerPersonajes).join(" ")}
 	`
 }
-document.getElementById("order-asc").addEventListener("click", acenA_Z);
+
+document.getElementById("bos-1").addEventListener("click", acenA_Z);
+
+const acenZ_A = () => {
+	console.log("entro22");
+	datajs.nameZ_A(data);
+	document.getElementById('alldata').innerHTML = " ";
+	document.getElementById('alldata').innerHTML = `
+	<h1 class="app-title">Total de Personajes(${data.length})</h1>
+	${data.map(obtenerPersonajes).join(" ")}
+	`
+}
+
+document.getElementById("bos-2").addEventListener("click", acenZ_A);
+
+
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
+
+
