@@ -9,13 +9,9 @@
   <link rel="icon" type="image/png" href="imagen/favicon.png" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap">
-
 </head>
 
 <body>
-
-  <script src="./data/rickandmorty/rickandmorty.js"></script>
-
   <header class="ocultar" id="container-header">
     <div class="logo">
       <a href="index.html"><img src="imagen/logo.png"></a>
@@ -60,11 +56,11 @@
   <!-- Pantalla 2 -->
   <section class="contenido ocultar" id="contenido">
     <!-- Control buttons -->
-    <div class="btnControls">
-      <button id="btn-especies" class="btnOptions">Especies</button>
-      <button id="btn-origen" class="btnOptions">Lugar de origen</button>
-      <button id="btn-genero" class="btnOptions">Género</button>
-      <button id="btn-estado" class="btnOptions">Estado</button>
+    <div class="btn-controls">
+      <button id="btn-especies" class="btn-options">Especies</button>
+      <button id="btn-origen" class="btn-options">Lugar de origen</button>
+      <button id="btn-genero" class="btn-options">Género</button>
+      <button id="btn-estado" class="btn-options">Estado</button>
     </div>
 
     <!-- Control Checkbox -->
@@ -95,21 +91,21 @@
 
       <!-- Lugar de origen -->
       <ul id="origen" class="listElements ocultar">
-        <li><input id="btn-earth" type="radio" value="Earth" name="orig"></li>
+        <li><input id="btn-earth" type="radio" value="Earth (C-137)" name="orig"></li>
         <label for="btn-earth">Tierra</label>
         <li><input id="btn-aban" type="radio" value="Abadango" name="orig"></li>
         <label for="btn-aban">Abadango</label>
         <li><input id="btn-unk-o" type="radio" value="unknown" name="orig"></li>
         <label for="btn-unk-o">Desconocido</label>
-        <li><input id="btn-ven" type="radio" value="Venzenulon" name="orig"></li>
+        <li><input id="btn-ven" type="radio" value="Venzenulon 7" name="orig"></li>
         <label for="btn-ven">Venzenulon 7</label>
         <li><input id="btn-pluto" type="radio" value="Pluto" name="orig"></li>
         <label for="btn-pluto">Pluto</label>
-        <li><input id="btn-nuptia" type="radio" value="Nuptia" name="orig"></li>
+        <li><input id="btn-nuptia" type="radio" value="Nuptia 4" name="orig"></li>
         <label for="btn-nuptia">Nuptia 4</label>
-        <li><input id="btn-bepsi" type="radio" value="Bepis" name="orig"></li>
+        <li><input id="btn-bepsi" type="radio" value="Bepis 9" name="orig"></li>
         <label for="btn-bepsi">Bepis 9</label>
-        <li><input id="btn-signus" type="radio" value="Signus" name="orig"></li>
+        <li><input id="btn-signus" type="radio" value="Signus 5 Expanse" name="orig"></li>
         <label for="btn-signus">Signus 5 extensión</label>
         <li><input id="btn-otros" type="radio" value="9" name="orig"></li>
         <label for="btn-otros">Otros</label>
@@ -142,9 +138,7 @@
         <button id="orden">ordenar por</button>
           <ul class="ocultar" id="letritas">
             <li><input id="bos-1" type="radio" value=A-Z name="escri"><label for="bos-1"> A-Z</label></li>
-            
-            <li><input id="bos-2" type="radio" value=Z-A name="escri"><label for="bos-2"> Z-A</label></li>
-            
+            <li><input id="bos-2" type="radio" value=Z-A name="escri"><label for="bos-2"> Z-A</label></li>           
           </ul>
       </div>
     </div>
@@ -155,6 +149,7 @@
     </main>
 
   </section>
+
   <footer id="content-footer" class="ocultar">
     <div class="footer">
       <hr>
@@ -164,6 +159,7 @@
   </footer>
   <script src="data.js" type="module"></script>
   <script src="main.js" type="module"></script>
+  <script src="./data/rickandmorty/rickandmorty.js"></script>
 </body>
 
 </html>

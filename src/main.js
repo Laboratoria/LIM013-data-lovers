@@ -8,11 +8,10 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
-  
-  document.getElementById("alldata").innerHTML = `
-	<h1 class="app-title">Total de Personajes(${data.length})</h1>
-	${data.map(obtenerPersonajes).join(" ")}
-	`
+
+	document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${data.length})</h1>
+		${data.map(obtenerPersonajes).join(" ")}`
 }
 
 const obtenerPersonajes = (data) => {
@@ -29,6 +28,7 @@ const obtenerPersonajes = (data) => {
 		</div>
 		</div>`
 }
+
 //Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
@@ -46,14 +46,24 @@ const cambiarClase = () => {
 const tongle = document.getElementById("tongle");
 tongle.addEventListener("click", cambiarClase);
 
-//Función de los botonde de filtro y checkbox
+//Función de los botonde de filtro e inputs de radio
+function resetRadioButtons(groupName) {
+	const arRadioBtn = document.getElementsByName(groupName);
+	for (let i = 0; i < arRadioBtn.length; i++) {
+		let radButton = arRadioBtn[i];
+		radButton.checked = false;
+	}
+}
+
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
 	document.querySelector('#especies').classList.remove("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
-
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
 }
 const btnEspecies = document.getElementById("btn-especies")
 btnEspecies.addEventListener("click", checkboxE);
@@ -64,6 +74,9 @@ const checkboxO = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
 }
 const btnOrigen = document.getElementById("btn-origen")
 btnOrigen.addEventListener("click", checkboxO);
@@ -74,6 +87,9 @@ const checkboxG = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("estd");
 }
 const btnGenero = document.getElementById("btn-genero")
 btnGenero.addEventListener("click", checkboxG);
@@ -84,137 +100,123 @@ const checkboxEs = () => {
 	document.querySelector('#especies').classList.add("ocultar");
 	document.querySelector('#origen').classList.add("ocultar");
 	document.querySelector('#genero').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
 }
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
-//Filtro de especie humanos
-const radioEspecies = document.querySelector("#especies").children;
-const pruebacontI = document.getElementById("especies");
-const pruebaInputs = pruebacontI.getElementsByTagName("input");
-console.log(pruebaInputs);
-const btnH = () => {
+//Filtro de especies
+const botonesFiltros = document.querySelector("#content-cb").children;
+const contentUl = document.getElementById("content-cb");
+const inputName = contentUl.getElementsByTagName("input");
+const btnF = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
 	document.querySelector('#dataHuman').classList.remove("ocultar");
-	for (let i = 0; i < pruebaInputs.length; i++) {
-		if (pruebaInputs[i].checked == true) {
-			let dataH = pruebaInputs[i].getAttribute("value");
-			console.log(dataH);
-			datajs.filterHumans(data, dataH);
-		}
+	const filtroData = datajs.filterSpecies(data, inputName);
+	document.getElementById("dataHuman").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${filtroData.length})</h1>
+		${filtroData.map(obtenerPersonajes).join(" ")}`
+}
 
-
-		//let inpuH= document.getElementById('btn-human')
+for (let i = 0; i < botonesFiltros.length; i++) {
+	const inputsFiltros = botonesFiltros[i].children;
+	for (let j = 0; j < inputsFiltros.length; j++) {
+		inputsFiltros[j].addEventListener("click", btnF);
 	}
 }
-/*const btnH = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
-	let inpuH= document.getElementById('btn-human')
-	let dataH=inpuH.getAttribute("value");
-	console.log(dataH)
-	datajs.filterHumans(data,dataH)
-}
-const btnHuman = document.getElementById("btn-human")
-btnHuman.addEventListener("click", btnH);*/
 
-for (let i = 0; i < radioEspecies.length; i++) {
-	radioEspecies[i].addEventListener("click", btnH);
-}
-
-
-//Buscador de cotenido
- 
 //Declarando variables
 let contenBus = document.getElementById('ctn-bars-search');
 const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
 const boxSear = document.getElementById('box-search');
 const resultadobusqueda = document.getElementById('resultadoBusqueda');
-const mostrarindividual = () =>{
- console.log("hola");
+const mostrarindividual = () => {
+	console.log("hola");
 }
-const pruevas = () =>{
- 	let texto = document.getElementById('inputSeatch');
- 	texto=texto.value.replace(/ /g, "");
- 	
- 	if(texto!=""){
+const pruebas = () => {
+	let texto = document.getElementById('inputSeatch');
+	texto = texto.value.replace(/ /g, "");
+
+	if (texto != "") {
 		let textoMin = texto.toLowerCase();
-		
-		resultadobusqueda.innerHTML="";
-	  	for(var i=0;i<data.length;i++){
-	  	 	let dataMin = data[i].name;
-	  	 	dataMin=dataMin.toLowerCase();
-	  	 		  	 	
-	  	 	if(dataMin.indexOf(textoMin)>=0){
-	  	 		let idB="idbus"+data[i].id;
-	  	 		resultadobusqueda.innerHTML+='<li><a id="'+idB+'" value="'+data[i].id+'">'+data[i].name+'</a> </li>';
-	  	 		
-	  	 		document.getElementById(idB).addEventListener("onclick",mostrarindividual);
 
-	  	   }
-	    }
- 	}
+		resultadobusqueda.innerHTML = "";
+		for (var i = 0; i < data.length; i++) {
+			let dataMin = data[i].name;
+			dataMin = dataMin.toLowerCase();
+
+			if (dataMin.indexOf(textoMin) >= 0) {
+				let idB = "idbus" + data[i].id;
+				resultadobusqueda.innerHTML += '<li><a id="' + idB + '" value="' + data[i].id + '">' + data[i].name + '</a> </li>';
+
+				document.getElementById(idB).addEventListener("onclick", mostrarindividual);
+
+			}
+		}
+	}
 }
- 
-document.getElementById("local").addEventListener("click",pruevas);
 
-const MuestraBusca = () =>{
-	
-	resultadobusqueda.innerHTML="";
-	contenBus.style.top= "80px";
+document.getElementById("local").addEventListener("click", pruebas);
+
+const MuestraBusca = () => {
+
+	resultadobusqueda.innerHTML = "";
+	contenBus.style.top = "80px";
 	coverBus.style.display = "block";
 	boxSear.style.display = "block";
 	inputSeatch.focus();
 }
 document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
 
- const ocultaBusca = () =>{
- 	contenBus.style.top = "-10px";
- 	coverBus.style.display = "none";
- 	boxSear.style.display = "none";
- 	inputSeatch.value = " ";
- }
+const ocultaBusca = () => {
+	contenBus.style.top = "-10px";
+	coverBus.style.display = "none";
+	boxSear.style.display = "none";
+	inputSeatch.value = " ";
+}
 document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
 
-const salida2 = () =>{
+const salida2 = () => {
 	contenBus.style.top = "-10px";
- 	coverBus.style.display = "none";
- 	boxSear.style.display = "none";
- 	inputSeatch.value = " ";
+	coverBus.style.display = "none";
+	boxSear.style.display = "none";
+	inputSeatch.value = " ";
 }
 
-document.getElementById("exit").addEventListener("click",salida2);
+document.getElementById("exit").addEventListener("click", salida2);
 
 const letras = () => {
-document.querySelector('#letritas').classList.remove("ocultar");	
+	document.querySelector('#letritas').classList.remove("ocultar");
 }
-document.getElementById("orden").addEventListener("click",letras);
 
+document.getElementById("orden").addEventListener("click", letras);
 
-    const acenA_Z = () =>{
+const acenA_Z = () => {
 	console.log("entro");
 	datajs.nameA_Z(data);
-	document.getElementById('alldata'). innerHTML = " ";
-    document.getElementById('alldata').innerHTML = `
+	document.getElementById('alldata').innerHTML = " ";
+	document.getElementById('alldata').innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
 }
 
-document.getElementById("bos-1").addEventListener("click",acenA_Z);
+document.getElementById("bos-1").addEventListener("click", acenA_Z);
 
-const acenZ_A = () =>{
+const acenZ_A = () => {
 	console.log("entro22");
 	datajs.nameZ_A(data);
-	document.getElementById('alldata'). innerHTML = " ";
-    document.getElementById('alldata').innerHTML = `
+	document.getElementById('alldata').innerHTML = " ";
+	document.getElementById('alldata').innerHTML = `
 	<h1 class="app-title">Total de Personajes(${data.length})</h1>
 	${data.map(obtenerPersonajes).join(" ")}
 	`
 }
 
-document.getElementById("bos-2").addEventListener("click",acenZ_A);
+document.getElementById("bos-2").addEventListener("click", acenZ_A);
 
 
 
