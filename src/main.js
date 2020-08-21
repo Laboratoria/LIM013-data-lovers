@@ -1,13 +1,11 @@
-import { example } from './data.js';
+import {
+  example
+} from './data.js';
 import data from './data/lol/lol.js';
 
 const datos = data.data,
-  search = document.querySelector('.search');
-//console.log('datos',datos)
-
-//console.log('diana',legends_cards.appendChild(legends))
-//console.log(Object.keys(data.data))
-//console.log(Object.values(data.data))
+  search = document.querySelector('.search'),
+  arrayLegends = Object.values(datos);
 
 /*---LISTAR EN EL HTML---*/
 const listLegends = (name, img) => {
@@ -15,7 +13,7 @@ const listLegends = (name, img) => {
   const legend = document.createElement('div'),
     imgLegend = document.createElement('img'),
     nameLegend = document.createElement('div');
-  
+
   nameLegend.innerHTML += name;
   legend.setAttribute('class', 'legends');
   imgLegend.setAttribute('class', 'img-container');
@@ -29,59 +27,57 @@ const listLegends = (name, img) => {
 }
 
 /*---TRAER DATA---*/
-const getLegends = () => {
 
-  for (const prop in datos) {
-    //console.log('prop',prop);
-    let name = datos[`${prop}`].name;
-    let img = datos[`${prop}`].splash;
+const getLegends = () => {
+  for (let i = 0; i < arrayLegends.length; i++) {
+    let name = arrayLegends[i].name;
+    let img = arrayLegends[i].splash;
     listLegends(name, img);
   }
-
 }
-
-/*---FILTRO DE LA DATA---*/
-
-const arrayLegends = Object.values(datos)
-const result = arrayLegends.filter(
-  (objLegend) => {
-    //console.log('objLegend',objLegend.tags)
-    return objLegend.tags == 'Marksman';
-
-    //console.log('objLegend.tags',objLegend.tags[0]); 
-  }
-)
-
-/* function hola (){
-} */
-
-/* const hola = () => {
-} */
-console.log('result',result);
 
 getLegends();
 
+/*---FILTRO DE LA DATA---*/
+
 search.addEventListener('click', (e) => {
-  //console.log('event',e.target.id)
   const rol = e.target.id
-  //console.log('rol',rol)
-  const arrayLegends = Object.values(datos)
   const result = arrayLegends.filter(
     (objLegend) => {
       return objLegend.tags.includes(rol);
     }
   )
-  console.log('result',result)
-  return result
+  //console.log('result', result)
+  return result;
 })
 
-/*ORDENAR */
+
+/*---ORDENAR DE LA DATA---*/
+const selector = document.querySelector('#order')
+console.log('selector', selector)
+selector.addEventListener('click', (e) => {
+  const order = e.target.value
+  if (order == 'asc') {
+    return arrayLegends.sort(
+      (a, b) => (a.toLowerCase() < b.toLowerCase()) ? 1 :
+      (a.toLowerCase() > b.toLowerCase()) ? -1 :
+      0
+    )
+
+  } else {
+    return arrayLegends.sort(
+      (a, b) => (a.toLowerCase() > b.toLowerCase()) ? 1 :
+      (a.toLowerCase() < b.toLowerCase()) ? -1 :
+      0
+    )
+  }
+})
 const roles = ['marksman', 'support', 'Fighter', 'Diana']
-console.log('organizar',roles.sort())
+console.log('organizar', roles.sort())
+
 const asc = roles.sort(
-  (a, b) => (a.toLowerCase() > b.toLowerCase()) ? 1 :
-  (a.toLowerCase() < b.toLowerCase()) ? -1 :
+  (a, b) => (a.toLowerCase() < b.toLowerCase()) ? 1 :
+  (a.toLowerCase() > b.toLowerCase()) ? -1 :
   0
 )
-
-
+console.log('organizar123', asc)
