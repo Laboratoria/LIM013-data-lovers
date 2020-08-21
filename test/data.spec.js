@@ -1,17 +1,48 @@
-import { example, anotherExample } from '../src/data.js';
+import { filteredPokemon } from '../src/data.js';
+const testPokemon = {
+  "pokemon":[ 
+    { 
+      "name": "bulbasaur",
+      "type": [
+        "grass",
+        "poison"]
+  },
+    { 
+      "name": "charizard",
+      "type": [
+        "fire",
+        "flying"
+    ]
+  },
+    {
+      
+      "name": "squirtle",
+      "type": [
+        "water"
+      ]
+    }
+]
+ };
 
+ const grassPokemon = [ 
+  { 
+    "name": "bulbasaur",
+    "type": [
+      "grass",
+      "poison"]
+    }];
 
-describe('example', () => {
+describe('filteredPokemon', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filteredPokemon).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `filteredPokemon`', () => {
+    expect(filteredPokemon(testPokemon,'grass')).toEqual(grassPokemon); //(expect.arrayContaining(expected)({'name':'bulbasaur','type':['grass','poison']}));
   });
 });
 
-
+/*
 describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
@@ -21,3 +52,4 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+*/

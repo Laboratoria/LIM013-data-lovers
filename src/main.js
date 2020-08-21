@@ -28,9 +28,9 @@ list.addEventListener("change", () => {
     // filtra si la seleccion es diferente a all pokemon
     if (selectValue !== "allPokemon") {
         typePokemon = filteredPokemon(allPokemon, selectValue); //Filtra los pokemones
-        console.log(typePokemon);
+       // console.log(typePokemon);
     }
-    console.log(selectValue);
+    //console.log(selectValue);
     // Crea estructura de all pokemon o pokemon filtrado
     function pokemonTemplateFilter(type) {
         return `
@@ -49,4 +49,3 @@ list.addEventListener("change", () => {
     `;
 });
 //console.log(example, data);
-
