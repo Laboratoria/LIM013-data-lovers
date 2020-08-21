@@ -55,6 +55,20 @@ function resetRadioButtons(groupName) {
 	}
 }
 
+const botonTodos = () => {
+	document.querySelector('#alldata').classList.remove("ocultar");
+	document.querySelector('#especies').classList.add("ocultar");
+	document.querySelector('#origen').classList.add("ocultar");
+	document.querySelector('#genero').classList.add("ocultar");
+	document.querySelector('#estado').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
+}
+const btnTodos= document.getElementById("btn-todos")
+btnTodos.addEventListener("click", botonTodos);
+
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
 	document.querySelector('#especies').classList.remove("ocultar");
