@@ -303,3 +303,26 @@ border-radius: 0px 5px 5px 0px;
     text-decoration: none;
     color: white;
 }
+
+/*distribución de pokemones*/
+.containerPicture{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.picture{
+    width: 180px;
+    height: 210px;
+    margin: 5px;
+    background-image: url(images/hexagono2.png);
+    /*para que ocupe todo el espacio*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width:130px;
+    height:130px;
+}
+
