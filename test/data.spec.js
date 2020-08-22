@@ -38,7 +38,7 @@ describe('filteredPokemon', () => {
   });
 
   it('returns `filteredPokemon`', () => {
-    expect(filteredPokemon(testPokemon,'grass')).toEqual(grassPokemon); //(expect.arrayContaining(expected)({'name':'bulbasaur','type':['grass','poison']}));
+    expect(filteredPokemon(testPokemon.pokemon,'grass')).toEqual(grassPokemon); //(expect.arrayContaining(expected)({'name':'bulbasaur','type':['grass','poison']}));
   });
 });
 
