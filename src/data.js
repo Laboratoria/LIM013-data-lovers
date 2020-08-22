@@ -7,6 +7,35 @@ export const filteredPokemon = (data,selectType) => {
   return miArray;
 };
 
+export const orderPokemonUpward = (myArray) => {
+  myArray.sort(function(a,b){
+        let x = a.name;
+        let y = b.name;
+        if (x < y){return -1;}
+        if (x > y){return 1;}
+        return 0;
+    });
+
+    console.log(myArray);
+    return myArray;
+};
+
+export const orderPokemonDownward = (myArray) => {
+  myArray.sort(function(a,b){
+        let x = a.name;
+        let y = b.name;
+        if (x < y){return 1;}
+        if (x > y){return -1;}
+        return 0;
+    });
+
+    console.log(myArray);
+    return myArray;
+};
+
+
+
+
 export const anotherExample = () => {
   return 'OMG';
 };

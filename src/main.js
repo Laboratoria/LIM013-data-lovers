@@ -1,4 +1,4 @@
-import { filteredPokemon } from "./data.js"; //fijo
+import { filteredPokemon, orderPokemonUpward,orderPokemonDownward } from "./data.js"; //fijo
 // import data from './data/lol/lol.js';
 import data from "./data/pokemon/pokemon.js"; //fijo
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -47,5 +47,63 @@ list.addEventListener("change", () => {
             .map(pokemonTemplateFilter)
             .join("")}</div>
     `;
+
 });
+
+// Función ordenar
+
+/*function orderPokemon(myArray) {
+    myArray.sort(function(a,b){
+          let x = a.name;
+          let y = b.name;
+          if (x < y){return -1;}
+          if (x > y){return 1;}
+          return 0;
+      });
+  
+      console.log(myArray);
+      return myArray;
+  }*/
+
+
+let orderList = document.getElementById("orderList");
+ orderList.addEventListener("change", ()=> {
+     let orderListValue = orderList.value;
+     if (orderListValue === 'upward') {
+          orderPokemonUpward(allPokemon);
+     }   
+     if (orderListValue === 'downward') {
+         orderPokemonDownward(allPokemon);
+     }
+    
+     function pokemonTemplateOrdered(poke) {
+        return `
+            <div class='poke'>
+            <p class = 'poke-num'> ${poke.num}</p>
+            <img class ='poke-img' src='${poke.img}'>
+            <p class= 'poke-name'> ${poke.name}</p>    
+            </div>
+            `;
+
+    }
+    
+    root.innerHTML = `
+        <div class = 'pokedex'>${allPokemon.map(pokemonTemplateOrdered).join("")}</div>
+        `; 
+
+
+
+
+
+
+
+
+
+
+ })
+//Ordena pokemones alfabéticamente
+
+/**/
+
+
 //console.log(example, data);
