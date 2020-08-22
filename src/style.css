@@ -1,11 +1,12 @@
-.btn-orderByName{
+.select-selectByName{
     width: 150px;
 }
 
-.btn-filterByType{
+.select-selectByType{
     width: 150px;
    }
 
-.card{
+.div-showByItem{
+    
     color:red;
 }
