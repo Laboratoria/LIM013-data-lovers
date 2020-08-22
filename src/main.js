@@ -45,9 +45,9 @@ search.addEventListener('click', (e) => {
       return objLegend.tags.includes(rol);
     }
   )
-  //console.log('result',result)
-  document.getElementById('legends_container').innerHTML = '';
-  getLegends(result)
+  //console.log('result', result)
+  document.getElementById('legends_container').innerHTML='';
+  getLegends(result);
 })
 
 
