@@ -102,15 +102,34 @@
 /* Fin de estilos pantalla 1 */
 
 /* Inicio de estilos pantalla 2 */
-/* Estilos ordenar por */
-@media (max-width:600px){
-    .content-order {
-        width: 50%;
+/* Estilos ordenar por y filtros mobile*/
+@media (max-width:700px){
+    .btn-controls{
+        display: none;
+    }
+
+    .content-cb{
+        display: none;
+    }
+
+   .content-order {
+        padding: 0;
         text-align: left;
+        height: 35px;
     }
 
     .caja {
-        margin: 0 20px;
+        margin-left: 20px;
+        width: 42%;
+        float: left;
+    }
+
+    #orden {	
+        width: 100%;
+    }
+    
+    .content-filtro-m{
+        display: block;
     }
 }
 
@@ -124,6 +143,7 @@
       }
 }
 
+/* Estilos de cards data*/
 @media (max-width:750px){
     .alldata{
         margin: 10px;

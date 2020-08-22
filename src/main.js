@@ -66,7 +66,7 @@ const botonTodos = () => {
 	resetRadioButtons("gener");
 	resetRadioButtons("estd");
 }
-const btnTodos= document.getElementById("btn-todos")
+const btnTodos = document.getElementById("btn-todos")
 btnTodos.addEventListener("click", botonTodos);
 
 const checkboxE = () => {
