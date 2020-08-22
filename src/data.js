@@ -1,9 +1,22 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
+/* export const filter = (data) => {
   return 'example';
 };
+ */
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+ const filter = {
+
+  filterLegend: (data) => {
+    data.filter(
+      (objLegend) => {
+        return objLegend.tags.includes('Mage');
+      }
+    )
+  }
+
+ }
+
+ export default filter;
+
+ 
