@@ -2,13 +2,27 @@ import { filterByType, sortByName, findByName } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
+function showPokemon(item){
+    var showByItem = document.createElement("div");
+    showByItem.classList.add("div-showByItem");
+    showByItem.innerHTML=`
+        <p>#${item.num}</p>
+        <img src=${item.img}></img>
+        <p>name: ${item.name}</p>
+        <p>type: ${item.type}</p>
+        `
+    document.body.appendChild(showByItem);
+    return showByItem;
+}
+
 //selectByName//
 const selectByName = document.querySelector("#selectByName");
 selectByName.addEventListener("change", chosenByName);
 
 function chosenByName(){
     const showByName = selectByName.value;
-    console.log(sortByName(data.pokemon.showByName));
+    const showListName = (sortByName(data.pokemon,showByName));
+    return showListName.forEach(showPokemon);
 }
 
 
@@ -18,17 +32,7 @@ selectByType.addEventListener("change", chosenByType);
 
 function chosenByType() {
     const showByType = selectByType.value;
-    const showListCard = (filterByType(data.pokemon,showByType));
-    return showListCard.forEach(myFunction);
+    const showListType = (filterByType(data.pokemon,showByType));
+    return showListType.forEach(showPokemon);
 }
-
-    function myFunction(item, index){
-    var card = document.querySelector("#card");
-    card.classList.add("clase");
-    card.innerHTML=`
-      <p>#${item.num}</p>
-      <img src=${item.img}></img>
-      <p>name: ${item.name}</p>
-      <p>type: ${item.type}</p>
-    `
-    }
+    
