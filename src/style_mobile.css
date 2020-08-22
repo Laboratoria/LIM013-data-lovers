@@ -27,7 +27,7 @@
     }
 
     .menu a:hover{
-        color: #464655;
+        color: #444444;
         background: transparent;
     }
 
@@ -130,6 +130,11 @@
     
     .content-filtro-m{
         display: block;
+    }
+
+    #letritas {
+        width: 42%;
+        left: 20px;
     }
 }
 
