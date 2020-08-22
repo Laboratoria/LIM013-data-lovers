@@ -84,7 +84,7 @@ header nav a {
 
   font-size: 18px;
 
-  /*FLEX HIJO*/
+ /*FLEX HIJO*/
   flex-grow: 1;
 }
 
@@ -161,7 +161,7 @@ footer {
   background: #986E1E;
   width: 100%;
   padding: 5px 10px;
-  /*FLEX*/
+ /*FLEX*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
