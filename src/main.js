@@ -1,6 +1,4 @@
-import {
-  example
-} from './data.js';
+import filter from './data.js';
 import data from './data/lol/lol.js';
 
 const datos = data.data,
@@ -55,30 +53,30 @@ search.addEventListener('click', (e) => {
 
 /*---ORDENAR DE LA DATA---*/
 const selector = document.querySelector('#order')
-console.log('selector', selector)
+//console.log('selector', selector)
 selector.addEventListener('click', (e) => {
   const order = e.target.value
   if (order == 'asc') {
     return arrayLegends.sort(
-      (a, b) => (a.toLowerCase() < b.toLowerCase()) ? 1 :
-      (a.toLowerCase() > b.toLowerCase()) ? -1 :
+      (a, b) => (a.name.toLowerCase() < b.name.toLowerCase()) ? 1 :
+      (a.name.toLowerCase() > b.name.toLowerCase()) ? -1 :
       0
     )
 
   } else {
     return arrayLegends.sort(
-      (a, b) => (a.toLowerCase() > b.toLowerCase()) ? 1 :
-      (a.toLowerCase() < b.toLowerCase()) ? -1 :
+      (a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 :
+      (a.name.toLowerCase() < b.toLowerCase()) ? -1 :
       0
     )
   }
 })
 const roles = ['marksman', 'support', 'Fighter', 'Diana']
-console.log('organizar', roles.sort())
+//console.log('organizar', roles.sort())
 
 const asc = roles.sort(
   (a, b) => (a.toLowerCase() < b.toLowerCase()) ? 1 :
   (a.toLowerCase() > b.toLowerCase()) ? -1 :
   0
 )
-console.log('organizar123', asc)
+//console.log('organizar123', asc)
