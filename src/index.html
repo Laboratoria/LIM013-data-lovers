@@ -19,7 +19,7 @@
         <!--Header containing logo, title and navigation menu-->
         <header id="header">
             <div id="logo">
-                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" />
+                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" />
                 <h1 id="pokedex">POKEDEX</h1>
             </div>
             <div id="search">
@@ -28,16 +28,20 @@
                     <input type="search" placeholder="Search by number or name" />
                 </div>
             </div>
-            <nav id="menu">
-                <ul>
-                    <li>
-                        <a href="#">Calculate CP <i class="fas fa-angle-down"></i></a>
-                    </li>
-                    <li>
-                        <a href="#">Compare two pokemon <i class="fas fa-angle-down"></i></a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="nav-drop">
+                <input id="box-icon-menu" type="checkbox" name="menu" />
+                <label for="box-icon-menu"><i id="menu-icon" class="fas fa-ellipsis-h"></i></label>
+                <nav id="menu">
+                    <ul id="ul-menu">
+                        <li>
+                            Calculate CP <i class="fas fa-angle-down"></i>
+                        </li>
+                        <li>
+                            Compare two pokemon <i class="fas fa-angle-down"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!--End of header-->
 
@@ -57,10 +61,11 @@
                     ORDER <i class="fas fa-caret-down"></i>
                 </button>
                 <ul id="order-drop-down" class="drop-down">
-                    <li id="num1_N">Lower number</li>
-                    <li id="numN_1">Top number</li>
-                    <li id="nameA_Z">A - Z</li>
-                    <li id="nameZ_A">Z - A</li>
+                    <li id="num1_N">
+                        <i class="fas fa-sort-numeric-down"></i>Lower number</li>
+                    <li id="numN_1"><i class="fas fa-sort-numeric-down-alt"></i>Top number</li>
+                    <li id="nameA_Z"><i class="fas fa-sort-alpha-up"></i>A - Z</li>
+                    <li id="nameZ_A"><i class="fas fa-sort-alpha-up-alt"></i>Z - A</li>
                 </ul>
             </div>
             <!--End button order-->

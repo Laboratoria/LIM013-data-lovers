@@ -31,14 +31,16 @@
     height: 80px;
     width: 96%;
     background-color: #fff;
+    border-radius: 0px 0px 5px 5px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
     z-index: 1;
+    justify-content: space-between;
 }
 
 #logo {
     display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
-    flex-basis: 10%;
     height: 100%;
     align-items: center;
 }
@@ -46,6 +48,7 @@
 #logo img {
     height: 50px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 #logo h1 {
@@ -58,13 +61,11 @@
     display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
-    flex-basis: 29%;
     height: 100%;
     align-items: center;
 }
 
 #search-box {
-    width: 330px;
     border: 2px #212529 solid;
     border-radius: 10px;
 }
@@ -85,12 +86,17 @@
 }
 
 #menu {
-    flex-grow: 1;
-    flex-basis: 10%;
+    margin-right: 10px;
     height: 100%;
+    flex-grow: 1;
 }
 
-#menu>ul {
+#nav-drop {
+    display: flex;
+    flex-grow: 1;
+}
+
+#menu>#ul-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,13 +113,15 @@
     margin-top: 80px;
     display: flex;
     flex-flow: column wrap;
-    width: 100%;
+    width: 99.9%;
+    justify-content: center;
 }
 
 #information iframe {
     width: 100%;
     height: 380px;
-    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
 }
 
 #information h2,
@@ -186,12 +194,18 @@ h3 strong {
 #button-order ul li {
     height: 30px;
     padding: 4px 8px;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px #e7e7e9 solid;
     color: #6e6d7a;
     border-radius: 8px;
     line-height: 30px;
     cursor: pointer;
+}
+
+#button-order ul li i {
+    margin-right: 10px;
+    color: #6e6d7a;
+    font-size: 18px;
 }
 
 #button-order ul li:hover {
@@ -331,4 +345,12 @@ footer {
 
 footer i {
     color: #fe0707;
+}
+
+#menu-icon {
+    visibility: hidden;
+}
+
+#box-icon-menu {
+    display: none;
 }
