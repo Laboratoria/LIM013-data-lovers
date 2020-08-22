@@ -70,3 +70,28 @@ document.getElementById("order-drop-down").addEventListener("click", (e) => {
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
 });
+
+/*let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
+mediaQueryTablet.addListener(function() {
+    if (mediaQueryTablet.matches) {
+        document.getElementById("header").style.backgroundColor = "red";
+    } else {
+        document.getElementById("header").style.backgroundColor = "yellow";
+    }
+});*/
+let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
+let checkbox = document.getElementById('box-icon-menu');
+const search = document.getElementById("search");
+window.addEventListener("resize", function() {
+    if (mediaQueryTablet.matches) {
+        checkbox.addEventListener('change', function() {
+            const isChecked = document.getElementById('box-icon-menu').checked;
+            if (isChecked && mediaQueryTablet.matches) {
+                document.getElementById('ul-menu').appendChild(search);
+            }
+        });
+    } else {
+        const nodoNav = document.getElementById("nav-drop");
+        document.getElementById('header').insertBefore(search, nodoNav);
+    }
+});
