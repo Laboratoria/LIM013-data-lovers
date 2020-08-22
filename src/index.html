@@ -139,13 +139,28 @@
       <div class="caja">
         <button id="orden">Ordenar por</button>
         <div class="content-order-li">
-        <ul class="ocultar" id="letritas">
-          <li><input id="bos-1" type="radio" value=A-Z name="escri"><label for="bos-1"> A-Z</label></li>
-          <li><input id="bos-2" type="radio" value=Z-A name="escri"><label for="bos-2"> Z-A</label></li>
-        </ul></div>
+          <ul class="ocultar" id="letritas">
+            <li><input id="bos-1" type="radio" value=A-Z name="escri"><label for="bos-1"> A-Z</label></li>
+            <li><input id="bos-2" type="radio" value=Z-A name="escri"><label for="bos-2"> Z-A</label></li>
+          </ul>
+        </div>
       </div>
-      <div class="content-filtro-m">
-        <button id="btn-estado" class="btn-filtro-m">Filtros</button>
+      <div id="content-filtro-m" class="content-filtro-m">
+        <button id="btn-filter-m" class="btn-filtro-m">Filtros</button>
+      </div>
+    </div>
+
+    <!-- Content Modal filtros mobile -->
+    <div id="my_modal" class="the_modal ocultar">
+      <div class="content_modal">
+        <span class="close">&times;</span>
+        <ul>
+          <li>Todos</li>
+          <li>Especies</li>
+          <li>Lugar de origen</li>
+          <li>Genero</li>
+          <li>Estado</li>
+        </ul>
       </div>
     </div>
 

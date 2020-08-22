@@ -138,6 +138,12 @@
     }
 }
 
+@media (min-width:700px){
+    .the_modal {
+        display: none;
+    }
+}
+
 @media (max-width:700px){
     .alldata{
         margin: 10px;

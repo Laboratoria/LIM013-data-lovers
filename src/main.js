@@ -232,6 +232,27 @@ const acenZ_A = () => {
 
 document.getElementById("bos-2").addEventListener("click", acenZ_A);
 
+//Funciones del modal de filtros mobile
+const modalAdd = () => {
+	document.querySelector('#my_modal').classList.remove("ocultar");
+}
+const btnFilterM = document.getElementById("content-filtro-m")
+btnFilterM.addEventListener("click", modalAdd);
+
+const closeModal = () => {
+	document.querySelector('#my_modal').classList.add("ocultar");
+}
+const closeFilter = document.getElementsByClassName("close")[0];
+closeFilter.addEventListener("click", closeModal);
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+	if (event.target == the_modal) {
+		the_modal.style.display = "none";
+	}
+}
+
 
 
 // import data from './data/lol/lol.js';
