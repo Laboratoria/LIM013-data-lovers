@@ -127,9 +127,9 @@ const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
 	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
+	document.querySelector('#data-filter').classList.remove("ocultar");
 	const filtroData = datajs.filterSpecies(data, inputName);
-	document.getElementById("dataHuman").innerHTML =
+	document.getElementById("data-filter").innerHTML =
 		`<h1 class="app-title">Total de Personajes(${filtroData.length})</h1>
 		${filtroData.map(obtenerPersonajes).join(" ")}`
 }
@@ -244,14 +244,6 @@ const closeModal = () => {
 }
 const closeFilter = document.getElementsByClassName("close")[0];
 closeFilter.addEventListener("click", closeModal);
-
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-	if (event.target == the_modal) {
-		the_modal.style.display = "none";
-	}
-}
 
 
 

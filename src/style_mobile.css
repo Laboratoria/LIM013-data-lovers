@@ -138,6 +138,7 @@
     }
 }
 
+/* modal de filtros en desktop*/
 @media (min-width:700px){
     .the_modal {
         display: none;
