@@ -47,7 +47,7 @@ const tongle = document.getElementById("tongle");
 tongle.addEventListener("click", cambiarClase);
 
 //Función de los botonde de filtro e inputs de radio
-function resetRadioButtons(groupName) {
+const resetRadioButtons = (groupName) => {
 	const arRadioBtn = document.getElementsByName(groupName);
 	for (let i = 0; i < arRadioBtn.length; i++) {
 		let radButton = arRadioBtn[i];
@@ -56,11 +56,11 @@ function resetRadioButtons(groupName) {
 }
 
 const botonTodos = () => {
-	document.querySelector('#alldata').classList.remove("ocultar");
-	document.querySelector('#especies').classList.add("ocultar");
-	document.querySelector('#origen').classList.add("ocultar");
-	document.querySelector('#genero').classList.add("ocultar");
-	document.querySelector('#estado').classList.add("ocultar");
+	document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${data.length})</h1>
+		${data.map(obtenerPersonajes).join(" ")}`
+
+	document.querySelector('#content-cb').classList.add("ocultar");
 	resetRadioButtons("esp");
 	resetRadioButtons("orig");
 	resetRadioButtons("gener");
@@ -126,10 +126,8 @@ const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#data-filter').classList.remove("ocultar");
 	const filtroData = datajs.filterSpecies(data, inputName);
-	document.getElementById("data-filter").innerHTML =
+	document.getElementById("alldata").innerHTML =
 		`<h1 class="app-title">Total de Personajes(${filtroData.length})</h1>
 		${filtroData.map(obtenerPersonajes).join(" ")}`
 }
