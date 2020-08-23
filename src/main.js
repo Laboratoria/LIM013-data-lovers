@@ -1,4 +1,4 @@
-import filter from './data.js';
+import filterLegend from './data.js';
 import data from './data/lol/lol.js';
 
 const datos = data.data,
@@ -25,7 +25,6 @@ const listLegends = (name, img) => {
 }
 
 /*---TRAER DATA---*/
-
 const getLegends = (objLegend) => {
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
@@ -37,46 +36,14 @@ const getLegends = (objLegend) => {
 getLegends(arrayLegends);
 
 /*---FILTRO DE LA DATA---*/
-
 search.addEventListener('click', (e) => {
   const rol = e.target.id
-  const result = arrayLegends.filter(
-    (objLegend) => {
-      return objLegend.tags.includes(rol);
-    }
-  )
-  //console.log('result',result)
-  document.getElementById('legends_container').innerHTML = '';
-  getLegends(result)
-})
-
-
-/*---ORDENAR DE LA DATA---*/
-const selector = document.querySelector('#order')
-//console.log('selector', selector)
-selector.addEventListener('click', (e) => {
-  const order = e.target.value
-  if (order == 'asc') {
-    return arrayLegends.sort(
-      (a, b) => (a.name.toLowerCase() < b.name.toLowerCase()) ? 1 :
-      (a.name.toLowerCase() > b.name.toLowerCase()) ? -1 :
-      0
-    )
-
+  
+  if (rol == null || rol == '' || rol == 'All') {
+    getLegends(arrayLegends);
   } else {
-    return arrayLegends.sort(
-      (a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 :
-      (a.name.toLowerCase() < b.toLowerCase()) ? -1 :
-      0
-    )
+    const result = filterLegend(arrayLegends, rol)
+    document.getElementById('legends_container').innerHTML = '';
+    getLegends(result)
   }
 })
-const roles = ['marksman', 'support', 'Fighter', 'Diana']
-//console.log('organizar', roles.sort())
-
-const asc = roles.sort(
-  (a, b) => (a.toLowerCase() < b.toLowerCase()) ? 1 :
-  (a.toLowerCase() > b.toLowerCase()) ? -1 :
-  0
-)
-//console.log('organizar123', asc)
