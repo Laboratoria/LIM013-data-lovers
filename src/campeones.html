@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The World League of Legends</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="imagenes/l.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>The World League of Legends</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="imagenes/l.ico" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="imagenes/logo.png" />
+        </div>
+        <nav>
+          <a href="index.html" class="borde">INICIO</a>
+          <a href="campeones.html" class="borde">CAMPEONES</a>
+          <a href="estadisticas.html" class="borde">ESTADÍSTICAS</a>
+          <a href="soundtrack.html" class="borde">SOUNDTRACK</a>
+        </nav>
+      </header>
 
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <img src="imagenes/logo.png">
+      <div class="search">
+        <input type="text" placeholder="Buscar a ..." />
+        <input type="button" value="ASESINO" id="Assassin" />
+        <input type="button" value="LUCHADOR" id="Fighter" />
+        <input type="button" value="MAGO" id="Mage" />
+        <input type="button" value="TIRADOR" id="Marksman" />
+        <input type="button" value="APOYO" id="Support" />
+        <input type="button" value="TANQUE" id="Tank" />
+        <select name="order" id="order">
+          <option value="asc">Ordenar A-Z</option>
+          <option value="desc">Ordenar Z-A</option>
+        </select>
       </div>
-      <nav>
-        <a href="index.html" class="borde">INICIO</a>
-        <a href="campeones.html" class="borde">CAMPEONES</a>
-        <a href="estadisticas.html" class="borde">ESTADÍSTICAS</a>
-        <a href="soundtrack.html" class="borde">SOUNDTRACK</a>
-      </nav>
-    </header>
-
-    <div class="search">
-      <input type="text" placeholder="Buscar a ...">
-      <input type="button" value="ASESINO" id="Assassin">
-      <input type="button" value="LUCHADOR" id="Fighter">
-      <input type="button" value="MAGO" id="Mage">
-      <input type="button" value="TIRADOR" id="Marksman">
-      <input type="button" value="APOYO" id="Support">
-      <input type="button" value="TANQUE" id="Tank">
-      <select name="order" id="order">
-        <option value="asc">Ordenar A-Z</option>
-        <option value="desc">Ordenar Z-A</option>
-      </select>
-    </div>
-    <div id="legends_container" class="legends_container">
-      <!-- <div class="legends">
+      <div id="legends_container" class="legends_container">
+        <!-- <div class="legends">
         <img class="img-container" src="" alt="">
         <div class="name"></div>
       </div> -->
+      </div>
     </div>
-  </div>
-  <script src="./main.js" type="module"></script>
-</body>
-
+    <script src="./main.js" type="module"></script>
+  </body>
 </html>
