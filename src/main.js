@@ -38,11 +38,6 @@ getLegends(arrayLegends);
 /*---FILTRO DE LA DATA---*/
 search.addEventListener('click', (e) => {
   const rol = e.target.id
-<<<<<<< HEAD
-  
-  if (rol == null || rol == '' || rol == 'All') {
-    getLegends(arrayLegends);
-=======
   const result = arrayLegends.filter(
     (objLegend) => {
       return objLegend.tags.includes(rol);
@@ -51,25 +46,4 @@ search.addEventListener('click', (e) => {
   //console.log('result', result)
   document.getElementById('legends_container').innerHTML='';
   getLegends(result);
-})
-
-
-/*---ORDENAR DE LA DATA---*/
-const selector = document.querySelector('#order')
-//console.log('selector', selector)
-selector.addEventListener('click', (e) => {
-  const order = e.target.value
-  if (order == 'asc') {
-    return arrayLegends.sort(
-      (a, b) => (a.name.toLowerCase() < b.name.toLowerCase()) ? 1 :
-      (a.name.toLowerCase() > b.name.toLowerCase()) ? -1 :
-      0
-    )
-
->>>>>>> a5e5ffd086fb5a994ec6342610d2c212452cb724
-  } else {
-    const result = filterLegend(arrayLegends, rol)
-    document.getElementById('legends_container').innerHTML = '';
-    getLegends(result)
-  }
 })
