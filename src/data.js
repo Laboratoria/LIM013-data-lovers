@@ -17,6 +17,11 @@ const datajs = {
     }
   },
 
+  filterName: function (data, texto){
+    
+    return data.filter(data => {  return data.name.toLowerCase().indexOf(texto) >= 0 });
+  },
+
   nameA_Z: function (data) {
     return data.sort((a, b) => {
       if (a.name < b.name) {
