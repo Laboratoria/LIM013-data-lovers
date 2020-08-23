@@ -1,5 +1,6 @@
 
-import data from "./data/lol/lol.js";
+import filterLegend from './data.js';
+import data from './data/lol/lol.js';
 
 const datos = data.data,
   search = document.querySelector(".search"),
@@ -23,7 +24,6 @@ const listLegends = (name, img) => {
 };
 
 /*---TRAER DATA---*/
-
 const getLegends = (objLegend) => {
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
@@ -33,34 +33,3 @@ const getLegends = (objLegend) => {
 };
 
 getLegends(arrayLegends);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const selector = document.querySelector("#order");
-selector.addEventListener("click", (e) => {
-  const orderName = e.target.value;
-  //console.log("prueba",e.target.value);
-  if (orderName == "asc") {
-    const prueba=order.nameChampionAz(arrayLegends);
-  }
-  else if (orderName == "desc") {
-    const prueba=order.nameChampionZa(arrayLegends);
-    document.getElementById("legends_container").innerHTML = "";
-    getLegends(prueba)
-  }
-});
-
-import order from "./data.js";
