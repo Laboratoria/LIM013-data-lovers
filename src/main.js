@@ -145,20 +145,26 @@ const pruebas = () => {
 		`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
 		${filternames.map(obtenerPersonajes).join(" ")}`
 		console.log("filternaes",filternames);
-
-
-
 	
 	}
 }
 
 document.getElementById("local").addEventListener("click", pruebas);
 
+ const presionarTecla = () =>{
+ 	let teclaEsc = event.keyCode;
+ 	if (teclaEsc == 13){
+ 		return pruebas();
+ 	}
+ }
+
+ window.onkeydown = presionarTecla;
+
 const MuestraBusca = () => {
 
 	contenBus.style.top = "80px";
 	coverBus.style.display = "block";
-	boxSear.style.display = "block";
+	//boxSear.style.display = "block";
 	inputSeatch.focus();
 }
 document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusca);
@@ -166,7 +172,7 @@ document.getElementById("ctn-icon-search").addEventListener("click", MuestraBusc
 const ocultaBusca = () => {
 	contenBus.style.top = "-10px";
 	coverBus.style.display = "none";
-	boxSear.style.display = "none";
+	//boxSear.style.display = "none";
 	inputSeatch.value = " ";
 }
 document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusca);
