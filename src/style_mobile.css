@@ -27,7 +27,7 @@
     }
 
     .menu a:hover{
-        color: #464655;
+        color: #444444;
         background: transparent;
     }
 
@@ -97,15 +97,46 @@
 /* Fin de estilos pantalla 1 */
 
 /* Inicio de estilos pantalla 2 */
-/* Estilos ordenar por */
-@media (max-width:600px){
-    .content-order {
-        width: 50%;
+/* Estilos ordenar por y filtros mobile*/
+@media (max-width:700px){
+    .btn-controls{
+        display: none;
+    }
+
+    .content-cb{
+        display: none;
+    }
+
+   .content-order {
+        padding: 0;
         text-align: left;
+        height: 35px;
     }
 
     .caja {
-        margin: 0 20px;
+        margin-left: 20px;
+        width: 42%;
+        float: left;
+    }
+
+    #orden {	
+        width: 100%;
+    }
+    
+    .content-filtro-m{
+        display: block;
+    }
+
+    #letritas {
+        width: 42%;
+        left: 20px;
+    }
+}
+
+/* modal de filtros en desktop*/
+@media (min-width:700px){
+    .the_modal {
+        display: none;
     }
 }
 
@@ -119,6 +150,7 @@
       }
 }
 
+/* Estilos de cards data*/
 @media (max-width:750px){
     .alldata{
         margin: 10px;
@@ -140,21 +172,17 @@
 
     .info{
         width:150px;
-        height: 150px;
+        height: 160px;
     }
 
     .name{
-        margin: 10px;
+        margin: 5px 10px;
         font-size: 16px;
     }
 
     .Text-datos{
+        margin: 2px 20px;
         font-size: 13px;
     }
 }
-
-
-
-
-
 /* Fin de estilos pantalla 2 */

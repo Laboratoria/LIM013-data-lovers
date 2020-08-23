@@ -21,10 +21,10 @@ const obtenerPersonajes = (data) => {
 		</div>
 		<div class="info">
 		<h2 class="name">${data.name}</h2>
-		<p class="Text-datos">Genero:${data.gender}</p>
-		<p class="Text-datos">Origen:${data.origin.name}</p>
-		<p class="Text-datos">Especie:${data.species}</p>
-		<p class="Text-datos">Estado:${data.status}</p>
+		<p class="Text-datos">Genero: ${data.gender}</p>
+		<p class="Text-datos">Origen: ${data.origin.name}</p>
+		<p class="Text-datos">Especie: ${data.species}</p>
+		<p class="Text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
 }
@@ -47,13 +47,27 @@ const tongle = document.getElementById("tongle");
 tongle.addEventListener("click", cambiarClase);
 
 //Función de los botonde de filtro e inputs de radio
-function resetRadioButtons(groupName) {
+const resetRadioButtons = (groupName) => {
 	const arRadioBtn = document.getElementsByName(groupName);
 	for (let i = 0; i < arRadioBtn.length; i++) {
 		let radButton = arRadioBtn[i];
 		radButton.checked = false;
 	}
 }
+
+const botonTodos = () => {
+	document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${data.length})</h1>
+		${data.map(obtenerPersonajes).join(" ")}`
+
+	document.querySelector('#content-cb').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
+}
+const btnTodos = document.getElementById("btn-todos")
+btnTodos.addEventListener("click", botonTodos);
 
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
@@ -112,10 +126,8 @@ const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
-	document.querySelector('#alldata').classList.add("ocultar");
-	document.querySelector('#dataHuman').classList.remove("ocultar");
 	const filtroData = datajs.filterSpecies(data, inputName);
-	document.getElementById("dataHuman").innerHTML =
+	document.getElementById("alldata").innerHTML =
 		`<h1 class="app-title">Total de Personajes(${filtroData.length})</h1>
 		${filtroData.map(obtenerPersonajes).join(" ")}`
 }
@@ -139,13 +151,13 @@ const pruebas = () => {
 
 	if (texto != "") {
 		let textoMin = texto.toLowerCase();
-         console.log(textoMin);
+		console.log(textoMin);
 		let filternames = datajs.filterName(data, textoMin);
 		document.getElementById("alldata").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
+			`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
 		${filternames.map(obtenerPersonajes).join(" ")}`
-		console.log("filternaes",filternames);
-	
+		console.log("filternaes", filternames);
+
 	}
 }
 
@@ -215,6 +227,19 @@ const acenZ_A = () => {
 }
 
 document.getElementById("bos-2").addEventListener("click", acenZ_A);
+
+//Funciones del modal de filtros mobile
+const modalAdd = () => {
+	document.querySelector('#my_modal').classList.remove("ocultar");
+}
+const btnFilterM = document.getElementById("content-filtro-m")
+btnFilterM.addEventListener("click", modalAdd);
+
+const closeModal = () => {
+	document.querySelector('#my_modal').classList.add("ocultar");
+}
+const closeFilter = document.getElementsByClassName("close")[0];
+closeFilter.addEventListener("click", closeModal);
 
 
 
