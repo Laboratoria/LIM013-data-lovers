@@ -13,7 +13,7 @@ body {
   padding: 60px;
 }
 .title-lol {
-  display: block;
+  display: flex;
   margin: auto;
   width: 400px;
   height: auto; 
@@ -21,14 +21,12 @@ body {
 .menus{ 
   display: flex;
   justify-content: space-around;
-  margin-left: 10%;
 }
 .logoHome{
   margin: auto 0;
   width: auto;
   height: auto;
   top: 50%;
-  left: 5%;
   position: relative;
   vertical-align: middle;
 }
@@ -43,14 +41,15 @@ body {
   background-color: #BBA341;
   justify-content: space-around;
   align-items: center; 
-  width: 50%;
-  margin:5px;
+  width: 68%;
+  margin:1%;
   border-radius: 25px 0px;
   opacity: 0.8;
   overflow: hidden;
   padding: 0;
   top: 50%;
-  left: 20%; 
+  left: 20%;
+  height: 65px; 
 }
 .menu-bar a{
   color: #000000;
@@ -59,7 +58,7 @@ body {
   font-size: 35px;
   font-weight: normal;
   font-family: 'Marcellus SC', serif;
-  font-style: Regular;
+  font-style: normal;
   vertical-align: top;
   width: 100%;
   margin: 10px;
@@ -79,32 +78,30 @@ body {
   flex-wrap: nowrap;
   background-color: rgba(12, 166, 190, 0.85);
   align-items: center;  
-  width: 18%;
-  margin: 10px;
+  width: 20%;
   border-radius: 25px 0px;
   opacity: 0.7;
   overflow: hidden;
   padding: 0;
   justify-content: space-evenly;
-  top: 49%;
   right: 5%;
+  height: 65px;
+  margin-top: 1%;
 }
 .menu-play a { 
-  color: #000000;
+  color: white;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: normal;
   font-family: 'Marcellus SC', serif;
   font-style: Regular;
-  line-height: 44px;
   vertical-align: top;
-  width: 100%;
-  margin: 10px;
   text-align: center;
+  padding: 6%;
   text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772, 0 0 0.2em #07cbe9;
 }
 .menu-play a:hover{
-  text-shadow:  0.0625rem 0.0625rem 0.5rem #d6c772, 0 0 1em #d6c772, 0 0 0.2em #d6c772;
+  text-shadow:  0.0625rem 0.0625rem 0.5rem black, 0 0 1em black, 0 0 0.2em black;
 }
 
 /*section home*/
@@ -166,28 +163,26 @@ body {
 
 /*Seccion slides LOL */
 .mode-play h2{
-  display: block;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: flex;
   background-color: #BBA341;
   align-items: normal; 
-  width: 100%;
-  max-width: 700px;
   margin:auto;
+  width: 90%;
+  top: 80%;
   border-radius: 0px 25px ;
   padding: 1%;
-  top: 80%;
-  right: 5%;
+  justify-content: center;
+  right: -4%;
   font-family: 'Marcellus SC', serif;
   font-style: normal;
   font-weight: normal;
   color: black;
   position: relative;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 23px;
-  text-align: center;
+  text-align: center; 
   text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .mySlides {display: none;
 }
@@ -226,19 +221,26 @@ img {vertical-align: middle;
   background-color: rgba(0,0,0,0.8);
 }
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: #BBA341;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Marcellus SC', serif;
+  font-style: Regular;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+.text:hover{
+  cursor: pointer;
+  text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
 }
 .numbertext {
   color:  #BBA341;
   font-size: 16px;
   padding: 8px 10px;
-  position:absolute;
+  position: relative;
   top: 0;
 }
 #dot1,#dot2,#dot3,#dot4 {
@@ -277,7 +279,7 @@ img {vertical-align: middle;
 
 /*Seccion video LOL */
 .lol-video{
-  width:800px;
+  width:650px;
   position: relative;
   margin: 1%;
   background-color: rgba(10, 3, 3, 0.404);
@@ -285,27 +287,28 @@ img {vertical-align: middle;
   border: 5px inset #BBA341;
   overflow: auto;
   border-radius: 0px 20px;
+  right: 2%;
 }
 .video-container h2{
-  display: block;
+  display: flex;
   background-color: #BBA341;
   align-items: normal; 
   margin:auto;
-  max-width:700px;
+  width: 90%;
   border-radius: 0px 25px ;
   padding: 1%;
   justify-content: center;
-  right: 5%;
+  right: -4%;
   font-family: 'Marcellus SC', serif;
   font-style: normal;
   font-weight: normal;
   color: black;
   position: relative;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 23px;
   text-align: center; 
   text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /*Seccion footer LOL */
