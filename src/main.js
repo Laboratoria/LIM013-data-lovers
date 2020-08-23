@@ -36,7 +36,7 @@ getLegends(arrayLegends);
 /*---FILTRO DE LA DATA---*/
 search.addEventListener('click', (e) => {
   const rol = e.target.id
-  
+
   if (rol == null || rol == '' || rol == 'All') {
     getLegends(arrayLegends);
   } else {
@@ -52,10 +52,11 @@ selector.addEventListener("click", (e) => {
   const orderName = e.target.value;
   //console.log("prueba",e.target.value);
   if (orderName == "asc") {
-    const prueba=order.nameChampionAz(arrayLegends);
-  }
-  else if (orderName == "desc") {
-    const prueba=order.nameChampionZa(arrayLegends);
+    const prueba = order.nameChampionAz(arrayLegends);
+    document.getElementById("legends_container").innerHTML = "";
+    getLegends(prueba)
+  } else if (orderName == "desc") {
+    const prueba = order.nameChampionZa(arrayLegends);
     document.getElementById("legends_container").innerHTML = "";
     getLegends(prueba)
   }
