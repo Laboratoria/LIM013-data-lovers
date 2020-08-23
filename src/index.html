@@ -8,45 +8,52 @@
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1ad419416d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <div id="root"></div>
   <div class="contenedor1">
     <header>
-      <div class="logo">
-        <img src="images/lol.png">
-      </div>
-      <nav>
-        <div class="menuLol">
+      <nav class="menu">
+        <div class="logo">
+          <img src="images/lol.png">
+          <a href="#" class="btnMenu" id="btnMenu"><i class="fas fa-bars"></i></a> 
+        </div>
+        <div class="barsNavigation" id="barsNavigation">
           <a href="#">¿Qué es LOL?</a>
-        </div>
-        <div class="menuChampions">
-          <a href="#">Campeones</a>
-        </div>
-        <div class="menuRol">
+          <a href="#" id="championes">Campeones</a>
           <a href="#">Estadísticas por rol</a>
-        </div>
-        <div class="proPlay">
           <a href="#">Juega Profesional</a>
-        </div>
+
+      </div>
       </nav>
     </header>
   </div>
   <main>
+    <div id="home">
     <img src="images/lol2.png" alt="league">
     <button id="letsPlay">Jugar Ahora</button>
+  </div>
+  
+  <div id="championsPage">
+    <input type="text" id=championName>
+    <button type="button" id="buttomChampion"></button>
+    <div id="list">
+
+    </div>
+  </div> 
+
   </main>
   <footer>
     <div id="socialMedia">
+      <a href="https://www.facebook.com/leagueoflegends"><i class="fab fa-facebook-square" ></i>  </a>
+      <a href="https://www.instagram.com/leagueoflegends/?hl=es-la"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/lollatam"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/user/RiotGamesInc"><i class="fab fa-youtube"></i></a>
 
-
-      <i class="fab fa-facebook-square" href="https://www.facebook.com/leagueoflegends/l"> </i> </a>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-youtube"></i>
-      <span></span>
-
+      <p>@2020 Laboratoria.Todos los derechos reservados.</p>
     </div>
   </footer>
 
