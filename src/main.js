@@ -3,15 +3,16 @@ import data from './data/pokemon/pokemon.js';
 
 
 function showPokemon(item){
-    var showByItem = document.createElement("div");
-    showByItem.classList.add("div-showByItem");
+    const showByItem = document.createElement("div");
+    showByItem.classList.add("elemento");
     showByItem.innerHTML=`
         <p>#${item.num}</p>
         <img src=${item.img}></img>
         <p>name: ${item.name}</p>
         <p>type: ${item.type}</p>
         `
-    document.body.appendChild(showByItem);
+    const container = document.querySelector("#container")
+    container.appendChild(showByItem);
     return showByItem;
 }
 
