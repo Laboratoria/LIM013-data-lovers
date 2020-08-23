@@ -153,16 +153,16 @@ const pruebas = () => {
 
 	if (texto != "") {
 		let textoMin = texto.toLowerCase();
-         console.log(textoMin);
+		console.log(textoMin);
 		let filternames = datajs.filterName(data, textoMin);
 		document.getElementById("alldata").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
+			`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
 		${filternames.map(obtenerPersonajes).join(" ")}`
-		console.log("filternaes",filternames);
+		console.log("filternaes", filternames);
 
 
 
-	
+
 	}
 }
 
