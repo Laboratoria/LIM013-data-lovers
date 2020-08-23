@@ -19,9 +19,9 @@
               <a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
           </div>
           <div class="menu-bar">
-            <a href="#home">Home</a>
-            <a href="#topfive">Top 5</a>
-            <a href="#champion-three">Campeones</a>  
+            <a href="#home" id="iniciochamp">Home</a>
+            <a href="#topfive" id="topchamp">Top 5</a>
+            <a href="#champion-three" id="filchamp">Campeones</a>  
           </div>                     
           <div class="menu-play">
             <a href="https://signup.na.leagueoflegends.com/en/signup/index" target = _blank >Juega ahora</a>     
@@ -105,13 +105,19 @@
         </div>      
       </section> 
       <section class="top-second" id="topfive">
-        <article class="top-box">
-          <h2>Top 5 Campeones</h2>
+        <div class="top-box">
+          <p class="top5">Top Cinco</p>
+          <div class="divisor2">
+          <img src="./img/Emblem_Challenger.png" alt="emblema" id="emblema">
+          <p class="champion"> Campeones</p>
+          </div>
+        </div>
+        <div class="texto-top5">
           <p> Si recién estas empezando en este juego, querrás elegir el mejor Campeón posible para destacar entre tus amigos. Para que sea más fácil tomar esta decisión, hemos onstruido esta lista de los 5 mejores Campeones que League of Legends puede ofrecer.</p>
+        </div>  
           <figure>
             <img src="./img/divider.png" class="body-divider" alt="divider"> 
           </figure>                   
-        </article>
         <div class="top-champions" id="list-top-champions"></div>
       </section>
     </main>
@@ -136,4 +142,5 @@
   </body>
   <script src="data/lol/lol.js" type="module"></script>
   <script src="main.js"></script>
+  <script src="slide.js"></script>
 </html>
