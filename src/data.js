@@ -1,22 +1,53 @@
-// estas funciones son de ejemplo
 
-/* export const filter = (data) => {
-  return 'example';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const order={
+    nameChampionAz: function (data){
+      const result=
+      data.sort((a, b)=>{
+        if (a.name > b.name){
+          return 1
+        }
+        if (a.name < b.name){
+          return -1;
+        }
+        return 0;
+      });
+      console.log("result", result)
+      return result
+    },
+
+  //ordenar nombres de Z a A
+    nameChampionZa: function (data){
+      const result=
+      data.sort((b,a)=>{
+        if (a.name > b.name){
+          return 1
+        }
+        if (a.name < b.name){
+          return -1;
+        }
+        return 0;
+    });
+    console.log("result",result)
+    return result
+  },
 };
- */
-
- const filter = {
-
-  filterLegend: (data) => {
-    data.filter(
-      (objLegend) => {
-        return objLegend.tags.includes('Mage');
-      }
-    )
-  }
-
- }
-
- export default filter;
-
- 
+export default order;
