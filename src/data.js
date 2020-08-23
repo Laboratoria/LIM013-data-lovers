@@ -1,22 +1,12 @@
-
-const filterLegend = (data, rol) => {
-  const result = data.filter(
-    (objLegend) => {
-      return objLegend.tags.includes(rol);
-    }
-  )
-  return result
-}
-
-export default filterLegend;
-
-
-
-
-
-
-
 const order={
+  filterLegend: function(data, rol){
+    const result = data.filter(
+      (objLegend) => {
+        return objLegend.tags.includes(rol);
+      }
+    )
+    return result
+  },
     nameChampionAz: function (data){
       const result=
       data.sort((a, b)=>{
