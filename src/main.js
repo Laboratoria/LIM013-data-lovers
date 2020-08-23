@@ -145,31 +145,24 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 let contenBus = document.getElementById('ctn-bars-search');
 const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
-const boxSear = document.getElementById('box-search');
-const resultadobusqueda = document.getElementById('resultadoBusqueda');
-const mostrarindividual = () => {
-	console.log("hola");
-}
+
+
 const pruebas = () => {
 	let texto = document.getElementById('inputSeatch');
 	texto = texto.value.replace(/ /g, "");
 
 	if (texto != "") {
 		let textoMin = texto.toLowerCase();
+         console.log(textoMin);
+		let filternames = datajs.filterName(data, textoMin);
+		document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${filternames.length})</h1>
+		${filternames.map(obtenerPersonajes).join(" ")}`
+		console.log("filternaes",filternames);
 
-		resultadobusqueda.innerHTML = "";
-		for (var i = 0; i < data.length; i++) {
-			let dataMin = data[i].name;
-			dataMin = dataMin.toLowerCase();
 
-			if (dataMin.indexOf(textoMin) >= 0) {
-				let idB = "idbus" + data[i].id;
-				resultadobusqueda.innerHTML += '<li><a id="' + idB + '" value="' + data[i].id + '">' + data[i].name + '</a> </li>';
 
-				document.getElementById(idB).addEventListener("onclick", mostrarindividual);
-
-			}
-		}
+	
 	}
 }
 
@@ -177,7 +170,6 @@ document.getElementById("local").addEventListener("click", pruebas);
 
 const MuestraBusca = () => {
 
-	resultadobusqueda.innerHTML = "";
 	contenBus.style.top = "80px";
 	coverBus.style.display = "block";
 	boxSear.style.display = "block";

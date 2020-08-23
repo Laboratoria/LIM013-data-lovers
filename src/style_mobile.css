@@ -58,12 +58,7 @@
         width: 80%;
     }
 }
-
-@media screen and (max-width: 800px){
-    .box-search{
-        width: 80%;
-    }
-}   
+  
 /* Fin de estilos de header */
 
 /* Inicio de estilos pantalla 1 */
@@ -191,17 +186,8 @@
     }
 }
 
-@media screen and (max-width: 600px){
-    #box-search{
-        width: 700px;
-        transition: none;
-    }
-}
 
-#exit{
-     float: left;
-     position: relative;
-     top: 15px;
-     left: 20px;
-}
+
+
+
 /* Fin de estilos pantalla 2 */
