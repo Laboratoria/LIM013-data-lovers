@@ -18,7 +18,7 @@ const order = {
         }
         return 0;
       });
-    console.log("result", result)
+    //console.log("result", result)
     return result
   },
 
@@ -34,7 +34,7 @@ const order = {
         }
         return 0;
       });
-    console.log("result", result)
+    //console.log("result", result)
     return result
   },
 };

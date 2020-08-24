@@ -2,7 +2,7 @@ import order from './data.js';
 import data from './data/lol/lol.js';
 
 const datos = data.data,
-  search = document.querySelector(".search"),
+  filter = document.getElementById("filter"),
   arrayLegends = Object.values(datos);
 
 /*---LISTAR EN EL HTML---*/
@@ -34,7 +34,7 @@ const getLegends = (objLegend) => {
 getLegends(arrayLegends);
 
 /*---FILTRO DE LA DATA---*/
-search.addEventListener('click', (e) => {
+filter.addEventListener('click', (e) => {
   const rol = e.target.id
 
   if (rol == null || rol == '' || rol == 'All') {
