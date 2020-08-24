@@ -66,6 +66,7 @@ header nav .barsNavigation a:hover {
 }
 #home{
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
+	background-size: 100% 100%;
 }
 main img{
 	width: 50%;
