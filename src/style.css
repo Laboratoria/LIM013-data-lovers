@@ -158,6 +158,24 @@
     z-index: 7;
     display: none;
 }
+
+
+#exit{
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+     cursor: pointer;
+}
+#local{
+   float: left;
+   position: relative;
+   top: 4%;
+   left: 4%;
+   margin-top: 1%;
+   cursor: pointer;
+   list-style: none;
+}
 /* Fin de estilos de header */
 
 /* Inicio de estilos pantalla 1*/
@@ -422,7 +440,7 @@
 /* estilos de modal */
 .the_modal {
     color:#6A6A6A;
-    padding-top: 100px;
+    padding-top: 90px;
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -447,22 +465,17 @@
     padding: 25px;
 }
 
-.close::after  {
+#close  {
     content:url(imagen/icon_close.png);
-    color: #459AE2;
     display: table-cell;
-    padding-top: 80px;
+    padding: 20px;
     text-align: center;
-    width: 30px;
-    height: 30px;
     background-color:white;
-    position: absolute;
-    top: 25px;
-    right: 25px;	
-    pointer-events: none;
+    float: right;
 }
 
 .title-filter {
+    width: 50%;
     padding: 20px;
     color: #459AE2;
     font-size: 18px;
@@ -584,22 +597,3 @@
     font-size: 15px;
 }
 /* Fin de estilos footer*/
-
-
-
-#exit{
-     float: left;
-     position: relative;
-     top: 15px;
-     left: 20px;
-      cursor: pointer;
-}
-#local{
-    float: left;
-    position: relative;
-    top: 4%;
-    left: 4%;
-    margin-top: 1%;
-    cursor: pointer;
-    list-style: none;
-}
