@@ -20,3 +20,7 @@ ${data.pokemon.map((picture)=>{
 //console.log(example, data);
 //console.log(container);
 
+//prueba toogle
+
+//fin prueba toogle
+
