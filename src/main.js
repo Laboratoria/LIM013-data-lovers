@@ -100,3 +100,11 @@ document.getElementById("select-region").addEventListener('change', () => {
     newData = region;
     restart();
 });
+
+document.getElementById("select-type").addEventListener('change', ()=> {
+    let value = new Array();
+    value= document.getElementById("select-type").value;
+    let type = filter.type(data.pokemon, value);
+    newData = type;
+    restart();
+});

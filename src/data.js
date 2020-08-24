@@ -53,4 +53,15 @@ export const filter = {
         })
         return pokemonRegion;
     },
+    type: function(data,value) {
+      let pokemons = data;
+      const pokemonType = pokemons.filter(function(pokemon){
+        let typelength =  pokemon.type.length;
+        for(let i=0; i<typelength ; i++){
+        return pokemon.type[i]=== value;
+        }
+      })
+      return pokemonType;
+    },
 };
+
