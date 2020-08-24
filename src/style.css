@@ -158,6 +158,24 @@
     z-index: 7;
     display: none;
 }
+
+
+#exit{
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+     cursor: pointer;
+}
+#local{
+   float: left;
+   position: relative;
+   top: 4%;
+   left: 4%;
+   margin-top: 1%;
+   cursor: pointer;
+   list-style: none;
+}
 /* Fin de estilos de header */
 
 /* Inicio de estilos pantalla 1*/
@@ -386,8 +404,43 @@
 .btn-filtro-m:focus{ outline: none;}
 
 /* estilos de modal */
+.btn_expand {	
+    margin-right: 80px;
+    border: 1px solid #C4C4C4;
+    height: 35px;
+    overflow: hidden;
+    width: 180px;
+    display: right;
+    position: relative;
+    background: white;
+    color: #6A6A6A;
+    font-weight: 600;
+    text-align: left;
+    padding: 6px 15px;
+}
+.btn_expand::after {
+    content:url(img/Icon_Artwork.png);
+    color: #459AE2;
+    display: table-cell;
+    padding-top: 7px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    right: 0px;	
+    pointer-events: none;
+    border-left: 1px solid #C4C4C4;
+}
+.btn_expandn:focus { 
+    outline: none;
+}
+
+/* estilos de modal */
 .the_modal {
-    padding-top: 100px;
+    color:#6A6A6A;
+    padding-top: 90px;
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -407,19 +460,54 @@
     width: 80%; 
 }
 
-/* Botón cerrar del modal*/
-.close {
-    color: #aaa;
+/* botón de cerrar el modal*/
+.modal_header {
+    padding: 25px;
+}
+
+#close  {
+    content:url(imagen/icon_close.png);
+    display: table-cell;
+    padding: 20px;
+    text-align: center;
+    background-color:white;
     float: right;
-    font-size: 28px;
+}
+
+.title-filter {
+    width: 50%;
+    padding: 20px;
+    color: #459AE2;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.list-btn {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown_btn {
+    text-align: left;
+    background-color: white;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #D9D9D9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: block;
     cursor: pointer;
+}
+
+.dropdown_btn::after   {
+    content: url(imagen/icon_arrow_down.png);
+    float: right;
+}
+
+.dropdown_content {
+    display: block;
 }
 
 /* Estilos de cards de personajes*/
@@ -509,22 +597,3 @@
     font-size: 15px;
 }
 /* Fin de estilos footer*/
-
-
-
-#exit{
-     float: left;
-     position: relative;
-     top: 15px;
-     left: 20px;
-      cursor: pointer;
-}
-#local{
-    float: left;
-    position: relative;
-    top: 4%;
-    left: 4%;
-    margin-top: 1%;
-    cursor: pointer;
-    list-style: none;
-}

@@ -163,14 +163,14 @@ const pruebas = () => {
 
 document.getElementById("local").addEventListener("click", pruebas);
 
- const presionarTecla = () =>{
- 	let teclaEsc = event.keyCode;
- 	if (teclaEsc == 13){
- 		return pruebas();
- 	}
- }
+const presionarTecla = () => {
+	let teclaEsc = event.keyCode;
+	if (teclaEsc == 13) {
+		return pruebas();
+	}
+}
 
- window.onkeydown = presionarTecla;
+window.onkeydown = presionarTecla;
 
 const MuestraBusca = () => {
 
@@ -238,13 +238,9 @@ btnFilterM.addEventListener("click", modalAdd);
 const closeModal = () => {
 	document.querySelector('#my_modal').classList.add("ocultar");
 }
-const closeFilter = document.getElementsByClassName("close")[0];
+const closeFilter = document.getElementById("close");
 closeFilter.addEventListener("click", closeModal);
 
-const listElement = document.getElementById('alldata');
-const paginationElemnent = document.getElementById('pagination');
-
-let currentPage = 1 ;
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
