@@ -19,7 +19,7 @@
         <!--Header containing logo, title and navigation menu-->
         <header id="header">
             <div id="logo">
-                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" />
+                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" />
                 <h1 id="pokedex">POKEDEX</h1>
             </div>
             <div id="search">
@@ -30,7 +30,7 @@
             </div>
             <div id="nav-drop">
                 <input id="box-icon-menu" type="checkbox" name="menu" />
-                <label for="box-icon-menu"><i id="menu-icon" class="fas fa-ellipsis-h"></i></label>
+                <label id="label-nav" for="box-icon-menu"><i id="menu-icon" class="fas fa-ellipsis-h"></i></label>
                 <nav id="menu">
                     <ul id="ul-menu">
                         <li>
@@ -74,10 +74,41 @@
             <div id="button-filter">
                 <button type="button" id="filter" class="btn-order-filter">
                 FILTER <i class="fas fa-filter"></i>
-            </button>
+                </button>
+                <ul id="ul-filter" class="drop-down">
+                    <li>Tipo</li>
+                    <select name="select">
+                        <option value="" >Bug</option> 
+                        <option value="">Dark</option>
+                        <option value="">Dragon</option>
+                        <option value="">Electric</option>
+                        <option value="">Fairy</option>
+                        <option value="">Fighting</option>
+                        <option value="">Fire</option>
+                        <option value="">Flying</option>
+                        <option value="">Ghost</option>
+                        <option value="">Grass</option>
+                        <option value="">Ground</option>
+                        <option value="">Ice</option>
+                        <option value="">Normal</option>
+                        <option value="">Poison</option>
+                        <option value="">Psychic</option>
+                        <option value="">Rock</option>
+                        <option value="">Steel</option>
+                        <option value="">Water</option>
+                    </select>
+                    <li>Region</li>
+                    <select name="select" id="select-region">
+                        <option selected>Choice a region</option>
+                        <option value="kanto">Kanto</option>
+                        <option value="johto">Johto</option> 
+                    </select>
+                </ul>
+
             </div>
             <!--End button filter-->
         </div>
+
         <!--End of buttons section (order & filter)-->
 
         <!--paragraph with pokemon number on screen-->

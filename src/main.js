@@ -1,9 +1,10 @@
-import order from './data.js'; //pure functions
+import { order } from './data.js'; //pure functions
+import { filter } from './data.js';
 import data from './data/pokemon/pokemon.js'; //All data
+let newData = data.pokemon;
 //Global variable
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8 
-
 //Function to add HTML tags to index with data
 let listPokemon = (num, name, type) => {
     let pokemon = document.createElement('div');
@@ -34,9 +35,9 @@ let listPokemon = (num, name, type) => {
 //get necessary data
 let seePokemon = (x) => {
     for (let i = x; i <= x + count - 1; i++) {
-        let num = data.pokemon[i].num;
-        let name = data.pokemon[i].name;
-        let type = data.pokemon[i].type;
+        let num = newData[i].num;
+        let name = newData[i].name;
+        let type = newData[i].type;
         listPokemon(num, name, type);
     }
 }
@@ -50,35 +51,32 @@ document.getElementById("more").addEventListener("click", () => {
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
 });
-//Event for ORDER BUTTON, select by id for order by num or name
-document.getElementById("order-drop-down").addEventListener("click", (e) => {
-    let selector = e.target; // when you click on the first element -> selector = <li id="num1_N">Top number</li> 
-    if (selector.id == "num1_N") {
-        order.num1_N(data.pokemon);
-    }
-    if (selector.id == "numN_1") {
-        order.numN_1(data.pokemon);
-    }
-    if (selector.id == "nameA_Z") {
-        order.nameA_Z(data.pokemon);
-    }
-    if (selector.id == "nameZ_A") {
-        order.nameZ_A(data.pokemon);
-    }
+//load page
+const restart = () => {
     x = 0;
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
     document.getElementById("count").innerHTML = x + count + " pokemones of 251";
+};
+//Event for ORDER BUTTON, select by id for order by num or name
+document.getElementById("order-drop-down").addEventListener("click", (e) => {
+    let selector = e.target; // when you click on the first element -> selector = <li id="num1_N">Top number</li> 
+    if (selector.id == "num1_N") {
+        order.num1_N(newData);
+    }
+    if (selector.id == "numN_1") {
+        order.numN_1(newData);
+    }
+    if (selector.id == "nameA_Z") {
+        order.nameA_Z(newData);
+    }
+    if (selector.id == "nameZ_A") {
+        order.nameZ_A(newData);
+    }
+    restart();
 });
 
-/*let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
-mediaQueryTablet.addListener(function() {
-    if (mediaQueryTablet.matches) {
-        document.getElementById("header").style.backgroundColor = "red";
-    } else {
-        document.getElementById("header").style.backgroundColor = "yellow";
-    }
-});*/
+//STYLES
 let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
 let checkbox = document.getElementById('box-icon-menu');
 const search = document.getElementById("search");
@@ -94,4 +92,11 @@ window.addEventListener("resize", function() {
         const nodoNav = document.getElementById("nav-drop");
         document.getElementById('header').insertBefore(search, nodoNav);
     }
+});
+
+document.getElementById("select-region").addEventListener('change', () => {
+    let value = document.getElementById("select-region").value;
+    let region = filter.region(data.pokemon, value);
+    newData = region;
+    restart();
 });
