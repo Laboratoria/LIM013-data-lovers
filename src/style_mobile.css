@@ -232,6 +232,11 @@
         padding: 15px 30px;
         line-height: 1.5rem;
     }
+
+    .listElements li {
+        display: list-item;
+        margin: 0 10px;
+    }
 }
 
 /* Estilos de cards data*/

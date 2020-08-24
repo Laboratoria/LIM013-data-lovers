@@ -14,6 +14,7 @@ const bienvenido = () => {
 		${data.map(obtenerPersonajes).join(" ")}`
 }
 
+//Contenidos para el html
 const obtenerPersonajes = (data) => {
 	return `<div class="person">
 		<div class="imagenes">
@@ -121,7 +122,8 @@ const checkboxEs = () => {
 const btnEstado = document.getElementById("btn-estado")
 btnEstado.addEventListener("click", checkboxEs);
 
-//Filtro de especies
+//Filtro de data
+
 const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
@@ -243,11 +245,9 @@ closeFilter.addEventListener("click", closeModal);
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+//Funciones del acordeón
 accordionItemHeaders.forEach(accordionItemHeader => {
 	accordionItemHeader.addEventListener("click", event => {
-
-
-
 		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
 		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
 			currentlyActiveAccordionItemHeader.classList.toggle("active");
@@ -262,7 +262,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		else {
 			accordionItemBody.style.maxHeight = 0;
 		}
-
 	});
 });
 
