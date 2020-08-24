@@ -60,6 +60,7 @@
 
 .menu li{
     border-bottom: 1px solid white;
+    cursor: pointer;
 }
 
 .menu li:last-child{
@@ -84,6 +85,7 @@
     position: absolute;
     top: .9em;
     right: .5em;
+    cursor: pointer;
 }
 
 .menu-open .hamburger{
@@ -319,6 +321,7 @@
     font-weight: 600;
     text-align: left;
     padding: 6px 15px;
+    cursor: pointer;
 }
 
 #orden::after{
@@ -334,7 +337,7 @@
 	top: 0;
 	right: 0px;	
     pointer-events: none;
-    border-left: 1px solid #C4C4C4;;
+    border-left: 1px solid #C4C4C4;
 }
 
 #orden:focus{ outline: none;}
@@ -344,7 +347,7 @@
 }
 
 #letritas{
-    z-index: 1000;
+    z-index: 1;
     border: 1px solid #C4C4C4;
     background: white;
     color: #6A6A6A;
@@ -372,6 +375,7 @@
     width: 42%;
     float: right;
     position: relative;
+    cursor: pointer;
 }
 
 .content-filtro-m::after{
@@ -386,7 +390,7 @@
 	top: 0;
 	right: 0px;	
     pointer-events: none;
-    border-left: 1px solid #C4C4C4;;
+    border-left: 1px solid #C4C4C4;
 }
 
 .btn-filtro-m{
@@ -399,116 +403,10 @@
     height: 30px;
     padding: 6px 15px;
     width: 130px;
-}
-
-.btn-filtro-m:focus{ outline: none;}
-
-/* estilos de modal */
-.btn_expand {	
-    margin-right: 80px;
-    border: 1px solid #C4C4C4;
-    height: 35px;
-    overflow: hidden;
-    width: 180px;
-    display: right;
-    position: relative;
-    background: white;
-    color: #6A6A6A;
-    font-weight: 600;
-    text-align: left;
-    padding: 6px 15px;
-}
-.btn_expand::after {
-    content:url(img/Icon_Artwork.png);
-    color: #459AE2;
-    display: table-cell;
-    padding-top: 7px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    background-color:white;
-    position: absolute;
-    top: 0;
-    right: 0px;	
-    pointer-events: none;
-    border-left: 1px solid #C4C4C4;
-}
-.btn_expandn:focus { 
-    outline: none;
-}
-
-/* estilos de modal */
-.the_modal {
-    color:#6A6A6A;
-    padding-top: 90px;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: white;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-}
-
-/* botón de cerrar el modal*/
-.modal_header {
-    padding: 25px;
-}
-
-#close  {
-    content:url(imagen/icon_close.png);
-    display: table-cell;
-    padding: 20px;
-    text-align: center;
-    background-color:white;
-    float: right;
-}
-
-.title-filter {
-    width: 50%;
-    padding: 20px;
-    color: #459AE2;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.list-btn {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.dropdown_btn {
-    text-align: left;
-    background-color: white;
-    padding: 8px 14px;
-    font-size: 16px;
-    border-bottom: 1px solid #D9D9D9;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    display: block;
     cursor: pointer;
 }
 
-.dropdown_btn::after   {
-    content: url(imagen/icon_arrow_down.png);
-    float: right;
-}
-
-.dropdown_content {
-    display: block;
-}
+.btn-filtro-m:focus{ outline: none;}
 
 /* Estilos de cards de personajes*/
 .container-data{
