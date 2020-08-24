@@ -1,10 +1,11 @@
-
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box;
+}
 body {
-  margin:0;
-  background-image: url('./img/FondoLOL.png');
+  margin: 0;
+  background-image: url("./img/FondoLOL.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -16,13 +17,13 @@ body {
   display: flex;
   margin: auto;
   width: 400px;
-  height: auto; 
+  height: auto;
 }
-.menus{ 
+.menus {
   display: flex;
   justify-content: space-around;
 }
-.logoHome{
+.logoHome {
   margin: auto 0;
   width: auto;
   height: auto;
@@ -30,7 +31,7 @@ body {
   position: relative;
   vertical-align: middle;
 }
-.imgfooter:hover{
+.imgfooter:hover {
   border-radius: 60%;
   box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
@@ -38,46 +39,47 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: #BBA341;
+  background-color: #bba341;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
   width: 68%;
-  margin:1%;
+  margin: 1%;
   border-radius: 25px 0px;
   opacity: 0.8;
   overflow: hidden;
   padding: 0;
   top: 50%;
   left: 20%;
-  height: 65px; 
+  height: 65px;
 }
-.menu-bar a{
+.menu-bar a {
   color: #000000;
-  Text-decoration: none;
+  text-decoration: none;
   line-height: 44px;
   font-size: 35px;
   font-weight: normal;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   font-style: normal;
   vertical-align: top;
   width: 100%;
   margin: 10px;
   text-align: center;
-  text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
 }
 .menu-bar a:hover {
-  color:#BBA341;
+  color: #bba341;
   background-color: #222423;
   background-size: auto;
   border-radius: 25px 0px;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772, 0 0 0.2em #07cbe9;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
+    0 0 0.2em #07cbe9;
 }
 .menu-play {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: rgba(12, 166, 190, 0.85);
-  align-items: center;  
+  align-items: center;
   width: 20%;
   border-radius: 25px 0px;
   opacity: 0.7;
@@ -88,105 +90,109 @@ body {
   height: 65px;
   margin-top: 1%;
 }
-.menu-play a { 
+.menu-play a {
   color: white;
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   font-style: Regular;
   vertical-align: top;
   text-align: center;
   padding: 6%;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772, 0 0 0.2em #07cbe9;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
+    0 0 0.2em #07cbe9;
 }
-.menu-play a:hover{
-  text-shadow:  0.0625rem 0.0625rem 0.5rem black, 0 0 1em black, 0 0 0.2em black;
+.menu-play a:hover {
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em black, 0 0 0.2em black;
 }
 
 /*section home*/
-.home{
-  display:flex;
-  width:100;
+.home {
+  display: flex;
+  width: 100;
 }
 .container-box {
   background-color: rgba(10, 3, 3, 0.404);
   height: auto;
-  max-height: 800px; 
+  max-height: 800px;
   max-width: 800px;
   margin-left: 4%;
-  border: 5px inset #BBA341;
+  border: 5px inset #bba341;
   padding: 1rem 2rem 1rem 2rem;
   overflow: auto;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   border-radius: 0px 20px;
 }
-.box-divider{
-  padding-top:2rem;
+.box-divider {
+  padding-top: 2rem;
   width: 100%;
 }
-.container-box p{
+.container-box p {
   font-size: 22px;
   text-align: justify;
-  color: #EADA9D; 
+  color: #eada9d;
 }
-.container-box a{
+.container-box a {
   color: #5fc2c9;
   text-decoration: none;
-  letter-spacing: .25rem; 
+  letter-spacing: 0.25rem;
 }
-.container-box a:hover{
+.container-box a:hover {
   color: #59e7e0;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772, 0 0 0.2em #07cbe9;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
+    0 0 0.2em #07cbe9;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
 }
-.container-box h2{
+.container-box h2 {
   padding: 1%;
   font-size: 38px;
   text-align: center;
-  color: #EADA9D;
-  font-weight: bold; 
+  color: #eada9d;
+  font-weight: bold;
 }
-.comunidad-nav{
-  text-align: center; 
+.comunidad-nav {
+  text-align: center;
   word-spacing: 1rem;
 }
 
 /*Modo de juego y Video de LOL */
-.modos{
+.modos {
   margin-left: 5%;
-  margin-right: 5%; 
+  margin-right: 5%;
   width: 100%;
 }
 
 /*Seccion slides LOL */
-.mode-play h2{
+.mode-play h2 {
   display: flex;
-  background-color: #BBA341;
-  align-items: normal; 
-  margin:auto;
+  background-color: #bba341;
+  align-items: normal;
+  margin: auto;
   width: 90%;
   top: 80%;
-  border-radius: 0px 25px ;
+  border-radius: 0px 25px;
   padding: 1%;
   justify-content: center;
   right: -4%;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   font-style: normal;
   font-weight: normal;
   color: black;
   position: relative;
   font-size: 25px;
   line-height: 23px;
-  text-align: center; 
-  text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
+  text-align: center;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
   opacity: 0.8;
 }
-.mySlides {display: none;
+.mySlides {
+  display: none;
 }
-img {vertical-align: middle;
+img {
+  vertical-align: middle;
 }
 .slideshow-container {
   max-width: 800px;
@@ -194,19 +200,20 @@ img {vertical-align: middle;
   margin: 1%;
   background-color: rgba(10, 3, 3, 0.404);
   height: auto;
-  border: 5px inset #BBA341;
+  border: 5px inset #bba341;
   overflow: none;
   border-radius: 0px 20px;
   top: 87%;
 }
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: #BBA341;
+  color: #bba341;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -217,14 +224,15 @@ img {vertical-align: middle;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .text {
-  color: #BBA341;
+  color: #bba341;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   font-style: Regular;
   padding: 8px 12px;
   position: relative;
@@ -232,29 +240,32 @@ img {vertical-align: middle;
   width: 100%;
   text-align: center;
 }
-.text:hover{
+.text:hover {
   cursor: pointer;
-  text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
 }
 .numbertext {
-  color:  #BBA341;
+  color: #bba341;
   font-size: 16px;
   padding: 8px 10px;
   position: relative;
   top: 0;
 }
-#dot1,#dot2,#dot3,#dot4 {
+#dot1,
+#dot2,
+#dot3,
+#dot4 {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #BBA341;
+  background-color: #bba341;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .dot:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 /* Fading animation slide*/
 .fade {
@@ -264,103 +275,111 @@ img {vertical-align: middle;
   animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.body-divider{
+.body-divider {
   top: 95%;
   right: 5%;
   width: 100%;
 }
 
 /*Seccion video LOL */
-.lol-video{
-  width:650px;
+.lol-video {
+  width: 650px;
   position: relative;
   margin: 1%;
   background-color: rgba(10, 3, 3, 0.404);
   height: 400px;
-  border: 5px inset #BBA341;
+  border: 5px inset #bba341;
   overflow: auto;
   border-radius: 0px 20px;
   right: 2%;
 }
-.video-container h2{
+.video-container h2 {
   display: flex;
-  background-color: #BBA341;
-  align-items: normal; 
-  margin:auto;
+  background-color: #bba341;
+  align-items: normal;
+  margin: auto;
   width: 90%;
-  border-radius: 0px 25px ;
+  border-radius: 0px 25px;
   padding: 1%;
   justify-content: center;
   right: -4%;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   font-style: normal;
   font-weight: normal;
   color: black;
   position: relative;
   font-size: 25px;
   line-height: 23px;
-  text-align: center; 
-  text-shadow:0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
+  text-align: center;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
   opacity: 0.8;
 }
 
 /*Seccion footer LOL */
-.container-footer{
-  width:100%;
-  margin-top:10px;
+.container-footer {
+  width: 100%;
+  margin-top: 10px;
 }
-.riot{
-    text-align:center;
+.riot {
+  text-align: center;
 }
 #imgriot:hover {
   -webkit-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
   -ms-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
   -moz-box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-  box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;  
+  box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
-footer{
-  width:100%; 
+footer {
+  width: 100%;
   margin-top: 10px;
-  padding-top:10px;
+  padding-top: 10px;
 }
-.footer{
-  display:flex;
-  width:100%;
-  padding:10px;
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 10px;
   justify-content: space-between;
 }
-.left{
+.left {
   align-items: left;
   padding: 1rem;
 }
-.derechos{
-  color:#EADA9D;
+.derechos {
+  color: #eada9d;
   font-size: 25px;
 }
-.left:hover{
-  color:#EADA9D;
+.left:hover {
+  color: #eada9d;
   text-shadow: 0.0625rem 0.0625rem 0.375rem #feb412;
 }
-.redes{
- text-align: right;
- padding: 1rem;
+.redes {
+  text-align: right;
+  padding: 1rem;
 }
-.imgredes:hover{
+.imgredes:hover {
   border-radius: 50%;
   box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
-.imgredes{
+.imgredes {
   width: 3rem;
   height: auto;
 }
-.nav-link{
+.nav-link {
   width: min-content;
 }
 #compartir {
@@ -375,34 +394,67 @@ footer{
   animation-fill-mode: both;
 }
 @keyframes wobble {
-  0% { transform: translateX(0%); } 
-  15% { transform: translateX(-25%) rotate(-5deg); } 
-  30% { transform: translateX(20%) rotate(3deg); } 
-  45% { transform: translateX(-15%) rotate(-3deg); } 
-  60% { transform: translateX(10%) rotate(2deg); }
-  75% { transform: translateX(-5%) rotate(-1deg); }
-  100% { transform: translateX(0%); } 
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
-@-webkit-keyframes wobble { 
-  0% { -webkit-transform: translateX(0%); } 
-  15% { -webkit-transform: translateX(-25%) rotate(-5deg); } 
-  30% { -webkit-transform: translateX(20%) rotate(3deg); } 
-  45% { -webkit-transform: translateX(-15%) rotate(-3deg); } 
-  60% { -webkit-transform: translateX(10%) rotate(2deg); } 
-  75% { -webkit-transform: translateX(-5%) rotate(-1deg); }
-  100% { -webkit-transform: translateX(0%); } 
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
 
 /* Responsive*/
 @media (max-width: 700px) {
-  .title-lol{
-    width: 55%;}
+  .title-lol {
+    width: 55%;
+  }
 }
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
 }
 
 /*segunda pantalla------------------------------------------------------------*/
-.top-second{
+.top-second {
   display: none;
 }
