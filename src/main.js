@@ -13,7 +13,7 @@ pokemonDisplay.innerHTML=`<section class="containerPicture">
 ${data.pokemon.map((picture)=>{
     return `<section class="picture">
     <img class="img" src="${picture.img}">
-    </section>` ;
+    </section>`;
 }).join('')}
 </section>`
 
