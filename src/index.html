@@ -33,7 +33,7 @@
 
   <div id="ctn-bars-search" class="ocultar">
     <div>
-      <img src="imagen/cerca.png" width="20px" id="exit">
+      <img src="imagen/icon_close.png" width="20px" id="exit">
       <img src="imagen/iconArt.png" id="local">
     </div>
     <input type="text" id="inputSeatch" placeholder="Buscar" />
@@ -149,14 +149,21 @@
     <!-- Content Modal filtros mobile -->
     <div id="my_modal" class="the_modal ocultar">
       <div class="content_modal">
-        <span class="close">&times;</span>
-        <ul>
-          <li>Todos</li>
-          <li>Especies</li>
-          <li>Lugar de origen</li>
-          <li>Genero</li>
-          <li>Estado</li>
-        </ul>
+        <span id="close"></span>
+        <h2 class="title-filter">Filtros</h2>
+      </div>
+      <div class="list-btn">
+        <a class="dropdown_btn">Todos</a>
+        <a class="dropdown_btn">Espcies</a>
+        <div class="dropdown_content">
+          <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+          </ul>
+        </div>
+        <a class="dropdown_btn">Lugar de origen</a>
+        <a class="dropdown_btn">Género</a>
+        <a class="dropdown_btn">Estado</a>
       </div>
     </div>
 
