@@ -1,4 +1,4 @@
-const order = {
+export const order = {
     num1_N: function(data) {
         return data.sort((a, b) => {
             if (a.num < b.num) {
@@ -44,4 +44,13 @@ const order = {
         });
     },
 };
-export default order;
+
+export const filter = {
+    region: function(data, value) {
+        let pokemons = data;
+        const pokemonRegion = pokemons.filter(function(pokemon) {
+            return pokemon.generation.name === value;
+        })
+        return pokemonRegion;
+    },
+};

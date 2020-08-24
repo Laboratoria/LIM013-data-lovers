@@ -8,13 +8,13 @@
                 #menu-icon {
                     visibility: visible;
                 }
-                label {
+                #label-nav {
                     display: flex;
                     justify-content: flex-end;
                     margin: 0px 20px;
                     flex-grow: 1;
                 }
-                input:checked~#menu {
+                #box-icon-menu:checked~#menu {
                     display: block;
                 }
                 #nav-drop {
@@ -107,7 +107,7 @@
                     flex-grow: 0;
                     margin-left: 10px;
                 }
-                label {
+                #label-nav {
                     flex-grow: 1;
                     margin: 0px 10px;
                 }
@@ -120,7 +120,7 @@
                 #logo h1 {
                     font-size: 26px;
                 }
-                label {
+                #label-nav {
                     margin: 0px 5px;
                 }
                 .btn-order-filter {

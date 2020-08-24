@@ -47,6 +47,7 @@
 
 #logo img {
     height: 50px;
+    width: 50px;
     margin-right: 20px;
     margin-left: 10px;
 }
@@ -174,24 +175,47 @@ h3 strong {
     cursor: pointer;
 }
 
-#button-order .drop-down {
+.drop-down {
     position: absolute;
-}
-
-#button-order:hover>ul {
-    margin-top: 2px;
     border-radius: 10px;
-    visibility: visible;
     width: 150px;
     border: 1px #e7e7e9 solid;
     background-color: #fff;
+}
+
+#ul-filter {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    width: 250px;
+    margin-left: -100px;
+    height: 200px;
+}
+
+#ul-filter select {
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#ul-filter li {
+    width: 50px;
+    cursor: auto;
+}
+
+#button-order:hover>ul {
+    visibility: visible;
+    width: 150px;
+}
+
+#button-filter:hover>#ul-filter {
+    visibility: visible;
 }
 
 #button-order:hover .fa-caret-down {
     transform: rotate(-180deg);
 }
 
-#button-order ul li {
+.drop-down li {
     height: 30px;
     padding: 4px 8px;
     text-align: left;
@@ -213,8 +237,16 @@ h3 strong {
     border-radius: 8px;
 }
 
-#button-order ul {
+#button-order ul,
+#ul-filter {
     visibility: hidden;
+}
+
+#ul-filter li,
+#ul-filter select {
+    margin-top: 10px;
+    width: 90%;
+    height: 30px;
 }
 
 
