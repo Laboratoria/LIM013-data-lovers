@@ -386,7 +386,42 @@
 .btn-filtro-m:focus{ outline: none;}
 
 /* estilos de modal */
+.btn_expand {	
+    margin-right: 80px;
+    border: 1px solid #C4C4C4;
+    height: 35px;
+    overflow: hidden;
+    width: 180px;
+    display: right;
+    position: relative;
+    background: white;
+    color: #6A6A6A;
+    font-weight: 600;
+    text-align: left;
+    padding: 6px 15px;
+}
+.btn_expand::after {
+    content:url(img/Icon_Artwork.png);
+    color: #459AE2;
+    display: table-cell;
+    padding-top: 7px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    right: 0px;	
+    pointer-events: none;
+    border-left: 1px solid #C4C4C4;
+}
+.btn_expandn:focus { 
+    outline: none;
+}
+
+/* estilos de modal */
 .the_modal {
+    color:#6A6A6A;
     padding-top: 100px;
     position: fixed; 
     z-index: 1; 
@@ -407,19 +442,59 @@
     width: 80%; 
 }
 
-/* Botón cerrar del modal*/
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+/* botón de cerrar el modal*/
+.modal_header {
+    padding: 25px;
+}
+
+.close::after  {
+    content:url(imagen/icon_close.png);
+    color: #459AE2;
+    display: table-cell;
+    padding-top: 80px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color:white;
+    position: absolute;
+    top: 25px;
+    right: 25px;	
+    pointer-events: none;
+}
+
+.title-filter {
+    padding: 20px;
+    color: #459AE2;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.list-btn {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown_btn {
+    text-align: left;
+    background-color: white;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #D9D9D9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: block;
     cursor: pointer;
+}
+
+.dropdown_btn::after   {
+    content: url(imagen/icon_arrow_down.png);
+    float: right;
+}
+
+.dropdown_content {
+    display: block;
 }
 
 /* Estilos de cards de personajes*/
