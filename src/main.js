@@ -6,7 +6,7 @@ const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
 //Traer nodo para manipular el DOM
-let containerMain = document.getElementById("containerMain");
+let pokemonDisplay = document.getElementById("pokemonDisplay");
 //crear dinamicamente elemntos section y asignarle imagen
 //map()=método para recorrer un objeto sin modificar el objeto original
 pokemonDisplay.innerHTML=`<section class="containerPicture">
@@ -19,4 +19,8 @@ ${data.pokemon.map((picture)=>{
 
 //console.log(example, data);
 //console.log(container);
+
+//prueba toogle
+
+//fin prueba toogle
 
