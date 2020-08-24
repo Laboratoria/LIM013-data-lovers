@@ -241,7 +241,10 @@ const closeModal = () => {
 const closeFilter = document.getElementsByClassName("close")[0];
 closeFilter.addEventListener("click", closeModal);
 
+const listElement = document.getElementById('alldata');
+const paginationElemnent = document.getElementById('pagination');
 
+let currentPage = 1 ;
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
