@@ -47,6 +47,8 @@ searchByName.addEventListener("blur", () => {
 });
 
 
+// computeByData(data.pokemon,)
+
 
 
 

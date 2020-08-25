@@ -21,9 +21,9 @@ export const filterByName = (array,name) => {
   return newArray;
 };
 
-//computeData()//
-export const ComputeByItem = (array,stats) => {
-  let newItem = item => item.stats.base-attack + item.stats.base-defense + item.stats.base-stamina:
-  return newItem; 
-};
 
+//computeData()//
+// export const computeByItem = (array,stats) => {
+//   let newItem = item => item.stats.base-attack + item.stats.base-defense + item.stats.base-stamina;
+//   return newItem; 
+// };
