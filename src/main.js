@@ -12,7 +12,6 @@ const showByData = (array) => {
             <img src=${item.img}></img>
             <p>name: ${item.name}</p>
             <p>type: ${item.type}</p>
-            <p>PC: $
             `;  
         const container = document.querySelector("#container");
         container.appendChild(showByItem);
@@ -47,7 +46,7 @@ searchByName.addEventListener("blur", () => {
 });
 
 
-// computeByData(data.pokemon,)
+
 
 
 
