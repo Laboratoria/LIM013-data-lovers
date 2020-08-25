@@ -2,7 +2,7 @@ import order from './data.js';
 import data from './data/lol/lol.js';
 
 const datos = data.data,
-  search = document.querySelector(".search"),
+  filter = document.getElementById("filter"),
   arrayLegends = Object.values(datos);
 
 /*---LISTAR EN EL HTML---*/
@@ -34,7 +34,7 @@ const getLegends = (objLegend) => {
 getLegends(arrayLegends);
 
 /*---FILTRO DE LA DATA---*/
-search.addEventListener('click', (e) => {
+filter.addEventListener('click', (e) => {
   const rol = e.target.id
   
   if (rol == null || rol == '' || rol == 'All') {
@@ -53,6 +53,8 @@ selector.addEventListener("click", (e) => {
   //console.log("prueba",e.target.value);
   if (orderName == "asc") {
     const prueba=order.nameChampionAz(arrayLegends);
+    document.getElementById("legends_container").innerHTML = "";
+    getLegends(prueba)
   }
   else if (orderName == "desc") {
     const prueba=order.nameChampionZa(arrayLegends);
@@ -60,3 +62,11 @@ selector.addEventListener("click", (e) => {
     getLegends(prueba)
   }
 });
+
+
+
+
+
+
+
+/*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
