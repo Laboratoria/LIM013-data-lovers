@@ -320,7 +320,6 @@
     text-align: left;
     padding: 6px 15px;
 }
-
 #orden::after{
     content:"\025be";
     color: #459AE2;
@@ -597,3 +596,42 @@
     font-size: 15px;
 }
 /* Fin de estilos footer*/
+
+
+/* comienzo de css buscador*/
+
+.pagenumbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagenumbers button {
+    width: 50px;
+    height: 50px;
+
+    appearance:none;
+    border:none;
+    outline: none;
+    cursor:pointer;
+
+    background-color: #44aaee;
+
+    margin: 5px;
+    transition: 0.4s;
+
+    color:white;
+    font-size: 18px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagenumbers button:hover {
+    background-color: #44eeaa;
+}
+
+.pagenumbers button.active {
+    background-color: #44eeaa;
+    box-shadow: inset 0px 8px 4px rgba(0, 0, 0, 0.2);
+}
