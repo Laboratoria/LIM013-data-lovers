@@ -201,36 +201,38 @@ border-radius: 0px 5px 5px 0px;
     display:block
 }
 
-.typeContainerbtnGroupClose {
-    width: 100%;
-    height: 66px;
-    background-color: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    display:block
-}
-
-/*.btnGroupOpenTypeDisplay button {
-    /*width: 100%;
-    height: 66px;*/
-    /*float: left;
-    content: "";
-    cursor: pointer;
-    background-color: none; 
-}
-
 .typeButton {
-    font-size: 17px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    width: 60px;
-    height: 40px;
+    display: block;
     padding: 10px;
-    margin-top: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    width: 100px;
+    height: 35px;
+    padding: 30px 0px;
+    margin-top: 25px;
     margin-left: 140px;
     margin-right: 0px;
+    transition: background 0.2s;
+}
+
+.typeButton::after {
+    content: "\25bc";
+    float: right;
+    transform: scale(1.5);
+}
+
+.typeButtonActive {
+    background: transparent;
+}
+
+.typeButtonActive::after {
+    content: "\25b4";
+    
 }
 
 .openTypeButton {
@@ -246,9 +248,14 @@ border-radius: 0px 5px 5px 0px;
 }*/
 
 .typeContainerOpen {
+    overflow: hidden;
+    max-height: 0;
     background-size: 100%;
-    background-color: #18383b;
-    /*border: 1px solid red;*/
+    background: #18383b;
+    transition: max-height 0.2s;
+
+    padding: 0px 0px;
+    font-family: sans-serif;
 }
 
 .typeContainerHeader {
