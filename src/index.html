@@ -43,114 +43,121 @@
             
         </section>
       </header>
-      <!--Toogle example-->
-      <section>
-        
-      </section>
+      
       <!--MAIN contenido principal del body(cuerpo)-->
       <main class="displayContainer">
         <!-- Dark folder: Type menú -->
+        <!--<section class="accordion">
+          <button type="button" class="accordionButton">Expand Context</button>
+          <section class="accordionContent">
+            <p>
+              Hola mundo. jsdcjhdkjdfdhfkjhkjdfhjdhfjdhajknncncjncncjnclakhuryn cmcncjg jhe.
+            </p>
+          </section>
+        </section>-->
         <form action="">
-          <section class="typeContainerClose">
-            <section class="typeContainerbtnGroupClose">
-              <!--button toogle--><p>Button Toogle</p>
+            <section class="typeContainerClose">
+              <button type="button" name="type" id="type" class="typeButton">Type</button>
             </section>
-          <section class="typeContainerOpen">
-            <section class="typeContainerHeader">
-            </section>
-            <section class="typeContainerBody">
-              <section class="typeContainerBodyInner">
-                <section class="typeContainerBodyInnerTitle">
-                  <h2>Pokémon Types</h2>
-                  <hr>
+            <section class="typeContainerOpen">
+              <section class="typeContainerHeader">
+              </section>
+              <section class="typeContainerBody">
+                <section class="typeContainerBodyInner">
+                  <section class="typeContainerBodyInnerTitle">
+                    <h2>Pokémon Types</h2>
+                    <hr>
+                  </section>
+                  <section class="typeContainerBodyInnerTypes">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeNormal" name="pokemonTypeNormal" value="normal">
+                        <label for="pokemonTypeNormal">Normal</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeGrass" name="pokemonTypeGrass" value="grass">
+                        <label for="pokemonTypeGrass">Grass</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeFighting" name="pokemonTypeFighting" value="fighting">
+                        <label for="pokemonTypeFighting">Fighting</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeFlying" name="pokemonTypeFlying" value="flying">
+                        <label for="pokemonTypeFlying">Flying</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeRock" name="pokemonTypeRock" value="rock">
+                        <label for="pokemonTypeRock">Rock</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeDark" name="pokemonTypeDark" value="dark">
+                        <label for="pokemonTypeDark">Dark</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeFire" name="pokemonTypeFire" value="fire">
+                        <label for="pokemonTypeFire">Fire</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeElectric" name="pokemonTypeElectric" value="electric">
+                        <label for="pokemonTypeElectric">Electric</label>
+                      </li> 
+                      <li>
+                        <input type="checkbox" id="pokemonTypePoison" name="pokemonTypePoison" value="poison">
+                        <label for="pokemonTypePoison">Poison</label>
+                      </li>                  
+                      <li>
+                        <input type="checkbox" id="pokemonTypePsychic" name="pokemonTypePsychic" value="psychic">
+                        <label for="pokemonTypePsychic">Psychic</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeGhost" name="pokemonTypeGhost" value="ghost">
+                        <label for="pokemonTypeGhost">Ghost</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeSteel" name="pokemonTypeSteel" value="steel">
+                        <label for="pokemonTypeSteel">Steel</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeWater" name="pokemonTypeWater" value="water">
+                        <label for="pokemonTypeWater">Water</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeIce" name="pokemonTypeIce" value="ice">
+                        <label for="pokemonTypeIce">Ice</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeGround" name="pokemonTypeGround" value="ground">
+                        <label for="pokemonTypeGround">Ground</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeBug" name="pokemonTypeBug" value="bug">
+                        <label for="pokemonTypeBug">Bug</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pokemonTypeDragon" name="pokemonTypeDragon" value="dragon">
+                        <label for="pokemonTypeDragon">Dragon</label>
+                      </li> 
+                      <li>
+                        <input type="checkbox" id="pokemonTypeFairy" name="pokemonTypeFairy" value="fairy">
+                        <label for="pokemonTypeFairy">Fairy</label>
+                      </li>                  
+                    </ul>
+                  </section>
+                  <section class="typeContainerBodyInnerSearchByTypeButtons">
+                    <button type="button" name="searchByTypeButtonReset" id="searchByTypeButtonReset" class="searchByTypeButtonReset">Reset</button> 
+                    <button type="button" name="searchByTypeButtonSearch" id="searchByTypeButtonSearch" class="searchByTypeButtonSearch">Search</button> 
+                  </section>
                 </section>
-                <section class="typeContainerBodyInnerTypes">
-                  <ul>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeNormal" name="pokemonTypeNormal" value="normal">
-                      <label for="pokemonTypeNormal">Normal</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeGrass" name="pokemonTypeGrass" value="grass">
-                      <label for="pokemonTypeGrass">Grass</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeFighting" name="pokemonTypeFighting" value="fighting">
-                      <label for="pokemonTypeFighting">Fighting</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeFlying" name="pokemonTypeFlying" value="flying">
-                      <label for="pokemonTypeFlying">Flying</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeRock" name="pokemonTypeRock" value="rock">
-                      <label for="pokemonTypeRock">Rock</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeDark" name="pokemonTypeDark" value="dark">
-                      <label for="pokemonTypeDark">Dark</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeFire" name="pokemonTypeFire" value="fire">
-                      <label for="pokemonTypeFire">Fire</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeElectric" name="pokemonTypeElectric" value="electric">
-                      <label for="pokemonTypeElectric">Electric</label>
-                    </li> 
-                    <li>
-                      <input type="checkbox" id="pokemonTypePoison" name="pokemonTypePoison" value="poison">
-                      <label for="pokemonTypePoison">Poison</label>
-                    </li>                  
-                    <li>
-                      <input type="checkbox" id="pokemonTypePsychic" name="pokemonTypePsychic" value="psychic">
-                      <label for="pokemonTypePsychic">Psychic</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeGhost" name="pokemonTypeGhost" value="ghost">
-                      <label for="pokemonTypeGhost">Ghost</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeSteel" name="pokemonTypeSteel" value="steel">
-                      <label for="pokemonTypeSteel">Steel</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeWater" name="pokemonTypeWater" value="water">
-                      <label for="pokemonTypeWater">Water</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeIce" name="pokemonTypeIce" value="ice">
-                      <label for="pokemonTypeIce">Ice</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeGround" name="pokemonTypeGround" value="ground">
-                      <label for="pokemonTypeGround">Ground</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeBug" name="pokemonTypeBug" value="bug">
-                      <label for="pokemonTypeBug">Bug</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="pokemonTypeDragon" name="pokemonTypeDragon" value="dragon">
-                      <label for="pokemonTypeDragon">Dragon</label>
-                    </li> 
-                    <li>
-                      <input type="checkbox" id="pokemonTypeFairy" name="pokemonTypeFairy" value="fairy">
-                      <label for="pokemonTypeFairy">Fairy</label>
-                    </li>                  
-                  </ul>
-                </section>
-                <section class="typeContainerBodyInnerSearchByTypeButtons">
-                  <button type="button" name="searchByTypeButtonReset" id="searchByTypeButtonReset" class="searchByTypeButtonReset">Reset</button> 
-                  <button type="button" name="searchByTypeButtonSearch" id="searchByTypeButtonSearch" class="searchByTypeButtonSearch">Search</button> 
+                <section class="typeContainerHide">
+                <!--button toogle--><p>Button Toogle Hide</p>
                 </section>
               </section>
-              <section class="typeContainerHide">
-              <!--button toogle--><p>Button Toogle Hide</p>
-              </section>
-            </section>
-          </section> 
-        </form> 
+            </section> 
+          </form> 
+          <li></li>
+        </section>
+        </section>
         <!--End of new path-->
         <!--Toogle buttons open-->
         <!--<section class="btnGroupOpenTypeDisplay">
@@ -158,37 +165,33 @@
               <button type="button" name="openType" id="openType" class="openTypeButton" ></button>
             </section>--> 
          <!--</section>-->       
-          
-          <li></li>
-           
-          <!--<section class="btnGroupCloseTypeDisplay">
+        <!--<section class="btnGroupCloseTypeDisplay">
             <button type="button" name="type" id="type" class="closeButton">Close</button> 
             <button type="image" name="closeType" id="closeType" class="closeTypeButton"></button> 
           </section>-->
         <!--</section>-->                    
-        </section> 
-      </section>
+        <!--</section> 
+        </section>-->
       <!-- Light folder: Display -->
-      <section class="displayAll">
-        <section class="orderByButtons">
-        <!-- Order by menu -->
-        <section class="orderBy">
-            <button type="image" name="alphaAsc" id="alphaAsc" class="orderByAlphaAscButton"></button>
-            <button type="image" name="alphaDesc" id="alphaDesc" class="orderByAlphaDescButton"></button>
-            <button type="image" name="lessPwr" id="lessPwr" class="orderByLessPwrButton"></button>
-            <button type="image" name="morePwr" id="morePwr" class="orderByMorePwrButton"></button>
+        <section class="displayAll">
+          <section class="orderByButtons">
+          <!-- Order by menu -->
+          <section class="orderBy">
+              <button type="image" name="alphaAsc" id="alphaAsc" class="orderByAlphaAscButton"></button>
+              <button type="image" name="alphaDesc" id="alphaDesc" class="orderByAlphaDescButton"></button>
+              <button type="image" name="lessPwr" id="lessPwr" class="orderByLessPwrButton"></button>
+              <button type="image" name="morePwr" id="morePwr" class="orderByMorePwrButton"></button>
+            </section>
           </section>
         </section>
-      </section>
-      <!-- Order by menu -->
-      <!-- Pokémon display -->
-       <section class="scrollArea" id="scrollArea"> 
+        <!-- Order by menu -->
+        <!-- Pokémon display -->
+        <section class="scrollArea" id="scrollArea"> 
           <section class="pokemonDisplay" id="pokemonDisplay">
 
           </section>             
         </section>
-      </section>
-          
+                  
       </main>
 
     <!-- Pokémon card info -->
@@ -196,14 +199,10 @@
   
     </aside>-->
   <!-- </section>-->
-  <!--Toogle example-->
-  <section>
-     
-  </section>
-  <footer class="footer">
-      <p class="footer1">@POKÉDEX | Developed by: Team 14 | Data-Lovers | Laboratoria</p>
-      <p class="footer2">Legal Notice | Private Policy | Cookies Policy</p>
-    </footer>
+      <footer class="footer">
+        <p class="footer1">@POKÉDEX | Developed by: Team 14 | Data-Lovers | Laboratoria</p>
+        <p class="footer2">Legal Notice | Private Policy | Cookies Policy</p>
+      </footer>
 
     </section>
     <script src="main.js" type="module"></script>
