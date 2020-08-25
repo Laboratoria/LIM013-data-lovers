@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 body {
-    /*solo para mostrar contraste*/
-    background: lightseagreen;
+    background-image: url('https://user-images.githubusercontent.com/55853256/91184100-daa3f700-e6b1-11ea-96b2-62bb82ed786e.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .container {
     width: 100%;
