@@ -5,11 +5,11 @@ const datajs = {
       if (condition[i].checked == true) {
         const dataF = condition[i].getAttribute("value");
         if (condition[i].name == "esp") {
-          if(dataF== "otros"){
-            return data.filter(data => { return data.species === "Vampire"}) && 
-            data.filter(data => { return data.species === "unknown"})
-          }else
-          return data.filter(data => { return data.species === dataF });
+          if (dataF == "otros") {
+            return data.filter(data => { return data.species === "Vampire" }) &&
+              data.filter(data => { return data.species === "unknown" })
+          } else
+            return data.filter(data => { return data.species === dataF });
         } else if (condition[i].name == "orig") {
           return data.filter(data => { return data.origin.name === dataF });
         } else if (condition[i].name == "gener") {
@@ -21,9 +21,9 @@ const datajs = {
     }
   },
 
-  filterName: function (data, texto){
-    
-    return data.filter(data => {  return data.name.toLowerCase().indexOf(texto) >= 0 });
+  filterName: function (data, texto) {
+
+    return data.filter(data => { return data.name.toLowerCase().indexOf(texto) >= 0 });
   },
 
   nameA_Z: function (data) {
