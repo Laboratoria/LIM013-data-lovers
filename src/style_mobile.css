@@ -9,7 +9,7 @@
         position: relative;
         background: transparent;
         float: right;
-        margin-right: 80px;
+        margin-right: 140px;
         margin-top: 20px;
         clip-path: initial;
     } 
@@ -48,14 +48,25 @@
 @media screen and (max-width: 800px){
     #ctn-icon-search{
         position: absolute;
-        right: 87px;
-        height: 38%;
+        right: 80px;
     }
 }
-    
-@media screen and (max-width: 800px){
-    #ctn-bars-search input{
-        width: 80%;
+
+@media screen and (max-width: 650px){
+    #ctn-bars-search{
+        background: #fff;
+    }
+
+    .flex-search{
+        width: 100%;
+    }
+
+    #exit{
+        margin-left: 20px;
+    }
+
+    #local{
+        margin-right: 20px;
     }
 }
   
