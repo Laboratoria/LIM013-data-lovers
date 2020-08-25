@@ -15,7 +15,7 @@ function pokemonTemplate(poke) {
         </div>
         `;
 }
-
+ 
 let root = document.getElementById("root");
 root.innerHTML = `
     <div class = 'pokedex'>${allPokemon.map(pokemonTemplate).join("")}</div>
@@ -41,6 +41,8 @@ list.addEventListener("change", () => {
         </div>
         `;
     }
+
+
     // Mostrar Pokemones filtrados
     root.innerHTML = `
     <div class = 'pokedex'>${typePokemon
@@ -50,7 +52,7 @@ list.addEventListener("change", () => {
 
 });
 
-// Función ordenar
+// Función ordenar pokemones alfabéticamente
 
 /*function orderPokemon(myArray) {
     myArray.sort(function(a,b){
@@ -64,7 +66,6 @@ list.addEventListener("change", () => {
       console.log(myArray);
       return myArray;
   }*/
-
 
 let orderList = document.getElementById("orderList");
  orderList.addEventListener("change", ()=> {
@@ -84,24 +85,15 @@ let orderList = document.getElementById("orderList");
             <p class= 'poke-name'> ${poke.name}</p>    
             </div>
             `;
-
     }
     
     root.innerHTML = `
         <div class = 'pokedex'>${allPokemon.map(pokemonTemplateOrdered).join("")}</div>
         `; 
-
-
-
-
-
-
-
-
-
-
  })
-//Ordena pokemones alfabéticamente
+
+//let rootTop= document.getElementById("rootTop");
+
 
 /**/
 
