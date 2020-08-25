@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-  <title>LOLPEDIA</title>
-  <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <div class="header">
-      <figure>
-        <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
-      </figure>
-      <div class="menus">
-        <div class="logoHome">
-          <a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
-        </div>
-        <div class="menu-bar">
-          <a href="index.html" class="#home">Home</a>
-          <a href="indextop.html">Top 5</a>
-          <a href="#indexcampeon.html">Campeones</a>
-        </div>
-        <div class="menu-play">
-          <a href="https://signup.na.leagueoflegends.com/en/signup/index" target=_blank>Juega ahora</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>LOLPEDIA</title>
+    <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png"/>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header> 
+      <div class="header">
+        <figure>
+          <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
+        </figure>        
+        <div class="menus">
+          <div class="logoHome">
+              <a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
+          </div>
+          <div class="menu-bar">
+            <a href="#home" id="iniciochamp">Home</a>
+            <a href="#topfive" id="topchamp">Top 5</a>
+            <a href="#champion-three" id="filchamp">Campeones</a>  
+          </div>                     
+          <div class="menu-play">
+            <a href="https://signup.na.leagueoflegends.com/en/signup/index" target = _blank >Juega ahora</a>     
+          </div>
         </div>
       </div>
     </div>
@@ -83,55 +82,40 @@
                 <div class="text"><small>Ranked: Modo clasificatorio para subir de nivel.</small></div>
               </span>
             </div>
-            <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <figure>
-                <img src="./img/carril.jpg" alt="carril" width="100%">
-              </figure>
-              <span>
-                <div class="text"><small>Carriles del mapa: TOP, MID, BOT, JUNGLE</small></div>
-              </span>
-            </div>
-            <a class="prev" id="prev">&#10094;</a>
-            <a class="next" id="next">&#10095;</a>
+            <figure>
+              <img src="./img/divider.png" class="body-divider" alt="divider">
+            </figure>                
+          </article>       
+          <article class="video-container"> 
+            <h2>Vídeo instructivo</h2>
+            <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target = _blank ></iframe>
+          </article>
+        </div>      
+      </section> 
+      <section class="top-second" id="topfive">
+        <div class="top-box">
+          <p class="top5">Top Cinco</p>
+          <div class="divisor2">
+          <img src="./img/Emblem_Challenger.png" alt="emblema" id="emblema">
+          <p class="champion"> Campeones</p>
           </div>
-          <div style="text-align:center">
-            <span class="dot" id="dot1"></span>
-            <span class="dot" id="dot2"></span>
-            <span class="dot" id="dot3"></span>
-            <span class="dot" id="dot4"></span>
-          </div>
+        </div>
+        <div class="texto-top5">
+          <p> Si recién estas empezando en este juego, querrás elegir el mejor Campeón posible para destacar entre tus amigos. Para que sea más fácil tomar esta decisión, hemos onstruido esta lista de los 5 mejores Campeones que League of Legends puede ofrecer.</p>
+        </div>  
           <figure>
-            <img src="./img/divider.png" class="body-divider" alt="divider">
-          </figure>
-        </article>
-        <article class="video-container">
-          <h2>Vídeo instructivo</h2>
-          <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target=_blank></iframe>
-        </article>
-      </div>
-    </section>
-    <section class="top-second" id="topfive">
-      <article class="top-box">
-        <h2>Top 5 Campeones</h2>
-        <p> Si recién estas empezando en este juego, querrás elegir el mejor Campeón posible para destacar entre tus
-          amigos. Para que sea más fácil tomar esta decisión, hemos onstruido esta lista de los 5 mejores Campeones que
-          League of Legends puede ofrecer.</p>
-        <figure>
-          <img src="./img/divider.png" class="body-divider" alt="divider">
-        </figure>
-      </article>
-      <div class="top-champions" id="list-top-champions"></div>
-    </section>
-  </main>
-  <footer>
-    <div class="container-footer">
-      <div class="riot">
-        <a href="https://www.riotgames.com/en" target=_blank><img src="./img/Riot_Games_logo.png" id="imgriot"
-            width="120" height=auto></a>
-      </div>
-      <div class="footer">
-        <div class="left">
+            <img src="./img/divider.png" class="body-divider" alt="divider"> 
+          </figure>                   
+        <div class="top-champions" id="list-top-champions"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-footer">
+        <div class="riot">
+          <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" id="imgriot" width="120" height=auto></a>
+        </div>
+        <div class="footer">
+         <div class="left">
           <p class="derechos">© 2020 |Todos los derechos reservados</p>
         </div>
         <div class="redes">
@@ -144,10 +128,9 @@
               class="imgredes"></a>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-<script src="data/lol/lol.js" type="module"></script>
-<script src="main.js"></script>
-
+    </footer>
+  </body>
+  <script src="data/lol/lol.js" type="module"></script>
+  <script src="main.js"></script>
+  <script src="slide.js"></script>
 </html>
