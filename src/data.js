@@ -1,19 +1,29 @@
 // estas funciones son de ejemplo
 
-export const filterByType = (array,type) => {
-  let newArray = array.filter((x) => x.type.includes(type));
+//filterData(data, condition)//
+export const filterByType = (array,type) => { 
+  let newArray = array.filter(item => item.type.includes(type));
   return newArray;
 };
 
-export const sortByName = (array,value) => {
+//sortData(data, sortBy, sortOrder)//
+export const sortByName = (array,condition) => {
   let newArray = array.sort((a,b) => a.name>b.name ? 1:-1);
-  if ( value == "2" ) {array.sort((a,b) => b.name>a.name ? 1:-1);}
-  if ( value == "3" ) {array.sort((a,b) => a.num-b.num);} 
-  if ( value == "4" ) {array.sort((a,b) => b.num-a.num);}
+  if ( condition == "descendente" ) {array.sort((a,b) => b.name>a.name ? 1:-1);}
+  if ( condition == "menor-mayor" ) {array.sort((a,b) => a.num-b.num);} 
+  if ( condition == "mayor-menor" ) {array.sort((a,b) => b.num-a.num);}
   return newArray;
 };
 
-export const findByName = () => {
-  return 'OMG';
+//filterData(data, condition)//
+export const filterByName = (array,name) => {
+  let newArray = array.filter(item => item.name.includes(name));
+  return newArray;
+};
+
+//computeData()//
+export const ComputeByItem = (array,stats) => {
+  let newItem = item => item.stats.base-attack + item.stats.base-defense + item.stats.base-stamina:
+  return newItem; 
 };
 

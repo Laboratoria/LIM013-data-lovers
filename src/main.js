@@ -1,39 +1,52 @@
-import { filterByType, sortByName, findByName } from './data.js';
+import { filterByType, sortByName, filterByName } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
-function showPokemon(item){
-    const showByItem = document.createElement("div");
-    showByItem.classList.add("elemento");
-    showByItem.innerHTML=`
-        <p>#${item.num}</p>
-        <img src=${item.img}></img>
-        <p>name: ${item.name}</p>
-        <p>type: ${item.type}</p>
-        `
-    const container = document.querySelector("#container")
-    container.appendChild(showByItem);
-    return showByItem;
-}
+const showByData = (array) => {
+    container.innerHTML="";    
+    array.forEach((item) => {
+        const showByItem = document.createElement("div");
+        showByItem.classList.add("elemento");
+        showByItem.innerHTML=`
+            <p>#${item.num}</p>
+            <img src=${item.img}></img>
+            <p>name: ${item.name}</p>
+            <p>type: ${item.type}</p>
+            <p>PC: $
+            `;  
+        const container = document.querySelector("#container");
+        container.appendChild(showByItem);
+    });
+};
 
-//selectByName//
+//inicializando//
+showByData(data.pokemon);
+
+//sortByName//
 const selectByName = document.querySelector("#selectByName");
-selectByName.addEventListener("change", chosenByName);
-
-function chosenByName(){
+selectByName.addEventListener("change", () => {
     const showByName = selectByName.value;
-    const showListName = (sortByName(data.pokemon,showByName));
-    return showListName.forEach(showPokemon);
-}
+    const showListName = sortByName(data.pokemon,showByName);
+    return showByData(showListName);
+});
 
-
-// selectByType//
+// filterByType//
 const selectByType = document.querySelector("#selectByType");
-selectByType.addEventListener("change", chosenByType);
-
-function chosenByType() {
+selectByType.addEventListener("change", () => {
     const showByType = selectByType.value;
-    const showListType = (filterByType(data.pokemon,showByType));
-    return showListType.forEach(showPokemon);
-}
-    
+    const showListType = filterByType(data.pokemon,showByType);
+    showByData(showListType);
+});
+
+// filterByName//
+const searchByName = document.querySelector("#searchByName");
+searchByName.addEventListener("blur", () => {
+    const showForName = searchByName.value;
+    const showCardName = filterByName(data.pokemon,showForName);
+    showByData(showCardName); 
+});
+
+
+
+
+
