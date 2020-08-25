@@ -52,12 +52,21 @@ selector.addEventListener("click", (e) => {
   const orderName = e.target.value;
   //console.log("prueba",e.target.value);
   if (orderName == "asc") {
-    const prueba = order.nameChampionAz(arrayLegends);
+    const prueba=order.nameChampionAz(arrayLegends);
     document.getElementById("legends_container").innerHTML = "";
     getLegends(prueba)
-  } else if (orderName == "desc") {
-    const prueba = order.nameChampionZa(arrayLegends);
+  }
+  else if (orderName == "desc") {
+    const prueba=order.nameChampionZa(arrayLegends);
     document.getElementById("legends_container").innerHTML = "";
     getLegends(prueba)
   }
 });
+
+
+
+
+
+
+
+/*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/

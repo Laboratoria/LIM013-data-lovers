@@ -18,9 +18,10 @@ const order = {
         }
         return 0;
       });
-    //console.log("result", result)
-    return result
-  },
+
+      //console.log("result", result)
+      return result
+    },
 
   //ordenar nombres de Z a A
   nameChampionZa: function (data) {
@@ -32,9 +33,10 @@ const order = {
         if (a.name < b.name) {
           return -1;
         }
-        return 0;
+        return 0; 
+    });
+    //console.log("result",result)
       });
-    //console.log("result", result)
     return result
   },
 };

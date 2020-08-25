@@ -1,16 +1,16 @@
 import order from '../src/data.js';
 
+
 describe('Filtro del Array de Legend', () => {
   it('is a function', () => {
     expect(typeof order.filterLegend).toBe('function');
   });
 
   it('returns `Aatrox`', () => {
-    const filter =[{name:"Aatrox",tags:"Mage"},{name:"Ahri",tags:"Assassin"}]
-    const resultFilter=[{name:"Aatrox",tags:"Mage"}]
+    const filter =[{name:'Aatrox',tags:'Mage'},{name:'Ahri',tags:'Assassin'}];
+    const resultFilter=[{name:"Aatrox",tags:"Mage"}];
     expect(order.filterLegend(filter, "Mage")).toEqual(resultFilter);
   });
-  
 });
 
 
@@ -40,4 +40,31 @@ describe('Orden de A-Z', () => {
 });
 
 
+describe('ordenar de la Z-A',() =>{
+  it('it a function nameChampionZa',()=>{
+    expect(typeof order.nameChampionZa).toBe('function');
+  });
+
+  it('return`Camila, Belen, Ana`',()=>{
+    const data=[{name: 'Belen'},{name:'Camila'},{name:'Ana'}];
+    const dataZa=[{name:'Camila'},{name:'Belen'},{name:'Ana'}];
+    expect(order.nameChampionZa(data)).toEqual(dataZa);
+  });
+  
+});
+
+
+
+/*describe('operaciones', 
+  it('function sumar', () => 
+    expect(a+b).toBe(z);
+});
+ it('returns `example`', () => {
+    expect(example()).toBe('example');
+  });
+});
+
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4);
+});
 
