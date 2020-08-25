@@ -306,8 +306,8 @@ btnFilterM.addEventListener("click", modalAdd);
 const closeModal = () => {
 	document.querySelector('#my_modal').classList.add("ocultar");
 }
-//const closeFilter = document.getElementById("close");
-//closeFilter.addEventListener("click", closeModal);
+const closeFilter = document.getElementById("close");
+closeFilter.addEventListener("click", closeModal);
 
 
 	
