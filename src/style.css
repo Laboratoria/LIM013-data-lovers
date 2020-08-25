@@ -562,7 +562,7 @@ input[type="checkbox"]:checked + label {
     color: white;
 }
 
-/*distribución de pokemones*/
+/*distribución de pokemones display principal*/
 .containerPicture{
     display: flex;
     flex-flow: row wrap;
@@ -583,8 +583,26 @@ input[type="checkbox"]:checked + label {
     width:130px;
     height:130px;
 }
+.essentialInformation{
+    display: none;
+}
 
-/*prueba toogle*/
+/***************informacion principal de pokemones*******************/
+.numPok{
+/*numero de pokemon*/
+}
+.namePok{
+/*nombre de pokemon*/
+}
+.grass{
+/*tipo 1 de pokemon*/
+}
+.poison{
+/*tipo 2 de pokemon*/
+}
+.etc{
+/*boton de ver mas pokemon*/ 
+}
 
-/*End of prueba toogle*/
+
 
