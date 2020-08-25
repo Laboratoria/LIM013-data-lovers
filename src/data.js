@@ -16,7 +16,7 @@ export const orderPokemonUpward = (myArray) => {
         return 0;
     });
 
-    console.log(myArray);
+    //console.log(myArray);
     return myArray;
 };
 
@@ -29,11 +29,9 @@ export const orderPokemonDownward = (myArray) => {
         return 0;
     });
 
-    console.log(myArray);
+    //console.log(myArray);
     return myArray;
 };
-
-
 
 
 export const anotherExample = () => {
