@@ -141,6 +141,30 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 	}
 }
 
+const botonesFiltrosM = document.querySelector("#accordions").children;
+const contentUlM = document.getElementById("accordions");
+const inputNameM = contentUlM.getElementsByTagName("input");
+const btnFM = () => {
+	const filtroDataM = datajs.filterSpecies(data, inputNameM);
+	document.getElementById("alldata").innerHTML =
+		`<h1 class="app-title">Total de Personajes(${filtroDataM.length})</h1>
+		${filtroDataM.map(obtenerPersonajes).join(" ")}`
+	document.querySelector('#my_modal').classList.add("ocultar");
+}
+
+for (let i = 0; i < botonesFiltrosM.length; i++) {
+	const divGenM = botonesFiltrosM[i].children;
+	for (let j = 0; j < divGenM.length; j++) {
+		const divContM = divGenM[j].children;
+		for (let l = 0; l < divContM.length; l++) {
+			const inputsFiltrosM = divContM[l].children;
+			for (let k = 0; k < inputsFiltrosM.length; k++) {
+				inputsFiltrosM[k].addEventListener("click", btnFM);
+			}
+		}
+	}
+}
+
 //Declarando variables
 let contenBus = document.getElementById('ctn-bars-search');
 const coverBus = document.getElementById("cover-ctn-search");
@@ -262,6 +286,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		else {
 			accordionItemBody.style.maxHeight = 0;
 		}
+		resetRadioButtons("esp");
+		resetRadioButtons("orig");
+		resetRadioButtons("gener");
+		resetRadioButtons("estd");
 	});
 });
 

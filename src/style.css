@@ -277,6 +277,10 @@
     margin: 0 10px;
 }
 
+.listElements label {
+    margin-left: 10px;
+}
+
 .contentItem {
     position: relative;
     padding-left: 35px;
