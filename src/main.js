@@ -17,12 +17,13 @@ ${data.pokemon.map((dataPokemon)=>{
     <section class="essentialInformation">
     <p class="numPok">${dataPokemon.num}</p>
     <p class="namePok">${dataPokemon.name}</p> 
-    <p class="typePok1">${dataPokemon.type.join('</p><p class="typePok2">')}</p>
+    <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p><p class="${dataPokemon.type[1]}">`)}</p>
     <button class="morePok">Ver más</button>
     </section>
     </section>`;
 }).join('')}
 </section>`;
+
 
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
 const showEssential = document.querySelectorAll('.picture');

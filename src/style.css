@@ -594,13 +594,13 @@ input[type="checkbox"]:checked + label {
 .namePok{
 /*nombre de pokemon*/
 }
-.typePok1{
+.grass{
 /*tipo 1 de pokemon*/
 }
-.typePok2{
+.poison{
 /*tipo 2 de pokemon*/
 }
-.morePok{
+.etc{
 /*boton de ver mas pokemon*/ 
 }
 
