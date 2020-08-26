@@ -304,7 +304,6 @@ closeFilter.addEventListener("click", closeModal);
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 //Funciones del acordeón
-
 accordionItemHeaders.forEach(accordionItemHeader => {
 	accordionItemHeader.addEventListener("click", event => {
 		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");

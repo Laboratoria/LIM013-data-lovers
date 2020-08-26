@@ -11,14 +11,6 @@ describe('datajs', () => {
   });
 });
 
-
-
-
-
-
-
-
-
 /*describe('datajs.filterSpecies', () => {
   it('is a function', () => {
     expect(typeof data.filterSpecies).toBe('function');
