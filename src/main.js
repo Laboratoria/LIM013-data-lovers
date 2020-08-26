@@ -240,7 +240,6 @@ const pruebas = () => {
 
 	if (texto != "") {
 		let textoMin = texto.toLowerCase();
-		console.log(textoMin);
 		let filternames = datajs.filterName(data, textoMin);
 		displayList(filternames, listElement, rows, currentPage);
 		setupagination(filternames, paginationElemnent, rows);
@@ -266,7 +265,6 @@ const letras = () => {
 document.getElementById("orden").addEventListener("click", letras);
 
 const acenA_Z = () => {
-	console.log("entro");
 	datajs.nameA_Z(data);
 	document.getElementById('alldata').innerHTML = " ";
 	displayList(data, listElement, rows, currentPage);
@@ -277,7 +275,6 @@ const acenA_Z = () => {
 document.getElementById("bos-1").addEventListener("click", acenA_Z);
 
 const acenZ_A = () => {
-	console.log("entro22");
 	datajs.nameZ_A(data);
 	document.getElementById('alldata').innerHTML = " ";
 	displayList(data, listElement, rows, currentPage);
@@ -305,7 +302,7 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
 
 //Funciones del acordeón
 accordionItemHeaders.forEach(accordionItemHeader => {
-	accordionItemHeader.addEventListener("click", event => {
+	accordionItemHeader.addEventListener("click", function(){
 		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
 		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
 			currentlyActiveAccordionItemHeader.classList.toggle("active");
