@@ -23,28 +23,19 @@ export const filterByName = (array,name) => {
 
 //computeStats(data)
 export const computeByStats = (array) => {
-  let newItem = array.reduce((a,b) => a + b);
+  let newItem = array.reduce((a,b) => parseInt(a) + parseInt(b));
   return newItem;
 };
  
 
-// array.forEach((item) => {
-//   array.push(item.pc)
-//     candy.push(element.candy_count)
-//   }
-// });
+
+
 
 // var arreglo = [4,2,5,6,77,844,432]; //Con este arreglo trabajaremos
 // var sumatoria = arreglo.reduce(function(acumulador, siguienteValor){
 //   return acumulador + siguienteValor;
 // }, 0);
 
-// var suma = 0;
-
-// for(var x = 0; x < arreglo.length; x++){
-//   suma += arreglo[x];
-// }
-// var promedio = suma / arreglo.length;
 
 
 // var arreglo = [

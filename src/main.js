@@ -1,10 +1,17 @@
 import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+const container = document.querySelector("#container");
+const searchByName = document.querySelector("#searchByName");
+const selectByName = document.querySelector("#selectByName");
+const selectByType = document.querySelector("#selectByType");
+
 
 const showByData = (array) => {
     container.innerHTML="";    
+
     array.forEach((item, index, array) => {
+        const pc = computeByStats(Object.values(item.stats));
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
         showByItem.innerHTML=`
@@ -12,38 +19,39 @@ const showByData = (array) => {
             <img src=${item.img}></img>
             <p>name: ${item.name}</p>
             <p>type: ${item.type}</p>
-            `
-            var pc=parseInt(item.stats["base-attack"]) 
-            +parseInt(item.stats["base-defense"])+parseInt(item.stats["base-stamina"]);
-            console.log(pc);
-
-
-        const container = document.querySelector("#container");
+            `       
+            // <p>resisntant: ${item.resistant}</p>
+            // <p>waknesses: ${item.weaknesses}</p>
+            // <p>attack: ${item.stats["base-attack"]}
+            // <p>defense: ${item.stats["base-defense"]}
+            // <p>stamina: ${item.stats["base-stamina"]}
+            // <p>PC: ${pc};
         container.appendChild(showByItem);
-    });
-};
 
+        showByItem.addEventListener("click", () => {
+            const showForItem = document.createElement("div");
+            showForItem.classList.add("elemento");
+            // showForItem.style.display="block";
+            showForItem.innerHTML= `
+                <span>x</span>
+                <p>#${item.num}</p>
+                <img src=${item.img}></img>
+                <p>name: ${item.name}</p>
+                <p>type: ${item.type}</p>
+                `
+            showByItem.appendChild(showForItem);
+            
+            showForItem.addEventListener("click", () => {
+                showByItem.inneHTML="";
+            });
+        });
+    });     
+}
+ 
 //inicializando//
 showByData(data.pokemon);
 
-//sortByName//
-const selectByName = document.querySelector("#selectByName");
-selectByName.addEventListener("change", () => {
-    const showByName = selectByName.value;
-    const showListName = sortByName(data.pokemon,showByName);
-    return showByData(showListName);
-});
-
-// filterByType//
-const selectByType = document.querySelector("#selectByType");
-selectByType.addEventListener("change", () => {
-    const showByType = selectByType.value;
-    const showListType = filterByType(data.pokemon,showByType);
-    showByData(showListType);
-});
-
 // filterByName//
-const searchByName = document.querySelector("#searchByName");
 searchByName.addEventListener("blur", () => {
     const showForName = searchByName.value;
     const showCardName = filterByName(data.pokemon,showForName);
@@ -51,17 +59,19 @@ searchByName.addEventListener("blur", () => {
 });
 
 
-// console.log(data.pokemon[0].name);
-// console.log(data.pokemon[0].stats);
-// console.log(Object.keys(data.pokemon[0].stats));
-// console.log(Object.values(data.pokemon[0].stats)[0]);
+//sortByName//
+selectByName.addEventListener("change", () => {
+    const showByName = selectByName.value;
+    const showListName = sortByName(data.pokemon,showByName);
+    return showByData(showListName);
+});
 
-// let suma = 
-// parseInt(Object.values(data.pokemon[0].stats[0])+ 
-// parseInt(Object.values(data.pokemon[0].stats)[1])+
-// parseInt(Object.values(data.pokemon[0].stats)[2]);
-// console.log(suma);
 
-// var lego = [1,2,3];
-// console.log(sumaByStats(lego));
+// filterByType//
+selectByType.addEventListener("change", () => {
+    const showByType = selectByType.value;
+    const showListType = filterByType(data.pokemon,showByType);
+    showByData(showListType);
+});
+
 
