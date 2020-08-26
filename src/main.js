@@ -57,16 +57,69 @@ selector.addEventListener("click", (e) => {
   const orderName = e.target.value;
   //console.log("prueba",e.target.value);
   if (orderName == "asc") {
-    const prueba=order.nameChampionAz(arrayLegends);
+    const prueba = order.nameChampionAz(arrayLegends);
     document.getElementById("legends_container").innerHTML = "";
     getLegends(prueba)
-  }
-  else if (orderName == "desc") {
-    const prueba=order.nameChampionZa(arrayLegends);
+  } else if (orderName == "desc") {
+    const prueba = order.nameChampionZa(arrayLegends);
     document.getElementById("legends_container").innerHTML = "";
     getLegends(prueba)
   }
 });
+
+/*BUSCADOR */
+const inputSearch = document.querySelector('#inputSearch'),
+  result = document.querySelector('#legends_container');
+
+const search = () => {
+
+  result.innerHTML = '';
+  const texto = inputSearch.value.toLowerCase();
+
+  for (let legend of arrayLegends) {
+    let nombre = legend.name.toLowerCase()
+    if (nombre.indexOf(texto) != -1) {
+
+      result.innerHTML +=
+        `<div class="legends">
+        <img class="img-container" src="${legend.splash}" alt="">
+        <div class="name">${legend.name}</div>
+      </div>`
+    }
+  }
+
+  if (result.innerHTML == '') {
+    result.innerHTML +=
+      `<div class="legends">
+      <img class="img-container" src="./imagenes/notFound.gif" alt="">
+      <div class="name">Not Found</div>
+    </div>`
+  }
+}
+
+inputSearch.addEventListener('keyup', search)
+
+/*ESTADISTICA SELECT */
+const legend01 = document.querySelector('#select01')
+console.log('legen01', legend01)
+for (let i = 0; i < arrayLegends.length; i++) {
+  let option = document.createElement('option');
+  option.value = arrayLegends[i].name;
+  option.innerText = arrayLegends[i].name;
+  legend01.appendChild((option))
+}
+
+const legend02 = document.querySelector('#select01')
+console.log('legen01', legend01)
+for (let i = 0; i < arrayLegends.length; i++) {
+  let option = document.createElement('option');
+  option.value = arrayLegends[i].name;
+  option.innerText = arrayLegends[i].name;
+  legend02.appendChild((option))
+}
+
+
+
 
 
 
@@ -77,20 +130,17 @@ selector.addEventListener("click", (e) => {
 /*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
 //const reducer = (acumulador, valorActual)=> nuevoAcumulador
 //ejecutando función con array vacío
-const plano =arrayLegends.reduce((acc, el)=> acc.concat(el), [])
+const plano = arrayLegends.reduce((acc, el) => acc.concat(el), [])
 //console.log(plano);
 //const indexed= (arrayLegends[0].stats).reduce((acc, el) => ({
- // []
+// []
 //}));
 console.log(arrayLegends);
-const level=1;
+const level = 1;
 
-const estadisticas = arrayLegends.reduce(function(acc, el){
-  if(level ===1){
-    return acc,(el.stats.hpperlevel *1);
+const estadisticas = arrayLegends.reduce(function (acc, el) {
+  if (level === 1) {
+    return acc, (el.stats.hpperlevel * 1);
   }
-},0)
+}, 0)
 console.log(estadisticas);
-
-
-
