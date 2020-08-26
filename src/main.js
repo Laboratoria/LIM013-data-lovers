@@ -22,6 +22,7 @@ const obtenerPersonajes = (data) => {
 		</div>`
 }
 
+//Funciones de la paginación
 const displayList = (items, wrapper, rows_per_page, page) => {
 
 	wrapper.innerHTML = '<h1 class="app-title">Total de Personajes(' + items.length + ')</h1>';
@@ -66,6 +67,7 @@ const setupagination = (items, wrapper, rows_per_page) => {
 	}
 }
 
+//Funciones de botón de inicio
 const bienvenido = () => {
 	document.querySelector('#conter').classList.add("ocultar");
 	document.querySelector('#contenido').classList.remove("ocultar");
@@ -77,7 +79,6 @@ const bienvenido = () => {
 	setupagination(data, paginationElemnent, rows);
 }
 
-//Botón de inicio
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
 btnIngresar.textContent = "Ingresar";
@@ -206,34 +207,10 @@ for (let i = 0; i < botonesFiltrosM.length; i++) {
 	}
 }
 
-//Declarando variables
+//Función de buscar
 let contenBus = document.getElementById('ctn-bars-search');
 const coverBus = document.getElementById("cover-ctn-search");
 const inputSeatch = document.getElementById('inputSeatch');
-
-const pruebas = () => {
-	let texto = document.getElementById('inputSeatch');
-	texto = texto.value.replace(/ /g, "");
-
-	if (texto != "") {
-		let textoMin = texto.toLowerCase();
-		console.log(textoMin);
-		let filternames = datajs.filterName(data, textoMin);
-		displayList(filternames, listElement, rows, currentPage);
-		setupagination(filternames, paginationElemnent, rows);
-	}
-}
-
-document.getElementById("local").addEventListener("click", pruebas);
-
-const presionarTecla = () => {
-	let teclaEsc = event.keyCode;
-	if (teclaEsc == 13) {
-		return pruebas();
-	}
-}
-
-window.onkeydown = presionarTecla;
 
 const MuestraBusca = () => {
 
@@ -258,6 +235,31 @@ const salida2 = () => {
 }
 
 document.getElementById("exit").addEventListener("click", salida2);
+
+const pruebas = () => {
+	let texto = document.getElementById('inputSeatch');
+	texto = texto.value.replace(/ /g, "");
+
+	if (texto != "") {
+		let textoMin = texto.toLowerCase();
+		console.log(textoMin);
+		let filternames = datajs.filterName(data, textoMin);
+		displayList(filternames, listElement, rows, currentPage);
+		setupagination(filternames, paginationElemnent, rows);
+		ocultaBusca()
+	}
+}
+
+document.getElementById("local").addEventListener("click", pruebas);
+
+const presionarTecla = () => {
+	let teclaEsc = event.keyCode;
+	if (teclaEsc == 13) {
+		return pruebas() && ocultaBusca();
+	}
+}
+
+window.onkeydown = presionarTecla;
 
 const letras = () => {
 	document.querySelector('#letritas').classList.remove("ocultar");
@@ -311,7 +313,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 			currentlyActiveAccordionItemHeader.classList.toggle("active");
 			currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
 		}
-    
+
 		accordionItemHeader.classList.toggle("active");
 		const accordionItemBody = accordionItemHeader.nextElementSibling;
 		if (accordionItemHeader.classList.contains("active")) {

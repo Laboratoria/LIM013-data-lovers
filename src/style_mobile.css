@@ -1,5 +1,5 @@
 /* Inicio de estilos de header */
-@media (min-width:800px){
+@media screen and (min-width:800px){
     .menu-toggle{
         display: none;
     } 
@@ -38,14 +38,12 @@
     }
 }
 
-@media (max-width:800px){
+@media screen and (max-width:800px){
     .logo{
         margin: 0px 0px 0px 20px;
-    }
-}
+    }   
 
-/*buscador de contenido*/
-@media screen and (max-width: 800px){
+    /*buscador de contenido*/  
     #ctn-icon-search{
         position: absolute;
         right: 80px;
@@ -72,18 +70,7 @@
   
 /* Fin de estilos de header */
 
-/* Inicio de estilos pantalla 1 */
-@media (max-width: 700px){
-    .btn-i button{
-      position:relative;
-      left: 30%;
-      top:70%;
-       padding: 5px 9px;
-       margin-top: 100px;
-    }
-}
-
-@media (min-width:700px) {
+@media screen and (min-width:700px) {
     .cajaPri{
         width: 500px;
         height: 500px;
@@ -94,9 +81,14 @@
         left: 50%;
         top:30%;
     }
+
+    /* Modal de filtros*/
+    .the_modal {
+        display: none;
+    }
 }
     
-@media (min-width:1024px) {
+@media screen and (min-width:1024px) {
     .cajaPri{
         width: 500px;
         height: 500px;
@@ -104,12 +96,19 @@
         background-position: center;
         text-align: center;   
     }
-}  
-/* Fin de estilos pantalla 1 */
+}
 
-/* Inicio de estilos pantalla 2 */
-/* Estilos ordenar por y filtros mobile*/
-@media (max-width:700px){
+@media screen and (max-width:700px){
+    /* Estilos botón de inicio*/
+    .btn-i button{
+      position:relative;
+      left: 30%;
+      top:70%;
+      padding: 5px 9px;
+      margin-top: 100px;
+    }
+
+    /* Estilos ordenar por y filtros mobile*/
     .btn-controls{
         display: none;
     }
@@ -142,16 +141,17 @@
         width: 42%;
         left: 20px;
     }
-}
 
-/* Modal de filtros*/
-@media (min-width:700px){
-    .the_modal {
-        display: none;
+    /* Estilos de cards data*/
+    .alldata{
+        margin: 10px;
     }
-}
 
-@media (max-width:700px){
+    .person{
+        margin:15px 10px;
+    }
+
+    /* Modal de filtros*/
     .the_modal {
         color:#6A6A6A;
         padding-top: 90px;
@@ -251,18 +251,7 @@
 }
 
 /* Estilos de cards data*/
-@media (max-width:700px){
-    .alldata{
-        margin: 10px;
-    }
-
-    .person{
-        margin:15px 10px;
-      }
-}
-
-
-@media (max-width:750px){
+@media screen and (max-width:750px){
     .alldata{
         margin: 10px;
     }
@@ -296,4 +285,3 @@
         font-size: 13px;
     }
 }
-/* Fin de estilos pantalla 2 */
