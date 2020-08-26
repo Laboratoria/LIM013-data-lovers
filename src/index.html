@@ -16,14 +16,14 @@
         <header>
             <nav>
                 <div class="hamb-menu" id="hamb-menu">
-                    <img src="images/hamb-menu.png" alt="">
+                    <img src="images/hamb_menu.png" alt="">
                 </div>
                 <div class="title">
                     <h1>CHARACTERS</h1>
                 </div>
                 <form>
-                    <input type="text" class="search-bar" id="search-bar" placeholder="Search your character">
-                    <button id="search-btn"><img src="images/search_icon.svg" alt=""></button>
+                    <!-- <input type="text" class="search-bar" id="search-bar" placeholder="Search your character"> -->
+                    <a href="#"><img src="images/search_icon.png" alt=""></a>
                 </form>
                 <div class="more-icon" id="more-icon">
                     <a href="#"><img src="images/more_menu.png" alt=""></a>
@@ -34,45 +34,46 @@
                 <button id="species" class="active">SPECIE</button>
                 <button id="gender" class="active">GENDER</button>
                 <button id="status" class="active">STATUS</button>
+                <button id="order" class="active">ORDER</button>
             </div>
         
             <div id="listSpecies" class="flex-container hide">
-                <button id="human">Human</button>
-                <button id="alien">Alien</button>
-                <button id="humanoid">Humanoid</button>
-                <button id="animal">Animal</button>
-                <button id="mytholog">Mythological Creature</button>
-                <button id="robot">Robot</button>
-                <button id="unknownSpecie">Unknown</button>
-                <button id="cronenberg">Cronenberg</button>
-                <button id="poopybutthole">Poopybutthole</button>
-                <button id="disease">Disease</button>
+                <button id="human">HUMAN</button>
+                <button id="alien">ALIEN</button>
+                <button id="humanoid">HUMANOID</button>
+                <button id="animal">ANIMAL</button>
+                <button id="mytholog">MYTHOLOGICAL</button>
+                <button id="robot">ROBOT</button>
+                <button id="unknownSpecie">UNKNOWN</button>
+                <button id="cronenberg">CRONENBERG</button>
+                <button id="poopybutthole">POOPYBUTHOLE</button>
+                <button id="disease">DISEASE</button>
             </div>
 
             <div id="listGender" class="flex-container hide">
-                <button id="male">Male</button>
-                <button id="female">Female</button>
-                <button id="genderless">Genderless</button>
-                <button id="unknownGender">Unknown</button>
+                <button id="male">MALE</button>
+                <button id="female">FEMALE</button>
+                <button id="genderless">GENDERLESS</button>
+                <button id="unknownGender">UNKNOWN</button>
             </div>
 
             <div id="listStatus" class="flex-container hide">
-                <button id="alive">Alive</button>
-                <button id="dead">Dead</button>
-                <button id="unknown">Unknown</button>
+                <button id="alive">ALIVE</button>
+                <button id="dead">DEAD</button>
+                <button id="unknown">UNKNOWN</button>
+            </div>
+
+            <div id="listOrder" class="flex-container hide">
+                <button id="orderAtoZ">A - Z</button>
+                <button id="orderZtoA">Z - A</button>
             </div>
         
         </header>
 
-            <div class="flex-container hide">
-                <button id="orderAtoZ">Order A to Z</button>
-                <button id="orderZtoA">Order Z to A</button>
-            </div>
-
             <div id="titleContainer" class="flex-container"></div>
             <div id="buttonsContainer" class="flex-container"></div>
 
-            <ol id="listCharacters"></ol>
+            <ol class="center" id="listCharacters"></ol>
 
         
     </div>
