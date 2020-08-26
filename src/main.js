@@ -38,6 +38,7 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     </section>`;
 }).join('')}`;
 
+//función para "capitalizar" nombre
 
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
 const showEssential = document.querySelectorAll('.picture');
