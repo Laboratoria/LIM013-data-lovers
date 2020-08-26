@@ -1,4 +1,4 @@
-import { filteredPokemon, orderPokemonUpward, orderPokemonDownward } from '../src/data.js';
+import { filteredPokemon, orderPokemonUpward } from '../src/data.js';
 const testPokemon = {
   "pokemon":[ 
     { 
@@ -53,6 +53,7 @@ const pokemonAbc = {
 ]
  };
 
+ /*
  const pokemonZwy = {
   "pokemon":[ 
     {
@@ -76,9 +77,7 @@ const pokemonAbc = {
 
 ]
  };
-
-
-
+*/
 
 describe('filteredPokemon', () => {
   it('is a function', () => {
@@ -101,6 +100,8 @@ describe('orderPokemonUpward', () => {
   });
 });
 
+// De z a la a
+/*
 describe('orderPokemonDownward', () => {
   it('is a function', () => {
     expect(typeof orderPokemonDownward).toBe('function');
@@ -111,6 +112,7 @@ describe('orderPokemonDownward', () => {
     expect(orderPokemonDownward(testPokemon.pokemon)).toEqual(pokemonZwy.pokemon);
   })
 });
+*/
 
 
 
@@ -119,9 +121,7 @@ describe('orderPokemonDownward', () => {
 
 
 
-
-
-
+//---------------------Ejemplo-------------------
 
 
 /*

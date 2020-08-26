@@ -1,111 +1,106 @@
 *{
-margin: 0px;
-padding: 0px;  
+    margin: 0px;
+    padding: 0px;  
 }
     
 header {
-background-color: #3060B0;
-padding:10px 0px 10px 0px;
-width: 100%;
-display: flex;
-justify-content: flex-start;
+    background-color: #3060B0;
+    padding:10px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 
 }
     
 .logo{
-width: 250px;
-margin:0px 16px;
+    width: 250px;
+    margin:0px 16px;
 }
     
 main {
-background-color: #EEE8E8;  
-width:100%;
+    background-color: #EEE8E8;  
+    width:100%;
 }
     
 .findPokemon{
-        text-align: center;
-        font-family: 'Baloo Tamma 2'; 
-        color: #616161;
-        font-size: 45px;
-        padding: 12px; 
+    text-align: center;
+    font-family: 'Baloo Tamma 2'; 
+    color: #616161;
+    font-size: 45px;
+    padding: 12px; 
 }
     
     
     
-    /*.root {
-       
-    /* flex-direction: row;
-      
-    }*/
+/*.root {
+   
+/* flex-direction: row;
+  
+}*/
+
+.selector{ 
+    display:flex;
+    justify-content:center;
+    font-family: 'Baloo Tamma 2';
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 22px;
+}
+.list {
+    border-radius:10px;
+    padding: 2px 10px;
+    font-family: 'Baloo Tamma 2';
+    font-size: 16px;
+    margin-right:20px;
+}
+.pokedex{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.poke{
+    width:185px;
+    padding:16px;
+    margin: 40px;
+    background-color:#ffffff;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius:12px;
+    display: flex;
+    flex-direction:column;
+    align-items:center
+}
+.poke-img{
+    width:160px;
+}
+.poke-name {
+    font-size: 20px;
+    font-family: 'Baloo Tamma 2';
+    font-weight: 600;
+    color: #616161;
     
-    .selector{ 
-        display:flex;
-        justify-content:center;
-        font-family: 'Baloo Tamma 2';
-        color: #6d6d6d;
-        font-weight: bold;
-        font-size: 22px;
-    }
-
-    .list {
-        border-radius:10px;
-        padding: 2px 10px;
-        font-family: 'Baloo Tamma 2';
-        font-size: 16px;
-        margin-right:20px;
-    }
-
-    .pokedex{
-        display:flex;
-        flex-wrap:wrap;
-        flex-direction:row;
-        justify-content:center;
-    }
+}    
     
-    .poke{
-        width:185px;
-        padding:16px;
-        margin: 40px;
-        background-color:#ffffff;
-        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        border-radius:12px;
-        display: flex;
-        flex-direction:column;
-        align-items:center
-        }
-        .poke-img{
-        width:160px;
-        }
-
-
-        .poke-name {
-            font-size: 20px;
-            font-family: 'Baloo Tamma 2';
-            font-weight: 600;
-            color: #616161;
-        
-        }    
-        
-        .poke-num {
-            font-size: 14px;
-            font-family: 'Baloo Tamma 2';
-            color: #ffffff;
-            background-color:#3060b0;
-            border-radius:8px;
-            padding: 1px 6px;
-        }
-        footer {
-            left: 0;
-            bottom: 0;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 16px;
-            background-color: #3060B0;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            align-content: center;
-            justify-content: center;
-
-        }
+.poke-num {
+    font-size: 14px;
+    font-family: 'Baloo Tamma 2';
+    color: #ffffff;
+    background-color:#3060b0;
+    border-radius:8px;
+    padding: 1px 6px;
+}
+footer {
+    left: 0;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    background-color: #3060B0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-content: center;
+    justify-content: center;
+}
