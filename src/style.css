@@ -512,23 +512,27 @@ input[type="checkbox"]:checked + label {
     cursor: pointer;
 }
 
-.scrollArea {
-    width: 100%;
-    height: 660px;
-    background-color: none;
-    overflow-y: scroll;  
-    display:block  
-}
-
 /*distribución de pokemones*/
-.containerPicture {
+.pokemonArea{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    height:0px;
-    margin: 20px 0px;
 }
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 660px;
+    background-color: none;
+    overflow-y: scroll; 
+}
+.informationDisplay{
+    display: none;
+    height: 660px;
+    background: aquamarine;
+}
+
 .picture {
     width: 200px;
     height: 234px;
@@ -563,7 +567,7 @@ input[type="checkbox"]:checked + label {
 }
 
 /*distribución de pokemones display principal*/
-.containerPicture{
+.icture{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
