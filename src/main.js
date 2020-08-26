@@ -188,9 +188,9 @@ const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {
 	const filtroDataM = datajs.filterSpecies(data, inputNameM);
-		displayList(filtroDataM, listElement, rows, currentPage);
-	    setupagination(filtroDataM, paginationElemnent, rows);
-document.querySelector('#my_modal').classList.add("ocultar");
+	displayList(filtroDataM, listElement, rows, currentPage);
+	setupagination(filtroDataM, paginationElemnent, rows);
+	document.querySelector('#my_modal').classList.add("ocultar");
 }
 
 for (let i = 0; i < botonesFiltrosM.length; i++) {
@@ -304,6 +304,7 @@ closeFilter.addEventListener("click", closeModal);
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 //Funciones del acordeón
+
 accordionItemHeaders.forEach(accordionItemHeader => {
 	accordionItemHeader.addEventListener("click", event => {
 		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
@@ -326,7 +327,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		resetRadioButtons("estd");
 	});
 });
-
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 //import data from './data/rickandmorty/rickandmorty.js';
