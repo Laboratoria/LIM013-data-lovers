@@ -1,10 +1,10 @@
-import { filterByType, sortByName, filterByName } from './data.js';
+import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 
 const showByData = (array) => {
     container.innerHTML="";    
-    array.forEach((item) => {
+    array.forEach((item, index, array) => {
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
         showByItem.innerHTML=`
@@ -12,7 +12,12 @@ const showByData = (array) => {
             <img src=${item.img}></img>
             <p>name: ${item.name}</p>
             <p>type: ${item.type}</p>
-            `;  
+            `
+            var pc=parseInt(item.stats["base-attack"]) 
+            +parseInt(item.stats["base-defense"])+parseInt(item.stats["base-stamina"]);
+            console.log(pc);
+
+
         const container = document.querySelector("#container");
         container.appendChild(showByItem);
     });
@@ -46,8 +51,17 @@ searchByName.addEventListener("blur", () => {
 });
 
 
+// console.log(data.pokemon[0].name);
+// console.log(data.pokemon[0].stats);
+// console.log(Object.keys(data.pokemon[0].stats));
+// console.log(Object.values(data.pokemon[0].stats)[0]);
 
+// let suma = 
+// parseInt(Object.values(data.pokemon[0].stats[0])+ 
+// parseInt(Object.values(data.pokemon[0].stats)[1])+
+// parseInt(Object.values(data.pokemon[0].stats)[2]);
+// console.log(suma);
 
-
-
+// var lego = [1,2,3];
+// console.log(sumaByStats(lego));
 
