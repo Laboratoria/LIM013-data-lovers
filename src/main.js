@@ -31,14 +31,14 @@ const getListAllCharacters = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < allCharacters.length; i=i+20 ){
@@ -63,14 +63,14 @@ const getListAllCharacters = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -109,14 +109,14 @@ const getListSpeciesHuman = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < speciesHuman.length; i=i+20 ){
@@ -143,14 +143,14 @@ const getListSpeciesHuman = () => {
                 const result = page[i]; 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -189,14 +189,14 @@ const getListSpeciesAlien = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < speciesAlien.length; i=i+20 ){
@@ -223,14 +223,14 @@ const getListSpeciesAlien = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -269,14 +269,14 @@ const getListSpeciesHumanoid = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+       
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < speciesHumanoid.length; i=i+20 ){
@@ -303,14 +303,14 @@ const getListSpeciesHumanoid = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -348,14 +348,14 @@ const getListSpeciesAnimal = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < specieAnimal.length; i=i+20 ){
@@ -382,14 +382,14 @@ const getListSpeciesAnimal = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -428,14 +428,14 @@ const getListSpeciesMytholog = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < specieMytholog.length; i=i+20 ){
@@ -462,14 +462,14 @@ const getListSpeciesMytholog = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -508,14 +508,14 @@ const getListSpeciesRobot = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < specieRobot.length; i=i+20 ){
@@ -542,14 +542,14 @@ const getListSpeciesRobot = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -588,14 +588,14 @@ const getListSpeciesUnknown = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < specieUnknown.length; i=i+20 ){
@@ -622,14 +622,14 @@ const getListSpeciesUnknown = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -667,14 +667,14 @@ const getListSpeciesCronenberg = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < specieCronenberg.length; i=i+20 ){
@@ -701,14 +701,14 @@ const getListSpeciesCronenberg = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -746,14 +746,14 @@ const getListSpeciesPoopybutthole = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < speciePoopybutthole.length; i=i+20 ){
@@ -780,14 +780,14 @@ const getListSpeciesPoopybutthole = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -825,14 +825,14 @@ const getListSpeciesDisease = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < specieDisease.length; i=i+20 ){
@@ -859,14 +859,14 @@ const getListSpeciesDisease = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -890,7 +890,7 @@ const getListStatusAlive = () => {
     titleContainer.innerText = "";
 
     const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Alive");
+    const titleText = document.createTextNode("List of Characters Status: Alive");
     title.appendChild(titleText);
     titleContainer.appendChild(title);
 
@@ -905,14 +905,14 @@ const getListStatusAlive = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < statusAlive.length; i=i+20 ){
@@ -939,14 +939,14 @@ const getListStatusAlive = () => {
                 const result = page[i];                 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -970,7 +970,7 @@ const getListStatusDead = () => {
     titleContainer.innerText = "";
 
     const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Dead");
+    const titleText = document.createTextNode("List of Characters Status: Dead");
     title.appendChild(titleText);
     titleContainer.appendChild(title);
 
@@ -985,14 +985,14 @@ const getListStatusDead = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < statusDead.length; i=i+20 ){
@@ -1019,14 +1019,14 @@ const getListStatusDead = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image;  
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1050,7 +1050,7 @@ const getListStatusUnknown = () => {
     titleContainer.innerText = "";
 
     const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Unknown");
+    const titleText = document.createTextNode("List of Characters Status: Unknown");
     title.appendChild(titleText);
     titleContainer.appendChild(title);
 
@@ -1065,14 +1065,14 @@ const getListStatusUnknown = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < statusUnknown.length; i=i+20 ){
@@ -1099,14 +1099,14 @@ const getListStatusUnknown = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1144,14 +1144,14 @@ const getListGenderMale = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < genderMale.length; i=i+20 ){
@@ -1178,14 +1178,14 @@ const getListGenderMale = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1223,14 +1223,14 @@ const getListGenderFemale = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < genderFemale.length; i=i+20 ){
@@ -1257,14 +1257,14 @@ const getListGenderFemale = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -1303,14 +1303,14 @@ const getListGenderGenderless = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+       
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < genderGenderless.length; i=i+20 ){
@@ -1337,14 +1337,14 @@ const getListGenderGenderless = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li");
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image;
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText);
             }
                 console.log(i);
             })
@@ -1383,14 +1383,14 @@ const getListGenderUnknown = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < genderUnknown.length; i=i+20 ){
@@ -1417,14 +1417,14 @@ const getListGenderUnknown = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li");
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image;
                 const elementImage = document.createElement("img"); 
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1464,14 +1464,14 @@ const getListAtoZ = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < sortedAscending.length; i=i+20 ){
@@ -1498,14 +1498,14 @@ const getListAtoZ = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li");
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image; 
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1544,14 +1544,14 @@ const getListZtoA = () => {
         const result = page[i];
         const elementLi = document.createElement("li");
         const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        elementLi.appendChild(elementText); 
-
+        
         const image = result.image;
         const elementImage = document.createElement("img");
         elementImage.src = image;
         elementImage.alt = name;
         elementLi.appendChild(elementImage); 
         elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText);
     }
 
     for (let i=0; i < sortedDescending.length; i=i+20 ){
@@ -1578,14 +1578,14 @@ const getListZtoA = () => {
                 const result = page[i];
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                elementLi.appendChild(elementText); 
-
+                
                 const image = result.image;
                 const elementImage = document.createElement("img");
                 elementImage.src = image;
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -1595,3 +1595,66 @@ const getListZtoA = () => {
 }
 document.querySelector('#orderZtoA').addEventListener('click', getListZtoA);
 
+
+
+function getListAll(){
+
+    let leaveGender = document.getElementById("listGender");
+    leaveGender.classList.add("hide");
+
+    let leaveStatus = document.getElementById("listStatus");
+    leaveStatus.classList.add("hide");
+
+    let displaySpecies = document.getElementById("listSpecies");
+    displaySpecies.classList.add("hide");
+
+}
+document.querySelector('#all').addEventListener('click', getListAll);
+
+
+function getListSpecies(){
+
+    let leaveGender = document.getElementById("listGender");
+    leaveGender.classList.add("hide");
+
+    let leaveStatus = document.getElementById("listStatus");
+    leaveStatus.classList.add("hide");
+
+    let displaySpecies = document.getElementById("listSpecies");
+    displaySpecies.classList.remove("hide");
+
+}
+document.querySelector('#species').addEventListener('click', getListSpecies);
+document.querySelector('#species').addEventListener('click', getListSpeciesHuman);
+
+
+function getListGender(){
+
+    let leaveSpecies = document.getElementById("listSpecies");
+    leaveSpecies.classList.add("hide");
+
+    let leaveStatus = document.getElementById("listStatus");
+    leaveStatus.classList.add("hide");
+
+    let displayStatus = document.getElementById("listGender");
+    displayStatus.classList.remove("hide");
+
+}
+document.querySelector('#gender').addEventListener('click', getListGender);
+document.querySelector('#gender').addEventListener('click', getListGenderMale);
+
+
+function getListStatus(){
+
+    let leaveGender = document.getElementById("listGender");
+    leaveGender.classList.add("hide");
+
+    let leaveSpecies = document.getElementById("listSpecies");
+    leaveSpecies.classList.add("hide");
+
+    let displayStatus = document.getElementById("listStatus");
+    displayStatus.classList.remove("hide");
+
+}
+document.querySelector('#status').addEventListener('click', getListStatus);
+document.querySelector('#status').addEventListener('click', getListStatusAlive);
