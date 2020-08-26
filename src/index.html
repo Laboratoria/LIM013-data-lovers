@@ -2,83 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container">
-    <header>
-      <nav>
-        <div class="hamb-menu" id="hamb-menu">
-          <img src="images/hamb-menu.png" alt="">
-        </div>
-        <div class="title">
-          <h1>Characters</h1>
-        </div>
-        <form>
-          <input type="text" class="search-bar" id="search-bar" placeholder="Search your character">
-          <button id="search-btn"><img src="images/search_icon.svg" alt=""></button>
-        </form>
-        <div class="sort-icon" id="sort-icon">
-          <a href="#"><img src="images/sort_icon.png" alt=""></a>
-        </div>
-      </nav>
-      <div class="categories" id="categories">
-        <button id="all" class="active">ALL</button>
-        <button id="species" class="active">SPECIE</button>
-        <button id="gender"class="active">GENDER</button>
-        <button id="status"class="active">STATUS</button>
-      </div>
-      <div> 
-        <h2>Characters > Species</h2>
-        <button id="human">Human</button>
-        <button id="alien">Alien</button>
-        <button id="humanoid">Humanoid</button>
-        <button id="animal">Animal</button>
-        <button id="mytholog">Mythological Creature</button>
-        <button id="robot">Robot</button>
-        <button id="unknownSpecie">Unknown</button>
-        <button id="cronenberg">Cronenberg</button>
-        <button id="poopybutthole">Poopybutthole</button>
-        <button id="disease">Disease</button>
-    </div>
-    <div>
-        <h2>Characters > Gender</h2>
-        <button id="male">Male</button>
-        <button id="female">Female</button>
-        <button id="genderless">Genderless</button>
-        <button id="unknownGender">Unknown</button>
-    </div>
-    <div>  
-        <h2>Characters > Status</h2>
-        <button id="alive">Alive</button>
-        <button id="dead">Dead</button>
-        <button id="unknown">Unknown</button>
-    </div>
-    <div>
-        <h2>Characters > Order</h2>
-        <button id="orderAtoZ">Order A to Z</button>
-        <button id="orderZtoA">Order Z to A</button>
+    <div class="container">
+
+        <header>
+            <nav>
+                <div class="hamb-menu" id="hamb-menu">
+                    <img src="images/hamb_menu.png" alt="">
+                </div>
+                <div class="title">
+                    <h1>CHARACTERS</h1>
+                </div>
+                <form>
+                    <!-- <input type="text" class="search-bar" id="search-bar" placeholder="Search your character"> -->
+                    <a href="#"><img src="images/search_icon.png" alt=""></a>
+                </form>
+                <div class="more-icon" id="more-icon">
+                    <a href="#"><img src="images/more_menu.png" alt=""></a>
+                </div>
+            </nav>
+            <div class="categories" id="categories">
+                <button id="all" class="active">ALL</button>
+                <button id="species" class="active">SPECIE</button>
+                <button id="gender" class="active">GENDER</button>
+                <button id="status" class="active">STATUS</button>
+                <button id="order" class="active">ORDER</button>
+            </div>
+        
+            <div id="listSpecies" class="flex-container hide">
+                <button id="human">HUMAN</button>
+                <button id="alien">ALIEN</button>
+                <button id="humanoid">HUMANOID</button>
+                <button id="animal">ANIMAL</button>
+                <button id="mytholog">MYTHOLOGICAL</button>
+                <button id="robot">ROBOT</button>
+                <button id="unknownSpecie">UNKNOWN</button>
+                <button id="cronenberg">CRONENBERG</button>
+                <button id="poopybutthole">POOPYBUTHOLE</button>
+                <button id="disease">DISEASE</button>
+            </div>
+
+            <div id="listGender" class="flex-container hide">
+                <button id="male">MALE</button>
+                <button id="female">FEMALE</button>
+                <button id="genderless">GENDERLESS</button>
+                <button id="unknownGender">UNKNOWN</button>
+            </div>
+
+            <div id="listStatus" class="flex-container hide">
+                <button id="alive">ALIVE</button>
+                <button id="dead">DEAD</button>
+                <button id="unknown">UNKNOWN</button>
+            </div>
+
+            <div id="listOrder" class="flex-container hide">
+                <button id="orderAtoZ">A - Z</button>
+                <button id="orderZtoA">Z - A</button>
+            </div>
+        
+        </header>
+
+            <div id="titleContainer" class="flex-container"></div>
+            <div id="buttonsContainer" class="flex-container"></div>
+
+            <ol class="center" id="listCharacters"></ol>
+
+        
     </div>
 
-    <div id="titleContainer"></div>
-    <div id="buttonsContainer"></div>
-    <ol id="listCharacters"> </ol>
-
-    </header>
-  </div>
-
-  <script src="main.js" type="module"></script>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-

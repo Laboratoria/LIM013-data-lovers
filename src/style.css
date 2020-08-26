@@ -1,24 +1,26 @@
+/*-----Univeral-----*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*-----Body------*/
 body {
-    /*solo para mostrar contraste*/
-    background: red;
+    background-image: url('https://user-images.githubusercontent.com/55853256/91184100-daa3f700-e6b1-11ea-96b2-62bb82ed786e.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
-
+/*-----Container-----*/
 .container {
     width: 100%;
     margin: auto;
 }
-
-/* HEADER */
-
+/*-----Header-----*/
 header {
     width: 100%;
-    height: 600px;
+    height: 200px;
 }
 
 header nav {
@@ -26,17 +28,111 @@ header nav {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background-image: url("images/nav_bkg.png");
-   background-size: contain;
-   background-position: center;
+   background-color: rgba(11, 12, 12, 0.5);
+   /* background-image: url("images/nav_bkg.png"); */
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+  
 }
 
-.hamb-menu {
+nav img {
     padding: 24px;
 }
 
+ol {    color:  #fafbfc;
+
+}
+
+/*--A la espera de editar código en main--*/
+h2 {
+    display: none;
+}
+
+.boton {
+    display:flex;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#buttonsContainer button {
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 40px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: rgba(11, 12, 12, 0.4); */
+    justify-content: center;
+}
+
+.flex-container button {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 120px;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #5C9C9C;
+    letter-spacing: 0.10em;
+    border: none;
+    outline: none;
+}
+
+.flex-container button:hover, .active {
+    color: #072C44; 
+    border-bottom: 4px solid #072C44;
+}
+
+#listCharacters img {
+    width: 250px;
+    float: left;
+    border-radius: 50%;
+}
+
+li {
+    width: 250px;
+    float: left;
+    background-color: rgba(11, 12, 12, 0.4);
+    margin: 25px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    /* list-style-position: none; */
+  }
+
+
+
 nav .title {
-    color: #94E858;
+    left: 72px;
+    top: 16px;
+    font-family: 'Patrick Hand SC', cursive;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    font-size: 20px;
+    line-height: 32px;
+    color: #94E858;  
 }
 
 header form {
@@ -45,17 +141,26 @@ header form {
     justify-content: center;
 }
 
-header .search-bar {
+/* header .search-bar {
     width: 70%;
-    height: 40px;
+    height: 42px;
     line-height: 40px;
     background: white;
     padding: 0 20px;
-    border-radius: 10px;
+    outline: none;
     border: none;
     text-align: center;
     font-size: 16px;
+} */
+
+.more-icon a {
+    padding-right: 24px;
 }
+
+/* #search-button {
+    width:  24px;
+    height: 24px;
+} */
 
 .sort-icon {
     display: flex;
@@ -72,12 +177,21 @@ header .categories{
 }
 
 .categories button {
-    border-bottom: 2px solid transparent;
-    padding: 4px 0;
-    transition: 0.7s ease-out;
-    color: white;
-    margin: 10px 20px;
-    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 120px;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.10em;
+    border: none;
+    outline: none;
+    color: ;
+    background-color: #5C9C9C;
+    color: #072C44;
 }
 
 .categories button:hover, .active {
