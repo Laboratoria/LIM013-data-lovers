@@ -1,1 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*************todo referente a barra de navegación***************/
+/*navigator flex*/
+.topnav{
+    padding-top: 40px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*navigator flex*/
+.flexNav{
+    width: 70%;  
+    display: flex;   
+}
+/*container icon de menu*/
+.menu-deploy{
+    /*para que este oculto*/
+    display: none;
+    font-size: 25px;
+    cursor: pointer; 
+}
+/*icon de menu*/
+.menu-deploy i{
+    color:#88D9E5;
+}
+/*propiedades para las opciones de menú*/
+.listItem{
+    justify-content: center;
+    width: 500px;
+    min-width: 400px;
+}
+
+.listItem li{
+    font-size: 16px;
+    display: inline-block;
+    border-right:#88D9E5 1px solid;
+   
+}
+.listItem li a{
+    display: inline-block;
+    position: relative;
+    color:#88D9E5;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 20px;
+    transition: .2s;
+}
+.listItem li a:hover{
+    color: #00C1EC;
+}
+/*POKEMON(TITULO)*/
+.logo{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.logo a {
+    color: #00C1EC;
+    font-size: 32px;
+    text-decoration: bold;
+}
+/*Container Serch*/
+.search-container{
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    width: 500px;
+}
+.search-container input{
+    padding: 6px;
+    margin-top: 0px;
+    font-size: 16px;
+    color:#88D9E5;
+    border: none;
+    border-bottom:#88D9E5 2px solid;
+    background: black;
+    text-align: center;
+    outline: none;
+
+}
+.search-container button{
+    float: right;
+    padding: 6px 11px;
+    margin-top: 0px;
+    background: #88D9E5;
+    font-size: 16px;
+    border: none;
+    border-bottom:#88D9E5 2px solid;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+.search-container button:hover{
+background: #00C1EC;
+border-bottom:#88D9E5 2px solid;
+border-radius: 0px 5px 5px 0px;
+}
+/*inactivo hasta que se agregue la clase mediante js*/
+.show{
+    height: 120px !important;
+}
+
+/*todo referente a responsive*/
+@media screen and (max-width:1000px){
+/*Navigator bar responsive*/
+.menu-deploy{
+    display: block;
+    margin-left: 5%;
+    border: none;
+    }
+.logo{
+    min-width: 95%;
+    margin-right: 3%;
+    font-size: 16px;
+    }
+.logo a{
+    font-size: 24px;
+}
+.listItem{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-out;   
+    }
+    .listItem li{
+        display: block;
+        text-align: center;
+    }
+    .listItem li a{
+    color:#88D9E5;
+    background: #15393C;
+    border-bottom: 1px solid #5f5fd3;
+    width: 100%;
+    }
+    .listItem li a:hover{
+    background: #264b4e;
+    color: black;
+    }
+    .topnav{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    }
+    .search-container{
+    margin-top: 20px;
+    width: 100%;
+    }
+    .flexNav{
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+    }
+    
+}
+
+/*************todo referente al main***************/
+.displayContainer {
+    background: #18383b;
+    display:block
+}
+
+.typeContainerClose {
+    width: 100%;
+    height: 68px;
+    background-image: url(images/fondo_menuTipo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:block
+}
+
+.typeContainerbtnGroupClose {
+    width: 100%;
+    height: 66px;
+    background-color: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    display:block
+}
+
+/*.btnGroupOpenTypeDisplay button {
+    /*width: 100%;
+    height: 66px;*/
+    /*float: left;
+    content: "";
+    cursor: pointer;
+    background-color: none; 
+}
+
+.typeButton {
+    font-size: 17px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 140px;
+    margin-right: 0px;
+}
+
+.openTypeButton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: url(images/openTypeButton.png);
+    background-size:100%;
+    border: none;
+}*/
+
+.typeContainerOpen {
+    background-size: 100%;
+    background-color: #18383b;
+    /*border: 1px solid red;*/
+}
+
+.typeContainerHeader {
+    background-size: 100%;
+    height: 5px;
+}
+
+.typeContainerBody {
+    background-size: 100%;
+}
+
+.typeContainerBodyInner {
+    background-size: 95%;
+    padding: 20px 5px;
+}
+
+.typeContainerBodyInnerTitle {
+    background-color: none;
+    height: 50px;
+    padding: 0px 30px;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.typeContainerBodyInnerTypes {    
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 10px 20px;
+    display: block;    
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+  
+li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 14px;
+    float: left;
+
+}
+  
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999%;
+}
+  
+input[type="checkbox"] + label {
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    background-color: none;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+  
+input[type="checkbox"]:checked + label {
+    border: 1px solid white;
+    color: #18383b;
+    background-color: white;
+}
+
+.typeContainerBodyInnerSearchByTypeButtons {
+    background-color: none;  
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.searchByTypeButtonReset {
+    padding: 10px 20px;
+    background-color: #18383b;
+    border: 2px solid #00A9CF;
+    color: #00A9CF;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;
+    margin: 5px 5px;
+    cursor: pointer;
+    width: 240px;
+}
+
+.searchByTypeButtonReset:hover {
+    background-color: #00A9CF;
+    border: 1px solid #00A9CF;
+    color: #18383b;
+}
+
+.searchByTypeButtonSearch {
+    padding: 10px 20px;
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;
+    margin: 5px 5px;
+    cursor: pointer;
+    width: 360px;
+}
+
+.searchByTypeButtonSearch:hover {
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;
+}
+
+.btnGroupCloseTypeDisplay {
+    width: 100%;
+    height: 85px;
+    background-color: none;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    display:block
+}
+
+.btnGroupCloseTypeDisplay button {
+    /*width: 100%;
+    height: 66px;*/
+    float: left;
+    content: "";
+    cursor: pointer;
+    background-color: none; 
+}
+
+.closeButton {
+    font-size: 14px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 140px;
+    margin-right: 0px;
+}
+
+.closeTypeButton {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: url(images/closeTypeButton.png);
+    background-size:100%;
+    border: none;
+}
+
+.typeContainerHide {
+    background-color: #18383b;
+    height: 60px;
+}
+.emptySpace {
+    background-color: #18383b;
+    width: 100%;
+    height: 40px;
+}
+.displayAll {
+    margin-top: -94px;
+    width: 100%;
+    display:block;
+    background: none;
+    
+}
+
+.orderByButtons {
+    width: 100%;
+    height: 68px;
+    background-image: url(images/fondo_displayAll.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.orderBy {
+    width: 100%;
+    height: 66px;
+    background-color: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    display:block
+}
+
+.orderBy button {
+    /*width: 100%;
+    height: 66px;*/
+    float: left;
+    content: "";
+    cursor: pointer;
+    background-color: none; 
+}
+
+.orderByAlphaAscButton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 415px;
+    margin-right: 10px;
+    background-image: url(images/AlphaAscButton.png);
+    background-size:100%;
+    border: none;
+    cursor: pointer;
+}
+
+.orderByAlphaDescButton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-image: url(images/AlphaDescButton.png);
+    background-size:100%;
+    border: none;
+    cursor: pointer;
+}
+
+.orderByLessPwrButton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-image: url(images/LessPwrButton.png);
+    background-size:100%;
+    border: none;
+    cursor: pointer;
+}
+
+.orderByMorePwrButton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-image: url(images/MorePwrButton.png);
+    background-size:100%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/*distribución de pokemones*/
+.pokemonArea{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 660px;
+    background-color: none;
+    overflow-y: scroll; 
+}
+.informationDisplay{
+    display: none;
+    height: 660px;
+    background: aquamarine;
+}
+
+.picture {
+    width: 200px;
+    height: 234px;
+    margin: 5px;
+    background-size:100%;
+    background-image: url(images/hexagono2.png);
+    background-size: cover;
+}
+
+.card {
+    background: black;
+}
+
+.footer {
+    background: #15393C;
+    text-align: center;
+    padding: 20px 50px;
+    display:block
+}
+
+.footer1 {
+    font-size: 15px;
+    line-height: 2;
+    text-decoration: bold;
+    color: white;
+}
+
+.footer2 {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+/*distribución de pokemones display principal*/
+
+.picture{
+    width: 180px;
+    height: 210px;
+    margin: 5px;
+    background-image: url(images/hexagono2.png);
+    /*para que ocupe todo el espacio*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width:130px;
+    height:130px;
+}
+.essentialInformation{
+    display: none;
+}
+
+/***************informacion principal de pokemones*******************/
+.numPok{
+/*numero de pokemon*/
+}
+.namePok{
+/*nombre de pokemon*/
+}
+.grass{
+/*tipo 1 de pokemon*/
+}
+.poison{
+/*tipo 2 de pokemon*/
+}
+.etc{
+/*boton de ver mas pokemon*/ 
+}
+
+
 

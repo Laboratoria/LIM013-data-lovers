@@ -23,6 +23,7 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     </section>`;
 }).join('')}`;
 
+
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
 const showEssential = document.querySelectorAll('.picture');
 for (let index = 0; index < showEssential.length; index++) {
@@ -42,7 +43,7 @@ for (let index = 0; index < btnMorePok.length; index++) {
     btnMorePok[index].addEventListener('click',()=>{
         document.querySelector('.informationDisplay').style.display="block";
         pokemonDisplay.style.width="60%"   
-       document.querySelector('.informationDisplay').style.width="40%";
+        document.querySelector('.informationDisplay').style.width="40%";
         
     });  
 }
