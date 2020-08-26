@@ -7,19 +7,7 @@ const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
 //accordion
-document.querySelectorAll(".typeButton").forEach(button => {
-    button.addEventListener("click", () => {
-        const typeContainerOpenSection = button.addElementSibling;
 
-        button.classList.toogle("typeButtonActive");
-
-        if (button.classList.contains("typeButtonActive")) {
-            typeContainerOpenSection.style.maxHeigth = typeContainerOpenSection.scrollHeight + "px";
-        } else {
-            typeContainerOpenSection.style.maxHeigth = 0;
-        }
-    })
-})
 
 //Traer nodo para manipular el DOM
 let pokemonDisplay = document.getElementById("pokemonDisplay");
@@ -29,7 +17,7 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     return `<section class="picture">
     <img class="img" src="${dataPokemon.img}">
     <section class="essentialInformation">
-    <p class="numPok">${dataPokemon.num}</p>
+    <p class="numPok">#${dataPokemon.num}</p>
     <p class="namePok">${dataPokemon.name}</p> 
     <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
     <p class="${dataPokemon.type[1]}">`)}</p>
@@ -37,8 +25,6 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     </section>
     </section>`;
 }).join('')}`;
-
-//función para "capitalizar" nombre
 
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
 const showEssential = document.querySelectorAll('.picture');

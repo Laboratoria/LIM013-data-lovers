@@ -6,14 +6,12 @@
 body {
     background-color: black;
     font-family: sans-serif;
-    /*display:block*/
 }
 .container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    /*display:block*/
 }
 /*************todo referente a barra de navegación***************/
 /*navigator flex*/
@@ -52,7 +50,6 @@ body {
     font-size: 16px;
     display: inline-block;
     border-right:#88D9E5 1px solid;
-    height: 5px;
    
 }
 .listItem li a{
@@ -60,7 +57,7 @@ body {
     position: relative;
     color:#88D9E5;
     text-decoration: none;
-    line-height: 5px;
+    line-height: 30px;
     padding: 0 20px;
     transition: .2s;
 }
@@ -80,7 +77,7 @@ body {
 
 }
 .logo a {
-    color: #88D9E5;
+    color: #00C1EC;
     font-size: 32px;
     text-decoration: bold;
 }
@@ -101,7 +98,7 @@ body {
     background: black;
     text-align: center;
     outline: none;
-    width: 210px;
+
 }
 .search-container button{
     float: right;
@@ -115,7 +112,7 @@ body {
     cursor: pointer;
 }
 .search-container button:hover{
-background: #00A9CF;
+background: #00C1EC;
 border-bottom:#88D9E5 2px solid;
 border-radius: 0px 5px 5px 0px;
 }
@@ -185,286 +182,13 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /*************todo referente al main***************/
-
-
 .displayContainer {
-    background: #18383b;
-    display:block
-}
-
-/*accordion*/
-.accordionButton {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: white;
-    color: black;
-    text-align: left;
-    transition: background 0.2s;
-}
-
-.accordionButton::after {
-    content: "\25bc";
-    float: right;
-    transform: scale(1.5);
-}
-
-.accordionButtonActive {
-    background: lightgreen;
-}
-
-.accordionButtonActive::after {
-    content: "\25b4";
-}
-
-.accordionContent {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s;
-
-    padding: 0px 15px;
-    font-family: sans-serif;
-    background: #eeeeee;
-}
-
-/*end accordion*/
-
-.typeContainerClose {
-    width: 100%;
-    height: 68px;
-    background-image: url(images/fondo_menuTipo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display:block
-}
-
-.typeButton {
-    display: block;
-    padding: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
     background: transparent;
-    font-size: 18px;
-    color: white;
-    text-align: left;
-    width: 100px;
-    height: 35px;
-    padding: 30px 0px;
-    margin-top: 25px;
-    margin-left: 140px;
-    margin-right: 0px;
-    transition: background 0.2s;
-}
-
-.typeButton::after {
-    content: "\25bc";
-    float: right;
-    transform: scale(1.5);
-}
-
-.typeButtonActive {
-    background: transparent;
-}
-
-.typeButtonActive::after {
-    content: "\25b4";
-    
-}
-
-.typeContainerOpen {
-    overflow: hidden;
-    max-height: 0;
-    background-size: 100%;
-    background: #18383b;
-    transition: max-height 0.2s;
-
-    padding: 0px 0px;
-    font-family: sans-serif;
-}
-
-.typeContainerHeader {
-    background-size: 100%;
-    height: 5px;
-}
-
-.typeContainerBody {
-    background-size: 100%;
-}
-
-.typeContainerBodyInner {
-    background-size: 95%;
-    padding: 20px 5px;
-}
-
-.typeContainerBodyInnerTitle {
-    background-color: none;
-    height: 50px;
-    padding: 0px 30px;
-}
-
-h2 {
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-}
-
-
-.typeContainerBodyInnerTypes {    
-    margin-top: 0px;
-    margin-left: 0px;
-    padding: 10px 20px;
-    display: block;    
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    clear: both;
-}
-  
-li{
-    list-style-type: none;
-    list-style-position: outside;
-    padding: 14px;
-    float: left;
-
-}
-  
-input[type="checkbox"]:not(:checked), 
-input[type="checkbox"]:checked {
-    position: absolute;
-    left: -9999%;
-}
-  
-input[type="checkbox"] + label {
-    width: 120px;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-    background-color: none;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-  
-input[type="checkbox"]:checked + label {
-    border: 1px solid white;
-    color: #18383b;
-    background-color: white;
-}
-
-.typeContainerBodyInnerSearchByTypeButtons {
-    background-color: none;  
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.searchByTypeButtonReset {
-    padding: 10px 20px;
-    background-color: #18383b;
-    border: 2px solid #00A9CF;
-    color: #00A9CF;
-    display: inline-block;
-    text-align: center;
-    font-family: inherit;
-    font-size: 18px;
-    margin: 5px 5px;
-    cursor: pointer;
-    width: 240px;
-}
-
-.searchByTypeButtonReset:hover {
-    background-color: #00A9CF;
-    border: 1px solid #00A9CF;
-    color: #18383b;
-}
-
-.searchByTypeButtonSearch {
-    padding: 10px 20px;
-    background-color: #88D9E5;
-    border: 1px solid #88D9E5;
-    color: black;
-    display: inline-block;
-    text-align: center;
-    font-family: inherit;
-    font-size: 18px;
-    margin: 5px 5px;
-    cursor: pointer;
-    width: 360px;
-}
-
-.searchByTypeButtonSearch:hover {
-    background-color: #88D9E5;
-    border: 1px solid #88D9E5;
-    color: black;
-}
-
-.btnGroupCloseTypeDisplay {
-    width: 100%;
-    height: 85px;
-    background-color: none;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    margin-left: 0px;
     display:block
 }
 
-.btnGroupCloseTypeDisplay button {
-    /*width: 100%;
-    height: 66px;*/
-    float: left;
-    content: "";
-    cursor: pointer;
-    background-color: none; 
-}
-
-.closeButton {
-    font-size: 14px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    width: 60px;
-    height: 40px;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 140px;
-    margin-right: 0px;
-}
-
-.closeTypeButton {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-image: url(images/closeTypeButton.png);
-    background-size:100%;
-    border: none;
-}
-
-.typeContainerHide {
-    background-color: #18383b;
-    height: 60px;
-}
-.emptySpace {
-    background-color: #18383b;
-    width: 100%;
-    height: 40px;
-}
 .displayAll {
-    margin-top: -94px;
+    margin-top: 30px;
     width: 100%;
     display:block;
     background: none;
@@ -547,48 +271,38 @@ input[type="checkbox"]:checked + label {
     cursor: pointer;
 }
 
-.scrollArea {
+/*distribución de pokemones*/
+.pokemonArea{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
+}
+
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0px;
+    justify-content: center;
     height: 660px;
     background-color: none;
-    overflow-y: scroll;  
-    display:block  
+    overflow-y: scroll; 
+}
+
+.informationDisplay{
+    display: none;
+    height: 660px;
+    background: aquamarine;
 }
 
 .card {
     background: black;
 }
 
-.footer {
-    background: #15393C;
-    text-align: center;
-    padding: 20px 50px;
-    display:block
-}
-
-.footer1 {
-    font-size: 15px;
-    line-height: 2;
-    text-decoration: bold;
-    color: white;
-}
-
-.footer2 {
-    font-size: 12px;
-    text-decoration: none;
-    color: white;
-}
-
 /*distribución de pokemones display principal*/
-.containerPicture{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    
-}
-.picture{
-    width: 180px;
-    height: 210px;
+.picture {
+    width: 200px;
+    height: 234px;
     margin: 5px;
     background-image: url(images/hexagono2.png);
     /*para que ocupe todo el espacio*/
@@ -597,16 +311,18 @@ input[type="checkbox"]:checked + label {
     justify-content: center;
     align-items: center;
 }
-.img{
+
+.img {
     width:130px;
     height:130px;
 }
-.essentialInformation{
+
+.essentialInformation {
     display: none;
 }
 
 /***************informacion principal de pokemones*******************/
-.numPok{
+.numPok {
 /*numero de pokemon*/
     font-family: sans-serif;
     text-align: center;
@@ -618,7 +334,7 @@ input[type="checkbox"]:checked + label {
 
 }
 
-.namePok{
+.namePok {
 /*nombre de pokemon*/
     font-family: sans-serif;
     text-align: center;
@@ -626,6 +342,7 @@ input[type="checkbox"]:checked + label {
     font-size: 18px;
     line-height: 2;
     text-decoration: bold;
+    text-transform: capitalize;
     color: black;
 }
 
@@ -686,5 +403,22 @@ input[type="checkbox"]:checked + label {
     background-color: #f59802;
 }
 
+.footer {
+    background: #15393C;
+    text-align: center;
+    padding: 20px 50px;
+    display:block
+}
 
+.footer1 {
+    font-size: 15px;
+    line-height: 2;
+    text-decoration: bold;
+    color: white;
+}
 
+.footer2 {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
