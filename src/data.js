@@ -1,25 +1,20 @@
 const datajs = {
 
-  filterSpecies: function (data, condition) {
-    for (let i = 0; i < condition.length; i++) {
-      if (condition[i].checked == true) {
-        const dataF = condition[i].getAttribute("value");
-        if (condition[i].name === "esp") {
-          if (dataF === "otros") {
-            return data.filter(data => { return data.species === "Vampire" || data.species === "unknown" })
-          } else
-            return data.filter(data => { return data.species === dataF });
-        } else if (condition[i].name === "orig") {
-          if (dataF === "Earth") {
-            return data.filter(data => { return data.origin.name.includes("Earth") })
-          } else
-            return data.filter(data => { return data.origin.name === dataF });
-        } else if (condition[i].name === "gener") {
-          return data.filter(data => { return data.gender === dataF });
-        } else if (condition[i].name === "estd") {
-          return data.filter(data => { return data.status === dataF });
-        }
-      }
+  filterSpecies: function (data, condition, dataF) {
+    if (condition === "esp") {
+      if (dataF === "otros") {
+        return data.filter(data => { return data.species === "Vampire" || data.species === "unknown" })
+      } else
+        return data.filter(data => { return data.species === dataF });
+    } else if (condition === "orig") {
+      if (dataF === "Earth") {
+        return data.filter(data => { return data.origin.name.includes("Earth") })
+      } else
+        return data.filter(data => { return data.origin.name === dataF });
+    } else if (condition === "gener") {
+      return data.filter(data => { return data.gender === dataF });
+    } else if (condition === "estd") {
+      return data.filter(data => { return data.status === dataF });
     }
   },
 

@@ -74,3 +74,24 @@ export const acomoA_Z =[
           "gender": "Male",
 },
 ];
+
+export const dataFG =[
+    {
+        "id": 8,
+              "name": "Adjudicator Rick",
+              "status": "Dead",
+              "species": "Human",
+              "type": "",
+              "gender": "Male",
+    },
+
+    {
+        "id": 7,
+              "name": "Abradolf Lincler",
+              "status": "unknown",
+              "species": "Human",
+              "type": "Genetic experiment",
+              "gender": "Male",
+    
+    },
+]
