@@ -55,12 +55,11 @@ describe('ordenar de la Z-A',() =>{
 
 
 
-/*describe('operaciones', () => {
-  it('function sumar', () => {
+/*describe('operaciones', 
+  it('function sumar', () => 
     expect(a+b).toBe(z);
-  });
-
-  it('returns `example`', () => {
+});
+ it('returns `example`', () => {
     expect(example()).toBe('example');
   });
 });
@@ -68,4 +67,4 @@ describe('ordenar de la Z-A',() =>{
 test('two plus two is four', () => {
   expect(2 + 2).toBe(4);
 });
-*/
+

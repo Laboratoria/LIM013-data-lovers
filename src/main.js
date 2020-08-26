@@ -41,7 +41,7 @@ getLegends(arrayLegends);
 /*---FILTRO DE LA DATA---*/
 filter.addEventListener('click', (e) => {
   const rol = e.target.id
-  
+
   if (rol == null || rol == '' || rol == 'All') {
     getLegends(arrayLegends);
   } else {
