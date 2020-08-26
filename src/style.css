@@ -6,14 +6,12 @@
 body {
     background-color: black;
     font-family: sans-serif;
-    /*display:block*/
 }
-.mainContainer {
+.container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    /*display:block*/
 }
 /*************todo referente a barra de navegación***************/
 /*navigator flex*/
@@ -52,7 +50,6 @@ body {
     font-size: 16px;
     display: inline-block;
     border-right:#88D9E5 1px solid;
-    height: 5px;
    
 }
 .listItem li a{
@@ -60,7 +57,7 @@ body {
     position: relative;
     color:#88D9E5;
     text-decoration: none;
-    line-height: 5px;
+    line-height: 30px;
     padding: 0 20px;
     transition: .2s;
 }
@@ -80,7 +77,7 @@ body {
 
 }
 .logo a {
-    color: #88D9E5;
+    color: #00C1EC;
     font-size: 32px;
     text-decoration: bold;
 }
@@ -101,7 +98,7 @@ body {
     background: black;
     text-align: center;
     outline: none;
-    width: 210px;
+
 }
 .search-container button{
     float: right;
@@ -115,7 +112,7 @@ body {
     cursor: pointer;
 }
 .search-container button:hover{
-background: #00A9CF;
+background: #00C1EC;
 border-bottom:#88D9E5 2px solid;
 border-radius: 0px 5px 5px 0px;
 }
@@ -185,8 +182,6 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /*************todo referente al main***************/
-
-
 .displayContainer {
     background: #18383b;
     display:block
@@ -284,7 +279,6 @@ h2 {
     font-size: 18px;
     color: white;
 }
-
 
 .typeContainerBodyInnerTypes {    
     margin-top: 0px;
@@ -519,23 +513,31 @@ input[type="checkbox"]:checked + label {
     cursor: pointer;
 }
 
-.scrollArea {
-    width: 100%;
-    height: 660px;
-    background-color: none;
-    overflow-y: scroll;  
-    display:block  
-}
+
+
+
 
 /*distribución de pokemones*/
-.containerPicture {
+.pokemonArea{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    height:0px;
-    margin: 20px 0px;
 }
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 660px;
+    background-color: none;
+    overflow-y: scroll; 
+}
+.informationDisplay{
+    display: none;
+    height: 660px;
+    background: aquamarine;
+}
+
 .picture {
     width: 200px;
     height: 234px;
@@ -570,11 +572,7 @@ input[type="checkbox"]:checked + label {
 }
 
 /*distribución de pokemones display principal*/
-.containerPicture{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
+
 .picture{
     width: 180px;
     height: 210px;

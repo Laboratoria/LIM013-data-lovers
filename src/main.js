@@ -25,19 +25,18 @@ document.querySelectorAll(".typeButton").forEach(button => {
 let pokemonDisplay = document.getElementById("pokemonDisplay");
 //crear dinamicamente elemntos section y asignarle imagen
 //map()=método para recorrer un objeto sin modificar el objeto original
-pokemonDisplay.innerHTML=`<section class="containerPicture">
-${data.pokemon.map((dataPokemon)=>{
+pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     return `<section class="picture">
     <img class="img" src="${dataPokemon.img}">
     <section class="essentialInformation">
     <p class="numPok">${dataPokemon.num}</p>
     <p class="namePok">${dataPokemon.name}</p> 
-    <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p><p class="${dataPokemon.type[1]}">`)}</p>
+    <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
+    <p class="${dataPokemon.type[1]}">`)}</p>
     <button class="morePok">Ver más</button>
     </section>
     </section>`;
-}).join('')}
-</section>`;
+}).join('')}`;
 
 
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
@@ -53,6 +52,17 @@ for (let index = 0; index < showEssential.length; index++) {
     });
 }
 
+//mostrar pantalla de información detallada de pokemon
+const btnMorePok=document.querySelectorAll('.morePok');
+for (let index = 0; index < btnMorePok.length; index++) {
+    btnMorePok[index].addEventListener('click',()=>{
+        document.querySelector('.informationDisplay').style.display="block";
+        pokemonDisplay.style.width="60%"   
+        document.querySelector('.informationDisplay').style.width="40%";
+        
+    });  
+}
+console.log(btnMorePok.length);
 //console.log(example, data);
-//console.log(container);
+
 
