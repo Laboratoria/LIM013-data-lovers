@@ -10,10 +10,10 @@ const datajs = {
           } else
             return data.filter(data => { return data.species === dataF });
         } else if (condition[i].name === "orig") {
-          if(dataF === "Earth") {
+          if (dataF === "Earth") {
             return data.filter(data => { return data.origin.name.includes("Earth") })
           } else
-          return data.filter(data => { return data.origin.name === dataF });
+            return data.filter(data => { return data.origin.name === dataF });
         } else if (condition[i].name === "gener") {
           return data.filter(data => { return data.gender === dataF });
         } else if (condition[i].name === "estd") {
