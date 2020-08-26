@@ -1,20 +1,20 @@
-import { example, anotherExample } from '../src/data.js';
+import datajs from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('datajs', () => {
+  it('deberia ser una function filtrar', () => {
+    expect(typeof datajs.nameA_Z).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returnar orden desendiente `a-z`', () => {
+    expect(datajs.nameA_Z()).toBe('example');
   });
 });
 
 
-describe('anotherExample', () => {
+describe('datajs.filterSpecies', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof data.filterSpecies).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
