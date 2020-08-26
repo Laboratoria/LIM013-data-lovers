@@ -36,7 +36,6 @@ const order = {
         return 0; 
     });
     //console.log("result",result)
-      });
     return result
   },
 };
