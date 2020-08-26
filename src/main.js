@@ -1,6 +1,5 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
-console.log(data);
 let currentPage = 1;
 let rows = 20;
 const listElement = document.getElementById('alldata');
@@ -189,10 +188,9 @@ const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {
 	const filtroDataM = datajs.filterSpecies(data, inputNameM);
-	document.getElementById("alldata").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${filtroDataM.length})</h1>
-		${filtroDataM.map(obtenerPersonajes).join(" ")}`
-	document.querySelector('#my_modal').classList.add("ocultar");
+		displayList(filtroDataM, listElement, rows, currentPage);
+	    setupagination(filtroDataM, paginationElemnent, rows);
+document.querySelector('#my_modal').classList.add("ocultar");
 }
 
 for (let i = 0; i < botonesFiltrosM.length; i++) {
@@ -231,7 +229,6 @@ document.getElementById("cover-ctn-search").addEventListener("click", ocultaBusc
 const salida2 = () => {
 	contenBus.style.top = "-10px";
 	coverBus.style.display = "none";
-	boxSear.style.display = "none";
 	inputSeatch.value = " ";
 }
 
