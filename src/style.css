@@ -386,3 +386,9 @@ footer i {
 #box-icon-menu {
     display: none;
 }
+
+#region-value,
+#type1-value,
+#type2-value {
+    margin: 5px;
+}

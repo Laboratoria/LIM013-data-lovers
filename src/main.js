@@ -80,9 +80,9 @@ document.getElementById("order-drop-down").addEventListener("click", (e) => {
 let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
 let checkbox = document.getElementById('box-icon-menu');
 const search = document.getElementById("search");
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function() {
     if (mediaQueryTablet.matches) {
-        checkbox.addEventListener('change', function () {
+        checkbox.addEventListener('change', function() {
             const isChecked = document.getElementById('box-icon-menu').checked;
             if (isChecked && mediaQueryTablet.matches) {
                 document.getElementById('ul-menu').appendChild(search);
@@ -101,13 +101,26 @@ document.getElementById("select-region").addEventListener('change', () => {
     restart();
 });
 
+let valuetype = new Array();
+console.log(valuetype);
 document.getElementById("select-type").addEventListener('change', () => {
-    let value = new Array();
-    value = document.getElementById("select-type").value;
-    let type = filter.type(data.pokemon, value);
+    if (valuetype[0] == null || valuetype[1] == null) {
+        if (valuetype[0] == null) {
+            valuetype[0] = (document.getElementById("select-type").value);
+            document.getElementById("type1-value").innerHTML = valuetype[0];
+        } else {
+            valuetype[1] = (document.getElementById("select-type").value);
+            document.getElementById("type2-value").innerHTML = valuetype[1];
+        }
+    } else {
+        alert('You can only choose two types');
+    }
+    console.log(valuetype);
+    let type = filter.type(data.pokemon, valuetype);
     newData = type;
     restart();
 });
+
 
 document.getElementById("select-weakness").addEventListener('change', () => {
     let value = new Array();
