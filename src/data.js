@@ -37,5 +37,12 @@ const order={
     //console.log("result",result)
     return result
   },
+
+  //Método reduce
+  /*championForLevel: function (params) {
+    const result = arr.reduce(callback(acumulador, valorActual[, indice[, array]][, valorInicial]){
+      return
+    }
+  }*/
 };
 export default order;

@@ -6,20 +6,24 @@ const datos = data.data,
   arrayLegends = Object.values(datos);
 
 /*---LISTAR EN EL HTML---*/
-const listLegends = (name, img) => {
+const listLegends = (name, img, title) => {
   const legend = document.createElement("div"),
     imgLegend = document.createElement("img"),
-    nameLegend = document.createElement("div");
+    nameLegend = document.createElement("div"),
+    titleLegend = document.createElement("div");
 
   nameLegend.innerHTML += name;
+  titleLegend.innerHTML += `<p>"${title}"</p>`;
   legend.setAttribute("class", "legends");
   imgLegend.setAttribute("class", "img-container");
   imgLegend.setAttribute("src", img);
   nameLegend.setAttribute("class", "name");
+  titleLegend.setAttribute("class", "name");
 
   document.getElementById("legends_container").appendChild(legend);
   legend.appendChild(imgLegend);
   legend.appendChild(nameLegend);
+  legend.appendChild(titleLegend);
 };
 
 /*---TRAER DATA---*/
@@ -27,7 +31,8 @@ const getLegends = (objLegend) => {
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
     let img = objLegend[i].splash;
-    listLegends(name, img);
+    let title = objLegend[i].title;
+    listLegends(name, img, title);
   }
 };
 
@@ -70,3 +75,22 @@ selector.addEventListener("click", (e) => {
 
 
 /*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
+//const reducer = (acumulador, valorActual)=> nuevoAcumulador
+//ejecutando función con array vacío
+const plano =arrayLegends.reduce((acc, el)=> acc.concat(el), [])
+//console.log(plano);
+//const indexed= (arrayLegends[0].stats).reduce((acc, el) => ({
+ // []
+//}));
+console.log(arrayLegends);
+const level=1;
+
+const estadisticas = arrayLegends.reduce(function(acc, el){
+  if(level ===1){
+    return acc,(el.stats.hpperlevel *1);
+  }
+},0)
+console.log(estadisticas);
+
+
+
