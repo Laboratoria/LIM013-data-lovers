@@ -77,7 +77,7 @@ selector.addEventListener("click", (e) => {
 /*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
 //const reducer = (acumulador, valorActual)=> nuevoAcumulador
 //ejecutando función con array vacío
-const plano =arrayLegends.reduce((acc, el)=> acc.concat(el), [])
+//const plano =arrayLegends.reduce((acc, el)=> acc.concat(el), [])
 //console.log(plano);
 //const indexed= (arrayLegends[0].stats).reduce((acc, el) => ({
  // []
