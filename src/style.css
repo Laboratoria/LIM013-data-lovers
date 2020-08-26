@@ -255,23 +255,27 @@ border-radius: 0px 5px 5px 0px;
     border: none;
     cursor: pointer;
 }
-
-.scrollArea {
-    width: 100%;
-    height: 660px;
-    background-color: none;
-    overflow-y: scroll;    
-}
-
 /*distribución de pokemones*/
-.containerPicture {
+.pokemonArea{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    height:0px;
-    margin: 20px 0px;
 }
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 660px;
+    background-color: none;
+    overflow-y: scroll; 
+}
+.informationDisplay{
+    display: none;
+    height: 660px;
+    background: aquamarine;
+}
+
 .picture {
     width: 200px;
     height: 234px;
@@ -289,6 +293,7 @@ border-radius: 0px 5px 5px 0px;
     background: #15393C;
     text-align: center;
     padding: 20px 50px;
+    display:block
 }
 
 .footer1 {
@@ -304,8 +309,8 @@ border-radius: 0px 5px 5px 0px;
     color: white;
 }
 
-/*distribución de pokemones*/
-.containerPicture{
+/*distribución de pokemones display principal*/
+.icture{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -325,4 +330,23 @@ border-radius: 0px 5px 5px 0px;
     width:130px;
     height:130px;
 }
+.essentialInformation{
+    display: none;
+}
 
+/***************informacion principal de pokemones*******************/
+.numPok{
+/*numero de pokemon*/
+}
+.namePok{
+/*nombre de pokemon*/
+}
+.grass{
+/*tipo 1 de pokemon*/
+}
+.poison{
+/*tipo 2 de pokemon*/
+}
+.etc{
+/*boton de ver mas pokemon*/ 
+}
