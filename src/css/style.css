@@ -89,7 +89,10 @@ header nav a {
 }
 
 header nav a:hover {
-  background: whitesmoke;
+  border-bottom: 2px solid #fff;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
 }
 
 .main {
