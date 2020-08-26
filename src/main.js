@@ -303,6 +303,7 @@ const closeModal = () => {
 const closeFilter = document.getElementById("close");
 closeFilter.addEventListener("click", closeModal);
 
+
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 //Funciones del acordeón
@@ -313,7 +314,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 			currentlyActiveAccordionItemHeader.classList.toggle("active");
 			currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
 		}
-
+    
 		accordionItemHeader.classList.toggle("active");
 		const accordionItemBody = accordionItemHeader.nextElementSibling;
 		if (accordionItemHeader.classList.contains("active")) {
