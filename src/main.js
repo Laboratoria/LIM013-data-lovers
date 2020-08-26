@@ -188,9 +188,8 @@ const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {
 	const filtroDataM = datajs.filterSpecies(data, inputNameM);
-	document.getElementById("alldata").innerHTML =
-		`<h1 class="app-title">Total de Personajes(${filtroDataM.length})</h1>
-		${filtroDataM.map(obtenerPersonajes).join(" ")}`
+		displayList(filtroDataM, listElement, rows, currentPage);
+	    setupagination(filtroDataM, paginationElemnent, rows);
 	document.querySelector('#my_modal').classList.add("ocultar");
 }
 
