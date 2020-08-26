@@ -1605,8 +1605,11 @@ function getListAll(){
     let leaveStatus = document.getElementById("listStatus");
     leaveStatus.classList.add("hide");
 
-    let displaySpecies = document.getElementById("listSpecies");
-    displaySpecies.classList.add("hide");
+    let leaveSpecies = document.getElementById("listSpecies");
+    leaveSpecies.classList.add("hide");
+
+    let leaveOrder = document.getElementById("listOrder");
+    leaveOrder.classList.add("hide");
 
 }
 document.querySelector('#all').addEventListener('click', getListAll);
@@ -1619,6 +1622,9 @@ function getListSpecies(){
 
     let leaveStatus = document.getElementById("listStatus");
     leaveStatus.classList.add("hide");
+
+    let leaveOrder = document.getElementById("listOrder");
+    leaveOrder.classList.add("hide");
 
     let displaySpecies = document.getElementById("listSpecies");
     displaySpecies.classList.remove("hide");
@@ -1636,6 +1642,9 @@ function getListGender(){
     let leaveStatus = document.getElementById("listStatus");
     leaveStatus.classList.add("hide");
 
+    let leaveOrder = document.getElementById("listOrder");
+    leaveOrder.classList.add("hide");
+
     let displayStatus = document.getElementById("listGender");
     displayStatus.classList.remove("hide");
 
@@ -1652,9 +1661,51 @@ function getListStatus(){
     let leaveSpecies = document.getElementById("listSpecies");
     leaveSpecies.classList.add("hide");
 
+    let leaveOrder = document.getElementById("listOrder");
+    leaveOrder.classList.add("hide");
+
     let displayStatus = document.getElementById("listStatus");
     displayStatus.classList.remove("hide");
 
 }
 document.querySelector('#status').addEventListener('click', getListStatus);
 document.querySelector('#status').addEventListener('click', getListStatusAlive);
+
+
+
+function getListOrderAtoZ(){
+
+    let leaveGender = document.getElementById("listGender");
+    leaveGender.classList.add("hide");
+
+    let leaveSpecies = document.getElementById("listSpecies");
+    leaveSpecies.classList.add("hide");
+
+    let leaveStatus = document.getElementById("listStatus");
+    leaveStatus.classList.add("hide");
+
+    let displayOrder = document.getElementById("listOrder");
+    displayOrder.classList.remove("hide");
+
+}
+document.querySelector('#order').addEventListener('click', getListOrderAtoZ);
+document.querySelector('#order').addEventListener('click', getListAtoZ);
+
+
+function getListOrderZtoA(){
+
+    let leaveGender = document.getElementById("listGender");
+    leaveGender.classList.add("hide");
+
+    let leaveSpecies = document.getElementById("listSpecies");
+    leaveSpecies.classList.add("hide");
+
+    let leaveStatus = document.getElementById("listStatus");
+    leaveStatus.classList.add("hide");
+
+    let displayOrder = document.getElementById("listOrder");
+    displayOrder.classList.remove("hide");
+
+}
+document.querySelector('#order').addEventListener('click', getListOrderZtoA);
+document.querySelector('#order').addEventListener('click', getListZtoA);
