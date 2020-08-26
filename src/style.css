@@ -8,10 +8,9 @@ body {
     font-family: sans-serif;
 }
 .container {
-    width: 100%;
-    max-width: 100%;
+    width: 98%;
     margin: 0 auto;
-    overflow: hidden;
+    
 }
 /*************todo referente a barra de navegación***************/
 /*navigator flex*/
@@ -274,7 +273,7 @@ border-radius: 0px 5px 5px 0px;
 /*distribución de pokemones*/
 .pokemonArea{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
 }
@@ -292,6 +291,7 @@ border-radius: 0px 5px 5px 0px;
 .informationDisplay{
     display: none;
     height: 660px;
+    width: 400px;
     background: aquamarine;
 }
 
@@ -344,6 +344,7 @@ border-radius: 0px 5px 5px 0px;
     text-decoration: bold;
     text-transform: capitalize;
     color: black;
+
 }
 
 .typePok {
