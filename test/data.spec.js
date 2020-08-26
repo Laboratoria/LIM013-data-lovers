@@ -1,6 +1,6 @@
 //import {  dateAscNum,dateDescNum,dateNamAsc,dateNamDesc  } from './dataTest.js';
-import order from '../src/data.js';
-import { input1_n, output1_n, imputN_1, outputNum_1, imputA_Z, ouputA_Z, imputZ_A, outputZ_A } from './dataTest.js';
+import {order, filter} from '../src/data.js';
+import { input1_n, output1_n, imputN_1, outputNum_1, imputA_Z, ouputA_Z, imputZ_A, outputZ_A, inputFilterType, outputFiltertype} from './dataTest.js';
 
 
 // describe order ascendente por numero.
@@ -40,5 +40,16 @@ describe("order", () => {
     });
     it("show ascending  name order 'a-z' ", () => {
         expect(order.nameZ_A(imputZ_A)).toEqual(outputZ_A);
+    });
+});
+
+// Test Filter 
+
+describe("filter", () => {
+    it("is a function", () => {
+        expect(typeof filter.type).toBe("function");
+    });
+    it("show filter  type 'normal'", () => {
+        expect(filter.type(inputFilterType, 'normal')).toEqual(outputFiltertype);
     });
 });

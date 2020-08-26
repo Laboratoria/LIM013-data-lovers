@@ -80,9 +80,9 @@ document.getElementById("order-drop-down").addEventListener("click", (e) => {
 let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
 let checkbox = document.getElementById('box-icon-menu');
 const search = document.getElementById("search");
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     if (mediaQueryTablet.matches) {
-        checkbox.addEventListener('change', function() {
+        checkbox.addEventListener('change', function () {
             const isChecked = document.getElementById('box-icon-menu').checked;
             if (isChecked && mediaQueryTablet.matches) {
                 document.getElementById('ul-menu').appendChild(search);
@@ -101,10 +101,18 @@ document.getElementById("select-region").addEventListener('change', () => {
     restart();
 });
 
-document.getElementById("select-type").addEventListener('change', ()=> {
+document.getElementById("select-type").addEventListener('change', () => {
     let value = new Array();
-    value= document.getElementById("select-type").value;
+    value = document.getElementById("select-type").value;
     let type = filter.type(data.pokemon, value);
     newData = type;
+    restart();
+});
+
+document.getElementById("select-weakness").addEventListener('change', () => {
+    let value = new Array();
+    value = document.getElementById("select-weakness").value;
+    let weakness = filter.weakness(data.pokemon, value);
+    newData = weakness;
     restart();
 });

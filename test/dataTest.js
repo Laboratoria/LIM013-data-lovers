@@ -251,6 +251,87 @@ export const outputZ_A= [
         ],
     }
 ];
+export const inputFilterType=[
+{   "num": "053",
+    "name": "persian",
+    "type": [
+        "normal"],
+
+},
+{
+    "num": "052",
+    "name": "meowth",
+    "type": [
+        "normal"],
+},
+{
+    "num": "016",
+    "name": "pidgey",
+    "type": [
+     "normal",
+    "flying"],
+},
+{
+    
+     "num": 137,
+     "name": "porygon",
+    "type": [
+     "normal"
+     ],
+    
+    
+},
+{
+
+
+    "num": 136,
+    "name": "flareon",
+    "type": [
+        "fire"
+    ],
+},
+{
+    "num": 250,
+    "name": "ho-oh",
+    "type": [
+        "fire",
+        "flying"
+    ],
+},
+
+];
+
+export const outputFiltertype = [
+{   "num": "053",
+    "name": "persian",
+    "type": [
+        "normal"],
+
+},
+{
+    "num": "052",
+    "name": "meowth",
+    "type": [
+        "normal"],
+},
+{
+    "num": "016",
+    "name": "pidgey",
+    "type": [
+        "normal",
+        "flying"],
+},
+{
+    
+        "num": 137,
+        "name": "porygon",
+        "type": [
+            "normal"
+        ],
+    
+    
+}
+];
 
 /*
 export let dataTest= ()=>{
