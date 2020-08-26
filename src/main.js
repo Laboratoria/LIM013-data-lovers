@@ -6,6 +6,21 @@ const menudeploy = document.querySelector('.menu-deploy');
 const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
+//accordion
+document.querySelectorAll(".typeButton").forEach(button => {
+    button.addEventListener("click", () => {
+        const typeContainerOpenSection = button.addElementSibling;
+
+        button.classList.toogle("typeButtonActive");
+
+        if (button.classList.contains("typeButtonActive")) {
+            typeContainerOpenSection.style.maxHeigth = typeContainerOpenSection.scrollHeight + "px";
+        } else {
+            typeContainerOpenSection.style.maxHeigth = 0;
+        }
+    })
+})
+
 //Traer nodo para manipular el DOM
 let pokemonDisplay = document.getElementById("pokemonDisplay");
 //crear dinamicamente elemntos section y asignarle imagen
