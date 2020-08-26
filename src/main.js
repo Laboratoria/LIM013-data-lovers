@@ -23,7 +23,6 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     </section>`;
 }).join('')}`;
 
-
 //funcion para agregar caracteristicas principales al pasar el mouse por el elemento
 const showEssential = document.querySelectorAll('.picture');
 for (let index = 0; index < showEssential.length; index++) {
@@ -37,17 +36,31 @@ for (let index = 0; index < showEssential.length; index++) {
     });
 }
 
-//mostrar pantalla de información detallada de pokemon
+//mostrar pantalla de información detallada de pokemon responsive
 const btnMorePok=document.querySelectorAll('.morePok');
 for (let index = 0; index < btnMorePok.length; index++) {
     btnMorePok[index].addEventListener('click',()=>{
         document.querySelector('.informationDisplay').style.display="block";
-        pokemonDisplay.style.width="60%"   
-        document.querySelector('.informationDisplay').style.width="40%";
-        
+        const informationDisplay = document.querySelector('.informationDisplay');
+        const pokemonArea = document.querySelector('.pokemonArea');
+        resizeInformation(pokemonArea,pokemonDisplay,informationDisplay)
+        window.onresize=()=>{
+            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay)
+        }  
     });  
 }
-console.log(btnMorePok.length);
+
+//funcion para redimenzionar contenedor de pokemones y contenedor de información
+function resizeInformation(a,b,c) {
+    if (a.clientWidth<=1000) { 
+        b.style.width="0%";
+        c.style.width="98%"
+    } else {
+        b.style.width="60%"   
+        c.style.width="40%";
+    }   
+}
+
 //console.log(example, data);
 
 

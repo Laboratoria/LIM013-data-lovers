@@ -8,10 +8,9 @@ body {
     font-family: sans-serif;
 }
 .container {
-    width: 100%;
-    max-width: 100%;
+    width: 98%;
     margin: 0 auto;
-    overflow: hidden;
+    
 }
 /*************todo referente a barra de navegación***************/
 /*navigator flex*/
@@ -513,7 +512,7 @@ input[type="checkbox"]:checked + label {
 /*distribución de pokemones*/
 .pokemonArea{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     width: 100%;
 }
@@ -528,6 +527,7 @@ input[type="checkbox"]:checked + label {
 .informationDisplay{
     display: none;
     height: 660px;
+    width: 400px;
     background: aquamarine;
 }
 
@@ -590,7 +590,6 @@ input[type="checkbox"]:checked + label {
 /*numero de pokemon*/
 }
 .namePok{
-/*nombre de pokemon*/
 }
 .grass{
 /*tipo 1 de pokemon*/
