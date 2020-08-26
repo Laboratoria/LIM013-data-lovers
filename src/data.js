@@ -20,6 +20,9 @@ export const orderPokemonUpward = (myArray) => {
     return myArray;
 };
 
+/*
+
+
 export const orderPokemonDownward = (myArray) => {
   myArray.sort(function(a,b){
         let x = a.name;
@@ -32,7 +35,7 @@ export const orderPokemonDownward = (myArray) => {
     //console.log(myArray);
     return myArray;
 };
-
+*/
 
 export const anotherExample = () => {
   return 'OMG';
