@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
     /*display:block*/
 }
-.mainContainer {
+.container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -555,24 +555,6 @@ input[type="checkbox"]:checked + label {
     display:block  
 }
 
-/*distribución de pokemones*/
-.containerPicture {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 100%;
-    height:0px;
-    margin: 20px 0px;
-}
-.picture {
-    width: 200px;
-    height: 234px;
-    margin: 5px;
-    background-size:100%;
-    background-image: url(images/hexagono2.png);
-    background-size: cover;
-}
-
 .card {
     background: black;
 }
@@ -597,11 +579,12 @@ input[type="checkbox"]:checked + label {
     color: white;
 }
 
-/*distribución de pokemones*/
+/*distribución de pokemones display principal*/
 .containerPicture{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    
 }
 .picture{
     width: 180px;
@@ -618,8 +601,90 @@ input[type="checkbox"]:checked + label {
     width:130px;
     height:130px;
 }
+.essentialInformation{
+    display: none;
+}
 
-/*prueba toogle*/
+/***************informacion principal de pokemones*******************/
+.numPok{
+/*numero de pokemon*/
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 22px;
+    line-height: 2;
+    text-decoration: none;
+    color: black;
 
-/*End of prueba toogle*/
+}
+
+.namePok{
+/*nombre de pokemon*/
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 18px;
+    line-height: 2;
+    text-decoration: bold;
+    color: black;
+}
+
+.typePok {
+    width: 100%;
+    height: 25px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.typePokPCero {
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    width: 50px;
+    margin-right: 10px;
+    padding: 0px 5px;
+    border: solid 1px black;
+}
+
+.typePokPOne {
+    float: right;
+    font-size: 12px;
+    text-align: center;
+    width: 50px;
+    padding: 0px 5px;
+    border: solid 1px black;
+}
+
+.grass{
+/*tipo 1 de pokemon*/
+}
+.poison{
+/*tipo 2 de pokemon*/
+}
+.etc{
+/*boton de ver mas pokemon*/ 
+}
+
+.morePok {
+    justify-content: center;
+    width: 90px;
+    
+    padding: 5px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #f5b402;
+    cursor: pointer;
+
+}
+
+.morePok:hover {
+    background-color: #f59802;
+}
+
+
 

@@ -8,7 +8,7 @@
     <script src="https://use.fontawesome.com/972b224447.js"></script>
   </head>
   <body>
-    <section class="mainContainer">
+    <section class="container">
       <header class="header">
       <!-- Navigation bar -->
         <section class="topnav">
@@ -21,7 +21,7 @@
               <!-- Links -->
             <nav class="listItem" id="listItem">
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#"id="prueba">Home</a></li>
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Links</a></li>
                 <li><a href="#">Go app</a></li>
@@ -31,8 +31,7 @@
             <section class="logo">
               <a class="navbar-brand">P O K É D E X</a>
             </section>
-          </section>
-            
+          </section>            
               <!-- Search form -->
           <section class="search-container">
             <form>
@@ -43,42 +42,33 @@
             
         </section>
       </header>
-      
       <!--MAIN contenido principal del body(cuerpo)-->
       <main class="displayContainer">
         <!-- Dark folder: Type menú -->
-        <!--<section class="accordion">
-          <button type="button" class="accordionButton">Expand Context</button>
-          <section class="accordionContent">
-            <p>
-              Hola mundo. jsdcjhdkjdfdhfkjhkjdfhjdhfjdhajknncncjncncjnclakhuryn cmcncjg jhe.
-            </p>
+        <form>
+          <section class="typeContainerClose">
+            <button type="button" name="type" id="type" class="typeButton">Type</button>
           </section>
-        </section>-->
-        <form action="">
-            <section class="typeContainerClose">
-              <button type="button" name="type" id="type" class="typeButton">Type</button>
+          <section class="typeContainerOpen">
+            <section class="typeContainerHeader">
             </section>
-            <section class="typeContainerOpen">
-              <section class="typeContainerHeader">
-              </section>
-              <section class="typeContainerBody">
-                <section class="typeContainerBodyInner">
-                  <section class="typeContainerBodyInnerTitle">
-                    <h2>Pokémon Types</h2>
-                    <hr>
-                  </section>
-                  <section class="typeContainerBodyInnerTypes">
-                    <ul>
-                      <li>
-                        <input type="checkbox" id="pokemonTypeNormal" name="pokemonTypeNormal" value="normal">
-                        <label for="pokemonTypeNormal">Normal</label>
-                      </li>
-                      <li>
-                        <input type="checkbox" id="pokemonTypeGrass" name="pokemonTypeGrass" value="grass">
-                        <label for="pokemonTypeGrass">Grass</label>
-                      </li>
-                      <li>
+            <section class="typeContainerBody">
+              <section class="typeContainerBodyInner">
+                <section class="typeContainerBodyInnerTitle">
+                  <h2>Pokémon Types</h2>
+                  <hr>
+                </section>
+                <section class="typeContainerBodyInnerTypes">
+                  <ul>
+                    <li>
+                      <input type="checkbox" id="pokemonTypeNormal" name="pokemonTypeNormal" value="normal">
+                      <label for="pokemonTypeNormal">Normal</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="pokemonTypeGrass" name="pokemonTypeGrass" value="grass">
+                      <label for="pokemonTypeGrass">Grass</label>
+                    </li>
+                    <li>
                         <input type="checkbox" id="pokemonTypeFighting" name="pokemonTypeFighting" value="fighting">
                         <label for="pokemonTypeFighting">Fighting</label>
                       </li>
@@ -145,17 +135,17 @@
                     </ul>
                   </section>
                   <section class="typeContainerBodyInnerSearchByTypeButtons">
-                    <button type="button" name="searchByTypeButtonReset" id="searchByTypeButtonReset" class="searchByTypeButtonReset">Reset</button> 
-                    <button type="button" name="searchByTypeButtonSearch" id="searchByTypeButtonSearch" class="searchByTypeButtonSearch">Search</button> 
+                    <button type="reset" name="searchByTypeButtonReset" id="searchByTypeButtonReset" class="searchByTypeButtonReset">Reset</button> 
+                    <button type="submit" name="searchByTypeButtonSearch" id="searchByTypeButtonSearch" class="searchByTypeButtonSearch">Search</button> 
                   </section>
-                </section>
-                <section class="typeContainerHide">
-                <!--button toogle--><p>Button Toogle Hide</p>
-                </section>
+                </section>              
+              <section class="typeContainerHide">
+              <!--button toogle--><p>Button Toogle Hide</p>
               </section>
-            </section> 
-          </form> 
-          <li></li>
+            </section>
+          </section> 
+        </form> 
+        <li></li>
         </section>
         </section>
         <!--End of new path-->
@@ -165,7 +155,7 @@
               <button type="button" name="openType" id="openType" class="openTypeButton" ></button>
             </section>--> 
          <!--</section>-->       
-        <!--<section class="btnGroupCloseTypeDisplay">
+         <!--<section class="btnGroupCloseTypeDisplay">
             <button type="button" name="type" id="type" class="closeButton">Close</button> 
             <button type="image" name="closeType" id="closeType" class="closeTypeButton"></button> 
           </section>-->
@@ -184,16 +174,14 @@
             </section>
           </section>
         </section>
-        <!-- Order by menu -->
-        <!-- Pokémon display -->
-        <section class="scrollArea" id="scrollArea"> 
-          <section class="pokemonDisplay" id="pokemonDisplay">
-
-          </section>             
-        </section>
-                  
-      </main>
-
+      </section>
+      <!-- Pokémon display (área donde se muestran los pokemones y su informacion) -->
+      <section class="scrollArea" id="scrollArea"> 
+        <section class="pokemonDisplay" id="pokemonDisplay">
+        </section>             
+      </section>
+          
+    </main>
     <!-- Pokémon card info -->
   <!--<aside class="card">
   
