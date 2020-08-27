@@ -60,27 +60,11 @@ const setupagination = (items, wrapper, rows_per_page) => {
 	wrapper.innerHTML = "";
 
 	let pageCount = Math.ceil(items.length / rows_per_page);
-	let longPageCount = pageCount.length
-	if (longPageCount > 9) {
-		console.log(longPageCount)
-	}else {
-		for (let i = 1; i < pageCount + 1; i++) {
-			let btns = paginationbuttons(i, items);
-			wrapper.appendChild(btns);
-		}
-		
-	}
-}
-
-/*const setupagination = (items, wrapper, rows_per_page) => {
-	wrapper.innerHTML = "";
-
-	let pageCount = Math.ceil(items.length / rows_per_page);
 	for (let i = 1; i < pageCount + 1; i++) {
 		let btns = paginationbuttons(i, items);
 		wrapper.appendChild(btns);
 	}
-}*/
+}
 
 //Funciones de botón de inicio
 const bienvenido = () => {
