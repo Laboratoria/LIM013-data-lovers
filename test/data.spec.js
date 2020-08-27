@@ -23,31 +23,8 @@ describe('datajs', () => {
   });
 
   it('debe retornar filtro `humanos`', () => {
-   expect(datajs.filterSpecies(desordenC,"Human")).toEqual(correctC);
+   expect(datajs.filterSpecies(desordenC,"esp", "Human")).toEqual(correctC);
   });
 
 });
 
-  /* it('deberia ser una function buscar', () => {
-    expect(typeof datajs.filterName).toBe('function');
-  });
-
-  it('debe de reotrnar lo que `buscas`', () => {
-    expect(datajs.filterName()).toBe(true);
-  });
-
-
-});
-
-
-
-describe('datajs.filterSpecies', () => {
-  it('is a function', () => {
-    expect(typeof data.filterSpecies).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-*/

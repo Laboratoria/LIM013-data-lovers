@@ -171,10 +171,15 @@ const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
-	console.log(inputName);
-	const filtroData = datajs.filterSpecies(data, inputName);
-	displayList(filtroData, listElement, rows, currentPage);
-	setupagination(filtroData, paginationElemnent, rows);
+	for (let i = 0; i < inputName.length; i++) {
+		if (inputName[i].checked == true) {
+			const ninputNombre = inputName[i].name
+			const inputValor = inputName[i].getAttribute("value");
+			const filtroData = datajs.filterSpecies(data, ninputNombre, inputValor);
+			displayList(filtroData, listElement, rows, currentPage);
+			setupagination(filtroData, paginationElemnent, rows);
+		}
+	}
 }
 
 for (let i = 0; i < botonesFiltros.length; i++) {
@@ -183,15 +188,21 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 		inputsFiltros[j].addEventListener("click", btnF);
 	}
 }
-
 const botonesFiltrosM = document.querySelector("#accordions").children;
 const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {
-	const filtroDataM = datajs.filterSpecies(data, inputNameM);
-	displayList(filtroDataM, listElement, rows, currentPage);
-	setupagination(filtroDataM, paginationElemnent, rows);
-	document.querySelector('#my_modal').classList.add("ocultar");
+	for (let i = 0; i < inputNameM.length; i++) {
+		if (inputNameM[i].checked == true) {
+			const ninputNombreM = inputNameM[i].name
+			const inputValorM = inputNameM[i].getAttribute("value");
+			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
+			displayList(filtroDataM, listElement, rows, currentPage);
+			setupagination(filtroDataM, paginationElemnent, rows);
+			document.querySelector('#my_modal').classList.add("ocultar");
+		}
+	}
+
 }
 
 for (let i = 0; i < botonesFiltrosM.length; i++) {
@@ -303,7 +314,7 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
 
 //Funciones del acordeón
 accordionItemHeaders.forEach(accordionItemHeader => {
-	accordionItemHeader.addEventListener("click", function(){
+	accordionItemHeader.addEventListener("click", function () {
 		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
 		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
 			currentlyActiveAccordionItemHeader.classList.toggle("active");
