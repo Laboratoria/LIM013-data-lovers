@@ -114,6 +114,17 @@ const botonTodos = () => {
 const btnTodos = document.getElementById("btn-todos")
 btnTodos.addEventListener("click", botonTodos);
 
+const botonTodosM = () => {
+	bienvenido();
+	document.querySelector('#my_modal').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
+}
+const btnTodosM = document.getElementById("btn-todos-m")
+btnTodosM.addEventListener("click", botonTodosM);
+
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
 	document.querySelector('#especies').classList.remove("ocultar");
@@ -270,11 +281,19 @@ const presionarTecla = () => {
 
 window.onkeydown = presionarTecla;
 
+// Función de ordenar
+const btnOrder = document.getElementById("orden")
+const funcionLetras = document.getElementById("letritas");
+
 const letras = () => {
-	document.querySelector('#letritas').classList.remove("ocultar");
+	if (funcionLetras.classList.contains("ocultar")) {
+		funcionLetras.classList.remove("ocultar");
+	} else {
+		funcionLetras.classList.add("ocultar");
+	}
 }
 
-document.getElementById("orden").addEventListener("click", letras);
+btnOrder.addEventListener("click", letras);
 
 const acenA_Z = () => {
 	datajs.nameA_Z(data);
