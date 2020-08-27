@@ -78,6 +78,7 @@ main img{
 	padding: 10% 0% 10% 25%;
 	display: block; 
 }
+/* ----PAGINA CAMPEONES------ */
 #championsPage{
 	display: none;
 }
@@ -116,10 +117,8 @@ font-size: 20px;
 	padding: 10px;
 	margin: 25px 50px 0px;
 }
-p{
-	color:#ffffff;
-}
-.rol-type2{
+
+.categoria a{
 	color: #000000;
 	background-color:#ffffff;
 	font-family: 'Bangers', cursive;
@@ -128,7 +127,7 @@ p{
 	width: 100px;
 	height: 25px;
 }
-.rol-type2:hover {
+.categoria a.active{
     background-color: #dbb74c;
 }
 .form-name {
@@ -148,9 +147,17 @@ select {
 .rol-type-todo{
 	display:inline-flex;
 	margin: 0px 0px 0px 53px;
+
 }
 .rol-type{
 	display:inline-flex;
+}
+
+#imgChampions{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
 }
 footer {
 	background: #000000;;
