@@ -10,7 +10,6 @@ describe('datajs', () => {
     expect(datajs.nameA_Z(desoA_Z)).toEqual(acomoA_Z);
   });
 
-
   it('deberia ser una function filtrar', () => {
     expect(typeof datajs.nameZ_A).toBe('function');
   });
@@ -28,3 +27,4 @@ describe('datajs', () => {
   });
 
 });
+
