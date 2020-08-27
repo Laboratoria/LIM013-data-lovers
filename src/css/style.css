@@ -102,6 +102,25 @@ header nav a:hover {
   flex-basis: 70%;
 
 }
+/**************/
+main .list{
+  width: 80%;
+  max-width: 768px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+}
+
+main.list .item{
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+main list .item:last-of-type{
+  border-bottom:none;
+}
+main .list .item:hover {
+  background: rgba (0, 0, 0, 0.05);
+}
 
 .main img {
   padding: 10px 0px;
@@ -409,29 +428,55 @@ footer i:hover {
 
 
 /*---------------BUSCADOR -------- */
-.search {
+.search{
+  width: 85%;
+  display: flex;
+  margin: auto;
+}
+.search1 {
   background: #fff;
   margin: 10px 0;
   padding: 10px;
-  width: 100%;
+  width: 30%;
   border: 2px solid #986E1E;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  -webkit-border-radius: 5px;
+  /*-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -o-border-radius: 5px;*/
+}
+#inputSearch{
+  background: white;
+  border: white;
+  width: 100%;
+}
+#filter{
+  background: white;
+  width: 50%;
+  border: 2px solid #986E1E;
+  margin:10px 0px;
+  align-items: center;
+  line-height: 35px;
+  text-align: center;
 }
 
 input[type=button] {
   background: none;
   border: none;
   cursor: pointer;
+  margin-right: 10px;
 }
-
+#order{
+  background:white;
+  width: 20%;
+  border: 2px solid #986E1E;
+  margin: 10px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
 /*---------------CARDS LEGEDS -------- */
 .legends_container {
   display: flex;

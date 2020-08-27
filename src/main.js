@@ -84,6 +84,7 @@ const search = () => {
         `<div class="legends">
         <img class="img-container" src="${legend.splash}" alt="">
         <div class="name">${legend.name}</div>
+        <div class="name">"${legend.title}"</div>
       </div>`
     }
   }
@@ -117,13 +118,6 @@ for (let i = 0; i < arrayLegends.length; i++) {
   option.innerText = arrayLegends[i].name;
   legend02.appendChild((option))
 }*/
-
-
-
-
-
-
-
 
 
 
