@@ -281,6 +281,8 @@ const acenA_Z = () => {
 	document.getElementById('alldata').innerHTML = " ";
 	displayList(data, listElement, rows, currentPage);
 	setupagination(data, paginationElemnent, rows);
+	btnF(displayList, setupagination);
+	btnFM(displayList, setupagination);
 	document.querySelector('#letritas').classList.add("ocultar");
 }
 
@@ -291,6 +293,8 @@ const acenZ_A = () => {
 	document.getElementById('alldata').innerHTML = " ";
 	displayList(data, listElement, rows, currentPage);
 	setupagination(data, paginationElemnent, rows);
+	btnF(displayList, setupagination);
+	btnFM(displayList, setupagination);
 	document.querySelector('#letritas').classList.add("ocultar");
 }
 
