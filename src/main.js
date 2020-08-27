@@ -1,21 +1,20 @@
-import { filterByRol ,search} from './data.js';
+import { filterByRol, search} from './data.js';
 import data from './data/lol/lol.js';
-const LolObjects=data.data
 /* --Se muestran todos los campeones al iniciar la página-- */
 const cardStructure=()=>{
     const champion=data.data;
     const obj=Object.values(champion);
 obj.map((champ) => {
         const currentDiv=document.getElementById("imgChampions");
-        const img=document.createElement('img')
-        const p=document.createElement('p')
+        const img=document.createElement('img');
+        const p=document.createElement('p');
         img.src=`${champ.splash}`;
         p.innerHTML=`${champ.name}`;
         currentDiv.appendChild(p);
         currentDiv.appendChild(img);
-    })
-}
-console.log(cardStructure)
+    });
+};
+console.log(cardStructure);
 /* -------Efecto hover ---------- */
     const menuRol = document.querySelectorAll('#categoria a');
     menuRol.forEach((element) => {
@@ -34,16 +33,16 @@ console.log(cardStructure)
             console.log("term");
             const lol=data.data;
             const champ=Object.values(lol);
-            console.log(champ)
+            console.log(champ);
             const championByType = filterByRol(champ, term);
             console.log(championByType);
             if (term==="All") {
-                cardStructure(champ)
+                cardStructure(champ);
             } else {
-                cardStructure(championByType)
+                cardStructure(championByType);
             }
-        })
-    })
+        });
+    });
 /* ------Búsqueda por nombre---------- */
 const inputclass=document.querySelector("#form-name2");
 console.log(inputclass);
@@ -54,7 +53,7 @@ inputclass.addEventListener("keyup",e=>{
     const champ=Object.values(lol)
     const champByName=search(champ,searchName);
     console.log(champByName);
-})
+});
            /* const crearCartasLol = (filterByRol => {   
                 filterByRol.forEach((champ) => {
                     let templateListOfCards = '';
