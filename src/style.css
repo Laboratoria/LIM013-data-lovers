@@ -68,6 +68,10 @@ header nav .barsNavigation a:hover {
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
 	background-size: 100% 100%;
 }
+#championPage{
+	background-color: #061C25 ;
+	background-size: 100% 100%;
+}
 main img{
 	width: 50%;
 	height: 50%;
@@ -112,7 +116,9 @@ font-size: 20px;
 	padding: 10px;
 	margin: 25px 50px 0px;
 }
-
+p{
+	color:#ffffff;
+}
 .rol-type2{
 	color: #000000;
 	background-color:#ffffff;
