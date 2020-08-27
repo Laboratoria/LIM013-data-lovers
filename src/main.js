@@ -60,11 +60,27 @@ const setupagination = (items, wrapper, rows_per_page) => {
 	wrapper.innerHTML = "";
 
 	let pageCount = Math.ceil(items.length / rows_per_page);
+	let longPageCount = pageCount.length
+	if (longPageCount > 9) {
+		console.log(longPageCount)
+	}else {
+		for (let i = 1; i < pageCount + 1; i++) {
+			let btns = paginationbuttons(i, items);
+			wrapper.appendChild(btns);
+		}
+		
+	}
+}
+
+/*const setupagination = (items, wrapper, rows_per_page) => {
+	wrapper.innerHTML = "";
+
+	let pageCount = Math.ceil(items.length / rows_per_page);
 	for (let i = 1; i < pageCount + 1; i++) {
 		let btns = paginationbuttons(i, items);
 		wrapper.appendChild(btns);
 	}
-}
+}*/
 
 //Funciones de botón de inicio
 const bienvenido = () => {
@@ -113,6 +129,17 @@ const botonTodos = () => {
 }
 const btnTodos = document.getElementById("btn-todos")
 btnTodos.addEventListener("click", botonTodos);
+
+const botonTodosM = () => {
+	bienvenido();
+	document.querySelector('#my_modal').classList.add("ocultar");
+	resetRadioButtons("esp");
+	resetRadioButtons("orig");
+	resetRadioButtons("gener");
+	resetRadioButtons("estd");
+}
+const btnTodosM = document.getElementById("btn-todos-m")
+btnTodosM.addEventListener("click", botonTodosM);
 
 const checkboxE = () => {
 	document.querySelector('#content-cb').classList.remove("ocultar");
@@ -270,11 +297,19 @@ const presionarTecla = () => {
 
 window.onkeydown = presionarTecla;
 
+// Función de ordenar
+const btnOrder = document.getElementById("orden")
+const funcionLetras = document.getElementById("letritas");
+
 const letras = () => {
-	document.querySelector('#letritas').classList.remove("ocultar");
+	if (funcionLetras.classList.contains("ocultar")) {
+		funcionLetras.classList.remove("ocultar");
+	} else {
+		funcionLetras.classList.add("ocultar");
+	}
 }
 
-document.getElementById("orden").addEventListener("click", letras);
+btnOrder.addEventListener("click", letras);
 
 const acenA_Z = () => {
 	datajs.nameA_Z(data);
