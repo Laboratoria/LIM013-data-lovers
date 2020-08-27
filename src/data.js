@@ -1,6 +1,6 @@
 // estas funciones son de ejemplo
 
-export const filterDataPok = () => {
+export const example = () => {
   return 'example';
 };
 
