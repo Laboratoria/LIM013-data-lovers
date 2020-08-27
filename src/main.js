@@ -1,10 +1,17 @@
-import { filterByType, sortByName, filterByName } from './data.js';
+import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
+
+const container = document.querySelector("#container");
+const searchByName = document.querySelector("#searchByName");
+const selectByName = document.querySelector("#selectByName");
+const selectByType = document.querySelector("#selectByType");
 
 
 const showByData = (array) => {
     container.innerHTML="";    
-    array.forEach((item) => {
+
+    array.forEach((item, index, array) => {
+        const pc = computeByStats(Object.values(item.stats));
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
         showByItem.innerHTML=`
@@ -12,33 +19,39 @@ const showByData = (array) => {
             <img src=${item.img}></img>
             <p>name: ${item.name}</p>
             <p>type: ${item.type}</p>
-            `;  
-        const container = document.querySelector("#container");
+            `       
+            // <p>resisntant: ${item.resistant}</p>
+            // <p>waknesses: ${item.weaknesses}</p>
+            // <p>attack: ${item.stats["base-attack"]}
+            // <p>defense: ${item.stats["base-defense"]}
+            // <p>stamina: ${item.stats["base-stamina"]}
+            // <p>PC: ${pc};
         container.appendChild(showByItem);
-    });
-};
 
+        showByItem.addEventListener("click", () => {
+            const showForItem = document.createElement("div");
+            showForItem.classList.add("elemento");
+            // showForItem.style.display="block";
+            showForItem.innerHTML= `
+                <span>x</span>
+                <p>#${item.num}</p>
+                <img src=${item.img}></img>
+                <p>name: ${item.name}</p>
+                <p>type: ${item.type}</p>
+                `
+            showByItem.appendChild(showForItem);
+            
+            showForItem.addEventListener("click", () => {
+                showByItem.inneHTML="";
+            });
+        });
+    });     
+}
+ 
 //inicializando//
 showByData(data.pokemon);
 
-//sortByName//
-const selectByName = document.querySelector("#selectByName");
-selectByName.addEventListener("change", () => {
-    const showByName = selectByName.value;
-    const showListName = sortByName(data.pokemon,showByName);
-    return showByData(showListName);
-});
-
-// filterByType//
-const selectByType = document.querySelector("#selectByType");
-selectByType.addEventListener("change", () => {
-    const showByType = selectByType.value;
-    const showListType = filterByType(data.pokemon,showByType);
-    showByData(showListType);
-});
-
 // filterByName//
-const searchByName = document.querySelector("#searchByName");
 searchByName.addEventListener("blur", () => {
     const showForName = searchByName.value;
     const showCardName = filterByName(data.pokemon,showForName);
@@ -46,8 +59,19 @@ searchByName.addEventListener("blur", () => {
 });
 
 
+//sortByName//
+selectByName.addEventListener("change", () => {
+    const showByName = selectByName.value;
+    const showListName = sortByName(data.pokemon,showByName);
+    return showByData(showListName);
+});
 
 
-
+// filterByType//
+selectByType.addEventListener("change", () => {
+    const showByType = selectByType.value;
+    const showListType = filterByType(data.pokemon,showByType);
+    showByData(showListType);
+});
 
 
