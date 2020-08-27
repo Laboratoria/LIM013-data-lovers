@@ -1,86 +1,98 @@
-
 import data from "./data/lol/lol.js";
-import { filterData, sortData } from './data.js';
+import {filterData, sortData } from './data.js';
 
 /*--cargar la data--*/
 const objData = data.data;
 const arrayData = Object.values(objData);
+containerOfAllFunctions(arrayData);
 
+const sortKind = document.getElementById('lol-sort'); 
+const inputSearch = document.getElementById('search-for-champion'); 
+const searchbtton = document.getElementById('search-btn'); 
+const arrayTag = Object.values(document.getElementsByClassName('filter-champ')); 
 
-/*--llamar y mostrar la data--*/
-const buttonChamps = document.getElementById("filchamp");
-const containerList = document.getElementById("champion-three");
-
-/ *TODO--listado--*/
-let getChamps = (array) => {
-  let arrayChamps = [];
-  for (let i = 0; i < array.length; i++) {
-    arrayChamps.push({
-      name: array[i].name,
-      title: array[i].title,
-      splash: array[i].splash,
-      info: array[i].info,
-      blur: array[i].info,
-      stats: array[i].stats,
-      tags: array[i].tags,
-    });
-  }
-  let rolChamps = [];
-  let filterChamps = arrayChamps.sort((a, b) => {
-    if (a.name < b.name) {
-      return -1;
-    } else {
-      return 1;
+function containerOfAllFunctions (arrayChamp){
+    const containerChamp = document.getElementById('container-list');
+    const cardChamp = (arrayChamp) => {
+    let newArrayChamp = [];
+    let contend = [];
+    containerChamp.value = '';
+    for (let index=0; index<arrayChamp.length; index++){
+      newArrayChamp.push(Object.assign({}, arrayChamp[index]));
     }
-  });
-  return filterChamps.slice(0, 140);
-};
+    for (let index = 0; index < newArrayChamp.length; index++) {
+      contend.push (`
+      <div class ="card-link">
+        <a class="blog-card" id="${ newArrayChamp[index].id }" href="#openmodal${index}">
+      <div>
+        <img class="post-image " src="${ newArrayChamp[index].img}" />
+        <div class="article-details" >
+          <h1 class="post-name" id="${ newArrayChamp[index].id }">${ newArrayChamp[index].name} </h1>
+          <h3 class="post-title" id="${ newArrayChamp[index].id }"> ${ newArrayChamp[index].title}</h3>
+          <h3 class="post-title" id="${ newArrayChamp[index].id }"> ${ newArrayChamp[index].info.difficulty}</h3>
+        </div>                   
+      </div>
+      </a>
+      </div>
 
-let arrayChamps = getChamps(arrayData);
-let showAarrayChamps = (array) => {
-  for (let i = 0; i < array.length; i++) {
-    containerList.innerHTML += ` 
-        <div class="card-Champ">
-          <figure>
-          <img class="frontalTop" src="${array[i].splash}"/>
-          <div class="traseraTop">
-            <li class="post-names">${array[i].name}</li>
-            <li class="post-title">${array[i].title}</li>
-            <li class="post-dificultad">Dificultad: ${array[i].info.difficulty}</li>
-          </div>
-          </figure>
-        </div>`;
-  }
-};
-buttonChamps.addEventListener("click", showAarrayChamps(arrayChamps));
-console.log(arrayChamps)
-/*--listado--*/
-const ul = document.querySelector('.menu');
-const ul2 = document.querySelector('.menu2');
-const li = document.querySelectorAll('.menu li');
-const li2 = document.querySelectorAll('.menu2 li');
-const cleanClasses = () => {
-  ul.querySelector('.active').classList.remove('active');
-  ul2.querySelector('.active').classList.remove('active');
-  li[0].classList.add('active');
-  li2[0].classList.add('active');
-};
+      <section id="openmodal${index}" class="modal-window">
+        <div class = "modal-content" id="${ newArrayChamp[index.id]}">
+        <a href="#" title="Close" class="modal-close">X</a>
+        <img class="modal-img" src="${ newArrayChamp[index].splash }" />
+        <div class="modal-info">
+        <img src="${ newArrayChamp[index].img}"/>
+        <h1>${ newArrayChamp[index].name}</h1>
+        <h3>${ newArrayChamp[index].title}</h3>
+        <p>${ newArrayChamp[index].blurb}</p>
+        <p>${ newArrayChamp[index].tags}</p>
+        <table>
+        <tr>
+          <th> Health Points (HP)</th>
+          <th> HP per Level</th>
+          <th> HP at Lvl. 5</th>
+          <th> HP at Lvl. 10</th>
+          <th> HP at Lvl. 15</th>
+          <th> HP at Lvl. 18</th>
+        </tr>
+        <tr>
+          <td>${ newArrayChamp[index].stats.hp}</td>
+          <td>${ newArrayChamp[index].stats.hpperlevel}</td>
+        </tr>
+        </table>
+        </div>
+      </div>
+      </section>`
+      );
+    }  
+    containerChamp.innerHTML = contend.join(''); 
+  };
+  cardChamp(arrayChamp);
+  const listChamp = (arrayRol) => {
+    let arrayListChamp = [];
+    arrayRol.forEach(tags => {
+      tags.addEventListener('change', () => {
+        if (tags.checked === true) {
+          arrayListChamp.push(tags.value);
+        } else {
+          const x = arrayListChamp.indexOf(tags.value);
+          arrayListChamp.splice(x, 1);
+          cardChamp(arrayChamp);
+        }
+        cardChamp(filterData(arrayChamp, arrayListChamp)); 
+      });
+    });
+  };
+  listChamp(arrayTag);
+  const search = () => {
+    const listBySort = sortKind.options[sortKind.selectedIndex].value; 
+    const arraySearch = window.data.searchData(arrayChamp, inputSearch.value);
+    cardChamp(sortData(arraySearch, parseInt(listBySort[0]), parseInt(listBySort[1]))); 
+  };
 
-input.addEventListener('keyup', (evt) => {
-  const term = evt.target.value.toLowerCase();
-  const filteredChampions = filterByName(championList, term);
-
-  const errorMessage = document.querySelector('#error');
-  if (filteredChampions.length === 0) {
-      errorMessage.classList.remove('hidden');
-  } else {
-      errorMessage.classList.add('hidden');
-  }
-  list.innerHTML = '';
-
-  // limpiando de clases de dificultad
-  cleanClasses();
-  cleanDifficulty(difficulty1);
-  functionCardsStructure(filteredChampions);
-},
-false);
+  const searchRolandOrder = () => {
+    search();
+    sortKind.addEventListener('change', search);
+    searchbtton.addEventListener('click', search);
+  };
+  searchRolandOrder();
+}
