@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
   </head>
-      <header>
+  <body>
+    <header>
       <div class="header">
         <figure>
           <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
@@ -20,7 +21,7 @@
           <div class="menu-bar">
             <a href="index.html">Home</a>
             <a href="indextop.html">Top 5</a>
-            <a href="indexcampeones.html">Campeones</a>
+            <a href="indexcampeones.html" id="filchamp">Campeones</a>
           </div>
           <div class="menu-play">
             <a href="https://signup.na.leagueoflegends.com/en/signup/index" target = _blank >Juega ahora</a>
@@ -28,7 +29,19 @@
         </div>
       </div>
     </header>
-    <div id="searchBar" class="corner">
+    <main>
+      <section class = "list" id="champion-three">
+        <div class="top-box">
+          <img src="img/Emblem_Challenger.png" class= "emblemChallenger" width="20%" alt="emblemChallenger">
+          <p class="top5">Elige tu</p>
+          <div class="divisor2">
+            <p class="champion"> Campeon</p>
+          </div>
+        </div>
+        <div class="list" id="">
+          <p class="listChamp">Teniendo en cuenta que hay más de 140 campeones, no tardarás en encontrar tu estilo de juego. Domina a uno o a todos.</p>
+        </div>
+            <div id="searchBar" class="corner">
             <div class="searchbar">
               <div class="nameSearch">
                 <img
@@ -40,7 +53,7 @@
                 <input
                   id="searchInputs"
                   type="text"
-                  placeholder="Search"
+                  placeholder="Buscar"
                   spellcheck="false"
                   maxlength="6"
                 />
@@ -48,71 +61,81 @@
               <span class="line"></span>
               <div class="dropdownMenu">
                 <div class="dropdownStyle">
-                  <img id="role" src="img/escudo.png" alt="shield" />
-                  <span id="roleLetter">ROLE</span>
+                  <img id="role" src="img/desliz.png" alt="shield" />
+                  <span id="roleLetter" value="role" type="button">ROL</span>
                 </div>
                 <div id="myDropdown2" class="dropdown-content">
-                  <ul class="menu2">
-                    <li class="active" data-value="ALL"><a>ALL</a></li>
-                    <li data-value="Assassin"><a>ASSASSIN</a></li>
-                    <li data-value="Mage"><a>MAGE</a></li>
-                    <li data-value="Fighter"><a>FIGTHER</a></li>
-                    <li data-value="Tank"><a>TANK</a></li>
-                    <li data-value="Support"><a>SUPPORT</a></li>
-                    <li data-value="Marksman"><a>MARKSMAN</a></li>
-                  </ul>
-                </div>
-              </div>
-              <ul class="menu">
-                <li class="active" data-value="ALL"><a>ALL</a></li>
-                <li data-value="Assassin"><a>ASSASSIN</a></li>
-                <li data-value="Mage"><a>MAGE</a></li>
-                <li data-value="Fighter"><a>FIGTHER</a></li>
-                <li data-value="Tank"><a>TANK</a></li>
-                <li data-value="Support"><a>SUPPORT</a></li>
-                <li data-value="Marksman"><a>MARKSMAN</a></li>
-              </ul>
-              <span class="line" style="margin-left: auto;"></span>
-              <div class="dropdown">
-                <div class="dif">
-                  <img id="arrow" src="img/desliz.png" alt="" />
-                  <span>Difficulty</span>
-                </div>
-                <div id="myDropdown" class="dropdown-content">
-                  <div class="difficulty1">
-                    <div class="levelEmpty" data-value="1" id="easy"></div>
-                    <div class="levelEmpty" data-value="2" id="medium"></div>
-                    <div class="levelEmpty" data-value="3" id="hard"></div>
+                  <div class="menu2" id="filter2">
+                    <input class="active" value="all" type="button"></input>
+                    <input value="Assassin" type="button"></input>
+                    <input value="Mage" type="button"></input>
+                    <input value="Fighter" type="button"></input>
+                    <input value="Tank" type="button"></input>
+                    <input value="Support" type="button"></input>
+                    <input value="Marksman" type="button"></input>
                   </div>
                 </div>
               </div>
+              <div class="menu" id="filter">
+                <input class="active" data-value="all" type="button"></input>
+                <input value="Assassin" type="button"></input>
+                <input value="Mage" type="button"></input>
+                <input value="Fighter" type="button"></input>
+                <input value="Tank" type="button"></input>
+                <input value="Support" type="button"></input>
+                <input value="Marksman" type="button"></input>
+              </div>
+              <span class="line" style="margin-left: auto;"></span>
               <span class="line"></span>
+              <div class="dropdownMenu">
+                <div class="dropdownStyle">
+                  <img id="roleDificultad" src="img/desliz.png" alt="shield" />
+                  <span id="roleDificultad" value="roleDificultad" type="button">Dificultad</span>
+                </div>
+                <div id="myDropdown2" class="dropdown-content">
+                  <div class="menu2" id="filter2">
+                    <input value="Baja Dificultad" type="button"></input>
+                    <input value="Alta Dificultad" type="button"></input>
+                  </div>
+                </div>
+              </div>
+
+                <div class="menu" id="filter">
+                  <input value="Baja Dificultad" type="button"></input>
+                  <input value="Alta Dificultad" type="button"></input>
+                </div>
+
               <div class="orderArray">
-                <div class="order">
-                  <span>A<img src="./img/flechabus.png" alt="Arrow" />Z</span>
+                <div class="order" id="order">
+                  <span>A<img src="./img/ascen.png" alt="Arrow" />Z</span>
                   <div id="dropdownSort" class="SortContent">
                     <img
                       class="order1"
                       id="az"
                       data-value="az"
-                      src="img/ascen.png"
+                      src="./img/ascen.png"
                       alt="order A-Z"
                     />
                     <img
                       class="order1"
                       id="za"
                       data-value="za"
-                      src="img/descen.png"
+                      src="./img/descen.png"
                       alt="order Z-A"
                     />
                   </div>
                 </div>
               </div>
+
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-      <footer>
+      </div>               
+      </section>
+      <section class="filter-champ" id="container-list" >
+      </section>
+    </main>
+    <footer>
       <div class="container-footer">
         <div class="riot">
           <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" id="imgriot" width="120" height=auto></a>
@@ -132,5 +155,6 @@
     </footer>
   </body>
   <script src="data/lol/lol.js" type="module"></script>
-  <script src="main.js"></script>
+  <script src="main.js" type="module"></script>
+  <script src="data.js" type="module"></script>
 </html>
