@@ -100,7 +100,7 @@ const search = () => {
 inputSearch.addEventListener('keyup', search)
 
 /*ESTADISTICA SELECT */
-const legend01 = document.querySelector('#select01')
+/*const legend01 = document.querySelector('#select01')
 console.log('legen01', legend01)
 for (let i = 0; i < arrayLegends.length; i++) {
   let option = document.createElement('option');
@@ -116,7 +116,7 @@ for (let i = 0; i < arrayLegends.length; i++) {
   option.value = arrayLegends[i].name;
   option.innerText = arrayLegends[i].name;
   legend02.appendChild((option))
-}
+}*/
 
 
 
@@ -130,17 +130,21 @@ for (let i = 0; i < arrayLegends.length; i++) {
 /*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
 //const reducer = (acumulador, valorActual)=> nuevoAcumulador
 //ejecutando función con array vacío
-const plano = arrayLegends.reduce((acc, el) => acc.concat(el), [])
+//const plano = arrayLegends.reduce((acc, el) => acc.concat(el), [])
 //console.log(plano);
-//const indexed= (arrayLegends[0].stats).reduce((acc, el) => ({
-// []
-//}));
-console.log(arrayLegends);
-const level = 1;
+//console.log(arrayLegends);
 
-const estadisticas = arrayLegends.reduce(function (acc, el) {
-  if (level === 1) {
-    return acc, (el.stats.hpperlevel * 1);
-  }
-}, 0)
-console.log(estadisticas);
+/*const indexed= arrayLegends.reduce ((acc, el)=>({
+  ...acc, 
+  [el.name+' '+el.stats.hpperlevel]: el,
+   
+}),{})
+console.log(indexed);*/
+//const level = 2;
+
+//const estadisticas = stats.reduce(function (acc, el) {
+  //if (level === 2) {
+    //return acc, (el.stats.hpperlevel * 2);
+  //}
+//}, 0)
+//console.log(estadisticas);

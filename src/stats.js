@@ -1,18 +1,48 @@
 import data from './data/lol/lol.js';
 
 const datos = data.data,
-    arrayLegends = Object.values(datos);
+  arrayLegends = Object.values(datos);
+
+  /*TRAER DATA ESTADÍSTICAS*/
+const listStats=(objLegend)=>{
+  for (let i=0; i<objLegend.length; i++){
+    let hpperlevel= objLegend[i].hpperlevel;
+    let mpperlevel=objLegend[i].mpperlevel;
+    let attackdamageperlevel= objLegend[i].attackdamageperlevel;
+    statsLegends(hpperlevel, mpperlevel, attackdamageperlevel);
+  }
+};
+
 
 /*ESTADÍSTICAS MÉTODO MAP (hpper level, mpper level, attack damage per level)*/
-const prodNivel = arrayLegends.map( 
-  (item) => {
-    const name = item.name
-    const hp = item.stats.hpperlevel * 1
-    return name + ': ' + hp
-  } 
-)
+/*LISTAR EN HTML */
+const statsLegends=(hpperlevel, mpperlevel, attackdamageperlevel)=>{
+  const stats=document.createElement('div'),
+    hpperlevelChampion=document.createElement('div'),
+    mpperlevelChampion=document.createElement('div'),
+    attackdamageperlevelChampion=document.createElement('div');
 
-console.log('prueba', prodNivel);
+  
+
+}
+
+/*METODO MAP */
+const level=document.getElementById('number');
+const championInput=document.getElementById('legend01')
+level.addEventListener('click', (e)=>{
+  const level=e.target.value;
+
+  console.log(level);
+  const prodNivel = arrayLegends.map( 
+    (item) => {
+      const name = item.name
+      const hp = item.stats.hpperlevel * level
+      return name + ': ' + hp
+    })
+    console.log('prueba', prodNivel);
+  return prodNivel;
+});
+
 
 /*ESTADISTICA SELECT */
 
@@ -33,3 +63,4 @@ for (let i = 0; i < arrayLegends.length; i++) {
   option.innerText = arrayLegends[i].name;
   legend02.appendChild((option))
 }
+

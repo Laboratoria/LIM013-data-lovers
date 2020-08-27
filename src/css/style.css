@@ -92,6 +92,7 @@ header nav a:hover {
   border-bottom: 2px solid #fff;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+
 }
 
 .main {
@@ -410,9 +411,9 @@ footer i:hover {
 /*---------------BUSCADOR -------- */
 .search {
   background: #fff;
-  margin: 10px auto;
+  margin: 10px 0;
   padding: 10px;
-  width: 90%;
+  width: 100%;
   border: 2px solid #986E1E;
   border-radius: 5px;
   display: flex;
@@ -424,14 +425,10 @@ footer i:hover {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-#inputSearch{
-  width: 20%;
-}
 
 input[type=button] {
   background: none;
   border: none;
-  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -448,7 +445,7 @@ input[type=button] {
 
 .legends {
   background: #0A3238;
-  border: 3px solid #986E1E;
+  border: 2px solid #986E1E;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
