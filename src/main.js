@@ -7,10 +7,12 @@ const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
 
 
+
 const showByData = (array) => {
     container.innerHTML="";    
 
     array.forEach((item, index, array) => {
+        
         const pc = computeByStats(Object.values(item.stats));
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
@@ -20,33 +22,46 @@ const showByData = (array) => {
             <p>name: ${item.name}</p>
             <p>type: ${item.type}</p>
             `       
-            // <p>resisntant: ${item.resistant}</p>
-            // <p>waknesses: ${item.weaknesses}</p>
-            // <p>attack: ${item.stats["base-attack"]}
-            // <p>defense: ${item.stats["base-defense"]}
-            // <p>stamina: ${item.stats["base-stamina"]}
-            // <p>PC: ${pc};
         container.appendChild(showByItem);
-
-        showByItem.addEventListener("click", () => {
+        
+        const showForData = (array) => {
             const showForItem = document.createElement("div");
-            showForItem.classList.add("elemento");
-            // showForItem.style.display="block";
-            showForItem.innerHTML= `
-                <span>x</span>
+            showForItem.classList.add("elemento-div");
+            showForItem.style.display = "block";
+            showForItem.innerHTML=`
                 <p>#${item.num}</p>
                 <img src=${item.img}></img>
                 <p>name: ${item.name}</p>
                 <p>type: ${item.type}</p>
-                `
-            showByItem.appendChild(showForItem);
+                <p>resisntant: ${item.resistant}</p>
+                <p>waknesses: ${item.weaknesses}</p>
+                <p>attack: ${item.stats["base-attack"]}
+                <p>defense: ${item.stats["base-defense"]}
+                <p>stamina: ${item.stats["base-stamina"]}
+                <p>PC: ${pc}           
+                `    
+            showByItem.appendChild(showForItem);     
+
+            const closeForData = (i) => {
+                showForItem.style.display = "none";
+            }
             
-            showForItem.addEventListener("click", () => {
-                showByItem.inneHTML="";
-            });
-        });
+            showForItem.addEventListener("click", closeForData);
+        }
+
+        showByItem.addEventListener("click", showForData);          
     });     
 }
+
+
+
+
+
+
+
+
+
+
  
 //inicializando//
 showByData(data.pokemon);
@@ -72,6 +87,8 @@ selectByType.addEventListener("change", () => {
     const showByType = selectByType.value;
     const showListType = filterByType(data.pokemon,showByType);
     showByData(showListType);
+        if (showByType == "allTypes") { 
+            showByData(data.pokemon)};
 });
 
 
