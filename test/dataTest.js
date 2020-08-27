@@ -152,3 +152,78 @@ export const correctC = [
 },
 
 ];
+
+export const buscan = [
+{
+     "name": "Summer Smith",
+},
+{
+     "name": "Evil Summer Clone",
+},
+{
+     "name": "Mechanical Summer",
+},
+{
+     "name": "Mega Fruit Farmer Rick",
+},
+{
+     "name": "Michael Thompson",
+},
+];
+
+export const buscado = [
+{
+     "name": "Summer Smith",
+},
+{
+    "name": "Evil Summer Clone",
+},
+{
+     "name": "Mechanical Summer",
+},
+];
+
+export const generos = [
+{
+     "gender": "Female",
+},
+{
+     "gender": "Male",
+},
+];
+
+export const genero = [
+{
+     "gender": "Female",
+},
+];
+
+export const desordenA = [
+{
+     "species": "unknown",
+},
+{
+     "species": "Alien",
+}
+];
+
+export const  correctA = [
+{
+     "species": "unknown",   
+},
+];
+
+export const tierraA = [
+{
+     "origin":  "Earth (Replacement Dimension)",
+},
+{
+     "origin": "Abadango",
+},
+];
+
+export const tierraB = [
+{
+     "origin":  "Earth (Replacement Dimension)",
+},
+];
