@@ -75,23 +75,80 @@ export const acomoA_Z =[
 },
 ];
 
-export const dataFG =[
-    {
-        "id": 8,
-              "name": "Adjudicator Rick",
-              "status": "Dead",
-              "species": "Human",
-              "type": "",
-              "gender": "Male",
-    },
+export const ordensZ_A = [
+{
 
-    {
-        "id": 7,
-              "name": "Abradolf Lincler",
-              "status": "unknown",
-              "species": "Human",
-              "type": "Genetic experiment",
-              "gender": "Male",
-    
-    },
-]
+          "id": 1,
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+},
+{
+	"id": 2,
+          "name": "Morty Smith",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+},
+{
+	"id": 3,
+          "name": "Summer Smith",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Female",
+},
+];
+
+export const reversZ_A = [
+{
+	"id": 3,
+          "name": "Summer Smith",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Female",
+},
+{
+
+          "id": 1,
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+},
+{
+	"id": 2,
+          "name": "Morty Smith",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+},
+];
+
+export const desordenC = [
+{
+	"species": "Human",
+},
+{
+	"species": "alien",
+},
+{
+	"species": "Human",
+},
+];
+
+export const correctC = [
+{
+	"species": "Human",
+},
+{
+	"species": "Human",
+},
+
+];
