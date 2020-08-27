@@ -20,7 +20,7 @@ let root = document.getElementById("root");
 root.innerHTML = `
     <div class = 'pokedex'>${allPokemon.map(pokemonTemplate).join("")}</div>
     `;
-// Seleccionar por tipo
+// ------------------------Filtrar por tipo------------------------
 let list = document.getElementById("list");
 list.addEventListener("change", () => {
     let typePokemon = allPokemon;
@@ -31,22 +31,11 @@ list.addEventListener("change", () => {
         // console.log(typePokemon);
     }
     //console.log(selectValue);
-    // Crea estructura de all pokemon o pokemon filtrado
-    function pokemonTemplateFilter(type) {
-        return `
-        <div class='poke'>
-        <p class = 'poke-num'> ${type.num}</p>
-        <img class='poke-img' src='${type.img}'>
-        <p class= 'poke-name'> ${type.name}<p>    
-        </div>
-        `;
-    }
-
-
+      
     // Mostrar Pokemones filtrados
     root.innerHTML = `
     <div class = 'pokedex'>${typePokemon
-            .map(pokemonTemplateFilter)
+            .map(pokemonTemplate)
             .join("")}</div>
     `;
 
@@ -76,68 +65,49 @@ orderList.addEventListener("change", () => {
     if (orderListValue === 'downward') {
         orderPokemonUpward(allPokemon).reverse();
     }
-
-    function pokemonTemplateOrdered(poke) {
-        return `
-            <div class='poke'>
-            <p class = 'poke-num'> ${poke.num}</p>
-            <img class ='poke-img' src='${poke.img}'>
-            <p class= 'poke-name'> ${poke.name}</p>    
-            </div>
-            `;
-    }
-
+    //Mostrar pokemones ordenados
     root.innerHTML = `
-        <div class = 'pokedex'>${allPokemon.map(pokemonTemplateOrdered).join("")}</div>
+        <div class = 'pokedex'>${allPokemon.map(pokemonTemplate).join("")}</div>
         `;
 })
 
 
+//---------------------------Calculos de movimientos------------------------
 
 
-//-----------Calculos de movimientos-------------
+//----------------------Obteniendo movimientos el quick-move--------
+const pokemonQuickmove = (obj) =>obj["quick-move"];
 
-
-//----Obteniendo movimientos el quick-move-------
-
-function pokemonQuickmove(obj) {
-    return obj["quick-move"][0];
-}
-let quickMove = allPokemon.map(pokemonQuickmove);
-console.log(quickMove);
-
-
+let allPokemonQuickMoves = allPokemon.map(pokemonQuickmove);
+//console.log(allPokemonQuickMoves);
 
 //---Obteniendo movimientos special attack----
-function pokAttack(obj) {
-    return obj["special-attack"][0];
-}
-let attackMove = allPokemon.map(pokAttack);
-console.table(attackMove);
+const pokAttack = (obj) =>obj ["special-attack"];
 
+let allPokemonAttackMoves = allPokemon.map(pokAttack);
+//console.table(attackMove);
 
-//----Eps[energía/(move-duration-seg)]-------
+//----Eps[energía/(move-duration-seg)]------- 
 
 function epsPokemon(movement) {
     return movement.energy / movement["move-duration-seg"];
-
 }
 
-let eps = quickMove.map(epsPokemon);
-console.table(eps);
+let epsQuickMove = allPokemonQuickMoves.map((quickMovesArray)=>{
+    return quickMovesArray.map(epsPokemon);
+});
 
+let epsAttackMoves= allPokemonAttackMoves.map((attackMovesArray)=>{
+    return attackMovesArray.map(epsPokemon);
+})
 
+console.log(epsQuickMove);
+console.log(epsAttackMoves);
 
  //---Stab[base damage * 1.20] Si el tipo de ataque = al tipo de pokemon--------
 
 
-
-
  //---Dps [base damage/ move duration seg] Si es un ataque de tipo se considera el stab en lughar del base damage-------
-
-
-
-
 
 
 
