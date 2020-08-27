@@ -1,5 +1,5 @@
 /* Inicio de estilos de header */
-@media screen and (min-width:800px){
+@media only screen and (min-width:800px){
     .menu-toggle{
         display: none;
     } 
@@ -32,7 +32,7 @@
     }
 
     .menu a:visited{
-        color: #619369;
+        color: #2ADE97;
         font-family: 'Open Sans', sans-serif;
         background: transparent;
     }
@@ -70,7 +70,7 @@
   
 /* Fin de estilos de header */
 
-@media screen and (min-width:700px) {
+@media only screen and (min-width:700px) {
     .cajaPri{
         width: 500px;
         height: 500px;
@@ -98,7 +98,7 @@
     }
 }
 
-@media screen and (max-width:700px){
+@media only screen and (max-width:700px){
     /* Estilos botón de inicio*/
     .btn-i button{
       position:relative;

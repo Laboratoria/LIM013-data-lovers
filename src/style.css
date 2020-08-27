@@ -48,7 +48,7 @@
     top:100%;
     right:0;
     position: absolute;
-    background: #619369;
+    background: #2ADE97;
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 700ms;
 }
@@ -209,7 +209,7 @@
 }
 
 .btn-i button{
-    background-color: #619369;
+    background-color: #2ADE97;
     color: white;
     padding: 10px 30px;
     text-align: center;
@@ -243,7 +243,7 @@
 
 /* Inicio de estilos pantalla 2*/
 .contenido {
-    padding: 120px 0px;
+    padding: 120px 0px 30px;
     width: 100%;
 }
 
@@ -507,6 +507,7 @@
 
 /* comienzo de css paginación*/
 .pagenumbers {
+    margin: 40px 80px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -514,27 +515,27 @@
 }
 
 .pagenumbers button {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     appearance:none;
     border:none;
     outline: none;
     cursor:pointer;
-    background-color: #44aaee;
+    background-color: #459AE2;
     margin: 5px;
     transition: 0.4s;
     color:white;
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.2);
 }
 
 .pagenumbers button:hover {
-    background-color: #44eeaa;
+    background-color: #2ADE97;
 }
 
 .pagenumbers button.active {
-    background-color: #44eeaa;
+    background-color: #2ADE97;
     box-shadow: inset 0px 8px 4px rgba(0, 0, 0, 0.2);
 }
 /* Fin de estilos pantalla 2*/
