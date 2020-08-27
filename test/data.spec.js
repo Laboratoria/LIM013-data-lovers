@@ -10,7 +10,6 @@ describe('datajs', () => {
     expect(datajs.nameA_Z(desoA_Z)).toEqual(acomoA_Z);
   });
 
-
   it('deberia ser una function filtrar', () => {
     expect(typeof datajs.nameZ_A).toBe('function');
   });
@@ -29,8 +28,20 @@ describe('datajs', () => {
 
 });
 
+  /* it('deberia ser una function buscar', () => {
+    expect(typeof datajs.filterName).toBe('function');
+  });
 
-/*describe('datajs.filterSpecies', () => {
+  it('debe de reotrnar lo que `buscas`', () => {
+    expect(datajs.filterName()).toBe(true);
+  });
+
+
+});
+
+
+
+describe('datajs.filterSpecies', () => {
   it('is a function', () => {
     expect(typeof data.filterSpecies).toBe('function');
   });
