@@ -360,133 +360,149 @@ border-radius: 0px 5px 5px 0px;
     align-self: left;     
 }
 
-.grass {
+.typePok p {
     width: 60px;
     height: 18px;
     margin: 5px;
     padding: 2px 5px;
     text-align: center;
     display: inline-block;
+    border-radius: 5px;    
+}
+
+.grass {
     color: black;
     background-color: rgb(146, 219, 35);
-    border-radius: 5px;
 }
 
 .poison {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: black;
     background-color: #bd62bd;
-    border-radius: 5px;
 }
 
 .fire {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: white;
     background-color: #e45411;
-    border-radius: 5px;
 }
 
 .flying {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: black;
     background-color: #839e9e;
-    border-radius: 5px;
 }
 
 .water {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: white;
     background-color: #1190e4;
-    border-radius: 5px;
 }
 
 .bug {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: black;
     background-color: #34ce20;
-    border-radius: 5px;
 }
 
 .normal {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: white;
     background-color: #528585;
-    border-radius: 5px;
 }
 
 .electric {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
     color: black;
     background-color: #f1bc0b;
-    border-radius: 5px;
 }
 
 .ground {
-    width: 60px;
-    height: 18px;
-    margin: 5px;
-    padding: 2px 5px;
-    text-align: center;
-    display: inline-block;
-    color: white;
-    background-color: #927822;
-    border-radius: 5px;
+    color: black;
+    background-color: #c2a64b;
 }
 
+.fighting {
+    color: white;
+    background-color: #927822;
+}
 
+.fairy {
+    color: black;
+    background-color: #fb98c1;
+}
+
+.psychic {
+    color: black;
+    background-color: #fd4b95;
+}
+
+.rock {
+    color: black;
+    background-color:  #e4b92f;
+}
+
+.ice {
+    color: black;
+    background-color:  #2fe4d5;
+}
+
+.ghost {
+    color: white;
+    background-color:  #b529c2;
+}
+
+.dragon {
+    color: white;
+    background-color:  #3829c2;
+}
+
+.dark {
+    color: white;
+    background-color:  #424247;
+}
+
+.steel {
+    color: black;
+    background-color:  #bebec3;
+}
 
 .morePok {
-    width: 90px;
+    width: 100px;
     padding: 5px;
     margin: 20px 40px;
     color: black;
     text-align: center;
     display: inline-block;
     border: solid 1px black;
+    box-shadow: 5px 10px 8px #888888;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: #88D9E5;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
 
+.morePok span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.morePok span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+  
+.morePok:hover span {
+    padding-right: 10px;
+}
+  
+.morePok:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 .morePok:hover {
-    background-color: rgba(255, 255, 255, 0.767);
+    background-color: #00C1EC;
 }
 
 .footer {
