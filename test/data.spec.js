@@ -1,5 +1,5 @@
 import datajs from '../src/data.js';
- import { desoA_Z, acomoA_Z, ordensZ_A, reversZ_A, desordenC, correctC, buscan, buscado, generos, genero, desordenA, correctA, tierraA, tierraB } from './dataTest.js';
+ import { desoA_Z, acomoA_Z, ordensZ_A, reversZ_A, desordenC, correctC, buscan, buscado, generos, genero, desordenA, correctA, tierraA, tierraB, planeta, estados, estadosA } from './dataTest.js';
 
 describe('datajs', () => {
   it('deberia ser una function filtrar', () => {
@@ -45,6 +45,15 @@ describe('datajs', () => {
   it('debe retornar filtro `tierra`', () => {
    expect(datajs.filterSpecies(tierraA,"orig", "Earth")).toEqual(tierraB);
   });
+
+  it('debe retornar filtro `Anatomy Park`', () => {
+    expect(datajs.filterSpecies(tierraA,"orig", "Anatomy Park")).toEqual(planeta);
+   });
+
+   it('debe retornar filtro `Dead`', () => {
+    expect(datajs.filterSpecies(estados,"estd", "Dead")).toEqual(estadosA);
+   });
+
   // buscador
   it('deberia poder buscar', () => {
     expect(typeof datajs.filterName).toBe('function');

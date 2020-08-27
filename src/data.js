@@ -13,9 +13,8 @@ const datajs = {
         return data.filter(data => { return data.origin.name === dataF });
     } else if (condition === "gener") {
       return data.filter(data => { return data.gender === dataF });
-    } else if (condition === "estd") {
+    } else 
       return data.filter(data => { return data.status === dataF });
-    }
   },
 
   filterName: function (data, texto) {
@@ -28,10 +27,7 @@ const datajs = {
       if (a.name < b.name) {
         return -1;
       }
-      if (a.name > b.name) {
-        return 1;
-      }
-
+      else return 1;
     });
   },
 
@@ -40,10 +36,7 @@ const datajs = {
       if (a.name < b.name) {
         return -1;
       }
-      if (a.name > b.name) {
-        return 1;
-      }
-      
+      else return 1;
     });
   },
 
