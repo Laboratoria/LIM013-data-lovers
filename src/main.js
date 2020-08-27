@@ -171,6 +171,7 @@ const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
+	console.log(inputName);
 	const filtroData = datajs.filterSpecies(data, inputName);
 	displayList(filtroData, listElement, rows, currentPage);
 	setupagination(filtroData, paginationElemnent, rows);
@@ -323,8 +324,5 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		resetRadioButtons("estd");
 	});
 });
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-//import data from './data/rickandmorty/rickandmorty.js';
 
 
