@@ -1,18 +1,32 @@
 import datajs from '../src/data.js';
- import { desoA_Z, acomoA_Z } from './dataTest.js';
+ import { desoA_Z, acomoA_Z, ordensZ_A, reversZ_A, desordenC, correctC } from './dataTest.js';
 
 describe('datajs', () => {
   it('deberia ser una function filtrar', () => {
     expect(typeof datajs.nameA_Z).toBe('function');
   });
 
-  it('returnar orden desendiente `a-z`', () => {
+  it('debe de retornar  orden desendiente `a-z`', () => {
     expect(datajs.nameA_Z(desoA_Z)).toEqual(acomoA_Z);
   });
+
+  it('deberia ser una function filtrar', () => {
+    expect(typeof datajs.nameZ_A).toBe('function');
+  });
+
+  it('debe de reotrnar orden acendente `Z-A`', () => {
+    expect(datajs.nameZ_A(ordensZ_A)).toEqual(reversZ_A);
+  });
+
+  it('deberia ser una function filtrar Radios Human', () => {
+    expect(typeof datajs.filterSpecies).toBe('function');
+  });
+
+  it('debe retornar filtro `humanos`', () => {
+   expect(datajs.filterSpecies(desordenC,"Human")).toEqual(correctC);
+  });
+
 });
-
-
-
 
 
 

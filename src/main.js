@@ -171,6 +171,7 @@ const botonesFiltros = document.querySelector("#content-cb").children;
 const contentUl = document.getElementById("content-cb");
 const inputName = contentUl.getElementsByTagName("input");
 const btnF = () => {
+	console.log(inputName);
 	const filtroData = datajs.filterSpecies(data, inputName);
 	displayList(filtroData, listElement, rows, currentPage);
 	setupagination(filtroData, paginationElemnent, rows);
@@ -300,35 +301,5 @@ const closeModal = () => {
 const closeFilter = document.getElementById("close");
 closeFilter.addEventListener("click", closeModal);
 
-
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-//Funciones del acordeón
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-	accordionItemHeader.addEventListener("click", event => {
-		const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-		if (currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
-			currentlyActiveAccordionItemHeader.classList.toggle("active");
-			currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-		}
-
-		accordionItemHeader.classList.toggle("active");
-		const accordionItemBody = accordionItemHeader.nextElementSibling;
-		if (accordionItemHeader.classList.contains("active")) {
-			accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-		}
-		else {
-			accordionItemBody.style.maxHeight = 0;
-		}
-		resetRadioButtons("esp");
-		resetRadioButtons("orig");
-		resetRadioButtons("gener");
-		resetRadioButtons("estd");
-	});
-});
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-//import data from './data/rickandmorty/rickandmorty.js';
 
 
