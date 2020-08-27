@@ -17,13 +17,13 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     return `<section class="picture">
     <img class="img" src="${dataPokemon.img}">
     <section class="essentialInformation">
-    <h1 class="numPok">#${dataPokemon.num}</h1>
-    <h2 class="namePok">${dataPokemon.name}</h2>
+    <h2 class="numPok">#${dataPokemon.num}</h2>
+    <h3 class="namePok">${dataPokemon.name}</h3>
     <section class="typePok"> 
     <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
     <p class="${dataPokemon.type[1]}">`)}</p>
     </section>
-    <button class="morePok">Ver más</button>
+    <button class="morePok"><span>Read more</span></button>
     </section>
     </section>`;
 }).join('')}`;

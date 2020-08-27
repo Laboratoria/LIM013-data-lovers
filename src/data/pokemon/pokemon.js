@@ -3264,7 +3264,7 @@ export default {
     },
     "pokemon-rarity": "normal",
     "type": [
-      "normal"
+      "fairy"
     ],
     "encounter": {
       "base-flee-rate": "0.1",
@@ -3357,7 +3357,7 @@ export default {
     },
     "pokemon-rarity": "normal",
     "type": [
-      "normal"
+      "fairy"
     ],
     "encounter": {
       "base-flee-rate": "0.06",
