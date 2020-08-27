@@ -182,254 +182,12 @@ border-radius: 0px 5px 5px 0px;
 
 /*************todo referente al main***************/
 .displayContainer {
-    background: #18383b;
-    display:block
-}
-
-.typeContainerClose {
-    width: 100%;
-    height: 68px;
-    background-image: url(images/fondo_menuTipo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display:block
-}
-
-.typeButton {
-    display: block;
-    padding: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
     background: transparent;
-    font-size: 18px;
-    color: white;
-    text-align: left;
-    width: 100px;
-    height: 35px;
-    padding: 30px 0px;
-    margin-top: 25px;
-    margin-left: 140px;
-    margin-right: 0px;
-    transition: background 0.2s;
-}
-
-.typeButton::after {
-    content: "\25bc";
-    float: right;
-    transform: scale(1.5);
-}
-
-.typeButtonActive {
-    background: transparent;
-}
-
-.typeButtonActive::after {
-    content: "\25b4";
-    
-}
-
-.openTypeButton {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    margin-top: 15px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-image: url(images/openTypeButton.png);
-    background-size:100%;
-    border: none;
-}*/
-
-.typeContainerOpen {
-    overflow: hidden;
-    max-height: 0;
-    background-size: 100%;
-    background: #18383b;
-    transition: max-height 0.2s;
-
-    padding: 0px 0px;
-    font-family: sans-serif;
-}
-
-.typeContainerHeader {
-    background-size: 100%;
-    height: 5px;
-}
-
-.typeContainerBody {
-    background-size: 100%;
-}
-
-.typeContainerBodyInner {
-    background-size: 95%;
-    padding: 20px 5px;
-}
-
-.typeContainerBodyInnerTitle {
-    background-color: none;
-    height: 50px;
-    padding: 0px 30px;
-}
-
-h2 {
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-}
-
-.typeContainerBodyInnerTypes {    
-    margin-top: 0px;
-    margin-left: 0px;
-    padding: 10px 20px;
-    display: block;    
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    clear: both;
-}
-  
-li{
-    list-style-type: none;
-    list-style-position: outside;
-    padding: 14px;
-    float: left;
-
-}
-  
-input[type="checkbox"]:not(:checked), 
-input[type="checkbox"]:checked {
-    position: absolute;
-    left: -9999%;
-}
-  
-input[type="checkbox"] + label {
-    width: 120px;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-    background-color: none;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-  
-input[type="checkbox"]:checked + label {
-    border: 1px solid white;
-    color: #18383b;
-    background-color: white;
-}
-
-.typeContainerBodyInnerSearchByTypeButtons {
-    background-color: none;  
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.searchByTypeButtonReset {
-    padding: 10px 20px;
-    background-color: #18383b;
-    border: 2px solid #00A9CF;
-    color: #00A9CF;
-    display: inline-block;
-    text-align: center;
-    font-family: inherit;
-    font-size: 18px;
-    margin: 5px 5px;
-    cursor: pointer;
-    width: 240px;
-}
-
-.searchByTypeButtonReset:hover {
-    background-color: #00A9CF;
-    border: 1px solid #00A9CF;
-    color: #18383b;
-}
-
-.searchByTypeButtonSearch {
-    padding: 10px 20px;
-    background-color: #88D9E5;
-    border: 1px solid #88D9E5;
-    color: black;
-    display: inline-block;
-    text-align: center;
-    font-family: inherit;
-    font-size: 18px;
-    margin: 5px 5px;
-    cursor: pointer;
-    width: 360px;
-}
-
-.searchByTypeButtonSearch:hover {
-    background-color: #88D9E5;
-    border: 1px solid #88D9E5;
-    color: black;
-}
-
-.btnGroupCloseTypeDisplay {
-    width: 100%;
-    height: 85px;
-    background-color: none;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    margin-left: 0px;
     display:block
 }
 
-.btnGroupCloseTypeDisplay button {
-    /*width: 100%;
-    height: 66px;*/
-    float: left;
-    content: "";
-    cursor: pointer;
-    background-color: none; 
-}
-
-.closeButton {
-    font-size: 14px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    width: 60px;
-    height: 40px;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 140px;
-    margin-right: 0px;
-}
-
-.closeTypeButton {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-image: url(images/closeTypeButton.png);
-    background-size:100%;
-    border: none;
-}
-
-.typeContainerHide {
-    background-color: #18383b;
-    height: 60px;
-}
-.emptySpace {
-    background-color: #18383b;
-    width: 100%;
-    height: 40px;
-}
 .displayAll {
-    margin-top: -94px;
+    margin-top: 30px;
     width: 100%;
     display:block;
     background: none;
@@ -512,10 +270,6 @@ input[type="checkbox"]:checked + label {
     cursor: pointer;
 }
 
-
-
-
-
 /*distribución de pokemones*/
 .pokemonArea{
     display: flex;
@@ -523,14 +277,17 @@ input[type="checkbox"]:checked + label {
     justify-content: center;
     width: 100%;
 }
+
 .pokemonDisplay {
     display: flex;
     flex-flow: row wrap;
+    padding: 20px 0px;
     justify-content: center;
     height: 660px;
     background-color: none;
     overflow-y: scroll; 
 }
+
 .informationDisplay{
     display: none;
     height: 660px;
@@ -538,17 +295,198 @@ input[type="checkbox"]:checked + label {
     background: aquamarine;
 }
 
+.card {
+    background: black;
+}
+
+/*distribución de pokemones display principal*/
 .picture {
     width: 200px;
     height: 234px;
     margin: 5px;
-    background-size:100%;
     background-image: url(images/hexagono2.png);
+    /*para que ocupe todo el espacio*/
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card {
-    background: black;
+.img {
+    width:130px;
+    height:130px;
+}
+
+.essentialInformation {
+    display: none;
+    width: 200px;
+    height: 200px;
+    margin: 30px 15px;
+}
+
+/***************informacion principal de pokemones*******************/
+.numPok {
+/*numero de pokemon*/
+    font-family: sans-serif;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 18px;
+    line-height: 2;
+    text-decoration: none;
+    color: black;
+
+}
+
+.namePok {
+/*nombre de pokemon*/
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 22px;
+    line-height: 2;
+    text-decoration: bold;
+    text-transform: capitalize;
+    color: black;
+
+}
+
+.typePok {
+    width: 100%;
+    height: 25px;
+    margin: 0px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: flex;
+    align-self: left;     
+}
+
+.grass {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    background-color: rgb(146, 219, 35);
+    border-radius: 5px;
+}
+
+.poison {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    background-color: #bd62bd;
+    border-radius: 5px;
+}
+
+.fire {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: #e45411;
+    border-radius: 5px;
+}
+
+.flying {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    background-color: #839e9e;
+    border-radius: 5px;
+}
+
+.water {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: #1190e4;
+    border-radius: 5px;
+}
+
+.bug {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    background-color: #34ce20;
+    border-radius: 5px;
+}
+
+.normal {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: #528585;
+    border-radius: 5px;
+}
+
+.electric {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    background-color: #f1bc0b;
+    border-radius: 5px;
+}
+
+.ground {
+    width: 60px;
+    height: 18px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: #927822;
+    border-radius: 5px;
+}
+
+
+
+.morePok {
+    width: 90px;
+    padding: 5px;
+    margin: 20px 40px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.morePok:hover {
+    background-color: rgba(255, 255, 255, 0.767);
 }
 
 .footer {
@@ -570,43 +508,3 @@ input[type="checkbox"]:checked + label {
     text-decoration: none;
     color: white;
 }
-
-/*distribución de pokemones display principal*/
-
-.picture{
-    width: 180px;
-    height: 210px;
-    margin: 5px;
-    background-image: url(images/hexagono2.png);
-    /*para que ocupe todo el espacio*/
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img{
-    width:130px;
-    height:130px;
-}
-.essentialInformation{
-    display: none;
-}
-
-/***************informacion principal de pokemones*******************/
-.numPok{
-/*numero de pokemon*/
-}
-.namePok{
-}
-.grass{
-/*tipo 1 de pokemon*/
-}
-.poison{
-/*tipo 2 de pokemon*/
-}
-.etc{
-/*boton de ver mas pokemon*/ 
-}
-
-
-

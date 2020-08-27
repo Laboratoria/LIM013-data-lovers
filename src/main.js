@@ -14,10 +14,12 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     return `<section class="picture">
     <img class="img" src="${dataPokemon.img}">
     <section class="essentialInformation">
-    <p class="numPok">${dataPokemon.num}</p>
-    <p class="namePok">${dataPokemon.name}</p> 
+    <h1 class="numPok">#${dataPokemon.num}</h1>
+    <h2 class="namePok">${dataPokemon.name}</h2>
+    <section class="typePok"> 
     <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
     <p class="${dataPokemon.type[1]}">`)}</p>
+    </section>
     <button class="morePok">Ver más</button>
     </section>
     </section>`;
@@ -43,12 +45,14 @@ for (let index = 0; index < btnMorePok.length; index++) {
         document.querySelector('.informationDisplay').style.display="block";
         const informationDisplay = document.querySelector('.informationDisplay');
         const pokemonArea = document.querySelector('.pokemonArea');
-        resizeInformation(pokemonArea,pokemonDisplay,informationDisplay)
+        resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
         window.onresize=()=>{
-        resizeInformation(pokemonArea,pokemonDisplay,informationDisplay)
+            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
         }  
     });  
 }
+
+
 
 //funcion para redimenzionar contenedor de pokemones y contenedor de información
 function resizeInformation(a,b,c) {
@@ -61,6 +65,11 @@ function resizeInformation(a,b,c) {
     }   
 }
 
+
 //console.log(example, data);
+
+//mostrando información extra de pokémon según pokémon selecionado
+const namePok= document.querySelector('.namePok').textContent;
+console.log(namePok);
 
 
