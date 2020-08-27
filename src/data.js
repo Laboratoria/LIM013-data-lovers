@@ -7,18 +7,18 @@ export const filterByRol= (championList,term) => {
     console.log(filterRol)
     return filterRol;
 };
-export const  filtrarCamp=(championList,term)=>{
-const filterData=championList.filter(el=>el.tags[0]==term|| el.tags[1]==term) ;
-console.log(filterData)
-    return filterData;
-}
-/*
+
 export const search=(championList,nameChamp)=>{
-    const searchName=championList.map(el=>(el.name.toLowerCase().indexOf(nameChamp)!==-1?el:false))
+    const searchName=championList.filter(el=>(el.name.toLowerCase().indexOf(nameChamp.toLowerCase())!==-1?el:false))
     console.log(searchName)
-    return search; 
-}*/
-    
+    return searchName; 
+}
+export const orderAsce=(championList,term)=>{
+    const sort=championList.sort((a,b)=>{a[term]>b[term]})
+    console.log(orderAsce);
+        return sort
+    }
+
 
  
 
