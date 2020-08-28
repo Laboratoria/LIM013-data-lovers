@@ -55,32 +55,18 @@ export const filter = {
     },
     type: function(data, value) {
         let pokemons = data;
-        const pokemonType = pokemons.filter(function(pokemon) {
-            let array = pokemon.type;
-            if (value.length > 1) {
-                return ((array[0] === value[0] || array[1] === value[0]) && (array[0] === value[1] || array[1] === value[1]));
-            } else {
-                return array[0] === value[0] || array[1] === value[0];
-            }
-            /*let typelength = (pokemon.type).length;
-            for (let i = 1; i <= typelength; i++) {
-                return pokemon.type[i] === value;
-            }*/
-        })
-        return pokemonType;
-    },
-    weakness: function(data, value) {
-
-        let pokemons = data;
-        const pokemonWeaknesses = pokemons.filter(function(pokemon) {
-            let weaknesslength = pokemon.weaknesses.length;
-            for (let i = 0; i < weaknesslength; i++) {
-
-                return pokemon.weaknesses[i] === value;
-            }
-        })
-        return pokemonWeaknesses;
-
-
+        if (value.length == 0) {
+            return pokemons;
+        } else {
+            const pokemonType = pokemons.filter(function(pokemon) {
+                let array = pokemon.type;
+                if (value.length > 1) {
+                    return ((array[0] === value[0] || array[1] === value[0]) && (array[0] === value[1] || array[1] === value[1]));
+                } else {
+                    return array[0] === value[0] || array[1] === value[0];
+                }
+            })
+            return pokemonType;
+        }
     },
 };
