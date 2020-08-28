@@ -69,4 +69,8 @@ export const filter = {
             return pokemonType;
         }
     },
+    weakness : (data, value) => {
+    const pokemon = data.filter(obj => obj.weaknesses.includes(value));
+    return pokemon;
+    }
 };

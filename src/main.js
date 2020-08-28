@@ -151,11 +151,12 @@ const buttonClose = (id, value) => {
 };
 
 
+ 
 document.getElementById("select-weakness").addEventListener('change', () => {
-    let value = new Array();
-    value = document.getElementById("select-weakness").value;
-    let weakness = filter.weakness(data.pokemon, value);
-    newData = weakness;
-    console.log(newData);
-    restart();
+    const valueSelect= document.getElementById("select-weakness").value;
+      const weakness = filter.weakness(data.pokemon, valueSelect);
+      newData= weakness;
+      console.log(newData);
+      restart();
+      
 });
