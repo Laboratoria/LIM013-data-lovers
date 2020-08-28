@@ -1,23 +1,69 @@
 // estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-//función para el top cinco//
-const getTopFive = (data) => {
-  const newArray = data.map(copyData => Object.assign({}, { name: copyData.name, hp: copyData.stats.hp, img: copyData.img }));
-  let newArrayOrder = newArray.sort((higher, lessHigher) => {
-    if (higher.hp <= lessHigher.hp) {
-      return 1;
+const filterData = (data, roles) => {
+  const arrLolD = data.filter((champ) => {
+    let champRol = [];
+    roles.forEach((rol) => {
+      if (rol.tags.includes(rol)) {
+        champRol.push(true);
+      } else {
+        champRol.push(false);
+      }
+    });
+    if (champRol.includes(false)) {
+      return false;
     } else {
-      return -1;
+      return champ;
     }
   });
-  return newArrayOrder.slice(0, 5);
+  return arrLolD;
 };
 
+const sortData = (data, sortByrol, sortOrder) => {
+  let arraySort = [];
+  for (let i = 0; i < data.lenght; i++) {
+    arraySort.push(Object.assign({}, data[i]));
+  }
+  if (sortByrol === 0) {
+    arraySort.sort((a, b) => {
+      if (sortOrder === 0) {
+        if (a > b) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+    });
+  } else {
+    arraySort.sort((a, b) => {
+      if (sortOrder === 0) {
+        return a.info.dificulty - b.info.dificulty;
+      } else {
+        return b.info.dificulty - a.info.dificulty;
+      }
+    });
+  }
+  return arraySort;
+};
+
+// const computeStats = (data, num) => {
+// TODO falta Función Estadística
+
+// Buscador
+const searchDataFunction = (data, dataBusqueda) => {
+  let dataLol = []; 
+  let arrayBusqueda = [];
+  let newArrayBusqueda = [];
+
+  for (let i = 0; i < data.length; i++)
+  dataLol.push(Object.assign({}, data[i]));
+
+  for (let i = 0; i < dataLol.length; i++) {
+    arrayBusqueda.push(dataLol[i].name.toLowerCase());
+    if (arrayBusqueda[i].indexOf(dataBusqueda.toLowerCase()) !== -1) {
+      newArrayBusqueda.push(dataLol[i]);
+    }
+  }
+  return newArrayBusqueda;
+};
+
+export { filterData, sortData, searchDataFunction};
