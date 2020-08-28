@@ -2,6 +2,7 @@ import { order } from './data.js'; //pure functions
 import { filter } from './data.js';
 import data from './data/pokemon/pokemon.js'; //All data
 let newData = data.pokemon;
+let valuetype = new Array();
 //Global variable
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8 
@@ -101,25 +102,53 @@ document.getElementById("select-region").addEventListener('change', () => {
     restart();
 });
 
-let valuetype = new Array();
+const functionFilter = (valuetype) => {
+    console.log(valuetype);
+    let type = filter.type(data.pokemon, valuetype);
+    console.log(data.pokemon);
+
+    newData = type;
+    console.log(newData);
+    restart();
+}
 console.log(valuetype);
 document.getElementById("select-type").addEventListener('change', () => {
     if (valuetype[0] == null || valuetype[1] == null) {
         if (valuetype[0] == null) {
             valuetype[0] = (document.getElementById("select-type").value);
-            document.getElementById("type1-value").innerHTML = valuetype[0];
+            buttonClose(0, valuetype[0]);
         } else {
             valuetype[1] = (document.getElementById("select-type").value);
-            document.getElementById("type2-value").innerHTML = valuetype[1];
+            buttonClose(1, valuetype[1]);
         }
     } else {
         alert('You can only choose two types');
     }
-    console.log(valuetype);
-    let type = filter.type(data.pokemon, valuetype);
-    newData = type;
-    restart();
+    functionFilter(valuetype);
 });
+
+
+const buttonClose = (id, value) => {
+    let labelP = document.createElement('p');
+    labelP.id = "type" + id;
+    labelP.innerHTML = value;
+    let labelSpan = document.createElement('span');
+    labelSpan.setAttribute('class', 'close');
+    labelSpan.innerHTML = "x";
+    document.getElementById("labelToFilter").appendChild(labelP);
+    labelP.appendChild(labelSpan);
+    labelSpan.addEventListener('click', close = () => {
+        labelP.parentNode.removeChild(labelP);
+        if (valuetype.length == 1) {
+            valuetype.splice(0, 1);
+            functionFilter(valuetype);
+
+        } else {
+            valuetype.splice(id, 1);
+            functionFilter(valuetype);
+        }
+    });
+};
 
 
 document.getElementById("select-weakness").addEventListener('change', () => {
@@ -127,5 +156,6 @@ document.getElementById("select-weakness").addEventListener('change', () => {
     value = document.getElementById("select-weakness").value;
     let weakness = filter.weakness(data.pokemon, value);
     newData = weakness;
+    console.log(newData);
     restart();
 });

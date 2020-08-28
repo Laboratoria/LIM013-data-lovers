@@ -388,7 +388,12 @@ footer i {
 }
 
 #region-value,
-#type1-value,
-#type2-value {
+#type0,
+#type1,
+.close {
     margin: 5px;
+}
+
+.close {
+    color: red;
 }
