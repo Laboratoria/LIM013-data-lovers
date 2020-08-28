@@ -72,6 +72,7 @@ const showInformationPok = (display,indexSelect) => {
         const namePokSelect= document.querySelectorAll('.namePok')[indexSelect].textContent;
         return dataPokemon.name==namePokSelect;
     })
+    console.log(arrayPokSelect[0].evolution["next-evolution"][0].name);
 
     display.innerHTML=`
     <section class="close">
