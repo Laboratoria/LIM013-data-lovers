@@ -59,7 +59,7 @@ const searchDataFunction = (data, dataBusqueda) => {
 
   for (let i = 0; i < dataLol.length; i++) {
     arrayBusqueda.push(dataLol[i].name.toLowerCase());
-    if (arrayBusqueda[i].indexOf(dataBusqueda.toLowerCase()) !== -1) {
+    if (arrayBusqueda[i].indexOf(dataBusqueda.toLowerCasegit ()) !== -1) {
       newArrayBusqueda.push(dataLol[i]);
     }
   }
