@@ -27,7 +27,7 @@ function containerOfAllFunctions(arrayChamp) {
           newArrayChamp[index].id
         }" href="#openmodal${index}">
       <div>
-        <img class="post-image " src="${newArrayChamp[index].splash}" />
+        <img class="post-image " src="${newArrayChamp[index].img}" />
         <div class="article-details" >
           <h1 class="post-name" id="${newArrayChamp[index].id}">${
         newArrayChamp[index].name
@@ -73,9 +73,8 @@ function containerOfAllFunctions(arrayChamp) {
     }
     containerChamp.innerHTML = contend.join("");
   };
-
-  cardChamp(arrayChamp);
   /*TODO mejorar funcion */
+  cardChamp(arrayChamp);
   const listChamp = (arrayRol) => {
     let arrayListChamp = [];
     arrayRol.forEach((tags) => {
