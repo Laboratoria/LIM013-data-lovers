@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link href="https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+		<title>Data Lovers</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- --------------------------------------------AGRUPANDO TODO -->
+		<div class="agrupar-todo">
+			<img src="img/logo.png" alt="Logo de Infopoke" class="logo" />
+			<!-- ----------------------------------------------MENU DE NAVEGACION-->
+			<header>
+				<nav>
+					<ul>
+						<li><a href="">Ordenalos</a></li>
+						<li><a href="">Tipos</a></li>
+						<li><a href="">Generación</a></li>
+						<li><a href="">Huevos</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- --------------------------------------------------CONTENIDO PRINCIPAL -->
+			<div class="input-buscar">
+				<i class='bx bx-search-alt'></i>
+				<input type="text" name="buscar" class="input" placeholder="Buscalos..." />
+			</div>
+			<section class="dataGeneral">
+				<section id="dataPoke" class="data"></section>
+			  </section>
+			<!-- ----------------------------------------------PIE DE PAGINA -->
+			<footer>
+				<p class="copy">&copy; infopoke 2020 - Todos los derechos</p>
+			</footer>
+		</div>
+		<!-- ------------------------------ENLAZANDO CON ARCHIVOS JAVA SCRIPT -->
+		<script src="main.js" type="module"></script>
+	</body>
 </html>
