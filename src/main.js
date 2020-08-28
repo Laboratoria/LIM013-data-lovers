@@ -1,50 +1,58 @@
 import data from "./data/lol/lol.js";
-import {filterData, sortData } from './data.js';
+import { filterData, sortData, searchDataFunction } from "./data.js";
 
 /*--cargar la data--*/
 const objData = data.data;
 const arrayData = Object.values(objData);
 containerOfAllFunctions(arrayData);
 
-const sortKind = document.getElementById('lol-sort'); 
-const inputSearch = document.getElementById('search-for-champion'); 
-const searchbtton = document.getElementById('search-btn'); 
-const arrayTag = Object.values(document.getElementsByClassName('filter-champ')); 
+const sortKind = document.getElementById("options");
+const inputSearch = document.getElementById("searchInputs");
+const searchbtton = document.getElementById("lupa");
+const arrayTag = Object.values(document.getElementsByClassName("fil-champ"));
 
-function containerOfAllFunctions (arrayChamp){
-    const containerChamp = document.getElementById('container-list');
-    const cardChamp = (arrayChamp) => {
+function containerOfAllFunctions(arrayChamp) {
+  const containerChamp = document.getElementById("container-listchamp");
+  const cardChamp = (arrayChamp) => {
     let newArrayChamp = [];
     let contend = [];
-    containerChamp.value = '';
-    for (let index=0; index<arrayChamp.length; index++){
+    containerChamp.value = "";
+    for (let index = 0; index < arrayChamp.length; index++) {
       newArrayChamp.push(Object.assign({}, arrayChamp[index]));
     }
     for (let index = 0; index < newArrayChamp.length; index++) {
-      contend.push (`
+      contend.push(`
       <div class ="card-link">
-        <a class="blog-card" id="${ newArrayChamp[index].id }" href="#openmodal${index}">
+        <a class="blog-card" id="${
+          newArrayChamp[index].id
+        }" href="#openmodal${index}">
       <div>
-        <img class="post-image " src="${ newArrayChamp[index].img}" />
+        <img class="post-image " src="${newArrayChamp[index].img}" />
         <div class="article-details" >
-          <h1 class="post-name" id="${ newArrayChamp[index].id }">${ newArrayChamp[index].name} </h1>
-          <h3 class="post-title" id="${ newArrayChamp[index].id }"> ${ newArrayChamp[index].title}</h3>
-          <h3 class="post-title" id="${ newArrayChamp[index].id }"> ${ newArrayChamp[index].info.difficulty}</h3>
+          <h1 class="post-name" id="${newArrayChamp[index].id}">${
+        newArrayChamp[index].name
+      } </h1>
+          <h3 class="post-title" id="${newArrayChamp[index].id}"> ${
+        newArrayChamp[index].title
+      }</h3>
+          <h3 class="post-title" id="${newArrayChamp[index].id}"> ${
+        newArrayChamp[index].info.difficulty
+      }</h3>
         </div>                   
       </div>
       </a>
       </div>
 
       <section id="openmodal${index}" class="modal-window">
-        <div class = "modal-content" id="${ newArrayChamp[index.id]}">
+        <div class = "modal-content" id="${newArrayChamp[index.id]}">
         <a href="#" title="Close" class="modal-close">X</a>
-        <img class="modal-img" src="${ newArrayChamp[index].splash }" />
+        <img class="modal-img" src="${newArrayChamp[index].splash}" />
         <div class="modal-info">
-        <img src="${ newArrayChamp[index].img}"/>
-        <h1>${ newArrayChamp[index].name}</h1>
-        <h3>${ newArrayChamp[index].title}</h3>
-        <p>${ newArrayChamp[index].blurb}</p>
-        <p>${ newArrayChamp[index].tags}</p>
+        <img src="${newArrayChamp[index].img}"/>
+        <h1>${newArrayChamp[index].name}</h1>
+        <h3>${newArrayChamp[index].title}</h3>
+        <p>${newArrayChamp[index].blurb}</p>
+        <p>${newArrayChamp[index].tags}</p>
         <table>
         <tr>
           <th> Health Points (HP)</th>
@@ -55,22 +63,22 @@ function containerOfAllFunctions (arrayChamp){
           <th> HP at Lvl. 18</th>
         </tr>
         <tr>
-          <td>${ newArrayChamp[index].stats.hp}</td>
-          <td>${ newArrayChamp[index].stats.hpperlevel}</td>
+          <td>${newArrayChamp[index].stats.hp}</td>
+          <td>${newArrayChamp[index].stats.hpperlevel}</td>
         </tr>
         </table>
         </div>
       </div>
-      </section>`
-      );
-    }  
-    containerChamp.innerHTML = contend.join(''); 
+      </section>`);
+    }
+    containerChamp.innerHTML = contend.join("");
   };
+  /*TODO mejorar funcion */
   cardChamp(arrayChamp);
   const listChamp = (arrayRol) => {
     let arrayListChamp = [];
-    arrayRol.forEach(tags => {
-      tags.addEventListener('change', () => {
+    arrayRol.forEach((tags) => {
+      tags.addEventListener("change", () => {
         if (tags.checked === true) {
           arrayListChamp.push(tags.value);
         } else {
@@ -78,21 +86,23 @@ function containerOfAllFunctions (arrayChamp){
           arrayListChamp.splice(x, 1);
           cardChamp(arrayChamp);
         }
-        cardChamp(filterData(arrayChamp, arrayListChamp)); 
+        cardChamp(filterData(arrayChamp, arrayListChamp));
       });
     });
   };
   listChamp(arrayTag);
   const search = () => {
-    const listBySort = sortKind.options[sortKind.selectedIndex].value; 
-    const arraySearch = window.data.searchData(arrayChamp, inputSearch.value);
-    cardChamp(sortData(arraySearch, parseInt(listBySort[0]), parseInt(listBySort[1]))); 
+    const listBySort = sortKind.options[sortKind.selectedIndex].value;
+    const arraySearch = searchDataFunction(arrayChamp, inputSearch.value);
+    cardChamp(
+      sortData(arraySearch, parseInt(listBySort[0]), parseInt(listBySort[1]))
+    );
   };
 
   const searchRolandOrder = () => {
     search();
-    sortKind.addEventListener('change', search);
-    searchbtton.addEventListener('click', search);
+    sortKind.addEventListener("change", search);
+    searchbtton.addEventListener("click", search);
   };
   searchRolandOrder();
 }

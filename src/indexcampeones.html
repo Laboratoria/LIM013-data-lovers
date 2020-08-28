@@ -1,144 +1,205 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <title>LOLPEDIA</title>
+    <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-	<title>LOLPEDIA</title>
-	<link rel="shortcut icon" type="image/svg" href="./img/iconleague.png" />
-	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <header>
+      <div class="header">
+        <figure>
+          <img
+            src="./img/logoLOL (1).png"
+            alt="lolpediaLogo"
+            class="title-lol"
+          />
+        </figure>
+        <div class="menus">
+          <div class="logoHome">
+            <a href="index.html"
+              ><img src="img/footerLOL.png" class="imgfooter"
+            /></a>
+          </div>
+          <div class="menu-bar">
+            <a href="index.html">Home</a>
+            <a href="indextop.html">Top 5</a>
+            <a href="indexcampeones.html" id="filchamp">Campeones</a>
+          </div>
+          <div class="menu-play">
+            <a
+              href="https://signup.na.leagueoflegends.com/en/signup/index"
+              target="_blank"
+              >Juega ahora</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
 
-<body>
-	<header>
-		<div class="header">
-			<figure>
-				<img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
-			</figure>
-			<div class="menus">
-				<div class="logoHome">
-					<a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
-				</div>
-				<div class="menu-bar">
-					<a href="index.html">Home</a>
-					<a href="indextop.html">Top 5</a>
-					<a href="indexcampeones.html" id="filchamp">Campeones</a>
-				</div>
-				<div class="menu-play">
-					<a href="https://signup.na.leagueoflegends.com/en/signup/index" target=_blank>Juega ahora</a>
-				</div>
-			</div>
-		</div>
-	</header>
-	
-	<main>
-		<section class="list" id="champion-three">
-			<div class="top-box">
-				<img src="img/Emblem_Challenger.png" class="emblemChallenger" width="20%" alt="emblemChallenger">
-				<p class="top5">Elige tu</p>
-				<div class="divisor2">
-					<p class="champion"> Campeon</p>
-				</div>
-			</div>
-			<div class="list" id="">
-				<p class="listChamp">Teniendo en cuenta que hay más de 140 campeones, no tardarás en encontrar tu estilo de
-					juego. Domina a uno o a todos.</p>
-			</div>
-			<div id="searchBar" class="corner">
-				<div class="searchbar">
-					<div class="nameSearch">
-						<img src="img/search.png" alt="search" class="animated heartBeat" id="lupa" />
-						<input id="searchInputs" type="text" placeholder="Buscar" spellcheck="false" maxlength="6" />
-					</div>
-					<span class="line"></span>
-					<div class="dropdownMenu">
-						<div class="dropdownStyle">
-							<img id="role" src="img/desliz.png" alt="shield" />
-							<span id="roleLetter" value="role" type="button">ROL</span>
-						</div>
-						<div id="myDropdown2" class="dropdown-content">
-							<div class="menu2" id="filter2">
-								<input value="Assassin" type="checkbox">Assassin</input>
-								<input value="Mage" type="checkbox">Mage</input>
-								<input value="Fighter" type="checkbox">Fighter</input>
-								<input value="Tank" type="checkbox">Tank</input>
-								<input value="Support" type="checkbox">Support</input>
-								<input value="Marksman" type="checkbox">Marksman</input>
-							</div>
-						</div>
-					</div>
-					<div class="menu" id="filter">
-						<input value="Assassin" type="checkbox">Assassin</input>
-						<input value="Mage" type="checkbox">Mage</input>
-						<input value="Fighter" type="checkbox">Fighter</input>
-						<input value="Tank" type="checkbox">Tank</input>
-						<input value="Support" type="checkbox">Support</input>
-						<input value="Marksman" type="checkbox">Marksman</input>
-					</div>
-					<span class="line" style="margin-left: auto;"></span>
-					<span class="line"></span>
-					<div class="dropdownMenu">
-						<div class="dropdownStyle">
-							<img id="roleDificultad" src="img/desliz.png" alt="shield" />
-							<span id="roleDificultad" value="roleDificultad" type="button">Dificultad</span>
-						</div>
-						<div id="myDropdown2" class="dropdown-content">
-							<div class="menu2" id="filter2">
-								<input value="Baja Dificultad" type="checkbox">Baja Dificultad</input>
-								<input value="Alta Dificultad" type="checkbox">Alta Dificultad</input>
-							</div>
-						</div>
-					</div>
-					<div class="menu" id="filter">
-						<input value="Baja Dificultad" type="checkbox">Baja Dificultad</input>
-						<input value="Alta Dificultad" type="checkbox">Alta Dificultad</input>
-					</div>
-					<div class="orderArray">
-						<div class="order" id="order">
-							<span>A<img src="./img/ascen.png" alt="Arrow" />Z</span>
-							<div id="dropdownSort" class="SortContent">
-								<img class="order1" id="az" data-value="az" src="./img/ascen.png" alt="order A-Z" />
-								<img class="order1" id="za" data-value="za" src="./img/descen.png" alt="order Z-A" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="filter-champ" id="container-list">
-		</section>
-	</main>
+    <main>
+      <section class="list" id="champion-three">
+        <div class="top-box">
+          <img
+            src="img/Emblem_Challenger.png"
+            class="emblemChallenger"
+            width="20%"
+            alt="emblemChallenger"
+          />
+          <p class="top5">Elige tu</p>
+          <div class="divisor2">
+            <p class="champion">Campeon</p>
+          </div>
+        </div>
+        <div class="list" id="">
+          <p class="listChamp">
+            Teniendo en cuenta que hay más de 140 campeones, no tardarás en
+            encontrar tu estilo de juego. Domina a uno o a todos.
+          </p>
+        </div>
+        
+          
+            
+              <form class="search-bar">
+                <fieldset id="champions-sort" class="champions-sort">
+                  <div id="lol-sort-option" class="lol-sort-option">
+                    <label value="0">Ordenar</label>
+                  </div>
+                  <select id="options" name="OS" class="lol-sort">
+                    <option value="00">A-Z</option>
+                    <option value="01">Z-A</option>
+                    <option value="10">DIFICULTAD ASC</option>
+                    <option value="11">DIFCULTAD DESC</option>
+                  </select>
+                </fieldset>
 
-	<footer>
-		<div class="container-footer">
-			<div class="riot">
-				<a href="https://www.riotgames.com/en" target=_blank><img src="./img/Riot_Games_logo.png" id="imgriot"
-						width="120" height=auto></a>
-			</div>
-			<div class="footer">
-				<div class="left">
-					<p class="derechos">© 2020 |Todos los derechos reservados</p>
-				</div>
-				<div class="redes">
-					<a href="#"><img src="./img/happyporo.png" id="compartir" class="animated wobble"></a>
-					<a href="https://www.facebook.com/LeagueofLegendsES/?fref=nf" class="nav-link" target=_blank><img
-							src="./img/fblogo.png" class="imgredes"></a>
-					<a href="https://www.instagram.com/leagueoflegends/" class="nav-link" target=_blank><img
-							src="./img/instaLOGO11.png" class="imgredes"></a>
-					<a href="https://twitter.com/lol_es" class="nav-link" target=_blank><img src="./img/twittLOGO.png"
-							class="imgredes"></a>
-				</div>
-			</div>
-		</div>
-	</footer>
-</body>
+                <fieldset id="searchInputs" class="champions-search">
+                  <input
+                    type="text"
+                    id="searchInputs"
+                    class="search-for-champion"
+                    name="q"
+                    placeholder="Buscar Campeones"
+                    autocomplete="on"
+                    value=""
+                  />
+                  <button id="lupa" class="search-btn" type="button">
+                    <img src="img/lupita.png" alt="" />
+                  </button>
+                </fieldset>
 
-<script src="data/lol/lol.js" type="module"></script>
-<script src="main.js" type="module"></script>
-<script src="data.js" type="module"></script>
+                <fieldset id="champions-filter" class="champions-filter">
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="assassin"
+                      value="Assassin"
+                    />Assassin
+                  </label>
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="fighter"
+                      value="Fighter"
+                    />Fighter
+                  </label>
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="mage"
+                      value="Mage"
+                    />Mage
+                  </label>
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="marksman"
+                      value="Marksman"
+                    />Marksman
+                  </label>
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="support"
+                      value="Support"
+                    />Support
+                  </label>
+                  <label class="checkbox-inline">
+                    <input
+                      class="fil-champ"
+                      type="checkbox"
+                      id="tank"
+                      value="Tank"
+                    />Tank
+                  </label>
+                </fieldset>
+              </form>
+            
+          
+        
+      </section>
+      <section class="filter-champ" id="container-listchamp"></section>
+    </main>
+
+    <footer>
+      <div class="container-footer">
+        <div class="riot">
+          <a href="https://www.riotgames.com/en" target="_blank"
+            ><img
+              src="./img/Riot_Games_logo.png"
+              id="imgriot"
+              width="120"
+              height="auto"
+          /></a>
+        </div>
+        <div class="footer">
+          <div class="left">
+            <p class="derechos">© 2020 |Todos los derechos reservados</p>
+          </div>
+          <div class="redes">
+            <a href="#"
+              ><img
+                src="./img/happyporo.png"
+                id="compartir"
+                class="animated wobble"
+            /></a>
+            <a
+              href="https://www.facebook.com/LeagueofLegendsES/?fref=nf"
+              class="nav-link"
+              target="_blank"
+              ><img src="./img/fblogo.png" class="imgredes"
+            /></a>
+            <a
+              href="https://www.instagram.com/leagueoflegends/"
+              class="nav-link"
+              target="_blank"
+              ><img src="./img/instaLOGO11.png" class="imgredes"
+            /></a>
+            <a
+              href="https://twitter.com/lol_es"
+              class="nav-link"
+              target="_blank"
+              ><img src="./img/twittLOGO.png" class="imgredes"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="data/lol/lol.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  <script src="data.js" type="module"></script>
 </html>
-
-
-	  
-
