@@ -80,7 +80,7 @@ const bienvenido = () => {
 
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
-btnIngresar.textContent = "Ingresar";
+btnIngresar.textContent = "Comenzar";
 btnIngresar.addEventListener("click", bienvenido);
 btnIntro.appendChild(btnIngresar);
 
