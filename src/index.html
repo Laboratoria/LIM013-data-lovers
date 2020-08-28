@@ -6,7 +6,7 @@
     <title>LOLPEDIA</title>
     <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png"/>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapgitis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
   </head>
   <body>
     <header> 
@@ -19,9 +19,9 @@
               <a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
           </div>
           <div class="menu-bar">
-            <a href="index.html">Home</a>
-            <a href="indextop.html">Top 5</a>
-            <a href="indexcampeones.html">Campeones</a>  
+            <a href="index.html" id="iniciochamp">Home</a>
+            <a href="indextop.html" id="Top5">Top 5</a>
+            <a href="indexcampeones.html" id="filchamp">Campeones</a>  
           </div>                     
           <div class="menu-play">
             <a href="https://signup.na.leagueoflegends.com/en/signup/index" target = _blank >Juega ahora</a>     
@@ -84,21 +84,23 @@
             </div>
             <div class="mySlides fade">
               <div class="numbertext">4 / 4</div>
-                <figure>
-                      <img src="./img/carril.jpg" alt="carril" width="100%">
-                </figure>
-                <span>
-                  <div class="text"><small>Carriles del mapa: TOP, MID, BOT, JUNGLE</small></div>
-                </span>
+              <figure>
+                <img src="./img/carril.jpg" alt="carril" width="100%">
+              </figure>
+              <span>
+                <div class="text"><small>Carriles del mapa: TOP, MID, BOT, JUNGLE</small></div>
+              </span>
             </div>
-              <a class="prev" id="prev">&#10094;</a>
-              <a class="next" id="next">&#10095;</a>
+            <a class="prev" id="prev">&#10094;</a>
+            <a class="next" id="next">&#10095;</a>
           </div>
-          <div style="text-align:center">
-              <span class="dot" id="dot1"></span>
-              <span class="dot" id="dot2"></span>
-              <span class="dot" id="dot3"></span>
-              <span class="dot" id="dot4"></span>
+          <div class="dot-chain" style="text-align:center">
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+            <span class="dot" id="dot4"></span>
+          </div>
+        </div>
             <figure>
               <img src="./img/divider.png" class="body-divider" alt="divider">
             </figure>                
@@ -109,22 +111,6 @@
           </article>
         </div>      
       </section> 
-      <section class="top-second" id="topfive">
-        <div class="top-box">
-          <p class="top5">Top Cinco</p>
-          <div class="divisor2">
-          <img src="./img/Emblem_Challenger.png" alt="emblema" id="emblema">
-          <p class="champion"> Campeones</p>
-          </div>
-        </div>
-        <div class="texto-top5">
-          <p> Si recién estas empezando en este juego, querrás elegir el mejor Campeón posible para destacar entre tus amigos. Para que sea más fácil tomar esta decisión, hemos onstruido esta lista de los 5 mejores Campeones que League of Legends puede ofrecer.</p>
-        </div>  
-          <figure>
-            <img src="./img/divider.png" class="body-divider" alt="divider"> 
-          </figure>                   
-        <div class="top-champions" id="list-top-champions"></div>
-      </section>
     </main>
     <footer>
       <div class="container-footer">
@@ -132,7 +118,7 @@
           <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" id="imgriot" width="120" height=auto></a>
         </div>
         <div class="footer">
-         <div class="left">
+        <div class="left">
           <p class="derechos">© 2020 |Todos los derechos reservados</p>
         </div>
         <div class="redes">
@@ -145,10 +131,10 @@
               class="imgredes"></a>
         </div>
       </div>
+      </div>
     </footer>
   </body>
   <script src="data/lol/lol.js" type="module"></script>
-  <script src="./main.js" type="module"></script>
+  <script src="main.js" type="module"></script>
   <script src="slide.js" type="module"></script>
-  <script src="data.js" type="module"></script>
 </html>
