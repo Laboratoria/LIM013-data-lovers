@@ -5,23 +5,16 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 const allCharacters = data.results;
 
-console.log(data);
+// console.log(data);
+
 
 const getListAllCharacters = () => {
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of All Characters");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
     
     let page = [];
     page = allCharacters.slice(0, 20);
+
+    const buttonsContainer = document.getElementById("buttonsContainer");
+    buttonsContainer.innerHTML = "";
 
     const elementOrderedList = document.getElementById('listCharacters');
     elementOrderedList.innerHTML = "";
@@ -30,7 +23,7 @@ const getListAllCharacters = () => {
 
         const result = page[i];
         const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
+        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
         
         const image = result.image;
         const elementImage = document.createElement("img");
@@ -47,10 +40,10 @@ const getListAllCharacters = () => {
         const buttonText = document.createTextNode(parseInt(i / 20) + 1);
         button.appendChild(buttonText);
         buttonsContainer.appendChild(button);
-                            
+
         function getPageAllCharacters(){
             
-            button.addEventListener("click", function() {
+            button.addEventListener('click', function() {
 
             let page = [];
             page = allCharacters.slice(i, i+20);
@@ -60,7 +53,7 @@ const getListAllCharacters = () => {
 
             for (let i=0; i < page.length; i++) {
 
-                const result = page[i];
+                const result = page[i]; 
                 const elementLi = document.createElement("li"); 
                 const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
                 
@@ -70,7 +63,7 @@ const getListAllCharacters = () => {
                 elementImage.alt = name;
                 elementLi.appendChild(elementImage); 
                 elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
+                elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -90,14 +83,6 @@ const getListSpeciesHuman = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Human");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = speciesHuman.slice(0, 20);
 
@@ -108,7 +93,7 @@ const getListSpeciesHuman = () => {
 
         const result = page[i];
         const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
+        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
         
         const image = result.image;
         const elementImage = document.createElement("img");
@@ -169,14 +154,6 @@ const getListSpeciesAlien = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Alien");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = speciesAlien.slice(0, 20);
@@ -250,14 +227,6 @@ const getListSpeciesHumanoid = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Humanoid");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = speciesHumanoid.slice(0, 20);
 
@@ -328,14 +297,6 @@ const getListSpeciesAnimal = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Animal");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = specieAnimal.slice(0, 20);
@@ -409,14 +370,6 @@ const getListSpeciesMytholog = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Mythological Creature");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = specieMytholog.slice(0, 20);
 
@@ -488,14 +441,6 @@ const getListSpeciesRobot = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Robot");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = specieRobot.slice(0, 20);
@@ -569,14 +514,6 @@ const getListSpeciesUnknown = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Unknown");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = specieUnknown.slice(0, 20);
 
@@ -647,14 +584,6 @@ const getListSpeciesCronenberg = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Cronenberg");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = specieCronenberg.slice(0, 20);
@@ -727,14 +656,6 @@ const getListSpeciesPoopybutthole = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Poopybutthole");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = speciePoopybutthole.slice(0, 20);
 
@@ -805,14 +726,6 @@ const getListSpeciesDisease = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Species: Disease");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = specieDisease.slice(0, 20);
@@ -886,14 +799,6 @@ const getListStatusAlive = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Status: Alive");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = statusAlive.slice(0, 20);
 
@@ -965,14 +870,6 @@ const getListStatusDead = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Status: Dead");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = statusDead.slice(0, 20);
@@ -1046,14 +943,6 @@ const getListStatusUnknown = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Status: Unknown");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = statusUnknown.slice(0, 20);
 
@@ -1125,14 +1014,6 @@ const getListGenderMale = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Gender: Male");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = genderMale.slice(0, 20);
 
@@ -1203,14 +1084,6 @@ const getListGenderFemale = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Gender: Female");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = genderFemale.slice(0, 20);
@@ -1284,14 +1157,6 @@ const getListGenderGenderless = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Gender: Genderless");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = genderGenderless.slice(0, 20);
 
@@ -1363,14 +1228,6 @@ const getListGenderUnknown = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("List of Characters Gender: Unknown");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = genderUnknown.slice(0, 20);
@@ -1445,14 +1302,6 @@ const getListAtoZ = () => {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
 
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("Sorted A to Z");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
-
     let page = [];
     page = sortedAscending.slice(0, 20);
 
@@ -1524,14 +1373,6 @@ const getListZtoA = () => {
 
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
-
-    const titleContainer = document.getElementById("titleContainer");
-    titleContainer.innerText = "";
-
-    const title = document.createElement("h2");
-    const titleText = document.createTextNode("Sorted Z to A");
-    title.appendChild(titleText);
-    titleContainer.appendChild(title);
 
     let page = [];
     page = sortedDescending.slice(0, 20);
@@ -1709,3 +1550,54 @@ function getListOrderZtoA(){
 }
 document.querySelector('#order').addEventListener('click', getListOrderZtoA);
 document.querySelector('#order').addEventListener('click', getListZtoA);
+
+
+
+window.addEventListener('load', () => {
+    document.getElementById('listCharacters').classList.add('images-loaded');
+    const categoriesLinks = document.querySelectorAll('#navbar a');
+    const categoriesOtherLinks = document.querySelectorAll('#buttonsContainer button');
+    const speciesLinks = document.querySelectorAll('#listSpecies a');
+    const genderLinks = document.querySelectorAll('#listGender a');
+    const statusLinks = document.querySelectorAll('#listStatus a');
+
+    categoriesLinks.forEach((element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            categoriesLinks.forEach((categoriesLinks) => categoriesLinks.classList.remove('active'));
+            event.target.classList.add('active');
+        });
+    });
+    speciesLinks.forEach((element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            speciesLinks.forEach((speciesLinks) => speciesLinks.classList.remove('active'));
+            event.target.classList.add('active');
+        });
+    });
+    genderLinks.forEach((element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            genderLinks.forEach((genderLinks) => genderLinks.classList.remove('active'));
+            event.target.classList.add('active');
+        });
+    });
+    statusLinks.forEach((element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            statusLinks.forEach((statusLinks) => statusLinks.classList.remove('active'));
+            event.target.classList.add('active');
+        });
+    });
+
+    categoriesOtherLinks.forEach((element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            categoriesOtherLinks.forEach((categoriesOtherLinks) => categoriesOtherLinks.classList.remove('active'));
+            event.target.classList.add('active');
+        });
+    });
+
+
+})
+
