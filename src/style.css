@@ -215,6 +215,7 @@ header .categories{
 }
 
 
+
 .navbar {
     overflow: hidden;
     font-family: 'Patrick Hand SC', cursive;
@@ -311,3 +312,4 @@ section main .flex-container {
 .images-loaded {
     opacity: 1;
 }
+
