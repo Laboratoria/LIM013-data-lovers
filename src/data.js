@@ -38,5 +38,15 @@ const order = {
     //console.log("result",result)
     return result
   },
+
+   //calcular por nivel (reduce)
+   statsPerLevel: function (data,level,position){
+    return data.reduce(
+      () => {
+        const name = data[position].name;
+        const hp = data[position].stats.hpperlevel * level;
+        return name + ' ' + hp;
+      })
+  } 
 };
 export default order;

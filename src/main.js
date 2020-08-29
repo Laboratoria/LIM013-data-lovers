@@ -41,8 +41,9 @@ getLegends(arrayLegends);
 /*---FILTRO DE LA DATA---*/
 filter.addEventListener('click', (e) => {
   const rol = e.target.id
-
-  if (rol == null || rol == '' || rol == 'All') {
+  //console.log('rol',rol);
+  if (rol == '' || rol == 'filter' || rol == 'All') {
+    document.getElementById('legends_container').innerHTML = '';
     getLegends(arrayLegends);
   } else {
     const result = order.filterLegend(arrayLegends, rol)

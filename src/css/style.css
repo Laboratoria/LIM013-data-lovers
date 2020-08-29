@@ -551,47 +551,37 @@ input[type=button] {
 
 .legends_list {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   align-items: space-beetween;
   justify-content: center;
   margin: 0px auto;
 }
 
 .legends_stats1 {
-  flex: 2 1 50%;
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #986E1E;
-}
 
-.legends_stats2 {
-  flex: 2 1 50%;
   text-align: center;
   margin: 10px;
-  padding: 20px;
-  border: 1px solid #986E1E;
+  border: 2px solid #986E1E;
+  background: #3F3F41;
+  color: #fff;
 }
 
 .legends_list img {
-  width: 280px;
+  width: 300px;
 }
 
-/* .legends_container .images{
-  
-  width: 90%;
-  justify-content:space-around;
+.legends_list img {
+  width: 300px;
 }
-.legends_container .images img{
-  width:280px;
-  border-radius: 15px;
-  margin: 20px 10px 10px 10px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+
+.legends_list p {
+  padding: 10px 0px;
 }
-.stats{
-  width: 100%;
-  margin: auto;
+
+.legends_list .name {
+  background: #0A3238;
+  height: 70px;
+  padding: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
