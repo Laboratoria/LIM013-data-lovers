@@ -54,7 +54,7 @@ for (let index = 0; index < btnMorePok.length; index++) {
     });  
 }
 
-//funcion para redimenzionar contenedor de pokemones y contenedor de información
+//funcion para redimensionar contenedor de pokemones y contenedor de información
 const resizeInformation = (a,b,c)=> {
     if (a.clientWidth<=1000) { 
         b.style.width="0%";
@@ -76,21 +76,49 @@ const showInformationPok = (display,indexSelect) => {
 
     display.innerHTML=`
     <section class="close">
-        <button><i class="fas fa-times-circle"></i></button>
+        <button class="closePokSelectButton"><i class="fa fa-close"></i></button>
     </section>
-    <p class="nameAndNum">
-        <span>${arrayPokSelect[0].name}</span>
-        <span>${arrayPokSelect[0].num}</span>
-    </p>
+    <section class="nameAndNum">
+        <p class="num">#${arrayPokSelect[0].num}</p>
+        <p class="name">${arrayPokSelect[0].name}</p>
+    </section>
+    <section class="mainInfo">
+      <section class="leftInfo">
+        <section class="pokemonType">
+          <p class="sectionTitle">Type:</p>
+        </section>
+        <section class="pokemonBefore">
+          <button class="pkmBefore">&lt</button>
+        </section>
+        <section class="pokemonSize">
+          <p class="sectionTitle">Size:</p>
+        </section>
+      </section>
+      <section class="centerInfo">
+        <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
+        </section>
+      <section class="rightInfo">
+        <section class="pokemonWeakness">
+          <p class="sectionTitle">Weakness:</p>
+        </section>
+        <section class="pokemonAfter">
+          <button class="pkmBefore">&gt</button>
+        </section>
+      </section>
+    </section>
     <p class="aboutPok">${arrayPokSelect[0].about}</p>
-    <section class="imgPokID">
-    <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
-    </section>
-    <section class="featuresPok">sección que contendra todas las estadisticas del pokémon</section>
-    <section class="evolutionsPok">
-    <img class="imgPokEv" src="${arrayPokSelect[0].img}">
-    <img class="imgPokEv" src="${arrayPokSelect[0].img}">
-    <img class="imgPokEv" src="${arrayPokSelect[0].img}">
+    <section class="lastContainer">
+      <section class="featuresPok">sección que contendra todas las estadisticas del pokémon</section>
+      <section class="evolutionsPok">
+        <p class="sectionTitle">Evolutions:</p>
+        <section class="evolutionsPokImages">
+          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
+          <p class="evoSign">&gt</p>
+          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
+          <p class="evoSign">&gt</p>
+          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
+        </section>
+      </section>
     </section>`
     
 }
