@@ -4,22 +4,41 @@ import data from './data/lol/lol.js';
 const datos = data.data,
   arrayLegends = Object.values(datos);
 
+let level = 0;
+
+/* const prodNivel = arrayLegends.map(
+  (item) => {
+    const name = item.name
+    const hp = item.stats.hp + (item.stats.hpperlevel * level)
+    return name + ': ' + hp
+  }) 
+  console.log('prodNivel',prodNivel[0])*/
+
+
+
+
 /**HTML */
-const listStats = (name, splash, hpperlevel, mpperlevel, attackdamageperlevel) => {
+const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attackActual, iddiv) => {
+  console.log('mpActual',mpActual);
+  document.querySelector(iddiv).innerHTML = '';
+
   const legends_stats1 = document.createElement('div'),
     nameLegend = document.createElement('p'),
     statsLegend = document.createElement('p'),
     image = document.createElement('img');
 
   nameLegend.innerHTML += name;
-  statsLegend.innerHTML += `<p>HpperLevel: ${hpperlevel}</p>
-                            <p>MpperLevel: ${mpperlevel}</p>
-                            <p>AttackDamageperLevel: ${attackdamageperlevel}</p>`;
+  statsLegend.innerHTML += `<p>Vida por Nivel: ${hp}</p>
+                            <p>Vida Actual: ${hpActual}</p>
+                            <p>Mana por NIvel : ${mp}</p>
+                            <p>Mana Actual: ${mpActual}</p>
+                            <p>Ataque por Nivel: ${attackdamage}</p>
+                            <p>Ataque Actual: ${attackActual}</p>`;
   nameLegend.setAttribute('class', 'name');
   legends_stats1.setAttribute('class', 'legends_stats1');
   image.setAttribute('src', splash);
 
-  document.querySelector('.legends_list').appendChild(legends_stats1);
+  document.querySelector(iddiv).appendChild(legends_stats1);
   legends_stats1.appendChild(nameLegend);
   legends_stats1.appendChild(image);
   legends_stats1.appendChild(statsLegend);
@@ -27,20 +46,21 @@ const listStats = (name, splash, hpperlevel, mpperlevel, attackdamageperlevel) =
 }
 
 /*TRAER DATA ESTADÍSTICAS (hpper level, mpper level, attack damage per level)*/
-const getStats = (objLegend, selected) => {
+const getStats = (objLegend, selected, iddiv) => {
+  console.log('level123', level);
+  console.log('select123', selected);
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
     let splash = objLegend[i].splash;
-    let hpperlevel = objLegend[i].stats.hpperlevel;
-    let mpperlevel = objLegend[i].stats.mpperlevel;
-    let attackdamageperlevel = objLegend[i].stats.attackdamageperlevel;
-    //console.log('OBJECT',objLegend[i].name);
+    let hp = objLegend[i].stats.hp;
+    let hpActual = order.hpperLevel(objLegend, level, i);
+    let mp = objLegend[i].stats.mp;
+    let mpActual = order.mpperLevel(objLegend, level, i);
+    let attackdamage = objLegend[i].stats.attackdamage;
+    let attackActual = order.attackperLevel(objLegend, level, i);
+
     if (objLegend[i].name == selected) {
-      //console.log('select',i)
-      const level = 2;
-      //const prodNivel = order.statsPerLevel(arrayLegends, level, i)
-      listStats(name, splash, hpperlevel, mpperlevel, attackdamageperlevel);
-      console.log('prodNivel', level)
+      listStats(name, splash, hp, hpActual, mp, mpActual, attackdamage, attackActual, iddiv);
     }
   }
 };
@@ -59,11 +79,6 @@ const getStats = (objLegend, selected) => {
 ;
 //console.log('prueba', prodNivel)
 //return prodNivel;
-
-const nivel = 2;
-const position = 1;
-const reduce = order.statsPerLevel(arrayLegends, nivel, position)
-console.log('reduce', reduce)
 
 /*ESTADISTICA SELECT */
 
@@ -88,21 +103,25 @@ for (let i = 0; i < arrayLegends.length; i++) {
 legend01.addEventListener('change', (e) => {
   const legend = e.target.value
   //console.log('prueba123',e.target.value);
-  //document.querySelector('.legends_stats1').innerHTML = '';
-  getStats(arrayLegends, legend);
+
+  getStats(arrayLegends, legend, "#legends_list_izquierda");
 })
 
 legend02.addEventListener('change', (e) => {
   const legend = e.target.value
   //console.log('prueba123',e.target.value);
-  //document.querySelector('.legends_stats1').innerHTML = '';
-  getStats(arrayLegends, legend);
+
+  getStats(arrayLegends, legend, "#legends_list_derecha");
 
 })
 
-const level = document.getElementById('number');
-level.addEventListener('change', (e) => {
-  const level = e.target.value;
-  //console.log(level);
-  getStats(arrayLegends, level)
+const inputLevel = document.getElementById('number');
+inputLevel.addEventListener('change', (e) => {
+  level = parseInt(e.target.value);
+  console.log('level', level)
+  if (level === '') {
+    level = 1
+  }
+  getStats(arrayLegends, document.querySelector('#select01').value, "#legends_list_izquierda");
+  getStats(arrayLegends, document.querySelector('#select02').value, "#legends_list_derecha")
 });
