@@ -604,7 +604,30 @@ border-radius: 0px 5px 5px 0px;
 
 .pokemonBefore {
     height: 50px;
+    margin: 0px 0px;
+    display: flex;
+    cursor: pointer; 
     border: solid 2px purple;
+}
+
+.pkmBefore {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    color: #88D9E5;
+    background-image:url(images/fondo_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: none;
 }
 
 .pokemonWeakness {
@@ -640,6 +663,7 @@ border-radius: 0px 5px 5px 0px;
     width: 22%;
     margin-left: 0px;
     margin-right: 0px;
+    text-transform: capitalize;        
     border: solid 1px yellow;    
 }
 
@@ -648,9 +672,39 @@ border-radius: 0px 5px 5px 0px;
     border: solid 2px purple;
 }
 
+.pokemonHAndW{
+    color: #88D9E5;
+    text-align: left;
+    font-size: 14px;
+}
+
 .pokemonAfter {
     height: 50px;
+    margin: 0px 0px;
+    margin-right: 85px;
+    display: flex;
+    cursor: pointer;
     border: solid 2px purple;
+}
+
+.pkmAfter {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    color: #88D9E5;
+    background-image:url(images/fondo_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: none;
 }
 
 .midContainer {
