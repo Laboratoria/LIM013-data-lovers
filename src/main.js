@@ -90,30 +90,39 @@ const showInformationPok = (display,indexSelect) => {
         <section class="pokemonBefore">
           <button class="pkmBefore">&lt</button>
         </section>
-        <section class="pokemonSize">
-          <p class="sectionTitle">Size:</p>
+        <section class="pokemonWeakness">
+          <p class="sectionTitle">Weakness:</p>
         </section>
       </section>
       <section class="centerInfo">
-        <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
+        <section class="circleImg">
+          <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
         </section>
+      </section>
       <section class="rightInfo">
-        <section class="pokemonWeakness">
-          <p class="sectionTitle">Weakness:</p>
+        <section class="pokemonSize">
+         <p class="sectionTitle">Size:</p>
         </section>
         <section class="pokemonAfter">
           <button class="pkmBefore">&gt</button>
         </section>
       </section>
     </section>
-    <p class="aboutPok">${arrayPokSelect[0].about}</p>
-    <section class="lastContainer">
+    </section>
+    <section class="midContainer">
       <section class="featuresPok">sección que contendra todas las estadisticas del pokémon</section>
-      <section class="evolutionsPok">
-        <p class="sectionTitle">Evolutions:</p>
-        <section class="evolutionsPokImages">
-          ${pokEvolutionHtml}
-        </section>`
+      <section class="aboutPokContainer">
+      <p class="aboutPok">${arrayPokSelect[0].about}</p>
+      </section>
+    </section>
+    <section class="lastContainer">
+      <section>
+      <p class="sectionTitle">Evolutions:</p>
+      </section>
+      <section class="evolutionsPokImages">
+        ${pokEvolutionHtml}
+      </section>
+    </section>`
 }
 
 //funcion que devuelve elementos HTML con información de la evoluciones de los pokémon
@@ -131,17 +140,20 @@ const PokEvolution = (arrayPokSelect) => {
             return `
             <section class="currentPok">
                 <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+                <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
+                <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
             </section>
             <section class="nextEvolution">
                 <section><img class="imgPokEv" src="${imgPokNext1}"></section>
-                <p><span>${nextPok1} </span><span>${arrayNextEvolution.num}</span></p>
-                <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
+                <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num} </span></p>
+                <p class="evoSectionPokName"><span>${nextPok1}</span></p>
+                <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
             </section>
             <section class="nextEvolution">
                 <section><img class="imgPokEv" src="${imgPokNext2}"></section>
-                <p><span>${nextPok2} </span><span>${arrayNextEvolution["next-evolution"][0].num}</span></p>
-                <p>Cost of candy: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
+                <p class="evoSectionPokNum"><span>#${arrayNextEvolution["next-evolution"][0].num} </span></p>
+                <p class="evoSectionPokName"><span>${nextPok2}</span></p>
+                <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
             </section>`
 
         } else {
@@ -153,17 +165,20 @@ const PokEvolution = (arrayPokSelect) => {
             return `
             <section class="prevEvolution">
                 <section><img class="imgPokEv" src="${imgPokPrev1}"></section>
-                <p><span>${prevPok1} </span><span>${arrayPrevEvolution.num}</span></p>
-                <p>Cost of candy: ${arrayPrevEvolution["candy-cost"]}</p>
+                <p class="evoSectionPokNum"><span>#${arrayPrevEvolution.num} </span></p>
+                <p class="evoSectionPokName"><span>${prevPok1}</span></p>
+                <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
             </section>
             <section class="prevEvolution">
                 <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
-                <p><span>${prevPok2} </span><span>${arrayPrevEvolution["prev-evolution"][0].num}</span></p>
-                <p>Cost of candy: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
+                <p class="evoSectionPokNum"><span>#${arrayPrevEvolution["prev-evolution"][0].num} </span></p>
+                <p class="evoSectionPokName"><span>${prevPok2}</span></p>
+                <p class="evoSectionPokCandy">Cost of candy: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
             </section>
             <section class="currentPok">
                 <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+                <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
+                <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
             </section>`
         }
     } 
@@ -178,17 +193,20 @@ const PokEvolution = (arrayPokSelect) => {
         return `
         <section class="preEvolution">
             <section class><img class="imgPokEv" src="${imgPokPrev}"></section>
-            <p><span>${prevPok1}</span><span>${arrayPrevEvolution.num}</span></p>
-            <p>Cost of candy: ${arrayPrevEvolution["candy-cost"]}</p>
+            <p class="evoSectionPokNum"><span>#${arrayPrevEvolution.num}</span></p>
+            <p class="evoSectionPokName"><span>${prevPok1}</span></p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
         </section>
         <section class="currentPok">
             <section><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-            <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+            <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
+            <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
         </section>
         <section class="nextEvolution">
             <section><img class="imgPokEv" src="${imgPokNext}"></section>
-            <p><span>${nextPok1}</span><span>${arrayNextEvolution.num}</span></p>
-            <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
+            <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num}</span></p>
+            <p class="evoSectionPokName"><span>${nextPok1}</span></p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
         </section>`
     }
     
