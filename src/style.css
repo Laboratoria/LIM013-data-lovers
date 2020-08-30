@@ -583,12 +583,10 @@ border-radius: 0px 5px 5px 0px;
 }
 
 .sectionTitle {
-    width: 100%;
-    height: 8px;
-    margin-top: 5px;
-    margin-left: 0px;
+    width: 94%;
+    height:12%;
     text-align: left;
-    font-size: 12px;
+    font-size: 16px;
     color: #00C1EC;
 }
 
@@ -657,60 +655,82 @@ border-radius: 0px 5px 5px 0px;
 
 .midContainer {
     width: 100%;
-    height: 120px;
+    height: 20%;
     display: flex;
     flex-direction: row;            
     flex-wrap: nowrap;              
     justify-content: space-between;
-    border: solid 1px orange;
 }
 
-.featuresPok {
-    width: 49%;
-    padding: 20px;
+.featuresPok, .aboutPokContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
     font-size: 14px;
-    text-align: left;
     color: #88D9E5;
-    display: block;
-    background-color: transparent;
-    border: solid 1px purple;
+}
+.featuresPok p{
+    width: 90%;
+    height:10%;
+    text-align: left;
+    font-size: 16px;
+    color: #00C1EC;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aboutPokContainer {
-    width: 49%;
-    padding: 20px;
-    display: block;
-    background-color: transparent;
-    border: solid 1px purple;
+.titleaboutPok{
+    width: 90%;
+    height:18%;
+    text-align: left;
+    font-size: 16px;
+    color: #00C1EC;
 }
-
-.aboutPok {
+.sectionAboutPok {
+    display: flex;
+    align-items: center;
+    height: 88%;
+    width: 93%;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     color: #88D9E5;
+    border:#00C1EC 1px dashed;
+  
+}
+
+.tableStats{ 
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    justify-items: center;
+}
+.tableStats,td{
+   
+    border: 1px solid #00C1EC;
+    border-collapse: collapse;
+    padding: 5px;
 }
 
 .lastContainer {
+    margin-top: 1%;
     width: 100%;
-    height: 255px;
+    height: 25%;
     display: flex;
-    flex-direction: row;            
-    flex-wrap: nowrap;              
-    justify-content: space-between;
-    border: solid 1px orange;
+    flex-direction: column;            
+    justify-content:space-between;
+    align-items: center;
 }
 
 .evolutionsPokImages {
-    width: 100%;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 94%;
+    height: 86%;
     display: flex;
     flex-direction: row;            
     flex-wrap: nowrap;              
-    justify-content: center; 
-    background-color: transparent;
-    border: solid 1px yellow;
+    justify-content: space-around; 
+    border-radius: 10px 10px 10px 10px;
+    border: solid 1px #00C1EC;
 }
 
 .evolutionsPokImages p{
@@ -721,9 +741,6 @@ border-radius: 0px 5px 5px 0px;
 .evoSectionPokNum {
     font-size: 14px;
     color: #88D9E5;
-}
-.pokemonSize p{
-    color: greenyellow;
 }
 
 .evoSectionPokName {
