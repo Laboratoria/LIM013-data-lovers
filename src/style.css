@@ -716,6 +716,9 @@ border-radius: 0px 5px 5px 0px;
     color: greenyellow;
 
 }
+.pokemonSize p{
+    color: greenyellow;
+}
 
 /*.imgPokEv {
     width: 28%;

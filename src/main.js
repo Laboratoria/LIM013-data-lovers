@@ -92,6 +92,9 @@ const showInformationPok = (display,indexSelect) => {
         </section>
         <section class="pokemonSize">
           <p class="sectionTitle">Size:</p>
+          <p>height : ${arrayPokSelect[0].size.height}</p>
+          <p>weight : ${arrayPokSelect[0].size.weight}</p>
+
         </section>
       </section>
       <section class="centerInfo">
