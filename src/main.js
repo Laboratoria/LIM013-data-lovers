@@ -66,6 +66,10 @@ const setupagination = (items, wrapper, rows_per_page) => {
 	}
 }
 
+const videoI = document.getElementById("video-f");
+videoI.autoplay = true
+videoI.load();
+
 //Funciones de botón de inicio
 const bienvenido = () => {
 	document.querySelector('#conter').classList.add("ocultar");
@@ -73,6 +77,8 @@ const bienvenido = () => {
 	document.querySelector('#container-header').classList.remove("ocultar");
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
+	videoI.autoplay = false
+	videoI.load();
 
 	displayList(data, listElement, rows, currentPage);
 	setupagination(data, paginationElemnent, rows);
@@ -80,7 +86,7 @@ const bienvenido = () => {
 
 const btnIntro = document.getElementById("btnIntro")
 const btnIngresar = document.createElement("button");
-btnIngresar.textContent = "Ingresar";
+btnIngresar.textContent = "Comenzar";
 btnIngresar.addEventListener("click", bienvenido);
 btnIntro.appendChild(btnIngresar);
 

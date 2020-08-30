@@ -32,7 +32,7 @@
     }
 
     .menu a:visited{
-        color: #2ADE97;
+        color: #0FB875;
         font-family: 'Open Sans', sans-serif;
         background: transparent;
     }
@@ -100,13 +100,27 @@
 
 @media only screen and (max-width:700px){
     /* Estilos botón de inicio*/
-    .btn-i button{
+    .mask-fondo h1{
+        margin: 80px 20px 30px;
+        font-size: 35px;
+    }
+
+    .mask-fondo img{
+        width: 70%;
+    }
+
+    .mask-fondo p{
+        margin: 40px 20px 20px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    /* .btn-i button{
       position:relative;
       left: 30%;
       top:70%;
       padding: 5px 9px;
       margin-top: 100px;
-    }
+    }*/
 
     /* Estilos ordenar por y filtros mobile*/
     .btn-controls{

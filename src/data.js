@@ -13,7 +13,7 @@ const datajs = {
         return data.filter(data => { return data.origin.name === dataF });
     } else if (condition === "gener") {
       return data.filter(data => { return data.gender === dataF });
-    } else 
+    } else
       return data.filter(data => { return data.status === dataF });
   },
 
