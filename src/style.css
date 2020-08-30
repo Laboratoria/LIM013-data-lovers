@@ -712,25 +712,25 @@ border-radius: 0px 5px 5px 0px;
     background-color: transparent;
     border: solid 1px orange;
 }
+.evolutionsPokImages p{
+    color: greenyellow;
 
-.imgPokEv {
+}
+
+/*.imgPokEv {
     width: 28%;
     height: 80px;
     margin: 0px;
     background-image: url(images/);
     border: solid 1px yellow;
-}
+}*/
 
-.evoSign {
+/*.evoSign {
     width: 10%;
     height: 80px;
     margin: 0px;
     border: solid 1px yellow;
-}
-
-/*Footer*/
-=======
-
+}*/
 /********************flex contenedor de evoluciones**************************/
 .evolutionsPok{
     display: flex;
@@ -739,6 +739,8 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /* *****************************************************************/
+
+/*Footer*/
 .footer {
     /*background: #15393C;*/
     background-image: url(images/fondo_footer.png);
