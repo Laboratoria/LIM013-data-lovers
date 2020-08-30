@@ -123,55 +123,89 @@ const showInformationPok = (display,indexSelect) => {
 const PokEvolution = (arrayPokSelect) => {
     const objEvolution = arrayPokSelect[0].evolution;
     const quantityProp = Object.keys(objEvolution).length;
-    if (quantityProp==2) {
 
+    if (quantityProp==2) {
+        
         if (Object.keys(objEvolution)[1]=="next-evolution") {
+            const quantityNextEvo=Object.keys(objEvolution["next-evolution"][0]).length;
             const arrayNextEvolution=arrayPokSelect[0].evolution["next-evolution"][0];
             const nextPok1=arrayNextEvolution.name;
-            const nextPok2=arrayNextEvolution["next-evolution"][0].name;
             const imgPokNext1=filterForName(data.pokemon,nextPok1)[0].img;
-            const imgPokNext2=filterForName(data.pokemon,nextPok2)[0].img;
-            return `
-            <section class="currentPok">
-                <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
-            </section>
-            <section class="nextEvolution">
-                <section><img class="imgPokEv" src="${imgPokNext1}"></section>
-                <p><span>${nextPok1} </span><span>${arrayNextEvolution.num}</span></p>
-                <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
-            </section>
-            <section class="nextEvolution">
-                <section><img class="imgPokEv" src="${imgPokNext2}"></section>
-                <p><span>${nextPok2} </span><span>${arrayNextEvolution["next-evolution"][0].num}</span></p>
-                <p>Cost of candy: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
-            </section>`
+
+            if (quantityNextEvo==4) {
+                const nextPok2=arrayNextEvolution["next-evolution"][0].name;
+                const imgPokNext2=filterForName(data.pokemon,nextPok2)[0].img;
+                return `
+                <section class="currentPok">
+                    <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+                    <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+                </section>
+                <section class="nextEvolution">
+                    <section><img class="imgPokEv" src="${imgPokNext1}"></section>
+                    <p><span>${nextPok1} </span><span>${arrayNextEvolution.num}</span></p>
+                    <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
+                </section>
+                <section class="nextEvolution">
+                    <section><img class="imgPokEv" src="${imgPokNext2}"></section>
+                    <p><span>${nextPok2} </span><span>${arrayNextEvolution["next-evolution"][0].num}</span></p>
+                    <p>Cost of candy: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
+                </section>`
+                
+            } else {
+                return `
+                    <section class="currentPok">
+                        <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+                        <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+                    </section>
+                    <section class="nextEvolution">
+                        <section><img class="imgPokEv" src="${imgPokNext1}"></section>
+                        <p><span>${nextPok1} </span><span>${arrayNextEvolution.num}</span></p>
+                        <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
+                    </section>`
+                
+            }
 
         } else {
+            const quantityPrevEvo=Object.keys(objEvolution["prev-evolution"][0]).length;
             const arrayPrevEvolution=arrayPokSelect[0].evolution["prev-evolution"][0];
-            const prevPok1=arrayPrevEvolution.name;
-            const prevPok2=arrayPokSelect[0].evolution["prev-evolution"][0]["prev-evolution"][0].name;
-            const imgPokPrev1=filterForName(data.pokemon,prevPok1)[0].img;
+            const prevPok2=arrayPrevEvolution.name;
             const imgPokPrev2=filterForName(data.pokemon,prevPok2)[0].img;
-            return `
+            if (quantityPrevEvo==4) {
+                const prevPok1=arrayPrevEvolution["prev-evolution"][0].name;
+                const imgPokPrev1=filterForName(data.pokemon,prevPok1)[0].img;
+                return `
             <section class="prevEvolution">
                 <section><img class="imgPokEv" src="${imgPokPrev1}"></section>
-                <p><span>${prevPok1} </span><span>${arrayPrevEvolution.num}</span></p>
-                <p>Cost of candy: ${arrayPrevEvolution["candy-cost"]}</p>
+                <p><span>${prevPok1} </span><span>${arrayPrevEvolution["prev-evolution"][0].num}</span></p>
+                <p>Cost of candy: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
             </section>
             <section class="prevEvolution">
                 <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
-                <p><span>${prevPok2} </span><span>${arrayPrevEvolution["prev-evolution"][0].num}</span></p>
-                <p>Cost of candy: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
+                <p><span>${prevPok2} </span><span>${arrayPrevEvolution.num}</span></p>
+                <p>Cost of candy: ${arrayPrevEvolution["candy-cost"]}</p>
             </section>
             <section class="currentPok">
                 <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
                 <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
             </section>`
+                
+            } else {
+                return `
+            <section class="prevEvolution">
+                <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
+                <p><span>${prevPok2} </span><span>${arrayPrevEvolution.num}</span></p>
+                <p>Cost of candy: ${arrayPrevEvolution["candy-cost"]}</p>
+            </section>
+            <section class="currentPok">
+                <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+                <p><span>${arrayPokSelect[0].name} </span><span>${arrayPokSelect[0].num}</span></p>
+            </section>`  
+            }
+            
         }
     } 
 
-    else if(quantityProp==3){
+    else {
         const arrayNextEvolution=arrayPokSelect[0].evolution["next-evolution"][0];
         const arrayPrevEvolution=arrayPokSelect[0].evolution["prev-evolution"][0];
         const nextPok1=arrayNextEvolution.name;
