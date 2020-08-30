@@ -9,31 +9,29 @@
 	display:flex;
 	flex-flow:row wrap;
 }*/
-
 header {
 	background: #000000;
-	width:100%;
-	padding:5px 5px 0px 5px;
+	width: 100%;
+	height: 60px;
+	/*padding:5px 5px 0px 5px;*/
 
-	/* Flexbox */
-    display: flex;
-	justify-content:space-between;
+	/*Flexbox
+    display: flex;*/ 
+	/*justify-content:space-between;
 	align-items:center;
 	flex-direction:row;
-	flex-wrap:wrap;
+	flex-wrap:wrap;*/
+}
+header .contenidoheader{
+	display: inline-flex;
+	margin:5px;
 }
 header .logo img{
-	height: 50px;
-	width:50px;
-	padding:1px 30px 0px 30px;
-	display: inline-block;
+	height:40px;
+	width:40px;
+	margin:5px 10px 5px 20px;
 }
-/*.logo{
-	text-align: center;
-	height: 0px;
-	width:10px;
-	padding:10px;
-}*/
+/*que Vero me explique esto*/
 header nav .logo a i{
 	display: none;
 	color: #dbb74c ;
@@ -41,33 +39,37 @@ header nav .logo a i{
 	flex-wrap:wrap;
 	align-items: center;
 }
-header nav {
+/*header nav {
 	width:100%;
-	/* Flexbox */
-	display:inline-flex;
+	/* Flexbox
+	display:inline-block;
 	flex-wrap:wrap;
     align-items:center;
+}*/
+header nav .barsNavigation{
+	padding: 15px 10px 0px 35px;
 }
 header nav .barsNavigation a {	
 	color: #dbb74c;
-	text-align: center;
 	text-decoration: none;
-	font-family:'Fira Sans', sans-serif; 
-	padding:1px 90px 0px 90px;
 	display: inline-block;
+	font-family:'Fira Sans', sans-serif; 
+	/*padding:1px 90px 0px 90px;*/
 	text-transform: uppercase;
-	/* Flexbox */
-	flex-grow:1;
+	padding:0px 20px 15px;
+
+	/* Flexbox 
+	flex-grow:1;*/
 }
 header nav .barsNavigation a:hover {
-	border-bottom: 3px solid #dbb74c ;
-	padding-bottom:30px;
+	border-bottom: 5px solid #07dffc; ;
     
 }
-#home{
+main{
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
 	background-size: 100% 100%;
 }
+
 #championPage{
 	background-color: #061C25 ;
 	background-size: 100% 100%;
@@ -75,8 +77,21 @@ header nav .barsNavigation a:hover {
 main img{
 	width: 50%;
 	height: 50%;
-	padding: 10% 0% 10% 25%;
-	display: block; 
+	padding: 5% 0% 2% 25%;
+	display: block;
+
+}
+main .playvideo{
+	width: 10%;
+	height: 10%;
+	padding: 0% 0% 5% 43%;
+	color:  white;
+	display: block;
+}
+main .playvideo:hover{
+filter: drop-shadow(0px 0px 5px rgb(255, 253, 253));
+width: 11%;
+height: 11%;
 }
 /* ----PAGINA CAMPEONES------ */
 #championsPage{
@@ -85,31 +100,38 @@ main img{
 .boton{
 	background-color: #25b9cc;
 	padding:10px 25px;
-	margin: 0% 0% 10% 40%;
-	font-size:18px;
+	margin: 0% 0% 10% 38%;
+	font-size:25px;
+	font-family: 'Marcellus SC', serif;
+	color: #000000;
+	border-color:#25b9cc;
+	cursor: pointer;
 }
 .boton:hover {
-	background: #07dffc;
-	padding:10px 25px;
-	margin: 0% 0% 10% 40%;
-	font-size:20px;
-	letter-spacing: 2px;
+	background:  #25b9cc;
+	font-size:25px;
+	letter-spacing: 2PX;
+	box-shadow: 0 0 15px #25b9cc;
+	text-shadow: 0.0625rem 0.0625rem 0.5rem #0e0d0d,0 0 1em #f3f3f3,0 0 0.2em #f7a80b;
 }
 .htext {
 text-align: center;
-font-family: Calibri;
+font-family: 'Marcellus SC', serif;
+font-size: 25px;
 color: #07dffc;
 }
-.tittle{
+h1{
 text-align: center;
-font-family:'Bangers', cursive;
+font-family: 'Marcellus SC', serif;
+/*font-family:'Bangers', cursive;*/
 font-size: 90px;
 color: #07dffc;
+text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
 }
 label{
-font-family: Calibri;
+font-family: 'Marcellus SC', serif;
 color: #07dffc;	
-font-size: 20px;
+font-size: 16px;
 }
 .champion{
 	background-color: none;
@@ -119,16 +141,22 @@ font-size: 20px;
 }
 
 .categoria a{
-	color: #000000;
-	background-color:#ffffff;
+	color: #997406;
+	background-color:transparent;
 	font-family: 'Bangers', cursive;
 	text-align: center;
-	font-size: 20px;
+	font-size: 22px;
 	width: 100px;
 	height: 25px;
+	text-decoration: none;
+	letter-spacing: 1PX;
+	margin:5px;
+}
+.categoria a:hover{
+	text-shadow: 0 0 2px #f5db8d,0 0 4px #f5db8d,0 0 6px #f5db8d;
 }
 .categoria a.active{
-    background-color: #dbb74c;
+    text-shadow: 0 0 2px #f5db8d,0 0 4px #f5db8d,0 0 6px #f5db8d;
 }
 .form-name {
 	width: 50%;
@@ -162,8 +190,8 @@ select {
 footer {
 	background: #000000;;
 	width: 100%;
-    padding:20px;
-    position: absolute;
+    padding:10px 30px;
+    /*position: absolute;*/
  
 	/* Flexbox */
 	display: flex;
@@ -171,13 +199,17 @@ footer {
     justify-content:space-between;
     
 }
-footer a{
+footer .socialMedia a i{
 	color: #dbb74c;
-	width: 30px;
-	height : 30px;
+	font-size: 20px;
+	margin: 5px;
+}
+footer .socialMedia a i:hover{
+	color: #07dffc;
 }
 footer p{
 	color:#dbb74c;
+	margin: 5px;
 }
 /*Media queries*/
 @media screen and (max-width:700px){

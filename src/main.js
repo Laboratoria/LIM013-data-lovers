@@ -1,19 +1,25 @@
-import { filterByRol, search} from './data.js';
+import { filterByRol ,search,orderAsce} from './data.js';
 import data from './data/lol/lol.js';
-/* --Se muestran todos los campeones al iniciar la página-- */
-const cardStructure=()=>{
-    const champion=data.data;
-    const obj=Object.values(champion);
-obj.map((champ) => {
-        const currentDiv=document.getElementById("imgChampions");
+/* --Funcion de crear estructura -- */
+const allChampion=data.data;
+const allArray=Object.values(allChampion);
+const cardStructure=(listData)=>{
+    const createArray=Object.values(listData);
+    const currentDiv=document.getElementById("imgChampions");
+    currentDiv.innerHTML="";
+    createArray.map((champ) => {
+        const div=document.createElement('div');
         const img=document.createElement('img');
         const p=document.createElement('p');
         img.src=`${champ.splash}`;
         p.innerHTML=`${champ.name}`;
-        currentDiv.appendChild(p);
-        currentDiv.appendChild(img);
+        currentDiv.appendChild(div)
+        div.appendChild(p);
+        div.appendChild(img);
     });
 };
+
+
 console.log(cardStructure);
 /* -------Efecto hover ---------- */
     const menuRol = document.querySelectorAll('#categoria a');
@@ -21,9 +27,10 @@ console.log(cardStructure);
 		element.addEventListener("click", (event) => {
             event.preventDefault();
             menuRol.forEach((link) => link.classList.remove('active'));
-            event.target.classList.add('active')
+            event.target.classList.add('active');
             
-        })});
+        });
+    });
 /* -------Filtrado por roles---------- */
     
     menuRol.forEach((el)=>{
@@ -31,16 +38,14 @@ console.log(cardStructure);
             e.preventDefault();
             const term=el.getAttribute('data-value');
             console.log("term");
-            const lol=data.data;
-            const champ=Object.values(lol);
-            console.log(champ);
-            const championByType = filterByRol(champ, term);
+            const championByType = filterByRol(allArray, term);
             console.log(championByType);
             if (term==="All") {
-                cardStructure(champ);
+                cardStructure(allArray);
             } else {
                 cardStructure(championByType);
             }
+          
         });
     });
 /* ------Búsqueda por nombre---------- */
@@ -48,40 +53,23 @@ const inputclass=document.querySelector("#form-name2");
 console.log(inputclass);
 inputclass.addEventListener("keyup",e=>{
     const searchName=e.target.value.toLowerCase();
-    console.log(search);
-    const lol=data.data;
-    const champ=Object.values(lol)
-    const champByName=search(champ,searchName);
+    console.log(searchName);
+    const champByName=search(allArray,searchName);
+    cardStructure(champByName);
     console.log(champByName);
 });
-           /* const crearCartasLol = (filterByRol => {   
-                filterByRol.forEach((champ) => {
-                    let templateListOfCards = '';
-                    const currentDiv=document.getElementById("imgChampions");
-                    const img=document.createElement('img')
-                    const p=document.createElement('p')
-                    img.src=`${champ.splash}`;
-                    p.innerHTML=`${champ.name}`;
-                    currentDiv.appendChild(p);
-                    currentDiv.appendChild(img);
-                   
-                })
-                */
-            /*crearCartasLol(championByType);
-            templateListOfCards+=currentDiv;
-            })*/
-   
-   
-       /* const filterClasses = (element) => {
-            element.addEventListener('click', () => {
-                const term = element.getAttribute('data-value');
-                const list=document.getElementById("imgChampions")
-                list.innerHTML = '';
-                const filteredChampions = filterByRol(championList,term);
-                if (term === 'Tank') {
-                    functionCardsStructure(championList);
-                } else {
-                    functionCardsStructure(filteredChampions);
-                }
-            });
-        }; */
+const order = document.querySelectorAll('.order');
+order.forEach((option) => {
+    option.addEventListener('click', () => {
+        const term = option.getAttribute('data-value');
+        //const lol=data.data;
+        //const champ=Object.values(lol)
+        const filteredChampions = orderAsce(allArray, term);
+        console.log(filteredChampions);
+        cardStructure(filteredChampions);
+    });
+});
+
+window.onload=function(){
+    cardStructure(allArray);
+};
