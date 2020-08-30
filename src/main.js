@@ -78,12 +78,10 @@ const showInformationPok = (display,indexSelect) => {
     <section class="close">
         <button class="closePokSelectButton"><i class="fa fa-close"></i></button>
     </section>
-
     <section class="nameAndNum">
         <p class="num">#${arrayPokSelect[0].num}</p>
         <p class="name">${arrayPokSelect[0].name}</p>
     </section>
-    <p class="aboutPok">${arrayPokSelect[0].about}</p>
     <section class="mainInfo">
       <section class="leftInfo">
         <section class="pokemonType">
@@ -115,12 +113,6 @@ const showInformationPok = (display,indexSelect) => {
         <p class="sectionTitle">Evolutions:</p>
         <section class="evolutionsPokImages">
           ${pokEvolutionHtml}
-
-          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
-          <p class="evoSign">&gt</p>
-          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
-          <p class="evoSign">&gt</p>
-          <img class="imgPokEv" src="${arrayPokSelect[0].img}">
         </section>`
 }
 
@@ -199,6 +191,7 @@ const PokEvolution = (arrayPokSelect) => {
             <p>Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
         </section>`
     }
+    
 }
 
 
