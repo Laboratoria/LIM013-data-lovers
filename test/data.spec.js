@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { example, anotherExample,filterForName } from '../src/data.js';
 
 
 describe('example', () => {
@@ -19,5 +19,11 @@ describe('anotherExample', () => {
 
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
+  });
+});
+
+describe('filterForName', () => {
+  it('is a function', () => {
+    expect(typeof filterForName).toBe('function');
   });
 });
