@@ -196,7 +196,7 @@ border-radius: 0px 5px 5px 0px;
 
 .orderByButtons {
     width: 100%;
-    height: 68px;
+    height: 67px;
     background-image: url(images/fondo_displayAll.png);
     background-repeat: no-repeat; 
     background-size: cover;
@@ -283,20 +283,18 @@ border-radius: 0px 5px 5px 0px;
     flex-flow: row wrap;
     padding: 20px 0px;
     justify-content: center;
-    height: 660px;
+    height: 800px;
     background-color: none;
     overflow-y: scroll; 
 }
 
 .informationDisplay{
     display: none;
-    height: 660px;
+    height: 800px;
+    margin: 20px;
     width: 400px;
-    background: aquamarine;
-}
-
-.card {
-    background: black;
+    background: transparent;
+    border: solid 2px red;
 }
 
 /*distribución de pokemones display principal*/
@@ -481,7 +479,7 @@ border-radius: 0px 5px 5px 0px;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
+}
   
 .morePok span:after {
     content: '\00bb';
@@ -505,6 +503,233 @@ border-radius: 0px 5px 5px 0px;
     background-color: #00C1EC;
 }
 
+/*informacion adicional de pokemones en informationDisplay*/
+/*boton cerrar*/
+.close {
+    width: 100%;
+    height: 40px;
+    margin: 0px 0px;
+    display: flex;
+    border: none;
+    background-color: none;
+    cursor: pointer; 
+}
+
+.closePokSelectButton {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    color: #88D9E5;
+    background-color: black;
+    border: solid 2px #88D9E5;   
+}
+
+.closePokSelectButton:hover {
+    color: black;
+    background-color: #88D9E5;
+    border: #88D9E5;  
+}
+
+/****************/
+.nameAndNum {
+    width: 100%;
+    height: 30px;
+    margin: 0px 0px;
+    display: flex;
+    align-self: left;
+    border: solid 1px orange; 
+}
+
+.nameAndNum p {
+    width: 50%;
+    text-decoration: bold;
+    border: solid 1px orange;
+}
+
+.num {
+    font-size: 30px;
+    color: #88D9E5;
+}
+
+.name {
+    font-size: 22px;
+    color: #00C1EC;
+    text-transform: capitalize;
+}
+
+.mainInfo {
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url(images/7kmF.gif);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-between; 
+    background-color: transparent;
+}
+
+.sectionTitle {
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 12px;
+    color: #00C1EC;
+}
+
+.leftInfo {
+    width: 15%;
+    height: 450px;
+    border: solid 1px yellow;
+    
+    
+}
+
+.pokemonType {
+    height: 200px;
+    margin-left: 0px;
+    margin-right: 5px;
+    border: solid 2px purple;
+}
+
+.pokemonBefore {
+    height: 90px;
+    margin-left: 0px;
+    margin-right: 5px;
+    border: solid 2px purple;
+}
+
+.pokemonSize {
+    height: 150px;
+    margin-left: 0px;
+    margin-right: 5px;
+    border: solid 2px purple;
+}
+
+.centerInfo {
+    width: 68%;
+    height: 450px;
+    background-image: url(images/fondo_pokemon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid 1px orange;
+    
+}
+
+.imgPokSelect {
+    display: flex;
+    margin: auto;
+    padding: 100px 0px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightInfo {
+    width: 15%;
+    height: 450px;
+    border: solid 1px yellow;
+    
+    
+}
+
+.pokemonWeakness {
+    height: 200px;
+    margin-left: 5px;
+    margin-right: 0px;
+    border: solid 2px purple;
+}
+
+.pokemonAfter {
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 0px;
+    border: solid 2px purple;
+}
+
+.aboutPok {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #88D9E5;
+    border: solid 1px orange;
+}
+
+.lastContainer {
+    width: 100%;
+    height: 185px;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-between;
+    border: solid 1px orange;
+}
+
+.featuresPok {
+    width: 39%;
+    height: 165px;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: #88D9E5;
+    display: block;
+    background-color: transparent;
+    border: solid 1px purple;
+}
+
+.evolutionsPok {
+    width: 60%;
+    height: 165px;
+    margin-top: 20px;
+    display: block;
+    background-color: transparent;
+    border: solid 1px purple;
+}
+
+.evolutionsPokImages {
+    width: 90%;
+    height: 125px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: center; 
+    background-color: transparent;
+    border: solid 1px orange;
+}
+
+.imgPokEv {
+    width: 28%;
+    height: 80px;
+    margin: 0px;
+    background-image: url(images/);
+    border: solid 1px yellow;
+}
+
+.evoSign {
+    width: 10%;
+    height: 80px;
+    margin: 0px;
+    border: solid 1px yellow;
+}
+
+/*Footer*/
+=======
 
 /********************flex contenedor de evoluciones**************************/
 .evolutionsPok{
@@ -514,12 +739,11 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /* *****************************************************************/
-
-
-
-
 .footer {
-    background: #15393C;
+    /*background: #15393C;*/
+    background-image: url(images/fondo_footer.png);
+    background-size: cover;
+    background-color: none;
     text-align: center;
     padding: 20px 50px;
     display:block
