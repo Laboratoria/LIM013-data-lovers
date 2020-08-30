@@ -78,7 +78,7 @@ const bienvenido = () => {
 	document.querySelector('#content-footer').classList.remove("ocultar");
 	document.querySelector('#ctn-bars-search').classList.remove("ocultar");
 	videoI.autoplay = false
-videoI.load();
+	videoI.load();
 
 	displayList(data, listElement, rows, currentPage);
 	setupagination(data, paginationElemnent, rows);

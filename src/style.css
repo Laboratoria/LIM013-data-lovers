@@ -218,7 +218,6 @@
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
-    text-align: center;
 }
 
 .mask-fondo{
@@ -267,45 +266,6 @@
 .btn-i button:focus {
     outline: 0px;
 }
-
-/* .conter{
-    background-image: url(imagen/portada.png);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-}
-
-.btn-i button{
-    background-color: #2ADE97;
-    color: white;
-    padding: 10px 30px;
-    text-align: center;
-    font-size: 18px;
-    position:relative;
-    left: 68%;
-    top:70%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight:bold;
-    border: none;
-    padding: 5px 9px;
-    background-position: center;
-}
-
-.btn-i button:focus {
-    outline: 0px;
-}
-
-.cajaPri{
-	position:relative;
-    font-size: 12px;
-    left: 10%;
-    top:9%;
-	width: 300px;
-	height: 200px;
-	color: white;
-    text-align:center; 
-}*/
 /* Fin de estilos pantalla 1*/
 
 /* Inicio de estilos pantalla 2*/
