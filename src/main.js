@@ -113,15 +113,25 @@ const showInformationPok = (display,indexSelect) => {
     </section>
     </section>
     <section class="midContainer">
-      <section class="featuresPok">sección que contendra todas las estadisticas del pokémon</section>
+      <section class="featuresPok">
+        <p>Stats : <p>
+        <table class="tableStats">
+        <tr><td>Base attack</td><td>${arrayPokSelect[0].stats["base-attack"]}</td></tr>
+        <tr><td>Base defense</td><td>${arrayPokSelect[0].stats["base-defense"]}</td></tr>
+        <tr><td>Base stamina</td><td>${arrayPokSelect[0].stats["base-stamina"]}</td></tr>
+        <tr><td>Max cp</td><td>${arrayPokSelect[0].stats["max-cp"]}</td></tr>
+        <tr><td>Max hp</td><td>${arrayPokSelect[0].stats["max-hp"]}</td></tr>
+        </table>
+      </section>
       <section class="aboutPokContainer">
+      <p class="titleaboutPok">About : <P>
+      <section class="sectionAboutPok">
       <p class="aboutPok">${arrayPokSelect[0].about}</p>
+      </section>
       </section>
     </section>
     <section class="lastContainer">
-      <section>
       <p class="sectionTitle">Evolutions:</p>
-      </section>
       <section class="evolutionsPokImages">
         ${pokEvolutionHtml}
       </section>
