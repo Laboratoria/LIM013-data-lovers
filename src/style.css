@@ -729,6 +729,16 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /*Footer*/
+=======
+
+/********************flex contenedor de evoluciones**************************/
+.evolutionsPok{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* *****************************************************************/
 .footer {
     /*background: #15393C;*/
     background-image: url(images/fondo_footer.png);
