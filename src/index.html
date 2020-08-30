@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>LOLPEDIA</title>
-    <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png"/>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapgitis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header> 
-      <div class="header">
-        <figure>
-          <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
-        </figure>        
-        <div class="menus">
-          <div class="logoHome">
-              <a href="index.html"><img src="img/footerLOL.png" class="imgfooter"></a>
-          </div>
-          <div class="menu-bar">
-            <a href="index.html" id="iniciochamp">Home</a>
-            <a href="indextop.html" id="Top5">Top 5</a>
-            <a href="indexcampeones.html" id="filchamp">Campeones</a>  
-          </div>                     
-          <div class="menu-play">
-            <a href="https://signup.na.leagueoflegends.com/en/signup/index" target = _blank >Juega ahora</a>     
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+  <title>LOLPEDIA</title>
+  <link rel="shortcut icon" type="image/svg" href="./img/iconleague.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <figure>
+        <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
+      </figure>
+      <div class="menus">
+        <div class="logoHome">
+          <a href="index.html"><img src="img/footerLOL.png" class="imghome"></a>
         </div>
+        <div class="cornerBar">
+          <div class="menu-bar">
+            <a href="index.html" id="iniciolol">Home</a>
+            <a href="indextop.html" id="Top5">Top 5</a>
+            <a href="indexcampeones.html" id="champlist">Campeones</a>
+          </div>
+        </div >
+          <div class="cornerPlay">
+            <div class="menu-play">
+              <a href="https://signup.na.leagueoflegends.com/en/signup/index" class="menu-button" target=_blank>Juega
+                ahora</a>
+            </div>
+          </div>
+
       </div>
     </div>
   </header>
@@ -52,72 +60,78 @@
       </aside>
       <div class="modos">
         <article class="mode-play">
-          <h2>Modo de Juego</h2>
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 4</div>
-              <figure>
-                <img src="./img/normalmode.jpg" alt="normalmode" width="100%">
-              </figure>
-              <span>
-                <div class="text"><small>Normal: Grieta del invocador (El modo de juego más popular).</small></div>
-              </span>
+          <div class="modo-juego">
+            <h2>Modo de Juego</h2>
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <figure>
+                  <img src="./img/normalmode.jpg" alt="normalmode" width="100%">
+                </figure>
+                <span>
+                  <div class="text"><small>Normal: Grieta del invocador (El modo de juego más popular).</small></div>
+                </span>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <figure>
+                  <img src="./img/arammode.jpg" alt="arammode" width="100%">
+                </figure>
+                <span>
+                  <div class="text"><small>ARAM: All ramdom, all mid (Todo aletorio, todos en la calle central).</small>
+                  </div>
+                </span>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <figure>
+                  <img src="./img/ranked.jpg" alt="ranked" width="100%">
+                </figure>
+                <span>
+                  <div class="text"><small>Ranked: Modo clasificatorio para subir de nivel.</small></div>
+                </span>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <figure>
+                  <img src="./img/carril.jpg" alt="carril" width="100%">
+                </figure>
+                <span>
+                  <div class="text"><small>Carriles del mapa: TOP, MID, BOT, JUNGLE</small></div>
+                </span>
+              </div>
+
+              <a class="prev" id="prev">&#10094;</a>
+              <a class="next" id="next">&#10095;</a>
             </div>
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <figure>
-                <img src="./img/arammode.jpg" alt="arammode" width="100%">
-              </figure>
-              <span>
-                <div class="text"><small>ARAM: All ramdom, all mid (Todo aletorio, todos en la calle central).</small>
-                </div>
-              </span>
+            <div class="dot-chain" style="text-align:center">
+              <span class="dot" id="dot1"></span>
+              <span class="dot" id="dot2"></span>
+              <span class="dot" id="dot3"></span>
+              <span class="dot" id="dot4"></span>
             </div>
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <figure>
-                <img src="./img/ranked.jpg" alt="ranked" width="100%">
-              </figure>
-              <span>
-                <div class="text"><small>Ranked: Modo clasificatorio para subir de nivel.</small></div>
-              </span>
-            </div>
-            <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <figure>
-                <img src="./img/carril.jpg" alt="carril" width="100%">
-              </figure>
-              <span>
-                <div class="text"><small>Carriles del mapa: TOP, MID, BOT, JUNGLE</small></div>
-              </span>
-            </div>
-            <a class="prev" id="prev">&#10094;</a>
-            <a class="next" id="next">&#10095;</a>
           </div>
-          <div class="dot-chain" style="text-align:center">
-            <span class="dot" id="dot1"></span>
-            <span class="dot" id="dot2"></span>
-            <span class="dot" id="dot3"></span>
-            <span class="dot" id="dot4"></span>
-          </div>
-        </div>
-            <figure>
-              <img src="./img/divider.png" class="body-divider" alt="divider">
-            </figure>                
-          </article>       
-          <article class="video-container"> 
-            <h2>Vídeo instructivo</h2>
-            <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target = _blank ></iframe>
-          </article>
-        </div>      
-      </section> 
-    </main>
-    <footer>
-      <div class="container-footer">
-        <div class="riot">
-          <a href="https://www.riotgames.com/en" target = _blank><img src="./img/Riot_Games_logo.png" id="imgriot" width="120" height=auto></a>
-        </div>
-        <div class="footer">
+          <figure>
+            <img src="./img/divider.png" class="body-divider" alt="divider">
+          </figure>
+        </article>
+
+        <article class="video-container">
+          <h2>Vídeo instructivo</h2>
+          <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target=_blank></iframe>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container-footer">
+      <div class="riot">
+        <a href="https://www.riotgames.com/en" target=_blank><img src="./img/Riot_Games_logo.png" id="imgriot"
+            width="120" height=auto></a>
+      </div>
+      <div class="footer">
         <div class="left">
           <p class="derechos">© 2020 |Todos los derechos reservados</p>
         </div>
@@ -131,10 +145,11 @@
               class="imgredes"></a>
         </div>
       </div>
-      </div>
-    </footer>
-  </body>
-  <script src="data/lol/lol.js" type="module"></script>
-  <script src="main.js" type="module"></script>
-  <script src="slide.js" type="module"></script>
+    </div>
+  </footer>
+</body>
+<script src="data/lol/lol.js" type="module"></script>
+<script src="main.js" type="module"></script>
+<script src="slide.js" type="module"></script>
+
 </html>
