@@ -6,6 +6,7 @@ let valuetype = new Array();
 //Global variable
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8 
+
 //Function to add HTML tags to index with data
 let listPokemon = (num, name, type) => {
     let pokemon = document.createElement('div');
@@ -35,12 +36,14 @@ let listPokemon = (num, name, type) => {
 
 //get necessary data
 let seePokemon = (x) => {
-    for (let i = x; i <= x + count - 1; i++) {
+    for (let i = x; i < x + count; i++) {
         let num = newData[i].num;
         let name = newData[i].name;
         let type = newData[i].type;
         listPokemon(num, name, type);
+        console.log(newData);
     }
+    document.getElementById("count").innerHTML = x + count + " pokemones of " + newData.length;
 }
 
 //when the page loads, it shows the pokemon from 0 to "count"
@@ -50,14 +53,24 @@ window.onload = seePokemon(x);
 document.getElementById("more").addEventListener("click", () => {
     x = x + count;
     seePokemon(x);
-    document.getElementById("count").innerHTML = x + count + " pokemones of 251";
 });
+
+const noMatches = () => {
+    document.getElementById('content').innerHTML = "";
+    let box = document.createElement('div');
+    let matches0 = document.createElement('p');
+    box.setAttribute('class', 'no-matches');
+    matches0.innerHTML = "No matches found";
+    document.getElementById('content').appendChild(box);
+    box.appendChild(matches0);
+
+}
+
 //load page
 const restart = () => {
     x = 0;
     document.getElementById('content').innerHTML = "";
     seePokemon(x);
-    document.getElementById("count").innerHTML = x + count + " pokemones of 251";
 };
 //Event for ORDER BUTTON, select by id for order by num or name
 document.getElementById("order-drop-down").addEventListener("click", (e) => {
@@ -77,49 +90,41 @@ document.getElementById("order-drop-down").addEventListener("click", (e) => {
     restart();
 });
 
-//STYLES
-let mediaQueryTablet = window.matchMedia("(max-width: 768px)");
-let checkbox = document.getElementById('box-icon-menu');
-const search = document.getElementById("search");
-window.addEventListener("resize", function() {
-    if (mediaQueryTablet.matches) {
-        checkbox.addEventListener('change', function() {
-            const isChecked = document.getElementById('box-icon-menu').checked;
-            if (isChecked && mediaQueryTablet.matches) {
-                document.getElementById('ul-menu').appendChild(search);
-            }
-        });
+document.getElementById("select-region").addEventListener('click', () => {
+    let value = document.getElementById("select-region").value;
+    if (document.getElementById("region3")) {
+        alert("Remove previous filter");
     } else {
-        const nodoNav = document.getElementById("nav-drop");
-        document.getElementById('header').insertBefore(search, nodoNav);
+        buttonClose(3, value, "region");
+        let region = filter.region(newData, value);
+        if (region.length == 0) {
+            noMatches();
+        } else {
+            newData = region;
+            restart();
+            return newData;
+        }
     }
 });
 
-document.getElementById("select-region").addEventListener('change', () => {
-    let value = document.getElementById("select-region").value;
-    let region = filter.region(data.pokemon, value);
-    newData = region;
-    restart();
-});
-
 const functionFilter = (valuetype) => {
-    console.log(valuetype);
-    let type = filter.type(data.pokemon, valuetype);
-    console.log(data.pokemon);
-
-    newData = type;
-    console.log(newData);
-    restart();
+    newData = filter.type(data.pokemon, valuetype);
+    if (newData == 0) {
+        noMatches();
+    } else {
+        restart();
+        return newData;
+    }
 }
-console.log(valuetype);
-document.getElementById("select-type").addEventListener('change', () => {
+
+document.getElementById("select-type").addEventListener('click', () => {
     if (valuetype[0] == null || valuetype[1] == null) {
         if (valuetype[0] == null) {
             valuetype[0] = (document.getElementById("select-type").value);
-            buttonClose(0, valuetype[0]);
+            buttonClose(0, valuetype[0], "type");
         } else {
             valuetype[1] = (document.getElementById("select-type").value);
-            buttonClose(1, valuetype[1]);
+            buttonClose(1, valuetype[1], "type");
         }
     } else {
         alert('You can only choose two types');
@@ -127,36 +132,30 @@ document.getElementById("select-type").addEventListener('change', () => {
     functionFilter(valuetype);
 });
 
-
-const buttonClose = (id, value) => {
+const buttonClose = (id, value, name) => {
     let labelP = document.createElement('p');
-    labelP.id = "type" + id;
-    labelP.innerHTML = value;
+    labelP.id = name + id;
+    labelP.setAttribute('class', 'pToFilter');
+    if (name == "type") {
+        labelP.innerHTML = "<strong> Type: </strong> " + value;
+    } else {
+        labelP.innerHTML = "<strong> Region: </strong> " + value;
+    }
     let labelSpan = document.createElement('span');
     labelSpan.setAttribute('class', 'close');
-    labelSpan.innerHTML = "x";
+    labelSpan.innerHTML = "X";
     document.getElementById("labelToFilter").appendChild(labelP);
     labelP.appendChild(labelSpan);
     labelSpan.addEventListener('click', close = () => {
         labelP.parentNode.removeChild(labelP);
-        if (valuetype.length == 1) {
+        if (labelP.id == "region3") {
+            functionFilter(valuetype);
+        } else if (valuetype.length == 1) {
             valuetype.splice(0, 1);
             functionFilter(valuetype);
-
         } else {
             valuetype.splice(id, 1);
             functionFilter(valuetype);
         }
     });
 };
-
-
- 
-document.getElementById("select-weakness").addEventListener('change', () => {
-    const valueSelect= document.getElementById("select-weakness").value;
-      const weakness = filter.weakness(data.pokemon, valueSelect);
-      newData= weakness;
-      console.log(newData);
-      restart();
-      
-});
