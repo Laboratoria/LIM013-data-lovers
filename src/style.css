@@ -373,91 +373,235 @@ border-radius: 0px 5px 5px 0px;
 .grass {
     color: black;
     background-color: rgb(146, 219, 35);
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .poison {
     color: black;
     background-color: #bd62bd;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .fire {
     color: white;
     background-color: #e45411;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .flying {
     color: black;
     background-color: #839e9e;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .water {
     color: white;
     background-color: #1190e4;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .bug {
     color: black;
     background-color: #34ce20;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .normal {
     color: white;
     background-color: #528585;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .electric {
     color: black;
     background-color: #f1bc0b;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .ground {
     color: black;
     background-color: #c2a64b;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .fighting {
     color: white;
     background-color: #927822;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .fairy {
     color: black;
     background-color: #fb98c1;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .psychic {
     color: black;
     background-color: #fd4b95;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .rock {
     color: black;
     background-color:  #e4b92f;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .ice {
     color: black;
     background-color:  #2fe4d5;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .ghost {
     color: white;
     background-color:  #b529c2;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .dragon {
     color: white;
     background-color:  #3829c2;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .dark {
     color: white;
     background-color:  #424247;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .steel {
     color: black;
     background-color:  #bebec3;
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 .morePok {
@@ -609,7 +753,7 @@ border-radius: 0px 5px 5px 0px;
 .typePok2 p {
     width: 60px;
     height: 18px;
-    margin-bottom: 5px;
+    margin: 1px;
     padding: 2px 5px;
     font-size: 12px;
     text-align: center;
@@ -618,7 +762,7 @@ border-radius: 0px 5px 5px 0px;
 }
 
 .pokemonBefore {
-    height: 80px;
+    height: 60px;
     margin: 0px 0px;
     margin-right: 10px;
     display: flex;
@@ -646,7 +790,7 @@ border-radius: 0px 5px 5px 0px;
 }
 
 .pokemonSize {
-    height: 120px;
+    height: 140px;
     margin-left: 15px;
     text-align: left;             
 }
@@ -693,13 +837,13 @@ border-radius: 0px 5px 5px 0px;
         
 }
 
-.pokemonWeaknesses {
-    height: 145px;
-    border: solid 1px orange;
+.pokemonResistant {
+    height: 145px;    
+    margin-left: 40px;
 }
 
 .pokemonAfter {
-    height: 80px;
+    height: 60px;
     margin: 0px 15px;
     margin-right: 85px;
     display: flex;
@@ -726,9 +870,10 @@ border-radius: 0px 5px 5px 0px;
     border: none;
 }
 
-.pokemonResistance {
-    height: 120px;
-    border: solid 1px orange;
+.pokemonWeaknesses {
+    height: 140px;
+    align-content: right;
+    margin-left: 40px;    
 }
 
 .midContainer {
