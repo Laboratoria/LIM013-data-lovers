@@ -64,6 +64,8 @@
     flex-grow: 1;
     height: 100%;
     align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 #search-box {
@@ -88,7 +90,10 @@
 
 #nav-drop {
     display: flex;
-    flex-grow: 1;
+}
+
+#menu-icon {
+    visibility: hidden;
 }
 
 

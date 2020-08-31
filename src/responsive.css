@@ -4,9 +4,36 @@
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 768px) {
     #menu-icon {
+        margin-top: 8px;
         visibility: visible;
+    }
+    #search-box i {
+        display: none;
+    }
+    #search {
+        display: none;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        margin-top: 50px;
+        width: 355px;
+        height: 50px;
+        border-radius: 5px;
+        margin-left: -300px;
+    }
+    #search-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: none;
+    }
+    #search-box input {
+        display: flex;
+        justify-self: center;
+        margin-top: 10px;
+        border: 2px black solid;
+        background-color: #eee;
     }
     #label-nav {
         display: flex;
@@ -14,81 +41,44 @@
         margin: 0px 20px;
         flex-grow: 1;
     }
-    #box-icon-menu:checked~#menu {
+    #box-icon-menu:checked~#search {
         display: block;
-    }
-    #nav-drop {
-        flex-flow: column wrap;
-    }
-}
-
-@media (max-width: 768px) {
-    #ul-menu #search {
-        display: flex;
-        order: 1;
-        height: 30px;
-        width: 90%;
-    }
-    #ul-menu #search,
-    li {
-        flex-grow: 1;
-    }
-    #search-box {
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-    }
-    #search input {
-        height: 25px;
-        width: 90%;
-    }
-    #search i {
-        margin-top: 6px;
     }
 }
 
 @media (max-width: 425px) {
-    #logo h1 {
-        display: flex;
-        flex-grow: 2;
-        justify-content: flex-end;
-    }
     #button-order-filter {
         margin: 0px 2%;
     }
 }
 
-@media (max-width: 376px) {
-    #logo {
-        flex-grow: 0;
-    }
-    #logo img {
-        margin: 0;
+@media (max-width: 370px) {
+    nav-drop {
+        margin-right: 0;
+        margin-left: 0;
     }
     #logo h1 {
-        flex-grow: 0;
-        margin-left: 10px;
+        font-size: 150%;
     }
-    #label-nav {
-        flex-grow: 1;
-        margin: 0px 10px;
-    }
-    #button-order-filter {
-        margin: 0px 2%;
+    #search {
+        width: 340px;
+        margin-left: -285px;
     }
 }
 
 @media (max-width: 334px) {
-    #logo h1 {
-        font-size: 26px;
-    }
-    #label-nav {
-        margin: 0px 5px;
+    #search {
+        width: 325px;
+        margin-left: -270px;
     }
     .btn-order-filter {
         width: 100px;
     }
     .btn-order-filter i {
         margin-left: 10px;
+    }
+    #information,
+    .btn-order-filter {
+        margin-left: 20px;
     }
 }
