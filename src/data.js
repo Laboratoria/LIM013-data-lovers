@@ -12,3 +12,11 @@ export const filterForName = (dataPokemon,namePokSelect) => {
       return dataPokemon.name==namePokSelect;
   })
 }
+
+
+
+
+
+
+
+

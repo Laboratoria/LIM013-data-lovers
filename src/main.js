@@ -8,6 +8,9 @@ const menudeploy = document.querySelector('.menu-deploy');
 const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
+
+
+
 //Traer nodo para manipular el DOM
 const pokemonDisplay = document.getElementById("pokemonDisplay");
 //crear dinamicamente elemntos section y asignarle imagen
@@ -289,11 +292,8 @@ const extractTypePok = (dataType) => {
         return `<p class="${x}">${x}</p>`;
     })}
 
-
-
 //console.log(example, data);
-
-
 //const namePok= document.querySelector('.namePok').textContent;
 //console.log(namePok);
+
 
