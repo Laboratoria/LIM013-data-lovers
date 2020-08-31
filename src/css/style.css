@@ -95,9 +95,11 @@ header nav a:hover {
   border-bottom-left-radius: 15px;*/
 
 }
-.icon{
+
+.icon {
   display: none;
 }
+
 .main {
   padding: 20px;
   flex-grow: 1;
@@ -227,261 +229,6 @@ footer i:hover {
   background: whitesmoke;
 }
 
-/*@media screen and (max-width:1000px) {
-  .main img {
-    width: 600px;
-    height: 590px;
-  }
-
-  .main a {
-    top: 70%;
-    left: 10%;
-  }
-}*/
-
-/*@media screen and (max-width:800px) {
-  .contenedor {
-    flex-direction: column;
-  }
-
-  header {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  header .logo {
-    margin: 20px 0px;
-  }
-
-  header nav {
-    width: 100%;
-  }
-
-  aside {
-    flex-direction: row;
-    flex: 0;
-  }
-
-  aside .guia {
-    flex-grow: 1;
-  }
-}*/
-
-/*@media screen and (max-width:600px) {
-  aside {
-    flex-direction: column;
-  }
-
-  footer {
-    justify-content: space-around;
-  }
-
-  .main img {
-    width: 440px;
-    height: 290px;
-  }
-
-  .main a {
-    padding: 20px;
-    width: 425px;
-  }
-}*/
-
-/*@media screen and (max-width:300px) {
-  aside {
-    flex-direction: column;
-  }
-
-  footer {
-    justify-content: space-around;
-  }
-
-  .main img {
-    width: 50px;
-    height: 30px;
-  }
-
-  .main a {
-    padding: 10px;
-    width: 30px;
-  }
-
-}*/
-
-@media screen and (max-width:1300px) {
-  .main img {
-    width: 70%;
-  }
-
-  .main a {
-    top: 70%;
-    left: 10%;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  header {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  header .logo {
-    margin: 20px 0px;
-  }
-
-  header nav {
-    width: 100%;
-  }
-
-  .main img {
-    width: 100%;
-  }
-
-  .main a {
-    top: 70%;
-    left: 22.5%;
-  }
-
-  aside {
-    flex-direction: row;
-    flex: 0;
-  }
-
-  aside .guia {
-    flex-grow: 1;
-  }
-}
-
-@media screen and (max-width:375px) {
-  .container {
-    font-size: 12px;
-    flex-direction: column;
-  }
-
-  header {
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0;
-    
-  }
-  .logo_icon{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-  header nav{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 50vh; /*virtual heigth, de toda la pantalla, es dinámico*/
-    transition: all 1s ease;
-    position: fixed;
-    margin-top: 153px;
-    align-content: flex-end;
-    
-
-  }
-  header nav a{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border: 0.3px solid#986E1E;
-  }
-
-  .icon{
-    display: flex;
-    justify-content: center;
-    width: 80px;
-    align-items: flex-end;
-    color: #fff;
-    background: black;
-    padding: 20px;
-    z-index:100;
-    cursor:pointer;
-    
-  }
-
-  .links_one{
-    /*https://bennettfeely.com/clippy/*/
-    clip-path: circle(0% at 100% 0%);/*tamaño, horizontal x, y vertical*/
-  }
-  
-  .links_two{
-    /*https://bennettfeely.com/clippy/*/
-    clip-path: circle(150% at 100% 0%);/*tamaño, horizontal x, y vertical*/
-  }
-  .main img {
-    width: 100%;
-    height: 50%;
-  }
-
-  .main a {
-    top: 43%;
-    width: 55%;
-  }
-
-  aside {
-    flex-direction: row;
-    flex: 0;
-  }
-
-  aside .guia {
-    flex-grow: 1;
-  }
-  footer {
-    justify-content: space-around;
-  }
-}
-
-/*@media screen and (max-width:400px) {
-   {
-    flex-direction: column;
-  }
-
-  footer {
-    justify-content: space-around;
-  }
-
-  .main img {
-    width: 440px;
-    height: 290px;
-  }
-
-  .main a {
-    padding: 20px;
-    width: 425px;
-  }
-}*/
-/*
-@media screen and (max-width:300px) {
-  aside {
-    flex-direction: column;
-  }
-
-  footer {
-    justify-content: space-around;
-  }
-
-  .main img {
-    width: 50px;
-    height: 30px;
-  }
-
-  .main a {
-    padding: 10px;
-    width: 30px;
-  }
-
-}*/
-
-
-
-
 /*---------------BUSCADOR -------- */
 .search {
   width: 85%;
@@ -528,9 +275,9 @@ input[type=button] {
   border: none;
   cursor: pointer;
   margin-right: 10px;
-  color:#986E1E;
+  color: #986E1E;
   font-weight: bold;
-  width:20%;
+  width: 20%;
 }
 
 #order {
@@ -598,7 +345,12 @@ input[type=button] {
   width: 30%;
   height: 50px;
   margin: 20px 0px 20px 0px;
-
+  background: black;
+  border-radius: 3px;
+  border: 3px solid black;
+  font-size: x-large;
+  text-align: center;
+  color: #fff;
 }
 
 .legends_list {
@@ -637,6 +389,7 @@ input[type=button] {
   font-size: 20px;
   text-transform: uppercase;
 }
+
 #select01 {
   font-size: larger;
   font-weight: bold;
@@ -645,6 +398,7 @@ input[type=button] {
   border: 3px solid#986E1E;
   border-radius: 3px;
 }
+
 #select02 {
   font-size: larger;
   font-weight: bold;
@@ -654,14 +408,191 @@ input[type=button] {
   border-radius: 3px;
 }
 
+/*---------------PAGINACIÓN -------- */
+.pagenumbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
 
-.legends_container .inputs input {
-  width: 30%;
+.pagenumbers button {
+  width: 50px;
   height: 50px;
-  margin: 20px 0px 20px 0px;
-  background: black;
-  border-radius: 3px;
-  border: 3px solid black;
-  font-size: x-large;
-  text-align: center;
+
+  outline: none;
+  cursor: pointer;
+  background: #986E1E;
+  margin: 5px;
+  transition: 0.4;
+  -webkit-transition: 0.4;
+  -moz-transition: 0.4;
+  -ms-transition: 0.4;
+  -o-transition: 0.4;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.pagenumbers button:hover {
+  background: #D3AA57;
+}
+
+.pagenumbers button.active {
+  background: #D3AA57;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:1300px) {
+  .main img {
+    width: 70%;
+  }
+
+  .main a {
+    top: 70%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  header .logo {
+    margin: 20px 0px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  .main img {
+    width: 100%;
+  }
+
+  .main a {
+    top: 70%;
+    left: 22.5%;
+  }
+
+  aside {
+    flex-direction: row;
+    flex: 0;
+  }
+
+  aside .guia {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .container {
+    font-size: 12px;
+    flex-direction: column;
+  }
+
+  header {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+
+  }
+
+  .logo_icon {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50vh;
+    /*virtual heigth, de toda la pantalla, es dinámico*/
+    transition: all 1s ease;
+    position: fixed;
+    margin-top: 153px;
+    align-content: flex-end;
+
+
+  }
+
+  header nav a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 0.3px solid#986E1E;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    align-items: flex-end;
+    color: #fff;
+    background: black;
+    padding: 20px;
+    z-index: 100;
+    cursor: pointer;
+
+  }
+
+  .links_one {
+    /*https://bennettfeely.com/clippy/*/
+    clip-path: circle(0% at 100% 0%);
+    /*tamaño, horizontal x, y vertical*/
+  }
+
+  .links_two {
+    /*https://bennettfeely.com/clippy/*/
+    clip-path: circle(150% at 100% 0%);
+    /*tamaño, horizontal x, y vertical*/
+  }
+
+  .main img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .main a {
+    top: 43%;
+    width: 55%;
+  }
+
+  aside {
+    flex-direction: row;
+    flex: 0;
+  }
+
+  aside .guia {
+    flex-grow: 1;
+  }
+
+  footer {
+    justify-content: space-around;
+  }
+  
+  .pagenumbers button{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
 }

@@ -26,30 +26,35 @@
       </nav>
     </header>
 
-    <div class="search">
-      <div class="search1">
-        <input type="text" id="inputSearch" placeholder="Buscar a ...">
+    <section class="container2">
+      <div class="search">
+        <div class="search1">
+          <input type="text" id="inputSearch" placeholder="Buscar a ...">
+        </div>
+        <div id="filter">
+          <input type="button" value="TODOS" id="All">
+          <input type="button" value="ASESINO" id="Assassin">
+          <input type="button" value="LUCHADOR" id="Fighter">
+          <input type="button" value="MAGO" id="Mage">
+          <input type="button" value="TIRADOR" id="Marksman">
+          <input type="button" value="APOYO" id="Support">
+          <input type="button" value="TANQUE" id="Tank">
+        </div>
+        <select name="order" id="order">
+          <option value="asc">Ordenar A-Z</option>
+          <option value="desc">Ordenar Z-A</option>
+        </select>
       </div>
-      <div id="filter">
-        <input type="button" value="TODOS" id="All">
-        <input type="button" value="ASESINO" id="Assassin">
-        <input type="button" value="LUCHADOR" id="Fighter">
-        <input type="button" value="MAGO" id="Mage">
-        <input type="button" value="TIRADOR" id="Marksman">
-        <input type="button" value="APOYO" id="Support">
-        <input type="button" value="TANQUE" id="Tank">
+      <div id="legends_container" class="legends_container">
+        <!-- <div class="legends">
+          <img class="img-container" src="" alt="">
+          <div class="name"></div>
+        </div> -->
       </div>
-      <select name="order" id="order">
-        <option value="asc">Ordenar A-Z</option>
-        <option value="desc">Ordenar Z-A</option>
-      </select>
-    </div>
-    <div id="legends_container" class="legends_container">
-      <!-- <div class="legends">
-        <img class="img-container" src="" alt="">
-        <div class="name"></div>
-      </div> -->
-    </div>
+      <div class="pagenumbers" id="pagination">
+
+      </div>
+    </section>
   </div>
   <script src="./main.js" type="module"></script>
 </body>

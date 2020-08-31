@@ -6,20 +6,8 @@ const datos = data.data,
 
 let level = 0;
 
-/* const prodNivel = arrayLegends.map(
-  (item) => {
-    const name = item.name
-    const hp = item.stats.hp + (item.stats.hpperlevel * level)
-    return name + ': ' + hp
-  }) 
-  console.log('prodNivel',prodNivel[0])*/
-
-
-
-
 /**HTML */
 const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attackActual, iddiv) => {
-  console.log('mpActual',mpActual);
   document.querySelector(iddiv).innerHTML = '';
 
   const legends_stats1 = document.createElement('div'),
@@ -47,8 +35,7 @@ const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attac
 
 /*TRAER DATA ESTADÍSTICAS (hpper level, mpper level, attack damage per level)*/
 const getStats = (objLegend, selected, iddiv) => {
-  console.log('level123', level);
-  console.log('select123', selected);
+ 
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
     let splash = objLegend[i].splash;
@@ -64,23 +51,6 @@ const getStats = (objLegend, selected, iddiv) => {
     }
   }
 };
-
-/*METODO MAP */
-/* const prodNivel = arrayLegends.map(
-  (item) => {
-    const name = item.name
-    const hp = item.stats.hpperlevel * level
-    return name + ': ' + hp
-  })  */
-/*  const level = e.target.value;
- const position = 1;
- const prodNivel = order.statsPerLevel(arrayLegends,level,position)
- console.log('prueba', prodNivel) */
-;
-//console.log('prueba', prodNivel)
-//return prodNivel;
-
-/*ESTADISTICA SELECT */
 
 const legend01 = document.querySelector('#select01')
 //console.log('legen01', legend01)
@@ -102,15 +72,11 @@ for (let i = 0; i < arrayLegends.length; i++) {
 
 legend01.addEventListener('change', (e) => {
   const legend = e.target.value
-  //console.log('prueba123',e.target.value);
-
   getStats(arrayLegends, legend, "#legends_list_izquierda");
 })
 
 legend02.addEventListener('change', (e) => {
   const legend = e.target.value
-  //console.log('prueba123',e.target.value);
-
   getStats(arrayLegends, legend, "#legends_list_derecha");
 
 })
@@ -118,7 +84,7 @@ legend02.addEventListener('change', (e) => {
 const inputLevel = document.getElementById('number');
 inputLevel.addEventListener('change', (e) => {
   level = parseInt(e.target.value);
-  console.log('level', level)
+  //console.log('level', level)
   if (level === '') {
     level = 1
   }
