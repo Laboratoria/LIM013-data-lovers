@@ -53,6 +53,19 @@ describe('ordenar de la Z-A',() =>{
   
 });
 
+describe('Calcular por nivel reduce',() =>{
+  it('it a function hpperLevel',()=>{
+    expect(typeof order.hpperLevel).toBe('function');
+  });
+
+  it('return``',()=>{
+    const reduce=[{hpperLevel: 'Belen'},{name:'Camila'},{name:'Ana'}];
+    const resultReduce=[{name:'Camila'},{name:'Belen'},{name:'Ana'}];
+    expect(order.nameChampionZa(data)).toEqual(dataZa);
+  });
+  
+});
+
 
 
 /*describe('operaciones', 

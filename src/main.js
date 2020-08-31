@@ -101,45 +101,20 @@ const search = () => {
 
 inputSearch.addEventListener('keyup', search)
 
-/*ESTADISTICA SELECT */
-/*const legend01 = document.querySelector('#select01')
-console.log('legen01', legend01)
-for (let i = 0; i < arrayLegends.length; i++) {
-  let option = document.createElement('option');
-  option.value = arrayLegends[i].name;
-  option.innerText = arrayLegends[i].name;
-  legend01.appendChild((option))
-}
+/*MENU BURGUER */
 
-const legend02 = document.querySelector('#select01')
-console.log('legen01', legend01)
-for (let i = 0; i < arrayLegends.length; i++) {
-  let option = document.createElement('option');
-  option.value = arrayLegends[i].name;
-  option.innerText = arrayLegends[i].name;
-  legend02.appendChild((option))
-}*/
+let button=document.getElementById('icon');
+let links=document.getElementById('links');
+let contador=0;
+console.log(contador);
 
-
-
-/*ESTADÍSTICAS MÉTODO REDUCE (hpper level, mpper level, attack damage per level)*/
-//const reducer = (acumulador, valorActual)=> nuevoAcumulador
-//ejecutando función con array vacío
-//const plano = arrayLegends.reduce((acc, el) => acc.concat(el), [])
-//console.log(plano);
-//console.log(arrayLegends);
-
-/*const indexed= arrayLegends.reduce ((acc, el)=>({
-  ...acc, 
-  [el.name+' '+el.stats.hpperlevel]: el,
-   
-}),{})
-console.log(indexed);*/
-//const level = 2;
-
-//const estadisticas = stats.reduce(function (acc, el) {
-  //if (level === 2) {
-    //return acc, (el.stats.hpperlevel * 2);
-  //}
-//}, 0)
-//console.log(estadisticas);
+button.addEventListener('click',()=>{
+  if (contador==0){
+    links.className = ('links_two');
+    contador=1;
+  }else{
+    links.classList.remove('links_two');
+    links.className = ('links_one');
+    contador=0;
+  }
+})
