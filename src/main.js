@@ -85,44 +85,59 @@ const showInformationPok = (display,indexSelect) => {
     <section class="mainInfo">
       <section class="leftInfo">
         <section class="pokemonType">
-          <p class="sectionTitle">Type:</p>
+          <p class="sectionTitle">Type:</p> 
           <p class="${arrayPokSelect[0].type[0]}">${arrayPokSelect[0].type.join(`</p>
           <p class="${arrayPokSelect[0].type[1]}">`)}</p>
         </section>
         <section class="pokemonBefore">
           <button class="pkmBefore">&lt</button>
         </section>
-        <section class="pokemonWeaknesses">
-          <p class="sectionTitle">Weaknesses:</p>
-          
-        </section>
+        <section class="pokemonSize">
+          <p class="sectionTitle">Size:</p>
+          <p class="pokemonHAndW">height : ${arrayPokSelect[0].size.height}</p>
+          <p class="pokemonHAndW">weight : ${arrayPokSelect[0].size.weight}</p>
+        </section>        
       </section>
       <section class="centerInfo">
         <section class="circleImg">
           <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
         </section>
       </section>
-    <section class="rightInfo">
-      <section class="pokemonSize">
-        <p class="sectionTitle">Size:</p>
-        <p class="pokemonHAndW">height : ${arrayPokSelect[0].size.height}</p>
-        <p class="pokemonHAndW">weight : ${arrayPokSelect[0].size.weight}</p>
-      </section>
-      <section class="pokemonAfter">
-        <button class="pkmAfter">&gt</button>
+      <section class="rightInfo">                 
+        <section class="pokemonWeaknesses">
+          <p class="sectionTitle">Weaknesses:</p>
+      
+        </section>        
+        <section class="pokemonAfter">
+          <button class="pkmBefore">&gt</button>
+        </section>
+        <section class="pokemonResistant">
+          <p class="sectionTitle">Weaknesses:</p>
+      
+        </section>
       </section>
     </section>
     </section>
     <section class="midContainer">
-      <section class="featuresPok">sección que contendra todas las estadisticas del pokémon</section>
+      <section class="featuresPok">
+        <p>Stats : <p>
+        <table class="tableStats">
+        <tr><td>Base attack</td><td>${arrayPokSelect[0].stats["base-attack"]}</td></tr>
+        <tr><td>Base defense</td><td>${arrayPokSelect[0].stats["base-defense"]}</td></tr>
+        <tr><td>Base stamina</td><td>${arrayPokSelect[0].stats["base-stamina"]}</td></tr>
+        <tr><td>Max cp</td><td>${arrayPokSelect[0].stats["max-cp"]}</td></tr>
+        <tr><td>Max hp</td><td>${arrayPokSelect[0].stats["max-hp"]}</td></tr>
+        </table>
+      </section>
       <section class="aboutPokContainer">
+      <p class="titleaboutPok">About : <P>
+      <section class="sectionAboutPok">
       <p class="aboutPok">${arrayPokSelect[0].about}</p>
+      </section>
       </section>
     </section>
     <section class="lastContainer">
-      <section>
       <p class="sectionTitle">Evolutions:</p>
-      </section>
       <section class="evolutionsPokImages">
         ${pokEvolutionHtml}
       </section>
