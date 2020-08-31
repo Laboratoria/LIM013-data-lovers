@@ -296,8 +296,7 @@ border-radius: 0px 5px 5px 0px;
     margin-left: 20px;
     margin-bottom: 10px;
     width: 400px;
-    background: transparent;
-    border: solid 2px red;
+    background: transparent;    
 }
 
 /*distribución de pokemones display principal*/
@@ -525,20 +524,22 @@ border-radius: 0px 5px 5px 0px;
     font-size: 24px;
     text-align: center;
     justify-content: center;
-    border-radius: 5px;
     cursor: pointer;
     display: block;
     margin-right: 0;
     margin-left: auto;
     color: #88D9E5;
     background-color: black;
-    border: solid 2px #88D9E5;   
+    border-left: solid 2px #88D9E5;
+    border-right: black;
+    border-top: black;
+    border-bottom: black;   
 }
 
 .closePokSelectButton:hover {
     color: black;
-    background-color: #88D9E5;
-    border: #88D9E5;  
+    background-color: #00C1EC;
+    border: #00C1EC;  
 }
 
 /****************/
@@ -548,13 +549,11 @@ border-radius: 0px 5px 5px 0px;
     margin: 0px 0px;
     display: flex;
     align-self: left;
-    border: solid 1px orange; 
 }
 
 .nameAndNum p {
     width: 50%;
-    text-decoration: bold;
-    border: solid 1px orange;
+    text-decoration: bold;    
 }
 
 .num {
@@ -587,37 +586,64 @@ border-radius: 0px 5px 5px 0px;
     height:12%;
     text-align: left;
     font-size: 16px;
+    margin-bottom: 10px;
     color: #00C1EC;
 }
 
 .leftInfo {
     width: 22%;
     margin-left: 0px;
-    margin-right: 5px;
-    border: solid 1px yellow;    
+    margin-right: 5px;        
 }
 
 .pokemonType {
-    height: 130px;
-    border: solid 2px purple;
+    height: 130px; 
+    border: solid 1px orange;   
 }
 
 .pokemonBefore {
     height: 50px;
-    border: solid 2px purple;
+    margin: 0px 0px;
+    display: flex;
+    cursor: pointer; 
+}    
+
+.pkmBefore {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    color: #88D9E5;
+    background-image:url(images/fondo_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: none;
 }
 
-.pokemonWeakness {
+.pokemonSize {
     height: 155px;
-    border: solid 2px purple;
+    border: solid 1px orange;      
+}
+
+.pokemonHAndW{
+    color: #88D9E5;
+    text-align: left;
+    font-size: 14px;
 }
 
 .centerInfo {
     width: 57%;
     background-image: url(images/7kmF.gif);
     background-repeat: no-repeat;
-    background-position: center;
-    border: solid 1px orange;    
+    background-position: center;       
 }
 
 .circleImg {
@@ -640,17 +666,46 @@ border-radius: 0px 5px 5px 0px;
     width: 22%;
     margin-left: 0px;
     margin-right: 0px;
-    border: solid 1px yellow;    
+    text-transform: capitalize;       
+        
 }
 
-.pokemonSize {
+.pokemonWeaknesses {
     height: 135px;
-    border: solid 2px purple;
+    border: solid 1px orange;
+}
+
+.pokemonResistant {
+    height: 155px;
+    border: solid 1px orange;
 }
 
 .pokemonAfter {
     height: 50px;
-    border: solid 2px purple;
+    margin: 0px 0px;
+    margin-right: 85px;
+    display: flex;
+    cursor: pointer;    
+}
+
+.pkmAfter {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    color: #88D9E5;
+    background-image:url(images/fondo_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: none;
 }
 
 .midContainer {
@@ -692,8 +747,9 @@ border-radius: 0px 5px 5px 0px;
     align-items: center;
     height: 88%;
     width: 93%;
+    padding-left: 5px;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     color: #88D9E5;
     border:#00C1EC 1px dashed;
   
@@ -759,7 +815,6 @@ border-radius: 0px 5px 5px 0px;
     flex-flow: row wrap;
     justify-content: center;
 }*/
-
 /* *****************************************************************/
 
 /*Footer*/
