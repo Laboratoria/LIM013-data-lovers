@@ -910,7 +910,7 @@ border-radius: 0px 5px 5px 0px;
     font-size: 16px;
     color: #00C1EC;
 }
-.sectionAboutPok {
+.sectionAboutPok{
     display: flex;
     align-items: center;
     height: 88%;
@@ -975,6 +975,16 @@ border-radius: 0px 5px 5px 0px;
 .evoSectionPokCandy {
     font-size: 12px;
     color: white;
+}
+
+.noEvolution {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 93%;
+    font-size: 16px;
+    text-align: center;
+    color: #88D9E5;
 }
 
 /********************flex contenedor de evoluciones**************************/
