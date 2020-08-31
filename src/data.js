@@ -27,34 +27,3 @@ export const computeByStats = (array) => {
   return newItem;
 };
  
-
-
-
-
-// var arreglo = [4,2,5,6,77,844,432]; //Con este arreglo trabajaremos
-// var sumatoria = arreglo.reduce(function(acumulador, siguienteValor){
-//   return acumulador + siguienteValor;
-// }, 0);
-
-
-
-// var arreglo = [
-//   {
-//     nombre: "John Doe",
-//     edad: 50
-//   },
-//   {
-//     nombre: "Pedro",
-//     edad: 20
-//   },
-//   {
-//     nombre: "Juanita",
-//     edad: 22
-//   }
-// ];
-
-// var sumatoriaObjeto = arreglo.reduce(function(acumulador, siguienteValor){
-//   return {
-//     edad: acumulador.edad + siguienteValor.edad
-//   };
-// }, {edad: 0}); //Si no hay nada, regresamos un objeto con edad = 0. No hay necesidad de devolver e

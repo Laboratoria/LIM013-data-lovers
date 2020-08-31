@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+ 
 import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -82,5 +90,4 @@ selectByType.addEventListener("change", () => {
         showByData(data.pokemon)};
 
 });
-
 
