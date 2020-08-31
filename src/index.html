@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -24,10 +27,10 @@
                 </div>
 
                 <div class="navbar" id="navbar">
-                    <a href="#" id="home"class="active">HOME<i class="fa fa-caret-down"></i></a>
-                    <a href="#" id="all">ALL<i class="fa fa-caret-down"></i></a>
+                    <a href="#" id="home">HOME</a>
+                    <a href="#" id="all" class="active">ALL</a>
                     <div class="subnav" id="subnav">
-                        <button id="species" class="subnavbtn">ESPECIE <i class="fa fa-caret-down"></i></button>
+                        <a href="#" id="species" class="subnavbtn">ESPECIE</a>
                         <div id="listSpecies" class="hide subnav-content">
                             <a href="#" id="human"class="active">HUMAN</a>
                             <a href="#" id="alien">ALIEN</a>
@@ -42,26 +45,26 @@
                         </div>
                     </div> 
                     <div class="subnav" id="subnav">
-                        <button id="gender" class="subnavbtn">GENDER <i class="fa fa-caret-down"></i></button>
+                        <a href="#" id="gender" class="subnavbtn">GENDER</a>
                         <div id="listGender" class="hide subnav-content">
-                            <a href="#" id="male">MALE</a>
+                            <a href="#" id="male"class="active">MALE</a>
                             <a href="#" id="female">FEMALE</a>
                             <a href="#" id="genderless">GENDERLESS</a>
                             <a href="#" id="unknownGender">UNKNOWN</a>
                         </div>
                     </div> 
                     <div class="subnav"id="subnav">
-                        <button id="status" class="subnavbtn">STATUS <i class="fa fa-caret-down"></i></button>
+                        <a href="#" id="status" class="subnavbtn">STATUS</a>
                         <div  id="listStatus" class="hide subnav-content">
-                            <a href="#" id="alive">ALIVE</a>
+                            <a href="#" id="alive"class="active">ALIVE</a>
                             <a href="#" id="dead">DEAD</a>
                             <a href="#" id="unknown">UNKNOWN</a>
                         </div>
                     </div>
                     <div class="subnav"id="subnav">
-                        <button id="order" class="subnavbtn">ORDER <i class="fa fa-caret-down"></i></button>
+                        <a href="#" id="order" class="subnavbtn">ORDER</a>
                         <div id="listOrder" class="hide subnav-content">
-                            <a href="#" id="orderAtoZ">A - Z</a>
+                            <a href="#" id="orderAtoZ"class="active">A - Z</a>
                             <a href="#" id="orderZtoA">Z - A</a>
                         </div>
                     </div>
@@ -78,16 +81,18 @@
         
         <section>    
             <main>
-                <div><ol id="listCharacters" class="flex-container"></ol></div>
+                <!-- <div><ol id="listCharacters" class="flex-container"></ol></div> -->
+                <ol><div id="listCharacters" class="flex-container"></div></ol>
                 <div id="buttonsContainer" class="flex-container" ></div>
             </main>
         </section>
 
 
-
     </div>
 
     <script src="main.js" type="module"></script>
+
+
 </body>
 
 </html>

@@ -24,10 +24,10 @@ body {
 } */
 
 header nav {
-   height: 110px;
+   height: 100px;
    display: flex;
    /* align-items: center; */
-   background-color: rgba(11, 12, 12, 0.5);
+   background-color: rgba(11, 12, 12, 0.8);
 }
 
 
@@ -38,10 +38,10 @@ header nav {
 }
 
 nav img {
-    padding: 20px;
+    padding: 14px;
 }
 
-ol {    color:  #fafbfc;
+div {    color:  #fafbfc;
 
 }
 
@@ -69,7 +69,7 @@ ol {    color:  #fafbfc;
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgba(11, 12, 12, 0.3);
-    padding: 30px;
+    padding: 50px;
 }
 
 
@@ -216,8 +216,9 @@ header .categories{
 
 
 
+/* Header Menu */
 .navbar {
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Patrick Hand SC', cursive;
     
 }
@@ -233,7 +234,7 @@ header .categories{
   
   .subnav {
     float: left;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   .subnav .subnavbtn {
@@ -249,59 +250,46 @@ header .categories{
   
   .navbar a:hover, .subnav:hover .subnavbtn {
     background-color:rgb(92, 156, 156, 0.4);
+    color: white;
   }
   
   .subnav-content {
-    /* float: left;
-    width: 33%;
-    padding: 10px;
-    background-color:rgb(92, 156, 156, 0.4);
-    height: 250px; */
-    display: none;
-    position: absolute;
-    left: 0;
-    background-color:rgb(92, 156, 156, 0.4);
+    /* display: none; */
     width: 100%;
+    background-color:rgb(92, 156, 156, 0.4);
+    position: absolute;
+    left: 0px;
+    top: 100px;
     z-index: 1;
   }
-  
+
   .subnav-content a {
-    /* float: none;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left; */
     float: left;
     color: white;
     text-decoration: none;
   }
   
   .subnav-content a:hover {
-    background-color: #eee;
-    color: #072C44;
+    background-color:rgb(92, 156, 156, 0.4);
+    color: white;
   }
   
-  .subnav:hover .subnav-content {
+  /* .subnav:hover .subnav-content {
     display: block;
-  }
+  } */
 
 
 /* active action */
 
 header .navbar a.active {
-    color: green;
+    color: #072C44;
+    background-color: #eee;
 }
 
 header .subnav-content a.active {
-    color: green;
+    color: #072C44;
+    background-color: #eee;
 }
-
-section main .flex-container {
-
-    
-}
-
 
 
 .center {
@@ -312,4 +300,3 @@ section main .flex-container {
 .images-loaded {
     opacity: 1;
 }
-
