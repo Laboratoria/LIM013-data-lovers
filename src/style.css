@@ -235,9 +235,9 @@ border-radius: 0px 5px 5px 0px;
 
 .typeContainerHeader h2 {
     background-size: 100%;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
     font-family: sans-serif;
     text-decoration: none;
     font-size: 18px;
@@ -246,16 +246,16 @@ border-radius: 0px 5px 5px 0px;
 
 .typeContainerHeader hr {
     background-size: 100%;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 10px;
     color: white;
 }
 
 .typeContainerBody {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 0px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     display: block; 
 }
 
@@ -283,7 +283,7 @@ input[type="checkbox"]:checked {
 }
   
 input[type="checkbox"] + label {
-    width: 120px;
+    width: 115px;
     text-align: center;
     display: inline-block;
     padding: 10px;
@@ -291,7 +291,7 @@ input[type="checkbox"] + label {
     border: 1px solid white;
     color: white;
     background-color: none;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -309,7 +309,7 @@ input[type="checkbox"]:checked + label {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 80px;
     margin-bottom: 100px;
 }
 
@@ -321,7 +321,7 @@ input[type="checkbox"]:checked + label {
     font-size: 18px;    
     cursor: pointer;
     width: 300px;
-    margin: 0px 15px;
+    margin: 10px 15px;
 }
 
 .searchByTypeButtonReset {
