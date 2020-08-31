@@ -108,16 +108,16 @@ const showInformationPok = (display,indexSelect) => {
         </section>
       </section>
       <section class="rightInfo">                 
-        <section class="pokemonWeaknesses">
-          <p class="sectionTitle">Weaknesses:</p>
-      
+        <section class="pokemonResistant">
+          <p class="sectionTitle">Resistant:</p>
+          ${extractTypePok(arrayPokSelect[0].resistant).join("")}
         </section>        
         <section class="pokemonAfter">
           <button class="pkmBefore">&gt</button>
         </section>
-        <section class="pokemonResistance">
-          <p class="sectionTitle">Resistance:</p>
-      
+        <section class="pokemonWeaknesses">
+          <p class="sectionTitle">Weaknesses:</p>
+          ${extractTypePok(arrayPokSelect[0].weaknesses).join("")}      
         </section>
       </section>
     </section>
@@ -146,6 +146,8 @@ const showInformationPok = (display,indexSelect) => {
         ${pokEvolutionHtml}
       </section>
     </section>`
+
+    
 }
 
 //funcion que devuelve elementos HTML con información de la evoluciones de los pokémon
@@ -272,6 +274,13 @@ const PokEvolution = (arrayPokSelect) => {
     }
     
 }
+
+//función para extraer tipo.
+const extractTypePok = (dataType) => {
+    return dataType.map( (x)=>{
+        return `<p class="${x}">${x}</p>`;
+    })}
+
 
 
 //console.log(example, data);
