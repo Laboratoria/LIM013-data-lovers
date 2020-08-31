@@ -45,7 +45,97 @@
       <!--MAIN contenido principal del body(cuerpo)-->
       <main class="displayContainer">
         <!-- Dark folder: Type Accordion -->
-        
+        <section class="accordion">
+          <button type="button" name="type" id="type" class="accordionButton"></button>      
+          <section class="accordionContent">
+            <section class="typeContainerHeader">
+              <h2>Pokémon Types</h2>
+              <hr>
+            </section>
+            <section class="typeContainerBody">
+              <form>
+                <ul>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeNormal" name="pokemonTypeNormal" :checked value="normal">
+                    <label for="pokemonTypeNormal" id="pokemonTypeLabelNormal" data-search-type="normal">Normal</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeGrass" name="pokemonTypeGrass" :checked value="grass">
+                    <label for="pokemonTypeGrass" id="pokemonTypeLabelGrass" data-search-type="grass">Grass</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeFighting" name="pokemonTypeFighting" :checked value="fighting">
+                    <label for="pokemonTypeFighting" id="pokemonTypeLabelFighting" data-search-type="fighting">Fighting</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeFlying" name="pokemonTypeFlying" :checked value="flying">
+                    <label for="pokemonTypeFlying" id="pokemonTypeLabelFlying" data-search-type="flying">Flying</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeRock" name="pokemonTypeRock" :checked value="rock">
+                    <label for="pokemonTypeRock" id="pokemonTypeLabelRock" data-search-type="rock">Rock</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeDark" name="pokemonTypeDark" :checked value="dark">
+                    <label for="pokemonTypeDark" id="pokemonTypeLabelDark" data-search-type="dark">Dark</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeFire" name="pokemonTypeFire" :checked value="fire">
+                    <label for="pokemonTypeFire"id="pokemonTypeLabelFire" data-search-type="fire">Fire</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeElectric" name="pokemonTypeElectric" :checked value="electric">
+                    <label for="pokemonTypeElectric" id="pokemonTypeLabelElectric" data-search-type="electric">Electric</label>
+                  </li> 
+                  <li>
+                    <input type="checkbox" id="pokemonTypePoison" name="pokemonTypePoison" :checked value="poison">
+                    <label for="pokemonTypePoison" id="pokemonTypeLabelPoison" data-search-type="poison">Poison</label>
+                  </li>                  
+                  <li>
+                    <input type="checkbox" id="pokemonTypePsychic" name="pokemonTypePsychic" :checked value="psychic">
+                    <label for="pokemonTypePsychic" id="pokemonTypeLabelPsychic" data-search-type="psychic">Psychic</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeGhost" name="pokemonTypeGhost" :checked value="ghost">
+                    <label for="pokemonTypeGhost" id="pokemonTypeLabelGhost" data-search-type="ghost">Ghost</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeSteel" name="pokemonTypeSteel" :checked value="steel">
+                    <label for="pokemonTypeSteel" id="pokemonTypeLabelSteel" data-search-type="steel">Steel</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeWater" name="pokemonTypeWater" :checked value="water">
+                    <label for="pokemonTypeWater" id="pokemonTypeLabelWater" data-search-type="water">Water</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeIce" name="pokemonTypeIce" :checked value="ice">
+                    <label for="pokemonTypeIce" id="pokemonTypeLabelIce" data-search-type="ice">Ice</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeGround" name="pokemonTypeGround" :checked value="ground">
+                    <label for="pokemonTypeGround"id="pokemonTypeLabelGround" data-search-type="ground">Ground</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeBug" name="pokemonTypeBug" :checked value="bug">
+                    <label for="pokemonTypeBug" id="pokemonTypeLabelBug" data-search-type="bug">Bug</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="pokemonTypeDragon" name="pokemonTypeDragon" :checked value="dragon">
+                    <label for="pokemonTypeDragon" id="pokemonTypeLabelDragon" data-search-type="dragon">Dragon</label>
+                  </li> 
+                  <li>
+                    <input type="checkbox" id="pokemonTypeFairy" name="pokemonTypeFairy" :checked value="fairy">
+                    <label for="pokemonTypeFairy"id="pokemonTypeLabelFairy" data-search-type="fairy">Fairy</label>
+                  </li>                  
+                </ul>
+                <section class="typeContainerBodySearchByTypeButtons">
+                  <button type="reset" name="searchByTypeButtonReset" id="searchByTypeButtonReset" class="searchByTypeButtonReset">Reset</button> 
+                  <button type="submit" name="searchByTypeButtonSearch" id="searchByTypeButtonSearch" class="searchByTypeButtonSearch">Search</button> 
+                </section>
+              </form>
+            </section>  
+          </section>
+        </section>
         <!-- Light folder: Display -->
         <section class="displayAll">
           <section class="orderByButtons">
