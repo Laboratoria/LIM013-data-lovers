@@ -23,21 +23,21 @@
           <div class="barsNavigation" id="barsNavigation">
             <a href="#">¿Qué es LOL?</a>
             <a href="campeones.html" id="championes">Campeones</a>
-            <a href="#">Estadísticas por rol</a>
+            <a href="#" id="championsPage">Estadísticas por rol</a>
             <a href="#">Juega Profesional</a>
         </div>
         </nav>
     </div>
     <main>
-        <h1 class="tittle">CAMPEONES </h1>
-        <h3 class="htext">Elige al campeón que te llevará al éxito</h3>
-        <div >
-            <form class="champion">
+        <div id="champPage">
+            <h1 class="tittle">CAMPEONES </h1>
+            <h3 class="htext">Elige al campeón que te llevará al éxito</h3>
+            <div >
+                <form class="champion">
                 <div class="form-groups" id="form-groups2">
                     <label for="name">Nombre: </label>
                     <input type="text" class="form-name" id="form-name2" placeholder="Ingresar nombre del Campeón">
                 </div>
-
                 <div class="form-groups-rol">
                     <label for="rol">Rol: </label>
                     <nav>
@@ -51,19 +51,37 @@
                             <a href="#" data-value="Support"> Soporte</a>
                         </div>
                     </nav>
-
                 </div>
-
                 <div class="form-groups">
                     <label>Ordenar: </label>
-                    <select class= "order">
-                        <option value="01">Ascendente</option>
-                        <option value="02">Descendente</option>
+                    <select  class= "order">
+                        <option class="orderName"data-value="az">Ascendente</option>
+                        <option class="orderName" data-value="za">Descendente</option>
                     </select>
-            </form>
+                </form>
+            </div>
+            <div id="imgChampions">
+            </div>
         </div>
-        <div id="imgChampions">
-        
+        <div id ="rolPage">
+
+            <a href="1">
+                <span>Luchadores</span>
+            </a>
+                <span>Tiradores </span>
+            </a>
+            <a href="3">
+                <span>Mago</span>
+            </a>
+            <a href="4">
+                <span>Asesino</span>
+            </a>
+            <a href="5">
+                <span>Tanque</span>
+            </a>
+            <a href="6">
+                <span>Soporte</span>
+            </a>
         </div>
     </main>
     <footer>

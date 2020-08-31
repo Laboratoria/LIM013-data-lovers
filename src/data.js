@@ -14,10 +14,12 @@ export const search=(championList,nameChamp)=>{
     return searchName; 
 }
 export const orderAsce=(championList,term)=>{
-    const sort=championList.sort((a,b)=>{a[term]>b[term]})
-    console.log(orderAsce);
-        return sort
+    const sort=championList.sort(()=>term==="az"?1:-1)
+    console.log(sort);
+        return orderAsce
     }
+export let averageInfo = (championList) =>championList.reduce((a, b) => a + b) / championList.length;
+console.log(averageInfo([1,2,3,4,5]));
 
 
  
