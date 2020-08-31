@@ -117,7 +117,9 @@ const showInformationPok = (display,indexSelect) => {
         </section>
         <section class="pokemonWeaknesses">
           <p class="sectionTitle">Weaknesses:</p>
-          ${extractTypePok(arrayPokSelect[0].weaknesses).join("")}      
+          <section class="typePok3">
+            ${extractTypePok(arrayPokSelect[0].weaknesses).join("")} 
+          </section>     
         </section>
       </section>
     </section>
