@@ -136,6 +136,8 @@ const showInformationPok = (display,indexSelect) => {
         ${pokEvolutionHtml}
       </section>
     </section>`
+
+    
 }
 
 //funcion que devuelve elementos HTML con información de la evoluciones de los pokémon
