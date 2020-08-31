@@ -2,8 +2,8 @@ import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let currentPage = 1;
 let rows = 20;
-const listElement = document.getElementById('alldata');
-const paginationElemnent = document.getElementById('pagination');
+let listElement = document.getElementById('alldata');
+let paginationElemnent = document.getElementById('pagination');
 
 //Contenidos para el html
 const obtenerPersonajes = (data) => {
@@ -214,8 +214,10 @@ const btnFM = () => {
 			const ninputNombreM = inputNameM[i].name
 			const inputValorM = inputNameM[i].getAttribute("value");
 			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
-			displayList(filtroDataM, listElement, rows, currentPage);
-			setupagination(filtroDataM, paginationElemnent, rows);
+				document.getElementById("all-data").innerHTML =`
+				<h1 class="app-title">Total de Personajes(${data.length})</h1>
+				${data.map(obtenerPersonajes).join(" ")}
+				`
 			document.querySelector('#my_modal').classList.add("ocultar");
 		}
 	}
@@ -365,4 +367,27 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 	});
 });
 
+const capitulo = () => {
+document.getElementById('contenido').classList.add('ocultar');
+document.getElementById('capi').classList.remove('ocultar');
 
+	let capitulosSalida = `<div class ="retrato">
+	<div>
+	<img class="imas" src="imagen/1.png">
+	</div>
+	<div class-"info">
+	<p class="Text-datos">informacion</p>
+	<p class="Text-datos">informacion</p>
+	<p class="Text-datos">informacion</p>
+	</div>`;
+document.getElementById("data-capitulos").innerHTML=capitulosSalida;
+
+}
+
+document.getElementById("capitulos").addEventListener("click",capitulo);
+
+const reversi = () => {
+document.getElementById('contenido').classList.remove('ocultar');
+}
+
+document.getElementById("conteni").addEventListener("click",reversi);
