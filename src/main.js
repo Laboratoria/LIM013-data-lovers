@@ -8,8 +8,14 @@ const menudeploy = document.querySelector('.menu-deploy');
 const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
+//**********Accordion - toggle**********************
+document.querySelectorAll(".accordionButton").forEach(button => {
+    button.addEventListener("click", () => {
+        
+        button.classList.toggle("accordionButtonActive");
 
-
+    })
+})
 
 //Traer nodo para manipular el DOM
 const pokemonDisplay = document.getElementById("pokemonDisplay");
@@ -295,5 +301,120 @@ const extractTypePok = (dataType) => {
 //console.log(example, data);
 //const namePok= document.querySelector('.namePok').textContent;
 //console.log(namePok);
+
+//**************Egda****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//**************Consuelo*****************************
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

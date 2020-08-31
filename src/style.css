@@ -181,13 +181,181 @@ border-radius: 0px 5px 5px 0px;
 }
 
 /*************todo referente al main***************/
+
+/************acordion, toggle**********************/
+.accordionButton {
+    display: block;
+    width: 100%;
+    height: 68px;
+    margin-top: 30px;
+    padding: 15px 120px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    transition: background 0.2s;
+    background-image: url(images/fondo_menuTipo.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.accordionButton::after {
+    content: "Search by Type | \25bc";
+    float: center;
+    transform: scale(1.5);
+}
+
+.accordionButtonActive + .accordionContent {
+  display: block;
+}
+.accordionButtonActive {
+    background-image: url(images/fondo_menuTipo.png);
+    height: 68px;
+}
+
+.accordionButtonActive::after {
+    content: "Close search | \25b4";
+    padding: 15px 12px;
+}
+
+.accordionContent {
+    padding: 0px 15px;
+    font-family: sans-serif;
+    color: white;
+    background: #18383b;
+    display: none;
+    overflow: auto;
+}
+
+.typeContainerHeader {
+    background-size: 100%;
+    height: 5px;
+}
+
+.typeContainerHeader h2 {
+    background-size: 100%;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.typeContainerHeader hr {
+    background-size: 100%;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.typeContainerBody {
+    margin-top: 50px;
+    margin-left: 0px;
+    padding: 10px 20px;
+    display: block; 
+}
+
+.typeContainerBody ul {
+    margin: 0;
+    clear: both;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0px;
+    justify-content: center;
+}
+  
+.typeContainerBody li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 14px;
+    float: left;
+
+}
+
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999%;
+}
+  
+input[type="checkbox"] + label {
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    background-color: none;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+  
+input[type="checkbox"]:checked + label {
+    border: 1px solid white;
+    color: #18383b;
+    background-color: white;
+}
+
+.typeContainerBodySearchByTypeButtons {
+    background-color: none;  
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.typeContainerBodySearchByTypeButtons button {
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;    
+    cursor: pointer;
+    width: 300px;
+    margin: 0px 15px;
+}
+
+.searchByTypeButtonReset {
+    background-color: #18383b;
+    border: 2px solid #00A9CF;
+    color: #00A9CF;   
+}
+
+.searchByTypeButtonReset:hover {
+    background-color: #00A9CF;
+    border: 1px solid #00A9CF;
+    color: #18383b;
+}
+
+.searchByTypeButtonSearch {
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;       
+}
+
+.searchByTypeButtonSearch:hover {
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;
+}
+
+/***********fin de toggle***************/
 .displayContainer {
     background: transparent;
     display:block
 }
 
 .displayAll {
-    margin-top: 30px;
+    margin-top: -65px;
     width: 100%;
     display:block;
     background: none;
