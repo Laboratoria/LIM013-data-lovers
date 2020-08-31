@@ -85,29 +85,35 @@ const showInformationPok = (display,indexSelect) => {
     <section class="mainInfo">
       <section class="leftInfo">
         <section class="pokemonType">
-          <p class="sectionTitle">Type:</p>
+          <p class="sectionTitle">Type:</p> 
+          <p class="${arrayPokSelect[0].type[0]}">${arrayPokSelect[0].type.join(`</p>
+          <p class="${arrayPokSelect[0].type[1]}">`)}</p>
         </section>
         <section class="pokemonBefore">
           <button class="pkmBefore">&lt</button>
         </section>
         <section class="pokemonSize">
           <p class="sectionTitle">Size:</p>
-          <p>height : ${arrayPokSelect[0].size.height}</p>
-          <p>weight : ${arrayPokSelect[0].size.weight}</p>
-
-        </section>
+          <p class="pokemonHAndW">height : ${arrayPokSelect[0].size.height}</p>
+          <p class="pokemonHAndW">weight : ${arrayPokSelect[0].size.weight}</p>
+        </section>        
       </section>
       <section class="centerInfo">
         <section class="circleImg">
           <img class="imgPokSelect" src="${arrayPokSelect[0].img}">
         </section>
       </section>
-      <section class="rightInfo">
-        <section class="pokemonSize">
-         <p class="sectionTitle">Size:</p>
-        </section>
+      <section class="rightInfo">                 
+        <section class="pokemonWeaknesses">
+          <p class="sectionTitle">Weaknesses:</p>
+      
+        </section>        
         <section class="pokemonAfter">
           <button class="pkmBefore">&gt</button>
+        </section>
+        <section class="pokemonResistant">
+          <p class="sectionTitle">Weaknesses:</p>
+      
         </section>
       </section>
     </section>
