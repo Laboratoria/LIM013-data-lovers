@@ -212,13 +212,14 @@ footer .social a {
   text-decoration: none;
   text-align: center;
   padding: 10px;
-
 }
 
 footer i {
   background: #000;
   border-radius: 50%;
-  padding: 15px 10px;
+  width: 45px;
+  font-size: 20px;
+  padding: 15px 5px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -294,9 +295,9 @@ input[type=button] {
   flex-wrap: wrap;
   align-items: space-beetween;
   justify-content: center;
-  margin: o auto;
+  margin: 30px auto;
   width: 100%;
-  /* max-width: 1200px; */
+  max-width: 1300px;
 }
 
 .legends {
@@ -494,6 +495,7 @@ input[type=button] {
   aside {
     flex-direction: row;
     flex: 0;
+    text-align: center;
   }
 
   aside .guia {
