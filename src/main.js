@@ -4,23 +4,9 @@ import data from './data/lol/lol.js';
 const datos = data.data,
   filter = document.getElementById("filter"),
   arrayLegends = Object.values(datos),
-  menuOptions = document.querySelector(".menuOptions"),
   legends_container = document.getElementById('legends_container'),
   pagination_element = document.getElementById('pagination'),
   inputSearch = document.querySelector('#inputSearch');
-
-/* menuOptions.addEventListener('click' ,(e) => {
-  const option = e.target.id
-  
-  if(option == 'index'){
-    document.querySelector('.container1').style.display = 'block'
-  }
-  else if(option == 'champions'){
-    document.querySelector('.container1').style.display = 'none'
-    document.querySelector('.container2').style.display = 'flex'
-  }
-  console.log('options',option) 
-})  */
 
 /*---LISTAR EN EL HTML---*/
 const listLegends = (name, img, title) => {
@@ -87,12 +73,12 @@ const setupPagination = (items, wrapper, rows_per_page) => {
 
   let page_count = Math.ceil(items.length / rows_per_page);
   for (let i = 1; i < page_count + 1; i++) {
-    let btn = paginationButton(i, items);
+    let btn = paginationButton(i);
     wrapper.appendChild(btn);
   }
 }
 
-const paginationButton = (page, items) => {
+const paginationButton = (page) => {
   let button = document.createElement('button');
   button.innerText = page;
 
@@ -181,3 +167,20 @@ const search = () => {
 }
 
 inputSearch.addEventListener('keyup', search)
+
+/*MENU BURGUER */
+
+/*let button=document.getElementById('icon');
+let links=document.getElementById('links');
+let count=0;
+
+button.addEventListener('click', function(){
+  if (count==0){
+    links.className = ('links_two');
+    count=1;
+  }else{
+    links.classList.remove('two');
+    links.className = ('links_one');
+    count=0;
+  }
+})*/
