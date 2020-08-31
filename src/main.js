@@ -10,69 +10,10 @@ const allCharacters = data.results;
 
 const getListAllCharacters = () => {
     
-    let page = [];
-    page = allCharacters.slice(0, 20);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < allCharacters.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-
-        function getPageAllCharacters(){
-            
-            button.addEventListener('click', function() {
-
-            let page = [];
-            page = allCharacters.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i]; 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageAllCharacters();
-    }
+    drawResults(allCharacters);
+ 
 }
 document.querySelector('#all').addEventListener('click', getListAllCharacters);
-
 
 
 const getListSpeciesHuman = () => {
@@ -80,68 +21,8 @@ const getListSpeciesHuman = () => {
     let speciesHuman = [];
     speciesHuman = filterSpecies.human(allCharacters);
 
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = speciesHuman.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < speciesHuman.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-
-        function getPageSpeciesHuman(){
-            
-            button.addEventListener('click', function() {
-
-            let speciesHuman = [];
-            speciesHuman = filterSpecies.human(allCharacters);
-            let page = [];
-            page = speciesHuman.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i]; 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesHuman();
-    }
+    drawResults(speciesHuman);
+    
 }
 document.querySelector('#human').addEventListener('click', getListSpeciesHuman);
 
@@ -151,69 +32,8 @@ const getListSpeciesAlien = () => {
 
     let speciesAlien = [];
     speciesAlien = filterSpecies.alien(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = speciesAlien.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < speciesAlien.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesAlien(){
-            
-            button.addEventListener('click', function() {
-
-            let speciesAlien = [];
-            speciesAlien = filterSpecies.alien(allCharacters);
-            let page = [];
-            page = speciesAlien.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesAlien();
-    }
+    drawResults(speciesAlien);
+    
 }
 document.querySelector('#alien').addEventListener('click', getListSpeciesAlien);
 
@@ -223,69 +43,8 @@ const getListSpeciesHumanoid = () => {
 
     let speciesHumanoid = [];
     speciesHumanoid = filterSpecies.humanoid(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = speciesHumanoid.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-       
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < speciesHumanoid.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesHumanoid(){
-            
-            button.addEventListener('click', function() {
-
-            let speciesHumanoid = [];
-            speciesHumanoid = filterSpecies.humanoid(allCharacters);
-            let page = [];
-            page = speciesHumanoid.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesHumanoid();
-    }
+    drawResults(speciesHumanoid);
+    
 }
 document.querySelector('#humanoid').addEventListener('click', getListSpeciesHumanoid);
 
@@ -294,69 +53,8 @@ const getListSpeciesAnimal = () => {
 
     let specieAnimal = [];
     specieAnimal = filterSpecies.animal(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieAnimal.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < specieAnimal.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesAnimal(){
-            
-            button.addEventListener('click', function() {
-
-            let specieAnimal = [];
-            specieAnimal = filterSpecies.animal(allCharacters);
-            let page = [];
-            page = specieAnimal.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesAnimal();
-    }
+    drawResults(specieAnimal);
+    
 }
 document.querySelector('#animal').addEventListener('click', getListSpeciesAnimal);
 
@@ -366,69 +64,8 @@ const getListSpeciesMytholog = () => {
 
     let specieMytholog = [];
     specieMytholog = filterSpecies.mytholog(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieMytholog.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < specieMytholog.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesMytholog(){
-            
-            button.addEventListener('click', function() {
-
-            let specieMytholog = [];
-            specieMytholog = filterSpecies.mytholog(allCharacters);
-            let page = [];
-            page = specieMytholog.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesMytholog();
-    }
+    drawResults(specieMytholog);
+    
 }
 document.querySelector('#mytholog').addEventListener('click', getListSpeciesMytholog);
 
@@ -438,69 +75,8 @@ const getListSpeciesRobot = () => {
 
     let specieRobot = [];
     specieRobot = filterSpecies.robot(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieRobot.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < specieRobot.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesRobot(){
-            
-            button.addEventListener('click', function() {
-
-            let specieRobot = [];
-            specieRobot = filterSpecies.robot(allCharacters);
-            let page = [];
-            page = specieRobot.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesRobot();
-    }
+    drawResults(specieRobot);
+    
 }
 document.querySelector('#robot').addEventListener('click', getListSpeciesRobot);
 
@@ -510,69 +86,8 @@ const getListSpeciesUnknown = () => {
 
     let specieUnknown = [];
     specieUnknown = filterSpecies.unknown(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieUnknown.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < specieUnknown.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesUnknown(){
-            
-            button.addEventListener('click', function() {
-
-            let specieUnknown = [];
-            specieUnknown = filterSpecies.unknown(allCharacters);
-            let page = [];
-            page = specieUnknown.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesUnknown();
-    }
+    drawResults(specieUnknown);
+    
 }
 document.querySelector('#unknownSpecie').addEventListener('click', getListSpeciesUnknown);
 
@@ -581,69 +96,8 @@ const getListSpeciesCronenberg = () => {
 
     let specieCronenberg = [];
     specieCronenberg = filterSpecies.cronenberg(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieCronenberg.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < specieCronenberg.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesCronenberg(){
-            
-            button.addEventListener('click', function() {
-
-            let specieCronenberg = [];
-            specieCronenberg = filterSpecies.cronenberg(allCharacters);
-            let page = [];
-            page = specieCronenberg.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesCronenberg();
-    }
+    drawResults(specieCronenberg);
+    
 }
 document.querySelector('#cronenberg').addEventListener('click', getListSpeciesCronenberg);
 
@@ -652,69 +106,8 @@ const getListSpeciesPoopybutthole = () => {
 
     let speciePoopybutthole = [];
     speciePoopybutthole = filterSpecies.poopybutthole(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = speciePoopybutthole.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < speciePoopybutthole.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesPoopybutthole(){
-            
-            button.addEventListener('click', function() {
-
-            let speciePoopybutthole = [];
-            speciePoopybutthole = filterSpecies.poopybutthole(allCharacters);
-            let page = [];
-            page = speciePoopybutthole.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesPoopybutthole();
-    }
+    drawResults(speciePoopybutthole);
+    
 }
 document.querySelector('#poopybutthole').addEventListener('click', getListSpeciesPoopybutthole);
 
@@ -723,69 +116,8 @@ const getListSpeciesDisease = () => {
 
     let specieDisease = [];
     specieDisease = filterSpecies.disease(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = specieDisease.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < specieDisease.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageSpeciesDisease(){
-            
-            button.addEventListener('click', function() {
-
-            let specieDisease = [];
-            specieDisease = filterSpecies.disease(allCharacters);
-            let page = [];
-            page = specieDisease.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageSpeciesDisease();
-    }
+    drawResults(specieDisease);
+    
 }
 document.querySelector('#disease').addEventListener('click', getListSpeciesDisease);
 
@@ -795,213 +127,28 @@ const getListStatusAlive = () => {
 
     let statusAlive = [];
     statusAlive = filterStatus.alive(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = statusAlive.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < statusAlive.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageStatusAlive(){
-            
-            button.addEventListener('click', function() {
-
-            let statusAlive = [];
-            statusAlive = filterStatus.alive(allCharacters);
-            let page = [];
-            page = statusAlive.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];                 
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageStatusAlive();
-    }
+    drawResults(statusAlive);
+    
 }
 document.querySelector('#alive').addEventListener('click', getListStatusAlive);
-
 
 
 const getListStatusDead = () => {  
 
     let statusDead = [];
     statusDead = filterStatus.dead(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = statusDead.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < statusDead.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageStatusDead(){
-            
-            button.addEventListener("click", function() {
-
-            let statusDead = [];
-            statusDead = filterStatus.dead(allCharacters);
-            let page = [];
-            page = statusDead.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image;  
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageStatusDead();
-    }
+    drawResults(statusDead);
+    
 }
 document.querySelector('#dead').addEventListener('click', getListStatusDead);
-
 
 
 const getListStatusUnknown = () => {
 
     let statusUnknown = [];
     statusUnknown = filterStatus.unknown(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = statusUnknown.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < statusUnknown.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageStatusUnknown(){
-            
-            button.addEventListener("click", function() {
-
-            let statusUnknown = [];
-            statusUnknown = filterStatus.unknown(allCharacters);
-            let page = [];
-            page = statusUnknown.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageStatusUnknown();
-    }
+    drawResults(statusUnknown);
+    
 }
 document.querySelector('#unknown').addEventListener('click', getListStatusUnknown);
 
@@ -1010,69 +157,8 @@ const getListGenderMale = () => {
 
     let genderMale = [];
     genderMale = filterGender.male(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = genderMale.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < genderMale.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageGenderMale(){
-            
-            button.addEventListener("click", function() {
-
-            let genderMale = [];
-            genderMale = filterGender.male(allCharacters);
-            let page = [];
-            page = genderMale.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageGenderMale();
-    }
+    drawResults(genderMale);
+    
 }
 document.querySelector('#male').addEventListener('click', getListGenderMale);
 
@@ -1081,358 +167,48 @@ const getListGenderFemale = () => {
 
     let genderFemale = [];
     genderFemale = filterGender.female(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = genderFemale.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < genderFemale.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageGenderFemale(){
-            
-            button.addEventListener("click", function() {
-
-            let genderFemale = [];
-            genderFemale = filterGender.female(allCharacters);
-            let page = [];
-            page = genderFemale.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageGenderFemale();
-    }
+    drawResults(genderFemale);
+    
 }
 document.querySelector('#female').addEventListener('click', getListGenderFemale);
-
 
 
 const getListGenderGenderless = () => {
 
     let genderGenderless = [];
     genderGenderless = filterGender.genderless(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = genderGenderless.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-       
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < genderGenderless.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageGenderGenderless(){
-            
-            button.addEventListener("click", function() {
-
-            let genderGenderless = [];
-            genderGenderless = filterGender.genderless(allCharacters);
-            let page = [];
-            page = genderGenderless.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li");
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image;
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText);
-            }
-                console.log(i);
-            })
-        }
-        getPageGenderGenderless();
-    }
+    drawResults(genderGenderless);
+    
 }
 document.querySelector('#genderless').addEventListener('click', getListGenderGenderless);
-
 
 
 const getListGenderUnknown = () => {
 
     let genderUnknown = [];
     genderUnknown = filterGender.unknown(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = genderUnknown.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < genderUnknown.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageGenderUnknown(){
-            
-            button.addEventListener("click", function() {
-
-            let genderUnknown = [];
-            genderUnknown = filterGender.unknown(allCharacters);
-            let page = [];
-            page = genderUnknown.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li");
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image;
-                const elementImage = document.createElement("img"); 
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageGenderUnknown();
-    }
+    drawResults(genderUnknown);
+    
 }
 document.querySelector('#unknownGender').addEventListener('click', getListGenderUnknown);
-
-
 
 
 const getListAtoZ = () => {
 
     let sortedAscending = [];
     sortedAscending = order.ascending(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = sortedAscending.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
-    }
-
-    for (let i=0; i < sortedAscending.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageAtoZ(){
-            
-            button.addEventListener("click", function() {
-
-            let sortedAscending = [];
-            sortedAscending = order.ascending(allCharacters);
-            let page = [];
-            page = sortedAscending.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li");
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageAtoZ();
-    }
+    drawResults(sortedAscending);
+    
 }
 document.querySelector('#orderAtoZ').addEventListener('click', getListAtoZ);
-
 
 
 const getListZtoA = () => {
 
     let sortedDescending = [];
     sortedDescending = order.descending(allCharacters);
-
-    const buttonsContainer = document.getElementById("buttonsContainer");
-    buttonsContainer.innerHTML = "";
-
-    let page = [];
-    page = sortedDescending.slice(0, 20);
-
-    const elementOrderedList = document.getElementById('listCharacters');
-    elementOrderedList.innerHTML = "";
-
-    for (let i=0; i < page.length; i++) {
-
-        const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
-        elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText);
-    }
-
-    for (let i=0; i < sortedDescending.length; i=i+20 ){
-
-        const button = document.createElement("button");
-        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
-        button.appendChild(buttonText);
-        buttonsContainer.appendChild(button);
-                            
-        function getPageZtoA(){
-            
-            button.addEventListener("click", function() {
-
-            let sortedDescending = [];
-            sortedDescending = order.descending(allCharacters);
-            let page = [];
-            page = sortedDescending.slice(i, i+20);
-
-            const elementOrderedList = document.getElementById('listCharacters');
-            elementOrderedList.innerHTML = "";
-
-            for (let i=0; i < page.length; i++) {
-
-                const result = page[i];
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image;
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
-                elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
-            }
-                console.log(i);
-            })
-        }
-        getPageZtoA();
-    }
+    drawResults(sortedDescending);
+    
 }
 document.querySelector('#orderZtoA').addEventListener('click', getListZtoA);
 
@@ -1556,7 +332,6 @@ document.querySelector('#order').addEventListener('click', getListZtoA);
 window.addEventListener('load', () => {
     document.getElementById('listCharacters').classList.add('images-loaded');
     const categoriesLinks = document.querySelectorAll('#navbar a');
-    const categoriesOtherLinks = document.querySelectorAll('#buttonsContainer button');
     const speciesLinks = document.querySelectorAll('#listSpecies a');
     const genderLinks = document.querySelectorAll('#listGender a');
     const statusLinks = document.querySelectorAll('#listStatus a');
@@ -1589,15 +364,73 @@ window.addEventListener('load', () => {
             event.target.classList.add('active');
         });
     });
-
-    categoriesOtherLinks.forEach((element) => {
-        element.addEventListener('click', (event) => {
-            event.preventDefault();
-            categoriesOtherLinks.forEach((categoriesOtherLinks) => categoriesOtherLinks.classList.remove('active'));
-            event.target.classList.add('active');
-        });
-    });
-
-
 })
+
+
+
+
+function drawResults(arrayData){
+
+    const buttonsContainer = document.getElementById("buttonsContainer");
+    buttonsContainer.innerHTML = "";
+
+    let page = [];
+    page = arrayData.slice(0, 20);
+
+    const elementOrderedList = document.getElementById('listCharacters');
+    elementOrderedList.innerHTML = "";
+
+    for (let i=0; i < page.length; i++) {
+
+        const result = page[i];
+        const elementLi = document.createElement("li");
+        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
+        
+        const image = result.image;
+        const elementImage = document.createElement("img");
+        elementImage.src = image;
+        elementImage.alt = name;
+        elementLi.appendChild(elementImage); 
+        elementOrderedList.appendChild(elementLi);
+        elementLi.appendChild(elementText); 
+    }
+
+    for (let i=0; i < arrayData.length; i=i+20 ){
+
+        const button = document.createElement("button");
+        const buttonText = document.createTextNode(parseInt(i / 20) + 1);
+        button.appendChild(buttonText);
+        buttonsContainer.appendChild(button);
+
+        function getPageCharacters(){
+            
+            button.addEventListener('click', function() {
+
+            let page = [];
+            page = arrayData.slice(i, i+20);
+
+            const elementOrderedList = document.getElementById('listCharacters');
+            elementOrderedList.innerHTML = "";
+
+            for (let i=0; i < page.length; i++) {
+
+                const result = page[i]; 
+                
+                const elementLi = document.createElement("li"); 
+                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
+                
+                const image = result.image; 
+                const elementImage = document.createElement("img");
+                elementImage.src = image;
+                elementImage.alt = name;
+                elementLi.appendChild(elementImage); 
+                elementOrderedList.appendChild(elementLi);
+                elementLi.appendChild(elementText); 
+            }
+                console.log(i);
+            })
+        }
+        getPageCharacters();
+    }
+}
 
