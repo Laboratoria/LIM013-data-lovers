@@ -213,8 +213,9 @@
 
 .fondo_video {
     position: fixed;
-    top:0;
-    left: 0;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
@@ -726,4 +727,20 @@
     animation: fadeInAnimation ease 4s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
-} 
+}
+.retrato {
+    max-width: 400px;
+    padding: 15px;
+    margin:15% 1%;
+    background-color: #F0F0F0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+
+}
+.data-capitulos {
+    margin: 10px 60px;
+    justify-content: center;
+}
+.imas{
+    height: auto;
+    max-width: 100%;   
+}
