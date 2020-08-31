@@ -248,7 +248,7 @@ const PokEvolution = (arrayPokSelect) => {
         }
     } 
 
-    else {
+    else if (quantityProp==3){
         const arrayNextEvolution=arrayPokSelect[0].evolution["next-evolution"][0];
         const arrayPrevEvolution=arrayPokSelect[0].evolution["prev-evolution"][0];
         const nextPok1=arrayNextEvolution.name;
@@ -272,6 +272,12 @@ const PokEvolution = (arrayPokSelect) => {
             <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num}</span></p>
             <p class="evoSectionPokName"><span>${nextPok1}</span></p>
             <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
+        </section>`
+    }
+    else{
+        return`
+        <section class="preEvolution">
+            <p class="noEvolution">¡There are no evolutions for this pokémon !</p>
         </section>`
     }
     
