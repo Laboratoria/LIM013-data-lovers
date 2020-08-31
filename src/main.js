@@ -1,7 +1,7 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let currentPage = 1;
-let rows = 20;
+let rows = 40;
 let listElement = document.getElementById('alldata');
 let paginationElemnent = document.getElementById('pagination');
 
@@ -19,6 +19,7 @@ const obtenerPersonajes = (data) => {
 		<p class="Text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
+
 }
 
 //Funciones de la paginación
@@ -214,10 +215,8 @@ const btnFM = () => {
 			const ninputNombreM = inputNameM[i].name
 			const inputValorM = inputNameM[i].getAttribute("value");
 			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
-				document.getElementById("all-data").innerHTML =`
-				<h1 class="app-title">Total de Personajes(${data.length})</h1>
-				${data.map(obtenerPersonajes).join(" ")}
-				`
+			displayList(filtroDataM, listElement, rows, currentPage);
+			setupagination(filtroDataM, paginationElemnent, rows);
 			document.querySelector('#my_modal').classList.add("ocultar");
 		}
 	}
@@ -388,6 +387,7 @@ document.getElementById("capitulos").addEventListener("click",capitulo);
 
 const reversi = () => {
 document.getElementById('contenido').classList.remove('ocultar');
+document.getElementById('capi').classList.add('ocultar');
 }
 
 document.getElementById("conteni").addEventListener("click",reversi);
