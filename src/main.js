@@ -1,9 +1,11 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let currentPage = 1;
+
 let rows = 40;
-let listElement = document.getElementById('alldata');
-let paginationElemnent = document.getElementById('pagination');
+const listElement = document.getElementById('alldata');
+const paginationElemnent = document.getElementById('pagination');
+
 
 //Contenidos para el html
 const obtenerPersonajes = (data) => {
@@ -369,6 +371,8 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 const capitulo = () => {
 document.getElementById('contenido').classList.add('ocultar');
 document.getElementById('capi').classList.remove('ocultar');
+document.getElementById('capitulos').classList.add('menu-active');
+document.getElementById('conteni').classList.remove('menu-active');
 
 	let capitulosSalida = `<div class ="retrato">
 	<div>
@@ -388,6 +392,9 @@ document.getElementById("capitulos").addEventListener("click",capitulo);
 const reversi = () => {
 document.getElementById('contenido').classList.remove('ocultar');
 document.getElementById('capi').classList.add('ocultar');
+
+document.getElementById('conteni').classList.add('menu-active');
+document.getElementById('capitulos').classList.remove('menu-active');
 }
 
 document.getElementById("conteni").addEventListener("click",reversi);

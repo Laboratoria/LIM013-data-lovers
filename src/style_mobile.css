@@ -14,15 +14,19 @@
         clip-path: initial;
     } 
 
+    .menu ul{
+        color: #6A6A6A;
+    }
+
     .menu li{
         display: inline-block;
         border: none;
     }
 
     .menu a{
+        color: inherit;
         padding: 0;
         margin-left: 3em;
-        color: #6A6A6A;
         font-weight: 600;
     }
 
@@ -31,10 +35,8 @@
         background: transparent;
     }
 
-    .menu a:visited{
+    .menu-active{
         color: #0FB875;
-        font-family: 'Open Sans', sans-serif;
-        background: transparent;
     }
 }
 
@@ -114,14 +116,6 @@
         font-size: 16px;
         line-height: 19px;
     }
-    /* .btn-i button{
-      position:relative;
-      left: 30%;
-      top:70%;
-      padding: 5px 9px;
-      margin-top: 100px;
-    }*/
-
     /* Estilos ordenar por y filtros mobile*/
     .btn-controls{
         display: none;
