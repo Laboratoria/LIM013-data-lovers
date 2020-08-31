@@ -12,12 +12,12 @@ export const search=(championList,nameChamp)=>{
     const searchName=championList.filter(el=>(el.name.toLowerCase().indexOf(nameChamp.toLowerCase())!==-1?el:false))
     console.log(searchName)
     return searchName; 
-}
+};
 export const orderAsce=(championList,term)=>{
-    const sort=championList.sort((a,b)=>{a[term]>b[term]})
-    console.log(orderAsce);
-        return sort
-    }
+    const sort=championList.sort(()=>term==='02'?-1:1);
+    console.log(sort);
+        return sort;
+};
 
 
  
