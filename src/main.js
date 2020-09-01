@@ -5,8 +5,9 @@ const container = document.querySelector("#container");
 const containerModal = document.querySelector("#container-modal");
 const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
+const searchByName = document.querySelector("#searchByName");
 const extent = document.querySelector("#extent");
-const home = document.getElementById("home");
+
 
 const showByData = (array) => {
     container.innerHTML="";    
@@ -27,7 +28,7 @@ const showByData = (array) => {
         showForItem.classList.add("elemento-div");
         showForItem.style.display="none";
         showForItem.innerHTML= `
-            <span class="close" id="close">&times;</span>
+            <span id="close">X</span>
             <p class="num">#${item.num}</p>
             <img class="img" src=${item.img}></img>
             <p class="name">name: ${item.name}</p>
@@ -41,13 +42,13 @@ const showByData = (array) => {
              `
         containerModal.appendChild(showForItem);
 
-        const closeForData = (item) => {
+        const closeForData = () => {
             showForItem.style.display = "none";
             }
             
-        showForItem.addEventListener("click", closeForData);
+       showForItem.addEventListener("click", closeForData);
     
-        const openForData = (item) => {
+        const openForData = () => {
             showForItem.style.display = "block";
             }
     
@@ -59,11 +60,6 @@ const showByData = (array) => {
 //inicializando//
 showByData(data.pokemon);
 
-home.addEventListener("click", () => {
-    container.innerHTML="";
-    showByData(data.pokemon);
-});
-
 // filterByName//
 searchByName.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
@@ -71,8 +67,8 @@ searchByName.addEventListener("keyup", (e) => {
     const showCardName = filterByName(data.pokemon,showForName);
     showByData(showCardName);
     searchByName.value=""; 
-    extent.innerHTML=" > " + showForName;
-}
+    extent.innerHTML= showForName;
+    }
 });
 
 //sortByName//
@@ -80,7 +76,7 @@ selectByName.addEventListener("change", () => {
     const showByName = selectByName.value;
     const showListName = sortByName(data.pokemon,showByName);
     showByData(showListName);
-    extent.innerHTML=" > " + showByName;
+    extent.innerHTML= showByName;
 });
 
 
@@ -90,7 +86,7 @@ selectByType.addEventListener("change", () => {
     const showListType = filterByType(data.pokemon,showByType);
     showByData(showListType);
     if (showByType == "allTypes") {
-        showByData(data.pokemon)};
-    extent.innerHTML=" > " + showByType;
+    showByData(data.pokemon);
+    }
+    extent.innerHTML= showByType;
 });
-
