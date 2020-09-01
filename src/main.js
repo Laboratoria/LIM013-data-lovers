@@ -3,6 +3,7 @@ import { filter } from './data.js';
 import data from './data/pokemon/pokemon.js'; //All data
 let newData = data.pokemon;
 let valuetype = new Array();
+let valueregion = "";
 //Global variable
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8 
@@ -91,31 +92,36 @@ document.getElementById("order-drop-down").addEventListener("click", (e) => {
 });
 
 document.getElementById("select-region").addEventListener('click', () => {
-    let value = document.getElementById("select-region").value;
     if (document.getElementById("region3")) {
         alert("Remove previous filter");
     } else {
-        buttonClose(3, value, "region");
-        let region = filter.region(newData, value);
-        if (region.length == 0) {
-            noMatches();
-        } else {
-            newData = region;
-            restart();
-            return newData;
-        }
+        valueregion = document.getElementById("select-region").value;
+        buttonClose(3, valueregion, "region");
+        filterRegion(valueregion);
     }
 });
 
+const filterRegion = (valueregion) => {
+    valueregion = document.getElementById("select-region").value;
+    let region = filter.region(newData, valueregion);
+    if (region.length == 0) {
+        noMatches();
+    } else {
+        newData = region;
+        restart();
+        return newData;
+    }
+};
+
 const functionFilter = (valuetype) => {
-    newData = filter.type(data.pokemon, valuetype);
+    newData = filter.type(newData, valuetype);
     if (newData == 0) {
         noMatches();
     } else {
         restart();
         return newData;
     }
-}
+};
 
 document.getElementById("select-type").addEventListener('click', () => {
     if (valuetype[0] == null || valuetype[1] == null) {
@@ -149,13 +155,17 @@ const buttonClose = (id, value, name) => {
     labelSpan.addEventListener('click', close = () => {
         labelP.parentNode.removeChild(labelP);
         if (labelP.id == "region3") {
+            valueregion = null;
+            filterRegion(valueregion);
             functionFilter(valuetype);
         } else if (valuetype.length == 1) {
             valuetype.splice(0, 1);
             functionFilter(valuetype);
+            filterRegion(valueregion);
         } else {
             valuetype.splice(id, 1);
             functionFilter(valuetype);
+            filterRegion(valueregion);
         }
     });
 };
