@@ -6,28 +6,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1>PokeInfo</h1>
+    </header>
+    
+      <input  id="searchByName" class="select">
 
-    <input id="searchByName" class="input">
+      <select id="selectByName" class="select">
+        <option value="0">Ordenar</option>
+        <option value="ascendente">A-Z</option>
+        <option value="descendente">Z-A</option>
+        <option value="menor-mayor">Número inferior</option>
+        <option value="mayor-menor">Número superior</option>
+      </select>
 
-    <select id="selectByName" class="select">
-      <option value="0">Ordenar</option>
-      <option value="ascendente">A-Z</option>
-      <option value="descendente">Z-A</option>
-      <option value="menor-mayor">Número inferior</option>
-      <option value="mayor-menor">Número superior</option>
-    </select>
-
-    <select id="selectByType" class="select">
-      <option value="0">Filtrar</option>
-      <option value="allTypes">All types</option>
-      <option value="grass">grass</option>
-      <option value="poison">poison</option>
-      <option value="ice">ice</option>
-      <option value="water">Water</option>
-    </select>
+      <select id="selectByType" class="select">
+        <option value="0">Filtrar</option>
+        <option value="allTypes">All types</option>
+        <option value="grass">grass</option>
+        <option value="poison">poison</option>
+        <option value="ice">ice</option>
+       <option value="water">Water</option>
+      </select>
+    </section>
+    <section>
+      <h2>PokeInfo Todos</h2>
+    </section>
+    <section>
+    
 
      <div id="container" class="contenedor"></div>
-    
+     <div id="container-modal" class="contenedor-modal"></div>
+     <footer class="footer">Footer</footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>

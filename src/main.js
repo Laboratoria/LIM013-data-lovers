@@ -2,17 +2,15 @@ import { filterByType, sortByName, filterByName, computeByStats } from './data.j
 import data from './data/pokemon/pokemon.js';
 
 const container = document.querySelector("#container");
-const searchByName = document.querySelector("#searchByName");
+const containerModal = document.querySelector("#container-modal");
 const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
-
 
 
 const showByData = (array) => {
     container.innerHTML="";    
 
-    array.forEach((item, index, array) => {
-        
+    array.forEach((item) => {
         const pc = computeByStats(Object.values(item.stats));
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
@@ -23,45 +21,38 @@ const showByData = (array) => {
             <p>type: ${item.type}</p>
             `       
         container.appendChild(showByItem);
-        
-        const showForData = (array) => {
-            const showForItem = document.createElement("div");
-            showForItem.classList.add("elemento-div");
-            showForItem.style.display = "block";
-            showForItem.innerHTML=`
-                <p>#${item.num}</p>
-                <img src=${item.img}></img>
-                <p>name: ${item.name}</p>
-                <p>type: ${item.type}</p>
-                <p>resisntant: ${item.resistant}</p>
-                <p>waknesses: ${item.weaknesses}</p>
-                <p>attack: ${item.stats["base-attack"]}
-                <p>defense: ${item.stats["base-defense"]}
-                <p>stamina: ${item.stats["base-stamina"]}
-                <p>PC: ${pc}           
-                `    
-            showByItem.appendChild(showForItem);     
 
-            const closeForData = (i) => {
-                showForItem.style.display = "none";
+        const showForItem = document.createElement("div");
+        showForItem.classList.add("elemento-div");
+        showForItem.style.display="none";
+        showForItem.innerHTML= `
+            <span class="close" id="close">&times;</span>
+            <p class="num">#${item.num}</p>
+            <img class="img" src=${item.img}></img>
+            <p class="name">name: ${item.name}</p>
+            <p class="type">type: ${item.type}</p>
+            <p class="resistance">resistance: ${item.resistant}</p>
+            <p class="waknesses" >waknesses: ${item.weaknesses}</p>
+            <p class="attack">attack: ${item.stats["base-attack"]}</p>
+            <p class="defense">defense: ${item.stats["base-defense"]}</p>
+            <p class="stamina">stamina: ${item.stats["base-stamina"]}</p>
+            <p class="pc">PC: ${pc}</p> 
+             `
+        containerModal.appendChild(showForItem);
+        const closeForData = (item) => {
+            showForItem.style.display = "none";
             }
             
-            showForItem.addEventListener("click", closeForData);
-        }
-
-        showByItem.addEventListener("click", showForData);          
-    });     
-}
-
-
-
-
-
-
-
-
-
-
+        showForItem.addEventListener("click", closeForData);
+    
+        const openForData = (item) => {
+            showForItem.style.display = "block";
+            }
+    
+        showByItem.addEventListener("click", openForData); 
+            
+        });
+};
  
 //inicializando//
 showByData(data.pokemon);
@@ -87,8 +78,8 @@ selectByType.addEventListener("change", () => {
     const showByType = selectByType.value;
     const showListType = filterByType(data.pokemon,showByType);
     showByData(showListType);
-        if (showByType == "allTypes") { 
-            showByData(data.pokemon)};
-});
+    if (showByType == "allTypes") {
+        showByData(data.pokemon)};
 
+});
 

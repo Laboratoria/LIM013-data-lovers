@@ -27,7 +27,3 @@ export const computeByStats = (array) => {
   return newItem;
 };
  
-
-
-
-
