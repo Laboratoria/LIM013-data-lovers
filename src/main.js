@@ -367,8 +367,6 @@ window.addEventListener('load', () => {
 })
 
 
-
-
 function drawResults(arrayData){
 
     const buttonsContainer = document.getElementById("buttonsContainer");
@@ -383,16 +381,13 @@ function drawResults(arrayData){
     for (let i=0; i < page.length; i++) {
 
         const result = page[i];
-        const elementLi = document.createElement("li");
-        const elementText = document.createTextNode(result.name +", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-        
-        const image = result.image;
-        const elementImage = document.createElement("img");
-        elementImage.src = image;
-        elementImage.alt = name;
-        elementLi.appendChild(elementImage); 
+        const elementLi = document.createElement("div"); 
+
+        elementLi.innerHTML = `<img src="${result.image}" alt="${result.name}">
+        <h3>${result.name}</h3>
+        <p>${result.species}</p>`;
+
         elementOrderedList.appendChild(elementLi);
-        elementLi.appendChild(elementText); 
     }
 
     for (let i=0; i < arrayData.length; i=i+20 ){
@@ -415,17 +410,23 @@ function drawResults(arrayData){
             for (let i=0; i < page.length; i++) {
 
                 const result = page[i]; 
-                
-                const elementLi = document.createElement("li"); 
-                const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                const image = result.image; 
-                const elementImage = document.createElement("img");
-                elementImage.src = image;
-                elementImage.alt = name;
-                elementLi.appendChild(elementImage); 
+                const elementLi = document.createElement("div"); 
+
+                elementLi.innerHTML = `<img src="${result.image}" alt="${result.name}">
+                <h3 class="characterName">${result.name}</h3>
+                <p class="characterSpecies">${result.species}</p>`;
+
                 elementOrderedList.appendChild(elementLi);
-                elementLi.appendChild(elementText); 
+
+                // const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
+                
+                // const image = result.image; 
+                // const elementImage = document.createElement("img");
+                // elementImage.src = image;
+                // elementImage.alt = name;
+                // elementLi.appendChild(elementImage); 
+                // elementOrderedList.appendChild(elementLi);
+                // elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -434,3 +435,28 @@ function drawResults(arrayData){
     }
 }
 
+
+
+// const list_element = document.getElementById('charactersList');
+// let rows = 20;
+// function DisplayList (items, wrapper, rows_per_page, page) {
+//     wrapper.innerHTML = "";
+//     page--;
+//     let start = rows_per_page * page;
+//     let end = start + rows_per_page;
+//     let paginatedItems = items.slice(start, end);
+//     for (let i = 0; i < paginatedItems.length; i++) {
+//         let item = paginatedItems[i];
+
+//         let item_element = document.createElement('div');
+
+//         item_element.classList.add('item');
+
+//         item_element.innerHTML = `<img src="${item.image}" alt="${item.name}">
+//         <h2 class="characterName">${item.name}</h2>
+//         <p>${item.species}</p>`;
+//         wrapper.appendChild(item_element);
+//     }
+// }
+
+// DisplayList(data.results, list_element, rows, current_page);
