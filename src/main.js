@@ -224,17 +224,8 @@ const btnFM = () => {
 
 }
 
-for (let i = 0; i < botonesFiltrosM.length; i++) {
-	const divGenM = botonesFiltrosM[i].children;
-	for (let j = 0; j < divGenM.length; j++) {
-		const divContM = divGenM[j].children;
-		for (let l = 0; l < divContM.length; l++) {
-			const inputsFiltrosM = divContM[l].children;
-			for (let k = 0; k < inputsFiltrosM.length; k++) {
-				inputsFiltrosM[k].addEventListener("click", btnFM);
-			}
-		}
-	}
+for (let i = 0; i < inputNameM.length; i++) {
+	inputNameM[i].addEventListener("click", btnFM);
 }
 
 //Función de buscar
