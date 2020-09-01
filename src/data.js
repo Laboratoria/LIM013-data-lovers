@@ -48,10 +48,14 @@ export const order = {
 export const filter = {
     region: function(data, value) {
         let pokemons = data;
-        const pokemonRegion = pokemons.filter(function(pokemon) {
-            return pokemon.generation.name === value;
-        })
-        return pokemonRegion;
+        if (value == null) {
+            return pokemons
+        } else {
+            const pokemonRegion = pokemons.filter(function(pokemon) {
+                return pokemon.generation.name === value;
+            })
+            return pokemonRegion;
+        }
     },
     type: function(data, value) {
         let pokemons = data;
