@@ -217,8 +217,8 @@ const btnFM = () => {
 			const inputValorM = inputNameM[i].getAttribute("value");
 			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
 			document.getElementById("all-data").innerHTML = `
-			<h1 class="app-title">Total de Personajes(${data.length})</h1>
-			${data.map(obtenerPersonajes).join(" ")}`
+			<h1 class="app-title">Total de Personajes(${filtroDataM.length})</h1>
+			${filtroDataM.map(obtenerPersonajes).join(" ")}`
 			document.querySelector('#my_modal').classList.add("ocultar");
 		}
 	}
