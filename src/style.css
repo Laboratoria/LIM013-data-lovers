@@ -1,19 +1,21 @@
 /* -----------------------------------------------RESETEANDO ESTILOS */
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
 }
 /* -----------------------------------------------ESTILOS Y FUENTES PRINCIPALES */
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	font-style: normal;
-	font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+	font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		sans-serif;
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 1.6;
-	margin: 0px;
 	background: url('img/fondo.jpg');
+	margin: 0;
 }
 
 /* -------------------------------------------------ESTILOS DEL MENU */
@@ -51,7 +53,7 @@ li a:hover {
 	background-color: #111;
 }
 
-/* ESTILOS DEL BUSCADOR */
+/* --------------------------------ESTILOS DEL BUSCADOR */
 
 input[type='text'] {
 	width: 100%;
@@ -108,7 +110,54 @@ input[type='text']:focus {
 	font-size: 30px;
 }
 
-/* ESTILOS DEL FOOTER */
+/* ----------ESTILOS PARA MOSTRAR LOS POKEMON */
+.dataPoke {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.pokemon{
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.pokemon .img-container {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+}
+
+.pokemon .img-container img {
+	margin-top: 20px;
+	max-width: 90%;
+}
+
+.pokemon .info {
+	margin-top: 20px;
+}
+
+.pokemon .number {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+}
+
+.pokemon .name {
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
+}
+/* ------------------------------ESTILOS DEL FOOTER */
 .copy {
 	position: absolute;
 	bottom: 0px;
