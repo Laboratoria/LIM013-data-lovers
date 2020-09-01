@@ -12,6 +12,7 @@ body {
 /*Header*/
 .header {
   padding: 60px;
+  display: flex;
 }
 .title-lol {
   display: flex;
