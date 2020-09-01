@@ -15,10 +15,10 @@ const showByData = (array) => {
         const showByItem = document.createElement("div");
         showByItem.classList.add("elemento");
         showByItem.innerHTML=`
-            <p>#${item.num}</p>
+            <p class="num">#${item.num}</p>
             <img src=${item.img}></img>
-            <p>name: ${item.name}</p>
-            <p>type: ${item.type}</p>
+            <p class="name"> ${item.name}</p>
+            <p class="type"> ${item.type}</p>
             `       
         container.appendChild(showByItem);
 
