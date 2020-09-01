@@ -8,6 +8,22 @@ const datos = data.data,
   pagination_element = document.getElementById('pagination'),
   inputSearch = document.querySelector('#inputSearch');
 
+/*MENU BURGUER */
+let button = document.getElementById('icon');
+let links = document.getElementById('links');
+let count = 0;
+
+button.addEventListener('click', () => {
+  if (count == 0) {
+    links.className = ('links two');
+    count = 1;
+  } else {
+    links.classList.remove('one');
+    links.className = ('links one');
+    count = 0;
+  }
+})
+
 /*---LISTAR EN EL HTML---*/
 const listLegends = (name, img, title) => {
 

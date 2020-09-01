@@ -6,8 +6,25 @@ const datos = data.data,
 
 let level = 0;
 
+/*MENU BURGUER */
+let button = document.getElementById('icon');
+let links = document.getElementById('links');
+let count = 0;
+
+button.addEventListener('click', () => {
+  if (count == 0) {
+    links.className = ('links two');
+    count = 1;
+  } else {
+    links.classList.remove('one');
+    links.className = ('links one');
+    count = 0;
+  }
+})
+
 /**HTML */
 const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attackActual, iddiv) => {
+  //console.log('mpActual', mpActual);
   document.querySelector(iddiv).innerHTML = '';
 
   const legends_stats1 = document.createElement('div'),
@@ -35,7 +52,8 @@ const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attac
 
 /*TRAER DATA ESTADÍSTICAS (hpper level, mpper level, attack damage per level)*/
 const getStats = (objLegend, selected, iddiv) => {
- 
+  //console.log('level123', level);
+  //console.log('select123', selected);
   for (let i = 0; i < objLegend.length; i++) {
     let name = objLegend[i].name;
     let splash = objLegend[i].splash;
@@ -51,6 +69,8 @@ const getStats = (objLegend, selected, iddiv) => {
     }
   }
 };
+
+/*ESTADISTICA SELECT */
 
 const legend01 = document.querySelector('#select01')
 //console.log('legen01', legend01)
@@ -84,7 +104,7 @@ legend02.addEventListener('change', (e) => {
 const inputLevel = document.getElementById('number');
 inputLevel.addEventListener('change', (e) => {
   level = parseInt(e.target.value);
-  //console.log('level', level)
+  console.log('level', level)
   if (level === '') {
     level = 1
   }
