@@ -506,10 +506,17 @@
     max-width: 100%;
     border-radius: 50%;
 }
+.photopar{
+    width: 30px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 50%;
+}
 
 .info{
     width: 230px;
     height: 210px;
+    padding-top: 25px;
 }
 
 .name{
@@ -533,6 +540,7 @@
     font-size: 16px;
     color: #6A6A6A;
 }
+
 
 /* comienzo de css paginación*/
 .pagenumbers {
@@ -730,18 +738,49 @@
     animation-fill-mode: forwards;
 }
 .retrato {
-    max-width: 400px;
+    max-width: 70%;
     padding: 15px;
-    margin:15% 1%;
+    margin:6% 1%;
     background-color: #F0F0F0;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
-
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform-style: preserve-3d;
+    position: relative;
+    left: 14%;
+}
+.retrato:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 .data-capitulos {
     margin: 10px 60px;
     justify-content: center;
 }
 .imas{
-    height: auto;
-    max-width: 100%;   
+    height: 69%;
+    width: 95%; 
+    margin-top: 7%; 
+}
+.titulo{
+    margin-top: 90px;
+    padding: 20px;
+    font-size: 52px;
+    color: #0FB875;
+    position: relative;
+    left: 20%;
+    font-weight: lighter;
+}
+.credito{
+    text-align: center;
+}
+.titulo2{
+    margin-top: 90px;
+    padding: 20px;
+    font-size: 52px;
+    color: #0FB875;
+    font-weight: lighter;
+    text-align: center;
 }

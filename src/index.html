@@ -15,28 +15,28 @@
 <body>
   <header class="ocultar" id="container-header">
     <div class="logo">
-      <a href="index.html"><img src="imagen/logo.png"></a>
+      <a href="index.html"><img src="imagen/logo.png" alt="logo"></a>
     </div>
     <nav id="menu" class="menu">
       <ul>
         <li id="conteni" class="menu-active"><a href="#contenido">Personajes</a></li>
-        <li id="capitulos"><a href="#capi">Capítulos</a></li>
-        <li><a>Nosotras</a></li>
+        <li id="capitulos"><a>Capítulos</a></li>
+        <li id="nosotras"><a>Nosotras</a></li>
       </ul>
     </nav>
     <div id="menu-toggle" class="menu-toggle">
       <div id="tongle" class="hamburger"></div>
     </div>
     <div id="icon-menu">
-      <img src="imagen/iconArt.png" id="ctn-icon-search">
+      <img src="imagen/iconArt.png" id="ctn-icon-search" alt="buscador">
     </div>
   </header>
 
   <div id="ctn-bars-search" class="ocultar">
     <div class="flex-search">
-      <img src="imagen/icon_close.png" id="exit">
+      <img src="imagen/icon_close.png" id="exit" alt="exit">
       <input type="text" id="inputSeatch" placeholder="Buscar..." />
-      <img src="imagen/iconart-p.png" id="local">
+      <img src="imagen/iconart-p.png" id="local" alt="buscar">
     </div>
   </div>
   <div id="cover-ctn-search"></div>
@@ -48,8 +48,8 @@
     </video>
     <div class="mask-fondo">
       <h1 class="in-left">Bienvenid@ al ciberespacio de</h1>
-      <img class="in-right" src="imagen/logo-inicio.png">
-      <p class="in-left">Humor negro, ciencia ficción, sátira y escenas existenciales, son los ingredientes perfectos
+        <img class="in-right" src="imagen/logo-inicio.png" alt="inicial">
+        <p class="in-left">Humor negro, ciencia ficción, sátira y escenas existenciales, son los ingredientes perfectos
         que hacen
         de “Rick y Morty” una de las series más atractivas en los últimos años y que cada día conquista a más
         personas del mundo.</p>
@@ -233,18 +233,26 @@
         </div>
       </div>
     </div>
-
+    <!-- Content api muestra principal-->
     <main class="container-data">
       <div class="alldata" id="alldata"></div>
       <div class="pagenumbers" id="pagination"></div>
     </main>
-
   </section>
-   <section id="capi" class="ocultar">
-     <div id="data-capitulos" class="data-capitulos">
-       
-     </div>
-   </section>
+  <!-- Content api capitulos -->
+  <section id="capi" class="ocultar">
+    <div id="data-capitulos" class="data-capitulos">
+      <h1 class="titulo" >Información de los capítulos</h1>
+    </div>
+  </section>
+    <!-- extras de creditos -->
+    <aside>
+      <div id="credito" class="credito ocultar">
+      <h3 class="titulo2">creditos</h1>
+        <p>MASIVO Gracias a Justin Roiland y Dan Harmon por crear esta hermosa serie.</p>
+      </div>
+    </aside>
+    <!-- footer -->
   <footer id="content-footer" class="ocultar">
     <div class="footer">
       <hr>
@@ -253,6 +261,7 @@
   </footer>
   <script src="main.js" type="module"></script>
   <script src="./data/rickandmorty/rickandmorty.js"></script>
+  <script src="./data/rickandmorty/cap.js"></script>
 </body>
 
 </html>
