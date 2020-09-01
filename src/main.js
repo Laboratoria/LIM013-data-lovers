@@ -216,9 +216,8 @@ const btnFM = () => {
 			const ninputNombreM = inputNameM[i].name
 			const inputValorM = inputNameM[i].getAttribute("value");
 			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
-			document.getElementById("all-data").innerHTML = `
-			<h1 class="app-title">Total de Personajes(${filtroDataM.length})</h1>
-			${filtroDataM.map(obtenerPersonajes).join(" ")}`
+			displayList(filtroDataM, listElement, rows, currentPage);
+			setupagination(filtroDataM, paginationElemnent, rows);
 			document.querySelector('#my_modal').classList.add("ocultar");
 		}
 	}
@@ -400,19 +399,19 @@ const capitulo = () => {
 	document.getElementById('contenido').classList.add('ocultar');
 	document.getElementById('credito').classList.add('ocultar');
 	document.getElementById('capi').classList.remove('ocultar');
-	for(let i=0;i<capis.length;i++){
-		document.getElementById("data-capitulos").innerHTML+=muestracapitulos(capis[i],i+1);
-	}        
-     
+	for (let i = 0; i < capis.length; i++) {
+		document.getElementById("data-capitulos").innerHTML += muestracapitulos(capis[i], i + 1);
+	}
+
 }
 
-document.getElementById("capitulos").addEventListener("click",capitulo);
+document.getElementById("capitulos").addEventListener("click", capitulo);
 
-const volverPrincipal = () => { 
-document.getElementById('conteni').classList.add('menu-active');
-document.getElementById('capitulos').classList.remove('menu-active');
+const volverPrincipal = () => {
+	document.getElementById('conteni').classList.add('menu-active');
+	document.getElementById('capitulos').classList.remove('menu-active');
 	document.getElementById('nosotras').classList.remove('menu-active');
-document.getElementById('contenido').classList.remove('ocultar');
+	document.getElementById('contenido').classList.remove('ocultar');
 	document.getElementById('capi').classList.add('ocultar');
 	document.getElementById('credito').classList.add('ocultar');
 }
@@ -422,11 +421,11 @@ document.getElementById("conteni").addEventListener("click", volverPrincipal);
 
 const creditos = () => {
 	document.getElementById('conteni').classList.remove('menu-active');
-document.getElementById('capitulos').classList.remove('menu-active');
-document.getElementById('nosotras').classList.add('menu-active');
+	document.getElementById('capitulos').classList.remove('menu-active');
+	document.getElementById('nosotras').classList.add('menu-active');
 	document.getElementById('contenido').classList.add('ocultar');
-		document.getElementById('capi').classList.add('ocultar');
-document.getElementById('credito').classList.remove('ocultar');
+	document.getElementById('capi').classList.add('ocultar');
+	document.getElementById('credito').classList.remove('ocultar');
 }
-		document.getElementById('nosotras').addEventListener("click",creditos);
-		
+document.getElementById('nosotras').addEventListener("click", creditos);
+
