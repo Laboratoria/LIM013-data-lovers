@@ -5,7 +5,8 @@ const container = document.querySelector("#container");
 const containerModal = document.querySelector("#container-modal");
 const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
-
+const extent = document.querySelector("#extent");
+const home = document.getElementById("home");
 
 const showByData = (array) => {
     container.innerHTML="";    
@@ -39,6 +40,7 @@ const showByData = (array) => {
             <p class="pc">PC: ${pc}</p> 
              `
         containerModal.appendChild(showForItem);
+
         const closeForData = (item) => {
             showForItem.style.display = "none";
             }
@@ -57,19 +59,28 @@ const showByData = (array) => {
 //inicializando//
 showByData(data.pokemon);
 
-// filterByName//
-searchByName.addEventListener("blur", () => {
-    const showForName = searchByName.value;
-    const showCardName = filterByName(data.pokemon,showForName);
-    showByData(showCardName); 
+home.addEventListener("click", () => {
+    container.innerHTML="";
+    showByData(data.pokemon);
 });
 
+// filterByName//
+searchByName.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+    const showForName = searchByName.value;
+    const showCardName = filterByName(data.pokemon,showForName);
+    showByData(showCardName);
+    searchByName.value=""; 
+    extent.innerHTML=" > " + showForName;
+}
+});
 
 //sortByName//
 selectByName.addEventListener("change", () => {
     const showByName = selectByName.value;
     const showListName = sortByName(data.pokemon,showByName);
-    return showByData(showListName);
+    showByData(showListName);
+    extent.innerHTML=" > " + showByName;
 });
 
 
@@ -80,6 +91,6 @@ selectByType.addEventListener("change", () => {
     showByData(showListType);
     if (showByType == "allTypes") {
         showByData(data.pokemon)};
-
+    extent.innerHTML=" > " + showByType;
 });
 
