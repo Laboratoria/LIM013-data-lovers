@@ -83,8 +83,9 @@ const listaCampeones = (
             <td class="table">${hpregen}</td>
           </tr>
         </table>
+        <h2 class="modal-info">Roles: "${rol}"</h2>    
       </div> 
-      <h2 class="modal-info">Roles: "${rol}"</h2>     
+       
       
     </section>`;
 
@@ -250,8 +251,9 @@ const buscador = () => {
           </tr>
     
         </table>
-        <h2 class="modal-info">Rol: ${campeones.tags}</h2>
+        <h2 class="modal-info">Rol: ${campeones.tags.toString()}</h2>
       </div>
+      
     </section>`
     }
   }
