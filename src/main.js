@@ -1,5 +1,7 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
+let capis = window.capRickMorty.results;
+console.log(capis);
 let currentPage = 1;
 let rows = 40;
 const listElement = document.getElementById('alldata');
@@ -214,7 +216,7 @@ const btnFM = () => {
 			const ninputNombreM = inputNameM[i].name
 			const inputValorM = inputNameM[i].getAttribute("value");
 			const filtroDataM = datajs.filterSpecies(data, ninputNombreM, inputValorM);
-			document.getElementById("all-data").innerHTML =`
+			document.getElementById("all-data").innerHTML = `
 			<h1 class="app-title">Total de Personajes(${data.length})</h1>
 			${data.map(obtenerPersonajes).join(" ")}`
 			document.querySelector('#my_modal').classList.add("ocultar");
@@ -365,33 +367,66 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		resetRadioButtons("estd");
 	});
 });
+const muestracapitulos = (capis, idImagen) => {
 
-const capitulo = () => {
-document.getElementById('contenido').classList.add('ocultar');
-document.getElementById('capi').classList.remove('ocultar');
-document.getElementById('capitulos').classList.add('menu-active');
-document.getElementById('conteni').classList.remove('menu-active');
-
-	let capitulosSalida = `<div class ="retrato">
+	let salida = `<div class ="retrato">
 	<div>
-	<img class="imas" src="imagen/1.png">
+	<img class="imas" src="imagen/`+ idImagen + `.png">
 	</div>
 	<div class-"info">
-	<p class="Text-datos">informacion</p>
-	<p class="Text-datos">informacion</p>
-	<p class="Text-datos">informacion</p>
-	</div>`;
-document.getElementById("data-capitulos").innerHTML=capitulosSalida;
+	<p class="Text-datos">Nombre:${capis.name}</p>
+	<p class="Text-datos">Fecha:${capis.air_date}</p>
+	<p class="Text-datos">Episodio:${capis.episode}</p>
+	<div>`;
+	console.log(capis.characters);
+	for (let i = 0; i < capis.characters.length; i++) {
+		salida += `
+		<img class="photopar" src="${data[capis.characters[i]].image}">`
 
+	}
+
+	salida += `</div></div>`;
+	return salida;
+	//document.getElementById("data-capitulos").innerHTML =
+	//	`${capis.map(muestracapitulos).join(" ")}`
+
+	//document.getElementById("data-capitulos").innerHTML=capitulosSalida;
+}
+
+const capitulo = () => {
+	document.getElementById('capitulos').classList.add('menu-active');
+	document.getElementById('conteni').classList.remove('menu-active');
+	document.getElementById('nosotras').classList.remove('menu-active');
+	document.getElementById('contenido').classList.add('ocultar');
+	document.getElementById('credito').classList.add('ocultar');
+	document.getElementById('capi').classList.remove('ocultar');
+	for(let i=0;i<capis.length;i++){
+		document.getElementById("data-capitulos").innerHTML+=muestracapitulos(capis[i],i+1);
+	}        
+     
 }
 
 document.getElementById("capitulos").addEventListener("click",capitulo);
 
-const reversi = () => {
-document.getElementById('contenido').classList.remove('ocultar');
-document.getElementById('capi').classList.add('ocultar');
+const volverPrincipal = () => { 
 document.getElementById('conteni').classList.add('menu-active');
 document.getElementById('capitulos').classList.remove('menu-active');
+	document.getElementById('nosotras').classList.remove('menu-active');
+document.getElementById('contenido').classList.remove('ocultar');
+	document.getElementById('capi').classList.add('ocultar');
+	document.getElementById('credito').classList.add('ocultar');
 }
 
-document.getElementById("conteni").addEventListener("click",reversi);
+document.getElementById("conteni").addEventListener("click", volverPrincipal);
+
+
+const creditos = () => {
+	document.getElementById('conteni').classList.remove('menu-active');
+document.getElementById('capitulos').classList.remove('menu-active');
+document.getElementById('nosotras').classList.add('menu-active');
+	document.getElementById('contenido').classList.add('ocultar');
+		document.getElementById('capi').classList.add('ocultar');
+document.getElementById('credito').classList.remove('ocultar');
+}
+		document.getElementById('nosotras').addEventListener("click",creditos);
+		

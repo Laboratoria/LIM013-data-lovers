@@ -68,6 +68,19 @@
     #local{
         margin-right: 20px;
     }
+
+    .titulo{
+        font-size: 19px;
+        text-align: center;
+        left: auto;
+    }
+
+    .retrato{
+        position: relative;
+        left: 6%;
+        display:inline-block;
+    }
+
 }
   
 /* Fin de estilos de header */
@@ -291,5 +304,7 @@
     .Text-datos{
         margin: 2px 20px;
         font-size: 13px;
+        text-align: center;
     }
+
 }
