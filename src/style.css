@@ -261,6 +261,7 @@
     #content {
         display: flex;
         flex-flow: row wrap;
+        width: 100%;
         margin: 0px 8%;
         justify-content: space-between;
     }
@@ -374,6 +375,7 @@
     
     #labelToFilter {
         display: flex;
+        width: 100%;
     }
     
     .pToFilter {
@@ -382,7 +384,6 @@
         padding: 8px;
         border: 1.5px #e7e7e9 solid;
         border-radius: 10px;
-        justify-items: space-between;
         color: #24282c;
     }
     
@@ -402,8 +403,14 @@
     #content>.no-matches {
         display: flex;
         justify-content: center;
-        background-color: #fe0707;
-        width: 1200px;
-        margin: 0px;
+        background-color: #4167A8;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 15px;
         height: 40px;
+        border-radius: 5px;
+    }
+    
+    .no-matches p {
+        color: #fff;
     }
