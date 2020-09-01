@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
- 
 import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -34,17 +26,17 @@ const showByData = (array) => {
         showForItem.classList.add("elemento-div");
         showForItem.style.display="none";
         showForItem.innerHTML= `
-            <span>x</span>
-            <p>#${item.num}</p>
-            <img src=${item.img}></img>
-            <p>name: ${item.name}</p>
-            <p>type: ${item.type}</p>
-            <p>resisntant: ${item.resistant}</p>
-            <p>waknesses: ${item.weaknesses}</p>
-            <p>attack: ${item.stats["base-attack"]}
-            <p>defense: ${item.stats["base-defense"]}
-            <p>stamina: ${item.stats["base-stamina"]}
-            <p>PC: ${pc} 
+            <span class="close" id="close">&times;</span>
+            <p class="num">#${item.num}</p>
+            <img class="img" src=${item.img}></img>
+            <p class="name">name: ${item.name}</p>
+            <p class="type">type: ${item.type}</p>
+            <p class="resistance">resistance: ${item.resistant}</p>
+            <p class="waknesses" >waknesses: ${item.weaknesses}</p>
+            <p class="attack">attack: ${item.stats["base-attack"]}</p>
+            <p class="defense">defense: ${item.stats["base-defense"]}</p>
+            <p class="stamina">stamina: ${item.stats["base-stamina"]}</p>
+            <p class="pc">PC: ${pc}</p> 
              `
         containerModal.appendChild(showForItem);
         const closeForData = (item) => {
