@@ -1,7 +1,7 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let currentPage = 1;
-let rows = 20;
+let rows = 40;
 const listElement = document.getElementById('alldata');
 const paginationElemnent = document.getElementById('pagination');
 
