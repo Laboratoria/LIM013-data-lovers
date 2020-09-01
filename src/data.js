@@ -7,10 +7,20 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-export const filterForName = (dataPokemon,namePokSelect) => {
+export let filterForNumber = (dataPokemon,numPokSelect) => {
   return dataPokemon.filter((dataPokemon)=>{ 
-      return dataPokemon.name==namePokSelect;
+      return dataPokemon.num===numPokSelect;
   })
+}
+
+export const extractImgPok = (dataPEv,numPok) =>{ 
+  if (numPok<=dataPEv.length){
+      return dataPEv.filter((dataPokemon)=>{ 
+          return dataPokemon.num===numPok;
+      })[0].img;
+  }
+  else
+  return "images/available.png";
 }
 
 

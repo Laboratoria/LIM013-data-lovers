@@ -493,7 +493,7 @@ input[type="checkbox"]:checked + label {
 }
 
 /***************informacion principal de pokemones*******************/
-.numPok {
+.numPokH2 {
 /*numero de pokemon*/
     font-family: sans-serif;
     text-align: center;
