@@ -89,11 +89,9 @@ header nav a {
   flex-grow: 1;
 }
 
-header nav a:hover {
+header nav a:hover,
+.active {
   border-bottom: 2px solid #fff;
-  /*border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;*/
-
 }
 
 .icon {
@@ -141,13 +139,14 @@ main .list .item:hover {
   color: #fff;
   padding: 20px;
   width: 400px;
-  top: 70%;
-  left: 22%;
-  text-decoration: none;
+  /*  top: 70%;
+  left: 22%; 
   position: absolute;
+  display: table-header-group; */
+  text-decoration: none;
   font-size: 15px;
   text-align: center;
-  display: table-header-group;
+  display: inline-block;
 }
 
 aside {
@@ -234,7 +233,7 @@ footer i:hover {
 .search {
   width: 85%;
   display: flex;
-  margin: auto;
+  margin: 30px auto 0;
 }
 
 .search1 {
@@ -262,6 +261,7 @@ footer i:hover {
 
 #filter {
   background: white;
+  /* width: 50%; */
   width: 50%;
   border: 2px solid #986E1E;
   margin: 10px 0px;
@@ -454,16 +454,15 @@ input[type=button] {
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width:1300px) {
+/* @media screen and (max-width:1300px) {
   .main img {
     width: 70%;
   }
-
   .main a {
     top: 70%;
     left: 10%;
   }
-}
+} */
 
 @media screen and (max-width:768px) {
   .container {
@@ -514,12 +513,12 @@ input[type=button] {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 0;
-
+    overflow: hidden;
   }
 
   .logo_icon {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: no-wrap;
     flex-direction: row;
   }
 
@@ -528,42 +527,61 @@ input[type=button] {
     flex-wrap: wrap;
     flex-direction: column;
     height: 50vh;
-    /*virtual heigth, de toda la pantalla, es dinámico*/
+    /*virtual height, de toda la pantalla, es dinámico*/
     transition: all 1s ease;
     position: fixed;
-    margin-top: 153px;
     align-content: flex-end;
-
-
   }
 
   header nav a {
     width: 100%;
     display: flex;
     align-items: center;
-    border: 0.3px solid#986E1E;
+    border-top: 2px solid #986E1E;
+    font-size: 18px;
   }
 
   .icon {
     display: flex;
     justify-content: center;
-    width: 80px;
-    align-items: flex-end;
+    align-items: center;
     color: #fff;
-    background: black;
+    background: #000;
     padding: 20px;
     z-index: 100;
     cursor: pointer;
-
+    margin-left: 100px;
   }
 
-  .links_one {
+  .links {
+    position: fixed;
+    height: 320px;
+    width: 100%;
+    right: 0;
+    flex-direction: column;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    margin-top: 153px;
+    position: absolute;
+  }
+
+  .links a:hover,
+  .active {
+    color: #fff;
+    border-bottom: none;
+    text-align: center;
+  }
+
+  .one {
     /*https://bennettfeely.com/clippy/*/
     clip-path: circle(0% at 100% 0%);
     /*tamaño, horizontal x, y vertical*/
   }
 
-  .links_two {
+  .two {
     /*https://bennettfeely.com/clippy/*/
     clip-path: circle(150% at 100% 0%);
     /*tamaño, horizontal x, y vertical*/
@@ -591,8 +609,8 @@ input[type=button] {
   footer {
     justify-content: space-around;
   }
-  
-  .pagenumbers button{
+
+  .pagenumbers button {
     width: 30px;
     height: 30px;
     font-size: 16px;
