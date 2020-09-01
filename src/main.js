@@ -2,8 +2,8 @@ import { order } from './data.js'; //pure functions
 import { filter } from './data.js';
 import data from './data/pokemon/pokemon.js'; //All data
 let newData = data.pokemon;
-let valuetype = new Array();
-let valueregion = "";
+let valuetype = [];
+let valueregion = null;
 //Global variable
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8 
@@ -37,14 +37,13 @@ let listPokemon = (num, name, type) => {
 
 //get necessary data
 let seePokemon = (x) => {
+    document.getElementById("count").innerHTML = newData.length + " Pokemons found";
     for (let i = x; i < x + count; i++) {
         let num = newData[i].num;
         let name = newData[i].name;
         let type = newData[i].type;
         listPokemon(num, name, type);
-        console.log(newData);
     }
-    document.getElementById("count").innerHTML = x + count + " pokemones of " + newData.length;
 }
 
 //when the page loads, it shows the pokemon from 0 to "count"
@@ -64,7 +63,7 @@ const noMatches = () => {
     matches0.innerHTML = "No matches found";
     document.getElementById('content').appendChild(box);
     box.appendChild(matches0);
-
+    document.getElementById("count").innerHTML = "0 of 0 pokemons"
 }
 
 //load page
@@ -102,7 +101,6 @@ document.getElementById("select-region").addEventListener('click', () => {
 });
 
 const filterRegion = (valueregion) => {
-    valueregion = document.getElementById("select-region").value;
     let region = filter.region(newData, valueregion);
     if (region.length == 0) {
         noMatches();
@@ -152,20 +150,25 @@ const buttonClose = (id, value, name) => {
     labelSpan.innerHTML = "X";
     document.getElementById("labelToFilter").appendChild(labelP);
     labelP.appendChild(labelSpan);
-    labelSpan.addEventListener('click', close = () => {
+    labelSpan.addEventListener('click', () => {
         labelP.parentNode.removeChild(labelP);
         if (labelP.id == "region3") {
             valueregion = null;
-            filterRegion(valueregion);
+            newData = data.pokemon;
             functionFilter(valuetype);
         } else if (valuetype.length == 1) {
             valuetype.splice(0, 1);
-            functionFilter(valuetype);
+            newData = data.pokemon;
             filterRegion(valueregion);
-        } else {
+        } else if (valuetype.length > 1) {
             valuetype.splice(id, 1);
+            newData = data.pokemon;
             functionFilter(valuetype);
-            filterRegion(valueregion);
+            alert(valuetype);
+            //filterRegion(valueregion);
+            //alert(valueregion);
         }
+        return newData;
     });
+
 };
