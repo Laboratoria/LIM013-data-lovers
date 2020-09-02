@@ -202,8 +202,18 @@ select {
     font-size: 20px;
 	font-family: 'Bangers', cursive;    
     letter-spacing: 0.08em;
-    text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	text-align: center;
    
+}
+.nameDiv{
+	background-color: rgb(6, 28, 37);
+	display: inline-block;
+	width: 100%;
+	height: fit-content;
+	padding: 5px 0px;
+	position: absolute;
+	text-align: center;
 }
 
 #rolPage{

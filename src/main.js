@@ -1,18 +1,17 @@
 import { filterByRol ,search,order} from './data.js';
 import data from './data/lol/lol.js';
+/* -------Menu de Navegacion ---------- */
 const toggle = document.querySelector(".btnMenu");
-console.log(toggle)
-const menu = document.querySelector(".menuLateral ");
-console.log(menu)
-
 toggle.addEventListener("click",()=>{
-    var x = document.querySelector(".menuLateral");
-    if (x.className === "menuLateral") {
-      x.className += " responsive";
+    var menuLat = document.querySelector(".menuLateral");
+    if (menuLat.className === "menuLateral") {
+      menuLat.className += " responsive";
     } else {
-      x.className = "menuLateral";
+      menuLat.className = "menuLateral";
     }
   })
+
+  /* -------Estructura de la tarjeta  ---------- */
 const allChampion=data.data;
 const allArray=Object.values(allChampion);
 const cardStructure=(listData)=>{
@@ -23,13 +22,29 @@ const cardStructure=(listData)=>{
         const div=document.createElement('div');
         div.className="cardDiv"
         div.style.backgroundImage = `url("${champ.splash}")`;
+        const nameDiv=document.createElement('div')
+        nameDiv.className="nameDiv"
         const p=document.createElement('p');
         p.className="pFront"
-
         p.innerHTML=`${champ.name}`;
-        currentDiv.appendChild(div)
-        div.appendChild(p);
+        currentDiv.appendChild(div);
+        div.appendChild(nameDiv);
+        nameDiv.appendChild(p);
+        /* Back Card*/
+        const backCard = document.createElement('div');
+        div.appendChild(backCard);
+        backCard.className = 'back-card';
+        const backCardName=document.createElement('h2');
+        backCardName.className="backCardName"
+        backCardName.innerHTML=`' ${champ.name} '`;
+        const backCardTitle = document.createElement('h3');
+        backCardTitle.innerHTML = `' ${champ.title} '`;
+        backCard.appendChild(backCardName),
+        backCard.appendChild(backCardTitle);
 
+        const backCardInfo=document.createElement("div");
+        backCard.appendChild(backCardInfo);
+        
     })
 }
 /* -------Efecto hover ---------- */
