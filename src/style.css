@@ -156,7 +156,6 @@ input[type='text']:focus {
 .pokemon .name {
 	margin: 15px 0 7px;
 	letter-spacing: 1px;
-	text-transform: capitalize;
 }
 /* ------------------------------ESTILOS DEL FOOTER */
 .copy {
