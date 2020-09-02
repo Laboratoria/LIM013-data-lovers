@@ -47,7 +47,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
 	let labelname = document.createElement('h4');
 	labelname.classList.add('name');
 	labelinfo.appendChild(labelname);
-	labelname.innerHTML=name.toUpperCase();
+	labelname.innerHTML=name;
 }
 /* pasar a mayuscula los nombres */
 
