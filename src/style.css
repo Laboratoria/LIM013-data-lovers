@@ -8,16 +8,15 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
+/*TODO primera pantalla */
 /*Header*/
 .header {
   padding: 60px;
-  display: flex;
 }
 .title-lol {
   display: flex;
   margin: auto;
-  width: 400px;
+  max-width: 30%;
   height: auto;
 }
 .menus {
@@ -458,93 +457,38 @@ footer {
 }
 
 /* Responsive*/
-@media (max-width: 700px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logoHome {
+    width: 45%;
+    
+  }
   .title-lol {
-    width: 55%;
+    max-width: 60%;
+    height: auto;
   }
 }
-@media only screen and (max-width: 300px) {
+
+@media (max-width: 767px) {
+
+  .logoHome {
+    
+    max-width: 40%;
+    
+  }
   .prev,
   .next,
   .text {
     font-size: 11px;
   }
-}
-
-/*segunda pantalla------------------------------------------------------------*/
-
-.top-box{
-  margin:auto;
-  text-align:center;
-  text-shadow: 0.325rem 0.0625rem 0.375rem #07e992d0;
-}
-.top5{
-  text-align: center;
-  margin-left: 100px;
-  color: #dfc981;
-  font-size: 2.1875rem;
-  padding: 0 0.3125rem 0 0.3125rem;
-  font-family: 'Marcellus SC', serif;
-}
-.divisor2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top:-105px;
+  .title-lol {
+    max-width: 80%;
+    height: auto;
   }
-#emblema{
-  width: 100px;
-  height: 100px;
-  margin-top:-20px;
-}
-.champion{
-  color: #dfc981;
-  padding-left: 5px;
-  font-size: 3.125rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
-  font-family: 'Marcellus SC', serif;
-}
-.texto-top5 p{
-  color: #dfc981;
-  font-size: 1.3rem;
-  padding: 0.1rem 0rem 1rem 0rem;
-  font-family: 'Marcellus SC', serif;
-  text-align: center;
-  margin:auto;
-  max-width: 900px;
-}
-
-.choose-box{
-  margin:auto;
-  text-align:center;
-  text-shadow: 0.325rem 0.0625rem 0.375rem #07e992d0;
-}
-.Textchamp{
-  text-align: center;
-  margin-left: 100px;
-  color: #dfc981;
-  font-size: 2.1875rem;
-  padding: 0 0.3125rem 0 0.3125rem;
-  font-family: 'Marcellus SC', serif;
-}
-.champion{
-  color: #dfc981;
-  padding-left: 5px;
-  font-size: 3.125rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
-  font-family: 'Marcellus SC', serif;
-}
-.texto-champ p{
-  color: #dfc981;
-  font-size: 1.3rem;
-  padding: 0.1rem 0rem 1rem 0rem;
-  font-family: 'Marcellus SC', serif;
-  text-align: center;
-  margin:auto;
-  max-width: 900px;
 }
 
 
+
+/* TODO segunda pantalla------------------------------------------------------------*/
 /* estilo de banner dos*/
 
 .top-box{
@@ -588,14 +532,112 @@ footer {
   max-width: 900px;
 }
 
-/*TODO tercera pantalla*/
+.line {
+  height: 38px;
+  align-self: center;
+  border-left: 0.0625rem solid #a87e3e;
+}
 
-/* tercera pantalla*/
+#topchampions{
+  display: flex;
+  flex-wrap: Wrap;
+  flex-direction: row;
+  max-width: 95%;
+  list-style: none;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 25px;
+}
+.card-link{
+  margin-top: 1%;
+  display: relative;
+  list-style: none;
+  width: 42%;
+  padding: 1% 1% 1% 1%;
+  background: rgba(0, 0, 0, 0.67);
+  margin: 2.5% 0 2.5% 0;
+  border: 2px solid #EADA9D;
+  box-sizing: border-box;
+  border-radius: 0px 20px;
+}
+.card-link:hover figure{
+  -webkit-transform: perspective(200px) rotateY(180deg);
+  -ms-transform: perspective(200px) rotateY(180deg);
+  -o-transform: perspective(200px) rotateY(180deg);
+  transform: perspective(200px) rotateY(180deg);
+}
+.frontalCard{
+  text-align: center;
+  color: #EADA9D;
+  font-size: 30px;
+  font-family: 'Marcellus SC', serif;
+  font-weight: bold;
+}
+.front-Hp{
+  font-size: 20px;
+  font-family: 'Marcellus SC', serif;
+  color: #c9b463;
+  font-weight: normal;
+}
+.card-link figure{
+  margin: 0;
+  position: relative;
+  transition: all ease .3s;
+  transform-style: preserve-3d;
+}
+figure .frontalTop, figure .traseraTop{
+  width: 100%;
+  border-radius: 5px;
+  transition: all ease .5s;
+  border: 1px solid #ffde44;
+}
+figure .frontalCard{/* se cambio frontalTop por frontalCard */
+  display: block;
+  backface-visibility: hidden;    
+}
+figure .traseraTop{
+  position: absolute;
+  display:block;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  transform: perspective(150px) rotateY(180deg);
+  backface-visibility: hidden;
+  overflow: auto;
+  background: rgb(252, 252, 248, 0.7);
+  font-family: 'Marcellus SC', serif;
+  font-size: 16pt;
+  text-align: center; 
+  border: 2px solid #15d6cd;
+  margin: auto;
+}
+figure .post-names {
+  font-family: 'Marcellus SC', serif;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 5%;
+  color:rgb(7, 7, 7);
+  font-weight: bold;
+}
+figure hr{
+  height: 3px;
+  background:#d6c44b;
+  width: 50%;
+}
+figure .traseraTop .post-title{
+  margin-top: 3%;
+  color: #060606;
+  font-weight: bold;
+}
+
+
+/*TODO 3era pantalla */
 .choose-box{
   margin:auto;
   text-align:center;
   text-shadow: 0.325rem 0.0625rem 0.375rem #07e992d0;
 }
+
 .Textchamp{
   text-align: center;
   margin-left: 100px;
@@ -603,14 +645,9 @@ footer {
   font-size: 2.1875rem;
   padding: 0 0.3125rem 0 0.3125rem;
   font-family: 'Marcellus SC', serif;
+
 }
-.champion{
-  color: #dfc981;
-  padding-left: 5px;
-  font-size: 3.125rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
-  font-family: 'Marcellus SC', serif;
-}
+
 .texto-champ p{
   color: #dfc981;
   font-size: 1.3rem;
@@ -619,12 +656,10 @@ footer {
   text-align: center;
   margin:auto;
   max-width: 900px;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
+
 }
-.line {
-  height: 38px;
-  align-self: center;
-  border-left: 0.0625rem solid #a87e3e;
-}
+
 .corner {
   width: 96%;
   padding: 0.3125rem;
@@ -644,24 +679,16 @@ footer {
   font-family: "Marcellus SC", serif;
   border-radius: 1.6rem 0rem 1.6rem 0rem;
   background-color: rgb(218, 213, 213);
+  outline: none;
 }
-/*TODO buscar a que agregar order */
-.order span {
-  font-size: 0.9375rem;
-}
-.order span img {
-  width: 13px;
-  height: 13px;
-  border: none;
-}
-.order span:hover,
-#roleLetter:hover,
+
 .all{
   background-color: rgb(218, 213, 213);
   font-size: 1.5625rem;
   border: none;
   color: #ab8347;
   font-family: "Marcellus SC", serif;
+  outline: none;
 }
 .all:hover {
   color: wheat;
@@ -683,16 +710,6 @@ footer {
 }
 #searchInput {
   text-transform: capitalize;
-}
-/*TODO responsive*/
-.nameSearch {
-  display: grid;
-  color: #a87e3e;
-  grid-gap: 1.25rem;
-  padding-top: 1rem;
-  grid-template-columns: 5% 95%;
-}
-#searchInput {
   border: 0;
   width: 130px;
   color: #a87e3e;
@@ -700,6 +717,7 @@ footer {
   background-color: none;
   font-family: "Marcellus SC", serif;
   background-color: rgb(218, 213, 213);
+  outline: none;
 }
 
 #order {
@@ -720,6 +738,7 @@ footer {
   color: #a87e3e;
   font-size: 1.5625rem;
   font-family: "Marcellus SC", serif;
+  outline: none;
 }
 .orderClass:hover{
   color: wheat;
@@ -732,6 +751,7 @@ footer {
   color: #a87e3e;
   font-size: 1.5625rem;
   font-family: "Marcellus SC", serif;
+  outline: none;
 }
 #orderDifficulty:hover {
   border: none;
@@ -749,9 +769,35 @@ footer {
   color: wheat;
   text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347; 
 }
+.frontalCardChampion{
+  text-align: center;
+  color: #EADA9D;
+  font-size: 30px;
+  font-family: 'Marcellus SC', serif;
+  font-weight: normal;
+  justify-self: start;
+
+  
+
+  
+}
+
+
+.frontalTextChamp {
+  font-size:20px;
+  line-height: 30%;
+  text-decoration: none;
+  color: #EADA9D;
+  font-family: "Marcellus SC", serif;
+  font-style: Regular;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+
+}
 
 
 
+
+/*TODO reponsive en contrusccion */
 @media (min-width: 768px) and (max-width: 1024px) {
   input {
   font-size: 0.6875rem;
@@ -794,7 +840,7 @@ footer {
 
 @media only screen and (max-width:785px){
  /* RESPONSIVE FOOTER */
- .left{
+ .left p{
   font-size: 12px;
 }
 .imgredes{
@@ -900,134 +946,17 @@ ul {
 }
 }
 
-/*estilos de top 5*/
-#topchampions{
-  display: flex;
-  flex-wrap: Wrap;
-  flex-direction: row;
-  max-width: 95%;
-  list-style: none;
-  justify-content: space-around;
-  margin: auto;
-  margin-top: 25px;
-}
-.card-link{
-  margin-top: 1%;
-  display: relative;
-  list-style: none;
-  width: 42%;
-  padding: 1% 1% 1% 1%;
-  background: rgba(0, 0, 0, 0.67);
-  margin: 2.5% 0 2.5% 0;
-  border: 2px solid #EADA9D;
-  box-sizing: border-box;
-  border-radius: 0px 20px;
-}
-.card-link:hover figure{
-  -webkit-transform: perspective(200px) rotateY(180deg);
-  -ms-transform: perspective(200px) rotateY(180deg);
-  -o-transform: perspective(200px) rotateY(180deg);
-  transform: perspective(200px) rotateY(180deg);
-}
-.frontalCard{
-  text-align: center;
-  color: #EADA9D;
-  font-size: 30px;
-  font-family: 'Marcellus SC', serif;
-  font-weight: bold;
-}
-.front-Hp{
-  font-size: 20px;
-  font-family: 'Marcellus SC', serif;
-  color: #c9b463;
-  font-weight: normal;
-}
-.card-link figure{
-  margin: 0;
-  position: relative;
-  transition: all ease .3s;
-  transform-style: preserve-3d;
-}
-figure .frontalTop, figure .traseraTop{
-  width: 100%;
-  border-radius: 5px;
-  transition: all ease .5s;
-  border: 1px solid #ffde44;
-}
-figure .frontalCard{/* se cambio frontalTop por frontalCard */
-  display: block;
-  backface-visibility: hidden;    
-}
-figure .traseraTop{
-  position: absolute;
-  display:block;
-  width: 100%;
-  top: 0;
-  height: 100%;
-  transform: perspective(150px) rotateY(180deg);
-  backface-visibility: hidden;
-  overflow: auto;
-  background: rgb(252, 252, 248, 0.7);
-  font-family: 'Marcellus SC', serif;
-  font-size: 16pt;
-  text-align: center; 
-  border: 2px solid #15d6cd;
-  margin: auto;
-}
-figure .post-names {
-  font-family: 'Marcellus SC', serif;
-  font-size: 18pt;
-  text-align: center;
-  margin-top: 5%;
-  color:rgb(7, 7, 7);
-  font-weight: bold;
-}
-figure hr{
-  height: 3px;
-  background:#d6c44b;
-  width: 50%;
-}
-figure .traseraTop .post-title{
-  margin-top: 3%;
-  color: #060606;
-  font-weight: bold;
-}
 
-
-/*TODO card section seccion de gab*/ 
-.article-details{
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.post-name, .post-title{
-  margin: 2px
-}
-
-.post-title{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.post-title img{
-  width:15px;
-  opacity: 1;
-  padding: 0%;
-  margin: auto 10px;
-
-}
-
-/*Ventana Modal*/
+/*TODO Ventana Modal*/
 .modal-window {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.25);
   top: 0;
   right: 0;
   bottom: 0;
+  padding: 2%;
   left: 0;
-  z-index: 999;
+  z-index: 2;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.3s;
@@ -1041,31 +970,42 @@ figure .traseraTop .post-title{
 }
 
 .modal-content{
-  font-family: 'ZCOOL KuaiLe';
-  width: 45%;
+  display: grid;
+  grid-template-columns: 50% 45% 5%;
+  grid-template-rows: auto auto auto auto;
+  font-family: "Marcellus SC", serif;
+  width: 50%;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
+  top: 10%;
+  left: 20%;
+  transform: translate(1%, 1%);
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.789);
+  border-radius: 24px;
+  -webkit-box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
+  -moz-box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
+  box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
   
 }
 
 .modal-close {
-  color: white;
-  line-height: 25px;
+  grid-column: 3 / 3;
+  grid-row: 1 / 2;
+  color:#c9b463; ;
+  line-height: 36px;
   position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 30px;
+  right: 2%;
+  top: 2%;
+  
   text-decoration: none;
 }
 
 .modal-close:hover {
   color:#896331;
   font-weight: bold;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
+  0 0 0.2em #07cbe9;
 }
 
 @media (max-width: 900px)
@@ -1080,41 +1020,18 @@ figure .traseraTop .post-title{
   background-position: center;
   width: 100%;
   height: auto;
+  text-decoration: none;
+  -webkit-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  -moz-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
 }
 
-.modal-info{
-  width: 100%;
-  height: 80%;
-  overflow: auto;
-  transform: translate(-30%, -50%); 
+.modal-img:hover{
+  -webkit-box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
+  -moz-box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
+  box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
 }
 
-.modal-info h1{
-  font-size: 25px;
-}
-
-/*simulacion de tercera vista parte detras*/
- figure .traseraCampeon{
-  width: 100%;
-  border-radius: 5px;
-  transition: all ease .5s;
-  border: 1px solid #ffde44;
-  position: absolute;
-  display:block;
-  width: 100%;
-  top: 0;
-  height: 100%;
-  transform: perspective(150px) rotateY(180deg);
-  backface-visibility: hidden;
-  overflow: auto;
-  background: rgba(20, 20, 20, 0.445);
-  font-family: 'Marcellus SC', serif;
-  font-size: 16pt;
-  text-align: center; 
-  border: none;
-  margin: auto;
-  color: #dfc981;
-}
 
 .lupa{
   width: 15%;
@@ -1138,10 +1055,25 @@ figure .traseraTop .post-title{
   padding: 1% 1% 1% 1%;
   background: rgba(0, 0, 0, 0.67);
   margin: 2.5% 0 2.5% 0;
-  border: 2px solid #EADA9D;
+  border: 1.5px solid #EADA9D;
   box-sizing: border-box;
   border-radius: 0px 20px;
+  text-decoration: none;
+  color: #eada9d;
+
+
 }
+
+.blog-card a{
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Marcellus SC", serif;
+  font-style: Regular;
+  color: #eada9d;
+  letter-spacing: 0.25rem;
+}
+
 
   #container-campeones{
     display: flex;
@@ -1152,5 +1084,211 @@ figure .traseraTop .post-title{
     justify-content: space-around;
     margin: auto;
     margin-top: 25px;
+    text-decoration: none ;
   }
+
+  .frontalTextChampBack h1{
+    font-size:94%;
+    line-height: 1%;
+    text-decoration: none;
+    color: #EADA9D;
+    font-family: "Marcellus SC", serif;
+    font-style: Regular;
+
+    
+
+  }
+ 
+
+  .frontalTextChampBack p{
+    font-size:50%;
+    line-height: 1%;
+    text-decoration: none;
+    color: #EADA9D;
+    font-family: "Marcellus SC", serif;
+    font-style: normal; 
+  
+  }
+
+
+  .frontalTextTable{
+    font-size:70%;
+    line-height: 50%;
+    text-decoration: none;
+    color: #EADA9D;
+    font-family: "Marcellus SC", serif;
+    margin-bottom: 4%;
+    grid-column: 1 / span 2;
+    grid-row: 2 / 2;
+   
+
+  }
+
+  .rolText{
+    font-size:70%;
+    line-height: 50%;
+    text-decoration: none;
+    color: #EADA9D;
+    font-family: "Marcellus SC", serif;
+    margin-top: 3%;
+    grid-column: 1 / span 2;
+    grid-row: 4 / 4;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+    
+
+
+  }
+
+  /*TODO esto es de ejemplo de gab modal frontal*/
+
+/* Contenido de Ventana Modal*/
+.modal-info{
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    width: 55%;
+    height: 90%;
+    color: black;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border: 3px inset #896331;
+    border-radius: 1%;
+    overflow: auto;
+}
+
+.modal-info::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: silver;
+}
+
+.modal-info::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+	background-color: gray;
+}
+
+.modal-info::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #896331;
+}
+
+.modal-info img{
+    width: 15%;
+    padding-top: 15px;
+    
+}
+
+.modal-info h1{
+    margin: 0 auto;
+    font-size: 40px;
+    color: #EADA9D;
+}
+
+.modal-info h2{
+    margin: 0 auto;
+    font-size: 25px;
+    color: #EADA9D;
+}
+
+.modal-info p{
+    font-family: aGaramondPro;
+    font-weight: bold;
+    color: #EADA9D;
+}
+
+
+.modal-img{
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-style: solid;
+    border: 2px solid #d6c44b;
+    border-width: 1px;
+    border-radius: 0px 20px;
+
+
+}
+
+.modal-img-back{
+  
+
+  width: auto;
+  height: 70%;
+  border-style: solid;
+  border:1px solid #d6c44b;
+  border-radius: 0px 20px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-top: 10%;
+  padding: 0%;
+  -webkit-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  -moz-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+}
+
+.modal-back{
+
+  width: 90%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 8%;
+  color: #EADA9D;
+  padding: 1%;
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+  font-family: 'Marcellus SC', serif;
+  font-style: normal;
+  font-weight: normal;
+
+
+}
+
+.strong{
+  font-weight: bold;
+  
+}
+
+.modal-back h1{
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+  font-size: 80%;
+}
+
+.modal-back h2{
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+  font-size: 70%;
+}
+
+.modal-back p{
+  font-size: 50%;
+}
+
+/* Tabla de Ventana Modal*/
+
+table, td, th {
+  border: 2px inset #eada9d;
+  font-family:"Marcellus SC", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70%;
+    
+
+}
+
+.table {
+  border-collapse: collapse;
+  width: auto;
+  grid-column: 1 / span 2;
+  grid-row: 3 / 3;
+
+}
+
+.th {
+  height: 10%;
+}
 

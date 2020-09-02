@@ -25,29 +25,29 @@ const listaCampeones = (
   hpregen,
   id
 ) => {
-  const campeones = document.createElement("div"),
-    figuraCard = document.createElement("div"),
-    frontalcard = document.createElement("div"),
-    splashCampeones = document.createElement("img");
+  const campeones = document.createElement("div"), /* card-link-champ*/
+    frontalcard = document.createElement("div"); /*"frontalCard*/
+    
 
   frontalcard.innerHTML += `    
     <a class="blog-card" id="${id}" href=" #openmodal${id}">
-      <img class="modal-img" src="${img}"/>
-      <a class="frontalText">${name}</a>
-      <p class="frontalText">${title}</p>
-      <p class="frontalText">Dificultad: ${difficulty}</p>
-    </a>
+      <img class="modal-img" src="${img}"/></a>
+      <p class="frontalTextChamp">${name}</p>
+      <p class="frontalTextChamp">${title}</p>
+      <p class="frontalTextChamp">Dificultad: ${difficulty}</p>
+    
    
     <section id="openmodal${id}" class="modal-window">
       <div class = "modal-content">
         <a href="#${id}" title="Close" class="modal-close">X</a>
-        <img class="modal-img" src="${img}"/>
-        <div class="modal-img">
-          <h1 class="frontalText">${name}</h1>
-          <h1 class="frontalText">${title}</h1>
-          <p class="frontalText">Blurb: ${lore}</p>
+        <img class="modal-img-back" src="${img}"/>
+        <div class="modal-back">
+          <h1 class="frontalTextChampBack">${name}</h1>
+          <h2 class="frontalTextChampBack">${title}</h2>
+          <p class="frontalTextChampBack"><strong class="strong">Blurb</strong>:${lore}</p>
         </div>
-        <h2>Tabla de estadística por rango de nivel:</h2>
+
+        <h2 class="frontalTextTable">Tabla de estadística por rango de nivel:</h2>
         <table class="table">
           <tr class="table">
             <th class="table"> Stats</th>
@@ -83,21 +83,17 @@ const listaCampeones = (
             <td class="table">${hpregen}</td>
           </tr>
         </table>
-        <h2 class="modal-info">Roles: "${rol}"</h2>    
-      </div> 
-       
-      
+        <h2 class="rolText">Roles: "${rol}"</h2>    
+      </div>       
     </section>`;
 
   campeones.setAttribute("class", "card-link-Champ");
-  figuraCard.setAttribute("class", "frontalCard");
-  frontalcard.setAttribute("class", "frontalCard");
-  splashCampeones.setAttribute("class", "frontalChampion");
-
+  frontalcard.setAttribute("class", "frontalCardChampion");
+  
+ 
   document.getElementById("container-campeones").appendChild(campeones);
 
-  campeones.appendChild(splashCampeones);
-  campeones.appendChild(figuraCard);
+  
   campeones.appendChild(frontalcard);
 };
 
@@ -193,28 +189,28 @@ const buscador = () => {
     let nombre = campeones.name.toLowerCase();
     if (nombre.indexOf(texto) != -1) {
       result.innerHTML += `
-      <div class="card-link">
-      <a class="blog-card" id="${campeones.id}" href=" #openmodal${campeones.id}">   
-        <div class="frontalCard">
+      <div class="card-link-Champ">
+      <a class="blog-card" id="${campeones.id}" href=" #openmodal${campeones.id}">  
+        <div class="frontalCardChampion">
           <img class="modal-img" src="${campeones.splash}" />
-          <a class="frontalText">${campeones.name}</a>
-          <p class="frontalText">${campeones.title}</p>
-          <p class="frontalText">Dificultad: ${campeones.info.difficulty}</p>
+          <p class="frontalTextChamp">${campeones.name}</p>
+          <p class="frontalTextChamp">${campeones.title}</p>
+          <p class="frontalTextChamp">Dificultad: ${campeones.info.difficulty}</p>
         </div>   
-      </a>
+        </a> 
     </div>
     
     <section id="openmodal${campeones.id}" class="modal-window">
       <div class="modal-content">
         <a href= "#${campeones.id}" title="Close" class="modal-close">X</a>
-        <img class="modal-img" src="${campeones.splash}" />
-        <div class="modal-img">
-          <h1 class="frontalText">${campeones.name}</h1>
-          <h1 class="frontalText">${campeones.title}</h1>
-          <p class="frontalText">Blurb: ${campeones.blurb}</p>
+        <img class="modal-img-back" src="${campeones.splash}"/>
+        <div class="modal-back">
+          <h1 class="frontalTextChampBack"${campeones.name}</h1>
+          <h2 class="frontalTextChampBack">${campeones.title}</h2>
+          <p class="frontalTextChampBack"><strong class="strong">Blurb: </strong> ${campeones.blurb}</p>
         </div>
     
-        <h2>Tabla de estadística por rango de nivel:</h2>
+        <h2 class="frontalTextTable">Tabla de estadística por rango de nivel:</h2>
         <table class="table">
           <tr class="table">
             <th class="table"> Stats</th>
@@ -248,18 +244,16 @@ const buscador = () => {
           <tr class="table">
             <th class="table"> Hpregen </th>
             <td class="table">${campeones.stats.hpregen}</td>
-          </tr>
-    
+          </tr>    
         </table>
-        <h2 class="modal-info">Rol: ${campeones.tags.toString()}</h2>
+        <h2 class="rolText">Rol: ${campeones.tags.toString()}</h2>
       </div>
-      
     </section>`
     }
   }
 
   if (result.innerHTML == "") {
-    result.innerHTML += `<div class="frontalCard">
+    result.innerHTML += `<div class="frontalCardChampion">
       <div class="front-Hp">No existe</div>
     </div>`;
   }
