@@ -218,7 +218,6 @@
 
 /* Inicio de estilos pantalla 1*/
 .conter{
-    height: 100vh;
     width: 100%;
     text-align: center;
 }
@@ -276,6 +275,8 @@
 /* Inicio de estilos pantalla 2*/
 /* Estilos de botones de filtros */
 .btn-controls{
+    display: flex;
+    justify-content: center;
     width: 100%;
     text-align: center;
     margin: 20px 0;
@@ -289,11 +290,10 @@
     padding: 12px 10px;
     background-color: white;
     cursor: pointer;
-    margin: -3px;
     font-size: 15px;
     font-weight: 600;
 }
-
+.btn-controls button:visited, 
 .btn-controls button:hover {
     background-color: #ddd;
 }
@@ -467,11 +467,15 @@
 }
 
 .alldata{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 10px 60px;
     justify-content: center;
 }
 
 .app-title{
+    width: 100%;
     text-align: center;
     font-weight: normal;
     font-size: 30px;
@@ -480,7 +484,7 @@
 }
 
 .person{
-    max-width: 400px;
+    flex-grow: 1;
     padding: 15px;
     margin:15px 20px;
     background-color: #F0F0F0;
@@ -509,6 +513,7 @@
     width: 230px;
     height: 210px;
     padding-top: 25px;
+    margin: auto;
 }
 
 .name{
