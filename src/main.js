@@ -256,7 +256,7 @@ const salida2 = () => {
 
 document.getElementById("exit").addEventListener("click", salida2);
 
-const pruebas = () => {
+const buscadorPrincipal = () => {
 	let texto = document.getElementById('inputSeatch');
 	texto = texto.value.replace(/ /g, "");
 
@@ -269,12 +269,12 @@ const pruebas = () => {
 	}
 }
 
-document.getElementById("local").addEventListener("click", pruebas);
+document.getElementById("local").addEventListener("click", buscadorPrincipal);
 
 const presionarTecla = () => {
 	let teclaEsc = event.keyCode;
 	if (teclaEsc == 13) {
-		return pruebas() && ocultaBusca();
+		return buscadorPrincipal() && ocultaBusca();
 	}
 }
 
@@ -358,7 +358,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 	});
 });
 const muestracapitulos = (capis, idImagen) => {
-
 	let salida = `<div class ="retrato">
 	<div class="imas">
 	<img src="imagen/`+ idImagen + `.png">
@@ -382,6 +381,7 @@ const muestracapitulos = (capis, idImagen) => {
 }
 
 const capitulo = () => {
+	document.getElementById('icon-menu').classList.add('ocultar');
 	document.getElementById('capitulos').classList.add('menu-active');
 	document.getElementById('conteni').classList.remove('menu-active');
 	document.getElementById('nosotras').classList.remove('menu-active');
@@ -398,6 +398,7 @@ const capitulo = () => {
 document.getElementById("capitulos").addEventListener("click", capitulo);
 
 const volverPrincipal = () => {
+	document.getElementById('icon-menu').classList.remove('ocultar');
 	document.getElementById('conteni').classList.add('menu-active');
 	document.getElementById('capitulos').classList.remove('menu-active');
 	document.getElementById('nosotras').classList.remove('menu-active');
@@ -411,6 +412,7 @@ document.getElementById("conteni").addEventListener("click", volverPrincipal);
 
 
 const creditos = () => {
+	document.getElementById('icon-menu').classList.add('ocultar');
 	document.getElementById('conteni').classList.remove('menu-active');
 	document.getElementById('capitulos').classList.remove('menu-active');
 	document.getElementById('nosotras').classList.add('menu-active');
