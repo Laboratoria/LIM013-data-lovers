@@ -102,7 +102,7 @@ const cambiarClase = () => {
 
 menuOpen.addEventListener("click", cambiarClase);
 
-//Función de los botonde de filtro e inputs de radio
+//Función de los boton de de filtro e inputs de radio para desactivar
 const resetRadioButtons = (groupName) => {
 	const arRadioBtn = document.getElementsByName(groupName);
 	for (let i = 0; i < arRadioBtn.length; i++) {
