@@ -43,9 +43,9 @@ const order = {
   hpperLevel: function (data, level, position) {
     return data.reduce(
       () => {
-        const name = data[position].name;
+      
         const hp = data[position].stats.hp + (data[position].stats.hpperlevel * level);
-        return name + ' ' + (Math.round(hp));
+        return hp.toFixed(3);
       })
   },
 
@@ -55,7 +55,7 @@ const order = {
       
         const mp = data[position].stats.mp + (data[position].stats.mpperlevel * level);
         //console.log('mp',mp)
-        return (Math.round(mp));
+        return mp.toFixed(3);
       })
   },
 
@@ -63,7 +63,7 @@ const order = {
     return data.reduce(
       () => {
         const attack = data[position].stats.attackdamage + (data[position].stats.attackdamageperlevel * level);
-        return (Math.round(attack));
+        return attack.toFixed(3);
       })
   }
 };
