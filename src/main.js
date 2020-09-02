@@ -92,14 +92,15 @@ btnIngresar.addEventListener("click", bienvenido);
 btnIntro.appendChild(btnIngresar);
 
 //Funciónes de barra de navegación-menu
+const menuOpen = document.getElementById('menu-toggle');
+
 const cambiarClase = () => {
-	let siteNav = document.getElementById('menu');
+	const siteNav = document.getElementById('menu');
 	siteNav.classList.toggle('menu-open');
-	let menuOpen = document.getElementById('menu-toggle');
 	menuOpen.classList.toggle('menu-open');
 }
-const tongle = document.getElementById("tongle");
-tongle.addEventListener("click", cambiarClase);
+
+menuOpen.addEventListener("click", cambiarClase);
 
 //Función de los botonde de filtro e inputs de radio
 const resetRadioButtons = (groupName) => {
@@ -387,6 +388,7 @@ const capitulo = () => {
 	document.getElementById('contenido').classList.add('ocultar');
 	document.getElementById('credito').classList.add('ocultar');
 	document.getElementById('capi').classList.remove('ocultar');
+	cambiarClase();
 	for (let i = 0; i < capis.length; i++) {
 		document.getElementById("data-capitulos").innerHTML += muestracapitulos(capis[i], i + 1);
 	}
@@ -402,6 +404,7 @@ const volverPrincipal = () => {
 	document.getElementById('contenido').classList.remove('ocultar');
 	document.getElementById('capi').classList.add('ocultar');
 	document.getElementById('credito').classList.add('ocultar');
+	cambiarClase();
 }
 
 document.getElementById("conteni").addEventListener("click", volverPrincipal);
@@ -414,6 +417,8 @@ const creditos = () => {
 	document.getElementById('contenido').classList.add('ocultar');
 	document.getElementById('capi').classList.add('ocultar');
 	document.getElementById('credito').classList.remove('ocultar');
+	cambiarClase();
+
 }
 document.getElementById('nosotras').addEventListener("click", creditos);
 
