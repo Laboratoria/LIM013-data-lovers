@@ -34,11 +34,11 @@ const listStats = (name, splash, hp, hpActual, mp, mpActual, attackdamage, attac
 
   nameLegend.innerHTML += name;
   statsLegend.innerHTML += `<p>Vida por Nivel: ${hp}</p>
-                            <p>Vida Actual: ${hpActual}</p>
+                            <h3>Vida Actual: ${hpActual}</h3>
                             <p>Mana por NIvel : ${mp}</p>
-                            <p>Mana Actual: ${mpActual}</p>
+                            <h3>Mana Actual: ${mpActual}</h3>
                             <p>Ataque por Nivel: ${attackdamage}</p>
-                            <p>Ataque Actual: ${attackActual}</p>`;
+                            <h3>Ataque Actual: ${attackActual}</h3>`;
   nameLegend.setAttribute('class', 'name');
   legends_stats1.setAttribute('class', 'legends_stats1');
   image.setAttribute('src', splash);

@@ -54,6 +54,7 @@ header {
   flex-wrap: wrap;
 
 }
+
 /*-----------------NAVEGADOR----------------------*/
 header .logo img {
   width: 200px;
@@ -83,7 +84,7 @@ header nav a {
   flex-grow: 1;
 }
 
-header nav a:hover{
+header nav a:hover {
   border-bottom: 2px solid #fff;
 }
 
@@ -98,33 +99,13 @@ header nav a:hover{
   flex-basis: 70%;
 
 }
+
 /*------------------PLAYLIST-----------------*/
-.play{
+.play {
   margin: 0;
 }
 
 /*-------------MAIN PAGINA DE INICIO-----------------*/
-main .list {
-  width: 80%;
-  max-width: 768px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin-top: 25px;
-}
-
-main.list .item {
-  padding: 15px;
-  border-bottom: 1px solid #ccc;
-}
-
-main list .item:last-of-type {
-  border-bottom: none;
-}
-
-main .list .item:hover {
-  background: rgba (0, 0, 0, 0.05);
-}
-
 .main img {
   padding: 10px 0px;
   width: 100%;
@@ -145,6 +126,7 @@ main .list .item:hover {
   text-align: center;
   display: inline-block;
 }
+
 /*---------------ASIDE PAGINA DE INICIO---------------*/
 aside {
   padding: 20px;
@@ -182,6 +164,7 @@ aside .guia a {
 aside .guia p:hover {
   background: #986E1E;
 }
+
 /*--------FOOTER PAGINA DE INICIO----------*/
 footer {
   background: #986E1E;
@@ -256,7 +239,8 @@ footer i:hover {
   color: #986E1E;
   font-weight: bold;
 }
-.responsive{
+
+.responsive {
   display: flex;
   width: 50%;
 }
@@ -276,7 +260,8 @@ footer i:hover {
   color: #986E1E;
   font-weight: bold;
 }
-.daño_de_ataque{
+
+.daño_de_ataque {
   background: white;
   width: 100%;
   border: 2px solid #986E1E;
@@ -322,19 +307,28 @@ input[type=button] {
 }
 
 .legends {
-  background: #0A3238;
+  background: rgb(10, 50, 56, 0.5);
   border: 2px solid #986E1E;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
   margin: 10px;
   width: 300px;
-  /*height: 250px;*/
   text-align: center;
   padding-bottom: 15px;
+}
+
+.legends:hover {
+  background: #0A3238;
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .legends .img-container {
@@ -361,18 +355,20 @@ input[type=button] {
   align-items: center;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .legends_container .inputs input {
-  width: 30%;
+  width: 20%;
   height: 50px;
   margin: 20px 0px 20px 0px;
-  background: black;
+  background: #fff;
   border-radius: 3px;
-  border: 3px solid black;
+  outline: none;
+  border: none;
   font-size: x-large;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .legends_list {
@@ -384,12 +380,11 @@ input[type=button] {
 }
 
 .legends_stats1 {
-
   text-align: center;
   margin: 10px;
-  border: 2px solid #986E1E;
-  background: #3F3F41;
+  background: rgb(0, 0, 0, 0.5);
   color: #fff;
+  padding-bottom: 10px;
 }
 
 .legends_list img {
@@ -408,28 +403,22 @@ input[type=button] {
   background: #0A3238;
   height: 70px;
   padding: 20px;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
-#select01 {
-  font-size: larger;
-  font-weight: bold;
-  width: 30%;
-  height: 35px;
-  border: 3px solid#986E1E;
-  border-radius: 3px;
-  outline: none;
-}
-
+#select01,
 #select02 {
   font-size: larger;
-  font-weight: bold;
-  width: 30%;
-  height: 35px;
-  border: 3px solid#986E1E;
+  width: 20%;
+  height: 45px;
+  outline: none;
+  border: none;
   border-radius: 3px;
   outline: none;
+  background: rgb(0, 115, 133, 0.7);
+  color: #fff;
+  box-shadow: 5px 5px rgb(0, 0, 0, 0.4);
 }
 
 /*---------------PAGINACIÓN -------- */
@@ -513,7 +502,9 @@ input[type=button] {
 
   aside .guia {
     flex-grow: 1;
+    width: 100%;
   }
+
 }
 
 @media screen and (max-width:375px) {
@@ -566,20 +557,25 @@ input[type=button] {
     cursor: pointer;
     margin-left: 100px;
   }
-  .search{
+
+  .search {
     display: flex;
     flex-direction: column;
   }
-  .search1{
-    width: 100%; 
+
+  .search1 {
+    width: 100%;
     border-radius: 5px;
   }
-  .responsive{
+
+  .responsive {
     width: 100%;
   }
-  #filter{
+
+  #filter {
     border-radius: 5px 0px 0px 5px;
   }
+
   input[type=button] {
     background: none;
     width: 100%;
@@ -650,5 +646,10 @@ input[type=button] {
     width: 30px;
     height: 30px;
     font-size: 16px;
+  }
+
+  .legends_stats1 p,
+  h3 {
+    font-size: 18px;
   }
 }
