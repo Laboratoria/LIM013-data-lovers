@@ -15,10 +15,10 @@ const obtenerPersonajes = (data) => {
 		</div>
 		<div class="info">
 		<h2 class="name">${data.name}</h2>
-		<p class="Text-datos">Genero: ${data.gender}</p>
-		<p class="Text-datos">Origen: ${data.origin.name}</p>
-		<p class="Text-datos">Especie: ${data.species}</p>
-		<p class="Text-datos">Estado: ${data.status}</p>
+		<p class="text-datos">Genero: ${data.gender}</p>
+		<p class="text-datos">Origen: ${data.origin.name}</p>
+		<p class="text-datos">Especie: ${data.species}</p>
+		<p class="text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
 }
@@ -363,17 +363,17 @@ const muestracapitulos = (capis, idImagen) => {
 	<div class="imas">
 	<img src="imagen/`+ idImagen + `.png">
 	</div>
-	<div class-"content-info">
-	<p class="Text-datos">Nombre: ${capis.name}</p>
-	<p class="Text-datos">Fecha: ${capis.air_date}</p>
-	<p class="Text-datos">Episodio: ${capis.episode}</p>
+	<div class="content-info">
+	<p class="text-cap">Nombre: ${capis.name}</p>
+	<p class="text-cap">Fecha: ${capis.air_date}</p>
+	<p class="text-cap">Episodio: ${capis.episode}</p>
 	<div>`;
 	for (let i = 0; i < capis.characters.length; i++) {
 		salida += `
 		<img class="photopar" src="${data[capis.characters[i]].image}">`
 	}
 
-	salida += `</div class="content-images"></div>`;
+	salida += `</div></div>`;
 	return salida;
 	//document.getElementById("data-capitulos").innerHTML =
 	//	`${capis.map(muestracapitulos).join(" ")}`
