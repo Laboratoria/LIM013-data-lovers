@@ -26,4 +26,5 @@ describe('filterForName', () => {
   it('is a function', () => {
     expect(typeof filterForName).toBe('function');
   });
+  
 });
