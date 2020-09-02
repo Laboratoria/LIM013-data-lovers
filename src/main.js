@@ -277,7 +277,7 @@ else if (quantityPropEv===2 && Object.keys(itemEvolution)[1]==="prev-evolution")
         </section>
         <section class="currentPok">
             <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-            <p class="evoSectionPokNum"><#${arrayPokSelect[0].num}</p>
+            <p class="evoSectionPokNum">#${arrayPokSelect[0].num}</p>
             <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
         </section>`
     }
