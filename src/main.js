@@ -331,7 +331,9 @@ function onClickAlphaAscButton() {
         return `<section class="picture">
         <img class="img" src="${dataPokemon.img}">
         <section class="essentialInformation">
-        <h2 class="numPok">#${dataPokemon.num}</h2>
+        <h2 class="numPokH2">
+        <span>#</span><span class="numPok">${dataPokemon.num}</span>
+        </h2>
         <h3 class="namePok">${dataPokemon.name}</h3>
         <section class="typePok"> 
         <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>

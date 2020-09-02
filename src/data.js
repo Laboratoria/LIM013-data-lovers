@@ -7,7 +7,7 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-export let filterForNumber = (dataPokemon,numPokSelect) => {
+export const filterForNumber = (dataPokemon,numPokSelect) => {
   return dataPokemon.filter((dataPokemon)=>{ 
       return dataPokemon.num===numPokSelect;
   })
