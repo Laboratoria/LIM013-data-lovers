@@ -2,110 +2,128 @@
     padding: 0;
     margin: 0;
 }
-/*.contenedor1{
-	width:100%;
-	margin:auto;
-	/* Flexbox 
-	display:flex;
-	flex-flow:row wrap;
-}*/
 
-header {
-	background: #000000;
-	width:100%;
-	padding:5px 5px 0px 5px;
-
-	/* Flexbox */
-    display: flex;
-	justify-content:space-between;
-	align-items:center;
-	flex-direction:row;
-	flex-wrap:wrap;
+.menuSuperior {
+	background-color: black;
+	padding:  10px ;
+     /*Flexbox*/
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
-header .logo img{
-	height: 50px;
-	width:50px;
-	padding:1px 30px 0px 30px;
-	display: inline-block;
-}
-/*.logo{
-	text-align: center;
-	height: 0px;
-	width:10px;
-	padding:10px;
-}*/
-header nav .logo a i{
-	display: none;
-	color: #dbb74c ;
-	padding:10px 30px 0px 30px;
-	flex-wrap:wrap;
-	align-items: center;
-}
-header nav {
-	width:100%;
-	/* Flexbox */
-	display:inline-block;
-	flex-wrap:wrap;
-    align-items:center;
-}
-header nav .barsNavigation a {	
+.barsNavigation a {
+	display: relative;
 	color: #dbb74c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:'Fira Sans', sans-serif;
+    width: 100%;
 	text-align: center;
-	text-decoration: none;
-	font-family:'Fira Sans', sans-serif; 
-	padding:1px 90px 0px 90px;
-	display: inline-block;
-	text-transform: uppercase;
-	/* Flexbox */
-	flex-grow:1;
+	padding: 18px 10px;
 }
-header nav .barsNavigation a:hover {
-	border-bottom: 3px solid #dbb74c ;
-	padding-bottom:30px;
-    
+.barsNavigation a:hover {
+	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+}
+.menuSuperior .btnMenu i{
+	display:none;
+	color: #dbb74c;
+}
+.menuLateral{	
+	display:none;
+}
+
+.barsNavigation2 a {
+	color: #dbb74c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:'Fira Sans', sans-serif;
+	padding:20px 30px;
+
+}
+
+.barsNavigation2 a:hover{
+	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+}
+
+.menuLateral .btnClose i{
+	color: #dbb74c;
 }
 #home{
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
 	background-size: 100% 100%;
+
+}
+
+#championPage{
+	background-image: url(images/lol_fondo5.jpg);
+	background-attachment: fixed;
+
 }
 main img{
 	width: 50%;
 	height: 50%;
-	padding: 10% 0% 10% 25%;
-	display: block; 
-}
-/* ----PAGINA CAMPEONES------ */
-#chamPage{
+	padding: 5% 0% 2% 25%;
 	display: block;
+
+}
+main #home a i{
+	font-size: 450%;
+	text-align: center;
+	color:  white;
+	display: block;
+	text-decoration: none;
+}
+main #home a i:hover{
+filter: drop-shadow(0px 0px 3px rgb(255, 253, 253));
+font-size: 460%;
+}
+main #home a{
+	text-decoration: none;
+}
+
+/* ----PAGINA CAMPEONES------ */
+
+main p{
+	color: white;
 }
 .boton{
-	background-color: #25b9cc;
-	padding:10px 25px;
-	margin: 0% 0% 10% 40%;
-	font-size:18px;
+	background-color:transparent;
+	width: 30%;
+	padding:10px;
+	margin: 4% 35% 10%;
+	font-size:28px;
+	font-family: 'Marcellus SC', serif;
+	color: #efb810;
+	border: solid 3px rgba(41, 208, 230, 0.842);
+	cursor: pointer;
 }
 .boton:hover {
-	background: #07dffc;
-	padding:10px 25px;
-	margin: 0% 0% 10% 40%;
-	font-size:20px;
-	letter-spacing: 2px;
+	background: transparent;
+	font-size:30px;
+	letter-spacing: 2PX;
+	box-shadow: 0 0 15px #25b9cc;
+	text-shadow: 0.0625rem 0.0625rem 0.5rem #0e0d0d,0 0 1em #f3f3f3,0 0 0.2em #f7a80b;
 }
 .htext {
 text-align: center;
-font-family: Calibri;
+font-family: 'Marcellus SC', serif;
+font-size: 25px;
 color: #07dffc;
 }
-.tittle{
+h1{
 text-align: center;
-font-family:'Bangers', cursive;
+font-family: 'Marcellus SC', serif;
+/*font-family:'Bangers', cursive;*/
 font-size: 90px;
 color: #07dffc;
+text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
 }
 label{
-font-family: Calibri;
+font-family: 'Marcellus SC', serif;
 color: #07dffc;	
-font-size: 20px;
+font-size: 16px;
 }
 .champion{
 	background-color: none;
@@ -115,16 +133,23 @@ font-size: 20px;
 }
 
 .categoria a{
-	color: #000000;
-	background-color:#ffffff;
+	color: #997406;
+	background-color:transparent;
 	font-family: 'Bangers', cursive;
 	text-align: center;
-	font-size: 20px;
+	font-size: 22px;
 	width: 100px;
 	height: 25px;
+	text-decoration: none;
+	letter-spacing: 1PX;
+	margin:5px;
+	padding-left: 30px;
+}
+.categoria a:hover{
+	text-shadow: 0 0 1px #f5db8d,0 0 3px #f5db8d,0 0 5px #f5db8d;
 }
 .categoria a.active{
-    background-color: #dbb74c;
+    text-shadow: 0 0 2px #f5db8d,0 0 4px #f5db8d,0 0 6px #f5db8d;
 }
 .form-name {
 	width: 50%;
@@ -152,17 +177,42 @@ select {
 #imgChampions{
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-    padding-inline-start: 0;
+	grid-gap: 1rem;
+
 }
+.cardDiv{
+	width: 100%; ;
+	display: absolute;
+	height: 250px;
+	display: flex;
+	position: relative;
+	grid-auto-rows: 390px;
+	background-size:cover ;
+	justify-content: center;
+	box-sizing: border-box;
+	margin: 20px 30px 0px 30px;
+	justify-self:center;
+
+}
+.pFront{
+	display: inline-block;
+	color: white;
+	background-color: rgb(6, 28, 37);;
+    white-space: nowrap;
+    font-size: 20px;
+	font-family: 'Bangers', cursive;    
+    letter-spacing: 0.08em;
+    text-overflow: ellipsis;
+   
+}
+
 #rolPage{
 	display:none;
 }
 footer {
-	background: #000000;;
-	width: 100%;
-    padding:20px;
-    position: absolute;
+	background: #000000;
+    padding:10px 30px;
+    /*position: absolute;*/
  
 	/* Flexbox */
 	display: flex;
@@ -170,30 +220,38 @@ footer {
     justify-content:space-between;
     
 }
-footer a{
+footer .socialMedia a i{
 	color: #dbb74c;
-	width: 30px;
-	height : 30px;
+	font-size: 20px;
+	margin: 5px;
+}
+footer .socialMedia a i:hover{
+	color: #07dffc;
 }
 footer p{
 	color:#dbb74c;
+	margin: 5px;
+	
 }
 /*Media queries*/
 @media screen and (max-width:700px){
- header .menu{
-	 flex-direction:column;
- }
- header .menu .logo{
-        margin:0px;
-        padding:0px;
-        padding-left:5%;
-        display:block;
-        float:none;
-        text-align:left;
- }
- header nav .logo a i{
-	 display: inline-block;
-	 justify-content: space-between;
-
- }
+	.barsNavigation a{
+		display:none;
+	}
+	.menuSuperior .btnMenu i{
+		display:block;
+	}
+	.menuSuperior.responsive .btnMenu i{
+		position: block;
+		right: 0;
+		top: 0;
+	}
+	.menuLateral.responsive{	
+		background-color:#333333;
+		width: 70%;
+		float:right;
+		 /*Flexbox*/
+		 display: flex;
+	}
 }
+

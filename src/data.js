@@ -12,11 +12,11 @@ export const search=(championList,nameChamp)=>{
     const searchName=championList.filter(el=>(el.name.toLowerCase().indexOf(nameChamp.toLowerCase())!==-1?el:false))
     console.log(searchName)
     return searchName; 
-}
-export const orderAsce=(championList,term)=>{
-    const sort=championList.sort(()=>term==="az"?1:-1)
+};
+export const order=(championList,term)=>{
+    const sort=championList.sort((a,b)=>term==="AZ"?1:-1)
     console.log(sort);
-        return orderAsce
+        return sort
     }
 export let averageInfo = (championList) =>championList.reduce((a, b) => a + b) / championList.length;
 console.log(averageInfo([1,2,3,4,5]));
