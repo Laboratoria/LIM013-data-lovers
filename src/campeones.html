@@ -27,7 +27,6 @@
         <a href="index.html">INICIO</a>
         <a href="campeones.html" class="active">CAMPEONES</a>
         <a href="estadisticas.html">ESTADÍSTICAS</a>
-        <a href="soundtrack.html">SOUNDTRACK</a>
       </nav>
     </header>
 
@@ -36,19 +35,28 @@
       <div class="search1">
         <input type="text" id="inputSearch" placeholder="Buscar a ...">
       </div>
-      <div id="filter">
-        <input type="button" value="TODOS" id="All">
-        <input type="button" value="ASESINO" id="Assassin">
-        <input type="button" value="LUCHADOR" id="Fighter">
-        <input type="button" value="MAGO" id="Mage">
-        <input type="button" value="TIRADOR" id="Marksman">
-        <input type="button" value="APOYO" id="Support">
-        <input type="button" value="TANQUE" id="Tank">
+      <div class="responsive">
+        <select id="filter">
+          <option value="All">TODOS</option>
+          <option value="Assassin">ASESINO</option>
+          <option value="Fighter">LUCHADOR</option>
+          <option value="Mage">MAGO</option>
+          <option value="Marksman">TIRADOR</option>
+          <option value="Support">SOPORTE</option>
+          <option value="Tank">TANQUE</option>
+        </select>
+        
+          <select class="daño_de_ataque">
+          <option selected value="">Daño de Ataque</option>
+          <option selected value="">Alto</option>
+          <option selected value="">Medio</option>
+          <option selected value="">Bajo</option>
+        </select>
+        <select name="order" id="order">
+          <option value="asc">Ordenar A-Z</option>
+          <option value="desc">Ordenar Z-A</option>
+        </select>
       </div>
-      <select name="order" id="order">
-        <option value="asc">Ordenar A-Z</option>
-        <option value="desc">Ordenar Z-A</option>
-      </select>
     </div>
     <div id="legends_container" class="legends_container">
       <!-- <div class="legends">

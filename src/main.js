@@ -119,8 +119,8 @@ setupPagination(arrayLegends, pagination_element, rows);
 
 /*---FILTRO DE LA DATA---*/
 
-filter.addEventListener('click', (e) => {
-  const rol = e.target.id
+filter.addEventListener('change', (e) => {
+  const rol = e.target.value
   //console.log('rol', rol)
   if (rol == '' || rol == 'filter' || rol == 'All') {
     document.getElementById('legends_container').innerHTML = '';
