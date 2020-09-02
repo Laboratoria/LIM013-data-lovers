@@ -726,9 +726,11 @@
     animation-fill-mode: forwards;
 }
 .retrato {
-    max-width: 70%;
+    width: 40%;
+    max-width: 40%;
     padding: 15px;
-    margin:6% 1%;
+    margin: 20px;
+    flex-grow: 1;
     background-color: #F0F0F0;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
     overflow: hidden;
@@ -736,31 +738,44 @@
     flex-direction: row;
     justify-content: center;
     transform-style: preserve-3d;
-    position: relative;
-    left: 14%;
 }
 .retrato:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
+
 .data-capitulos {
-    margin: 10px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
 }
 .imas{
-    height: 69%;
-    width: 95%; 
-    margin-top: 7%; 
+    margin: 27px 20px 27px 27px;
+    width: 40%;
 }
+
+.imas img{
+    width: 100%
+}
+
+.content-info{
+    width: 60%;
+}
+
 .titulo{
-    margin-top: 90px;
-    padding: 20px;
-    font-size: 52px;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 36px;
     color: #0FB875;
-    position: relative;
-    left: 20%;
-    font-weight: lighter;
+    font-size: bold;
+    text-align: center;
 }
+
+.content-images{
+    margin: 5px 20px;
+}
+
 .credito{
     text-align: center;
 }

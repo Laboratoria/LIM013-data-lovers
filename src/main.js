@@ -360,22 +360,20 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 const muestracapitulos = (capis, idImagen) => {
 
 	let salida = `<div class ="retrato">
-	<div>
-	<img class="imas" src="imagen/`+ idImagen + `.png">
+	<div class="imas">
+	<img src="imagen/`+ idImagen + `.png">
 	</div>
-	<div class-"info">
-	<p class="Text-datos">Nombre:${capis.name}</p>
-	<p class="Text-datos">Fecha:${capis.air_date}</p>
-	<p class="Text-datos">Episodio:${capis.episode}</p>
+	<div class-"content-info">
+	<p class="Text-datos">Nombre: ${capis.name}</p>
+	<p class="Text-datos">Fecha: ${capis.air_date}</p>
+	<p class="Text-datos">Episodio: ${capis.episode}</p>
 	<div>`;
-	console.log(capis.characters);
 	for (let i = 0; i < capis.characters.length; i++) {
 		salida += `
 		<img class="photopar" src="${data[capis.characters[i]].image}">`
-
 	}
 
-	salida += `</div></div>`;
+	salida += `</div class="content-images"></div>`;
 	return salida;
 	//document.getElementById("data-capitulos").innerHTML =
 	//	`${capis.map(muestracapitulos).join(" ")}`
