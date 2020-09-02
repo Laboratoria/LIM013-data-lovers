@@ -18,8 +18,6 @@ const order = {
         }
         return 0;
       });
-
-    //console.log("result", result)
     return result
   },
 
@@ -35,7 +33,6 @@ const order = {
         }
         return 0;
       });
-    //console.log("result",result)
     return result
   },
 
@@ -43,7 +40,6 @@ const order = {
   hpperLevel: function (data, level, position) {
     return data.reduce(
       () => {
-      
         const hp = data[position].stats.hp + (data[position].stats.hpperlevel * level);
         return hp.toFixed(3);
       })
@@ -52,9 +48,7 @@ const order = {
   mpperLevel: function (data, level, position) {
     return data.reduce(
       () => {
-      
         const mp = data[position].stats.mp + (data[position].stats.mpperlevel * level);
-        //console.log('mp',mp)
         return mp.toFixed(3);
       })
   },
