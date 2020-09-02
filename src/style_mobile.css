@@ -50,6 +50,12 @@
         position: absolute;
         right: 80px;
     }
+    /*Página Créditos*/ 
+    #credito p {
+        width: 90%;
+        margin: auto;
+        padding: 7px;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -74,13 +80,6 @@
         text-align: center;
         left: auto;
     }
-
-    .retrato{
-        position: relative;
-        left: 6%;
-        display:inline-block;
-    }
-
 }
   
 /* Fin de estilos de header */
@@ -271,8 +270,8 @@
     }
 }
 
-/* Estilos de cards data*/
 @media screen and (max-width:750px){
+    /* Estilos de cards data*/
     .alldata{
         margin: 10px;
     }
@@ -301,10 +300,22 @@
         font-size: 16px;
     }
 
+    /*buscador de capítulos*/ 
     .Text-datos{
         margin: 2px 20px;
         font-size: 13px;
         text-align: center;
     }
 
+    .retrato {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    /*buscador de capítulos*/ 
+    .photopar{
+        width: 30px;
+    }
 }

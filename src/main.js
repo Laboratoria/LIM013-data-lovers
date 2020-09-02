@@ -1,7 +1,6 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let capis = window.capRickMorty.results;
-console.log(capis);
 let currentPage = 1;
 let rows = 40;
 const listElement = document.getElementById('alldata');
@@ -15,10 +14,10 @@ const obtenerPersonajes = (data) => {
 		</div>
 		<div class="info">
 		<h2 class="name">${data.name}</h2>
-		<p class="Text-datos">Genero: ${data.gender}</p>
-		<p class="Text-datos">Origen: ${data.origin.name}</p>
-		<p class="Text-datos">Especie: ${data.species}</p>
-		<p class="Text-datos">Estado: ${data.status}</p>
+		<p class="text-datos">Genero: ${data.gender}</p>
+		<p class="text-datos">Origen: ${data.origin.name}</p>
+		<p class="text-datos">Especie: ${data.species}</p>
+		<p class="text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
 }
@@ -207,7 +206,7 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 		inputsFiltros[j].addEventListener("click", btnF);
 	}
 }
-const botonesFiltrosM = document.querySelector("#accordions").children;
+
 const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {
@@ -360,19 +359,17 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 const muestracapitulos = (capis, idImagen) => {
 
 	let salida = `<div class ="retrato">
-	<div>
-	<img class="imas" src="imagen/`+ idImagen + `.png">
+	<div class="imas">
+	<img src="imagen/`+ idImagen + `.png">
 	</div>
-	<div class-"info">
-	<p class="Text-datos">Nombre:${capis.name}</p>
-	<p class="Text-datos">Fecha:${capis.air_date}</p>
-	<p class="Text-datos">Episodio:${capis.episode}</p>
+	<div class="content-info">
+	<p class="text-cap">Nombre: ${capis.name}</p>
+	<p class="text-cap">Fecha: ${capis.air_date}</p>
+	<p class="text-cap">Episodio: ${capis.episode}</p>
 	<div>`;
-	console.log(capis.characters);
 	for (let i = 0; i < capis.characters.length; i++) {
 		salida += `
 		<img class="photopar" src="${data[capis.characters[i]].image}">`
-
 	}
 
 	salida += `</div></div>`;
