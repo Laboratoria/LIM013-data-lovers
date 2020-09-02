@@ -8,6 +8,7 @@ const menudeploy = document.querySelector('.menu-deploy');
 const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 
+
 //**********Accordion - toggle**********************
 document.querySelectorAll(".accordionButton").forEach(button => {
     button.addEventListener("click", () => {
@@ -309,16 +310,61 @@ const extractTypePok = (dataType) => {
 
 //**************Egda****************
 
+// sort alphabetically in ascending or descending order
+//funcion para jalar de la data los nombres y ordenarlos alfabeticamente en consola:
+/*const pokemonName = data.pokemon.map((dataPokemon) => {
+    return `${dataPokemon.name}`;
+});
 
+console.log(pokemonName);
+console.log(pokemonName.sort());*/
 
+//función para ordenar alfabeticamente con acción de botón:
+const alphaAscButton = document.getElementById("alphaAsc");
 
+function onClickAlphaAscButton() {
+    const pokemonDisplay = document.getElementById("pokemonDisplay");
+    
+    data.pokemon.sort((a, b) => {
+        if (a.name > b.name) {
+            return 1;
+        }
+        if (a.name < b.name) {
+            return -1;
+        }
+        return 0;
+    });
 
+    pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
+        return `<section class="picture">
+        <img class="img" src="${dataPokemon.img}">
+        <section class="essentialInformation">
+        <h2 class="numPok">#${dataPokemon.num}</h2>
+        <h3 class="namePok">${dataPokemon.name}</h3>
+        <section class="typePok"> 
+        <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
+        <p class="${dataPokemon.type[1]}">`)}</p>
+        </section>
+        <button class="morePok"><span>Read more</span></button>
+        </section>
+        </section>`;
+    }).join('')}`;
 
+    const showEssential = document.querySelectorAll('.picture');
+    for (let index = 0; index < showEssential.length; index++) {
+    showEssential[index].addEventListener('mouseover',()=>{
+        document.querySelectorAll('.img')[index].style.display="none";
+        document.querySelectorAll('.essentialInformation')[index].style.display="block";
+    }); 
+    showEssential[index].addEventListener('mouseout',()=>{
+        document.querySelectorAll('.img')[index].style.display="block";
+        document.querySelectorAll('.essentialInformation')[index].style.display="none";
+    });
+}
+ 
+}
 
-
-
-
-
+alphaAscButton.addEventListener("click", onClickAlphaAscButton);
 
 
 
