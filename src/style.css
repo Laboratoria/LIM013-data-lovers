@@ -787,3 +787,16 @@
     font-weight: lighter;
     text-align: center;
 }
+
+.credito p {
+    width: 600px;
+    margin: auto;
+    padding: 7px;
+}
+
+.icos {
+    width:45px; 
+    height:45px;
+    padding: 6px;
+    margin-top: 10px;
+}
