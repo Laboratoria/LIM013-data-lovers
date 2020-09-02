@@ -2,13 +2,15 @@
 import data from './data/pokemon/pokemon.js';
 import {filterForNumber} from './data.js';
 import {extractImgPok} from './data.js';
+import {orderByAsc} from './data.js';
+import {orderByDesc} from './data.js';
 
+//console.log(orderByAsc(data.pokemon));
 
 //Agregar clase para hacer visible los items de barra de navegación
 const menudeploy = document.querySelector('.menu-deploy');
 const menu=document.getElementById('listItem');
 menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
-
 
 //**********Accordion - toggle**********************
 document.querySelectorAll(".accordionButton").forEach(button => {
@@ -17,57 +19,77 @@ document.querySelectorAll(".accordionButton").forEach(button => {
     })
 })
 
-//Traer nodo para manipular el DOM
-const pokemonDisplay = document.getElementById("pokemonDisplay");
-//crear dinamicamente elemntos section y asignarle imagen
-//map()=método para recorrer un objeto sin modificar el objeto original
-pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
-    return `<section class="picture">
-    <img class="img" src="${dataPokemon.img}">
-    <section class="essentialInformation">
-    <h2 class="numPokH2">
-    <span>#</span><span class="numPok">${dataPokemon.num}</span>
-    </h2>
-    <h3 class="namePok">${dataPokemon.name}</h3>
-    <section class="typePok"> 
-    <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
-    <p class="${dataPokemon.type[1]}">`)}</p>
-    </section>
-    <button class="morePok"><span>Read more</span></button>
-    </section>
-    </section>`;
-}).join('')}`;
-
-//funcion para agregar caracteristicas principales al pasar el mouse por el elemento
-const showEssential = document.querySelectorAll('.picture');
-for (let index = 0; index < showEssential.length; index++) {
-    showEssential[index].addEventListener('mouseover',()=>{
-        document.querySelectorAll('.img')[index].style.display="none";
-        document.querySelectorAll('.essentialInformation')[index].style.display="block";
-    }); 
-    showEssential[index].addEventListener('mouseout',()=>{
-        document.querySelectorAll('.img')[index].style.display="block";
-        document.querySelectorAll('.essentialInformation')[index].style.display="none";
-    });
+//Se activa cuando el documento HTML inicial se ha cargado
+window.onload=()=>{
+    showPokDisplay(data.pokemon);
 }
 
-//mostrar informationDisplay detallada de pokemon responsive
+//ordenar en forma Ascendente
+const alphaAscButton = document.getElementById("alphaAsc");
+alphaAscButton.addEventListener('click',()=>{
+    showPokDisplay(orderByAsc(data.pokemon));
+});
 
-const btnMorePok=document.querySelectorAll('.morePok');
-const informationDisplay = document.querySelector('.informationDisplay');
-const pokemonArea = document.querySelector('.pokemonArea');
-for (let index = 0; index < btnMorePok.length; index++) {
+//ordenar en forma Descendente
+const alphaDescButton = document.getElementById("alphaDesc");
+alphaDescButton.addEventListener('click',()=>{
+    showPokDisplay(orderByDesc(data.pokemon));
+});
 
-    btnMorePok[index].addEventListener('click',()=>{
-        document.querySelector('.informationDisplay').style.display="block";
-        
-        resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
-        showInformationPok(informationDisplay,index);
-        
-        window.onresize=()=>{
+//crear dinamicamente elemntos section y asignarle imagen
+//función que recibe un array y lo  en el display de pokemones
+const pokemonDisplay = document.getElementById("pokemonDisplay");
+const showPokDisplay = (dataSelect) => {
+    //map()=método para recorrer un objeto sin modificar el objeto original 
+    //y retornar elementos html
+    pokemonDisplay.innerHTML=`${dataSelect.map((dataPokemon)=>{
+        return `<section class="picture">
+        <img class="img" src="${dataPokemon.img}">
+        <section class="essentialInformation">
+        <h2 class="numPokH2">
+        <span>#</span><span class="numPok">${dataPokemon.num}</span>
+        </h2>
+        <h3 class="namePok">${dataPokemon.name}</h3>
+        <section class="typePok"> 
+        <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
+        <p class="${dataPokemon.type[1]}">`)}</p>
+        </section>
+        <button class="morePok"><span>Read more</span></button>
+        </section>
+        </section>`;
+    }).join('')}`;
+
+    //Mostrar las caracteristicas principales al pasar el mouse
+    const showEssential = document.querySelectorAll('.picture');
+    for (let index = 0; index < showEssential.length; index++) {
+        //mouseover pasar mouse
+        showEssential[index].addEventListener('mouseover',()=>{
+            document.querySelectorAll('.img')[index].style.display="none";
+            document.querySelectorAll('.essentialInformation')[index].style.display="block";
+        }); 
+        //mouseout quitar mouse
+        showEssential[index].addEventListener('mouseout',()=>{
+            document.querySelectorAll('.img')[index].style.display="block";
+            document.querySelectorAll('.essentialInformation')[index].style.display="none";
+        });
+    }
+
+    //mostrar informationDisplay detallada de pokemon responsive
+    const btnMorePok=document.querySelectorAll('.morePok');
+    const informationDisplay = document.querySelector('.informationDisplay');
+    const pokemonArea = document.querySelector('.pokemonArea');
+    for (let index = 0; index < btnMorePok.length; index++) {
+        btnMorePok[index].addEventListener('click',()=>{
+            document.querySelector('.informationDisplay').style.display="block";
             resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
-        }  
-    });  
+            showInformationPok(informationDisplay,index);
+            //funcion que siente un cambio en el tamaño de la pantalla
+            window.onresize=()=>{
+                resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
+            }  
+        });  
+    }
+
 }
 
 //funcion para redimensionar contenedor de pokemones y contenedor de información
@@ -301,68 +323,6 @@ const extractTypePok = (dataType) => {
 
 
 //**************Egda****************
-
-// sort alphabetically in ascending or descending order
-//funcion para jalar de la data los nombres y ordenarlos alfabeticamente en consola:
-/*const pokemonName = data.pokemon.map((dataPokemon) => {
-    return `${dataPokemon.name}`;
-});
-
-console.log(pokemonName);
-console.log(pokemonName.sort());*/
-
-//función para ordenar alfabeticamente con acción de botón:
-const alphaAscButton = document.getElementById("alphaAsc");
-
-function onClickAlphaAscButton() {
-    const pokemonDisplay = document.getElementById("pokemonDisplay");
-    
-    data.pokemon.sort((a, b) => {
-        if (a.name > b.name) {
-            return 1;
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-        return 0;
-    });
-
-    pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
-        return `<section class="picture">
-        <img class="img" src="${dataPokemon.img}">
-        <section class="essentialInformation">
-        <h2 class="numPokH2">
-        <span>#</span><span class="numPok">${dataPokemon.num}</span>
-        </h2>
-        <h3 class="namePok">${dataPokemon.name}</h3>
-        <section class="typePok"> 
-        <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
-        <p class="${dataPokemon.type[1]}">`)}</p>
-        </section>
-        <button class="morePok"><span>Read more</span></button>
-        </section>
-        </section>`;
-    }).join('')}`;
-
-    const showEssential = document.querySelectorAll('.picture');
-    for (let index = 0; index < showEssential.length; index++) {
-    showEssential[index].addEventListener('mouseover',()=>{
-        document.querySelectorAll('.img')[index].style.display="none";
-        document.querySelectorAll('.essentialInformation')[index].style.display="block";
-    }); 
-    showEssential[index].addEventListener('mouseout',()=>{
-        document.querySelectorAll('.img')[index].style.display="block";
-        document.querySelectorAll('.essentialInformation')[index].style.display="none";
-    });
-}
- 
-}
-
-alphaAscButton.addEventListener("click", onClickAlphaAscButton);
-
-
-
-
 
 
 
