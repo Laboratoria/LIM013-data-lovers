@@ -9,9 +9,9 @@ export const filterByType = (array,type) => {
 //sortData(data, sortBy, sortOrder)//
 export const sortByName = (array,condition) => {
   let newArray = array.sort((a,b) => a.name > b.name ? 1:-1);
-  if ( condition == "descendente" ) {array.sort((a,b) => b.name > a.name ? 1:-1);}
-  if ( condition == "menor-mayor" ) {array.sort((a,b) => a.num - b.num);} 
-  if ( condition == "mayor-menor" ) {array.sort((a,b) => b.num - a.num);}
+  if ( condition == "Z-A" ) {array.sort((a,b) => b.name > a.name ? 1:-1);}
+  if ( condition == "Número inferior" ) {array.sort((a,b) => a.num - b.num);} 
+  if ( condition == "Número superior" ) {array.sort((a,b) => b.num - a.num);}
   return newArray;
 };
 
