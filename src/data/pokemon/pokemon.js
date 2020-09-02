@@ -1,6 +1,6 @@
 export default {
   "pokemon": [{
-    "num": "#001",
+    "num": "001",
     "name": "bulbasaur",
     "generation": {
       "num": "generation i",
@@ -98,7 +98,7 @@ export default {
     }
   },
   {
-    "num": "#002",
+    "num": "002",
     "name": "ivysaur",
     "generation": {
       "num": "generation i",
@@ -196,7 +196,7 @@ export default {
     }
   },
   {
-    "num": "#003",
+    "num": "003",
     "name": "venusaur",
     "generation": {
       "num": "generation i",
@@ -294,7 +294,7 @@ export default {
     }
   },
   {
-    "num": "#004",
+    "num": "004",
     "name": "charmander",
     "generation": {
       "num": "generation i",
@@ -390,7 +390,7 @@ export default {
     }
   },
   {
-    "num": "#005",
+    "num": "005",
     "name": "charmeleon",
     "generation": {
       "num": "generation i",
@@ -493,7 +493,7 @@ export default {
     }
   },
   {
-    "num": "#006",
+    "num": "006",
     "name": "charizard",
     "generation": {
       "num": "generation i",
