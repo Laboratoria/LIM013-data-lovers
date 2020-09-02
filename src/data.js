@@ -23,7 +23,19 @@ export const extractImgPok = (dataPEv,numPok) =>{
   return "images/available.png";
 }
 
-export const orderByDesc = (dataPok) => {
+export const sortByAsc = (dataPok) => {
+  return dataPok.sort((a, b) => {
+    if (a.name > b.name) {
+        return 1;
+    }
+    if (a.name < b.name) {
+        return -1;
+    }
+    return 0;
+})
+}
+
+export const sortByDesc = (dataPok) => {
   return dataPok.sort((a, b) => {
     if (a.name > b.name) {
         return -1;
@@ -35,13 +47,25 @@ export const orderByDesc = (dataPok) => {
 })
 }
 
-export const orderByAsc = (dataPok) => {
+export const sortByLessPwr = (dataPok) => {
   return dataPok.sort((a, b) => {
-    if (a.name > b.name) {
+    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
         return 1;
     }
-    if (a.name < b.name) {
+    if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
         return -1;
+    }
+    return 0;
+})
+}
+
+export const sortByMorePwr = (dataPok) => {
+  return dataPok.sort((a, b) => {
+    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
+        return -1;
+    }
+    if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
+        return 1;
     }
     return 0;
 })

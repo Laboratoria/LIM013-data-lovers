@@ -399,7 +399,7 @@ input[type="checkbox"]:checked + label {
     border: black;
 }
 
-.orderByAlphaAscButton {    
+.sortByAlphaAscButton {    
     background-image: url(images/AlphaAscButton.png);
 }
 
@@ -442,15 +442,15 @@ input[type="checkbox"]:checked + label {
     border-color: white transparent transparent transparent;
 }
 
-.orderByAlphaDescButton {
+.sortByAlphaDescButton {
     background-image: url(images/AlphaDescButton.png);
 }
 
-.orderByLessPwrButton {
+.sortByLessPwrButton {
     background-image: url(images/LessPwrButton.png);
 }
 
-.orderByMorePwrButton {
+.sortByMorePwrButton {
     background-image: url(images/MorePwrButton.png);
 }
 

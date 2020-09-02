@@ -2,8 +2,10 @@
 import data from './data/pokemon/pokemon.js';
 import {filterForNumber} from './data.js';
 import {extractImgPok} from './data.js';
-import {orderByAsc} from './data.js';
-import {orderByDesc} from './data.js';
+import {sortByAsc} from './data.js';
+import {sortByDesc} from './data.js';
+import {sortByLessPwr} from './data.js';
+import {sortByMorePwr} from './data.js';
 
 //console.log(orderByAsc(data.pokemon));
 
@@ -27,13 +29,25 @@ window.onload=()=>{
 //ordenar en forma Ascendente
 const alphaAscButton = document.getElementById("alphaAsc");
 alphaAscButton.addEventListener('click',()=>{
-    showPokDisplay(orderByAsc(data.pokemon));
+    showPokDisplay(sortByAsc(data.pokemon));
 });
 
 //ordenar en forma Descendente
 const alphaDescButton = document.getElementById("alphaDesc");
 alphaDescButton.addEventListener('click',()=>{
-    showPokDisplay(orderByDesc(data.pokemon));
+    showPokDisplay(sortByDesc(data.pokemon));
+});
+
+//ordenar por menos poder (max-cp)
+const lessPwrButton = document.getElementById("lessPwr");
+lessPwrButton.addEventListener('click',()=>{
+    showPokDisplay(sortByLessPwr(data.pokemon));
+});
+
+//ordenar por mas poder (max-cp)
+const morePwrButton = document.getElementById("morePwr");
+morePwrButton.addEventListener('click',()=>{
+    showPokDisplay(sortByMorePwr(data.pokemon));
 });
 
 //crear dinamicamente elemntos section y asignarle imagen
