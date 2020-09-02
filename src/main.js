@@ -4,8 +4,8 @@ let capis = window.capRickMorty.results;
 console.log(capis);
 let currentPage = 1;
 let rows = 40;
-let listElement = document.getElementById('alldata');
-let paginationElemnent = document.getElementById('pagination');
+const listElement = document.getElementById('alldata');
+const paginationElemnent = document.getElementById('pagination');
 
 //Contenidos para el html
 const obtenerPersonajes = (data) => {
@@ -21,7 +21,6 @@ const obtenerPersonajes = (data) => {
 		<p class="Text-datos">Estado: ${data.status}</p>
 		</div>
 		</div>`
-
 }
 
 //Funciones de la paginación
@@ -225,17 +224,8 @@ const btnFM = () => {
 
 }
 
-for (let i = 0; i < botonesFiltrosM.length; i++) {
-	const divGenM = botonesFiltrosM[i].children;
-	for (let j = 0; j < divGenM.length; j++) {
-		const divContM = divGenM[j].children;
-		for (let l = 0; l < divContM.length; l++) {
-			const inputsFiltrosM = divContM[l].children;
-			for (let k = 0; k < inputsFiltrosM.length; k++) {
-				inputsFiltrosM[k].addEventListener("click", btnFM);
-			}
-		}
-	}
+for (let i = 0; i < inputNameM.length; i++) {
+	inputNameM[i].addEventListener("click", btnFM);
 }
 
 //Función de buscar
@@ -367,11 +357,11 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 		resetRadioButtons("estd");
 	});
 });
-const muestracapitulos = (capis,idImagen) => {
+const muestracapitulos = (capis, idImagen) => {
 
 	let salida = `<div class ="retrato">
 	<div>
-	<img class="imas" src="imagen/`+idImagen+`.png">
+	<img class="imas" src="imagen/`+ idImagen + `.png">
 	</div>
 	<div class-"info">
 	<p class="Text-datos">Nombre:${capis.name}</p>
@@ -379,53 +369,54 @@ const muestracapitulos = (capis,idImagen) => {
 	<p class="Text-datos">Episodio:${capis.episode}</p>
 	<div>`;
 	console.log(capis.characters);
-	for(let i=0;i<capis.characters.length;i++){
-		salida+=`
+	for (let i = 0; i < capis.characters.length; i++) {
+		salida += `
 		<img class="photopar" src="${data[capis.characters[i]].image}">`
-			
+
 	}
 
-	salida+=`</div></div>`;
+	salida += `</div></div>`;
 	return salida;
 	//document.getElementById("data-capitulos").innerHTML =
 	//	`${capis.map(muestracapitulos).join(" ")}`
 
-//document.getElementById("data-capitulos").innerHTML=capitulosSalida;
+	//document.getElementById("data-capitulos").innerHTML=capitulosSalida;
 }
+
 const capitulo = () => {
-	document.getElementById('capitulos').classList.add('menu-active'); 
+	document.getElementById('capitulos').classList.add('menu-active');
 	document.getElementById('conteni').classList.remove('menu-active');
-	document.getElementById('nosotras').classList.remove('menu-active'); 
+	document.getElementById('nosotras').classList.remove('menu-active');
 	document.getElementById('contenido').classList.add('ocultar');
-	document.getElementById('credito').classList.add('ocultar'); 
+	document.getElementById('credito').classList.add('ocultar');
 	document.getElementById('capi').classList.remove('ocultar');
-	for(let i=0;i<capis.length;i++){
-		document.getElementById("data-capitulos").innerHTML+=muestracapitulos(capis[i],i+1);
+	for (let i = 0; i < capis.length; i++) {
+		document.getElementById("data-capitulos").innerHTML += muestracapitulos(capis[i], i + 1);
 	}
 
 }
 
-document.getElementById("capitulos").addEventListener("click",capitulo);
+document.getElementById("capitulos").addEventListener("click", capitulo);
 
 const volverPrincipal = () => {
-document.getElementById('conteni').classList.add('menu-active'); 
-document.getElementById('capitulos').classList.remove('menu-active');
-document.getElementById('nosotras').classList.remove('menu-active'); 
-document.getElementById('contenido').classList.remove('ocultar');
-document.getElementById('capi').classList.add('ocultar');
-document.getElementById('credito').classList.add('ocultar'); 
+	document.getElementById('conteni').classList.add('menu-active');
+	document.getElementById('capitulos').classList.remove('menu-active');
+	document.getElementById('nosotras').classList.remove('menu-active');
+	document.getElementById('contenido').classList.remove('ocultar');
+	document.getElementById('capi').classList.add('ocultar');
+	document.getElementById('credito').classList.add('ocultar');
 }
 
-document.getElementById("conteni").addEventListener("click",volverPrincipal);
+document.getElementById("conteni").addEventListener("click", volverPrincipal);
 
 
 const creditos = () => {
-document.getElementById('conteni').classList.remove('menu-active'); 
-document.getElementById('capitulos').classList.remove('menu-active');
-document.getElementById('nosotras').classList.add('menu-active'); 
-document.getElementById('contenido').classList.add('ocultar');
-document.getElementById('capi').classList.add('ocultar');
-document.getElementById('credito').classList.remove('ocultar'); 
+	document.getElementById('conteni').classList.remove('menu-active');
+	document.getElementById('capitulos').classList.remove('menu-active');
+	document.getElementById('nosotras').classList.add('menu-active');
+	document.getElementById('contenido').classList.add('ocultar');
+	document.getElementById('capi').classList.add('ocultar');
+	document.getElementById('credito').classList.remove('ocultar');
 }
-document.getElementById('nosotras').addEventListener("click",creditos);
+document.getElementById('nosotras').addEventListener("click", creditos);
 

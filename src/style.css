@@ -203,12 +203,8 @@
 
 /* Inicio de estilos pantalla 1*/
 .conter{
-    background-image: url(imagen/portada2.png);
     height: 100vh;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     text-align: center;
 }
 
@@ -222,15 +218,7 @@
     z-index: 0;
 }
 
-.mask-fondo{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);;
-    text-align: center;
-}
-
-.mask-fondo h1{
+.conter h1{
     margin: 100px 80px 50px;
     font-weight: bold;
     font-size: 50px;
@@ -240,7 +228,7 @@
     text-align: center;
 }
 
-.mask-fondo p{
+.conter p{
     margin: 40px 120px;
     font-size: 20px;
     line-height: 23px;
