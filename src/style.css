@@ -158,6 +158,9 @@ input[type='text']:focus {
 	letter-spacing: 1px;
 	text-transform: capitalize;
 }
+.type{
+	background-color: sandybrown;
+}
 /* ------------------------------ESTILOS DEL FOOTER */
 .copy {
 	position: absolute;

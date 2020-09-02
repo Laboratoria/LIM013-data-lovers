@@ -12,6 +12,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
 	let num = data.pokemon[i].num;
 	let name = data.pokemon[i].name;
 	let imgUrl = data.pokemon[i].img;
+	let tipo = data.pokemon[i].type;
 	let dataNueva = document.getElementById('dataPoke');
 
 	//AGREGANDO DIV POKEMON
@@ -48,7 +49,13 @@ for (let i = 0; i < data.pokemon.length; i++) {
 	labelname.classList.add('name');
 	labelinfo.appendChild(labelname);
 	labelname.innerHTML=name;
+
+	//AGREGANDO TIPO 
+	let labelTipo = document.createElement('small');
+	labelTipo.classList.add('type');
+	labelinfo.appendChild(labelTipo);
+	labelTipo.innerHTML= tipo;
 }
-/* pasar a mayuscula los nombres */
+
 
 console.log(name);
