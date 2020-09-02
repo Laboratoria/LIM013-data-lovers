@@ -13,12 +13,12 @@ export const search=(championList,nameChamp)=>{
     console.log(searchName)
     return searchName; 
 };
-export const orderAsce=(championList,term)=>{
-    const sort=championList.sort(()=>term==='02'?-1:1);
+
+export const order=(championList,term)=>{
+    const sort=championList.sort((a,b)=> term ==='AZ' ? 1:-1);
     console.log(sort);
         return sort;
 };
-
 
  
 

@@ -2,71 +2,52 @@
     padding: 0;
     margin: 0;
 }
-/*.contenedor1{
-	width:100%;
-	margin:auto;
-	/* Flexbox 
-	display:flex;
-	flex-flow:row wrap;
-}*/
-header {
-	background: #000000;
-	width: 100%;
-	height: 60px;
-	/*padding:5px 5px 0px 5px;*/
+.menuSuperior {
+    background-color: black;
+    padding:  10px ;
+     /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.barsNavigation a {
+    display: relative;
+    color: #dbb74c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:'Fira Sans', sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 18px 10px;
+}
+.barsNavigation a:hover {
+    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+}
+.menuSuperior .btnMenu i{
+    display:none;
+    color: #dbb74c;
+}
+.menuLateral{   
+    display:none;
+}
 
-	/*Flexbox
-    display: flex;*/ 
-	/*justify-content:space-between;
-	align-items:center;
-	flex-direction:row;
-	flex-wrap:wrap;*/
-}
-header .contenidoheader{
-	display: inline-flex;
-	margin:5px;
-}
-header .logo img{
-	height:40px;
-	width:40px;
-	margin:5px 10px 5px 20px;
-}
-/*que Vero me explique esto*/
-header nav ul li a i{
-	display: none;
-	color: #dbb74c ;
-	padding:10px 30px 0px 30px;
-	flex-wrap:wrap;
-	align-items: center;
-}
-/*header nav {
-	width:100%;
-	/* Flexbox
-	display:inline-block;
-	flex-wrap:wrap;
-    align-items:center;
-}*/
-header nav .barsNavigation{
-	padding: 15px 10px 0px 35px;
-}
-header nav .barsNavigation a {	
-	color: #dbb74c;
-	text-decoration: none;
-	display: inline-block;
-	font-family:'Fira Sans', sans-serif; 
-	/*padding:1px 90px 0px 90px;*/
-	text-transform: uppercase;
-	padding:0px 20px 15px;
+.barsNavigation2 a {
+    color: #dbb74c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:'Fira Sans', sans-serif;
+    padding:20px 30px;
 
-	/* Flexbox 
-	flex-grow:1;*/
 }
-header nav .barsNavigation a:hover {
-	border-bottom: 5px solid rgba(41, 208, 230, 0.842);
-    
+
+.barsNavigation2 a:hover{
+    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
 }
-header nav .barsNavigation2 li{	
-	display:none;
+
+.menuLateral .btnClose i{
+    color: #dbb74c;
 }
 #home{
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
@@ -105,6 +86,11 @@ main #home a{
 
 main p{
 	color: white;
+	font-family: 'Bangers', cursive;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 2px;
+	
 }
 .boton{
 	background-color:transparent;
@@ -198,6 +184,27 @@ select {
     grid-gap: 20px;
 	padding-inline-start: 0;
 }
+.style{
+	width: 300px;
+	height: 300px;
+	margin: 5%;
+}
+.style:hover {
+	transform: perspective(500px) rotateY(180deg);
+	transition: all ease 0.8s;
+}
+.personalimage{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #e9be23;
+	padding: 0%;
+}
+
+.style:hover .personalname{
+	transform: rotateY(180deg);
+
+}
+
 footer {
 	background: #000000;
 	width: 100%;
@@ -224,46 +231,22 @@ footer p{
 }
 /*Media queries*/
 @media screen and (max-width:700px){
- header .menu{
-	 flex-direction:column;
- }
- header .menu .logo{
-	 display: flex;
-	 flex-direction: row;
-	 justify-content: center;
-	 width: 100%;
-	 padding: 10px;
- }
- header nav .logo a i{
-	 display: inline-block;
-	 justify-content: space-between;
-	 color: #dbb74c;
- }
-header nav .barsNavigation2 ul li {	
-		display:block;
-		color: #dbb74c;
-		text-decoration: none;
-		font-family:'Fira Sans', sans-serif; 
-		text-transform: uppercase;
-}
-header nav .barsNavigation2 ul ul {
-	display:none;
-	position:absolute;
-}
-header nav .barsNavigation2 ul ul li{
-	float: none;
-}	
-header nav .barsNavigation2 ul ul li a{
-	color: #dbb74c;
-	background-color: rgb(255, 255, 255);
-	text-decoration: none;
-	font-family:'Fira Sans', sans-serif; 
-	text-transform: uppercase;
-}
-	header nav .barsNavigation2 ul li:hover >ul{
-	display:block;
-}
-header nav .barsNavigation a {	
-	display:none;
-}
+    .barsNavigation a{
+        display:none;
+    }
+    .menuSuperior .btnMenu i{
+        display:block;
+    }
+    .menuSuperior.responsive .btnMenu i{
+        position: block;
+        right: 0;
+        top: 0;
+    }
+    .menuLateral.responsive{    
+        background-color:#333333;
+        width: 70%;
+        float:right;
+         /*Flexbox*/
+         display: flex;
+    }
 }
