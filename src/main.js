@@ -374,10 +374,6 @@ const muestracapitulos = (capis, idImagen) => {
 
 	salida += `</div></div>`;
 	return salida;
-	//document.getElementById("data-capitulos").innerHTML =
-	//	`${capis.map(muestracapitulos).join(" ")}`
-
-	//document.getElementById("data-capitulos").innerHTML=capitulosSalida;
 }
 
 const capitulo = () => {
