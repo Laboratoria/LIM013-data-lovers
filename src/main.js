@@ -5,8 +5,6 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 const allCharacters = data.results;
 
-// console.log(data);
-
 
 const getListAllCharacters = () => {
     
@@ -214,124 +212,124 @@ document.querySelector('#orderZtoA').addEventListener('click', getListZtoA);
 
 
 
-function getListAll(){
+// function getListAll(){
 
-    let leaveGender = document.getElementById("listGender");
-    leaveGender.classList.add("hide");
+//     let leaveGender = document.getElementById("listGender");
+//     leaveGender.classList.add("hide");
 
-    let leaveStatus = document.getElementById("listStatus");
-    leaveStatus.classList.add("hide");
+//     let leaveStatus = document.getElementById("listStatus");
+//     leaveStatus.classList.add("hide");
 
-    let leaveSpecies = document.getElementById("listSpecies");
-    leaveSpecies.classList.add("hide");
+//     let leaveSpecies = document.getElementById("listSpecies");
+//     leaveSpecies.classList.add("hide");
 
-    let leaveOrder = document.getElementById("listOrder");
-    leaveOrder.classList.add("hide");
+//     let leaveOrder = document.getElementById("listOrder");
+//     leaveOrder.classList.add("hide");
 
-}
-document.querySelector('#all').addEventListener('click', getListAll);
-
-
-function getListSpecies(){
-
-    let leaveGender = document.getElementById("listGender");
-    leaveGender.classList.add("hide");
-
-    let leaveStatus = document.getElementById("listStatus");
-    leaveStatus.classList.add("hide");
-
-    let leaveOrder = document.getElementById("listOrder");
-    leaveOrder.classList.add("hide");
-
-    let displaySpecies = document.getElementById("listSpecies");
-    displaySpecies.classList.remove("hide");
-
-}
-document.querySelector('#species').addEventListener('click', getListSpecies);
-document.querySelector('#species').addEventListener('click', getListSpeciesHuman);
+// }
+// document.querySelector('#all').addEventListener('click', getListAll);
 
 
-function getListGender(){
+// function getListSpecies(){
 
-    let leaveSpecies = document.getElementById("listSpecies");
-    leaveSpecies.classList.add("hide");
+//     let leaveGender = document.getElementById("listGender");
+//     leaveGender.classList.add("hide");
 
-    let leaveStatus = document.getElementById("listStatus");
-    leaveStatus.classList.add("hide");
+//     let leaveStatus = document.getElementById("listStatus");
+//     leaveStatus.classList.add("hide");
 
-    let leaveOrder = document.getElementById("listOrder");
-    leaveOrder.classList.add("hide");
+//     let leaveOrder = document.getElementById("listOrder");
+//     leaveOrder.classList.add("hide");
 
-    let displayStatus = document.getElementById("listGender");
-    displayStatus.classList.remove("hide");
+//     let displaySpecies = document.getElementById("listSpecies");
+//     displaySpecies.classList.remove("hide");
 
-}
-document.querySelector('#gender').addEventListener('click', getListGender);
-document.querySelector('#gender').addEventListener('click', getListGenderMale);
-
-
-function getListStatus(){
-
-    let leaveGender = document.getElementById("listGender");
-    leaveGender.classList.add("hide");
-
-    let leaveSpecies = document.getElementById("listSpecies");
-    leaveSpecies.classList.add("hide");
-
-    let leaveOrder = document.getElementById("listOrder");
-    leaveOrder.classList.add("hide");
-
-    let displayStatus = document.getElementById("listStatus");
-    displayStatus.classList.remove("hide");
-
-}
-document.querySelector('#status').addEventListener('click', getListStatus);
-document.querySelector('#status').addEventListener('click', getListStatusAlive);
+// }
+// document.querySelector('#species').addEventListener('click', getListSpecies);
+// document.querySelector('#species').addEventListener('click', getListSpeciesHuman);
 
 
+// function getListGender(){
 
-function getListOrderAtoZ(){
+//     let leaveSpecies = document.getElementById("listSpecies");
+//     leaveSpecies.classList.add("hide");
 
-    let leaveGender = document.getElementById("listGender");
-    leaveGender.classList.add("hide");
+//     let leaveStatus = document.getElementById("listStatus");
+//     leaveStatus.classList.add("hide");
 
-    let leaveSpecies = document.getElementById("listSpecies");
-    leaveSpecies.classList.add("hide");
+//     let leaveOrder = document.getElementById("listOrder");
+//     leaveOrder.classList.add("hide");
 
-    let leaveStatus = document.getElementById("listStatus");
-    leaveStatus.classList.add("hide");
+//     let displayStatus = document.getElementById("listGender");
+//     displayStatus.classList.remove("hide");
 
-    let displayOrder = document.getElementById("listOrder");
-    displayOrder.classList.remove("hide");
-
-}
-document.querySelector('#order').addEventListener('click', getListOrderAtoZ);
-document.querySelector('#order').addEventListener('click', getListAtoZ);
+// }
+// document.querySelector('#gender').addEventListener('click', getListGender);
+// document.querySelector('#gender').addEventListener('click', getListGenderMale);
 
 
-function getListOrderZtoA(){
+// function getListStatus(){
 
-    let leaveGender = document.getElementById("listGender");
-    leaveGender.classList.add("hide");
+//     let leaveGender = document.getElementById("listGender");
+//     leaveGender.classList.add("hide");
 
-    let leaveSpecies = document.getElementById("listSpecies");
-    leaveSpecies.classList.add("hide");
+//     let leaveSpecies = document.getElementById("listSpecies");
+//     leaveSpecies.classList.add("hide");
 
-    let leaveStatus = document.getElementById("listStatus");
-    leaveStatus.classList.add("hide");
+//     let leaveOrder = document.getElementById("listOrder");
+//     leaveOrder.classList.add("hide");
 
-    let displayOrder = document.getElementById("listOrder");
-    displayOrder.classList.remove("hide");
+//     let displayStatus = document.getElementById("listStatus");
+//     displayStatus.classList.remove("hide");
 
-}
-document.querySelector('#order').addEventListener('click', getListOrderZtoA);
-document.querySelector('#order').addEventListener('click', getListZtoA);
+// }
+// document.querySelector('#status').addEventListener('click', getListStatus);
+// document.querySelector('#status').addEventListener('click', getListStatusAlive);
+
+
+
+// function getListOrderAtoZ(){
+
+//     let leaveGender = document.getElementById("listGender");
+//     leaveGender.classList.add("hide");
+
+//     let leaveSpecies = document.getElementById("listSpecies");
+//     leaveSpecies.classList.add("hide");
+
+//     let leaveStatus = document.getElementById("listStatus");
+//     leaveStatus.classList.add("hide");
+
+//     let displayOrder = document.getElementById("listOrder");
+//     displayOrder.classList.remove("hide");
+
+// }
+// document.querySelector('#order').addEventListener('click', getListOrderAtoZ);
+// document.querySelector('#order').addEventListener('click', getListAtoZ);
+
+
+// function getListOrderZtoA(){
+
+//     let leaveGender = document.getElementById("listGender");
+//     leaveGender.classList.add("hide");
+
+//     let leaveSpecies = document.getElementById("listSpecies");
+//     leaveSpecies.classList.add("hide");
+
+//     let leaveStatus = document.getElementById("listStatus");
+//     leaveStatus.classList.add("hide");
+
+//     let displayOrder = document.getElementById("listOrder");
+//     displayOrder.classList.remove("hide");
+
+// }
+// document.querySelector('#order').addEventListener('click', getListOrderZtoA);
+// document.querySelector('#order').addEventListener('click', getListZtoA);
 
 
 
 window.addEventListener('load', () => {
     document.getElementById('listCharacters').classList.add('images-loaded');
-    const categoriesLinks = document.querySelectorAll('#navbar a');
+    const categoriesLinks = document.querySelectorAll('#topnav a');
     const speciesLinks = document.querySelectorAll('#listSpecies a');
     const genderLinks = document.querySelectorAll('#listGender a');
     const statusLinks = document.querySelectorAll('#listStatus a');
@@ -364,7 +362,9 @@ window.addEventListener('load', () => {
             event.target.classList.add('active');
         });
     });
+
 })
+
 
 
 function drawResults(arrayData){
@@ -413,20 +413,11 @@ function drawResults(arrayData){
                 const elementLi = document.createElement("div"); 
 
                 elementLi.innerHTML = `<img src="${result.image}" alt="${result.name}">
-                <h3 class="characterName">${result.name}</h3>
-                <p class="characterSpecies">${result.species}</p>`;
+                <h3>${result.name}</h3>
+                <p>${result.species}</p>`;
 
                 elementOrderedList.appendChild(elementLi);
 
-                // const elementText = document.createTextNode(result.name + ", Specie: " + result.species + ", Status: " + result.status + ", Gender: " + result.gender);         // Create a text node
-                
-                // const image = result.image; 
-                // const elementImage = document.createElement("img");
-                // elementImage.src = image;
-                // elementImage.alt = name;
-                // elementLi.appendChild(elementImage); 
-                // elementOrderedList.appendChild(elementLi);
-                // elementLi.appendChild(elementText); 
             }
                 console.log(i);
             })
@@ -437,26 +428,13 @@ function drawResults(arrayData){
 
 
 
-// const list_element = document.getElementById('charactersList');
-// let rows = 20;
-// function DisplayList (items, wrapper, rows_per_page, page) {
-//     wrapper.innerHTML = "";
-//     page--;
-//     let start = rows_per_page * page;
-//     let end = start + rows_per_page;
-//     let paginatedItems = items.slice(start, end);
-//     for (let i = 0; i < paginatedItems.length; i++) {
-//         let item = paginatedItems[i];
-
-//         let item_element = document.createElement('div');
-
-//         item_element.classList.add('item');
-
-//         item_element.innerHTML = `<img src="${item.image}" alt="${item.name}">
-//         <h2 class="characterName">${item.name}</h2>
-//         <p>${item.species}</p>`;
-//         wrapper.appendChild(item_element);
-//     }
-// }
-
-// DisplayList(data.results, list_element, rows, current_page);
+function clickHambMenu() {
+    let menuBar = document.getElementById("myTopnav");
+    if (menuBar.className === "topnav") {
+      menuBar.className += " responsive";
+    } else {
+     menuBar.className = "topnav";
+    }
+  }
+  
+document.querySelector('#iconMenu').addEventListener('click', clickHambMenu);
