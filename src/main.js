@@ -1,6 +1,7 @@
 //import {filterDataPok} from './data.js'; Activar cuando sea necesario
 import data from './data/pokemon/pokemon.js';
-import {filterForName} from './data.js';
+import {filterForNumber} from './data.js';
+import {extractImgPok} from './data.js';
 
 
 //Agregar clase para hacer visible los items de barra de navegación
@@ -11,12 +12,9 @@ menudeploy.addEventListener('click',()=>{menu.classList.toggle('show');});
 //**********Accordion - toggle**********************
 document.querySelectorAll(".accordionButton").forEach(button => {
     button.addEventListener("click", () => {
-        
         button.classList.toggle("accordionButtonActive");
-
     })
 })
-
 
 //Traer nodo para manipular el DOM
 const pokemonDisplay = document.getElementById("pokemonDisplay");
@@ -26,7 +24,9 @@ pokemonDisplay.innerHTML=`${data.pokemon.map((dataPokemon)=>{
     return `<section class="picture">
     <img class="img" src="${dataPokemon.img}">
     <section class="essentialInformation">
-    <h2 class="numPok">#${dataPokemon.num}</h2>
+    <h2 class="numPokH2">
+    <span>#</span><span class="numPok">${dataPokemon.num}</span>
+    </h2>
     <h3 class="namePok">${dataPokemon.name}</h3>
     <section class="typePok"> 
     <p class="${dataPokemon.type[0]}">${dataPokemon.type.join(`</p>
@@ -51,13 +51,15 @@ for (let index = 0; index < showEssential.length; index++) {
 }
 
 //mostrar informationDisplay detallada de pokemon responsive
+
 const btnMorePok=document.querySelectorAll('.morePok');
+const informationDisplay = document.querySelector('.informationDisplay');
+const pokemonArea = document.querySelector('.pokemonArea');
 for (let index = 0; index < btnMorePok.length; index++) {
-    
+
     btnMorePok[index].addEventListener('click',()=>{
         document.querySelector('.informationDisplay').style.display="block";
-        const informationDisplay = document.querySelector('.informationDisplay');
-        const pokemonArea = document.querySelector('.pokemonArea');
+        
         resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
         showInformationPok(informationDisplay,index);
         
@@ -71,7 +73,7 @@ for (let index = 0; index < btnMorePok.length; index++) {
 const resizeInformation = (a,b,c)=> {
     if (a.clientWidth<=1000) { 
         b.style.width="0%";
-        c.style.width="98%";
+        c.style.width="100%";
     } else {
         b.style.width="60%"; 
         c.style.width="40%";
@@ -81,9 +83,9 @@ const resizeInformation = (a,b,c)=> {
 //mostrando información extra de pokémon según pokémon selecionado
 const showInformationPok = (display,indexSelect) => {
     //traer nombre de pokémon selecionado para buscar informmacíón extra
-   const namePokSelect= document.querySelectorAll('.namePok')[indexSelect].textContent;
-   const arrayPokSelect=filterForName(data.pokemon,namePokSelect);
-   const pokEvolutionHtml=PokEvolution(arrayPokSelect);
+   const numPokSelect= document.querySelectorAll('.numPok')[indexSelect].textContent;
+   const arrayPokSelect=filterForNumber(data.pokemon,numPokSelect);
+   const pokEvolutionHtml=pokEvolution(arrayPokSelect);
     display.innerHTML=`
     <section class="close">
         <button class="closePokSelectButton"><i class="fa fa-close"></i></button>
@@ -159,138 +161,135 @@ const showInformationPok = (display,indexSelect) => {
       </section>
     </section>`
 
-    
+    //ocultar contenido de la sección de información
+    document.querySelector('.closePokSelectButton').addEventListener('click',()=>{
+    display.style.display="none";
+    pokemonDisplay.style.width="100%" });
 }
 
+
 //funcion que devuelve elementos HTML con información de la evoluciones de los pokémon
-const PokEvolution = (arrayPokSelect) => {
-    const objEvolution = arrayPokSelect[0].evolution;
-    const quantityProp = Object.keys(objEvolution).length;
 
-    if (quantityProp==2) {
-        
-        if (Object.keys(objEvolution)[1]=="next-evolution") {
-            const quantityNextEvo=Object.keys(objEvolution["next-evolution"][0]).length;
-            const arrayNextEvolution=arrayPokSelect[0].evolution["next-evolution"][0];
-            const nextPok1=arrayNextEvolution.name;
-            const imgPokNext1=filterForName(data.pokemon,nextPok1)[0].img;
-
-            if (quantityNextEvo==4) {
-                const nextPok2=arrayNextEvolution["next-evolution"][0].name;
-                const imgPokNext2=filterForName(data.pokemon,nextPok2)[0].img;
-                return `
-                <section class="currentPok">
-                    <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                    <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
-                    <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
-                </section>
-                <section class="nextEvolution">
-                    <section><img class="imgPokEv" src="${imgPokNext1}"></section>
-                    <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num} </span></p>
-                    <p class="evoSectionPokName"><span>${nextPok1}</span></p>
-                    <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
-                </section>
-                <section class="nextEvolution">
-                    <section><img class="imgPokEv" src="${imgPokNext2}"></section>
-                    <p class="evoSectionPokNum"><span>#${arrayNextEvolution["next-evolution"][0].num} </span></p>
-                    <p class="evoSectionPokName"><span>${nextPok2}</span></p>
-                    <p class="evoSectionPokCandy">Cost of candy: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
-                </section>`
-                
-            } else {
-                return `
-                    <section class="currentPok">
-                        <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                        <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
-                        <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
-                    </section>
-                    <section class="nextEvolution">
-                        <section><img class="imgPokEv" src="${imgPokNext1}"></section>
-                        <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num} </span></p>
-                        <p class="evoSectionPokName"><span>${nextPok1}</span></p>
-                        <p class="evoSectionPokCandy">Cost of candy: ${arrayNextEvolution["candy-cost"]}</p>
-                    </section>`
-                
-            }
-
-        } else {
-            const quantityPrevEvo=Object.keys(objEvolution["prev-evolution"][0]).length;
-            const arrayPrevEvolution=arrayPokSelect[0].evolution["prev-evolution"][0];
-            const prevPok2=arrayPrevEvolution.name;
-            const imgPokPrev2=filterForName(data.pokemon,prevPok2)[0].img;
-            if (quantityPrevEvo==4) {
-                const prevPok1=arrayPrevEvolution["prev-evolution"][0].name;
-                const imgPokPrev1=filterForName(data.pokemon,prevPok1)[0].img;
-                return `
-            <section class="prevEvolution">
-                <section><img class="imgPokEv" src="${imgPokPrev1}"></section>
-                <p class="evoSectionPokNum"><span>#${arrayPrevEvolution["prev-evolution"][0].num} </span></p>
-                <p class="evoSectionPokName"><span>${prevPok1}</span></p>
-                <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
-            </section>
-            <section class="prevEvolution">
-                <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
-                <p class="evoSectionPokNum"><span>#${arrayPrevEvolution.num} </span></p>
-                <p class="evoSectionPokName"><span>${prevPok2}</span></p>
-                <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
-            </section>
-            <section class="currentPok">
-                <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
-                <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
-            </section>`
-                
-            } else {
-                return `
-            <section class="prevEvolution">
-                <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
-                <p class="evoSectionPokNum"><span>#${arrayPrevEvolution.num} </span></p>
-                <p class="evoSectionPokName"><span>${prevPok2}</span></p>
-                <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
-            </section>
-            <section class="currentPok">
-                <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-                <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
-                <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
-            </section>`  
-            }
-            
-        }
-    } 
-
-    else if (quantityProp==3){
-        const arrayNextEvolution=arrayPokSelect[0].evolution["next-evolution"][0];
-        const arrayPrevEvolution=arrayPokSelect[0].evolution["prev-evolution"][0];
-        const nextPok1=arrayNextEvolution.name;
-        const prevPok1=arrayPrevEvolution.name;
-        const imgPokNext=filterForName(data.pokemon,nextPok1)[0].img;
-        const imgPokPrev=filterForName(data.pokemon,prevPok1)[0].img;
+const pokEvolution = (arrayPokSelect) => {
+const quantityPropEv = Object.keys(arrayPokSelect[0].evolution).length;
+const itemEvolution =arrayPokSelect[0].evolution
+if (quantityPropEv===2 && Object.keys(itemEvolution)[1]==="next-evolution") {
+    const arrayNextEvolution =arrayPokSelect[0].evolution["next-evolution"][0];
+    const imgPokNext1 = extractImgPok(data.pokemon,arrayNextEvolution.num);
+    const quantityNextEvo=Object.keys(arrayPokSelect[0].evolution["next-evolution"][0]).length;
+    const noPropPermit = Object.keys(arrayPokSelect[0].evolution["next-evolution"][0])[3];
+    
+    if(quantityNextEvo===4 && noPropPermit!=="evolution-item"){
+        const imgPokNext2 = extractImgPok(data.pokemon,arrayNextEvolution["next-evolution"][0].num);
         return `
-        <section class="preEvolution">
-            <section class><img class="imgPokEv" src="${imgPokPrev}"></section>
-            <p class="evoSectionPokNum"><span>#${arrayPrevEvolution.num}</span></p>
-            <p class="evoSectionPokName"><span>${prevPok1}</span></p>
-            <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
-        </section>
         <section class="currentPok">
-            <section><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
-            <p class="evoSectionPokNum"><span>#${arrayPokSelect[0].num} </span></p>
-            <p class="evoSectionPokName"><span>${arrayPokSelect[0].name}</span></p>
+            <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+            <p class="evoSectionPokNum">#${arrayPokSelect[0].num}</p>
+            <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
         </section>
         <section class="nextEvolution">
-            <section><img class="imgPokEv" src="${imgPokNext}"></section>
-            <p class="evoSectionPokNum"><span>#${arrayNextEvolution.num}</span></p>
-            <p class="evoSectionPokName"><span>${nextPok1}</span></p>
+            <section><img class="imgPokEv" src="${imgPokNext1}"></section>
+            <p class="evoSectionPokNum">#${arrayNextEvolution.num}</p>
+            <p class="evoSectionPokName">${arrayNextEvolution.name}</p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
+        </section>
+        <section class="nextEvolution">
+            <section><img class="imgPokEv" src="${imgPokNext2}"></section>
+            <p class="evoSectionPokNum">#${arrayNextEvolution["next-evolution"][0].num}</p>
+            <p class="evoSectionPokName">${arrayNextEvolution["next-evolution"][0].name}</p>
+            <p class="evoSectionPokCandy">Cost of candy: ${arrayNextEvolution["next-evolution"][0]["candy-cost"]}</p>
+        </section>`
+    }
+    else if (quantityNextEvo===3 || noPropPermit==="evolution-item"){
+        const arrayNextEvolution =arrayPokSelect[0].evolution["next-evolution"][0];
+        const imgPokNext1 = extractImgPok(data.pokemon,arrayNextEvolution.num);
+        return `
+        <section class="currentPok">
+            <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+            <p class="evoSectionPokNum">#${arrayPokSelect[0].num}</p>
+            <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
+        </section>
+        <section class="nextEvolution">
+            <section><img class="imgPokEv" src="${imgPokNext1}"></section>
+            <p class="evoSectionPokNum">#${arrayNextEvolution.num}</p>
+            <p class="evoSectionPokName">${arrayNextEvolution.name}</p>
             <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
         </section>`
     }
-    else{
-        return`
-        <section class="preEvolution">
-            <p class="noEvolution">¡There are no evolutions for this pokémon !</p>
+}
+
+else if (quantityPropEv===2 && Object.keys(itemEvolution)[1]==="prev-evolution"){
+    const arrayPrevEvolution =arrayPokSelect[0].evolution["prev-evolution"][0];
+    const imgPokPrev1 = extractImgPok(data.pokemon,arrayPrevEvolution.num);
+    const quantityPrevEvo=Object.keys(arrayPokSelect[0].evolution["prev-evolution"][0]).length;
+    const noPropPermit = Object.keys(arrayPokSelect[0].evolution["prev-evolution"][0])[3]
+    if(quantityPrevEvo==4 && noPropPermit!=="evolution-item"){
+        const imgPokPrev2 = extractImgPok(data.pokemon,arrayPrevEvolution["prev-evolution"][0].num);
+        return `
+        <section class="prevEvolution">
+            <section><img class="imgPokEv" src="${imgPokPrev2}"></section>
+            <p class="evoSectionPokNum">#${arrayPrevEvolution["prev-evolution"][0].num}</p>
+            <p class="evoSectionPokName">${arrayPrevEvolution["prev-evolution"][0].name}</p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["prev-evolution"][0]["candy-cost"]}</p>
+        </section>
+        <section class="prevEvolution">
+            <section><img class="imgPokEv" src="${imgPokPrev1}"></section>
+            <p class="evoSectionPokNum">#${arrayPrevEvolution.num}</p>
+            <p class="evoSectionPokName">${arrayPrevEvolution.name}</p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
+        </section>
+        <section class="currentPok">
+            <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+            <p class="evoSectionPokNum">#${arrayPokSelect[0].num}</p>
+            <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
         </section>`
     }
-    
+    else if(quantityPrevEvo==3 || noPropPermit==="evolution-item"){
+        return `
+        <section class="prevEvolution">
+            <section><img class="imgPokEv" src="${imgPokPrev1}"></section>
+            <p class="evoSectionPokNum">#${arrayPrevEvolution.num}</p>
+            <p class="evoSectionPokName">${arrayPrevEvolution.name}</p>
+            <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
+        </section>
+        <section class="currentPok">
+            <section class><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+            <p class="evoSectionPokNum"><#${arrayPokSelect[0].num}</p>
+            <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
+        </section>`
+    }
+}
+
+else if (quantityPropEv==3){
+    const arrayNextEvolution =arrayPokSelect[0].evolution["next-evolution"][0];
+    const imgPokNext1 = extractImgPok(data.pokemon,arrayNextEvolution.num);
+    const arrayPrevEvolution =arrayPokSelect[0].evolution["prev-evolution"][0];
+    const imgPokPrev1 = extractImgPok(data.pokemon,arrayPrevEvolution.num);
+    return `
+    <section class="preEvolution">
+        <section class><img class="imgPokEv" src="${imgPokPrev1}"></section>
+        <p class="evoSectionPokNum">#${arrayPrevEvolution.num}</p>
+        <p class="evoSectionPokName">${arrayPrevEvolution.name}</p>
+        <p class="evoSectionPokCandy">Candy cost: ${arrayPrevEvolution["candy-cost"]}</p>
+    </section>
+    <section class="currentPok">
+        <section><img class="imgPokEv" src="${arrayPokSelect[0].img}"></section>
+        <p class="evoSectionPokNum">#${arrayPokSelect[0].num}</p>
+        <p class="evoSectionPokName">${arrayPokSelect[0].name}</p>
+    </section>
+    <section class="nextEvolution">
+        <section><img class="imgPokEv" src="${imgPokNext1}"></section>
+        <p class="evoSectionPokNum">#${arrayNextEvolution.num}</p>
+        <p class="evoSectionPokName">${arrayNextEvolution.name}</p>
+        <p class="evoSectionPokCandy">Candy cost: ${arrayNextEvolution["candy-cost"]}</p>
+    </section>`
+}
+
+else {
+    return`<section class="preEvolution">
+        <p class="noEvolution">¡There are no evolutions for this pokémon</p>
+    </section>`
+    }
 }
 
 //función para extraer tipo.
@@ -299,13 +298,6 @@ const extractTypePok = (dataType) => {
         return `<p class="${x}">${x}</p>`;
     })}
 
-
-
-//console.log(example, data);
-
-
-//const namePok= document.querySelector('.namePok').textContent;
-//console.log(namePok);
 
 //**************Egda****************
 
@@ -408,11 +400,6 @@ const extractTypePok = (dataType) => {
 
 
 //**************Consuelo*****************************
-
-
-
-
-
 
 
 
