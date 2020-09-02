@@ -40,7 +40,8 @@ for (let i = 0; i < data.pokemon.length; i++) {
 	let labelnumber = document.createElement('span');
 	labelnumber.classList.add('number');
 	labelinfo.appendChild(labelnumber);
-	labelnumber.innerHTML=num;//agregando data de numero
+	labelnumber.innerHTML='#' + num;//agregando data de numero con #
+	
 
 	// AGREGANDO NOMBRE
 	let labelname = document.createElement('h4');
