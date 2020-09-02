@@ -396,6 +396,7 @@ const capitulo = () => {
 document.getElementById("capitulos").addEventListener("click", capitulo);
 
 const volverPrincipal = () => {
+	document.getElementById('icon-menu').classList.remove('ocultar');
 	document.getElementById('conteni').classList.add('menu-active');
 	document.getElementById('capitulos').classList.remove('menu-active');
 	document.getElementById('nosotras').classList.remove('menu-active');
