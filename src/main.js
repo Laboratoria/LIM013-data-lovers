@@ -1,7 +1,6 @@
 import datajs from './data.js';
 let data = window.rickAndMorty.results;
 let capis = window.capRickMorty.results;
-console.log(capis);
 let currentPage = 1;
 let rows = 40;
 const listElement = document.getElementById('alldata');
@@ -207,7 +206,7 @@ for (let i = 0; i < botonesFiltros.length; i++) {
 		inputsFiltros[j].addEventListener("click", btnF);
 	}
 }
-const botonesFiltrosM = document.querySelector("#accordions").children;
+
 const contentUlM = document.getElementById("accordions");
 const inputNameM = contentUlM.getElementsByTagName("input");
 const btnFM = () => {

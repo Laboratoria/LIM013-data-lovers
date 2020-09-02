@@ -124,14 +124,14 @@ window.capRickMorty = {
 			"air_date": "March 24, 2014",
 			"episode": "S01E09",
 			"characters": [
-			 "88",
-			 "192",
-			 "240",
-			 "243",
-			 "251"
+				"88",
+				"192",
+				"240",
+				"243",
+				"251"
 			],
-			 "url": "https://rickandmortyapi.com/api/episode/9",
-			 "created": "2017-11-10T12:56:34.645Z"
+			"url": "https://rickandmortyapi.com/api/episode/9",
+			"created": "2017-11-10T12:56:34.645Z"
 		},
 		{
 			"id": 10,
@@ -145,13 +145,13 @@ window.capRickMorty = {
 				"18",
 				"19"
 			],
-				"url": "https://rickandmortyapi.com/api/episode/10",
-				"created": "2017-11-10T12:56:34.747Z"
+			"url": "https://rickandmortyapi.com/api/episode/10",
+			"created": "2017-11-10T12:56:34.747Z"
 		},
 		{
 			"id": 11,
 			"name":
-			"Ricksy Business",
+				"Ricksy Business",
 			"air_date": "April 14, 2014",
 			"episode": "S01E11",
 			"characters": [
@@ -160,9 +160,9 @@ window.capRickMorty = {
 				"47",
 				"58",
 				"88"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/11",
-				"created": "2017-11-10T12:56:34.850Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/11",
+			"created": "2017-11-10T12:56:34.850Z"
 		},
 		{
 			"id": 12,
@@ -190,9 +190,9 @@ window.capRickMorty = {
 				"34",
 				"106",
 				"122"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/13",
-				"created": "2017-11-10T12:56:35.055Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/13",
+			"created": "2017-11-10T12:56:35.055Z"
 		},
 		{
 			"id": 14,
@@ -235,9 +235,9 @@ window.capRickMorty = {
 				"115",
 				"124",
 				"138"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/16",
-				"created": "2017-11-10T12:56:35.364Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/16",
+			"created": "2017-11-10T12:56:35.364Z"
 		},
 		{
 			"id": 17,
@@ -245,14 +245,14 @@ window.capRickMorty = {
 			"air_date": "August 30, 2015",
 			"episode": "S02E06",
 			"characters": [
-			 "28",
-			 "34",
-			 "65",
-			 "129",
-			 "159"
-			 ],
-			 "url": "https://rickandmortyapi.com/api/episode/17",
-			 "created": "2017-11-10T12:56:35.467Z"
+				"28",
+				"34",
+				"65",
+				"129",
+				"159"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/17",
+			"created": "2017-11-10T12:56:35.467Z"
 		},
 		{
 			"id": 18,
@@ -280,9 +280,9 @@ window.capRickMorty = {
 				"49",
 				"51",
 				"105"
-				], 
-				"url": "https://rickandmortyapi.com/api/episode/19",
-				"created": "2017-11-10T12:56:35.669Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/19",
+			"created": "2017-11-10T12:56:35.669Z"
 		},
 		{
 			"id": 20,
@@ -310,9 +310,9 @@ window.capRickMorty = {
 				"55",
 				"75",
 				"102"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/21",
-				"created": "2017-11-10T12:56:35.875Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/21",
+			"created": "2017-11-10T12:56:35.875Z"
 		},
 		{
 			"id": 22,
@@ -325,9 +325,9 @@ window.capRickMorty = {
 				"38",
 				"42",
 				"47"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/22",
-				"created": "2017-11-10T12:56:35.983Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/22",
+			"created": "2017-11-10T12:56:35.983Z"
 		},
 		{
 			"id": 23,
@@ -340,9 +340,9 @@ window.capRickMorty = {
 				"68",
 				"110",
 				"111"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/23",
-				"created": "2017-11-10T12:56:36.100Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/23",
+			"created": "2017-11-10T12:56:36.100Z"
 		},
 		{
 			"id": 24,
@@ -355,9 +355,9 @@ window.capRickMorty = {
 				"107",
 				"167",
 				"171"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/24",
-				"created": "2017-11-10T12:56:36.206Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/24",
+			"created": "2017-11-10T12:56:36.206Z"
 		},
 		{
 			"id": 25,
@@ -370,9 +370,9 @@ window.capRickMorty = {
 				"35",
 				"60",
 				"81"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/25",
-				"created": "2017-11-10T12:56:36.310Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/25",
+			"created": "2017-11-10T12:56:36.310Z"
 		},
 		{
 			"id": 26,
@@ -385,9 +385,9 @@ window.capRickMorty = {
 				"115",
 				"137",
 				"142"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/26",
-				"created": "2017-11-10T12:56:36.413Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/26",
+			"created": "2017-11-10T12:56:36.413Z"
 		},
 		{
 			"id": 27,
@@ -400,9 +400,9 @@ window.capRickMorty = {
 				"170",
 				"180",
 				"181"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/27",
-				"created": "2017-11-10T12:56:36.515Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/27",
+			"created": "2017-11-10T12:56:36.515Z"
 		},
 		{
 			"id": 28,
@@ -415,9 +415,9 @@ window.capRickMorty = {
 				"22",
 				"27",
 				"43"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/28",
-				"created": "2017-11-10T12:56:36.618Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/28",
+			"created": "2017-11-10T12:56:36.618Z"
 		},
 		{
 			"id": 29,
@@ -430,9 +430,9 @@ window.capRickMorty = {
 				"3",
 				"4",
 				"5"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/29",
-				"created": "2017-11-10T12:56:36.726Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/29",
+			"created": "2017-11-10T12:56:36.726Z"
 		},
 		{
 			"id": 30,
@@ -460,9 +460,9 @@ window.capRickMorty = {
 				"166",
 				"244",
 				"247"
-				],
-				"url": "https://rickandmortyapi.com/api/episode/31",
-				"created": "2017-11-10T12:56:36.929Z"
+			],
+			"url": "https://rickandmortyapi.com/api/episode/31",
+			"created": "2017-11-10T12:56:36.929Z"
 		},
 
 	]
