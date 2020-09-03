@@ -1,145 +1,30 @@
+@import url(menu.css);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    font-family: "Segoe UI Emoji Regular";
-    font-size: 18px;
-    line-height: 1.6; 
-}
-
-header {
+body, html {
+    background: url("img/fondo1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     width: 100%;
-    background: #323435d5;
-    font-weight: bold;
-}
-
-#btn-menu {
-    display: none;
-}
-
-header label{
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-right: none;
-}
-
-/* Hover: le da efecto sombra cuando pasa el mouse */
-
-header label:hover{
-    cursor: pointer;
-    background: rgba(13, 13, 14, 0.795);
-}
-
-.menu ul{
+    height: 100%;
+    font-family: sans-serif;
+    color: #333;
+    padding: 20px 0 20px 0;
     margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;   
 }
 
-.menu li{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-title {
     text-align: center;
-    flex-grow: 1;
-    border-right: none;
-    
 }
-
-.menu li:hover {
-    background: rgba(13, 13, 14, 0.795);
-
-}
-
-.menu li a{
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu ul ul {
-    display: none;
-}
-
-.menu ul li:hover ul{
-    display: block;
-    position: absolute;
-}
-
-/* Submenúes 1 y 2 */
-/* Para la próxima darle id o li class si es más de uno
-al primero y así, para evitar confusiones */
-
-.menu a{
-    background: #323435d5;
-    
-}
-
-.menu a:hover {
-    background: rgba(0,0,0,0.3);
-}
-
-.submenu{
-    background: #323435d5;
-}
-
-.submmenu:hover {
-    background: rgba(0,0,0,0.3);
-}
-
-/* Responsive */
-
-@media (max-width:768px) {
-
-    header label {
-        display: block;
-    }
-
-    .menu {
-        margin: auto;
-        position: absolute;
-        background: #323435d5;
-        width: 70%;
-        margin-left: -70%;
-        transition: all 0.5s;
-        font-weight: bold;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu li {
-        border-top: none;
-    }
-
-    .menu ul li:hover ul {
-        display: block;
-        background: #323435d5;
-        width: 80%;
-        transition: all 0.5s;
-    }
-
-    #btn-menu:checked ~ .menu {
-        margin: 0;
-    }
-
-    /* Submenúes */
-
-    .menu a {
-        flex-direction: column;
-        font-size: 16px;
-        background: #383c3dbb;
-    }
-
-    .submenu {
-        flex-direction: column;
-        font-size: 16px;
-    }
-} 
