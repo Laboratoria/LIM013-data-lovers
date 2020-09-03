@@ -1,13 +1,50 @@
-import { filterByType, sortByName, filterByName, computeByStats } from '../src/data.js';
-import data from '../src/data/pokemon/pokemon.js';
+import { filterByType,sortByName,filterByName,computeByStats } from '../src/data.js';
+// import data from '../src/data/pokemon/pokemon.js';
+
+// const testPokemon = {
+//   "pokemon":[{"num": "001" , "name": "charizard","type": ["fire","flying"]},
+//      {"num": "003" , "name": "squirtle","type": ["water"]},
+//      {"num": "002" , "name": "bulbasaur","type": ["grass","poison"]},
+//      ]
+//  };
+
+//  const grassPokemon = [ 
+//   {"num": "002" , "name": "bulbasaur","type": ["grass","poison"]
+//   }];
+
+const dataPokemon = [
+     {num: "001" , name: "bulbasaur", type: [ "grass","poison" ]},
+     {num: "002" , name: "ivysaur" , type: [ "grass","poison" ]},
+     {num: "003" , name: "venusaur", type: [ "grass","poison" ]},
+     {num: "004", name: "charmander", type: [ "fire" ]}
+  ];
+const filterGrass = [
+    {num: "001" , name: "bulbasaur" , type: [ "grass","poison" ]},
+    {num: "002" , name: "ivysaur", type: [ "grass","poison" ]},
+    {num: "003" , name: "venusaur" , type: [ "grass","poison" ]},
+ ];
+
+const orderName = [
+    {num:"001", name:"bulbasaur", type:["grass","poison"]},
+    {num: "004", name: "charmander", type:["fire"]},
+    {num: "002", name: "ivysaur", type:["grass","poison"]},
+    {num: "003", name: "venusaur", type:["grass","poison"]}
+];
+
+const serchName = [
+    {num: "004", name: "charmander", type:["fire"]}
+];
+
+
 
 describe('filterByType', () => {
   it('is a function', () => {
     expect(typeof filterByType).toBe('function');
   });
 
-  it('returns `is a poison type`', () => {
-    expect(filterByType(data.pokemon,'poison')).toEqual('poison');
+  it('returns `type grass`', () => {
+    expect(filterByType(dataPokemon,"grass")).toEqual(filterGrass)
+    
   });
 });
 
@@ -17,8 +54,8 @@ describe('sortByName', () => {
     expect(typeof sortByName).toBe('function');
   });
 
-  it('returns `is a A-Z list`', () => {
-    expect(sortByName(data.pokemon,'A-Z')).toEqual('poison');
+  it('returns `A-Z`', () => {
+    expect(sortByName(dataPokemon,"A-Z")).toEqual(orderName);
   });
 }); 
 
@@ -28,8 +65,8 @@ describe('filterByName', () => {
     expect(typeof filterByName).toBe('function');
   });
 
-  it('returns `Abra`', () => {
-    expect(filterByName(data.pokemon,'abra')).toEqual(data.pokemon[0]);
+  it('returns `name charmander`', () => {
+    expect(filterByName(dataPokemon,"charmander")).toEqual(serchName);
   });
 }); 
 
@@ -37,9 +74,19 @@ describe('filterByName', () => {
 describe('computeByStats', () => {
   it('is a function', () => {
     expect(typeof computeByStats).toBe('function');
+
   });
 
-  it('returns `puntos de combate`', () => {
-    expect(computeByStats(data.pokemon,'A-Z')).toEqual('poison');
+  const pokemon = [
+    {num: "002", name: "ivysaur", type:["grass","poison"],stats:{"base-attack": "151","base-defense": "143","base-stamina": "155","max-cp": "1699","max-hp": "134"},
+    }
+  ];
+  const resultPc = [
+    {num: "002", name: "ivysaur", type:["grass","poison"],stats:{"base-attack": "151","base-defense": "143","base-stamina": "155","max-cp": "1699","max-hp": "134"},
+    }
+  ];
+  
+  it('returns `2131`', () => {
+    expect(computeByStats(pokemon,"2131")).toEqual(resultPc);
   });
 }); 
