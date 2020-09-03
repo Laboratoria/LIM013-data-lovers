@@ -9,25 +9,25 @@ const order = {
   },
 
   filterRange: function (arrayLegends, attackrange) {
-    if(attackrange == 'rango1'){
-      return  arrayLegends.filter((objLegend) =>{
-        return objLegend.stats.attackrange>=125 && objLegend.stats.attackrange<=230;
+    if (attackrange == 'rango1') {
+      return arrayLegends.filter((objLegend) => {
+        return objLegend.stats.attackrange >= 125 && objLegend.stats.attackrange <= 230;
       })
-    }else if(attackrange == 'rango2'){
-      return arrayLegends.filter((objLegend) =>{
-        return objLegend.stats.attackrange>=231 && objLegend.stats.attackrange<=335;
-      }) 
-    }else if(attackrange == 'rango3'){
-      return arrayLegends.filter((objLegend) =>{
-        return objLegend.stats.attackrange>=336 && objLegend.stats.attackrange<=440;
+    } else if (attackrange == 'rango2') {
+      return arrayLegends.filter((objLegend) => {
+        return objLegend.stats.attackrange >= 231 && objLegend.stats.attackrange <= 335;
       })
-    }else if(attackrange == 'rango4'){
-      return arrayLegends.filter((objLegend)=>{
-        return objLegend.stats.attackrange>=441 && objLegend.stats.attackrange<=545;
+    } else if (attackrange == 'rango3') {
+      return arrayLegends.filter((objLegend) => {
+        return objLegend.stats.attackrange >= 336 && objLegend.stats.attackrange <= 440;
       })
-    }else if(attackrange == 'rango5'){
-      return arrayLegends.filter((objLegend)=>{
-        return objLegend.stats.attackrange>=546 && objLegend.stats.attackrange<=650;
+    } else if (attackrange == 'rango4') {
+      return arrayLegends.filter((objLegend) => {
+        return objLegend.stats.attackrange >= 441 && objLegend.stats.attackrange <= 545;
+      })
+    } else if (attackrange == 'rango5') {
+      return arrayLegends.filter((objLegend) => {
+        return objLegend.stats.attackrange >= 546 && objLegend.stats.attackrange <= 650;
       })
     }
   },

@@ -31,7 +31,7 @@
     </header>
 
 
-    <div class="search">
+    <section class="search">
       <div class="search1">
         <input type="text" id="inputSearch" placeholder="Buscar a ...">
       </div>
@@ -54,21 +54,30 @@
           <option value="rango4">441-545</option>
           <option value="rango5">546-650</option>
         </select>
+
         <select name="order" id="order">
           <option value="asc">Ordenar A-Z</option>
           <option value="desc">Ordenar Z-A</option>
         </select>
       </div>
-    </div>
-    <div id="legends_container" class="legends_container">
+    </section>
+    <section id="legends_container" class="legends_container">
       <!-- <div class="legends">
           <img class="img-container" src="" alt="">
           <div class="name"></div>
         </div> -->
-    </div>
-    <div class="pagenumbers" id="pagination">
+    </section>
+    <section class="overlay" id="overlay">
+      <div class="container-img">
+        <button id="btn-close"><i class="fas fa-times"></i></button>
+        <img src="">
+      </div>
+      <p class="description"></p>
 
-    </div>
+    </section>
+    <section class="pagenumbers" id="pagination">
+
+    </section>
 
   </div>
   <script src="./main.js" type="module"></script>
