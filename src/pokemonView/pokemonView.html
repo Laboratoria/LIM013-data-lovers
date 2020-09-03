@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="responsive.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Header containing logo, title and navigation menu-->
+    <div id="container">
+        <header id="header">
+            <div id="logo">
+                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" />
+                <h1 id="pokedex">POKEDEX</h1>
+            </div>
+            <div id="nav-drop">
+                <input id="box-icon-menu" type="checkbox" name="menu" />
+                <label id="label-nav" for="box-icon-menu"><i id="menu-icon" class="fas fa-search"></i></label>
+                <div id="search">
+                    <div id="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="search" placeholder="Search by number or name" />
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!--End of header-->
+        <div id="content">
+            <div id="data-pokemon">
+                <img />
+                <div id="text-info">
+                    <p id="num"></p>
+                    <p id="name"></p>
+                    <p id="about"></p>
+                </div>
+            </div>
+            <div id="overview-stat-abilitie">
+                <div id="overview"></div>
+                <div id="stats"></div>
+                <div id="abililities"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0451b6060d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
