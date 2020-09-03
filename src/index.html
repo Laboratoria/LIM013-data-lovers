@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
   </head>
+
   <body>
+
     <header>
+
       <h1>PokeInfo</h1>
-      <figure ></figure>
+
+      <section class="section1">
+
+        <select id="selectByName" class="section1_select">
+          <option value="0">Ordenar</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+          <option value="Número inferior">Número inferior</option>
+          <option value="Número superior">Número superior</option>
+        </select>
+  
+        <select id="selectByType" class="section1_select">
+          <option value="0">Filtrar</option>
+          <option value="allTypes">All types</option>
+          <option value="grass">grass</option>
+          <option value="poison">poison</option>
+          <option value="ice">ice</option>
+         <option  value="water">water</option>
+
+        </select>
+
+        <input id="searchByName" class="section1_input">
+
+      </section>
+        
+      <h2>Pokeinfo-<span id="index" class="section2_span">All Types</span></h2>
+
+      
+
     </header>
     
-      <input  id="searchByName" class="select">
+    <main>
+   
+      <section class="section2">
 
-      <select id="selectByName" class="select">
-        <option value="0">Ordenar</option>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
-        <option value="Número inferior">Número inferior</option>
-        <option value="Número superior">Número superior</option>
-      </select>
-
-      <select id="selectByType" class="select">
-        <option value="0">Filtrar</option>
-        <option value="allTypes">All types</option>
-        <option value="grass">grass</option>
-        <option value="poison">poison</option>
-        <option value="ice">ice</option>
-       <option  value="water">water</option>
-      </select>
-  
-    <section>
-      <h2>PokeInfo<span id="extent"></span></h2>
-    </section>
-    
-     <div id="container" class="contenedor"></div>
+        <div id="table" class="section2_table"></div>
      
-     <div id="container-modal" class="contenedor-modal"></div>
+        <div id="modal" class="section2_modal"></div>
 
-     <footer class="footer">Footer</footer>
+      </section>
+      
+      </main>    
+
+    <footer class="footer">Redes sociales</footer>
+
     <script src="main.js" type="module"></script>
+
   </body>
+
 </html>

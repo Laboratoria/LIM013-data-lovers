@@ -15,7 +15,7 @@ const filterByGrass = [
 ];
 
 const sortByAZ = [
-  { num: "005", name: "abra", type: [ "psiquico" ]},
+  { num: "005", name: "abra", type: [ "psychic" ]},
   { num: "001", name:"bulbasaur", type:["grass","poison"]},
   { num: "004", name: "charmander", type:["fire"]},
   { num: "002", name: "ivysaur", type:["grass","poison"]},
@@ -23,8 +23,12 @@ const sortByAZ = [
 ];
 
 const filterByAbra = [
-  { num: "005", name: "abra", type:["psiquico"]}
+  { num: "005", name: "abra", type:["psychic"]}
 ];
+
+const pokemonstats =  [ "151","143","155","1699","134"];
+
+const computeByPc = 2282;
 
 
 describe('filterByType', () => {
@@ -59,11 +63,6 @@ describe('filterByName', () => {
     expect(filterByName(dataPokemon,"abra")).toEqual(filterByAbra);
   });
 }); 
-
-
-const pokemonstats =  [ "151","143","155","1699","134"];
-
-const computeByPc = 2282;
 
 
 describe('computeByStats', () => {
