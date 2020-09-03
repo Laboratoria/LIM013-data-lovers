@@ -47,6 +47,29 @@ export const orderByAsc = (dataPok) => {
 })
 }
 
+//función que filtra por tipo de pokémon
+export const filterByType = (arrayTypeSelect,dataPokemon) =>{ 
+  if (arrayTypeSelect.length===1){
+      return dataPokemon.filter((dataPokemon)=>{ 
+          return arrayTypeSelect[0]===dataPokemon.type[0]||arrayTypeSelect[0]===dataPokemon.type[1];
+      })    
+  }
+  else if(arrayTypeSelect.length===2){
+    const newArray = dataPokemon.filter((dataPokemon)=>{ 
+    const condition1=arrayTypeSelect[0]===dataPokemon.type[0]||arrayTypeSelect[0]===dataPokemon.type[1];
+    const condition2=arrayTypeSelect[1]===dataPokemon.type[0]||arrayTypeSelect[1]===dataPokemon.type[1];
+    
+    return condition1 && condition2;
+      })
+      if(newArray.length!==0){
+          return newArray;
+      } else {
+          alert("¡There is no pokemon with that type combination, please choose a new combination!");
+          
+      }
+  }
+}
+
 
 
 

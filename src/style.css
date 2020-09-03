@@ -183,6 +183,7 @@ border-radius: 0px 5px 5px 0px;
 /*************todo referente al main***************/
 
 /************acordion, toggle**********************/
+
 .accordionButton {
     display: block;
     width: 100%;
@@ -199,6 +200,7 @@ border-radius: 0px 5px 5px 0px;
     background-repeat: no-repeat; 
     background-size: cover;
 }
+
 
 .accordionButton::after {
     content: "Search by Type | \25bc";
@@ -452,6 +454,7 @@ input[type="checkbox"]:checked + label {
     padding: 20px 0px;
     justify-content: center;
     height: 800px;
+    width: 100%;
     background-color: none;
     overflow-y: scroll; 
 }
