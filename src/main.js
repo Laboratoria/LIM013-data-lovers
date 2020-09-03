@@ -5,6 +5,7 @@ import data from './data/pokemon/pokemon.js';
 
 console.log(example, data); */
 
+import { orderData } from './data.js'; 
 import data from './data/pokemon/pokemon.js';
 
 for (let i = 0; i < data.pokemon.length; i++) {
@@ -56,3 +57,10 @@ for (let i = 0; i < data.pokemon.length; i++) {
 }
 
 console.log(name);
+
+const ordenarSelectBox= document.getElementById('ordenar');
+ordenarSelectBox.addEventListener('change',function(e){
+const valor=e.target.value;
+const dataOrdenado = orderData(data.pokemon,'a-z');
+console.log(dataOrdenado);
+});
