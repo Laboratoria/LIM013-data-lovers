@@ -6,6 +6,8 @@ import {sortByAsc} from './data.js';
 import {sortByDesc} from './data.js';
 import {sortByLessPwr} from './data.js';
 import {sortByMorePwr} from './data.js';
+import {filterByType} from './data.js';
+
 
 //console.log(orderByAsc(data.pokemon));
 
@@ -49,6 +51,26 @@ const morePwrButton = document.getElementById("morePwr");
 morePwrButton.addEventListener('click',()=>{
     showPokDisplay(sortByMorePwr(data.pokemon));
 });
+//Buscar por tipo
+document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=>{
+    //event.preventDefault();
+    const arrayCheck = document.querySelectorAll('.typeContainerBody input[type="checkbox"]')
+    let contenedor =[];
+    let contador=-1;    
+    for (let i = 0; i < arrayCheck.length; i++) {
+        if(arrayCheck[i].checked==true){
+            contador=contador+1;
+            contenedor[contador]=arrayCheck[i].value;       
+        } 
+    }
+    if (contador>=2) {
+        alert("¡ Please select only two types !")
+    } else {
+        showPokDisplay(filterByType(contenedor,data.pokemon));
+    }  
+});
+
+
 
 //crear dinamicamente elemntos section y asignarle imagen
 //función que recibe un array y lo  en el display de pokemones
@@ -77,12 +99,12 @@ const showPokDisplay = (dataSelect) => {
     const showEssential = document.querySelectorAll('.picture');
     for (let index = 0; index < showEssential.length; index++) {
         //mouseover pasar mouse
-        showEssential[index].addEventListener('mouseover',()=>{
+        showEssential[index].addEventListener('mouseover' || 'touch',()=>{
             document.querySelectorAll('.img')[index].style.display="none";
             document.querySelectorAll('.essentialInformation')[index].style.display="block";
         }); 
         //mouseout quitar mouse
-        showEssential[index].addEventListener('mouseout',()=>{
+        showEssential[index].addEventListener('mouseout'||'touch',()=>{
             document.querySelectorAll('.img')[index].style.display="block";
             document.querySelectorAll('.essentialInformation')[index].style.display="none";
         });
@@ -423,6 +445,9 @@ const extractTypePok = (dataType) => {
 
 //**************Consuelo*****************************
 
+
+//const arrayType=["rock","grass"];
+//console.log(filterByType(arrayType,data.pokemon));
 
 
 
