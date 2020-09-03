@@ -182,8 +182,11 @@ document.getElementById("inputSearch").addEventListener("keyup", () => {
 
 let divsPokemons = document.getElementsByClassName("pokemon");
 for (let i = 0; i < divsPokemons.length; i++) {
+    localStorage.clear();
     divsPokemons[i].addEventListener("click", (e) => {
         let labelHTML = e.target;
-        alert(labelHTML.alt);
+        const namePokemon = labelHTML.alt;
+        localStorage.setItem('namePokemon', namePokemon);
+        window.location = "pokemonView/pokemonView.html";
     });
 }
