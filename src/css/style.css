@@ -224,10 +224,6 @@ footer i:hover {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  /*-webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;*/
 }
 
 #inputSearch {
@@ -245,24 +241,10 @@ footer i:hover {
   width: 50%;
 }
 
+#order,
+.daño_de_ataque,
 #filter {
   background: white;
-  /* width: 50%; */
-  width: 100%;
-  border: 2px solid #986E1E;
-  margin: 10px 0px;
-  align-items: center;
-  line-height: 35px;
-  text-align: center;
-  display: flex;
-  outline: none;
-  text-transform: uppercase;
-  color: #986E1E;
-  font-weight: bold;
-}
-
-.daño_de_ataque {
-  background: white;
   width: 100%;
   border: 2px solid #986E1E;
   margin: 10px 0px;
@@ -270,29 +252,7 @@ footer i:hover {
   text-transform: uppercase;
   color: #986E1E;
   font-weight: bold;
-}
-
-input[type=button] {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
-  color: #986E1E;
-  font-weight: bold;
-  width: 20%;
-  outline: none;
-}
-
-#order {
-  background: white;
-  width: 100%;
-  border: 2px solid #986E1E;
-  margin: 10px 0px;
-  border-radius: 0px 5px 5px 0px;
-  outline: none;
-  text-transform: uppercase;
-  color: #986E1E;
-  font-weight: bold;
+  height: 40px;
 }
 
 /*---------------CARDS LEGEDS -------- */
@@ -330,6 +290,7 @@ input[type=button] {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
+
 .legends_stats1:hover {
   transform: translateY(-5px) scale(1.4) translateZ(0);
   transition: all 0.3s ease-in-out;
@@ -475,6 +436,80 @@ input[type=button] {
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
+/*---------------MODAL ------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.overlay img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.overlay .description {
+  display: block;
+  background: #fff;
+  text-align: center;
+  margin-top: 5px;
+  width: 250px;
+  /* border-radius: 10px; */
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+
+.overlay .info {
+  padding: 10px 0px;
+  text-align: center;
+  width: 250px;
+  background: #fff;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.overlay .info p {
+  display: inline-block;
+  padding: 10px 5px;
+  background: #986E1E;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.container-img {
+  position: relative;
+}
+
+.overlay #btn-close {
+  background: none;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+
 /*--------------MEDIA-QUERYS---------------*/
 @media screen and (max-width:768px) {
   .container {
@@ -611,8 +646,9 @@ input[type=button] {
 
   .legends_stats1:hover {
     transform: translateY(-5px) scale(1.1) translateZ(0);
-    margin: 30px 0px ;
+    margin: 30px 0px;
   }
+
   header nav a:hover,
   .active {
     color: #fff;
@@ -665,4 +701,5 @@ input[type=button] {
   h3 {
     font-size: 18px;
   }
+
 }

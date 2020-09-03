@@ -25,7 +25,7 @@ button.addEventListener('click', () => {
 })
 
 /*---LISTAR EN EL HTML---*/
-const listLegends = (name, img, title) => {
+const listLegends = (name, img, title, blurb, attack, defense, magic) => {
 
   const legend = document.createElement("div"),
     imgLegend = document.createElement("img"),
@@ -35,6 +35,11 @@ const listLegends = (name, img, title) => {
   nameLegend.innerHTML += name;
   titleLegend.innerHTML += `<p>"${title}"</p>`;
   legend.setAttribute("class", "legends");
+  legend.dataset.blurb = blurb;
+  legend.dataset.attack = attack;
+  legend.dataset.defense = defense;
+  legend.dataset.magic = magic;
+
   imgLegend.setAttribute("class", "img-container");
   imgLegend.setAttribute("src", img);
   nameLegend.setAttribute("class", "name");
@@ -54,9 +59,12 @@ const getLegends = (objLegend) => {
     let name = objLegend[i].name;
     let img = objLegend[i].splash;
     let title = objLegend[i].title;
-
-    listLegends(name, img, title);
-
+    let blurb = objLegend[i].blurb;
+    let attack = objLegend[i].info.attack;
+    let defense = objLegend[i].info.defense;
+    let magic = objLegend[i].info.magic;
+    //console.log('magic',magic);
+    listLegends(name, img, title, blurb, attack, defense, magic);
   }
 };
 
@@ -77,9 +85,9 @@ const displayList = (items, wrapper, rows_per_page, page) => {
 
   for (let i = 0; i < paginationItems.length; i++) {
     let item = paginationItems[i];
-
+    listLegends
     //console.log('item',item.name)
-    listLegends(item.name, item.splash, item.title)
+    listLegends(item.name, item.splash, item.title, item.blurb, item.info.attack, item.info.defense, item.info.magic)
   }
 
 }
@@ -135,15 +143,12 @@ filter.addEventListener('change', (e) => {
 })
 
 /*FILTRO DAÑO ATAQUE*/
+const daño_de_ataque = document.querySelector('.daño_de_ataque');
+daño_de_ataque.addEventListener('change', (e) => {
+  const attackrange = e.target.value;
+  const prueba = order.filterRange(arrayLegends, attackrange);
 
-const daño_de_ataque=document.querySelector('.daño_de_ataque');
-daño_de_ataque.addEventListener('change', (e)=> {
-  const attackrange= e.target.value;
-  //console.log('daño', attackrange);
-  const prueba= order.filterRange (arrayLegends, attackrange);
-  //console.log (result);
-  legends_container.innerHTML ='';
-  if (prueba ===''){
+  if (prueba === '') {
     legends_container.innerHTML +=
       `<div class="legends">
       <img class="img-container" src="./imagenes/notFound.gif" alt="">
@@ -151,20 +156,9 @@ daño_de_ataque.addEventListener('change', (e)=> {
     </div>`
   }
   document.getElementById('legends_container').innerHTML = '';
-    displayList(prueba, legends_container, rows, current_page);
-    setupPagination(prueba, pagination_element, rows);
+  displayList(prueba, legends_container, rows, current_page);
+  setupPagination(prueba, pagination_element, rows);
 })
-
-  /*Metodo map para valor min y maximo */
-  //const map= arrayLegends.map(function(item){
-   // return item.stats.attackrange;
-  //})
-  /*return Math.min.apply(null, result);*/
-  //console.log('map', Math.min.apply(null, map));
-  //console.log('map1', Math.max.apply(null, map));
-//});
-
-
 
 /*ORDER */
 const selector = document.querySelector("#order");
@@ -194,14 +188,7 @@ const search = () => {
   for (let legend of arrayLegends) {
     let nombre = legend.name.toLowerCase()
     if (nombre.indexOf(texto) != -1) {
-
-      legends_container.innerHTML +=
-        `<div class="legends">
-        <img class="img-container" src="${legend.splash}" alt="">
-        <div class="name">${legend.name}</div>
-        <div class="name">"${legend.title}"</div>
-      </div>`
-
+      listLegends(legend.name, legend.splash, legend.title, legend.blurb, legend.info.attack, legend.info.defense, legend.info.magic)
     }
   }
 
@@ -215,3 +202,33 @@ const search = () => {
 }
 
 inputSearch.addEventListener('keyup', search);
+
+/*MOSTRAR MODAL AL HACER CLICK EN CADA LEGEND */
+const overlay = document.getElementById('overlay');
+document.querySelectorAll('.legends_container .legends img').forEach((item) => {
+
+  item.addEventListener('click', () => {
+    console.log('item', item);
+    const ruta = item.getAttribute('src');
+    const description = item.parentNode.dataset.blurb;
+    const infoAttack = item.parentNode.dataset.attack;
+    const infoDefense = item.parentNode.dataset.defense;
+    const infoMagic = item.parentNode.dataset.magic;
+
+    overlay.classList.add('active');
+    document.querySelector('#overlay img').src = ruta;
+    document.querySelector('#overlay .description').innerHTML = description;
+    document.querySelector('#overlay .info #one').innerHTML = 'Ataque:\n' + infoAttack;
+    document.querySelector('#overlay .info #two').innerHTML = 'Defensa:\n' + infoDefense;
+    document.querySelector('#overlay .info #three').innerHTML = 'Magia:\n' + infoMagic;
+  });
+});
+
+document.querySelector('#btn-close').addEventListener('click', () => {
+  overlay.classList.remove('active')
+})
+
+overlay.addEventListener('click', (e) => {
+  /* overlay.classList.remove('active') */
+  e.target.id === 'overlay' ? overlay.classList.remove('active') : ''
+})
