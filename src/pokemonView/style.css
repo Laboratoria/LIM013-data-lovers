@@ -1,0 +1,118 @@
+/*Universal style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #212529;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*Container styles*/
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 96%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+/*Header styles*/
+
+#header {
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 80px;
+    width: 96%;
+    background-color: #fff;
+    border-radius: 0px 0px 5px 5px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
+    z-index: 1;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+#logo h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px #9e9e9e;
+}
+
+#search {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+#search-box {
+    border: 2px #212529 solid;
+    border-radius: 10px;
+}
+
+#search input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 14px;
+    padding: 0px 10px;
+    color: #212529;
+}
+
+#search i {
+    margin-left: 10px;
+    color: #212529;
+}
+
+#nav-drop {
+    display: flex;
+}
+
+#menu-icon {
+    visibility: hidden;
+}
+
+
+/*STYLES CONTENT*/
+
+#content {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: aqua;
+    width: 100%;
+    height: 400px;
+}
+
+#data-pokemon {
+    background-color: blueviolet;
+    width: 50%;
+    height: 400px;
+}
+
+#overview-stat-abilitie {
+    background-color: coral;
+}
