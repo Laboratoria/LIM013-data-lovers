@@ -19,32 +19,62 @@ const cardStructure=(listData)=>{
     const currentDiv=document.getElementById("imgChampions");
     currentDiv.innerHTML="";
     createArray.map((champ) => {
+        const cardBox=document.createElement('div');
+        cardBox.className='cardBox';
+        currentDiv.appendChild(cardBox);
+        const bothFace=document.createElement('div');
+        bothFace.className="bothFace";
+        cardBox.appendChild(bothFace);
         const div=document.createElement('div');
-        div.className="cardDiv"
-        div.style.backgroundImage = `url("${champ.splash}")`;
-        const nameDiv=document.createElement('div')
-        nameDiv.className="nameDiv"
+        div.className='frontCard';
+        const img=document.createElement('img');
+        img.className='personalImage'
+        const nameDiv=document.createElement("div");
+        nameDiv.className='nameDiv'
         const p=document.createElement('p');
-        p.className="pFront"
+        p.className='personalName'
+        img.src=`${champ.splash}`;
         p.innerHTML=`${champ.name}`;
-        currentDiv.appendChild(div);
+        bothFace.appendChild(div);
         div.appendChild(nameDiv);
+        div.appendChild(img);
         nameDiv.appendChild(p);
+
         /* Back Card*/
         const backCard = document.createElement('div');
-        div.appendChild(backCard);
+        bothFace.appendChild(backCard);
         backCard.className = 'back-card';
-        const backCardName=document.createElement('h2');
-        backCardName.className="backCardName"
-        backCardName.innerHTML=`' ${champ.name} '`;
-        const backCardTitle = document.createElement('h3');
+
+        const backCardName=document.createElement('h3');
+        backCardName.innerHTML = `' ${champ.id} '`;
+        backCard.appendChild(backCardName);
+
+        const backCardTitle=document.createElement('p');
         backCardTitle.innerHTML = `' ${champ.title} '`;
-        backCard.appendChild(backCardName),
         backCard.appendChild(backCardTitle);
 
         const backCardInfo=document.createElement("div");
+        backCardInfo.className="backCardInfo"
+        backCardInfo.innerHTML=`Info`;
         backCard.appendChild(backCardInfo);
+
+        const infoAttack=document.createElement("p");
+        infoAttack.innerHTML=`Attack: ${champ.info.attack}`;
+        backCardInfo.appendChild(infoAttack);
+
+        const infoDefense=document.createElement("p");
+        infoDefense.innerHTML=`Defense: ${champ.info.defense}`;
+        backCardInfo.appendChild(infoDefense);
+
+        const infoMagic=document.createElement("p");
+        infoMagic.innerHTML=`Magic: ${champ.info.magic}`;
+        backCardInfo.appendChild(infoMagic);
+
+        const infoDifficulty=document.createElement("p");
+        infoDifficulty.innerHTML=`Difficulty: ${champ.info.defense}`;
+        backCardInfo.appendChild(infoDifficulty);
         
+
     })
 }
 /* -------Efecto hover ---------- */
@@ -82,17 +112,16 @@ inputclass.addEventListener("keyup",e=>{
     const champByName=search(allArray,searchName);
     cardStructure(champByName);
     console.log(champByName);
-})
-/* ------Búsqueda por orden alfabético--------- */
+});
 const orderSelect = document.querySelector('.order');
-console.log(order);
-orderSelect.addEventListener("click",()=>{
-    const term=orderSelect.value
-    console.log(term);
-    const filteredChampions = order(allArray, term);
-    console.log(filteredChampions);
-    cardStructure(filteredChampions);
-    })
+    orderSelect.addEventListener('change', () => {
+        const term = orderSelect.value;
+        //const lol=data.data;
+        //const champ=Object.values(lol)
+        const filteredChampions = order(allArray, term);
+        console.log(filteredChampions);
+        cardStructure(filteredChampions);
+    });
 
 
 window.onload = function() { 

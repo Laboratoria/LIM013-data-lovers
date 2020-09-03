@@ -13,8 +13,9 @@ export const search=(championList,nameChamp)=>{
     console.log(searchName)
     return searchName; 
 };
+
 export const order=(championList,term)=>{
-    const sort=championList.sort(()=>term==="AZ"?1:-1)
+    const sort=championList.sort((a,b)=> term ==='AZ' ? 1:-1);
     console.log(sort);
         return sort
     }
@@ -25,7 +26,6 @@ export const order=(championList,term)=>{
         }*/
 export let averageInfo = (championList) =>championList.reduce((a, b) => a + b) / championList.length;
 console.log(averageInfo([1,2,3,4,5]));
-
 
  
 
