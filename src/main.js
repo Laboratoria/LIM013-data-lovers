@@ -134,6 +134,38 @@ filter.addEventListener('change', (e) => {
   }
 })
 
+/*FILTRO DAÑO ATAQUE*/
+
+const daño_de_ataque=document.querySelector('.daño_de_ataque');
+daño_de_ataque.addEventListener('change', (e)=> {
+  const attackrange= e.target.value;
+  //console.log('daño', attackrange);
+  const prueba= order.filterRange (arrayLegends, attackrange);
+  //console.log (result);
+  legends_container.innerHTML ='';
+  if (prueba ===''){
+    legends_container.innerHTML +=
+      `<div class="legends">
+      <img class="img-container" src="./imagenes/notFound.gif" alt="">
+      <div class="name">Not Found</div>
+    </div>`
+  }
+  document.getElementById('legends_container').innerHTML = '';
+    displayList(prueba, legends_container, rows, current_page);
+    setupPagination(prueba, pagination_element, rows);
+})
+
+  /*Metodo map para valor min y maximo */
+  //const map= arrayLegends.map(function(item){
+   // return item.stats.attackrange;
+  //})
+  /*return Math.min.apply(null, result);*/
+  //console.log('map', Math.min.apply(null, map));
+  //console.log('map1', Math.max.apply(null, map));
+//});
+
+
+
 /*ORDER */
 const selector = document.querySelector("#order");
 
@@ -182,21 +214,4 @@ const search = () => {
   }
 }
 
-inputSearch.addEventListener('keyup', search)
-
-/*MENU BURGUER */
-
-/*let button=document.getElementById('icon');
-let links=document.getElementById('links');
-let count=0;
-
-button.addEventListener('click', function(){
-  if (count==0){
-    links.className = ('links_two');
-    count=1;
-  }else{
-    links.classList.remove('two');
-    links.className = ('links_one');
-    count=0;
-  }
-})*/
+inputSearch.addEventListener('keyup', search);
