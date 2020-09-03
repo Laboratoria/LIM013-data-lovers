@@ -25,5 +25,6 @@ export const filterByName = (array,name) => {
 export const computeByStats = (array) => {
   let newItem = array.reduce((a,b) => parseInt(a) + parseInt(b));
   return newItem;
+  
 };
  
