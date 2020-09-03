@@ -31,20 +31,25 @@ const listaCampeones = (
 
   frontalcard.innerHTML += `    
     <a class="blog-card" id="${id}" href=" #openmodal${id}">
-      <img class="modal-img" src="${img}"/></a>
-      <p class="frontalTextChamp">${name}</p>
-      <p class="frontalTextChamp">${title}</p>
+    
+    <img class="modal-img" src="${img}"/></a>
+    
+      
+      <h1 class="frontalTextChamp">${name}</h1>
+      <h2 class="frontalTextChamp">${title}</h2>
       <p class="frontalTextChamp">Dificultad: ${difficulty}</p>
     
    
     <section id="openmodal${id}" class="modal-window">
       <div class = "modal-content">
         <a href="#${id}" title="Close" class="modal-close">X</a>
+        <div class="contentImg">
         <img class="modal-img-back" src="${img}"/>
+        </div>
         <div class="modal-back">
-          <h1 class="frontalTextChampBack">${name}</h1>
-          <h2 class="frontalTextChampBack">${title}</h2>
-          <p class="frontalTextChampBack"><strong class="strong">Blurb</strong>:${lore}</p>
+          <h1>${name}</h1>
+          <h2>${title}</h2>
+          <p><strong class="strong">Blurb</strong>:${lore}</p>
         </div>
 
         <h2 class="frontalTextTable">Tabla de estadística por rango de nivel:</h2>
@@ -106,7 +111,7 @@ const getCampeones = (arrayCampeones) => {
     let difficulty = arrayCampeones[i].info.difficulty;
     let id = arrayCampeones[i].id;
 
-    let rol = arrayCampeones[i].tags.toString();
+    let rol = arrayCampeones[i].tags.join(", ");
     let lore = arrayCampeones[i].blurb;
     let hp = arrayCampeones[i].stats.hp;
     let mp = arrayCampeones[i].stats.mp;
@@ -189,66 +194,71 @@ const buscador = () => {
     let nombre = campeones.name.toLowerCase();
     if (nombre.indexOf(texto) != -1) {
       result.innerHTML += `
-      <div class="card-link-Champ">
-      <a class="blog-card" id="${campeones.id}" href=" #openmodal${campeones.id}">  
-        <div class="frontalCardChampion">
-          <img class="modal-img" src="${campeones.splash}" />
-          <p class="frontalTextChamp">${campeones.name}</p>
-          <p class="frontalTextChamp">${campeones.title}</p>
-          <p class="frontalTextChamp">Dificultad: ${campeones.info.difficulty}</p>
+      <div class="card-link-Champ_Reverse">
+      <div class="frontalCardChampion_Reverse">
+        <a class="blog-card_Reverse" id="${campeones.id}" href=" #openmodal${campeones.id}"> 
+        <div class="contentImg_Reverse">
+          <img class="modal-img_Reverse" src="${campeones.splash}" />
+        </div>      
+          <h1 class="frontalTextChamp_Reverse">${campeones.name}</h1>
+          <h2 class="frontalTextChamp_Reverse">${campeones.title}</h2>
+          <p class="frontalTextChamp_Reverse">Dificultad: ${campeones.info.difficulty}</p>
         </div>   
         </a> 
-    </div>
-    
-    <section id="openmodal${campeones.id}" class="modal-window">
-      <div class="modal-content">
-        <a href= "#${campeones.id}" title="Close" class="modal-close">X</a>
-        <img class="modal-img-back" src="${campeones.splash}"/>
-        <div class="modal-back">
-          <h1 class="frontalTextChampBack"${campeones.name}</h1>
-          <h2 class="frontalTextChampBack">${campeones.title}</h2>
-          <p class="frontalTextChampBack"><strong class="strong">Blurb: </strong> ${campeones.blurb}</p>
-        </div>
-    
-        <h2 class="frontalTextTable">Tabla de estadística por rango de nivel:</h2>
-        <table class="table">
-          <tr class="table">
-            <th class="table"> Stats</th>
-            <th class="table"> Per Level</th>
-            <th class="table"> Level 1</th>
-            <th class="table"> Level 6</th>
-            <th class="table"> Level 12</th>
-            <th class="table"> Level 18</th>
-          </tr>
-    
-          <tr class="table">
-            <th class="table"> Hp </th>
-            <td class="table">${campeones.stats.hp}</td>
-          </tr>
-    
-          <tr class="table">
-            <th class="table"> MP </th>
-            <td class="table">${campeones.stats.mp}</td>
-          </tr>
-    
-          <tr class="table">
-            <th class="table"> Armor </th>
-            <td class="table">${campeones.stats.armor}</td>
-          </tr>
-    
-          <tr class="table">
-            <th class="table"> Spellblock </th>
-            <td class="table">${campeones.stats.spellblock}</td>
-          </tr>
-    
-          <tr class="table">
-            <th class="table"> Hpregen </th>
-            <td class="table">${campeones.stats.hpregen}</td>
-          </tr>    
-        </table>
-        <h2 class="rolText">Rol: ${campeones.tags.toString()}</h2>
       </div>
-    </section>`
+    </div>
+  
+  <section id="openmodal${campeones.id}" class="modal-window_Reverse">
+    <div class="modal-content_Reverse">
+      <a href= "#${campeones.id}" title="Close" class="modal-close_Reverse">X</a>
+      <div class="contentImg_Reserve">
+      <img class="modal-img-back_Reverse" src="${campeones.splash}"/>
+      </div>
+      <div class="modal-back_Reverse">
+        <h1>${campeones.name}</h1>
+        <h2>${campeones.title}</h2>
+        <p><strong class="strong_Reverse">Blurb: </strong> ${campeones.blurb}</p>
+      </div>
+  
+      <h2 class="frontalTextTable_Reverse">Tabla de estadística por rango de nivel:</h2>
+      <table class="table_Reverse">
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> Stats</th>
+          <th class="table_Reverse"> Per Level</th>
+          <th class="table_Reverse"> Level 1</th>
+          <th class="table_Reverse"> Level 6</th>
+          <th class="table_Reverse"> Level 12</th>
+          <th class="table_Reverse"> Level 18</th>
+        </tr>
+  
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> Hp </th>
+          <td class="table_Reverse">${campeones.stats.hp}</td>
+        </tr>
+  
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> MP </th>
+          <td class="table_Reverse">${campeones.stats.mp}</td>
+        </tr>
+  
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> Armor </th>
+          <td class="table_Reverse">${campeones.stats.armor}</td>
+        </tr>
+  
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> Spellblock </th>
+          <td class="table_Reverse">${campeones.stats.spellblock}</td>
+        </tr>
+  
+        <tr class="table_Reverse">
+          <th class="table_Reverse"> Hpregen </th>
+          <td class="table_Reverse">${campeones.stats.hpregen}</td>
+        </tr>    
+      </table>
+      <h2 class="rolText_Reverse">Rol: ${campeones.tags.join(", ")}</h2>
+    </div>
+  </section>`
     }
   }
 

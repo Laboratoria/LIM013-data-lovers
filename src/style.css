@@ -811,10 +811,11 @@ figure .traseraTop .post-title{
   border-radius: 0px 20px;
   text-decoration: none;
   color: #eada9d;
-
+  -webkit-box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
 
 }
-
 
 .blog-card a{
   font-size: 22px;
@@ -835,45 +836,47 @@ figure .traseraTop .post-title{
   justify-self: start; 
 }
 
-.modal-img{
-  background-position: center;
-  width: 100%;
-  height: auto;
-  text-decoration: none;
-  -webkit-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
-  -moz-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
-  box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+.contentImg{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
+
 .modal-img{
+  margin-top: 1%;
   background-position: center;
   width: 90%;
   height: auto;
   border-style: solid;
   border: 2px solid #d6c44b;
+  transition: transform .2s;
   border-width: 1px;
   border-radius: 0px 20px;
-
+  text-decoration: none;
 }
+
 
 .modal-img:hover{
-  -webkit-box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
-  -moz-box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
-  box-shadow: 23px 24px 17px -28px rgba(50,160,207,1);
+  -webkit-box-shadow: inset -1px 3px 8px 5px #07cbe9, 2px 5px 16px 0px #0B325E, -16px -14px 14px -10px rgba(214,196,75,0); 
+  box-shadow: inset -1px 3px 8px 5px #07cbe9, 2px 5px 16px 0px #0B325E, -16px -14px 14px -10px rgba(214,196,75,0);
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.05); 
 }
 
-
-
 .frontalTextChamp {
+  margin-top: 8%;
   font-size:20px;
   line-height: 30%;
   text-decoration: none;
-  color: #EADA9D;
+  color: #d6c44b;
   font-family: "Marcellus SC", serif;
   font-style: Regular;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
 
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
 }
+
+
 
 
 /*TODO Ventana Modal*/
@@ -912,9 +915,8 @@ figure .traseraTop .post-title{
   padding: 2%;
   background-color: rgba(0, 0, 0, 0.789);
   border-radius: 24px;
-  -webkit-box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
-  -moz-box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
-  box-shadow: 26px 30px 17px -28px rgba(253,255,207,1);
+  -webkit-box-shadow: 1px 0px 9px 5px rgba(201,180,99,0.39); 
+  box-shadow: 1px 0px 9px 5px rgba(201,180,99,0.39);
   
 }
 
@@ -937,31 +939,36 @@ figure .traseraTop .post-title{
   0 0 0.2em #07cbe9;
 }
 
-.modal-img-back{
+.contentImg .modal-img-back{
   
-
-  width: auto;
-  height: 70%;
+  margin-top: 5%;
+  width: 90%;
+  height: auto;
   border-style: solid;
   border:1px solid #d6c44b;
   border-radius: 0px 20px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  margin-top: 10%;
+ left: 1%;
   padding: 0%;
   -webkit-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
   -moz-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
   box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
 }
 
+.modal-img-back:hover{
+  -webkit-box-shadow: 2px 1px 5px 1px rgba(68,136,182,0.96), 2px 4px 16px 4px rgba(214,196,75,0.72); 
+  box-shadow: 2px 1px 5px 1px rgba(68,136,182,0.96), 2px 4px 16px 4px rgba(214,196,75,0.72);
+}
+
 .modal-back{
 
-  width: 90%;
+  width: 100%;
   height: auto;
   position: relative;
   text-align: center;
   left: 8%;
-  color: #EADA9D;
+  
   padding: 1%;
   grid-column: 2 / 2;
   grid-row: 1 / 2;
@@ -973,54 +980,39 @@ figure .traseraTop .post-title{
 }
 
 .modal-back h1{
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
-  font-size: 80%;
+  
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
+  font-size: 100%;
+  line-height: 5%;
 }
 
 .modal-back h2{
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
-  font-size: 70%;
+  
+  color: #EADA9D;
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
+  font-size: 80%;
+  line-height: 100%;
 }
 
 .modal-back p{
-  font-size: 50%;
+  font-size: 55%;
+  line-height: 100%;
 }
 
-  .frontalTextChampBack h1{
-    font-size:94%;
-    line-height: 1%;
-    text-decoration: none;
-    color: #EADA9D;
-    font-family: "Marcellus SC", serif;
-    font-style: Regular;
-
-    
-
-  }
- 
-
-  .frontalTextChampBack p{
-    font-size:50%;
-    line-height: 1%;
-    text-decoration: none;
-    color: #EADA9D;
-    font-family: "Marcellus SC", serif;
-    font-style: normal; 
-  
-  }
-  .strong{
+ .strong{
     font-weight: bold;
     
   }
 
   .frontalTextTable{
     font-size:70%;
-    line-height: 50%;
+    line-height: 100%;
     text-decoration: none;
     color: #EADA9D;
+  
     font-family: "Marcellus SC", serif;
-    margin-bottom: 4%;
-    grid-column: 1 / span 2;
+    margin-bottom: 2%;
+    grid-column: 1 / span 3;
     grid-row: 2 / 2;
    
 
@@ -1029,11 +1021,12 @@ figure .traseraTop .post-title{
   
 .table, .th, .td {
   border: 2px solid #dfc981;
-  height: 10%;
+  height: 5%;
   border-collapse: collapse;
   width: auto;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   grid-row: 3 / 3;
+ 
 }
 
 
@@ -1044,21 +1037,296 @@ table, td, th {
   font-family:"Marcellus SC", serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 70%;
+    font-size: 80%;
   }
 
 .rolText{
   font-size:70%;
-  line-height: 50%;
+
   text-decoration: none;
   color: #EADA9D;
   font-family: "Marcellus SC", serif;
-  margin-top: 3%;
   grid-column: 1 / span 2;
   grid-row: 4 / 4;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+  
 
 }
+
+/*TODO CSS de buscador*/
+.card-link-Champ_Reverse{
+  margin-top: 1%;
+  display: relative;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 30%;
+  padding: 1% 1% 1% 1%;
+  background: rgba(0, 0, 0, 0.67);
+  margin: 2.5% 0 2.5% 0;
+  border: 1.5px solid #EADA9D;
+  box-sizing: border-box;
+  border-radius: 0px 20px;
+  text-decoration: none;
+  color: #eada9d;
+  -webkit-box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 0px -7px rgba(0,0,0,0.75);
+
+}
+
+.blog-card_Reverse a{
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "Marcellus SC", serif;
+  font-style: Regular;
+  color: #eada9d;
+  letter-spacing: 0.25rem;
+}
+
+.blog-card_Reverse {
+  
+  text-decoration: none;
+ 
+}
+.frontalCardChampion_Reverse{
+  text-align: center;
+  color: #EADA9D;
+  font-size: 30px;
+  font-family: 'Marcellus SC', serif;
+  font-weight: normal;
+  justify-self: start; 
+  text-decoration: none;
+}
+
+.contentImg_Reverse{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+
+.modal-img_Reverse{
+  margin-top: 1%;
+  background-position: center;
+  width: 90%;
+  height: auto;
+  border-style: solid;
+  border: 2px solid #d6c44b;
+  transition: transform .2s;
+  border-width: 1px;
+  border-radius: 0px 20px;
+  text-decoration: none;
+}
+
+
+.modal-img_Reverse:hover{
+  -webkit-box-shadow: inset -1px 3px 8px 5px #07cbe9, 2px 5px 16px 0px #0B325E, -16px -14px 14px -10px rgba(214,196,75,0); 
+  box-shadow: inset -1px 3px 8px 5px #07cbe9, 2px 5px 16px 0px #0B325E, -16px -14px 14px -10px rgba(214,196,75,0);
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.05); 
+}
+
+.frontalTextChamp_Reverse {
+  margin-top: 8%;
+  font-size:20px;
+  line-height: 30%;
+  text-decoration: none;
+  color: #d6c44b;
+  font-family: "Marcellus SC", serif;
+  font-style: Regular;
+
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
+}
+
+.modal-window_Reverse {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2%;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window_Reverse:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content_Reverse{
+  display: grid;
+  grid-template-columns: 50% 45% 5%;
+  grid-template-rows: auto auto auto auto;
+  font-family: "Marcellus SC", serif;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(1%, 1%);
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.789);
+  border-radius: 24px;
+  -webkit-box-shadow: 1px 0px 9px 5px rgba(201,180,99,0.39); 
+  box-shadow: 1px 0px 9px 5px rgba(201,180,99,0.39);
+  
+}
+
+.modal-close_Reverse {
+  grid-column: 3 / 3;
+  grid-row: 1 / 2;
+  color:#c9b463; ;
+  line-height: 36px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 200%;
+
+  
+  text-decoration: none;
+}
+
+.modal-close_Reverse:hover {
+  color:#896331;
+  font-weight: bold;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
+  0 0 0.2em #07cbe9;
+}
+
+/*.contentImg_Reverse */
+
+.modal-img-back_Reverse{
+  
+  margin-top: 5%;
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border:1px solid #d6c44b;
+  border-radius: 0px 20px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+ left: 1%;
+  padding: 0%;
+  -webkit-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  -moz-box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+  box-shadow: 23px 24px 17px -28px rgba(253,255,207,1);
+}
+
+.modal-img-back_Reverse:hover{
+  -webkit-box-shadow: 2px 1px 5px 1px rgba(68,136,182,0.96), 2px 4px 16px 4px rgba(214,196,75,0.72); 
+  box-shadow: 2px 1px 5px 1px rgba(68,136,182,0.96), 2px 4px 16px 4px rgba(214,196,75,0.72);
+}
+
+.modal-back_Reverse{
+  color: #EADA9D;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 8%;
+  font-size: 225%;
+  padding: 1%;
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+  font-family: 'Marcellus SC', serif;
+  font-style: normal;
+  font-weight: normal;
+
+
+}
+
+.modal-back_Reverse h1{
+  
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
+  font-size: 100%;
+  line-height: 5%;
+}
+
+.modal-back_Reverse h2{
+  
+  color: #EADA9D;
+  text-shadow: 2px 2px 10px #AB8347, 7px 2px 13px rgba(7,203,233,0.78);
+  font-size: 80%;
+  line-height: 100%;
+}
+
+.modal-back_Reverse p{
+  font-size: 55%;
+  line-height: 100%;
+}
+
+ .strong_Reverse{
+    font-weight: bold;
+    
+  }
+
+  .frontalTextTable_Reverse{
+    font-size:150%;
+    line-height: 100%;
+    text-decoration: none;
+    color: #EADA9D;
+   font-weight: bold;
+    font-family: "Marcellus SC", serif;
+    margin-bottom: 2%;
+    grid-column: 1 / span 3;
+    grid-row: 2 / 2;
+    margin-left: 25%;
+   
+
+  }
+
+  
+.table_Reverse  {
+  border: 2px solid #dfc981;
+  height: 5%;
+  border-collapse: collapse;
+  width: auto;
+  grid-column: 1 / span 3;
+  grid-row: 3 / 3;
+  font-size: 110%;
+  color: #EADA9D;
+  font-family: "Marcellus SC", serif;
+  margin-bottom: 1%;
+  justify-items: center;
+  justify-content: center;
+ 
+}
+
+
+/* Tabla de Ventana Modal*/
+
+td {
+
+    font-size: 80%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  
+th {
+
+    font-size: 80%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.rolText_Reverse{
+  font-size:140%;
+margin-left: 35%;
+  text-decoration: none;
+  color: #EADA9D;
+  font-family: "Marcellus SC", serif;
+  grid-column: 1 / span 2;
+  grid-row: 4 / 4;
+  margin-top: 1%;
+  font-weight: bold;
+}
+
 
 
 
@@ -1200,3 +1468,4 @@ ul {
     height: auto;
 }
 }
+
