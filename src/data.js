@@ -70,6 +70,7 @@ export const sortByMorePwr = (dataPok) => {
     }
     return 0;
 })
+}
 
 //función que filtra por tipo de pokémon
 export const filterByType = (arrayTypeSelect,dataPokemon) =>{ 
