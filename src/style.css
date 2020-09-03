@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-
 }   
 
 body{
@@ -49,8 +48,6 @@ h2{
 
 main{}
 
-
-
 .section2{
     margin-left:60px;
     margin-right:60px;
@@ -97,14 +94,8 @@ main{}
 
 .section2-table-item_stats{}
 
-@media (max-width: 992px) {
-    .section2_table-item{
-      flex: 50%;
-    }
+.section2_modal{}
 
-.section2_modal{
-
-}
 
 .section2_modal-item{
     display:none;
@@ -125,4 +116,11 @@ footer{
     position: absolute;
     top:  50px;
     left: 10px;
+}
+
+@media (max-width: 992px) {
+    .section2_table-item{
+        flex: 50%;
+    .section2_modal-item{
+        z-index:1;
 }
