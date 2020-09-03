@@ -1,73 +1,112 @@
-
 *{
     box-sizing: border-box;
+
 }   
 
 body{
-    text-align: center;
-    background:url(/image/pokebola2.jpg);
+    text-align: center;   
+}
+
+header{
+    background-image: url(/images/pokebola.jpg);
+    background-repeat: no-repeat;     
     background-attachment:fixed;
     background-size:25% 50%;
-    background-repeat: no-repeat;
-    background-position:0% 0%; 
+    background-position:0% -20%; 
 }
 
-
-.select{
-    width: 300px;
-    height:30px; 
-    
-    
-}
- 
-
- /* .input{
-    
-    background:url(/image/buscar.png);
-    flex-direction: wrap-reverse;  
-
-}  */
-
-h2{
-    display: flex;
-    padding-left: 50px;
-    
+h1{ 
+    font-family: 'Varela', sans-serif;
+    font-size: 48px;
     
 }
 
-.contenedor{
+.section1{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;  
+    justify-content: center;
+    
 }
 
-.elemento{
+.section1_select{
+    width: 18%;
+    height:30px; 
+    border-radius:5px;
+}
+.section1_input{
+    width: 36%;
+    height:30px; 
+}
 
+h2{
+    font-family: 'Varela', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin-left:60px;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+main{}
+
+
+
+.section2{
+    margin-left:60px;
+    margin-right:60px;
+}
+
+
+.section2_span{}
+
+.section2_table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section2_table-item{
     flex:25%;
     border:1px solid white;
     border-radius:10px;
-    justify-content: space around;
+    height: 280px;
     box-shadow: 0px 4px 10px rgba(190, 184, 184, 0.97);
-} 
-.num , .close {
+}
+
+.section2-table-item_num{
     display:flex;
     justify-content: flex-end;
 }
-.type {
+
+
+.section2-table-item_name{ 
+    display:flex;
+    justify-content: center;
+    font-family:serif;
+    font-size:120%;  
+} 
+
+.section2-table-item_type{
     display:flex;
     justify-content: center;
     border: 2px solid rgb(190, 5, 5);
     font-family:serif;
     font-size:100%;
 }
-.name{
-    display:flex;
-    justify-content: center;
-    font-family:serif;
-    font-size:120%;
+
+.section2-table-item_stats{}
+
+@media (max-width: 992px) {
+    .section2_table-item{
+      flex: 50%;
+    }
+
+.section2_modal{
+
 }
 
-.elemento-div{
+.section2_modal-item{
     display:none;
     position:fixed; 
     z-index:1;
@@ -81,19 +120,9 @@ h2{
     box-shadow: 0px 4px 10px rgba(209, 153, 153, 0.97);
     border-radius:20px;
 }
-.footer{
-  position: absolute;
-  top:  50px;
-  left: 10px;
-}
 
-@media (max-width: 992px) {
-    .elemento{
-      flex: 50%;
-    }
-    
-}
-
-.hidden {
- display:none;
+footer{
+    position: absolute;
+    top:  50px;
+    left: 10px;
 }

@@ -1,52 +1,52 @@
 import { filterByType, sortByName, filterByName, computeByStats } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-const container = document.querySelector("#container");
-const containerModal = document.querySelector("#container-modal");
+const table = document.querySelector("#table");
+const modal = document.querySelector("#modal");
 const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
 const searchByName = document.querySelector("#searchByName");
-const extent = document.querySelector("#extent");
+const index = document.querySelector("#index");
 
 
 const showByData = (array) => {
-    container.innerHTML="";    
+    table.innerHTML="";    
 
     array.forEach((item) => {
-        const pc = computeByStats(Object.values(item.stats));
+        const puntos = computeByStats(Object.values(item.stats));
         const showByItem = document.createElement("div");
-        showByItem.classList.add("elemento");
+        showByItem.classList.add("section2_table-item");
         showByItem.innerHTML=`
-            <p class="num">#${item.num}</p>
-            <img src=${item.img}></img>
-            <p class="name"> ${item.name}</p>
-            <p class="type"> ${item.type}</p>
+            <p class="section2-table-item_num">#${item.num}</p>
+            <img class="section2-table-item_img"src=${item.img}></img>
+            <p class="section2-table-item_name"> ${item.name}</p>
+            <p class="section2-table-item_type"> ${item.type}</p>
             `       
-        container.appendChild(showByItem);
+        table.appendChild(showByItem);
 
         const showForItem = document.createElement("div");
-        showForItem.classList.add("elemento-div");
+        showForItem.classList.add("section2_modal-item");
         showForItem.style.display="none";
         showForItem.innerHTML= `
             <span id="close">X</span>
-            <p class="num">#${item.num}</p>
-            <img class="img" src=${item.img}></img>
-            <p class="name">name: ${item.name}</p>
-            <p class="type">type: ${item.type}</p>
-            <p class="resistance">resistance: ${item.resistant}</p>
-            <p class="waknesses" >waknesses: ${item.weaknesses}</p>
-            <p class="attack">attack: ${item.stats["base-attack"]}</p>
-            <p class="defense">defense: ${item.stats["base-defense"]}</p>
-            <p class="stamina">stamina: ${item.stats["base-stamina"]}</p>
-            <p class="pc">PC: ${pc}</p> 
+            <p class="section2-table-item_num">#${item.num}</p>
+            <img class="section2-table-item_img" src=${item.img}></img>
+            <p class="section2-table-item_name">name: ${item.name}</p>
+            <p class="section2-table-item_type">type: ${item.type}</p>
+            <p class="section2-table-item_type": ${item.resistant}</p>
+            <p class="section2-table-item_type">waknesses: ${item.weaknesses}</p>
+            <p class="section2-table-item_stats">attack: ${item.stats["base-attack"]}</p>
+            <p class="section2-table-item_stats">defense: ${item.stats["base-defense"]}</p>
+            <p class="section2-table-item_stats">stamina: ${item.stats["base-stamina"]}</p>
+            <p class="section2-table-item_stats">PC: ${puntos}</p> 
              `
-        containerModal.appendChild(showForItem);
+        modal.appendChild(showForItem);
 
         const closeForData = () => {
             showForItem.style.display = "none";
             }
             
-       showForItem.addEventListener("click", closeForData);
+        showForItem.addEventListener("click", closeForData);
     
         const openForData = () => {
             showForItem.style.display = "block";
@@ -67,7 +67,7 @@ searchByName.addEventListener("keyup", (e) => {
     const showCardName = filterByName(data.pokemon,showForName);
     showByData(showCardName);
     searchByName.value=""; 
-    extent.innerHTML= showForName;
+    index.innerHTML= showForName;
     }
 });
 
@@ -76,7 +76,7 @@ selectByName.addEventListener("change", () => {
     const showByName = selectByName.value;
     const showListName = sortByName(data.pokemon,showByName);
     showByData(showListName);
-    extent.innerHTML= showByName;
+    index.innerHTML= showByName;
 });
 
 
@@ -88,5 +88,5 @@ selectByType.addEventListener("change", () => {
     if (showByType == "allTypes") {
     showByData(data.pokemon);
     }
-    extent.innerHTML= showByType;
+    index.innerHTML= showByType;
 });
