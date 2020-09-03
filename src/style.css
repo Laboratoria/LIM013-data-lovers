@@ -2,52 +2,53 @@
     padding: 0;
     margin: 0;
 }
+
 .menuSuperior {
-    background-color: black;
-    padding:  10px ;
+	background-color: black;
+	padding:  10px ;
      /*Flexbox*/
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 .barsNavigation a {
-    display: relative;
-    color: #dbb74c;
+	display: relative;
+	color: #dbb74c;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Fira Sans', sans-serif;
     width: 100%;
-    text-align: center;
-    padding: 18px 10px;
+	text-align: center;
+	padding: 18px 10px;
 }
 .barsNavigation a:hover {
-    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
 }
 .menuSuperior .btnMenu i{
-    display:none;
-    color: #dbb74c;
+	display:none;
+	color: #dbb74c;
 }
-.menuLateral{   
-    display:none;
+.menuLateral{	
+	display:none;
 }
 
 .barsNavigation2 a {
-    color: #dbb74c;
+	color: #dbb74c;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Fira Sans', sans-serif;
-    padding:20px 30px;
+	padding:20px 30px;
 
 }
 
 .barsNavigation2 a:hover{
-    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
 }
 
 .menuLateral .btnClose i{
-    color: #dbb74c;
+	color: #dbb74c;
 }
 #home{
 	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
@@ -181,33 +182,66 @@ select {
 #imgChampions{
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-	padding-inline-start: 0;
+	grid-gap: 1rem;
+	object-fit: cover;
 }
-.style{
-	width: 300px;
-	height: 300px;
-	margin: 5%;
+.cardBox{
+	perspective: 1000px;
 }
-.style:hover {
+.frontCard{
+
+	transform: rotateX(0deg)
+}
+.bothFace{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.cardBox:hover .bothFace{ 
+	transform: rotateY(180deg);
+}
+/*.frontCard:hover {
 	transform: perspective(500px) rotateY(180deg);
 	transition: all ease 0.8s;
-}
-.personalimage{
+}*/
+.personalImage{
 	width: 100%;
 	height: 100%;
 	border: 2px solid #e9be23;
 	padding: 0%;
 }
+.nameDiv{
+	background-color: rgb(6, 28, 37);
+	
+	width: 100%;
+	height: fit-content;
+	padding: 5px 0px;
+	position: absolute;
+	text-align: center;
+	float: none ;
+}
 
-.style:hover .personalname{
+.frontCard:hover .personalName{
 	transform: rotateY(180deg);
 
 }
+.frontCard, .backCard{
+	position: absolute;
+	width: 100%;
+	height: 250px;
+	backface-visibility: hidden;
+}
+  
+.backCard {
+	backface-visibility: visible;
+	transform: rotateX(180deg)
+  }
 
 footer {
 	background: #000000;
-	width: 100%;
     padding:10px 30px;
     /*position: absolute;*/
  
@@ -228,25 +262,26 @@ footer .socialMedia a i:hover{
 footer p{
 	color:#dbb74c;
 	margin: 5px;
+	
 }
 /*Media queries*/
 @media screen and (max-width:700px){
-    .barsNavigation a{
-        display:none;
-    }
-    .menuSuperior .btnMenu i{
-        display:block;
-    }
-    .menuSuperior.responsive .btnMenu i{
-        position: block;
-        right: 0;
-        top: 0;
-    }
-    .menuLateral.responsive{    
-        background-color:#333333;
-        width: 70%;
-        float:right;
-         /*Flexbox*/
-         display: flex;
-    }
+	.barsNavigation a{
+		display:none;
+	}
+	.menuSuperior .btnMenu i{
+		display:block;
+	}
+	.menuSuperior.responsive .btnMenu i{
+		position: block;
+		right: 0;
+		top: 0;
+	}
+	.menuLateral.responsive{	
+		background-color:#333333;
+		width: 70%;
+		float:right;
+	
+	}
 }
+
