@@ -53,3 +53,14 @@ describe('ordenar de la Z-A',() =>{
   
 });
 
+describe('Función source', () => {
+  it('is a function', () => {
+    expect(typeof order.hpperLevel).toBe('function');
+  });
+
+  it('returns `Aatrox`', () => {
+    const source =[{name:'Aatrox',hpperLevel:20},{name:'Ahri',hpperLevel:11}];
+    const resultSource=[{name:"Aatrox",tags:"Mage"}];
+    expect(order.hpperLevel(filter, "Mage")).toEqual(resultSource);
+  });
+});

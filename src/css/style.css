@@ -330,6 +330,15 @@ input[type=button] {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
+.legends_stats1:hover {
+  transform: translateY(-5px) scale(1.4) translateZ(0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
 
 .legends .img-container {
   width: 100%;
@@ -366,7 +375,7 @@ input[type=button] {
   border-radius: 3px;
   outline: none;
   border: none;
-  font-size: x-large;
+  font-size: larger;
   text-align: center;
   color: #000;
 }
@@ -600,6 +609,10 @@ input[type=button] {
     position: absolute;
   }
 
+  .legends_stats1:hover {
+    transform: translateY(-5px) scale(1.1) translateZ(0);
+    margin: 30px 0px ;
+  }
   header nav a:hover,
   .active {
     color: #fff;
