@@ -25,7 +25,7 @@ button.addEventListener('click', () => {
 })
 
 /*---LISTAR EN EL HTML---*/
-const listLegends = (name, img, title, blurb) => {
+const listLegends = (name, img, title, blurb, attack, defense, magic) => {
 
   const legend = document.createElement("div"),
     imgLegend = document.createElement("img"),
@@ -36,6 +36,10 @@ const listLegends = (name, img, title, blurb) => {
   titleLegend.innerHTML += `<p>"${title}"</p>`;
   legend.setAttribute("class", "legends");
   legend.dataset.blurb = blurb;
+  legend.dataset.attack = attack;
+  legend.dataset.defense = defense;
+  legend.dataset.magic = magic;
+
   imgLegend.setAttribute("class", "img-container");
   imgLegend.setAttribute("src", img);
   nameLegend.setAttribute("class", "name");
@@ -56,8 +60,11 @@ const getLegends = (objLegend) => {
     let img = objLegend[i].splash;
     let title = objLegend[i].title;
     let blurb = objLegend[i].blurb;
-
-    listLegends(name, img, title, blurb);
+    let attack = objLegend[i].info.attack;
+    let defense = objLegend[i].info.defense;
+    let magic = objLegend[i].info.magic;
+    //console.log('magic',magic);
+    listLegends(name, img, title, blurb, attack, defense, magic);
   }
 };
 
@@ -80,7 +87,7 @@ const displayList = (items, wrapper, rows_per_page, page) => {
     let item = paginationItems[i];
     listLegends
     //console.log('item',item.name)
-    listLegends(item.name, item.splash, item.title, item.blurb)
+    listLegends(item.name, item.splash, item.title, item.blurb, item.info.attack, item.info.defense, item.info.magic)
   }
 
 }
@@ -181,7 +188,7 @@ const search = () => {
   for (let legend of arrayLegends) {
     let nombre = legend.name.toLowerCase()
     if (nombre.indexOf(texto) != -1) {
-      listLegends(legend.name, legend.splash, legend.title, legend.blurb)
+      listLegends(legend.name, legend.splash, legend.title, legend.blurb, legend.info.attack, legend.info.defense, legend.info.magic)
     }
   }
 
@@ -201,14 +208,20 @@ const overlay = document.getElementById('overlay');
 document.querySelectorAll('.legends_container .legends img').forEach((item) => {
 
   item.addEventListener('click', () => {
+    console.log('item', item);
     const ruta = item.getAttribute('src');
     const description = item.parentNode.dataset.blurb;
+    const infoAttack = item.parentNode.dataset.attack;
+    const infoDefense = item.parentNode.dataset.defense;
+    const infoMagic = item.parentNode.dataset.magic;
 
     overlay.classList.add('active');
     document.querySelector('#overlay img').src = ruta;
     document.querySelector('#overlay .description').innerHTML = description;
+    document.querySelector('#overlay .info #one').innerHTML = 'Ataque:\n' + infoAttack;
+    document.querySelector('#overlay .info #two').innerHTML = 'Defensa:\n' + infoDefense;
+    document.querySelector('#overlay .info #three').innerHTML = 'Magia:\n' + infoMagic;
   });
-  //console.log('ruta',description);
 });
 
 document.querySelector('#btn-close').addEventListener('click', () => {
