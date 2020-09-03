@@ -3,6 +3,13 @@
 	box-sizing: border-box;
 }
 /* -----------------------------------------------ESTILOS Y FUENTES PRINCIPALES */
+
+html {
+	background: url('img/fondo.jpg') no-repeat center center fixed;
+	background-size: cover;
+	background-size: 100% 120vh;
+	
+}
 body {
 	display: flex;
 	flex-direction: column;
@@ -14,8 +21,8 @@ body {
 		sans-serif;
 	font-size: 20px;
 	font-weight: 400;
-	background: url('img/fondo.jpg');
 	margin: 0;
+	
 }
 
 /* -------------------------------------------------ESTILOS DEL MENU */
@@ -120,7 +127,7 @@ input[type='text']:focus {
 	max-width: 1200px;
 }
 
-.pokemon{
+.pokemon {
 	background-color: #eee;
 	border-radius: 20px;
 	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
@@ -157,6 +164,9 @@ input[type='text']:focus {
 	margin: 15px 0 7px;
 	letter-spacing: 1px;
 	text-transform: capitalize;
+}
+.type {
+	background-color: sandybrown;
 }
 /* ------------------------------ESTILOS DEL FOOTER */
 .copy {
