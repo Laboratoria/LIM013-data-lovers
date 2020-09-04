@@ -171,7 +171,7 @@
         width: 220px;
         padding-top: 7px;
         margin-left: -70px;
-        height: 190px;
+        height: 250px;
     }
     
     #ul-filter select {
@@ -242,6 +242,10 @@
         height: 38px;
         border: 1px #b4b4b4 solid;
         font-size: 14px;
+    }
+    
+    #ul-filter #select-type {
+        height: 100px;
     }
     /*Number of pokemons styles*/
     
