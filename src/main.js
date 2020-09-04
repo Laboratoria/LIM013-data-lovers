@@ -8,6 +8,18 @@ let valueregion = null;
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8
 
+let classPokemon = (divsPokemons) => {
+    for (let i = 0; i < divsPokemons.length; i++) {
+        localStorage.clear();
+        divsPokemons[i].addEventListener("click", (e) => {
+            let labelHTML = e.target;
+            const namePokemon = labelHTML.alt;
+            localStorage.setItem('namePokemon', namePokemon);
+            window.location = "pokemonView/pokemonView.html";
+        });
+    }
+};
+
 //Function to add HTML tags to index with data
 let listPokemon = (num, name, type) => {
     let pokemon = document.createElement("div");
@@ -33,6 +45,8 @@ let listPokemon = (num, name, type) => {
     document.getElementById("content").appendChild(pokemon);
     pokemon.appendChild(imgPokemon);
     pokemon.appendChild(infoPokemon);
+    let divsPokemons = document.getElementsByClassName("pokemon");
+    classPokemon(divsPokemons);
 };
 
 //get necessary data
@@ -179,14 +193,3 @@ document.getElementById("inputSearch").addEventListener("keyup", () => {
         restart();
     }
 });
-
-let divsPokemons = document.getElementsByClassName("pokemon");
-for (let i = 0; i < divsPokemons.length; i++) {
-    localStorage.clear();
-    divsPokemons[i].addEventListener("click", (e) => {
-        let labelHTML = e.target;
-        const namePokemon = labelHTML.alt;
-        localStorage.setItem('namePokemon', namePokemon);
-        window.location = "pokemonView/pokemonView.html";
-    });
-}
