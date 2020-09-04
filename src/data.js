@@ -24,8 +24,8 @@ export const order=(championList,term)=>{
     console.log(sort);
     return sort
         }*/
-export let averageInfo = (championList) =>championList.reduce((a, b) => a + b) / championList.length;
-console.log(averageInfo([1,2,3,4,5]));
+export let averageInfo = (championList,value) =>championList.reduce((a, b) => a + b[value]) / championList.length;
+
 
  
 
