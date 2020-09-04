@@ -145,19 +145,21 @@ filter.addEventListener('change', (e) => {
 /*FILTRO DAÑO ATAQUE*/
 const daño_de_ataque = document.querySelector('.daño_de_ataque');
 daño_de_ataque.addEventListener('change', (e) => {
+  legends_container.innerHTML = '';
   const attackrange = e.target.value;
   const prueba = order.filterRange(arrayLegends, attackrange);
-
-  if (prueba === '') {
+  if (prueba == '') {
     legends_container.innerHTML +=
       `<div class="legends">
       <img class="img-container" src="./imagenes/notFound.gif" alt="">
       <div class="name">Not Found</div>
     </div>`
+    setupPagination(prueba, pagination_element, rows);
+  } else {
+    document.getElementById('legends_container').innerHTML = '';
+    displayList(prueba, legends_container, rows, current_page);
+    setupPagination(prueba, pagination_element, rows);
   }
-  document.getElementById('legends_container').innerHTML = '';
-  displayList(prueba, legends_container, rows, current_page);
-  setupPagination(prueba, pagination_element, rows);
 })
 
 /*ORDER */
@@ -181,7 +183,6 @@ selector.addEventListener("click", (e) => {
 
 /*BUSCADOR */
 const search = () => {
-
   legends_container.innerHTML = '';
   const texto = inputSearch.value.toLowerCase();
 
@@ -189,6 +190,7 @@ const search = () => {
     let nombre = legend.name.toLowerCase()
     if (nombre.indexOf(texto) != -1) {
       listLegends(legend.name, legend.splash, legend.title, legend.blurb, legend.info.attack, legend.info.defense, legend.info.magic)
+      setupPagination(legends_container, pagination_element, rows);
     }
   }
 
@@ -198,6 +200,7 @@ const search = () => {
       <img class="img-container" src="./imagenes/notFound.gif" alt="">
       <div class="name">Not Found</div>
     </div>`
+    setupPagination(legends_container, pagination_element, rows);
   }
 }
 
