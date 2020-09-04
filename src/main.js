@@ -44,13 +44,13 @@ const showByData = (array) => {
 
         const closeForData = () => {
             showForItem.style.display = "none";
-            }
+        }
             
         showForItem.addEventListener("click", closeForData);
     
         const openForData = () => {
             showForItem.style.display = "block";
-            }
+        }
     
         showByItem.addEventListener("click", openForData); 
             

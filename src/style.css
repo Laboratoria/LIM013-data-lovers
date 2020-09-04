@@ -7,7 +7,7 @@ body{
 }
 
 header{
-    background-image: url(/images/pokebola.jpg);
+    background-image: url(/src/images/pokebola.jpg);
     background-repeat: no-repeat;     
     background-attachment:fixed;
     background-size:25% 50%;
