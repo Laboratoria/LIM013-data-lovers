@@ -14,7 +14,6 @@ body{
 
 header {
     width: 100%;
-    background: #a2a4a5d5;
     font-weight: bold;
 }
 
@@ -83,7 +82,7 @@ al primero y así, para evitar confusiones */
 }
 
 .menu a:hover {
-    background: rgba(0,0,0,0.3);
+    background: rgba(100, 165, 111, 0.3);
 }
 
 .submenu{
@@ -91,7 +90,7 @@ al primero y así, para evitar confusiones */
 }
 
 .submmenu:hover {
-    background: rgba(0,0,0,0.3);
+    background: rgba(100, 165, 111, 0.3);
 }
 
 /* Responsive */

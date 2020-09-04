@@ -14,8 +14,9 @@ ${pokemonData.map(function(poke){
     return`
     <div class="dataPoke">
         <img src="${poke.img}">
-        "${poke.num}"
-        "${poke.name}"
+        <h2>"${poke.num}"</h2>      
+        <p>"${poke.name}"</>
+        <p>"${poke.type}"</p>
     </div>
     `
 }).join("")}

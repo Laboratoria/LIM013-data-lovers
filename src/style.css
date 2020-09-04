@@ -1,48 +1,54 @@
-<<<<<<< HEAD
 @import url(menu.css);
 
-=======
->>>>>>> 4f4fb9f34c3b16f829914172d279c80a68155cb6
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 body, html {
-    background: url("img/fondo1.jpg");
+    background: url(img/fondo1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
     height: 100%;
-    font-family: sans-serif;
-=======
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20 px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em; 
+}
+    
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #DEDEDE;
->>>>>>> 4f4fb9f34c3b16f829914172d279c80a68155cb6
-    color: #333;
     padding: 20px 0 20px 0;
     margin: 0;
+    font-size: 1em; 
 }
 
 img {
     max-width: 100%;
     height: auto;
+    display: flex;
+
 }
 
 .app-title {
     text-align: center;
-<<<<<<< HEAD
-}
-=======
 }
 
-.dataPoke{
+.dataPoke {
     position: relative;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(195, 185, 185, 0.3);
+    flex: 1; 
 }
 
->>>>>>> 4f4fb9f34c3b16f829914172d279c80a68155cb6
+.dataPoke p{
+    font-size: 20px;
+}
