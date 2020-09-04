@@ -29,24 +29,28 @@ body {
     font-size: 1em; 
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: flex;
-
-}
-
 .app-title {
     text-align: center;
 }
 
-.dataPoke {
-    position: relative;
-    justify-content: space-around;
+#dataCompleta {
+    padding: 20px 0;
     display: flex;
+    align-items: center;
+    justify-content: space/around;
     flex-wrap: wrap;
-    background: rgba(195, 185, 185, 0.3);
-    flex: 1; 
+
+}
+
+.dataPoke {
+    background: rgba(255, 255, 255, 0.322);
+    border-radius: 30px;
+    border: solid 2px rgba(165, 160, 160, 0.466);
+    width: 200px;
+    height: 250px;
+    color: #000;
+    text-align: center;
+    margin: 30px 20px 20px 20px;
 }
 
 .dataPoke p{
