@@ -7,7 +7,7 @@
 }
 
 body, html {
-    background: url(img/fondo1.jpg);
+    background: url(img/fondo2.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,7 +20,13 @@ body, html {
     text-align: center;
     font-size: 1em; 
 }
-    
+
+.headerImg{
+    background: url(img/header.png);
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #DEDEDE;
@@ -56,3 +62,7 @@ body {
 .dataPoke p{
     font-size: 20px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f4a5f6e8a808c92e20f36c86b9186b82903b4b39
