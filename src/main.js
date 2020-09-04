@@ -1,5 +1,8 @@
 import { filterByRol ,search,order} from './data.js';
 import data from './data/lol/lol.js';
+
+
+
 /* -------Menu de Navegacion ---------- */
 const toggle = document.querySelector(".btnMenu");
 toggle.addEventListener("click",()=>{
@@ -45,17 +48,19 @@ const cardStructure=(listData)=>{
         bothFace.appendChild(backCard);
         backCard.className = 'back-card';
 
-        const backCardName=document.createElement('h3');
+        /*const backCardName=document.createElement('h3');
         backCardName.innerHTML = `' ${champ.id} '`;
-        backCard.appendChild(backCardName);
+        backCard.appendChild(backCardName);*/
+        
 
         const backCardTitle=document.createElement('p');
         backCardTitle.innerHTML = `' ${champ.title} '`;
+        backCardTitle.className="apodo";
         backCard.appendChild(backCardTitle);
 
         const backCardInfo=document.createElement("div");
         backCardInfo.className="backCardInfo"
-        backCardInfo.innerHTML=`Info`;
+    /*backCardInfo.innerHTML=`Info`;*/
         backCard.appendChild(backCardInfo);
 
         const infoAttack=document.createElement("p");
@@ -128,10 +133,10 @@ window.onload = function() {
     cardStructure(allArray);
 };
 /* ------Página Rol-------- */
-
-/*const championsPage=document.getElementById("championsPage");*/
-/*championsPage.addEventListener("click",e=>{
+ 
+  const statsPage=document.getElementById("championsPage");
+statsPage.addEventListener("click",e=>{
     e.preventDefault();
-    document.getElementById("champPage").style.display="none"
-    document.getElementById("rolPage").style.display="block"
-})*/
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("statsRol").style.display="block";
+});
