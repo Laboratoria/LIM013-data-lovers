@@ -16,7 +16,7 @@ export const sortByName = (array,condition) => {
 
 //filterData(data, condition)//
 export const filterByName = (array,name) => {
-  let newArray = array.filter(item => item.name.includes(name));
+  let newArray = array.filter(item => item.name === name);
   return newArray;
 };
 
