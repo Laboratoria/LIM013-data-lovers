@@ -18,19 +18,19 @@
 <body>
   <header>
     <div class="menuSuperior">
-      <div id="logos"class="logos">
+      <div id="logos" class="logos">
         <a href="https://www.riotgames.com/es">
-           <img onmouseout="src='images/riot2.jpeg';"
-               onmouseover="src='images/riot6.jpg';" src="images/riot2.jpeg" height="40px" width="40px"/>
+          <img onmouseout="src='images/riot2.jpeg';" onmouseover="src='images/riot6.jpg';" src="images/riot2.jpeg"
+            height="40px" width="40px" />
         </a>
         <a href="index.html">
-           <img src="images/lol.png" height="40px" width="40px">
+          <img src="images/lol.png" height="40px" width="40px">
         </a>
       </div>
       <div class="barsNavigation" id="barsNavigation">
         <a href="#">¿Qué es LOL?</a>
-        <a href="campeones.html" id="championes">Campeones</a>
-        <a href="#" id="championsPage">Estadísticas por rol</a>
+        <a href="#" id="championsButton">Campeones</a>
+        <a href="#" id="statButton">Estadísticas por rol</a>
         <a href="#">¡Juega Profesionalmente!</a>
       </div>
       <a href="#" class="btnMenu" id="btnMenu">
@@ -40,20 +40,93 @@
     <div class="menuLateral">
       <div class="barsNavigation2" id="barsNavigation2">
         <a href="#">¿Qué es LOL?</a>
-        <a href="campeones.html"  id="championes">Campeones</a>
-        <a href="#" id="championsPage">Estadísticas por rol</a>
-        <a href="#" >¡Juega Profesionalmente!</a>
+        <a href="#" id="championsButton">Campeones</a>
+        <a href="#" id="statButton">Estadísticas por rol</a>
+        <a href="#">¡Juega Profesionalmente!</a>
       </div>
-    </div> 
+    </div>
   </header>
   <main>
+
     <div id="home">
       <img src="images/lol2.png" alt="league">
       <a href="javascript:void(0);"
-        onclick="window.open('https://www.youtube.com/watch?v=KpxjwIaW0EM', 'popup', 'left=100, top=100, width=800, height=450, toolbar=0, resizable=1')"> <i class="far fa-play-circle"></i></a>
-          <a href="https://signup.euw.leagueoflegends.com/es/signup/index#/"><button class="boton">Jugar Ahora</button></a>
+        onclick="window.open('https://www.youtube.com/watch?v=KpxjwIaW0EM', 'popup', 'left=100, top=100, width=800, height=450, toolbar=0, resizable=1')">
+        <i class="far fa-play-circle"></i></a>
+      <a href="https://signup.euw.leagueoflegends.com/es/signup/index#/"><button class="boton">Jugar Ahora</button></a>
     </div>
+
+    <div id="championPage" style="display: none;">
+      <h1 class="tittle">CAMPEONES </h1>
+      <h3 class="htext">Elige al campeón que te llevará al éxito</h3>
+      <form class="champion">
+        <div class="form-groups" id="form-groups2">
+          <label for="name">Nombre: </label>
+          <input type="text" class="form-name" id="form-name2" placeholder="Ingresar nombre del Campeón">
+        </div>
+        <div class="form-groups-rol">
+          <label for="rol">Rol: </label>
+          <div class="categoria" id="categoria">
+            <a href="#" data-value="All" class="active">Todo</a>
+            <a href="#" data-value="Fighter">Luchador</a>
+            <a href="#" data-value="Marksman">Tirador</a>
+            <a href="#" data-value="Mage">Mago</a>
+            <a href="#" data-value="Assassin">Asesino</a>
+            <a href="#" data-value="Tank">Tanque</a>
+            <a href="#" data-value="Support"> Soporte</a>
+          </div>
+        </div>
+
+        <div class="form-groups">
+          <label>Ordenar: </label>
+          <select class="order">
+            <option data-value="AZ">Ascendente</option>
+            <option data-value="ZA">Descendente</option>
+          </select>
+        </div>
+      </form>
+      <div id="imgChampions">
+      </div>
+    </div>
+
+    <div id="statsRolPage" style="display: none;">
+      <h1 class="tittle">ROLES </h1>
+      <div class="rolIcon">
+        <div class="imagen-categoria3">
+          <p>ASESINO</p>
+          <a href="#"><img src="images/asesino.png">
+          </a>
+        </div>
+        <div class="imagen-categoria3">
+          <p>TANQUE</p>
+          <a href="#"> <img src="images/tanque.png">
+          </a>
+        </div>
+        <div class="imagen-categoria3">
+          <p>LUCHADOR</p>
+          <a href="#"> <img src="images/luchador.png">
+          </a>
+        </div>
+        <div class="imagen-categoria3">
+          <p>MAGO</p>
+          <a href="#"> <img src="images/mago.png">
+          </a>
+        </div>
+        <div class="imagen-categoria3">
+          <p>SOPORTE</p>
+          <a href="#"> <img src="images/soporte.png">
+          </a>
+        </div>
+        <div class="imagen-categoria3">
+          <p>TIRADOR</p>
+          <a href="#"> <img src="images/tirador.png">
+          </a>
+        </div>
+      </div>
+    </div>
+
   </main>
+
   <footer>
     <div class="socialMedia">
       <a href="https://www.facebook.com/leagueoflegends"><i class="fab fa-facebook-square"></i> </a>

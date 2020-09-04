@@ -133,10 +133,20 @@ window.onload = function() {
     cardStructure(allArray);
 };
 /* ------Página Rol-------- */
- 
-  const statsPage=document.getElementById("championsPage");
+const rolPage=document.getElementById("championsButton");
+rolPage.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="block";
+    
+});
+
+/* ------Página Estadísticas-------- */
+  const statsPage=document.getElementById("statButton");
 statsPage.addEventListener("click",e=>{
     e.preventDefault();
+    document.getElementById("home").style.display="none";
     document.getElementById("championPage").style.display="none";
-    document.getElementById("statsRol").style.display="block";
+    document.getElementById("statsRolPage").style.display="block";
 });
