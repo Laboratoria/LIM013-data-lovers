@@ -24,13 +24,17 @@ body {
 .menus {
   display: flex;
   width: 100%;
-  
+  margin: 1rem 1rem 1rem 1rem;
   float: inline-start;
   align-items: center;
   
 }
+
+.figure{
+  margin: 0rem 0rem 0rem 0rem;
+}
 .logoHome {
-  margin: 0rem -3rem 0rem 1rem;
+  margin: 0rem 0rem 0rem 0rem;
   width: 10%;
   height: auto;
   top: 50%;
@@ -47,11 +51,11 @@ body {
   box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
 .cornerBar {
-  width: 69%;
+  width: 100%;
   padding: 0.3125rem;
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 3rem 2rem 1rem;
   border: #a87e3e 0.090rem solid;
-  border-radius: 1.875rem 0rem 1.875rem 0rem;
+  border-radius: 1.875rem 0rem 1.875rem 0rem
 }
 .cornerPlay {
   
@@ -59,7 +63,7 @@ body {
   margin: 2rem 1rem 2rem 1rem;
   border: #a87e3e 0.090rem solid;
   border-radius: 1.875rem 0rem 1.875rem 0rem;
-  width: 19%;
+  width: 18%;
 }
 .menu-bar {
   display: flex;
@@ -109,7 +113,7 @@ body {
   overflow: hidden;
   padding: 1%;
   justify-content: space-evenly;
-  right: 5%;
+
   height: auto;
   margin-top: -0.1%;
   line-height: 70%;
@@ -117,8 +121,8 @@ body {
 .menu-play a {
   color: white;
   text-decoration: none;
-  font-size: 220%;
-  line-height: 67%;
+  font-size: 200%;
+  line-height: 89%;
   font-weight: normal;
   font-family: "Marcellus SC", serif;
   align-items: center;
@@ -142,10 +146,10 @@ body {
 }
 .container-box {
   background-color: rgba(10, 3, 3, 0.404);
-  height: auto;
-  max-height: 800px;
-  max-width: 800px;
-  margin-left: 4%;
+  height: 100%;
+  
+  width: 100%;
+  margin: 1rem 1rem 1rem 1rem;
   border: 5px inset #bba341;
   padding: 1rem 2rem 1rem 2rem;
   overflow: auto;
@@ -160,7 +164,7 @@ body {
   width: 100%;
 }
 .container-box p {
-  font-size: 22px;
+  font-size: 180%;
   text-align: justify;
   color: #eada9d;
 }
@@ -168,14 +172,18 @@ body {
   color: #5fc2c9;
   text-decoration: none;
   letter-spacing: 0.25rem;
+  font-size: 200%;
+  margin: 0rem 0rem 0rem 0rem;
 }
 .container-box a:hover {
   color: #59e7e0;
   text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #d6c772,
     0 0 0.2em #07cbe9;
-  font-size: 20px;
+  font-size: 200%;
   font-weight: bold;
   text-decoration: none;
+  letter-spacing: 0.25rem;
+  margin: 3rem 0rem 3rem 0rem;
 }
 .container-box h2 {
   padding: 1%;
@@ -183,16 +191,22 @@ body {
   text-align: center;
   color: #eada9d;
   font-weight: bold;
+  font-size: 250%;
+
 }
 .comunidad-nav {
   text-align: center;
   word-spacing: 1rem;
+  margin: 3rem 0rem 3rem 0rem;
+  line-height: 200%;
 }
+
+
 
 /*Modo de juego y Video de LOL */
 .modos {
 
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 4rem 1rem 4rem;
   width: 100%;
   position: relative;
   float: left;
@@ -205,18 +219,18 @@ body {
 .mode-play h2 {
   background-color: #bba341;
   align-items: normal;
-  margin: auto;
+  margin:  0rem 0rem 1rem 4.5rem;
+
   width: 90%;
   top: 80%;
   border-radius: 0px 25px;
   padding: 1%;
   justify-content: center;
-  right: -4%;
   font-family: "Marcellus SC", serif;
   font-style: normal;
   font-weight: normal;
   color: black;
-  font-size: 25px;
+  font-size: 150%;;
   line-height: 23px;
   text-align: center;
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
@@ -337,26 +351,18 @@ img {
 }
 
 /*Seccion video LOL */
-.lol-video {
-  width: 97%;
-  margin: 1rem 1rem 1rem 1rem;
-  background-color: rgba(10, 3, 3, 0.404);
-  height: 500px;
-  border: 5px inset #bba341;
-  overflow: auto;
-  border-radius: 0px 20px;
 
-}
+
 .video-container h2 {
 
   background-color: #bba341;
   align-items: normal;
-  margin: auto;
+  margin: 0rem 0rem 0rem 5rem;;
   width: 90%;
   border-radius: 0px 25px;
   padding: 1%;
   justify-content: center;
-  right: -4%;
+ 
   font-family: "Marcellus SC", serif;
   font-style: normal;
   font-weight: normal;
@@ -372,13 +378,28 @@ img {
 .contenedor-video{
 
   width: 100%;
-  height: auto;
+  height: 50%;
   margin: 0rem 0rem 0rem 0rem;
 }
 
-iframe{
-  height: auto;
+.lol-video {
+  
+  margin: 1rem 1rem 1rem 0rem;
+
+  background-color: rgba(10, 3, 3, 0.404);
+  
+  border: 5px inset #bba341;
+  overflow: auto;
+  border-radius: 0px 20px;
   width: 100%;
+  
+}
+
+.lol-video iframe{
+
+  width: 100%;
+  border-radius: 0px 20px;
+  
 }
 
 /*Seccion footer LOL */
@@ -410,12 +431,12 @@ footer {
 }
 .left {
   color:#EADA9D;
-  font-size: 25px;
+  font-size: 100%;
   margin: auto 0;
 }
 .derechos {
   color: #ccb24c;
-  font-size: 25px;
+  font-size: 100%;
 }
 .left:hover {
     color:#EADA9D;
@@ -1337,16 +1358,23 @@ margin-left: 35%;
 
 @media only screen and (max-width: 300px) {
 
+  .header{
+    margin: 1rem 1rem 1rem 4rem;
+    width: 100%;
+  }
+  .figure{
+    margin: 1rem 1rem 1rem 1rem;
+  }
   .title-lol{
     max-width: 100%;
     margin: 1rem 1rem 1rem 0rem;
   }
   .menus{
-    width: 200%;
+    width: 220%;
     position: relative;
     float: none;
     display: block;
-    margin: 1rem 1rem 1rem -8rem;
+    margin: 1rem 1rem 1rem -8.5rem
   }
   .logoHome{
     width: 100%;
@@ -1395,8 +1423,20 @@ margin-left: 35%;
   }
   .container-box{
     display: block;
-    position: absolute;
+    position: relative;
     float: none;
+    width: 87%;
+    margin: 1rem 1rem 1rem 5rem;
+  }
+  .container-box p{
+font-size:100%;
+  } 
+  .container-box h2{
+    font-size:100%;
+      } 
+
+  .comunidad-nav a{ 
+    font-size:100%;
   }
   .home{
     display: block;
@@ -1408,23 +1448,44 @@ margin-left: 35%;
     display: block;
     position: absolute;
     float: none;
+    margin: 0rem 0rem 0rem 5rem;
+    width: 90%;
   }
- 
+  .mode-play h2{
+    font-size: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  .dot-chain{
+    width: 100%;
+  }
+  .video-container h2{
+    font-size: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+}   
 
+  .lol-video{
+    margin: 0rem 0rem 0rem 0rem;
+    height: 50%;
+  }
+  .container-footer{
+    margin: 105rem 0rem 0rem 4rem;
+  }
+  .left .derechos p{
+    font-size: 100%;}
 }
+
 
 
 @media only screen and (min-width: 301px) and (max-width: 700px){
 
   .title-lol{
     display: block;
-    margin: auto;
-    width: 99%;
+    margin: 1rem 0rem 1rem 0rem;
+    width: 100%;
     height: auto;
   }
   .menus{
    
-    width: 109%;
     position: relative;
     float: none;
     display: block;
@@ -1435,15 +1496,20 @@ margin-left: 35%;
     margin: 1rem 1rem 1rem 0rem;
 
   }
+
+  .figure {
+    margin: 0rem 0rem 0rem 0rem;
+}
   .imghome{
     width: 22%;
     top: 40%;
     margin: 1em 1em 1em 6em;
   }
   .menu-bar a{
-    font-size: 89%;
+    font-size: 100%;
     align-items: stretch;
     line-height: 150%;
+    width: auto;
   }
   .menu-bar{
     float: none;
@@ -1459,21 +1525,23 @@ margin-left: 35%;
   }
   .cornerPlay{
     width: 70%;
-    margin: 0rem 0rem 0rem 3rem;
+    margin: 0rem 0rem 0rem 2rem;
     align-items: center;
   }
   .cornerBar{
-    margin: 1rem 1rem 1rem -1rem;
-    width: 112%;
+    margin: 1rem 1rem 1rem -2rem;
+    width: 125%;
   }
   .mode-play h2{
     font-size:100%;
+    margin:1rem 1rem 1rem 1.5rem;
   }
 .dot-chain{
   width: 100%;
 }
 .video-container h2{
   font-size: 100%;
+  margin: 0rem 0rem 0rem 1.5rem;
 }
   /*blque de texto y videos*/
   .home{
@@ -1487,11 +1555,15 @@ margin-left: 35%;
     position: relative;
     float: none;
     margin: 1rem 1rem 1rem 1rem;
+    width: 91%;
   }
   .container-box > p{
     font-size: 100%;
   }
   .container-box > h2{
+    font-size: 100%;
+  }
+  .comunidad-nav > a {
     font-size: 100%;
   }
   .home{
@@ -1505,16 +1577,18 @@ margin-left: 35%;
     margin: 1rem 1rem 1rem 1rem;
     position: absolute;
     float: none;
-    width: 94%;
+    width: 93%;
   }
   .lol-video{
-    margin: 1rem 1rem 1rem 1rem;
-    width: 94%;
+    margin: 1rem 1rem 2rem 0rem;
+    width: 98%;
     height: auto;
   }
   .container-footer{
-    display: block;
-    margin: 85rem 1rem 1rem 1rem;
+  
+    margin: 100rem 1rem 1rem 0rem;
+    width: 98%;
+
   }
 }
 
@@ -1655,19 +1729,31 @@ margin-left: 35%;
   display: block;
   position: absolute;
   float: none;
-  margin: 42rem 1rem 1rem 1rem;
+  margin: 61rem 1rem 1rem 3rem;
+  width: auto;
+}
+.modo-juego h2{
+  margin: 0rem 0rem 0rem 4rem;
 }
 .lol-video{
-  margin: 1rem 1rem 1rem 1rem;
-  width: 94%;
+  margin: 1rem 1rem 1rem -1rem;
+  width: 100%;
   
 }
-
+.contenedor-video{
+  margin: 1rem 1rem 1rem 1rem;
+  width: 100%
+}
+.video-container h2{
+  margin: 0rem 0rem 0rem 3rem;
+  width: 90%;
+}
 .container-footer{
   display: block;
-  margin: 85rem 1rem 1rem 1rem;
+  margin: 93rem 1rem 1rem 1rem
 }
   }
+
 
 
   
