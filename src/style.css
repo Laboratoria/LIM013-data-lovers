@@ -60,8 +60,12 @@ select option{
     padding-left:20px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   
-    z-index: 1;
+}
+
+.section1_select:hover{
+    /* background-color:rgba(248, 231, 233, 0.97); */
+    /* box-shadow:initial; */
+    box-shadow: 0px 10px 10px rgba(250, 186, 186, 0.97)
 }
 
 h2{
@@ -92,13 +96,7 @@ a:active {
     
 }
 
-.section1_span{
-   color:black;
-   font-size: 22px;
-}
 
-
-main{}
 
 .section2{
     margin-left:60px;
@@ -118,11 +116,12 @@ main{}
     flex:20%;
     justify-items: center;
     border:1px solid white;
-    border-radius:10px;    
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin:20px;
-   
-    
+    border-radius:10px;
+    height: 280px;
+    box-shadow: 5px 20px 20px rgba(190, 184, 184, 0.97);
+}
+div:hover{
+    box-shadow: 0px 10px 30px rgba(241, 154, 154, 0.97);
 }
 
 .section2-table-item_close{
@@ -145,8 +144,8 @@ main{}
 
 .section2-table-item_name{ 
     font-family:serif;
-    font-size:20px; 
-} 
+
+
 
 .section2-table-item_type{
     border: 2px solid rgb(190, 5, 5);
