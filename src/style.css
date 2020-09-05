@@ -27,20 +27,6 @@ h1{
     
     
 }
-/* .main_section_container:hover{
-    box-shadow: 0 1px 0 #20212447;
-} */
-.main_section_container_input{
-    width:200%;
-    height: 30px;
-    background-image:url(/src/images/searchBy.png);
-    background-size: contain;
-    background-position:right;
-    background-repeat:no-repeat;
-}
-.section1_select:hover{
-    box-shadow: 0 1px 0 #20212447;
-}
 
 .section1_select{
     width: 18%;
@@ -48,10 +34,20 @@ h1{
     border-radius:5px;
     
 }
-/* .section1_input{
-    width: 36%;
-    height:30px; 
-} */
+
+.section1_input{
+    width:36%;
+    height: 30px;
+    background-image:url(/src/images/searchBy.png);
+    background-size: contain;
+    background-position:right;
+    background-repeat:no-repeat;
+    border-radius: 5px;
+}
+
+.section1_select:hover{
+    background-color: grey;
+}
 
 h2{
     font-family: 'Varela', sans-serif;
