@@ -15,11 +15,11 @@ let count = 0;
 
 button.addEventListener('click', () => {
   if (count == 0) {
-    links.className = ('links two');
+    links.className = ('links closedMenu');
     count = 1;
   } else {
-    links.classList.remove('one');
-    links.className = ('links one');
+    links.classList.remove('openMenu');
+    links.className = ('links openMenu');
     count = 0;
   }
 })
@@ -104,13 +104,13 @@ document.querySelectorAll('.legends_container .legends img').forEach((item) => {
     overlay.classList.add('active');
     document.querySelector('#overlay img').src = ruta;
     document.querySelector('#overlay .description').innerHTML = description;
-    document.querySelector('#overlay .info #one').innerHTML = 'Ataque:\n' + infoAttack;
-    document.querySelector('#overlay .info #two').innerHTML = 'Defensa:\n' + infoDefense;
-    document.querySelector('#overlay .info #three').innerHTML = 'Magia:\n' + infoMagic;
+    document.querySelector('#overlay .info #attack').innerHTML = 'Attack:\n' + infoAttack;
+    document.querySelector('#overlay .info #defense').innerHTML = 'Defense:\n' + infoDefense;
+    document.querySelector('#overlay .info #magic').innerHTML = 'Magic:\n' + infoMagic;
   });
 });
 
-document.querySelector('#btn-close').addEventListener('click', () => {
+document.querySelector('#btn-closed').addEventListener('click', () => {
   overlay.classList.remove('active')
 })
 
