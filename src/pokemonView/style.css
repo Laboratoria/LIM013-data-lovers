@@ -66,70 +66,92 @@
     
     .bug {
         background-color: #caffbf;
+        color: #caffbf;
     }
     
     .dark {
         background-color: #d2d2cf;
+        color: #d2d2cf;
     }
     
     .dragon {
         background-color: #bcd4e6;
+        color: #bcd4e6;
     }
     
     .electric {
         background-color: #faedcb;
+        color: #faedcb;
     }
     
     .fairy {
         background-color: #f2c6de;
+        color: #f2c6de;
     }
     
     .fire {
         background-color: #F5D396;
+        color: #F5D396;
     }
     
     .fighting {
         background-color: #f9c6c9;
+        color: #f9c6c9;
+    }
+    
+    .flying {
+        background-color: #def7f7;
+        color: #def7f7;
     }
     
     .ghost {
         background-color: #c8e7ff;
+        color: #c8e7ff;
     }
     
     .grass {
         background-color: #C8EDCB;
+        color: #C8EDCB;
     }
     
     .ground {
         background-color: #e2cfc4;
+        color: #e2cfc4;
     }
     
     .ice {
         background-color: #c0fdff;
+        color: #c0fdff;
     }
     
     .normal {
         background-color: #e2e2df;
+        color: #e2e2df;
     }
     
     .poison {
         background-color: #C9C7EE;
+        color: #C9C7EE;
     }
     
     .psychic {
         background-color: #f7d6e0;
+        color: #f7d6e0;
     }
     
     .rock {
         background-color: #efe5dc;
+        color: #efe5dc;
     }
     
     .steel {
         background-color: #c6e2e9;
+        color: #c6e2e9;
     }
     
     .water {
         background-color: #C6ECED;
+        color: #C6ECED;
     }
     
     #data-pokemon {
@@ -215,7 +237,7 @@
     #overview-stat-abilitie .content-details {
         display: flex;
         flex-flow: row wrap;
-        width: 75%;
+        width: 70%;
         height: 85%;
         margin: 0 auto;
         background-color: #212529;
@@ -225,10 +247,38 @@
         padding: 15px;
     }
     
-    #overview-stat-abilitie .content-details h3 {
-        color: teal;
+    #fast-attacks,
+    #resistant,
+    #weaknesses,
+    #special-attacks {
+        background-color: transparent;
+        margin-bottom: 5px;
+        margin-top: 10px;
     }
     
-    #overview-stat-abilitie .content-details p {
-        color: teal;
+    h3 p {
+        color: white;
+    }
+    
+    #span-resistant,
+    #span-weaknesses {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .resistant {
+        padding: 5px 15px;
+        color: #212529;
+        text-transform: capitalize;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    .pokemon-evolucion {
+        width: 50px;
     }
