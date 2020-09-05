@@ -2,10 +2,98 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokepedia</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+
+      <nav class="navBar">
+        <div class="logo">
+          <img class="headerIcon" src="img/PokepediaIcon.svg" alt="Pokepedia icon">
+        </div>
+
+        <a href="#" class="toggleBtn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+          <ul class="nav-links">
+            <li><a class="menu" id="aboutOption">About</a></li>
+            <li><a class="menu" id="pokemonOption">Pokémon</a></li>
+            <li><a class="menu" href="#top">Top</a></li>
+            <li><a class="menu" href="#calculate">Calculate</a></li>
+          </ul>
+          <input type="search" placeholder="Search by name or number" id="Search"> 
+      </nav>
+
+      <section id="about">
+        <img id="pokepediaBandW" src="img/pokepediaBandW.svg" alt="Pokepedia icon black and white">
+          <p class="aboutText">A guide of Pokémon types, stats and evolutions<br>to Pokémon Go gamers.</p>
+          <p class="aboutText">Gotta catch 'em all!</p>
+          <button id="pokemonGo"><p>Pokémon</p></button><br>
+      </section>
+
+      <section id="pokemon" >
+        <div class="sort-filter">
+          <select name="select" id="sort" class="sort">
+            <option value="valueOne" selected>Sort results by</option>
+            <option value="valueTwo">A-Z</option>
+            <option value="valueThree">Hightest number</option>
+          </select>
+          <label for="types"><b>Types</b></label>
+          <select name="select" class="types" id="types">
+            <option value="all">All </option>
+            <option value="normal">Normal</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="poison">Poison</option>
+            <option value="flying">Flying</option>
+            <option value="psychic">Psychic</option>
+            <option value="rock">Rock</option>
+            <option value="steel">Steel</option>
+            <option value="bug">Bug</option>
+            <option value="dark">Dark</option>
+            <option value="dragon">Dragon</option>
+            <option value="electric">Electric</option>
+            <option value="fairy">Fairy</option>
+            <option value="fighting">Fighting</option>
+            <option value="ghost">Ghost</option>
+            <option value="ground">Ground</option>
+            <option value="ice">Ice</option>
+          </select>
+        </div>
+    
+        <div id="rootPokemon"></div>
+
+        <div class="button-load">
+          <button id="loadPokemon">Load more Pokémon</button><br>
+        </div>
+
+        <div id="rootPokemonModal"></div>
+
+      </section>
+      <section id="top">
+
+      </section>
+      <section id="calculate">
+
+      </section>
+
+    </div>
+    <footer>
+      <img class="footerImg" src="img/footer.png" alt="pokepedia icon footer"><br>
+      <p>&copy; 2020 
+      Mónica Motta & Clarissa Paitán</p><br>
+      <div class="social-media">
+        <img src="img/github.svg" alt="github icon">
+        <img src="img/instagram.svg" alt="instagram icon">
+        <img src="img/youtube.svg" alt="youtube icon">
+        <img src="img/github.svg" alt="github icon">
+      </div>
+    </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
