@@ -31,7 +31,7 @@ const showByData = (array) => {
             <span id="close${item.name}" class="section2-table-item_close">&times;</span>
             <p class="section2-table-item_num">#${item.num}</p>
             <img class="section2-table-item_img" src=${item.img}></img>
-            <p class="section2-table-item_name">name: ${item.name}.chartAt(0).toUpperCase() + ${item.name}.slice(1);</p>
+            <p class="section2-table-item_name">name: ${item.name}</p>
             <p class="section2-table-item_type">type: ${item.type}</p>
             <p class="section2-table-item_type": ${item.resistant}</p>
             <p class="section2-table-item_type">waknesses: ${item.weaknesses}</p>
