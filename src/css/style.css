@@ -701,5 +701,8 @@ footer i:hover {
   h3 {
     font-size: 18px;
   }
+  .overlay .description {
+    color: black;
+}
 
 }

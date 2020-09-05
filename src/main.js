@@ -89,7 +89,35 @@ const displayList = (items, wrapper, rows_per_page, page) => {
     //console.log('item',item.name)
     listLegends(item.name, item.splash, item.title, item.blurb, item.info.attack, item.info.defense, item.info.magic)
   }
+/*MOSTRAR MODAL AL HACER CLICK EN CADA LEGEND */
+const overlay = document.getElementById('overlay');
+document.querySelectorAll('.legends_container .legends img').forEach((item) => {
 
+  item.addEventListener('click', () => {
+    console.log('item', item);
+    const ruta = item.getAttribute('src');
+    const description = item.parentNode.dataset.blurb;
+    const infoAttack = item.parentNode.dataset.attack;
+    const infoDefense = item.parentNode.dataset.defense;
+    const infoMagic = item.parentNode.dataset.magic;
+
+    overlay.classList.add('active');
+    document.querySelector('#overlay img').src = ruta;
+    document.querySelector('#overlay .description').innerHTML = description;
+    document.querySelector('#overlay .info #one').innerHTML = 'Ataque:\n' + infoAttack;
+    document.querySelector('#overlay .info #two').innerHTML = 'Defensa:\n' + infoDefense;
+    document.querySelector('#overlay .info #three').innerHTML = 'Magia:\n' + infoMagic;
+  });
+});
+
+document.querySelector('#btn-close').addEventListener('click', () => {
+  overlay.classList.remove('active')
+})
+
+overlay.addEventListener('click', (e) => {
+  /* overlay.classList.remove('active') */
+  e.target.id === 'overlay' ? overlay.classList.remove('active') : ''
+})
 }
 
 const setupPagination = (items, wrapper, rows_per_page) => {
@@ -206,32 +234,4 @@ const search = () => {
 
 inputSearch.addEventListener('keyup', search);
 
-/*MOSTRAR MODAL AL HACER CLICK EN CADA LEGEND */
-const overlay = document.getElementById('overlay');
-document.querySelectorAll('.legends_container .legends img').forEach((item) => {
 
-  item.addEventListener('click', () => {
-    console.log('item', item);
-    const ruta = item.getAttribute('src');
-    const description = item.parentNode.dataset.blurb;
-    const infoAttack = item.parentNode.dataset.attack;
-    const infoDefense = item.parentNode.dataset.defense;
-    const infoMagic = item.parentNode.dataset.magic;
-
-    overlay.classList.add('active');
-    document.querySelector('#overlay img').src = ruta;
-    document.querySelector('#overlay .description').innerHTML = description;
-    document.querySelector('#overlay .info #one').innerHTML = 'Ataque:\n' + infoAttack;
-    document.querySelector('#overlay .info #two').innerHTML = 'Defensa:\n' + infoDefense;
-    document.querySelector('#overlay .info #three').innerHTML = 'Magia:\n' + infoMagic;
-  });
-});
-
-document.querySelector('#btn-close').addEventListener('click', () => {
-  overlay.classList.remove('active')
-})
-
-overlay.addEventListener('click', (e) => {
-  /* overlay.classList.remove('active') */
-  e.target.id === 'overlay' ? overlay.classList.remove('active') : ''
-})
