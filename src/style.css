@@ -24,13 +24,13 @@ body {
 .menus {
   display: flex;
   width: 100%;
-  overflow: hidden;
+  
   float: inline-start;
   align-items: center;
   
 }
 .logoHome {
-  margin: auto 0;
+  margin: 0rem -3rem 0rem 1rem;
   width: 10%;
   height: auto;
   top: 50%;
@@ -38,7 +38,7 @@ body {
   vertical-align: middle;
 }
 .imghome{
-  width:60px;
+  width: 84px;
 
 }
 
@@ -47,7 +47,7 @@ body {
   box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
 .cornerBar {
-  width: 65%;
+  width: 69%;
   padding: 0.3125rem;
   margin: 2rem 1rem 2rem 1rem;
   border: #a87e3e 0.090rem solid;
@@ -56,7 +56,7 @@ body {
 .cornerPlay {
   
   padding: 0.3125rem;
-  margin: 2rem 0 2rem 2rem;
+  margin: 2rem 1rem 2rem 1rem;
   border: #a87e3e 0.090rem solid;
   border-radius: 1.875rem 0rem 1.875rem 0rem;
   width: 19%;
@@ -78,8 +78,8 @@ body {
 .menu-bar a {
   color: #000000;
   text-decoration: none;
-  line-height: 44px;
-  font-size: 40px;
+  line-height: 100%;
+  font-size: 250%;
   font-weight: normal;
   font-family: "Marcellus SC", serif;
   font-style: normal;
@@ -117,8 +117,8 @@ body {
 .menu-play a {
   color: white;
   text-decoration: none;
-  font-size: 37px;
-  line-height: 77%;
+  font-size: 220%;
+  line-height: 67%;
   font-weight: normal;
   font-family: "Marcellus SC", serif;
   align-items: center;
@@ -134,8 +134,11 @@ body {
 
 /*section home*/
 .home {
-  display: flex;
-  width: 100;
+  
+ display:flex;
+  width: 100%;
+  float:inline-start;
+
 }
 .container-box {
   background-color: rgba(10, 3, 3, 0.404);
@@ -148,6 +151,9 @@ body {
   overflow: auto;
   font-family: "Marcellus SC", serif;
   border-radius: 0px 20px;
+  float: left;
+
+ 
 }
 .box-divider {
   padding-top: 2rem;
@@ -185,16 +191,18 @@ body {
 
 /*Modo de juego y Video de LOL */
 .modos {
-  margin-left: 5%;
-  margin-right: 5%;
+
+  margin: 1rem 1rem 1rem 1rem;
   width: 100%;
+  position: relative;
+  float: left;
+
 }
 
 /*Seccion slides LOL */
+
+
 .mode-play h2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   background-color: #bba341;
   align-items: normal;
   margin: auto;
@@ -208,12 +216,12 @@ body {
   font-style: normal;
   font-weight: normal;
   color: black;
-  position: relative;
   font-size: 25px;
   line-height: 23px;
   text-align: center;
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
   opacity: 0.8;
+
 }
 .mySlides {
   display: none;
@@ -222,7 +230,7 @@ img {
   vertical-align: middle;
 }
 .slideshow-container {
-  max-width: 800px;
+  max-width: 100%;
   position: relative;
   margin: 1%;
   background-color: rgba(10, 3, 3, 0.404);
@@ -246,6 +254,7 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  
 }
 .next {
   right: 0;
@@ -277,6 +286,7 @@ img {
   padding: 8px 10px;
   position: relative;
   top: 0;
+
 }
 #dot1,
 #dot2,
@@ -290,6 +300,9 @@ img {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+.dot-chain{
+  width: 100%;
 }
 .dot:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -325,18 +338,17 @@ img {
 
 /*Seccion video LOL */
 .lol-video {
-  width: 650px;
-  position: relative;
-  margin: 1%;
+  width: 97%;
+  margin: 1rem 1rem 1rem 1rem;
   background-color: rgba(10, 3, 3, 0.404);
-  height: 400px;
+  height: 500px;
   border: 5px inset #bba341;
   overflow: auto;
   border-radius: 0px 20px;
-  right: 2%;
+
 }
 .video-container h2 {
-  display: flex;
+
   background-color: #bba341;
   align-items: normal;
   margin: auto;
@@ -355,6 +367,18 @@ img {
   text-align: center;
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
   opacity: 0.8;
+
+}
+.contenedor-video{
+
+  width: 100%;
+  height: auto;
+  margin: 0rem 0rem 0rem 0rem;
+}
+
+iframe{
+  height: auto;
+  width: 100%;
 }
 
 /*Seccion footer LOL */
@@ -1310,7 +1334,7 @@ margin-left: 35%;
 
 
 /*TODO Responsive*/
-/* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 300px) {
 
   .title-lol{
@@ -1362,7 +1386,30 @@ margin-left: 35%;
     margin: 1rem 2rem 1rem 5rem;
     width: 76%;
   }
+  /*blque de texto y videos*/
+  .home{
+    display: block;
+    position: absolute;
+    float: none;
 
+  }
+  .container-box{
+    display: block;
+    position: absolute;
+    float: none;
+  }
+  .home{
+    display: block;
+    position: absolute;
+    float: none;
+
+  }
+  .modos{
+    display: block;
+    position: absolute;
+    float: none;
+  }
+ 
 
 }
 
@@ -1372,38 +1419,38 @@ margin-left: 35%;
   .title-lol{
     display: block;
     margin: auto;
-    width: 68%;
+    width: 99%;
     height: auto;
   }
   .menus{
    
-    width: 100%;
+    width: 109%;
     position: relative;
     float: none;
     display: block;
-    margin: 1rem 0rem 1rem -3rem;
+    margin: 1rem 1rem 1rem 0rem;
   }
   .logoHome{
-    width: 35%;
-    margin: 1rem 1rem -5rem -6rem;
+    width: 100%;
+    margin: 1rem 1rem 1rem 0rem;
 
   }
   .imghome{
-    width: 26%;
+    width: 22%;
     top: 40%;
-    margin: -1em 1em 1em 7em;
+    margin: 1em 1em 1em 6em;
   }
   .menu-bar a{
-    font-size: 171%;
-    align-items: center;
-    line-height: 100%;
+    font-size: 89%;
+    align-items: stretch;
+    line-height: 150%;
   }
   .menu-bar{
     float: none;
     justify-content: space-evenly;
   }
   .menu-play a{
-    font-size: 30px;
+    font-size: 100%;
     align-items: center;
     line-height: 100%;
   }
@@ -1411,21 +1458,70 @@ margin-left: 35%;
     width: auto;
   }
   .cornerPlay{
-    width: 41%;
-    margin: 0rem 0rem 0rem 13rem;
+    width: 70%;
+    margin: 0rem 0rem 0rem 3rem;
+    align-items: center;
   }
   .cornerBar{
-    margin: 1rem 4rem 1rem 6rem;
-    width: 83%;
+    margin: 1rem 1rem 1rem -1rem;
+    width: 112%;
   }
+  .mode-play h2{
+    font-size:100%;
+  }
+.dot-chain{
+  width: 100%;
+}
+.video-container h2{
+  font-size: 100%;
+}
+  /*blque de texto y videos*/
+  .home{
+    display: block;
+    position: absolute;
+    float: none;
 
-  
+  }
+  .container-box{
+    display: block;
+    position: relative;
+    float: none;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  .container-box > p{
+    font-size: 100%;
+  }
+  .container-box > h2{
+    font-size: 100%;
+  }
+  .home{
+    display: block;
+    position: absolute;
+    float: none;
+
+  }
+  .modos{
+    display: block;
+    margin: 1rem 1rem 1rem 1rem;
+    position: absolute;
+    float: none;
+    width: 94%;
+  }
+  .lol-video{
+    margin: 1rem 1rem 1rem 1rem;
+    width: 94%;
+    height: auto;
+  }
+  .container-footer{
+    display: block;
+    margin: 85rem 1rem 1rem 1rem;
+  }
 }
 
 
 
 
-@media only screen and (min-width: 701px) and (max-width:767px){
+@media only screen and (min-width: 701px) and (max-width: 767px){
 
 
   .title-lol{
@@ -1477,12 +1573,25 @@ margin-left: 35%;
     margin: 1rem 4rem 1rem 6rem;
     width: 83%;
   }
+  .container-box{
+    float:none;
+    position: relative;
+  }
+  .home{
+    float:none;
+    position: relative;
+
+  }
+  .modos{
+    float: none;
+    position: relative;
+  }
 
 }
 
 
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
 
   
   .title-lol{
@@ -1502,14 +1611,14 @@ margin-left: 35%;
 
   }
   .imghome{
-    width: 6%;
+    width: 10%;
     top: 40%;
     margin: 1em 1em 0em 1em;
   }
   .menu-bar a{
-    font-size: 28px;
+    font-size: 170%;
     align-items: center;
-    line-height: 100%;
+    line-height: 150%;
   }
   .menu-bar{
     float: none;
@@ -1517,23 +1626,51 @@ margin-left: 35%;
     width: auto;
   }
   .menu-play a{
-    font-size: 128%;
+    font-size: 150%;
     align-items: center;
     line-height: 100%;
-    margin: 2%;
+    margin: 4%
   }
   .menu-play{
     width: auto;
   }
   .cornerPlay{
-    width: 21%;
-    margin: -5rem 5rem 0rem 44rem;
+    width: 30%;
+    margin: 1rem 5rem 1rem 14rem;
 }
 .cornerBar{
-  margin: -5rem 1rem 1rem 6rem;
-  width: 65%;
+  margin: 1rem 0rem 1rem 0rem;
+  width: 100%;
+}
+.container-box{
+  float:none;
+  position: relative;
+}
+.home{
+  float:none;
+  position: relative;
+
+}
+.modos{
+  display: block;
+  position: absolute;
+  float: none;
+  margin: 42rem 1rem 1rem 1rem;
+}
+.lol-video{
+  margin: 1rem 1rem 1rem 1rem;
+  width: 94%;
+  
+}
+
+.container-footer{
+  display: block;
+  margin: 85rem 1rem 1rem 1rem;
 }
   }
+
+
+  
 
 
 
