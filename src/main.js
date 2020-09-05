@@ -7,7 +7,7 @@ const selectByName = document.querySelector("#selectByName");
 const selectByType = document.querySelector("#selectByType");
 const searchByName = document.querySelector("#searchByName");
 const index = document.querySelector("#index");
-
+const reset = document.querySelector("#reset");
 
 const showByData = (array) => {
     table.innerHTML="";    
@@ -27,11 +27,11 @@ const showByData = (array) => {
         const showForItem = document.createElement("div");
         showForItem.classList.add("section2_modal-item");
         showForItem.style.display="none";
-        showForItem.innerHTML= `
-            <span id="close">X</span>
+           showForItem.innerHTML= `
+            <span id="close${item.name}" class="section2-table-item_close">&times;</span>
             <p class="section2-table-item_num">#${item.num}</p>
             <img class="section2-table-item_img" src=${item.img}></img>
-            <p class="section2-table-item_name">name: ${item.name}</p>
+            <p class="section2-table-item_name">name: ${item.name}.chartAt(0).toUpperCase() + ${item.name}.slice(1);</p>
             <p class="section2-table-item_type">type: ${item.type}</p>
             <p class="section2-table-item_type": ${item.resistant}</p>
             <p class="section2-table-item_type">waknesses: ${item.weaknesses}</p>
@@ -41,12 +41,13 @@ const showByData = (array) => {
             <p class="section2-table-item_stats">PC: ${puntos}</p> 
              `
         modal.appendChild(showForItem);
+        const closeForItem = document.getElementById("close" + item.name);
 
         const closeForData = () => {
             showForItem.style.display = "none";
         }
             
-        showForItem.addEventListener("click", closeForData);
+        closeForItem.addEventListener("click", closeForData);
     
         const openForData = () => {
             showForItem.style.display = "block";
@@ -58,35 +59,52 @@ const showByData = (array) => {
 };
  
 //inicializando//
-showByData(data.pokemon);
+showByData(data.pokemon)
+
 
 // filterByName//
 searchByName.addEventListener("keyup", (e) => {
+    e.preventDefault;
+    selectByType.selectedIndex = 0;  
+    selectByName.selectedIndex = 0;  
     if (e.keyCode === 13) {
-    const showForName = searchByName.value;
+    const showForName = searchByName.value.toLowerCase();
     const showCardName = filterByName(data.pokemon,showForName);
     showByData(showCardName);
     searchByName.value=""; 
-    index.innerHTML= showForName;
+    index.innerHTML=" / " + showForName;
     }
 });
 
 //sortByName//
-selectByName.addEventListener("change", () => {
+selectByName.addEventListener("change", (e) => {
+    e.preventDefault;
     const showByName = selectByName.value;
     const showListName = sortByName(data.pokemon,showByName);
     showByData(showListName);
-    index.innerHTML= showByName;
+    selectByType.selectedIndex = 0; 
+    index.innerHTML=" / " + showByName;   
 });
 
 
 // filterByType//
-selectByType.addEventListener("change", () => {
+selectByType.addEventListener("change", (e) => {
+    e.preventDefault;
     const showByType = selectByType.value;
     const showListType = filterByType(data.pokemon,showByType);
     showByData(showListType);
-    if (showByType == "allTypes") {
+    if (showByType == "All Types") {
     showByData(data.pokemon);
     }
-    index.innerHTML= showByType;
+    index.innerHTML=" / " + showByType;
 });
+
+
+reset.addEventListener("click", () => {
+    showByData(data.pokemon);
+    selectByName.selectedIndex = 0;
+    selectByType.selectedIndex = 0;    
+    index.innerHTML=" / All Types";
+});
+
+
