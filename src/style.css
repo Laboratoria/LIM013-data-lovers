@@ -20,12 +20,14 @@ header{
 h1{ 
     font-family: 'Varela', sans-serif;
     font-size: 40px;
-    padding:25px;     
+    padding:20px;
+    padding-top:25px;
 }
 
 .section1{
     display: flex;
     justify-content: center;
+    margin-left:50px;
 }
 
 .section1_select{
@@ -67,8 +69,8 @@ h2{
     font-family: 'Varela', sans-serif;
     font-size: 20px;
     text-align: left;
-    padding:12px;
-    margin-left:50px;  
+    padding:20px;
+    margin-left:120px;  
 }
 
 a:link{
@@ -86,14 +88,14 @@ a:active {
 }
 
 .section2{
-   
+   margin-left:50px;
 }
 
 
 .section2_table{
     display: flex;
     flex-wrap: wrap;
-    width:90%;
+    width:85%;
     margin: auto;
 }
 
