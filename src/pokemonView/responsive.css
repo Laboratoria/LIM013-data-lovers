@@ -3,3 +3,45 @@
         font-size: 150%;
     }
 }
+
+@media (max-width: 854px) {
+    #table-fast-attacks,
+    #table-special-attacks {
+        height: 18%;
+    }
+}
+
+@media (max-width: 666px) {
+    #table-fast-attacks,
+    #table-special-attacks {
+        height: 14%;
+    }
+}
+
+@media (max-width: 612px) {
+    #container {
+        height: auto;
+    }
+    #data-pokemon {
+        width: 100%;
+    }
+    #about {
+        display: none;
+    }
+    #overview-stat-abilitie {
+        width: 100%;
+        height: auto;
+    }
+    #name {
+        margin-bottom: 20px;
+    }
+    #img-pokemon,
+    .img-pokemon-img,
+    #shine {
+        width: 150px;
+    }
+    #num {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
