@@ -1,15 +1,15 @@
 *{
     box-sizing: border-box;
-    /*margin:0;
-    padding:0;*/
+    margin:0;
+    padding:0;
 }   
 
 body{
-    /*text-align: center*/   
+    text-align: center;
 }
 
 header{
-    background-image: url(/images/pokebola.jpg);
+    background-image: url(images/pokebola.jpg);
     background-repeat: no-repeat;     
     background-attachment:fixed;
     background-size:30% 60%;
@@ -19,16 +19,12 @@ header{
 
 h1{ 
     font-family: 'Varela', sans-serif;
-    font-size: 28px;
-    padding-top:40px;
-    padding-bottom: 20px;
-    
-    
+    font-size: 40px;
+    padding:15px;     
 }
 
 .section1{
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -54,7 +50,6 @@ select option{
     color: black;
 } 
 
-
 .section1_input{
     width:36%;
     height:30px;
@@ -68,14 +63,12 @@ select option{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-
 h2{
     font-family: 'Varela', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
-    margin-left:120px;
-    margin-top:25px;
-    margin-bottom: 30px;
+    padding:15px;
+    margin-left:100px;  
 }
 
 a:link{
@@ -90,7 +83,6 @@ a:visited {
 a:active {
     color: #9b9b9b;
     text-decoration: underline;
-    
 }
 
 .section2{
@@ -99,29 +91,21 @@ a:active {
 
 
 .section2_table{
-    background-color:white;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
     width:90%;
-    max-width:900px;
     margin: auto;
 }
 
 .section2_table-item{
-    padding:10px;
+    flex:20%;
     flex-grow:1;
-    min-width:150px;
-    
-    /*border:1px solid white;
+    margin:10px;
+    heigth:200px;
+   
+    border:1px solid white;
     border-radius:10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-    
-  /*flex:20%;*/
-    
-    /* margin-right: 15px;
-    margin-bottom:15px;
-    padding:5px;*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /*.section2-table-item_num{
@@ -133,7 +117,7 @@ a:active {
 }*/
 
 .section2-table-item_img{
-    /*width:45%;  */ 
+    width:40%; 
 }
 
 /*.section2-table-item_name{ 
@@ -209,8 +193,12 @@ footer{
 } */
 
 @media (max-width: 992px) {
-    /*.section2_table-item{
-        flex: 40%;}*/
+    section2_table-item{
+        flex: 40%;
+        margin-left:50px;
+        margin-right:25px;
+        margin-bottom:25px;
+    }
     .section2_modal-item{
         z-index:1;}
 }
