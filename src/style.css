@@ -101,7 +101,6 @@ a:active {
 .section2_table{
     background-color:blue;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     width:90%;
     max-width:900px;
