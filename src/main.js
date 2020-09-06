@@ -64,7 +64,7 @@ showByData(data.pokemon)
 
 
 // filterByName//
-searchByName.addEventListener("keyup", () => {
+searchByName.addEventListener("keyup", (e) => {
     table.innerHTML="";
     modal.innerHTML="";
     selectByType.selectedIndex = 0;  

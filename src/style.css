@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin:0;
+    padding:0;
 }   
 
 body{
@@ -10,14 +12,17 @@ header{
     background-image: url(/src/images/pokebola.jpg);
     background-repeat: no-repeat;     
     background-attachment:fixed;
-    background-size:30% 40%;
-    background-position:0% -10%; 
+    background-size:30% 60%;
+    background-position:0% -50%; 
+    opacity:0.7;
 }
 
 h1{ 
     font-family: 'Varela', sans-serif;
-    font-size: 48px;
-    padding: 15px;
+    font-size: 28px;
+    padding-top:40px;
+    padding-bottom: 20px;
+    
     
 }
 
@@ -25,21 +30,17 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top:5px;
-    padding-bottom: 10px;
 }
 
 .section1_select{
     width: 18%;
-    height:40px; 
+    height:30px; 
     border: 2px solid #ccc;
     border-radius:5px;
-    font-size:16px;
     text-align-last: center;
     /* color: white;
     background-color: #3CBC8D; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  
 }
 
 
@@ -56,7 +57,7 @@ select option{
 
 .section1_input{
     width:36%;
-    height:40px;
+    height:30px;
     background-image:url(/src/images/searchBy.png);
     background-size: 5%;
     background-position: right; 
@@ -70,13 +71,11 @@ select option{
 
 h2{
     font-family: 'Varela', sans-serif;
-    font-size: 28px;
+    font-size: 18px;
     text-align: left;
     margin-left:120px;
-    margin-top:30px;
+    margin-top:25px;
     margin-bottom: 30px;
-    padding-top:10px;
-    padding-bottom: 10px;
 }
 
 a:link{
@@ -103,43 +102,46 @@ a:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-items: space-between;
+    justify-items: space-around;
     margin-left:120px;
     margin-right:80px;
-    
 }
 
 .section2_table-item{
-    flex:25%;
-    height:280px;
-    justify-items: center;
+    flex:20%;
+    max-width:50%;
+    height:160px;
     border:1px solid white;
     border-radius:10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-right: 15px;
+    margin-bottom:15px;
+    padding:5px;
 }
 
 .section2-table-item_num{
     float:right;
     padding-right:25px;
     padding-top:5px;
-    font-size:22px;
+    font-size:12px;
    
 }
 
 .section2-table-item_img{
-    width:60%;   
-    padding-top:10px;
+    width:45%;   
 }
 
 .section2-table-item_name{ 
     font-family:serif;
-    font-size:22px;
+    font-size:14px;
+    line-height: 5px;
 }
 
 .section2-table-item_type{
     border: 2px solid rgb(190, 5, 5);
     font-family:serif;
-    font-size:22px;
+    font-size:12px;
+    line-height: 10px;
 }
 
 .section2-table-item_stats{
@@ -154,40 +156,40 @@ a:active {
     position:fixed; 
     z-index:1;
     overflow:auto;
-    left:25%;
+    left:35%;
     top:25%;
-    width:50%;
+    width:40%;
     height: 60%;
+    padding:5px;
     background:white;
     border:2px solid rgb(241, 241, 245);
     border-radius:20px;
     animation-name: example;
     animation-duration: 4s;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
 }
 
 .section2-modal-item_close{
     float:left;
     padding-left:30px;
-    padding-top:15px;
-    font-size:40px;
+    font-size:24px;
 }
 
 .section2-modal-item_num{
     float:right;
     padding-right:50px;
-    padding-top:35px;
-    font-size:26px;
+    font-size:14px;
 }
 
 .section2-modal-item_img{
-  padding-top:40px;
-  width:35%;    
+  padding-top:20px;
+  width:30%;    
 }
 
 .section2-modal-item_name{ 
     font-family:serif;
-    font-size:24px;
+    font-size:14px;
 }
 
 @keyframes example {
