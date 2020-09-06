@@ -102,9 +102,9 @@ a:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-items: space-around;
-    margin-left:120px;
-    margin-right:80px;
+    width:90%;
+    max-width:250px;
+    margin: auto;
 }
 
 .section2_table-item{
