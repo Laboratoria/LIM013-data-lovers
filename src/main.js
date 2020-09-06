@@ -14,26 +14,27 @@ const showByData = (array) => {
 
     array.forEach((item) => {
         const puntos = computeByStats(Object.values(item.stats));
+        const name= item.name[0].toUpperCase()+item.name.slice(1);
         const showByItem = document.createElement("div");
         showByItem.classList.add("section2_table-item");
         showByItem.innerHTML=`
             <p class="section2-table-item_num">#${item.num}</p>
             <img class="section2-table-item_img"src=${item.img}></img>
-            <p class="section2-table-item_name"> ${item.name}</p>
+            <p class="section2-table-item_name"> ${name}</p>
             <p class="section2-table-item_type"> ${item.type}</p>
             `       
         table.appendChild(showByItem);
-
+        
         const showForItem = document.createElement("div");
         showForItem.classList.add("section2_modal-item");
         showForItem.style.display="none";
            showForItem.innerHTML= `
-            <span id="close${item.name}" class="section2-table-item_close">&times;</span>
-            <p class="section2-table-item_num">#${item.num}</p>
-            <img class="section2-table-item_img" src=${item.img}></img>
-            <p class="section2-table-item_name">name: ${item.name}</p>
-            <p class="section2-table-item_type">type: ${item.type}</p>
-            <p class="section2-table-item_type": ${item.resistant}</p>
+            <span id="close${item.name}" class="section2-modal-item_close">&times;</span>
+            <p class="section2-modal-item_num">#${item.num}</p>
+            <img class="section2-modal-item_img" src=${item.img}></img>
+            <p class="section2-modal-item_name">${name}</p>
+            <p class="section2-table-item_type">${item.type}</p>
+            <p class="section2-table-item_type":${item.resistant}</p>
             <p class="section2-table-item_type">waknesses: ${item.weaknesses}</p>
             <p class="section2-table-item_stats">attack: ${item.stats["base-attack"]}</p>
             <p class="section2-table-item_stats">defense: ${item.stats["base-defense"]}</p>
@@ -63,8 +64,9 @@ showByData(data.pokemon)
 
 
 // filterByName//
-searchByName.addEventListener("keyup", (e) => {
-    e.preventDefault;
+searchByName.addEventListener("keyup", () => {
+    table.innerHTML="";
+    modal.innerHTML="";
     selectByType.selectedIndex = 0;  
     selectByName.selectedIndex = 0;  
     if (e.keyCode === 13) {
@@ -77,8 +79,9 @@ searchByName.addEventListener("keyup", (e) => {
 });
 
 //sortByName//
-selectByName.addEventListener("change", (e) => {
-    e.preventDefault;
+selectByName.addEventListener("change", () => {
+    table.innerHTML="";
+    modal.innerHTML="";
     const showByName = selectByName.value;
     const showListName = sortByName(data.pokemon,showByName);
     showByData(showListName);
@@ -88,8 +91,9 @@ selectByName.addEventListener("change", (e) => {
 
 
 // filterByType//
-selectByType.addEventListener("change", (e) => {
-    e.preventDefault;
+selectByType.addEventListener("change", () => {
+    table.innerHTML="";
+    modal.innerHTML="";
     const showByType = selectByType.value;
     const showListType = filterByType(data.pokemon,showByType);
     showByData(showListType);
@@ -101,6 +105,8 @@ selectByType.addEventListener("change", (e) => {
 
 
 reset.addEventListener("click", () => {
+    table.innerHTML="";
+    modal.innerHTML="";
     showByData(data.pokemon);
     selectByName.selectedIndex = 0;
     selectByType.selectedIndex = 0;    
