@@ -433,7 +433,7 @@ input[type="checkbox"]:checked + label {
     visibility: visible;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptext::cafter {
     content: "";
     position: absolute;
     top: 100%;
