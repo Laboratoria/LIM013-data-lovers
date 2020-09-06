@@ -58,7 +58,7 @@ select option{
 .section1_input{
     width:36%;
     height:30px;
-    background-image:url(/src/images/searchBy.png);
+    background-image:url(/images/searchBy.png);
     background-size: 5%;
     background-position: right; 
     background-repeat:no-repeat;
@@ -104,7 +104,7 @@ a:active {
     flex-direction: row;
     flex-wrap: wrap;
     width:90%;
-    max-width:250px;
+    min-width:250px;
     margin: auto;
 }
 
@@ -205,8 +205,8 @@ footer{
 } */
 
 @media (max-width: 992px) {
-    .section2_table-item{
-        flex: 40%;}
+    /*.section2_table-item{
+        flex: 40%;}*/
     .section2_modal-item{
         z-index:1;}
 }
