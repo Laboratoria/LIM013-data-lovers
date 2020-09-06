@@ -4,12 +4,15 @@ import {
   orderZA,
   orderAsc,
   orderDesc,
+  stats,
+
 } from "./data.js";
 import data from "./data/lol/lol.js";
 
 const datos = data.data,
   filtradoCampeones = document.getElementById("filtradoCampeones"),
   arrayCampeones = Object.values(datos);
+
 
 const listaCampeones = (
   name,
@@ -19,11 +22,16 @@ const listaCampeones = (
   rol,
   lore,
   hp,
+  hpperlevel,
   mp,
+  mpperlevel,
   armor,
+  armorperlevel,
   spellblock,
+  spellblockperlevel,
   hpregen,
-  id
+  hpregenperlevel,
+  id,
 ) => {
   const campeones = document.createElement("div"), /* card-link-champ*/
     frontalcard = document.createElement("div"); /*"frontalCard*/
@@ -66,26 +74,46 @@ const listaCampeones = (
           <tr class="table">
             <th class="table"> Hp </th>
             <td class="table">${hp}</td>
+            <td class="table">${hpperlevel}</td>
+            <td class="table">${stats(6,  arrayCampeones, 1)}</td>
+            <td class="table">${stats(12,  arrayCampeones, 1)}</td>
+            <td class="table">${stats(18, arrayCampeones, 1)}</td>
           </tr>
             
           <tr class="table">
             <th class="table"> MP </th>
-            <td class="table">${mp}</td>      
+            <td class="table">${mp}</td>
+            <td class="table">${mpperlevel}</td>
+            <td class="table">${stats(6,  arrayCampeones, 2)}</td>
+            <td class="table">${stats(12,  arrayCampeones, 2)}</td>
+            <td class="table">${stats(18, arrayCampeones, 2)}</td>        
           </tr>
 
           <tr class="table">
             <th class="table"> Armor </th>
             <td class="table">${armor}</td>
+            <td class="table">${armorperlevel}</td>
+            <td class="table">${stats(6,  arrayCampeones, 3)}</td>
+            <td class="table">${stats(12,  arrayCampeones, 3)}</td>
+            <td class="table">${stats(18, arrayCampeones, 3)}</td>
           </tr>  
           
           <tr class="table">
             <th class="table"> Spellblock </th>
             <td class="table">${spellblock}</td>
+            <td class="table">${spellblockperlevel}</td>
+            <td class="table">${stats(6,  arrayCampeones, 4)}</td>
+            <td class="table">${stats(12,  arrayCampeones, 4)}</td>
+            <td class="table">${stats(18, arrayCampeones, 4)}</td>
           </tr>
             
           <tr class="table">
             <th class="table"> Hpregen </th>
             <td class="table">${hpregen}</td>
+            <td class="table">${hpregenperlevel}</td>
+            <td class="table">${stats(6,  arrayCampeones, 5)}</td>
+            <td class="table">${stats(12,  arrayCampeones, 5)}</td>
+            <td class="table">${stats(18, arrayCampeones, 5)}</td>
           </tr>
         </table>
         <h2 class="rolText">Roles: "${rol}"</h2>    
@@ -114,10 +142,16 @@ const getCampeones = (arrayCampeones) => {
     let rol = arrayCampeones[i].tags.join(", ");
     let lore = arrayCampeones[i].blurb;
     let hp = arrayCampeones[i].stats.hp;
+    let hpperlevel = arrayCampeones[i].stats.hpperlevel;
     let mp = arrayCampeones[i].stats.mp;
+    let mpperlevel = arrayCampeones[i].stats.mpperlevel;
     let armor = arrayCampeones[i].stats.armor;
+    let armorperlevel = arrayCampeones[i].stats.armorperlevel;
     let spellblock = arrayCampeones[i].stats.spellblock;
+    let spellblockperlevel = arrayCampeones[i].stats.spellblockperlevel;
     let hpregen = arrayCampeones[i].stats.hpregen;
+    let hpregenperlevel = arrayCampeones[i].stats.hpregenperlevel;
+
     listaCampeones(
       name,
       img,
@@ -126,11 +160,16 @@ const getCampeones = (arrayCampeones) => {
       rol,
       lore,
       hp,
+      hpperlevel,
       mp,
+      mpperlevel,
       armor,
+      armorperlevel,
       spellblock,
+      spellblockperlevel,
       hpregen,
-      id
+      hpregenperlevel,
+      id,
     );
   }
 };
@@ -142,6 +181,7 @@ filtradoCampeones.addEventListener("click", (event) => {
   const rol = event.target.id;
 
   if (rol == null || rol == "" || rol == "All") {
+    document.getElementById("container-campeones").innerHTML = "";
     getCampeones(arrayCampeones);
   } else {
     const result = filterChampions(arrayCampeones, rol);
@@ -179,8 +219,8 @@ selectDifficulty.addEventListener("click", (event) => {
     const difChamps = orderDesc(arrayCampeones);
     document.getElementById("container-campeones").innerHTML = "";
     getCampeones(difChamps);
-  }
-});
+  } 
+  });
 
 /*Buscar campeones*/
 const searchInput = document.querySelector("#searchInput"),
@@ -191,6 +231,7 @@ const buscador = () => {
   const texto = searchInput.value.toLowerCase();
 
   for (let campeones of arrayCampeones) {
+    
     let nombre = campeones.name.toLowerCase();
     if (nombre.indexOf(texto) != -1) {
       result.innerHTML += `
@@ -234,31 +275,52 @@ const buscador = () => {
         <tr class="table_Reverse">
           <th class="table_Reverse"> Hp </th>
           <td class="table_Reverse">${campeones.stats.hp}</td>
+          <td class="table_Reverse">${campeones.stats.hpperlevel}</td>
+          <td class="table_Reverse">${stats(6,  arrayCampeones, 1)}</td>
+          <td class="table_Reverse">${stats(12, arrayCampeones, 1)}</td>
+          <td class="table_Reverse">${stats(18, arrayCampeones, 1)}</td>
         </tr>
   
         <tr class="table_Reverse">
           <th class="table_Reverse"> MP </th>
           <td class="table_Reverse">${campeones.stats.mp}</td>
+          <td class="table_Reverse">${campeones.stats.mpperlevel}</td>
+          <td class="table_Reverse">${stats(6,  arrayCampeones, 2)}</td>
+          <td class="table_Reverse">${stats(12,  arrayCampeones, 2)}</td>
+          <td class="table_Reverse">${stats(18, arrayCampeones, 2)}</td>
         </tr>
   
         <tr class="table_Reverse">
           <th class="table_Reverse"> Armor </th>
           <td class="table_Reverse">${campeones.stats.armor}</td>
+          <td class="table_Reverse">${campeones.stats.armorperlevel}</td>
+          <td class="table_Reverse">${stats(6,  arrayCampeones, 3)}</td>
+          <td class="table_Reverse">${stats(12,  arrayCampeones, 3)}</td>
+          <td class="table_Reverse">${stats(18, arrayCampeones, 3)}</td>
         </tr>
   
         <tr class="table_Reverse">
           <th class="table_Reverse"> Spellblock </th>
           <td class="table_Reverse">${campeones.stats.spellblock}</td>
+          <td class="table_Reverse">${campeones.stats.spellblockperlevel}</td>
+          <td class="table_Reverse">${stats(6,  arrayCampeones, 4)}</td>
+          <td class="table_Reverse">${stats(12,  arrayCampeones, 4)}</td>
+          <td class="table_Reverse">${stats(18, arrayCampeones, 4)}</td>
         </tr>
   
         <tr class="table_Reverse">
           <th class="table_Reverse"> Hpregen </th>
           <td class="table_Reverse">${campeones.stats.hpregen}</td>
+          <td class="table_Reverse">${campeones.stats.hpregenperlevel}</td>
+          <td class="table_Reverse">${stats(6,  arrayCampeones, 5)}</td>
+          <td class="table_Reverse">${stats(12,  arrayCampeones, 5)}</td>
+          <td class="table_Reverse">${stats(18, arrayCampeones, 5)}</td>
         </tr>    
       </table>
       <h2 class="rolText_Reverse">Rol: ${campeones.tags.join(", ")}</h2>
     </div>
   </section>`
+    
     }
   }
 

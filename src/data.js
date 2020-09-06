@@ -70,6 +70,29 @@ const orderDesc = function (data) {
 return result
 };
 
-export {filterChampions, orderAZ, orderZA, orderAsc, orderDesc};
+const stats = (num, data, statsLevel) => {
+  
+  for (let i = 0; i < data.length; i++) {
+    if (statsLevel === 1) {
+      return (parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * num)).toFixed(1);
+    }
+    if (statsLevel === 2) {
+      return (parseFloat(data[i].stats.mp) + (parseFloat(data[i].stats.mpperlevel) * num)).toFixed(1);
+    }
+    if (statsLevel === 3) {
+      return (parseFloat(data[i].stats.armor) + (parseFloat(data[i].stats.armorperlevel) * num)).toFixed(1);
+    }
+    if (statsLevel === 4) {
+      return (parseFloat(data[i].stats.spellblock) + (parseFloat(data[i].stats.spellblockperlevel) * num)).toFixed(1);
+    }
+    if (statsLevel === 5) {
+      return (parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * num)).toFixed(1);
+    } else {
+      return 0;
+    }
+  }
+};
+
+export {filterChampions, orderAZ, orderZA, orderAsc, orderDesc, stats};
 
 
