@@ -12,9 +12,9 @@ divData.innerHTML= pokemonData.map(example).join(" ")
 /* ` 
 <h1 class="app-title"> Tenemos (${pokemonData.length}) pokemones </h1>
 ${pokemonData.map(function(poke){
- 
+  
 }).join("")}
 `*/
+const sorted = pokemonData.sort();
 
-
-  
+console.log(sorted);

@@ -21,12 +21,20 @@ body, html {
     font-size: 1em; 
 }
 
-.headerImg{
-    background: url(img/header.png);
+.header {
     background-position: center center;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
+
+.header img{
+    line-height: 200px;
+    float: center;
+    width: fit-content;
+    height: fit-content;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #DEDEDE;
@@ -62,7 +70,3 @@ body {
 .dataPoke p{
     font-size: 20px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f4a5f6e8a808c92e20f36c86b9186b82903b4b39
