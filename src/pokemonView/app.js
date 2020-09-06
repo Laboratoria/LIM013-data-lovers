@@ -1,3 +1,7 @@
+google.charts.load('current', { 'packages': ['table'] });
+google.charts.setOnLoadCallback(drawTableFastAttacks);
+google.charts.setOnLoadCallback(drawTableSpecialAttacks);
+
 const namePokemon = localStorage.getItem('namePokemon');
 
 let imgPokemon = document.createElement("img");
@@ -30,12 +34,12 @@ document.getElementById("button-abilities").addEventListener("click", () => {
 
 // VISUALIZAR CON ARCHIVO .JSON
 
-let pokemones = [];
+let pokemon = [];
 fetch("../data/pokemon/pokemon.json")
     .then(data => data.json())
     .then(data => {
-        pokemones = data.pokemon;
-        let pokemon = pokemones.filter((pokemon) => pokemon.name.includes(namePokemon));
+        pokemon = data.pokemon;
+        pokemon = pokemon.filter((pokemon) => pokemon.name.includes(namePokemon));
         pokemon = pokemon[0];
         basicData(pokemon);
         abilities(pokemon);
@@ -76,17 +80,54 @@ let abilities = (pokemon) => {
 };
 
 let overview = (pokemon) => {
-
     let evolution1 = pokemon.evolution;
     evolution1 = evolution1["next-evolution"];
     let num1 = evolution1[0].num;
     let pos = evolution1[0];
     let evolution2 = pos["next-evolution"];
     let num2 = evolution2[0].num;
-
     imgPokemonEv1.setAttribute("src", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + num1 + ".png");
     imgPokemonEv1.setAttribute("class", "pokemon-evolucion");
     imgPokemonEv2.setAttribute("src", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + num2 + ".png");
     imgPokemonEv2.setAttribute("class", "pokemon-evolucion");
+}
 
+function drawTableFastAttacks() {
+    let fastAttacks = pokemon["quick-move"];
+    let keysAttacks = Object.keys(fastAttacks[0]);
+    let data = new google.visualization.DataTable();
+
+    keysAttacks.forEach(key => {
+        data.addColumn('string', key);
+    });
+
+    fastAttacks.forEach(attack => {
+        let values = Object.values(attack);
+        data.addRows([
+            [values[0], values[1], values[2], values[3], values[4]]
+        ]);
+    });
+
+    var table = new google.visualization.Table(document.getElementById('table-fast-attacks'));
+    table.draw(data, { showRowNumber: true, width: '100%', height: '100%' });
+}
+
+function drawTableSpecialAttacks() {
+    let specialAttacks = pokemon["special-attack"];
+    let keysSpecialAttacks = Object.keys(specialAttacks[0]);
+    let data = new google.visualization.DataTable();
+
+    keysSpecialAttacks.forEach(key => {
+        data.addColumn('string', key);
+    });
+
+    specialAttacks.forEach(specialattack => {
+        let values = Object.values(specialattack);
+        data.addRows([
+            [values[0], values[1], values[2], values[3], values[4]]
+        ]);
+    });
+
+    var table = new google.visualization.Table(document.getElementById('table-special-attacks'));
+    table.draw(data, { showRowNumber: true, width: '100%', height: '100%' });
 }

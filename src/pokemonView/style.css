@@ -247,6 +247,11 @@
         padding: 15px;
     }
     
+    #abilities {
+        width: 97%;
+        height: 100%;
+    }
+    
     #fast-attacks,
     #resistant,
     #weaknesses,
@@ -265,6 +270,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        width: 100%;
     }
     
     .resistant {
@@ -281,4 +287,27 @@
     
     .pokemon-evolucion {
         width: 50px;
+    }
+    
+    #table-fast-attacks,
+    #table-special-attacks {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .google-visualization-table-tr-even {
+        background-color: #fffffb !important;
+        color: #212529 !important;
+        text-transform: capitalize !important;
+    }
+    
+    .google-visualization-table-tr-odd {
+        background-color: #f2f4f3 !important;
+        color: #212529 !important;
+        text-transform: capitalize !important;
+    }
+    
+    .google-visualization-table-tr-head {
+        text-transform: capitalize !important;
     }
