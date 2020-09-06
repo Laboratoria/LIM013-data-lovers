@@ -109,7 +109,7 @@ a:active {
 
 .section2_table-item{
     padding:10px;
-    min-width:130px;
+    max-width:250px;
    /* height:160px;*/
     border:1px solid white;
     border-radius:10px;
