@@ -193,7 +193,7 @@ footer{
 } */
 
 @media (max-width: 992px) {
-    section2_table-item{
+    .section2_table-item{
         flex: 40%;
         margin-left:50px;
         margin-right:25px;
