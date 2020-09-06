@@ -53,7 +53,7 @@ select option{
 .section1_input{
     width:36%;
     height:30px;
-    background-image:url(/images/searchBy.png);
+    background-image:url(images/searchBy.png);
     background-size: 5%;
     background-position: right; 
     background-repeat:no-repeat;
