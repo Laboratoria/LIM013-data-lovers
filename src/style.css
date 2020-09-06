@@ -46,7 +46,7 @@ select:hover{
 }
 
 select option{
-    font-size:18px;
+    font-size:14px;
     color: black;
 } 
 
@@ -192,6 +192,14 @@ footer{
 } */
 
 @media (max-width: 992px) {
+     header{
+        background-size:15% 30%;
+        background-position:25% -0%;
+    }
+  
+    .section1_input{
+      display:none;
+  }
     .section2_table-item{
       flex: 40%;
       margin-left:50px;
