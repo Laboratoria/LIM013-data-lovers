@@ -40,7 +40,7 @@ body{
 
 }
 
-.nav-links{
+.nav-links ul{
     margin: 0;
     padding: 0;
     display: flex;
@@ -66,7 +66,7 @@ body{
 }
 .toggleBtn {
     position: absolute;
-    top: 75rem;
+    top: .75rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -148,7 +148,7 @@ body{
     flex-flow: row wrap;
     /*justify-content: space-between;*/
     margin: 40px 12%;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 footer{
@@ -442,8 +442,18 @@ margin-right: 50px;*/
     width: 375px;
     height: 367px;
     text-align: center;
+    background-color: white;
 }
 
+.mainData h2 {
+    margin-top: 0px;
+} 
+
+.aboutModal{
+    margin: 0px 38px 30px 38px;
+    text-align: justify;
+    font-size: 14px;
+}
 
 .size{
     background: #FFFFFF;
@@ -456,10 +466,14 @@ margin-right: 50px;*/
     justify-content: center;
     margin-left: 47px;
     margin-right: 47px;
-    margin-bottom: 39px;
+    margin-bottom: 33px;
+    font-size: 16px;
+    align-items: center;
 }
 
-.size .size-
+.size .pokemon-size-height{
+    margin-right: 50px;
+} 
 
 .generation{
     border: 1px solid #C4C4C4;
@@ -469,9 +483,82 @@ margin-right: 50px;*/
     height: 52px;
     margin-left: 82px;
     margin-right: 82px;
+    text-transform: capitalize;
+    font-size: 16px;
+    align-items: center;
 }
 
 /*Stats*/
+.all-types {
+    display: flex;
+    align-items: center;
+    margin-left: 38px;
+    margin-top: 0px;
+    height: 70px;
+}
+
+.all-types h5{
+    margin-right: 7px;
+}
+
+.all-types div{
+    margin-right: 10px;
+}
+
 .basicStats {
     text-align: left;
+    margin-left: 38px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3px;
+}
+
+
+.basicStats i{
+    font-style: normal;
+}
+
+.basicStats progress{
+    width: 180px;
+}
+.titleWeaknesses{
+    margin: 2px 0px 8px 38px;
+    text-align: left;
+}
+.all-weaknesses{
+    display: flex;
+    margin-left: 38px;
+    flex-wrap: wrap;
+    margin-right: 38px;
+}
+
+.all-weaknesses div{
+    margin-right: 7px;
+}
+
+/*Colores Mod
+
+
+
+
+/****Media Queries****/
+@media (max-width: 400px){
+    .toggleBtn {
+        display:flex;
+    }
+
+    .nav-links{
+        /*display:none;*/
+    }
+
+    .navBar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul{
+        width: 100%;
+        flex-direction: column;
+        
+    }
 }

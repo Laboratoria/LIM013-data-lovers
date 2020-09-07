@@ -170,10 +170,7 @@ if (num==='029' || num==='032') { //Nidoran Para que no aparezca (female / male)
       </div>
       <div class="img-container">
       <img src="${img}" alt="${name}">
-      
       </div>
-      
-      
       
       `
 
@@ -189,18 +186,18 @@ if (num==='029' || num==='032') { //Nidoran Para que no aparezca (female / male)
   let  modalPokemon = `
 
   <div class="modalContent">
-    <div class="modalHeader">
+    <div class="typeheader${pokemon.type[0]} modalHeader">
       <span id="close${name}" class="close">&times;</span> 
     </div>
-    <div class="infoPokemon">
+    <div class="type${pokemon.type[0]} infoPokemon">
       <div class="mainData">
-        <h2 class="pokemonName"><b>${name}</b></h2>
+        <h2 class="pokemonName"><br><b>${name}</b></h2>
         <p class="pokemonNumber"><b>${num}</b></p>
         <div class="pokemonImg">
           <img src="${img}" alt="${name}">
       </div>
       </div>
-      <div class="pokemonMenu">
+      <div class="typemenu${pokemon.type[0]} pokemonMenu">
         <ul class="modalLinks">
           <li class="active"><a id="firstOption${name}" href="#pokemonAbout">About</a></li>
           <li><a id="secondOption${name}" href="#stats">Stats</a></li>
@@ -210,7 +207,7 @@ if (num==='029' || num==='032') { //Nidoran Para que no aparezca (female / male)
         <div class="animation start-home"></div>
       </div>
       <section id="optionOne${name}" class="pokemonAbout">
-        <p class="aboutModal">${pokemon.about}</p>
+        <p class="aboutModal"><br>${pokemon.about}</p>
         <div class="size">
           <div class="pokemon-size-height"><b>${pokemon.size["height"]}</b> <br>Height</div>
           <div><b>${pokemon.size["weight"]}</b> <br>Weight</div>
@@ -219,8 +216,10 @@ if (num==='029' || num==='032') { //Nidoran Para que no aparezca (female / male)
         </div>
       </section>
       <section id="optionTwo${name}" class="stats">
-      <h5 class="titleTypes">Types</h5>
-      ${displayTypes(pokemon)}
+      <div class="all-types">
+        <h5 class="titleTypes">Types</h5>
+        ${displayTypes(pokemon)}
+      </div>  
         <div class="basicStats">
         <label for="file">HP ${pokemon.stats["max-hp"]}</label>
         <progress id="file" value="${pokemon.stats["max-hp"]}" max="403"></progress><br>
@@ -342,29 +341,31 @@ else
       <section id="optionOne${name}" class="pokemonAbout">
         <p class="aboutModal">${pokemon.about}</p>
         <div class="size">
-          <div><b>${pokemon.size["height"]}</b> <br>Height</div>
+          <div class="pokemon-size-height"><b>${pokemon.size["height"]}</b> <br>Height</div>
           <div><b>${pokemon.size["weight"]}</b> <br>Weight</div>
         </div>
         <div class="generation"><b>${pokemon.generation["name"]}</b> <br>${pokemon.generation["num"]} 
         </div>
       </section>
       <section id="optionTwo${name}" class="stats">
-      <h5 class="titleTypes">Types</h5>
-        ${displayTypes(pokemon)}
+      <div class="all-types">
+        <h5 class="titleTypes">Types</h5>
+          ${displayTypes(pokemon)}
+      </div> 
         <div class="basicStats">
-        <label for="file">HP ${pokemon.stats["max-hp"]}</label>
+        <label for="file"><b><i>HP</i></b> <i class="stats-number">${pokemon.stats["max-hp"]}</i></label>
         <progress id="file" value="${pokemon.stats["max-hp"]}" max="403"></progress><br>
-        <label for="file">CP ${pokemon.stats["max-cp"]}</label>
+        <label for="file"><b><i>CP</i></b> <i class="stats-number">${pokemon.stats["max-cp"]}</i></label>
         <progress id="file" value="${pokemon.stats["max-cp"]}" max="4431"></progress><br>
-        <label for="file">DEF ${pokemon.stats["base-defense"]}</label>
+        <label for="file"><b><i>DEF</i></b> <i class="stats-number">${pokemon.stats["base-defense"]}</i></label>
         <progress id="file" value="${pokemon.stats["base-defense"]}" max="396"></progress><br>
-        <label for="file">ATK ${pokemon.stats["base-attack"]}</label>
+        <label for="file"><b><i>ATK</i></b> <i class="stats-number">${pokemon.stats["base-attack"]}</i></label>
         <progress id="file" value="${pokemon.stats["base-attack"]}" max="345"></progress><br>
-        <label for="file">STAM ${pokemon.stats["base-stamina"]}</label>
+        <label for="file"><b><i>STAM</i></b> <i class="stats-number">${pokemon.stats["base-stamina"]}</i></label>
         <progress id="file" value="${pokemon.stats["base-stamina"]}" max="496"></progress><br></br>
         </div>
         <h5 class="titleWeaknesses">Weaknesses</h5>
-        ${displayWeaknesses(pokemon)}
+        <div class="all-weaknesses">${displayWeaknesses(pokemon)}</div>
         </section>
 
       <section id="optionThree${name}">
