@@ -154,7 +154,7 @@ a:active {
     width:30%;
     height: 45%;
     padding:25px;
-
+    max-width:24%;
     border-radius:20px;
     background:white;
     border:2px solid rgb(241, 241, 245);
