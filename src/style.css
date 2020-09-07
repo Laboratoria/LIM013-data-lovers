@@ -152,8 +152,8 @@ a:active {
     left:37%;
     top:40%;
     width:30%;
-    height: 40%;
-    padding:20px;
+    height: 45%;
+    padding:25px;
 
     border-radius:20px;
     background:white;
@@ -184,7 +184,7 @@ a:active {
     font-family:'Varela', sans-serif;
     font-size:16px;
     line-height:20px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .section2-modal-item_type{
@@ -211,8 +211,8 @@ a:active {
 
 table {
     font-size:10px;
-    min-width: 50%px;
-    border: grey 5px solid;
+    min-width: 50%;
+    border: grey 2px solid;
     margin-left:25%;
     margin-right:25%
 }
