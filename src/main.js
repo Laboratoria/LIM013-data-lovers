@@ -33,10 +33,11 @@ const showByData = (array) => {
             <p class="section2-modal-item_num">#${item.num}</p>
             <img class="section2-modal-item_img" src=${item.img}></img>
             <p class="section2-modal-item_name">${name}</p>
-            <p class="section2-modal-item_type">${item.type}</p>
-            <p class="section2-modal-item_wak">resistant:${item.resistant}</p>
-            <p class="section2-modal-item_wak">waknesses: ${item.weaknesses}</p>
-            <table>
+            <div class="section2-modal-item_stats>
+              <p class="section2-modal-item_type">${item.type}</p>
+              <p class="section2-modal-item_wak">resistant:${item.resistant}</p>
+              <p class="section2-modal-item_wak">waknesses: ${item.weaknesses}</p>
+              <table>
                 <tbody>
                     <tr>
                         <td></td>
@@ -53,8 +54,9 @@ const showByData = (array) => {
                         <td>${puntos}</td>
                     </tr>  
                 </tbody>
-            </table>
-             `
+              </table>
+            </div>  
+            `
         modal.appendChild(showForItem);
         const closeForItem = document.getElementById("close" + item.name);
 
