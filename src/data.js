@@ -1,7 +1,7 @@
 
 
   
-  
+//filtrado de data
 const filterChampions = function (data, rol) {
   const result = data.filter(
     (objCampeones) => {
@@ -10,7 +10,7 @@ const filterChampions = function (data, rol) {
   )
   return result
 };
-
+//ordenar alfabetico AZ
 const  orderAZ = function (data) {
   const result =
     data.sort((a, b) => {
@@ -25,7 +25,7 @@ const  orderAZ = function (data) {
     return result
   };
 
-//ordenar alfabetico
+//ordenar alfabetico ZA
 const orderZA = function (data) {
   const result =
     data.sort((b, a) => {
@@ -39,8 +39,8 @@ const orderZA = function (data) {
   });
   return result
 };
-//ordenar por dificultad
-const orderAsc = function (data) {
+//ordenar por dificultad de ascendente 
+const orderHigher = function (data) {
   const result =
     data.sort((a, b) => {
       if (a.info.difficulty > b.info.difficulty) {
@@ -54,8 +54,8 @@ const orderAsc = function (data) {
 });
 return result
 };
-
-const orderDesc = function (data) {
+//ordenar por dificultad de descendente
+const orderLower = function (data) {
   const result =
     data.sort((b, a) => {
       if (a.info.difficulty > b.info.difficulty) {
@@ -69,7 +69,7 @@ const orderDesc = function (data) {
 });
 return result
 };
-
+//aplicación estadística
 const stats = (num, data, statsLevel) => {
   
   for (let i = 0; i < data.length; i++) {
@@ -93,6 +93,6 @@ const stats = (num, data, statsLevel) => {
   }
 };
 
-export {filterChampions, orderAZ, orderZA, orderAsc, orderDesc, stats};
+export {filterChampions, orderAZ, orderZA, orderHigher, orderLower, stats};
 
 

@@ -2,17 +2,15 @@ import {
   filterChampions,
   orderAZ,
   orderZA,
-  orderAsc,
-  orderDesc,
+  orderHigher,
+  orderLower,
   stats,
-
 } from "./data.js";
 import data from "./data/lol/lol.js";
 
 const datos = data.data,
   filtradoCampeones = document.getElementById("filtradoCampeones"),
   arrayCampeones = Object.values(datos);
-
 
 const listaCampeones = (
   name,
@@ -31,11 +29,10 @@ const listaCampeones = (
   spellblockperlevel,
   hpregen,
   hpregenperlevel,
-  id,
+  id
 ) => {
-  const campeones = document.createElement("div"), /* card-link-champ*/
+  const campeones = document.createElement("div") /* card-link-champ*/,
     frontalcard = document.createElement("div"); /*"frontalCard*/
-    
 
   frontalcard.innerHTML += `    
     <a class="blog-card" id="${id}" href=" #openmodal${id}">
@@ -43,9 +40,9 @@ const listaCampeones = (
     <img class="modal-img" src="${img}"/></a>
     
       
-      <h1 class="frontalTextChamp">${name}</h1>
-      <h2 class="frontalTextChamp">${title}</h2>
-      <p class="frontalTextChamp">Dificultad: ${difficulty}</p>
+      <h1 class="frontalTextChamp" id="fontname">${name}</h1>
+      <h2 class="frontalTextChamp" id="fonttitle">"${title}"</h2>
+      <p class="frontalTextChamp" id="fontdificultad">Dificultad: ${difficulty}</p>
     
    
     <section id="openmodal${id}" class="modal-window">
@@ -56,8 +53,8 @@ const listaCampeones = (
         </div>
         <div class="modal-back">
           <h1>${name}</h1>
-          <h2>${title}</h2>
-          <p><strong class="strong">Blurb</strong>:${lore}</p>
+          <h2>"${title}"</h2>
+          <p><strong class="strong">Lore</strong>:${lore}</p>
         </div>
 
         <h2 class="frontalTextTable">Tabla de estadística por rango de nivel:</h2>
@@ -75,8 +72,8 @@ const listaCampeones = (
             <th class="table"> Hp </th>
             <td class="table">${hp}</td>
             <td class="table">${hpperlevel}</td>
-            <td class="table">${stats(6,  arrayCampeones, 1)}</td>
-            <td class="table">${stats(12,  arrayCampeones, 1)}</td>
+            <td class="table">${stats(6, arrayCampeones, 1)}</td>
+            <td class="table">${stats(12, arrayCampeones, 1)}</td>
             <td class="table">${stats(18, arrayCampeones, 1)}</td>
           </tr>
             
@@ -84,8 +81,8 @@ const listaCampeones = (
             <th class="table"> MP </th>
             <td class="table">${mp}</td>
             <td class="table">${mpperlevel}</td>
-            <td class="table">${stats(6,  arrayCampeones, 2)}</td>
-            <td class="table">${stats(12,  arrayCampeones, 2)}</td>
+            <td class="table">${stats(6, arrayCampeones, 2)}</td>
+            <td class="table">${stats(12, arrayCampeones, 2)}</td>
             <td class="table">${stats(18, arrayCampeones, 2)}</td>        
           </tr>
 
@@ -93,8 +90,8 @@ const listaCampeones = (
             <th class="table"> Armor </th>
             <td class="table">${armor}</td>
             <td class="table">${armorperlevel}</td>
-            <td class="table">${stats(6,  arrayCampeones, 3)}</td>
-            <td class="table">${stats(12,  arrayCampeones, 3)}</td>
+            <td class="table">${stats(6, arrayCampeones, 3)}</td>
+            <td class="table">${stats(12, arrayCampeones, 3)}</td>
             <td class="table">${stats(18, arrayCampeones, 3)}</td>
           </tr>  
           
@@ -102,8 +99,8 @@ const listaCampeones = (
             <th class="table"> Spellblock </th>
             <td class="table">${spellblock}</td>
             <td class="table">${spellblockperlevel}</td>
-            <td class="table">${stats(6,  arrayCampeones, 4)}</td>
-            <td class="table">${stats(12,  arrayCampeones, 4)}</td>
+            <td class="table">${stats(6, arrayCampeones, 4)}</td>
+            <td class="table">${stats(12, arrayCampeones, 4)}</td>
             <td class="table">${stats(18, arrayCampeones, 4)}</td>
           </tr>
             
@@ -111,8 +108,8 @@ const listaCampeones = (
             <th class="table"> Hpregen </th>
             <td class="table">${hpregen}</td>
             <td class="table">${hpregenperlevel}</td>
-            <td class="table">${stats(6,  arrayCampeones, 5)}</td>
-            <td class="table">${stats(12,  arrayCampeones, 5)}</td>
+            <td class="table">${stats(6, arrayCampeones, 5)}</td>
+            <td class="table">${stats(12, arrayCampeones, 5)}</td>
             <td class="table">${stats(18, arrayCampeones, 5)}</td>
           </tr>
         </table>
@@ -122,11 +119,9 @@ const listaCampeones = (
 
   campeones.setAttribute("class", "card-link-Champ");
   frontalcard.setAttribute("class", "frontalCardChampion");
-  
- 
+
   document.getElementById("container-campeones").appendChild(campeones);
 
-  
   campeones.appendChild(frontalcard);
 };
 
@@ -169,7 +164,7 @@ const getCampeones = (arrayCampeones) => {
       spellblockperlevel,
       hpregen,
       hpregenperlevel,
-      id,
+      id
     );
   }
 };
@@ -195,14 +190,14 @@ const selector = document.querySelector("#order");
 selector.addEventListener("click", (event) => {
   const orderName = event.target.value;
 
-  if (orderName == "asc") {
-    const alfChamps = orderAZ(arrayCampeones);
+  if (orderName == "orderAZ") {
+    const alphabeticalAZ = orderAZ(arrayCampeones);
     document.getElementById("container-campeones").innerHTML = "";
-    getCampeones(alfChamps);
-  } else if (orderName == "desc") {
-    const alfChamps = orderZA(arrayCampeones);
+    getCampeones(alphabeticalAZ);
+  } else if (orderName == "orderZA") {
+    const alphabeticalZA = orderZA(arrayCampeones);
     document.getElementById("container-campeones").innerHTML = "";
-    getCampeones(alfChamps);
+    getCampeones(alphabeticalZA);
   }
 });
 
@@ -211,16 +206,16 @@ const selectDifficulty = document.querySelector("#orderDifficulty");
 selectDifficulty.addEventListener("click", (event) => {
   const orderDifficulty = event.target.value;
 
-  if (orderDifficulty == "ascD") {
-    const difChamps = orderAsc(arrayCampeones);
+  if (orderDifficulty == "higher") {
+    const difficultyHigher = orderHigher(arrayCampeones);
     document.getElementById("container-campeones").innerHTML = "";
-    getCampeones(difChamps);
-  } else if (orderDifficulty == "descD") {
-    const difChamps = orderDesc(arrayCampeones);
+    getCampeones(difficultyHigher);
+  } else if (orderDifficulty == "lower") {
+    const difficultyLower = orderLower(arrayCampeones);
     document.getElementById("container-campeones").innerHTML = "";
-    getCampeones(difChamps);
-  } 
-  });
+    getCampeones(difficultyLower);
+  }
+});
 
 /*Buscar campeones*/
 const searchInput = document.querySelector("#searchInput"),
@@ -231,19 +226,22 @@ const buscador = () => {
   const texto = searchInput.value.toLowerCase();
 
   for (let campeones of arrayCampeones) {
-    
     let nombre = campeones.name.toLowerCase();
     if (nombre.indexOf(texto) != -1) {
       result.innerHTML += `
       <div class="card-link-Champ_Reverse">
       <div class="frontalCardChampion_Reverse">
-        <a class="blog-card_Reverse" id="${campeones.id}" href=" #openmodal${campeones.id}"> 
+        <a class="blog-card_Reverse" id="${campeones.id}" href=" #openmodal${
+        campeones.id
+      }"> 
         <div class="contentImg_Reverse">
           <img class="modal-img_Reverse" src="${campeones.splash}" />
         </div>      
-          <h1 class="frontalTextChamp_Reverse">${campeones.name}</h1>
-          <h2 class="frontalTextChamp_Reverse">${campeones.title}</h2>
-          <p class="frontalTextChamp_Reverse">Dificultad: ${campeones.info.difficulty}</p>
+          <h1 class="frontalTextChamp" id="fontname">${campeones.name}</h1>
+          <h2 class="frontalTextChamp" id="fonttitle">"${campeones.title}"</h2>
+          <p class="frontalTextChamp" id="fontdificultad">Dificultad: ${
+            campeones.info.difficulty
+          }</p>
         </div>   
         </a> 
       </div>
@@ -251,14 +249,18 @@ const buscador = () => {
   
   <section id="openmodal${campeones.id}" class="modal-window_Reverse">
     <div class="modal-content_Reverse">
-      <a href= "#${campeones.id}" title="Close" class="modal-close_Reverse">X</a>
+      <a href= "#${
+        campeones.id
+      }" title="Close" class="modal-close_Reverse">X</a>
       <div class="contentImg_Reserve">
       <img class="modal-img-back_Reverse" src="${campeones.splash}"/>
       </div>
       <div class="modal-back_Reverse">
         <h1>${campeones.name}</h1>
-        <h2>${campeones.title}</h2>
-        <p><strong class="strong_Reverse">Blurb: </strong> ${campeones.blurb}</p>
+        <h2>"${campeones.title}"</h2>
+        <p><strong class="strong_Reverse">Lore: </strong> ${
+          campeones.blurb
+        }</p>
       </div>
   
       <h2 class="frontalTextTable_Reverse">Tabla de estadística por rango de nivel:</h2>
@@ -276,7 +278,7 @@ const buscador = () => {
           <th class="table_Reverse"> Hp </th>
           <td class="table_Reverse">${campeones.stats.hp}</td>
           <td class="table_Reverse">${campeones.stats.hpperlevel}</td>
-          <td class="table_Reverse">${stats(6,  arrayCampeones, 1)}</td>
+          <td class="table_Reverse">${stats(6, arrayCampeones, 1)}</td>
           <td class="table_Reverse">${stats(12, arrayCampeones, 1)}</td>
           <td class="table_Reverse">${stats(18, arrayCampeones, 1)}</td>
         </tr>
@@ -285,8 +287,8 @@ const buscador = () => {
           <th class="table_Reverse"> MP </th>
           <td class="table_Reverse">${campeones.stats.mp}</td>
           <td class="table_Reverse">${campeones.stats.mpperlevel}</td>
-          <td class="table_Reverse">${stats(6,  arrayCampeones, 2)}</td>
-          <td class="table_Reverse">${stats(12,  arrayCampeones, 2)}</td>
+          <td class="table_Reverse">${stats(6, arrayCampeones, 2)}</td>
+          <td class="table_Reverse">${stats(12, arrayCampeones, 2)}</td>
           <td class="table_Reverse">${stats(18, arrayCampeones, 2)}</td>
         </tr>
   
@@ -294,8 +296,8 @@ const buscador = () => {
           <th class="table_Reverse"> Armor </th>
           <td class="table_Reverse">${campeones.stats.armor}</td>
           <td class="table_Reverse">${campeones.stats.armorperlevel}</td>
-          <td class="table_Reverse">${stats(6,  arrayCampeones, 3)}</td>
-          <td class="table_Reverse">${stats(12,  arrayCampeones, 3)}</td>
+          <td class="table_Reverse">${stats(6, arrayCampeones, 3)}</td>
+          <td class="table_Reverse">${stats(12, arrayCampeones, 3)}</td>
           <td class="table_Reverse">${stats(18, arrayCampeones, 3)}</td>
         </tr>
   
@@ -303,8 +305,8 @@ const buscador = () => {
           <th class="table_Reverse"> Spellblock </th>
           <td class="table_Reverse">${campeones.stats.spellblock}</td>
           <td class="table_Reverse">${campeones.stats.spellblockperlevel}</td>
-          <td class="table_Reverse">${stats(6,  arrayCampeones, 4)}</td>
-          <td class="table_Reverse">${stats(12,  arrayCampeones, 4)}</td>
+          <td class="table_Reverse">${stats(6, arrayCampeones, 4)}</td>
+          <td class="table_Reverse">${stats(12, arrayCampeones, 4)}</td>
           <td class="table_Reverse">${stats(18, arrayCampeones, 4)}</td>
         </tr>
   
@@ -312,22 +314,21 @@ const buscador = () => {
           <th class="table_Reverse"> Hpregen </th>
           <td class="table_Reverse">${campeones.stats.hpregen}</td>
           <td class="table_Reverse">${campeones.stats.hpregenperlevel}</td>
-          <td class="table_Reverse">${stats(6,  arrayCampeones, 5)}</td>
-          <td class="table_Reverse">${stats(12,  arrayCampeones, 5)}</td>
+          <td class="table_Reverse">${stats(6, arrayCampeones, 5)}</td>
+          <td class="table_Reverse">${stats(12, arrayCampeones, 5)}</td>
           <td class="table_Reverse">${stats(18, arrayCampeones, 5)}</td>
         </tr>    
       </table>
       <h2 class="rolText_Reverse">Rol: ${campeones.tags.join(", ")}</h2>
     </div>
-  </section>`
-    
+  </section>`;
     }
   }
 
   if (result.innerHTML == "") {
     result.innerHTML += `<div class="frontalCardChampion">
-      <div class="front-Hp">No existe</div>
-    </div>`;
+    <div class="Nofound"><p> No existe <br> <img src="./img/nofound.gif"></p></div>
+  </div>`;
   }
 };
 
