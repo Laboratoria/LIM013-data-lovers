@@ -149,11 +149,11 @@ a:active {
     position:fixed; 
     z-index:1;
     overflow:auto;  
-    left:32%;
-    top:30%;
-    width:40%;
-    height: 50%;
-    padding:25px;
+    left:37%;
+    top:40%;
+    width:30%;
+    height: 40%;
+    padding:20px;
 
     border-radius:20px;
     background:white;
@@ -167,23 +167,23 @@ a:active {
 .section2-modal-item_close{
     float:left;
     font-size:30px;
-    padding-left:10%;
+    padding-left:10px;
 }
 
 .section2-modal-item_num{
     float:right;
-    padding-left:10%;
-    font-size:16px;
+    padding-right:20px;
+    font-size:12px;
 }
 
 .section2-modal-item_img{
-  width:40%;    
+  width:30%;    
 }
 
 .section2-modal-item_name{ 
     font-family:'Varela', sans-serif;
     font-size:16px;
-    line-height:10px;
+    line-height:20px;
     padding-bottom: 15px;
 }
 
@@ -194,7 +194,9 @@ a:active {
     color:white;
     border-radius: 5px;
     background-color:rgb(168, 82, 82);
-    margin:5px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom:5%
 }
 
 /*.section2-modal-item_wak{
@@ -208,20 +210,15 @@ a:active {
 }*/
 
 table {
-    padding-top:15px;
-    font-size:14px;
-    min-width: 250px;
-    border-collapse: collapse;
+    font-size:10px;
+    min-width: 50%px;
     border: grey 5px solid;
-    caption-side: top;
-}
-
-caption {
-   font-weight: bold;
-   font-style: italic;
+    margin-left:25%;
+    margin-right:25%
 }
 
 
+/*animacion*/
 @keyframes example {
     from {background-color: white}
     to {background-color: grey;}
@@ -233,6 +230,8 @@ footer{
     left: 10px;
 } */
 
+
+/*media query*/
 @media (max-width: 992px) {
     
     header{
