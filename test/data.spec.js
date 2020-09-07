@@ -1,13 +1,13 @@
-import { example, anotherExample } from '../src/data.js';
+import { orderData, anotherExample } from '../src/data.js';
 
 
 describe('example', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof orderData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `a-z`', () => {
+    expect(orderData(imputA_Z)).toEqual('outputA_Z');
   });
 });
 

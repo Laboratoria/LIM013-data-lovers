@@ -7,13 +7,15 @@ console.log(example, data); */
 
 import { orderData } from './data.js'; 
 import data from './data/pokemon/pokemon.js';
+let dataPokemon=data.pokemon;
 
-for (let i = 0; i < data.pokemon.length; i++) {
+const dataCarte = (dataPokemon) => {
+for (let i = 0; i < dataPokemon.length; i++){
 	// CREANDO VARIABLES
-	let num = data.pokemon[i].num;
-	let name = data.pokemon[i].name;
-	let imgUrl = data.pokemon[i].img;
-	let tipo = data.pokemon[i].type;
+	let num = dataPokemon[i].num;
+	let name = dataPokemon[i].name;
+	let imgUrl = dataPokemon[i].img;
+	let tipo = dataPokemon[i].type;
 	let dataNueva = document.getElementById('dataPoke');
 
 	//AGREGANDO DIV POKEMON
@@ -55,12 +57,19 @@ for (let i = 0; i < data.pokemon.length; i++) {
 	labelinfo.appendChild(labelTipo);
 	labelTipo.innerHTML = tipo;
 }
+};
 
-console.log(name);
+window.onload=dataCarte(data.pokemon);
+
+/* console.log(name); */
 
 const ordenarSelectBox= document.getElementById('ordenar');
+/* ordenarSelectBox.addEventListener('chance',() => { constordenarSelectBox.value; */
 ordenarSelectBox.addEventListener('change',function(e){
 const valor=e.target.value;
-const dataOrdenado = orderData(data.pokemon,'a-z');
-console.log(dataOrdenado);
+console.log(valor);  
+const dataOrdenado = orderData(data.pokemon,valor);
+dataPokemon=dataOrdenado;
+document.getElementById("dataPoke").innerHTML="";
+dataCarte(dataPokemon);
 });
