@@ -94,7 +94,7 @@ const overlay = document.getElementById('overlay');
 document.querySelectorAll('.legends_container .legends img').forEach((item) => {
 
   item.addEventListener('click', () => {
-    console.log('item', item);
+    //console.log('item', item);
     const ruta = item.getAttribute('src');
     const description = item.parentNode.dataset.blurb;
     const infoAttack = item.parentNode.dataset.attack;
