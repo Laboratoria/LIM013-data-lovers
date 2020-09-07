@@ -318,10 +318,10 @@ else
   let  modalPokemon = `
 
   <div class="modalContent">
-    <div class="modalHeader">
+    <div class="typeheader${pokemon.type[0]} modalHeader">
       <span id="close${name}" class="close">&times;</span> 
     </div>
-    <div class="infoPokemon">
+    <div class="type${pokemon.type[0]} infoPokemon">
       <div class="mainData">
         <h2 class="pokemonName"><b>${name}</b></h2>
         <p class="pokemonNumber"><b>${num}</b></p>
@@ -329,7 +329,7 @@ else
           <img src="${img}" alt="${name}">
       </div>
       </div>
-      <div class="pokemonMenu">
+      <div class="typemenu${pokemon.type[0]} pokemonMenu">
         <ul class="modalLinks">
           <li class="active"><a id="firstOption${name}" href="#pokemonAbout">About</a></li>
           <li><a id="secondOption${name}" href="#stats">Stats</a></li>

@@ -121,6 +121,8 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
+    margin-top: 76px;
+    margin-bottom: 75px;
 }
 
 #loadPokemon{
