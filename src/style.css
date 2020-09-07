@@ -149,14 +149,14 @@ a:active {
     position:fixed; 
     z-index:1;
     overflow:auto;  
-    left:35%;
+    left:33%;
     top:30%;
-    width:35%;
+    width:40%;
     height: 50%;
     padding-top:15px;
-    padding-botoom:15px;
-    padding-left:15%;
-    padding-right:5%;
+    padding-bottom:15px;
+    padding-left:10%;
+    padding-right:10%;
 
     border-radius:20px;
     background:white;
@@ -180,7 +180,7 @@ a:active {
 }
 
 .section2-modal-item_img{
-  width:40%;    
+  width:50%;    
 }
 
 .section2-modal-item_name{ 
@@ -215,7 +215,7 @@ table {
     font-size:14px;
     min-width: 250px;
     border-collapse: collapse;
-    border: orange 5px solid;
+    border: grey 5px solid;
    caption-side: top;
 }
 
