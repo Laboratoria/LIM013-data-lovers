@@ -86,10 +86,11 @@ describe('analisis estadistico por nivel ',() =>{
     expect(typeof stats).toBe('function');
   });
 
-  it('return num por statsLevel ',()=>{
-    const data=[{name:'Aatrox', hp: 537.8,  mp: 105.6,  armor: 24.384,   spellblock: 32.1,  hpregen: 6.59, }];
-    const data1=[{name:'Aatrox', hp: 1047.8, mp: 375.6,  armor: 47.2,  spellblock: 39.6	,   hpregen: 9.6, }];
-    expect(stats(data)).toEqual(data1);
+  it('Debería retornar 1047.8', () => {
+    const data=[{ name: 'Ahri', stats: { hp:" 80"}}];
+    const dataStadistics=[{ name: 'Ahri', stats: { hp: "1047.8" }}];
+
+    expect(stats(data)(6, 1)).toEqual(dataStadistics);
   });  
 });
 

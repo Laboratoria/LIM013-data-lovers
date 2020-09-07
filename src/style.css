@@ -423,6 +423,7 @@ img {
 .container-footer {
   width: 100%;
   margin-top: 10px;
+  margin: 88rem 0rem 0rem 0rem;
 }
 .riot {
   text-align: center;
@@ -716,7 +717,7 @@ figure .traseraTop .post-title {
 .corner {
   width: 96%;
   padding: 0.3125rem;
-  margin: 2rem 0 2rem 2rem;
+  margin: 2rem 0 2rem 0.5rem;
   border: #a87e3e 0.09rem solid;
   border-radius: 1.875rem 0rem 1.875rem 0rem;
 }
@@ -1466,8 +1467,8 @@ th {
 @media only screen and (min-width: 301px) and (max-width: 700px) {
   .title-lol {
     display: block;
-    margin: 1rem 0rem 1rem 0rem;
-    width: 100%;
+    margin: 1rem 0rem 1rem 3rem;
+    width: 73%;
     height: auto;
   }
   .menus {
