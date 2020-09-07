@@ -143,7 +143,7 @@ const showPokDisplay = (dataSelect) => {
 
 //funcion para redimensionar contenedor de pokemones y contenedor de información
 const resizeInformation = (a,b,c)=> {
-    if (a.clientWidth<=1000) { 
+    if (a.clientWidth<=1025) { 
         b.style.width="0%";
         c.style.width="100%";
     } else {
