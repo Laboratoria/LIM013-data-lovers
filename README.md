@@ -1,8 +1,125 @@
 # Data Lovers
 
+## League of Legends by Diana Ordoñez y Daniela De la cruz.
+
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
+* [1. Contexto](#1-contexto)
+* [2. Descripción](#2-Descripción)
+* [3. Proceso de Diseño](#3-ProcesodeDiseño)
+
+## Contexto
+
+League of Legends es actualmente el juego más jugado del mundo. Recientemente los datos nos muestran que hay 100 millones de jugadores activos mensualmente. Desde la creación de ligas de competición profesionales el juego y su comunidad han crecido año tras año. Pero más que datos, vamos a centrarnos en explicar qué es League of Legends y por qué gusta y emociona a tantas personas de todo el mundo.
+El juego está inspirado en el popular mapa personalizado del Warcraft III, Defense of the Ancients: Allstars diseñado por Steve «Guinsoo» Feak el cual a su vez está basado en el escenario de StarCraft «Aeon of Strife».
+
+## Resumen del Proyecto
+
+En este proyecto construimos una página web para dos tipo de user person: Nivel Avanzado y principiante. Este set de datos muestra la lista de jugadores en una liga del juego League of Legends (LoL).
+Primero elegimos quién sería nuestro usuario y qué necesita saber o ver exactamente; luego construimos una interfaz que le va ayudar a interactuar y entender mejor esos datos. Nuestra página web permitirá visualizar la data, filtrarla, ordenarla, cuenta con un buscador y una sección de estadísticas para que el usuario pueda comparar las estadísticas de los campeones que desee.
+
+## Proceso de Diseño
+
+## 1. Empatizar: Descubrimiento e Investigación
+
+![Design-Thinking](https://www.macguffin.es/hs-fs/hubfs/designthinking_illustration_final2-02-247723-edited.png?width=710&height=383&name=designthinking_illustration_final2-02-247723-edited.png)
+
+ Los usuarios a los que este proyecto va dirigido son aquellos jugadores de nivel avanzado de Lol y/o personas que se inician (jufadores principiantes) en el mundo de “League of Legends” y quieren conocer más de los campeones con los que este MOBA (multiplayer online battle arena) se desarrolla.
+
+ Encuesta en google form de usuarios del Juego, para definir requerimientos. 
+ 
+[Research Lol](https://docs.google.com/forms/d/1QJtQapojbAOVnLBm99MGmrtS4GOooheSNuZYonzWvbQ/edit?ts=5f3166aa)
+
+Entrevista a 3 Jugadores de Nivel Avanzado
+
+[Entrevista](https://docs.google.com/document/d/1_JwKcvalrzbkX6tX_Cj28z4uisiyP28U/edit)
+
+ A continuación les comentamos un poco más sobre los 2 tipos de User-Person que elegimos.
+
+ User Person Nivel Principiante
+
+![Design-Thinking](src/imagenes/userpersonEninicio.png)
+
+User Person Nivel Avanzado
+
+![Design-Thinking](src/imagenes/userpersonA.png)
+
+***
+
+ ## 2. Definición
+
+ ![Design-Thinking](https://www.macguffin.es/hs-fs/hubfs/designthinking_illustration_final2-02-247723-edited.png?width=710&height=383&name=designthinking_illustration_final2-02-247723-edited.png)
+
+ El usuario entrevistado es un jugador avanzado de League of Legends, conoce el juego desde hace mucho tiempo. Durante la entrevista el usuario hizo hincapié en la cantidad de campeones que se pueden usar en el juego, nos comentaron sobre runas, objetos. La diversidad y cantidad de todos los personajes hace complicado para un jugador principiante el poder reconocerlos y asociarlos con sus roles, habilidades, dificultad, etc, es por ello que también nuestra página tiene un segundo user person a considerar: nivel principiante, los cales si pudiesen visualizar la información de los héroes como sus nombres e imágenes, la dificultad de uso mejora. Por ejemplo visualizar los tipos de roles de los campeones (assassin, fighter, mage, marksman, support, tank) e información extra como los puntos de vida y de maná de cada campeón por niveles, está seguro que le facilitaría a desarrollarse mejor en el juego.
+
+ ### HISTORIAS DE USUARIO
+
+Hicimos nuestra planificación en Trello: Product Backlog, Sprint Backlog. Les compartimos nuestro link de esta herramienta:
+
+[Planificación en Trello](https://trello.com/b/X3Hb1fMu/data-lovers-product-backlog)
+
+1.	INICIO: YO COMO jugador de LOL, QUIERO: que la página tenga una presentación PARA conocer las partes de la página
+
+2.	GUÍA DE CAMPEONES YO COMO: Jugador de nivel intermedio - avanzado de lol QUIERO: una guía avanzada PARA: buscar información relevante para mi juego (runas, objetos, posiciones)
+
+3.	BARRA DE FILTROS. YO COMO jugador de LOL QUIERO filtrar a los campeones por su rol("Fighter", "Tank", "Mage", "Assassin", etc) PARA elegir con qué campeón pelear.Yo como usuario quiero poder filtrar a los campeones por sus roles para poder identificarlos y poder conocerlos.
+
+4.	ORDER. YO COMO jugador de LOL QUIERO ordernar a los campeones desde A-Z y de Z-A, PARA encontrar el campeón que quiero.
+
+5.	FILTRO DAÑO-ATAQUE: YO COMO jugador de LoL QUIERO filtrar a los campeones, por nivel daño-ataque PARA facilitar la fase inicio de mi ataque a mi contrincante.
+
+6.	CARACTERÍSTICAS DEL CAMPEÓN. YO COMO: Jugador de lol QUIERO: ver las características de cada campeón. PARA: Conocer mejor las características de mi campeón.
+
+## 3. Ideación
+
+![Design-Thinking](https://www.macguffin.es/hs-fs/hubfs/designthinking_illustration_final2-02-247723-edited.png?width=710&height=383&name=designthinking_illustration_final2-02-247723-edited.png)
+
+Debido a que contamos con la data, la idea de producto es una página web que le brinde a nuestro usuario con experiencia de juego, una guía de campeones y para aquellos usuarios principiantes secciones donde puedan conocer más sobre los campeones de League of Leyends de un modo sencillo, que le permita visualizar, buscar, ordenar, hacer comparaciones, ver características de sus campeones y filtrar la data según sus requerimientos.
+
+## 4. Prototipado
+
+![Design-Thinking](https://www.macguffin.es/hs-fs/hubfs/designthinking_illustration_final2-02-247723-edited.png?width=710&height=383&name=designthinking_illustration_final2-02-247723-edited.png)
+
+### Prototipo de Baja Fidelidad
+
+Pantalla 1 Mobile-Responsive
+
+![Design-Thinking](src/imagenes/mobile1.jpeg)
+
+Pantalla 2 Mobile-Responsive
+
+![Design-Thinking](src/imagenes/mobil2.jpeg)
+
+Pantalla 3 Mobile-Responsive: Recibimos feedback, nos sugirieron agrandar el buscador y filtro por daño de ataque.
+
+![Design-Thinking](src/imagenes/mobile3.jpeg)
+![Design-Thinking](src/imagenes/mobile3.2.jpeg)
+
+Pantalla 1-Desktop
+
+![Design-Thinking](src/imagenes/pantalla1.jpeg)
+
+Pantalla 2-Desktop
+
+![Design-Thinking](src/imagenes/pantalla2.jpeg)
+
+Recibimos feedback y se decidió eliminar la pantalla SOUNDTRACK porque no tenía usabilidad.
+
+***
+
+Primero realizamos la página de inicio, donde el usuario avanzado encontrará una guía que le redireccionará a páginas que le brindarán información sobre runas, objetos y temás de interés relacionado al juego. El usuario podrá visitar una sección de campeones, donde encontrará una lista de campeones de League of Legends. De manera resumida mostraría a cada uno como cards con una imagen y su respectivo nombre, a su vez en la parte superior se vería un listado de los tipos de roles de los campeones para filtrar la data, un buscador, filtro por daño de ataque, que según encuesta es de interés del usuario. Además, según la investigación con el usuario, se decidió agregar una funcionalidad para ordenar a los campeones de A hasta la Z y viceversa.
+En el desarrollo del proyecto se realizaron varios tests de usabilidad, se comprobó que el botón playnow no se apreciaba, así que se decidió mejorarlo. Además el buscador no se apreciaba, por lo que se decidió en la versión responsive que ocupe el ancho de la pantalla. Por otro lado la sección soundtrack no tenía funcionalidad, es por ello que se retiró del proyecto.
+Los tests de usabilidad demostraron que la página necesitaba dinamismo, es por ello que se implementó la visualización de la información de todos los campeones con un modal. La última sección es de estadísticas, en la cual se decidió hacer una comparación de data importante para el usuario, entre los campeones 
+
+### Prototipo de Alta Fidelidad
+
+El prototipo de alta fidelidad fue elaborado en Figma con la ayuda del Zeplin.
+
+[Prototipo en Figma](https://www.figma.com/file/b1sEIqrPWHR1sYfQFz9Dom/LOL_MOBILE?node-id=0%3A1)
+
+
+
+<!--* [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
@@ -456,3 +573,4 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
 * [ ] UI: Es _responsive_.
+-->

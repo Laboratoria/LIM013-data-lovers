@@ -13,11 +13,11 @@ let count = 0;
 
 button.addEventListener('click', () => {
   if (count == 0) {
-    links.className = ('links two');
+    links.className = ('links closedMenu');
     count = 1;
   } else {
-    links.classList.remove('one');
-    links.className = ('links one');
+    links.classList.remove('openMenu');
+    links.className = ('links openMenu');
     count = 0;
   }
 })
@@ -104,7 +104,7 @@ legend02.addEventListener('change', (e) => {
 const inputLevel = document.getElementById('number');
 inputLevel.addEventListener('change', (e) => {
   level = parseInt(e.target.value);
-  console.log('level', level)
+  //console.log('level', level)
   if (level === '') {
     level = 1
   }
