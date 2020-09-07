@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers - League of Legends
 
 ## Índice
 
@@ -7,18 +7,19 @@
 * [3. Desarrollo del Proyecto](#3-desarrollo-del-proyecto)
 * [4. Contenido de referencia](#4-contenido-de-referencia)
 * [5. Checklists](#5-checklist)
+* [6. Autores](#6-autores)
 
 
 ***
 
-## 1. Preámbulo
+## 1. Preámbulo :tw-1f680:
 
 **League of Legends** es uno de los videojuegos MOBA _(multijugador de arena de batalla en línea)_ más populares en todo el mundo, llegando a considerarse un e-sport de excelencia con competencias a nivel mundial, donde los mejores equipos de cada continente batallan por conseguir el cuantioso premio de hasta 1.7 millones de dólares.
 
 Pese a su gran fama y accesibilidad, aún hay mucha gente que no se atreve a probar el juego por diversos factores, entre ellos el bombardeo de información no ordenada que confunde a los usuarios y finalmente desisten en jugar.
 
 
-## 2. Resumen del proyecto
+## 2. Resumen del proyecto :tw-1f4cb:
 
 Este proyecto consiste en construir una página web que permita al usuario obtener información breve pero detallada sobre el juego League of Legends, así como filtrar, ordenar y ver los cálculos más importantes de los personajes (llamados **“Campeones”**) para que el usuario tenga mayor facilidad al momento de escoger a su campeón.
 
@@ -26,23 +27,15 @@ Inicialmente se entrevistó a 5 jugadores con experiencia en LoL para recibir in
 
 Conforme se avanzó con el prototipo, se fue testeando con otros usuarios, midiendo su experiencia, hasta conseguir un diseño ideal. 
 
-En la elaboración del producto se utilizó el lenguaje Javascript, HTML y CSS. El resultado es una web informativa, dinámica, directa y responsive para mobile y desktop.
-
-La data se extrajo desde:
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+En la elaboración del producto, se extrajo la data desde [League of Legends - Challenger leaderboard](src/data/lol/lol.json) y se utilizó el lenguaje Javascript, HTML y CSS. El resultado es una web informativa, dinámica, directa y responsive para mobile y desktop.
 
 
-## 3.	Desarrollo del Proyecto 
+## 3.	Desarrollo del Proyecto :tw-1f4a5:
 
-### 3.1. ¿Cómo empezamos?
+### 3.1. ¿Cómo empezamos? 
+#### ENTREVISTAS :tw-1f50e:
 
-#### ENTREVISTAS
-
-Se hicieron entrevistas personales vía telefónica a 5 usuarios con experiencia en LOL.
+Se hicieron entrevistas vía telefónica a 5 usuarios con experiencia en el juego League of Legends.
 
 #### Objetivo de la entrevista
 Conocer qué tipo de información es necesaria para jugar LOL.
@@ -59,18 +52,18 @@ Nada de lo que digas está bien o mal, ni vamos a juzgarte por eso. Si en algún
 
 #### Preguntas 
 
-**LOL Roundabout**
+**_LOL Roundabout_**
 
 1.	¿Qué tan seguido juegas  LOL?
 2.	¿Desde qué dispositivo juegas LOL?
 3.	¿Conoces alguna página web o aplicación informativa de LOL que te haya ayudado a jugar?
 4.	¿Qué te gusta y/o disgusta de esta página web o aplicación?
 
-**Playing LOL Roundabout I: Beginning**
+**_Playing LOL Roundabout I: Beginning_**
 
 5.	¿Qué te hubiera gustado saber de LOL para entender mucho mejor el juego?
 
-**Playing LOL Roundabout II: Starting**
+**_Playing LOL Roundabout II: Starting_**
 
 6.	¿Cuáles son los criterios que tomas para elegir a tu campeón?
 7.	 De todo lo que hemos conversado, ¿hay algo que te gustaría conocer o añadir en una página web sobre LOL?
@@ -81,13 +74,13 @@ Nada de lo que digas está bien o mal, ni vamos a juzgarte por eso. Si en algún
 *	Les fue difícil encontrar una buena plataforma web que les brinde información completa del juego.
 *	Les gustaría tener mayor información sobre las competencias a nivel internacional.
 
-#### ENCUESTAS
+#### ENCUESTAS :tw-1f50e:
 
 
 
 ### 3.2. ¡Manos a la obra!
 
-#### PROTOTIPO DE BAJA FIDELIDAD
+#### PROTOTIPO DE BAJA FIDELIDAD :tw-1f4cc:
 
 Con las entrevistas y encuestas realizadas, pasamos a diseñar el prototipo de baja fidelidad:
 
@@ -118,7 +111,7 @@ Con las entrevistas y encuestas realizadas, pasamos a diseñar el prototipo de b
 
 ![PrototipoBaja8](src/images/prototipo/8.jfif)
 
-#### PROTOTIPO DE ALTA FIDELIDAD
+#### PROTOTIPO DE ALTA FIDELIDAD :tw-1f3a8:
 
 Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/), siguiendo los fundamentos de **visual design** (balance, contraste, alineación y repetición para mantener el orden).
 
@@ -152,12 +145,12 @@ Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/),
 ![PrototipoAlta23](src/images/prototipo/PrototipoAlta23.PNG)
 
 
-#### HISTORIAS DE USUARIO
+#### HISTORIAS DE USUARIO :tw-1f4cc:
 
 Con el prototipo listo, se pasó a crear las **Historias de Usuario**, siguiendo el marco de trabajo **Scrum** que incluye también eventos como el Sprint Planning, Sprint Goal, Daily Scrum, Sprint Review y Sprint Retrospective.
 
 **Historia de Usuario 1:**
-Como jugador de LOL quiero saber de qué trata el juego para tener una noción de la temática del juego.
+**Como jugador de LOL quiero saber de qué trata el juego para tener una noción de la temática del juego.**
 
 Criterios de Aceptación:
 * El usuario debe visualizar la pantalla de inicio.
@@ -174,7 +167,7 @@ Definición de terminado:
 El feedback que se recibió fue el de añadir botones que nos direccionen a las páginas oficiales de LoL y Riot Games, así como añadir más efecto visual.
 
 **Historia de Usuario 2:**
-Como jugador de LOL quiero visualizar a los campeones disponibles según su rol para ver qué personaje me agrada y conviene más en cada rol.
+**Como jugador de LOL quiero visualizar a los campeones disponibles según su rol para ver qué personaje me agrada y conviene más en cada rol.**
 
 Criterios de Aceptación:
 * El usuario puede seleccionar el rol de su preferencia.
@@ -188,7 +181,7 @@ Definición de Terminado:
 El feedback que se recibió fue poner un fondo más llamativo y colocar alguna flecha que permita regresar a la parte superior de la página porque hay muchos campeones que hacen la página muy extensa.
 
 **Historia de Usuario 3:**
-Como jugador de LOL quiero ordenar a los campeones disponibles según su nombre para encontrarlos rápidamente.
+**Como jugador de LOL quiero ordenar a los campeones disponibles según su nombre para encontrarlos rápidamente.**
 
 Criterios de Aceptación:
 * El usuario puede ordenar los campeones según nombre.
@@ -223,7 +216,7 @@ Definición de Terminado:
 
 
 
-## 4. Contenido de referencia
+## 4. Contenido de referencia :tw-270f:
 
 #### Diseño de experiencia de usuario (User Experience Design)
 
@@ -269,12 +262,10 @@ Definición de Terminado:
 #### Organización del Trabajo
 
 * [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 * [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
-## 5. Checklist
+## 5. Checklist :tw-2611:
 
 * [ ] Usa VanillaJS.
 * [ ] No hace uso de `this`.
@@ -295,3 +286,7 @@ Definición de Terminado:
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
 * [ ] UI: Es _responsive_.
+
+## 6. Autores :tw-2764:
+* Castro Alva, Ruth Smith.
+* Flores Calla, Verónica.
