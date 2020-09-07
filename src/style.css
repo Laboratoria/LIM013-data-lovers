@@ -177,29 +177,17 @@ a:active {
 }
 
 .section2-modal-item_img{
-  /*width:30%;*/
-  visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 235px;
+  width:30%;
+  /*visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
   border-top-left-radius: 12px;
-border-top-right-radius: 12px;
+  border-top-right-radius: 12px;*/
 }
 
-.section2-modal-item_img--hover{
-transition: 0.2s all ease-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-  position: absolute;
-    height: 235px;
-  border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-top: 0;
-  
 .section2-modal-item_name{ 
     font-family:'Varela', sans-serif;
     font-size:16px;
@@ -265,7 +253,7 @@ footer{
     h1{
          padding-top:45px;
          padding-bottom:45px;
-         font-size:24px
+         font-size:40px;
     }
 
     .section1_select{
@@ -279,7 +267,7 @@ footer{
     }
 
     h2{
-        font-size: 24px;
+        font-size: 32px;
         margin-left:100px;
         padding-top:45px;
         padding-bottom: 35px;
@@ -287,6 +275,7 @@ footer{
 
     .section2_table-item{
         flex: 40%;
+        max-width:46%;
     }
    
     .section2-table-item_num{
