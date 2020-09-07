@@ -7,6 +7,8 @@ import {sortByDesc} from './data.js';
 import {sortByLessPwr} from './data.js';
 import {sortByMorePwr} from './data.js';
 import {filterByType} from './data.js';
+import {searchByNameandNum} from './data.js';
+
 
 
 
@@ -82,7 +84,23 @@ document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=
     }  
     
 });
+// Buscar ecribiendo el nombre o número de pokémon
 
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.querySelector('.searchButton');
+const conditionSearch = ()=>{
+    if(searchByNameandNum(searchInput,data.pokemon).length!==0){
+        showPokDisplay(searchByNameandNum(searchInput,data.pokemon));
+    }else{
+        pokemonDisplay.innerHTML=`
+        <section class="warningSearch">
+        <section><img class="imgPokEv" src="images/warning.png"></section>
+        <p> No matches found </p>
+        </section>`
+    }
+}
+searchButton.addEventListener('click',()=>{conditionSearch();})
+searchInput.addEventListener('keyup',()=>{conditionSearch();})
 
 
 //crear dinamicamente elemntos section y asignarle imagen
@@ -456,11 +474,8 @@ const extractTypePok = (dataType) => {
 
 
 
-//**************Consuelo*****************************
 
 
-//const arrayType=["rock","grass"];
-//console.log(filterByType(arrayType,data.pokemon));
 
 
 

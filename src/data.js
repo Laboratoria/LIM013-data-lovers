@@ -94,8 +94,22 @@ export const filterByType = (arrayTypeSelect,dataPokemon) =>{
   }
 }
 
+//indexOff para devolver array que culpla con la condición
 
-
+export const searchByNameandNum = (inputSearch,dataPok) =>{
+  const text = inputSearch.value.toLowerCase();
+  let contenedor =[];
+  for(let pokemon of dataPok)
+  {
+      let name = pokemon.name.toLowerCase();
+      let num = pokemon.num.toLowerCase();
+      //let num = pokemon.num.toLowerCase();
+      if(name.indexOf(text) !== -1 || num.indexOf(text) !== -1){
+          contenedor.push(pokemon);  
+      }
+  }
+  return contenedor;
+  }
 
 
 
