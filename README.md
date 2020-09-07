@@ -1,6 +1,6 @@
 # Data Lovers
 
-##League of Legends by Diana Ordoñez y Daniela De la cruz.
+## League of Legends by Diana Ordoñez y Daniela De la cruz.
 
 ## Índice
 
@@ -30,11 +30,11 @@ Primero elegimos quién sería nuestro usuario y qué necesita saber o ver exact
 
  User Person Nivel Principiante
 
-![Design-Thinking](imagenes/userpersonP.png)
+![Design-Thinking](src/imagenes/userpersonP.png)
 
 User Person Nivel Expertisse
 
-![Design-Thinking](imagenes/userpersonE.png)
+![Design-Thinking](src/imagenes/userpersonE.png)
 
 ***
 
@@ -76,24 +76,24 @@ Debido a que contamos con la data, la idea de producto es una página web que le
 
 Pantalla 1 Mobile-Responsive
 
-![Design-Thinking](imagenes/mobile1.jpeg)
+![Design-Thinking](src/imagenes/mobile1.jpeg)
 
 Pantalla 2 Mobile-Responsive
 
-![Design-Thinking](imagenes/mobil2.jpeg)
+![Design-Thinking](src/imagenes/mobil2.jpeg)
 
 Pantalla 3 Mobile-Responsive: Recibimos feedback, nos sugirieron agrandar el buscador y filtro por daño de ataque.
 
-![Design-Thinking](imagenes/mobile3.jpeg)
-![Design-Thinking](imagenes/mobile3.2.jpeg)
+![Design-Thinking](src/imagenes/mobile3.jpeg)
+![Design-Thinking](src/imagenes/mobile3.2.jpeg)
 
 Pantalla 1-Desktop
 
-![Design-Thinking](imagenes/pantalla1.jpeg)
+![Design-Thinking](src/imagenes/pantalla1.jpeg)
 
 Pantalla 2-Desktop
 
-![Design-Thinking](imagenes/pantalla2.jpeg)
+![Design-Thinking](src/imagenes/pantalla2.jpeg)
 
 Recibimos feedback y se decidió eliminar la pantalla SOUNDTRACK porque no tenía usabilidad.
 
