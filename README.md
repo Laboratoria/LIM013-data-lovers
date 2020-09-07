@@ -84,6 +84,74 @@ Playing LOL Roundabout II: Starting
 #### ENCUESTAS
 
 
+
+### 3.2. ¡Manos a la obra!
+
+#### PROTOTIPO DE BAJA FIDELIDAD
+
+Con las entrevistas y encuestas realizadas, pasamos a diseñar el prototipo de baja fidelidad:
+
+![PrototipoBaja1](src/images/prototipo/1.jfif)
+![PrototipoBaja2](src/images/prototipo/2.jfif)
+
+Estos fueron los primeros diseños del **home** y la página **Campeones**. Se recibió el feedback de acortar los filtros, ya que causaban confusión y nos quedamos solo con los siguientes:
+
+![PrototipoBaja3](src/images/prototipo/3.jfif)
+
+Se tuvo la idea de añadir una ventana modal para mostrar las estadísticas por campeón seleccionado. 
+
+![PrototipoBaja4](src/images/prototipo/4.jfif)
+
+En el feedback se comentó que la idea era buena, pero les gustaría ver este detalle en una ventana aparte, por lo que se reemplazó la ventana **Novedades** por **Estadísticas**. También se pidió añadir un botón de **Jugar**:
+
+![PrototipoBaja5](src/images/prototipo/5.jfif)
+
+Con la nueva pestaña de Estadísticas, se pensó colocar información resumida de cada campeón en una tarjeta giratoria que permita ver la imagen en una cara y la información en otra:
+
+![PrototipoBaja6](src/images/prototipo/6.jfif)
+
+En la pestaña Estadística se pensó colocar íconos de cada rol y que al dar click aparezca una ventana modal con cálculos promedio por rol:
+
+![PrototipoBaja7](src/images/prototipo/7.jfif)
+
+También se aumentó información general del juego. Estas ideas fueron aceptadas en el feedback:
+
+![PrototipoBaja8](src/images/prototipo/8.jfif)
+
+#### PROTOTIPO DE ALTA FIDELIDAD
+
+Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/), siguiendo los fundamentos de **visual design** (balance, contraste, alineación y repetición para mantener el orden).
+
+**PARA DESKTOP:**
+
+![PrototipoAlta1](src/images/prototipo/PrototipoAlta1.PNG)
+![PrototipoAlta2](src/images/prototipo/PrototipoAlta2.PNG)
+![PrototipoAlta3](src/images/prototipo/PrototipoAlta3.PNG)
+![PrototipoAlta4](src/images/prototipo/PrototipoAlta4.PNG)
+![PrototipoAlta5](src/images/prototipo/PrototipoAlta5.PNG)
+![PrototipoAlta6](src/images/prototipo/PrototipoAlta6.PNG)
+![PrototipoAlta7](src/images/prototipo/PrototipoAlta7.PNG)
+![PrototipoAlta8](src/images/prototipo/PrototipoAlta8.PNG)
+![PrototipoAlta9](src/images/prototipo/PrototipoAlta9.PNG)
+![PrototipoAlta10](src/images/prototipo/PrototipoAlta10.PNG)
+
+**PARA MOBILE:**
+
+![PrototipoAlta11](src/images/prototipo/PrototipoAlta11.PNG)
+![PrototipoAlta12](src/images/prototipo/PrototipoAlta12.PNG)
+![PrototipoAlta13](src/images/prototipo/PrototipoAlta13.PNG)
+![PrototipoAlta14](src/images/prototipo/PrototipoAlta14.PNG)
+![PrototipoAlta15](src/images/prototipo/PrototipoAlta15.PNG)
+![PrototipoAlta16](src/images/prototipo/PrototipoAlta16.PNG)
+![PrototipoAlta17](src/images/prototipo/PrototipoAlta17.PNG)
+![PrototipoAlta18](src/images/prototipo/PrototipoAlta18.PNG)
+![PrototipoAlta19](src/images/prototipo/PrototipoAlta19.PNG)
+![PrototipoAlta20](src/images/prototipo/PrototipoAlta20.PNG)
+![PrototipoAlta21](src/images/prototipo/PrototipoAlta21.PNG)
+![PrototipoAlta22](src/images/prototipo/PrototipoAlta22.PNG)
+![PrototipoAlta23](src/images/prototipo/PrototipoAlta23.PNG)
+
+
 #### HISTORIAS DE USUARIO
 
 Con el prototipo listo, se pasó a crear las **Historias de Usuario**, siguiendo el marco de trabajo **Scrum** que incluye también eventos como el Sprint Planning, Sprint Goal, Daily Scrum, Sprint Review y Sprint Retrospective.
@@ -154,72 +222,6 @@ Definición de Terminado:
 * La interfaz debe mostrar un video resumen de las competencias.
 
 
-
-### 3.2. ¡Manos a la obra!
-
-#### PROTOTIPO DE BAJA FIDELIDAD
-
-Con las entrevistas y encuestas realizadas, pasamos a diseñar el prototipo de baja fidelidad:
-
-![PrototipoBaja1](src/images/prototipo/1.jfif)
-![PrototipoBaja2](src/images/prototipo/2.jfif)
-
-Estos fueron los primeros diseños del **home** y la página **Campeones**. Se recibió el feedback de acortar los filtros, ya que causaban confusión y nos quedamos solo con los siguientes:
-
-![PrototipoBaja3](src/images/prototipo/3.jfif)
-
-Se tuvo la idea de añadir una ventana modal para mostrar las estadísticas por campeón seleccionado. 
-
-![PrototipoBaja4](src/images/prototipo/4.jfif)
-
-En el feedback se comentó que la idea era buena, pero les gustaría ver este detalle en una ventana aparte, por lo que se reemplazó la ventana **Novedades** por **Estadísticas**. También se pidió añadir un botón de **Jugar**:
-
-![PrototipoBaja5](src/images/prototipo/5.jfif)
-
-Con la nueva pestaña de Estadísticas, se pensó colocar información resumida de cada campeón en una tarjeta giratoria que permita ver la imagen en una cara y la información en otra:
-
-![PrototipoBaja6](src/images/prototipo/6.jfif)
-
-En la pestaña Estadística se pensó colocar íconos de cada rol y que al dar click aparezca una ventana modal con cálculos promedio por rol:
-
-![PrototipoBaja7](src/images/prototipo/7.jfif)
-
-También se aumentó información general del juego. Estas ideas fueron aceptadas en el feedback:
-
-![PrototipoBaja8](src/images/prototipo/8.jfif)
-
-#### PROTOTIPO DE ALTA FIDELIDAD
-
-Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/), siguiendo los fundamentos de **visual design** (balance, contraste, alineación y repetición para mantener el orden).
-
-**PARA DESKTOP:**
-
-![PrototipoAlta1](src/images/prototipo/PrototipoAlta1.PNG)
-![PrototipoAlta2](src/images/prototipo/PrototipoAlta2.PNG)
-![PrototipoAlta3](src/images/prototipo/PrototipoAlta3.PNG)
-![PrototipoAlta4](src/images/prototipo/PrototipoAlta4.PNG)
-![PrototipoAlta5](src/images/prototipo/PrototipoAlta5.PNG)
-![PrototipoAlta6](src/images/prototipo/PrototipoAlta6.PNG)
-![PrototipoAlta7](src/images/prototipo/PrototipoAlta7.PNG)
-![PrototipoAlta8](src/images/prototipo/PrototipoAlta8.PNG)
-![PrototipoAlta9](src/images/prototipo/PrototipoAlta9.PNG)
-![PrototipoAlta10](src/images/prototipo/PrototipoAlta10.PNG)
-
-**PARA MOBILE:**
-
-![PrototipoAlta11](src/images/prototipo/PrototipoAlta11.PNG)
-![PrototipoAlta12](src/images/prototipo/PrototipoAlta12.PNG)
-![PrototipoAlta13](src/images/prototipo/PrototipoAlta13.PNG)
-![PrototipoAlta14](src/images/prototipo/PrototipoAlta14.PNG)
-![PrototipoAlta15](src/images/prototipo/PrototipoAlta15.PNG)
-![PrototipoAlta16](src/images/prototipo/PrototipoAlta16.PNG)
-![PrototipoAlta17](src/images/prototipo/PrototipoAlta17.PNG)
-![PrototipoAlta18](src/images/prototipo/PrototipoAlta18.PNG)
-![PrototipoAlta19](src/images/prototipo/PrototipoAlta19.PNG)
-![PrototipoAlta20](src/images/prototipo/PrototipoAlta20.PNG)
-![PrototipoAlta21](src/images/prototipo/PrototipoAlta21.PNG)
-![PrototipoAlta22](src/images/prototipo/PrototipoAlta22.PNG)
-![PrototipoAlta23](src/images/prototipo/PrototipoAlta23.PNG)
 
 ## 4. Contenido de referencia
 
