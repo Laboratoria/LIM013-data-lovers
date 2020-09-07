@@ -214,6 +214,14 @@ table {
     padding-top:15px;
     font-size:14px;
     min-width: 250px;
+    border-collapse: collapse;
+    border: orange 5px solid;
+   caption-side: top;
+}
+
+caption {
+   font-weight: bold;
+   font-style: italic;
 }
 
 
