@@ -287,4 +287,35 @@ footer{
         margin-bottom: 5px;
     }
    
-   
+   .section2_modal-item{
+    left:20%;
+    top:35%;
+    width:35%;
+    height: 50%;
+    padding:40px;
+}
+
+.section2-modal-item_close{
+    font-size:44px;
+}
+
+.section2-modal-item_num{
+    font-size:26px;
+}
+
+.section2-modal-item_img{
+  width:50%;    
+}
+
+.section2-modal-item_name{ 
+    font-size:24px;
+}
+
+.section2-modal-item_type{
+    font-size:24px;
+    line-height: 40px;
+}  
+
+table {
+    font-size:18px;
+}
