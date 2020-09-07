@@ -4,104 +4,123 @@
 }
 
 .menuSuperior {
-	background-color: black;
-	padding:  10px ;
+    background-color: black;
+    padding:10px 0px;
+    width: 100%;
+    top:0px;
      /*Flexbox*/
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 .barsNavigation a {
-	display: relative;
-	color: #dbb74c;
+    display: relative;
+    color: #dbb74c;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Fira Sans', sans-serif;
     width: 100%;
-	text-align: center;
-	padding: 18px 10px;
+    text-align: center;
+    padding: 18px 10px;
 }
 .barsNavigation a:hover {
-	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
 }
 .menuSuperior .btnMenu i{
-	display:none;
-	color: #dbb74c;
+    display:none;
+    color: #dbb74c;
 }
-.menuLateral{	
-	display:none;
+.menuLateral{   
+    display:none;
 }
 
 .barsNavigation2 a {
-	color: #dbb74c;
+    color: #dbb74c;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Fira Sans', sans-serif;
-	padding:20px 30px;
+    padding:20px 30px;
 
 }
 
 .barsNavigation2 a:hover{
-	border-bottom: 3px solid rgba(41, 208, 230, 0.842);
+    border-bottom: 3px solid rgba(41, 208, 230, 0.842);
 }
 
 .menuLateral .btnClose i{
-	color: #dbb74c;
+    color: #dbb74c;
 }
 #home{
-	background: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
-	background-size: 100% 100%;
+    background-image: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 
 }
 
-#championPage{
-	background-image: url(images/lol_fondo5.jpg);
-	background-attachment: fixed;
+/*#championPage{
+    background-image: url(images/lol_fondo5.jpg);
+    background-attachment: fixed;
+
+}*/
+main{
+    background-image: url(images/lol_fondo5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 
 }
 main img{
-	width: 50%;
-	height: 50%;
-	padding: 5% 0% 2% 25%;
-	display: block;
+    width: 50%;
+    height: 50%;
+    padding: 5% 0% 2% 25%;
+    display: block;
 
 }
 main #home a i{
-	font-size: 450%;
-	text-align: center;
-	color:  white;
-	display: block;
-	text-decoration: none;
+    font-size: 450%;
+    text-align: center;
+    color:  white;
+    display: block;
+    text-decoration: none;
 }
 main #home a i:hover{
 filter: drop-shadow(0px 0px 3px rgb(255, 253, 253));
 font-size: 460%;
 }
 main #home a{
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /* ----PAGINA CAMPEONES------ */
 
+main p{
+    color: white;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
 .boton{
-	background-color:transparent;
-	width: 30%;
-	padding:10px;
-	margin: 4% 35% 10%;
-	font-size:28px;
-	font-family: 'Marcellus SC', serif;
-	color: #efb810;
-	border: solid 3px rgba(41, 208, 230, 0.842);
-	cursor: pointer;
+    background-color:transparent;
+    width: 30%;
+    padding:10px;
+    margin: 4% 35% 10%;
+    font-size:28px;
+    font-family: 'Marcellus SC', serif;
+    color: #efb810;
+    border: solid 3px rgba(41, 208, 230, 0.842);
+    cursor: pointer;
 }
 .boton:hover {
-	background: transparent;
-	font-size:30px;
-	letter-spacing: 2PX;
-	box-shadow: 0 0 15px #25b9cc;
-	text-shadow: 0.0625rem 0.0625rem 0.5rem #0e0d0d,0 0 1em #f3f3f3,0 0 0.2em #f7a80b;
+    background: transparent;
+    font-size:30px;
+    letter-spacing: 2PX;
+    box-shadow: 0 0 15px #25b9cc;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #0e0d0d,0 0 1em #f3f3f3,0 0 0.2em #f7a80b;
 }
 .htext {
 text-align: center;
@@ -119,165 +138,210 @@ text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
 }
 label{
 font-family: 'Marcellus SC', serif;
-color: #07dffc;	
+color: #07dffc; 
 font-size: 16px;
 }
 .champion{
-	background-color: none;
-	border: 2px solid #07dffc;
-	padding: 10px;
-	margin: 25px 50px 0px;
+    background-color: none;
+    border: 2px solid #07dffc;
+    padding: 10px;
+    margin: 25px 50px 0px;
 }
 
 .categoria a{
-	color: #997406;
-	background-color:transparent;
-	font-family: 'Bangers', cursive;
-	text-align: center;
-	font-size: 22px;
-	width: 100px;
-	height: 25px;
-	text-decoration: none;
-	letter-spacing: 1PX;
-	margin:5px;
-	padding-left: 30px;
+    color: #997406;
+    background-color:transparent;
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    font-size: 22px;
+    width: 100px;
+    height: 25px;
+    text-decoration: none;
+    letter-spacing: 1PX;
+    margin:5px;
+    padding-left: 30px;
 }
 .categoria a:hover{
-	text-shadow: 0 0 1px #f5db8d,0 0 3px #f5db8d,0 0 5px #f5db8d;
+    text-shadow: 0 0 1px #f5db8d,0 0 3px #f5db8d,0 0 5px #f5db8d;
 }
 .categoria a.active{
     text-shadow: 0 0 2px #f5db8d,0 0 4px #f5db8d,0 0 6px #f5db8d;
 }
 .form-name {
-	width: 50%;
-	height: 25px;
-	margin: 0% 0% 0% 1%;
+    width: 50%;
+    height: 25px;
+    margin: 0% 0% 0% 1%;
   }
 select {
-	width: 20%;
-	height: 25px;
-	margin: 0% 0% 0% 1%;
+    width: 20%;
+    height: 25px;
+    margin: 0% 0% 0% 1%;
 }
 .form-groups-rol{
-	display:inline-flex;
-	padding: 10px 0px;
+    display:inline-flex;
+    padding: 10px 0px;
 }
 .rol-type-todo{
-	display:inline-flex;
-	margin: 0px 0px 0px 53px;
+    display:inline-flex;
+    margin: 0px 0px 0px 53px;
 
 }
 .rol-type{
-	display:inline-flex;
+    display:inline-flex;
 }
 
 #imgChampions{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 1rem;
-	object-fit: cover;
-	padding:20px 40px; /*Margenes de la grid*/	
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    object-fit: cover;
 }
 .cardBox{
-	perspective: 1000px;
-}
-.bothFace{
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
-.cardBox:hover .bothFace{ 
-	transform: rotateY(180deg);
+    perspective: 1000px;
 }
 /*.frontCard{
-	transform: rotateX(0deg)
+
+    transform: rotateX(0deg)
 }*/
+.bothFace{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin: 5%;
+}
+.cardBox:hover .bothFace{ 
+    transform: rotateY(180deg);
+}
 /*.frontCard:hover {
-	transform: perspective(500px) rotateY(180deg);
-	transition: all ease 0.8s;
+    transform: perspective(500px) rotateY(180deg);
+    transition: all ease 0.8s;
 }*/
 .personalImage{
-	width: 100%;
-	height: 100%;
-	border: 2px solid #e9be23;
-	padding: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e9be23;
+    padding: 0%;
 }
 .nameDiv{
-	background-color: rgb(6, 28, 37);
-	width: 100%;
-	padding: 5px 0px;
-	position: absolute;
-	text-align: center;
-	margin-top: 53%;
+    background-color: rgb(6, 28, 37);
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0px;
+    /*position: absolute;*/
+    text-align: center;
+    float: none ;
 }
+
 /*.frontCard:hover .personalName{
-	transform: rotateY(180deg);
+    transform: rotateY(180deg);
 
 }*/
 .frontCard, .backCard{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
+  
 .backCard {
-	transform: rotateX(180deg)
+    backface-visibility: visible;
+    transform: rotateX(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.backCardInfo{
+    background-color: rgb(45, 226, 226);
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
   }
-h3.backCardName{
-	color: ivory;
-	font-family: 'Bangers';
-	text-align: center;
-	font-size: 20px; /*Se puede juntar con main p*/
-}
-.backCard p{
-	font-family:'Fira Sans', sans-serif;
-	font-size:12px;
-	text-align: center;
-
+.apodo{
+    background-color: rgb(6, 28, 37);
+    transform: rotateY(180deg);
+    padding: 5px 0px; ;
 }
 
+.rolIcon{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5%;
+    
+}
+.rolIcon img{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+}
+.rolIcon p{
+color: #DBB74C;
+font-family: 'Marcellus SC', serif;
+display:inline-flex;
+}
 
+.imagen-categoria3{
+    display: block;
+}
+.averageInfoDiv{
+    display: grid;
+    grid-gap: 1.5rem;
+    margin-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid  #DBB74C;
+    border-radius: 5px;
+}
+.averageInfoDiv div{
+    font-family: 'Marcellus', serif;
+    color:#ffffff;
+    font-size: 60px;
+}
 footer {
-	background: #000000;
-    padding:10px 30px;
-    /*position: absolute;*/
+    background: #000000;
+    padding:10px 0px;
+    width: 100%;
+    bottom:0%;
+    
  
-	/* Flexbox */
-	display: flex;
-	flex-wrap:wrap;
+    /* Flexbox */
+    display: flex;
+    flex-wrap:wrap;
     justify-content:space-between;
     
 }
 footer .socialMedia a i{
-	color: #dbb74c;
-	font-size: 20px;
-	margin: 5px;
+    color: #dbb74c;
+    font-size: 20px;
+    margin: 5px;
 }
 footer .socialMedia a i:hover{
-	color: #07dffc;
+    color: #07dffc;
 }
 footer p{
-	color:#dbb74c;
-	margin: 5px;
-	
+    color:#dbb74c;
+    margin: 5px;
+    
 }
 /*Media queries*/
 @media screen and (max-width:700px){
-	.barsNavigation a{
-		display:none;
-	}
-	.menuSuperior .btnMenu i{
-		display:block;
-	}
-	.menuSuperior.responsive .btnMenu i{
-		position: block;
-		right: 0;
-		top: 0;
-	}
-	.menuLateral.responsive{	
-		background-color:#333333;
-		width: 70%;
-		float:right;
-	
-	}
+    .barsNavigation a{
+        display:none;
+    }
+    .menuSuperior .btnMenu i{
+        display:block;
+    }
+    .menuSuperior.responsive .btnMenu i{
+        position: block;
+        right: 0;
+        top: 0;
+    }
+    .menuLateral.responsive{    
+        background-color:#333333;
+        width: 70%;
+        float:right;
+    }
 }
-
