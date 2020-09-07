@@ -33,13 +33,27 @@ const showByData = (array) => {
             <p class="section2-modal-item_num">#${item.num}</p>
             <img class="section2-modal-item_img" src=${item.img}></img>
             <p class="section2-modal-item_name">${name}</p>
-            <p class="section2-table-item_type">${item.type}</p>
-            <p class="section2-table-item_type":${item.resistant}</p>
-            <p class="section2-table-item_type">waknesses: ${item.weaknesses}</p>
-            <p class="section2-table-item_stats">attack: ${item.stats["base-attack"]}</p>
-            <p class="section2-table-item_stats">defense: ${item.stats["base-defense"]}</p>
-            <p class="section2-table-item_stats">stamina: ${item.stats["base-stamina"]}</p>
-            <p class="section2-table-item_stats">PC: ${puntos}</p> 
+            <p class="section2-modal-item_type">${item.type}</p>
+            <p class="section2-modal-item_wak">resistant:${item.resistant}</p>
+            <p class="section2-modal-item_wak">waknesses: ${item.weaknesses}</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <th>Attack</th>
+                        <th>Defense</th>
+                        <th>Stamina</th>
+                        <th>PC</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>${item.stats["base-attack"]}</td>
+                        <td>${item.stats["base-defense"]}</td>
+                        <td>${item.stats["base-stamina"]}</td>
+                        <td>${puntos}</td>
+                    </tr>  
+                </tbody>
+            </table>
              `
         modal.appendChild(showForItem);
         const closeForItem = document.getElementById("close" + item.name);
