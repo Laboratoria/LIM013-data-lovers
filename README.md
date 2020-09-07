@@ -68,7 +68,7 @@ Nada de lo que digas está bien o mal, ni vamos a juzgarte por eso. Si en algún
 6.	¿Cuáles son los criterios que tomas para elegir a tu campeón?
 7.	 De todo lo que hemos conversado, ¿hay algo que te gustaría conocer o añadir en una página web sobre LOL?
 
-#### Resultados de las entrevistas:
+#### Conclusiones de las entrevistas:
 *	A los jugadores de Lol les interesa saber de manera general en qué consiste cada rol, ya que de acuerdo a esto escogen las zonas y los personajes.
 *	Los jugadores de Lol necesitan saber qué campeones aplican a cada rol para armar estrategias en equipo.
 *	Les fue difícil encontrar una buena plataforma web que les brinde información completa del juego.
@@ -76,6 +76,42 @@ Nada de lo que digas está bien o mal, ni vamos a juzgarte por eso. Si en algún
 
 #### ENCUESTAS :mag_right:
 
+Para tener un panorama más amplio de qué busca el usuario en este tipo de plataformas informativas, se hizo una encuesta a jugadores y no jugadores de League of Legends.
+
+#### Preguntas 
+
+- **LOL Roundabout I: About LOL**
+
+1. ¿Juegas League of Leyends?
+2. ¿Sabes de qué trata el juego?  (Si la respuesta es “no” pasar a la pregunta 5)
+3. ¿Fue fácil entenderlo?
+4. ¿Qué te ayudó o dificultó para entender el juego?
+5. ¿Qué te gustaría saber para entender mucho mejor el juego?
+
+- **LOL Roundabout II: Other games**
+
+6. ¿Qué otros videojuegos o juegos en línea practicas?
+7. ¿Qué es lo que más valoras en los personajes de los juegos que mencionaste?
+8. ¿Conoces alguna plataforma que brinde información sobre tus juegos en línea favoritos? (Si la respuesta es “no” pasar a la pregunta 10)
+9. ¿Qué es lo que más te gusta de esta plataforma?
+10. ¿Qué tipo de información de gustaría obtener en una plataforma informativa de tus juegos en línea favoritos?
+
+#### Link de la encuesta:
+https://forms.gle/eTA8JDKyEXPQS71U6
+
+#### Resultados de la encuesta:
+![Encuesta1](src/images/encuesta/1.PNG)
+![Encuesta2](src/images/encuesta/2.PNG)
+![Encuesta3](src/images/encuesta/3.PNG)
+![Encuesta4](src/images/encuesta/4.PNG)
+
+#### Conclusiones de la encuesta:
+*	Un gran procentaje no juega League of Legends pese a tener mucha popularidad (87%).
+* A un porcentaje significativo de los encuestados que juegan League of Legends se les dificultó entender el juego (37%).
+* Todos han experimentado juegos del tipo MOBA.
+* Más de la mitad de los encuestados no conocen plataformas informativas sobre sus juegos favoritos.
+* A los usuarios les gustaría obtener información de qué consiste el juego, con breves videos, historias de los personajes, habilidades y debilidades.
+* Los usuarios desearían encontrar una plataforma con información sobre el alcance internacional del juego.
 
 
 ### 3.2. ¡Manos a la obra!
@@ -149,7 +185,7 @@ Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/),
 
 Con el prototipo listo, se pasó a crear las **Historias de Usuario**, siguiendo el marco de trabajo **Scrum** que incluye también eventos como el Sprint Planning, Sprint Goal, Daily Scrum, Sprint Review y Sprint Retrospective.
 
-* **Historia de Usuario 1:**
+**Historia de Usuario 1:**
 Como jugador de LOL quiero saber de qué trata el juego para tener una noción de la temática del juego.
 
 Criterios de Aceptación:
@@ -166,7 +202,7 @@ Definición de terminado:
 
 El feedback que se recibió fue el de añadir botones que nos direccionen a las páginas oficiales de LoL y Riot Games, así como añadir más efecto visual.
 
-* **Historia de Usuario 2:**
+**Historia de Usuario 2:**
 Como jugador de LOL quiero visualizar a los campeones disponibles según su rol para ver qué personaje me agrada y conviene más en cada rol.
 
 Criterios de Aceptación:
@@ -180,7 +216,7 @@ Definición de Terminado:
 
 El feedback que se recibió fue poner un fondo más llamativo y colocar alguna flecha que permita regresar a la parte superior de la página porque hay muchos campeones que hacen la página muy extensa.
 
-* **Historia de Usuario 3:**
+**Historia de Usuario 3:**
 Como jugador de LOL quiero ordenar a los campeones disponibles según su nombre para encontrarlos rápidamente.
 
 Criterios de Aceptación:
@@ -191,7 +227,7 @@ Definición de Terminado:
 - La función de orden es efectiva.
 - Realizar test de usabilidad (1o 2 usuarios).
 
-* **Historia de Usuario 4:**
+**Historia de Usuario 4:**
 Como jugador de LOL quiero conocer las estadísticas y descripción de cada rol para escoger el rol que más me convenga en la batalla.
 
 Criterios de Aceptación:
@@ -203,7 +239,7 @@ Definición de Terminado:
 - La interfaz debe mostrar una ventana modal con el promedio de estadísticas.
 - La interfaz es responsive.
 
-* **Historia de Usuario 5:**
+**Historia de Usuario 5:**
 Como jugador de LOL quiero obtener información sobre las competencias para proyectarme como jugador profesional.
 
 Criterios de Aceptación:
