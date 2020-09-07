@@ -149,13 +149,14 @@ a:active {
     position:fixed; 
     z-index:1;
     overflow:auto;  
-    left:33%;
-    top:25%;
-    width:40%;
-    height: 65%;
-    padding:20px;
-    padding-left:25px;
-    padding-right:25px;
+    left:35%;
+    top:30%;
+    width:35%;
+    height: 50%;
+    padding-top:15px;
+    padding-botoom:15px;
+    padding-left:15%;
+    padding-right:5%;
 
     border-radius:20px;
     background:white;
@@ -193,8 +194,6 @@ a:active {
     font-family:'Varela', sans-serif;
     font-size:14px;
     line-height: 30px;
-    margin-right:5%;
-    margin-left:5%;
     color:white;
     border-radius: 5px;
     background-color:rgb(168, 82, 82);
@@ -205,24 +204,16 @@ a:active {
     font-family:'Varela', sans-serif;
     font-size:14px;
     line-height: 30px;
-    margin-right:5%;
-    margin-left:5%;
     color:white;
     border-radius: 5px;
     background-color:rgb(168, 82, 82);
     margin:5px;
 }
 
-
 table {
     padding-top:15px;
-    font-size:18px;
-    margin-left:25%;
-    margin-right: 25%;
-    border: 1 solid grey;
-    border-collapse: separate;
-    border-spacing: 0;
-    min-width: 350px;
+    font-size:14px;
+    min-width: 250px;
 }
 
 
