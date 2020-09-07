@@ -108,14 +108,20 @@ Recibimos feedback y se decidió eliminar la pantalla SOUNDTRACK porque no tení
 ***
 
 Primero realizamos la página de inicio, donde el usuario avanzado encontrará una guía que le redireccionará a páginas que le brindarán información sobre runas, objetos y temás de interés relacionado al juego. El usuario podrá visitar una sección de campeones, donde encontrará una lista de campeones de League of Legends. De manera resumida mostraría a cada uno como cards con una imagen y su respectivo nombre, a su vez en la parte superior se vería un listado de los tipos de roles de los campeones para filtrar la data, un buscador, filtro por daño de ataque, que según encuesta es de interés del usuario. Además, según la investigación con el usuario, se decidió agregar una funcionalidad para ordenar a los campeones de A hasta la Z y viceversa.
-En el desarrollo del proyecto se realizaron varios tests de usabilidad, se comprobó que el botón playnow no se apreciaba, así que se decidió mejorarlo. Además el buscador no se apreciaba, por lo que se decidió en la versión responsive que ocupe el ancho de la pantalla. Por otro lado la sección soundtrack no tenía funcionalidad, es por ello que se retiró del proyecto.
-Los tests de usabilidad demostraron que la página necesitaba dinamismo, es por ello que se implementó la visualización de la información de todos los campeones con un modal. La última sección es de estadísticas, en la cual se decidió hacer una comparación de data importante para el usuario, entre los campeones 
+En el desarrollo del proyecto se realizaron varios tests de usabilidad, se comprobó que el botón playnow no se apreciaba, así que se decidió mejorarlo. Además el buscador era muy pequeño en versión responsive, por lo que se decidió que ocupe el ancho de la pantalla (versión mobile). Por otro lado la sección soundtrack no tenía funcionalidad, es por ello que se retiró del proyecto.
+Los tests de usabilidad demostraron que la página necesitaba dinamismo, es por ello que se implementó la visualización de la información de todos los campeones con un modal. La última sección es de estadísticas, en la cual se decidió hacer una comparación de data importante para el usuario, entre los campeones, y resaltar al campeon del que el usuario quisiera revisar sus indicadores con una transición.
 
 ### Prototipo de Alta Fidelidad
 
 El prototipo de alta fidelidad fue elaborado en Figma con la ayuda del Zeplin.
 
 [Prototipo en Figma](https://www.figma.com/file/b1sEIqrPWHR1sYfQFz9Dom/LOL_MOBILE?node-id=0%3A1)
+
+### Zeplin
+
+[Versión Desktop](https://zpl.io/VkjlGQ8)
+[Versión Mobile](https://zpl.io/a3WweWd)
+
 
 
 
