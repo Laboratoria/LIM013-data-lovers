@@ -104,6 +104,7 @@ a:active {
     flex-grow:1;
     padding:10px;
     margin:10px;   
+    max-width:24%;
     border:1px solid white;
     border-radius:15px;
     box-shadow: 0px 8px 16px 0px rgba(87, 22, 22, 0.2);
@@ -154,7 +155,6 @@ a:active {
     width:30%;
     height: 45%;
     padding:25px;
-    max-width:24%;
     border-radius:20px;
     background:white;
     border:2px solid rgb(241, 241, 245);
@@ -298,10 +298,10 @@ footer{
     }
    
    .section2_modal-item{
-    left:20%;
+    left:22%;
     top:20%;
-    width:70%;
-    height:50%;
+    width:60%;
+    height:60%;
     padding:40px;
 }
 
@@ -314,16 +314,17 @@ footer{
 }
 
 .section2-modal-item_img{
-  width:50%;    
+  width:45%;    
 }
 
 .section2-modal-item_name{ 
     font-size:32px;
+    line-height:32px;
 }
 
 .section2-modal-item_type{
     font-size:24px;
-    line-height: 40px;
+    line-height: 32px;
 }  
 
 table {
