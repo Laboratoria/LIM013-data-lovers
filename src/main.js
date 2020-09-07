@@ -33,7 +33,7 @@ const showByData = (array) => {
             <p class="section2-modal-item_num">#${item.num}</p>
             <img class="section2-modal-item_img" src=${item.img}></img>
             <p class="section2-modal-item_name">${name}</p>
-             <p class="section2-modal-item_type">${item.type}</p>
+            <p class="section2-modal-item_type">${item.type}</p>
              <table>
                 <tbody>
                     <tr>
