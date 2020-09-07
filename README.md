@@ -44,38 +44,38 @@ La data se extrajo desde:
 
 Se hicieron entrevistas personales vía telefónica a 5 usuarios con experiencia en LOL.
 
-##### Objetivo de la entrevista
+#### Objetivo de la entrevista
 Conocer qué tipo de información es necesaria para jugar LOL.
 
-##### Introducción
+#### Introducción
 Hola, _entrevistado_, esta entrevista es para conocer sobre tu experiencia con el juego League of Legends. 
 Nada de lo que digas está bien o mal, ni vamos a juzgarte por eso. Si en algún momento decides que no quieres continuar con la entrevista, puedes manifestarlo, no hay ningún problema.
 
-##### Información de los usuarios
+#### Información de los usuarios
 * Nombre
 * Edad
 * Condición: estudiante, trabajador, etc.
 * Distrito en que vive
 
-##### Preguntas 
+#### Preguntas 
 
-LOL Roundabout
+**LOL Roundabout**
 
 1.	¿Qué tan seguido juegas  LOL?
 2.	¿Desde qué dispositivo juegas LOL?
 3.	¿Conoces alguna página web o aplicación informativa de LOL que te haya ayudado a jugar?
 4.	¿Qué te gusta y/o disgusta de esta página web o aplicación?
 
-Playing LOL Roundabout I: Beginning
+**Playing LOL Roundabout I: Beginning**
 
 5.	¿Qué te hubiera gustado saber de LOL para entender mucho mejor el juego?
 
-Playing LOL Roundabout II: Starting
+**Playing LOL Roundabout II: Starting**
 
 6.	¿Cuáles son los criterios que tomas para elegir a tu campeón?
 7.	 De todo lo que hemos conversado, ¿hay algo que te gustaría conocer o añadir en una página web sobre LOL?
 
-##### Resultados de las entrevistas:
+#### Resultados de las entrevistas:
 *	A los jugadores de Lol les interesa saber de manera general en qué consiste cada rol, ya que de acuerdo a esto escogen las zonas y los personajes.
 *	Los jugadores de Lol necesitan saber qué campeones aplican a cada rol para armar estrategias en equipo.
 *	Les fue difícil encontrar una buena plataforma web que les brinde información completa del juego.
@@ -94,27 +94,27 @@ Con las entrevistas y encuestas realizadas, pasamos a diseñar el prototipo de b
 ![PrototipoBaja1](src/images/prototipo/1.jfif)
 ![PrototipoBaja2](src/images/prototipo/2.jfif)
 
-Estos fueron los primeros diseños del **home** y la página **Campeones**. Se recibió el feedback de acortar los filtros, ya que causaban confusión y nos quedamos solo con los siguientes:
+> Estos fueron los primeros diseños del **home** y la página **Campeones**. Se recibió el feedback de acortar los filtros, ya que causaban confusión y nos quedamos solo con los siguientes:
 
 ![PrototipoBaja3](src/images/prototipo/3.jfif)
 
-Se tuvo la idea de añadir una ventana modal para mostrar las estadísticas por campeón seleccionado. 
+> Se tuvo la idea de añadir una ventana modal para mostrar las estadísticas por campeón seleccionado. 
 
 ![PrototipoBaja4](src/images/prototipo/4.jfif)
 
-En el feedback se comentó que la idea era buena, pero les gustaría ver este detalle en una ventana aparte, por lo que se reemplazó la ventana **Novedades** por **Estadísticas**. También se pidió añadir un botón de **Jugar**:
+> En el feedback se comentó que la idea era buena, pero les gustaría ver este detalle en una ventana aparte, por lo que se reemplazó la ventana **Novedades** por **Estadísticas**. También se pidió añadir un botón de **Jugar**:
 
 ![PrototipoBaja5](src/images/prototipo/5.jfif)
 
-Con la nueva pestaña de Estadísticas, se pensó colocar información resumida de cada campeón en una tarjeta giratoria que permita ver la imagen en una cara y la información en otra:
+> Con la nueva pestaña de Estadísticas, se pensó colocar información resumida de cada campeón en una tarjeta giratoria que permita ver la imagen en una cara y la información en otra:
 
 ![PrototipoBaja6](src/images/prototipo/6.jfif)
 
-En la pestaña Estadística se pensó colocar íconos de cada rol y que al dar click aparezca una ventana modal con cálculos promedio por rol:
+> En la pestaña Estadística se pensó colocar íconos de cada rol y que al dar click aparezca una ventana modal con cálculos promedio por rol:
 
 ![PrototipoBaja7](src/images/prototipo/7.jfif)
 
-También se aumentó información general del juego. Estas ideas fueron aceptadas en el feedback:
+> También se aumentó información general del juego. Estas ideas fueron aceptadas en el feedback:
 
 ![PrototipoBaja8](src/images/prototipo/8.jfif)
 
@@ -156,7 +156,7 @@ Trabajamos con la herramienta de diseño visual [Figma](https://www.figma.com/),
 
 Con el prototipo listo, se pasó a crear las **Historias de Usuario**, siguiendo el marco de trabajo **Scrum** que incluye también eventos como el Sprint Planning, Sprint Goal, Daily Scrum, Sprint Review y Sprint Retrospective.
 
-**Historia de Usuario 1:** 
+**Historia de Usuario 1:**
 Como jugador de LOL quiero saber de qué trata el juego para tener una noción de la temática del juego.
 
 Criterios de Aceptación:
