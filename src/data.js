@@ -18,7 +18,16 @@ export const orderData = (data,condition) => {
        return -1;
     });
 }
+  else{
+    result=data.sort((a,b) =>{
+      if (a.name<b.name){
+      return 1;
+      }
+      return -1;  
+    });
+  }
 return result;
+<<<<<<< HEAD
 }
 
 export const filterData = (data, condition) => {
@@ -37,3 +46,6 @@ export const filterData = (data, condition) => {
   }
   return arrFilter;
 }; 
+=======
+};
+>>>>>>> bdf7d546f6d9ef86f5131b9fe548e3e72a17fed2
