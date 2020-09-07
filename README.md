@@ -38,7 +38,7 @@ Entrevista a 3 Jugadores de Nivel Avanzado
 
  User Person Nivel Principiante
 
-![Design-Thinking](src/imagenes/userpersonP.png)
+![Design-Thinking](src/imagenes/userpersonEninicio.png)
 
 User Person Nivel Avanzado
 
