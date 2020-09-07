@@ -182,7 +182,9 @@ footer{
 #pokemon{
     background: white;
     margin-top: 95px;
+    width: 100%;
     /*height: 100vh;*/
+    
 }
 
 
