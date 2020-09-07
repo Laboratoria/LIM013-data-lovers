@@ -177,9 +177,29 @@ a:active {
 }
 
 .section2-modal-item_img{
-  width:30%;    
+  /*width:30%;*/
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
 }
 
+.section2-modal-item_img--hover{
+transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+  
 .section2-modal-item_name{ 
     font-family:'Varela', sans-serif;
     font-size:16px;
