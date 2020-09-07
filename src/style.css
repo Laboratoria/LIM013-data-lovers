@@ -183,14 +183,14 @@ a:active {
 .section2-modal-item_name{ 
     font-family:'Varela', sans-serif;
     font-size:16px;
-    line-height:15px;
+    line-height:10px;
     padding-bottom: 15px;
 }
 
 .section2-modal-item_type{
     font-family:'Varela', sans-serif;
     font-size:14px;
-    line-height: 30px;
+    line-height: 25px;
     color:white;
     border-radius: 5px;
     background-color:rgb(168, 82, 82);
