@@ -24,22 +24,26 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });*/
-const dataPok = [{"num": "001","name": "bulbasaur","img": "001.png","type":[ "grass", "poison"]},
-                {"num": "002","name": "ivysaur","img": "002.png","type":[ "grass", "poison"]},
-                {"num": "003","name": "venusaur","img": "003.png"},
-                {"num": "004","name": "charmander","img": "004.png"}];
-const arrayPok003 =[{"num": "003","name": "venusaur","img": "003.png"}];
+const dataPok = [{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"]},
+                {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"]},
+                {"num": "003","name": "venusaur","img": "003.png","type":["rock"]},
+                {"num": "004","name": "charmander","img": "004.png","type":["fire"]}];
+
+const arrayPok003 =[{"num": "003","name": "venusaur","img": "003.png","type":["rock"]}];
+
+const arrayPok001002=[{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"]},
+                      {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"]}];
 
 
-const resultsortByAsc=[{"num": "001","name": "bulbasaur","img": "001.png"},
-                      {"num": "004","name": "charmander","img": "004.png"},
-                      {"num": "002","name": "ivysaur","img": "002.png"},
-                      {"num": "003","name": "venusaur","img": "003.png"}];
+const resultsortByAsc=[{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"]},
+                      {"num": "004","name": "charmander","img": "004.png","type":["fire"]},
+                      {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"]},
+                      {"num": "003","name": "venusaur","img": "003.png","type":["rock"]}];
                       
-const resultsortByDesc=[{"num": "003","name": "venusaur","img": "003.png"},
-                      {"num": "002","name": "ivysaur","img": "002.png"},
-                      {"num": "004","name": "charmander","img": "004.png"},
-                      {"num": "001","name": "bulbasaur","img": "001.png"}];
+const resultsortByDesc=[{"num": "003","name": "venusaur","img": "003.png","type":["rock"]},
+                      {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"]},
+                      {"num": "004","name": "charmander","img": "004.png","type":["fire"]},
+                      {"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"]}];
                  
 describe('filtrar por número de pokedex', () => {
   it('is a function', () => {
@@ -101,6 +105,12 @@ describe('Devolver array ordenado de -poder a +poder', () => {
 describe('Devolver array cuyo tipo sea el mismo que introducimos', () => {
   it('is a function', () => {
     expect(typeof filterByType).toBe('function');
+  });
+  it('return array con un objeto cuyo tipo ="rock"', () => {
+    expect(filterByType(["rock"],dataPok)).toEqual(arrayPok003);
+  });
+  it('return array con un objeto cuyo tipo ="rock"', () => {
+    expect(filterByType(["grass", "poison"],dataPok)).toEqual(arrayPok001002);
   });
   
 });
