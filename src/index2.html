@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <audio src="bienvenida.mp3" autoplay type="audio/mp3"></audio>
+    <!-- <audio src="bienvenida.mp3" autoplay type="audio/mp3"></audio>  -->
     <div class="header">
       <div class="figure">
         <img src="./img/logoLOL (1).png" alt="lolpediaLogo" class="title-lol">
@@ -40,24 +40,27 @@
   </header>
   <main>
     <section class="home" id="home">
-      <aside class="container-box">
-        <p>League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan
-          para ver quién destruye antes la base del otro. Fusiona la velocidad y la intensidad de la estrategia en
-          tiempo real con elementos de juegos de rol. Elige de entre un elenco de 140 campeones para realizar jugadas
-          épicas, asesinar rivales y derribar torretas para alzarte con la victoria.</p>
-        <img src="./img/divider.png" style="width:100%" height="auto" class="box-divider" alt="lolDivider">
-        <h2>Comunidades de League of Legends</h2>
-        <p>Existen muchas comunidades de este juego donde encontraras mucha información, hacer amigos y pulir tus
-          habilidades. Algunas comunidades son:
-        <nav class="comunidad-nav">
-          <a href="https://na.op.gg/champion/statistics">OP.GG</a>
-          <a href="https://blitz.gg/">BLITZ.GG</a>
-          <a href="https://www.millenium.gg/juegos/juego-6">MILLENIUM.GG</a>
-          <a href="https://www.salsalol.com/">SALSALOL</a>
-          <a href="https://nexus.leagueoflegends.com/en-us/2009/10/join-the-community/">OTROS</a>
-        </nav>
-        </p>
-      </aside>
+      <div clase="child1">
+        <aside class="container-box">
+          <p>League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se
+            enfrentan
+            para ver quién destruye antes la base del otro. Fusiona la velocidad y la intensidad de la estrategia en
+            tiempo real con elementos de juegos de rol. Elige de entre un elenco de 140 campeones para realizar jugadas
+            épicas, asesinar rivales y derribar torretas para alzarte con la victoria.</p>
+          <img src="./img/divider.png" style="width:100%" height="auto" class="box-divider" alt="lolDivider">
+          <h2>Comunidades de League of Legends</h2>
+          <p>Existen muchas comunidades de este juego donde encontraras mucha información, hacer amigos y pulir tus
+            habilidades. Algunas comunidades son:
+          <nav class="comunidad-nav">
+            <a href="https://na.op.gg/champion/statistics">OP.GG</a>
+            <a href="https://blitz.gg/">BLITZ.GG</a>
+            <a href="https://www.millenium.gg/juegos/juego-6">MILLENIUM.GG</a>
+            <a href="https://www.salsalol.com/">SALSALOL</a>
+            <a href="https://nexus.leagueoflegends.com/en-us/2009/10/join-the-community/">OTROS</a>
+          </nav>
+          </p>
+        </aside>
+      </div>
       <div class="modos">
         <article class="mode-play">
           <div class="modo-juego">
@@ -119,7 +122,7 @@
             <h2>Vídeo instructivo</h2>
             <div>
               <iframe class="lol-video" src="https://www.youtube.com/embed/WWa5uAzYDkQ" target="_blank" width="560"
-                height="500"></iframe>
+                height="400"></iframe>
             </div>
           </article>
         </div>
@@ -152,4 +155,5 @@
 <script src="data/lol/lol.js" type="module"></script>
 <script src="main.js" type="module"></script>
 <script src="slide.js" type="module"></script>
+
 </html>

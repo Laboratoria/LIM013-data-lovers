@@ -11,13 +11,13 @@ body {
 }
 
 /*TODO bienvenida pantalla */
-#InicioLOL img{
+#InicioLOL img {
   margin: auto;
   border: 8px double #bba341;
   width: 100%;
   height: 100%;
 }
-#InicioLOL{
+#InicioLOL {
   position: fixed;
   text-align: center;
   display: flex;
@@ -25,7 +25,7 @@ body {
   flex-flow: column;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
+  transform: translateX(-50%) translateY(-50%);
 }
 video {
   min-width: 100%;
@@ -35,11 +35,11 @@ video {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
+  transform: translateX(-50%) translateY(-50%);
   z-index: -100;
   background-size: cover;
 }
-.boton{
+.boton {
   background-color: rgba(12, 166, 190, 0.85);
   border-radius: 20px 0px;
   font-size: 35px;
@@ -52,17 +52,18 @@ video {
     0 0 0.2em #07cbe9;
   border: 4px outset #bba341;
   margin-top: 60px;
-  outline:none;
+  outline: none;
 }
-.boton:hover{
+.boton:hover {
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em black, 0 0 0.2em black;
 }
 
 /*TODO segunda pantalla */
 /*Header*/
 .header {
-  padding: 5%;
+  padding: 1%;
   overflow: hidden;
+  margin: 1rem 1rem 1rem 1rem;
 }
 .title-lol {
   display: flex;
@@ -72,25 +73,25 @@ video {
 }
 .menus {
   display: flex;
-  width: 100%;
+  width: 98%;
   margin: 1rem 1rem 1rem 1rem;
-  float: inline-start;
   align-items: center;
+  padding: 1%;
 }
 
 .figure {
   margin: 0rem 0rem 0rem 0rem;
 }
 .logoHome {
-  margin: 0rem 0rem 0rem 0rem;
-  width: 10%;
+  margin: 1rem 1rem 1rem 1rem;
+  /* width: 10%; */
   height: auto;
   top: 50%;
   position: relative;
   vertical-align: middle;
 }
 .imghome {
-  width: 84px;
+  width: 70px;
 }
 
 .imghome:hover {
@@ -123,7 +124,6 @@ video {
   top: 50%;
   height: auto;
   width: 100%;
-  float: left;
 }
 .menu-bar a {
   color: #000000;
@@ -184,21 +184,24 @@ video {
 /*section home*/
 .home {
   display: flex;
+  width: auto;
+  margin: 1rem 5rem 1rem 5rem;
+}
+.child1 {
   width: 100%;
-  float: inline-start;
 }
 .container-box {
   background-color: rgba(10, 3, 3, 0.404);
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   margin: 1rem 1rem 1rem 1rem;
   border: 5px inset #bba341;
   padding: 1rem 2rem 1rem 2rem;
   overflow: auto;
   font-family: "Marcellus SC", serif;
   border-radius: 0px 20px;
-  float: left;
 }
+
 .box-divider {
   padding-top: 2rem;
   width: 100%;
@@ -242,10 +245,9 @@ video {
 
 /*Modo de juego y Video de LOL */
 .modos {
-  margin: 1rem 4rem 1rem 4rem;
-  width: 100%;
+  margin: 1rem 1rem 1rem 7rem;
+  width: 260%;
   position: relative;
-  float: left;
 }
 
 /*Seccion slides LOL */
@@ -253,7 +255,7 @@ video {
 .mode-play h2 {
   background-color: #bba341;
   align-items: normal;
-  margin: 0rem 0rem 1rem 4.5rem;
+  margin: 0rem 0rem 1rem 4rem;
   width: 90%;
   top: 80%;
   border-radius: 0px 25px;
@@ -270,15 +272,19 @@ video {
   opacity: 0.8;
 }
 .mySlides {
-  display: none;
+
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
-img {
+.mySlides img {
   vertical-align: middle;
+  width:100%;
 }
 .slideshow-container {
-  max-width: 100%;
   position: relative;
-  margin: 1%;
+  /* margin: 0; */
   background-color: rgba(10, 3, 3, 0.404);
   height: auto;
   border: 5px inset #bba341;
@@ -340,16 +346,30 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bba341;
+  background-color: #A68747;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #A68747;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
 .dot-chain {
   width: 100%;
+  margin: 1rem 0rem 0rem 0rem;
+}
+
+.active-slide-img{
+  background-color:rgba(0, 0, 0, 0.8);
 }
 .dot:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color:rgba(0, 0, 0, 0.8);
 }
 /* Fading animation slide*/
 .fade {
@@ -384,7 +404,7 @@ img {
 .video-container h2 {
   background-color: #bba341;
   align-items: normal;
-  margin: 0rem 0rem 0rem 5rem;
+  margin: 0rem 0rem 0rem 4rem;
   width: 90%;
   border-radius: 0px 25px;
   padding: 1%;
@@ -400,7 +420,7 @@ img {
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
   opacity: 0.8;
 }
-/*TODO  */
+
 .contenedor-video {
   width: 100%;
   height: 50%;
@@ -423,7 +443,6 @@ img {
 .container-footer {
   width: 100%;
   margin-top: 10px;
-  margin: 88rem 0rem 0rem 0rem;
 }
 .riot {
   text-align: center;
@@ -533,7 +552,7 @@ footer {
   }
 }
 
-/* TODO tercera pantalla------------------------------------------------------------*/
+/* TODO tercera pantalla*/
 
 .top-box {
   margin: auto;
@@ -669,7 +688,6 @@ figure .traseraTop .post-title {
   font-weight: bold;
 }
 
-/*TODO 3era pantalla */
 .choose-box {
   margin: auto;
   text-align: center;
@@ -685,12 +703,12 @@ figure .traseraTop .post-title {
   font-family: "Marcellus SC", serif;
 }
 
-.champion{ 
+.champion {
   color: #dfc981;
   padding-left: 5px;
   font-size: 3.125rem;
   padding: 0.1rem 0rem 0.1rem 0rem;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
 }
 
 .texto-champ p {
@@ -703,7 +721,6 @@ figure .traseraTop .post-title {
   max-width: 900px;
   text-shadow: 0.0625rem 0.0625rem 0.5rem black, 0 0 1em beige, 0 0 0.2em beige;
 }
-/*TODO buscador*/
 
 .lupa {
   width: 15%;
@@ -835,17 +852,18 @@ figure .traseraTop .post-title {
 }
 
 /*Nofound bar*/
-.Nofound{
+.Nofound {
   font-size: 100px;
-  font-family: 'Marcellus SC', serif;
+  font-family: "Marcellus SC", serif;
   color: #c9b463;
   font-weight: bold;
 }
 .Nofound:hover {
   color: wheat;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347,
+    0 0 0.2em #ab8347;
 }
-.Nofound img{
+.Nofound img {
   border-radius: 50%;
 }
 /*contenedor de campeones general*/
@@ -861,7 +879,6 @@ figure .traseraTop .post-title {
   text-decoration: none;
 }
 
-/*TODO modal primero*/
 .card-link-Champ {
   margin-top: 1%;
   display: relative;
@@ -949,7 +966,6 @@ figure .traseraTop .post-title {
   font-size: 18px;
 }
 
-/*TODO Ventana Modal*/
 .modal-window {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.25);
@@ -1115,7 +1131,6 @@ th {
   grid-row: 4 / 4;
 }
 
-/*TODO CSS de buscador funcion*/
 .card-link-Champ_Reverse {
   margin-top: 1%;
   display: relative;
@@ -1180,7 +1195,7 @@ th {
     -16px -14px 14px -10px rgba(214, 196, 75, 0);
   box-shadow: inset -1px 3px 8px 5px #07cbe9, 2px 5px 16px 0px #0b325e,
     -16px -14px 14px -10px rgba(214, 196, 75, 0);
-  -ms-transform: scale(1.5); 
+  -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.05);
 }
@@ -1355,24 +1370,22 @@ th {
 
 /*TODO Responsive*/
 
-
-
 @media only screen and (max-width: 300px) {
   .header {
-    margin: 1rem 1rem 1rem 0rem;
-    width: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 90%;
   }
   .figure {
     margin: 1rem 1rem 1rem 1rem;
   }
   .title-lol {
-    max-width: 100%;
-    margin: 1rem 1rem 1rem 0rem;
+    width: 60%;
+    margin: 1rem 1rem 1rem 3rem;
   }
   .menus {
     width: 100%;
     position: relative;
-    float: none;
+
     display: block;
     margin: 1rem 1rem 1rem -1rem;
   }
@@ -1386,12 +1399,11 @@ th {
     margin: 1rem 1rem 1rem 1rem;
   }
   .menu-bar a {
-    font-size: 13px;
+    font-size: 72%;
     align-items: center;
     line-height: 100%;
   }
   .menu-bar {
-    float: none;
     justify-content: space-evenly;
     margin: 0rem 0rem 0rem 0rem;
     width: auto;
@@ -1415,13 +1427,13 @@ th {
   /*blque de texto y videos*/
   .home {
     display: block;
-    position: absolute;
-    float: none;
+    position: relative;
+    margin: 0rem 0rem 0rem 0rem;
   }
   .container-box {
     display: block;
     position: relative;
-    float: none;
+
     width: 87%;
     margin: 1rem 1rem 1rem 1rem;
   }
@@ -1435,15 +1447,11 @@ th {
   .comunidad-nav a {
     font-size: 100%;
   }
-  .home {
-    display: block;
-    position: absolute;
-    float: none;
-  }
+
   .modos {
     display: block;
-    position: absolute;
-    float: none;
+    position: relative;
+
     margin: 0rem 0rem 0rem 1rem;
     width: 90%;
   }
@@ -1473,9 +1481,9 @@ th {
   }
   .menus {
     position: relative;
-    float: none;
     display: block;
     margin: 1rem 1rem 1rem 0rem;
+    width: 100%;
   }
   .logoHome {
     width: 100%;
@@ -1497,7 +1505,6 @@ th {
     width: auto;
   }
   .menu-bar {
-    float: none;
     justify-content: space-evenly;
   }
   .menu-play a {
@@ -1510,7 +1517,7 @@ th {
   }
   .cornerPlay {
     width: 55%;
-    margin: 0rem 0rem 0rem 5rem;
+    margin: 0rem 0rem 0rem 4rem;
     align-items: center;
   }
   .cornerBar {
@@ -1531,13 +1538,14 @@ th {
   /*bloque de texto y videos*/
   .home {
     display: block;
-    position: absolute;
-    float: none;
+    position: relative;
+    width: 99%;
+    margin: 1rem 1rem 1rem 0rem;
   }
   .container-box {
     display: block;
     position: relative;
-    float: none;
+
     margin: 1rem 1rem 1rem 1rem;
     width: 91%;
   }
@@ -1550,37 +1558,31 @@ th {
   .comunidad-nav > a {
     font-size: 100%;
   }
-  .home {
-    display: block;
-    position: absolute;
-    float: none;
-  }
   .modos {
     display: block;
     margin: 1rem 1rem 1rem 1rem;
-    position: absolute;
-    float: none;
-    width: 93%;
+    position: relative;
+    width: 91%;
   }
   .lol-video {
-    margin: 1rem 1rem 2rem 0rem;
-    width: 98%;
+    margin: 1rem 0rem 0rem 0rem;
+    width: 100%;
     height: auto;
   }
 }
 @media only screen and (max-width: 321px) {
   /*no tiene eli*/
-.imgredes,
-#compartir {
-  width: 0.8rem;
-  height: 0.8rem;
-}
-.left p {
-  font-size: 8px;
-}
-.buscador {
-  padding-left: 0.2rem;
-}
+  .imgredes,
+  #compartir {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .left p {
+    font-size: 8px;
+  }
+  .buscador {
+    padding-left: 0.2rem;
+  }
 }
 @media (max-width: 400px) {
   .modal-back h1 {
@@ -1623,9 +1625,9 @@ th {
     font-size: 100%;
     right: 4%;
   }
-  }
+}
 @media only screen and (max-width: 480px) {
-    /*Se agrego 30/08 */
+  /*Se agrego 30/08 */
   .all,
   #orderDifficulty,
   .orderDifficulty,
@@ -1662,17 +1664,17 @@ th {
     display: flex;
     flex-flow: wrap;
   }
-  }
+}
 @media only screen and (max-width: 480px) {
-    /* RESPONSIVE CARDS TOP5 ----------------*/
+  /* RESPONSIVE CARDS TOP5 ----------------*/
   #topchampions {
     display: grid;
     grid-gap: 2rem;
     transition: 0.4s ease-in-out;
     grid-template-columns: repeat(
-        auto-fill,
-        minmax(280px, 1fr)
-      ); /*se agrego hoy*/
+      auto-fill,
+      minmax(280px, 1fr)
+    ); /*se agrego hoy*/
   }
   .card-link {
     width: 100%;
@@ -1708,121 +1710,117 @@ th {
     margin-top: -20px;
   }
   .Textchamp {
-      /*se agrego 30/08*/
+    /*se agrego 30/08*/
     font-size: 20px;
     margin-left: 70px;
   }
   .texto-champ p {
-      /*se agrego 30/08 */
+    /*se agrego 30/08 */
     font-size: 15px;
     max-width: 90%;
     margin: 0 auto;
   }
-  }
+}
 @media only screen and (min-width: 480px) and (max-width: 900px) {
-    .all,
-    #orderDifficulty,
-    .orderDifficulty,
-    #searchInput,
-     #order {
-      font-size: 12pt;
-      text-align: center;
-    }
-    #searchInput {
-      width: 70%;
-    }
-    .buscador,
-    #filtradoCampeones,
-    .orderClass,
-    .orderDifficulty {
-      align-items: center;
-      text-align: center;
-    }
-    .buscadorCampeon {
-      width: 20%;
-    }
-    #filtradoCampeones {
-      width: 30%;
-    }
-    .corner {
-      margin: 2rem auto;
-      max-width: 90vw;
-    }
-    .buscador {
-      display: flex;
-      flex-flow: wrap;
-    }
-    }
+  .all,
+  #orderDifficulty,
+  .orderDifficulty,
+  #searchInput,
+  #order {
+    font-size: 12pt;
+    text-align: center;
+  }
+  #searchInput {
+    width: 70%;
+  }
+  .buscador,
+  #filtradoCampeones,
+  .orderClass,
+  .orderDifficulty {
+    align-items: center;
+    text-align: center;
+  }
+  .buscadorCampeon {
+    width: 20%;
+  }
+  #filtradoCampeones {
+    width: 30%;
+  }
+  .corner {
+    margin: 2rem auto;
+    max-width: 90vw;
+  }
+  .buscador {
+    display: flex;
+    flex-flow: wrap;
+  }
+}
 @media only screen and (min-width: 701px) and (max-width: 767px) {
-      .title-lol {
-        display: block;
-        margin: auto;
-        width: 68%;
-        height: auto;
-      }
-      .menus {
-        width: 100%;
-        position: relative;
-        float: none;
-        display: block;
-        margin: 1rem 0rem 1rem -3rem;
-      }
-      .logoHome {
-        width: 35%;
-        margin: 1rem 1rem -5rem -6rem;
-      }
-      .imghome {
-        width: 26%;
-        top: 40%;
-        margin: -1em 1em 1em 7em;
-      }
-      .menu-bar a {
-        font-size: 171%;
-        align-items: center;
-        line-height: 100%;
-      }
-      .menu-bar {
-        float: none;
-        justify-content: space-evenly;
-      }
-      .menu-play a {
-        font-size: 30px;
-        align-items: center;
-        line-height: 100%;
-      }
-      .menu-play {
-        width: auto;
-      }
-      .cornerPlay {
-        width: 41%;
-        margin: 0rem 0rem 0rem 13rem;
-      }
-      .cornerBar {
-        margin: 1rem 4rem 1rem 6rem;
-        width: 83%;
-      }
-      .container-box {
-        float: none;
-        position: relative;
-      }
-      .home {
-        float: none;
-        position: relative;
-      }
-      .modos {
-        float: none;
-        position: relative;
-      }
-    }
+  .title-lol {
+    display: block;
+    margin: auto;
+    width: 68%;
+    height: auto;
+  }
+  .menus {
+    width: 100%;
+    position: relative;
+
+    display: block;
+    margin: 1rem 0rem 1rem -3rem;
+  }
+  .logoHome {
+    width: 35%;
+    margin: 1rem 1rem -5rem -6rem;
+  }
+  .imghome {
+    width: 26%;
+    top: 40%;
+    margin: -1em 1em 1em 7em;
+  }
+  .menu-bar a {
+    font-size: 171%;
+    align-items: center;
+    line-height: 100%;
+  }
+  .menu-bar {
+    justify-content: space-evenly;
+  }
+  .menu-play a {
+    font-size: 30px;
+    align-items: center;
+    line-height: 100%;
+  }
+  .menu-play {
+    width: auto;
+  }
+  .cornerPlay {
+    width: 41%;
+    margin: 0rem 0rem 0rem 13rem;
+  }
+  .cornerBar {
+    margin: 1rem 4rem 1rem 6rem;
+    width: 83%;
+  }
+  .container-box {
+    position: relative;
+  }
+  .home {
+    position: relative;
+  }
+  .modos {
+    position: relative;
+  }
+}
 @media (max-width: 767px) {
-.menu {
-  display: flex;
-  flex-direction: row;
+  .menu {
+    display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   input {
-  font-size: 0.6875rem;
+    font-size: 0.6875rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1833,7 +1831,7 @@ th {
   .menus {
     width: 100%;
     position: relative;
-    float: none;
+
     display: block;
     margin: 1em 1em 1em 1em;
   }
@@ -1852,7 +1850,6 @@ th {
     line-height: 150%;
   }
   .menu-bar {
-    float: none;
     justify-content: space-evenly;
     width: auto;
   }
@@ -1867,29 +1864,34 @@ th {
   }
   .cornerPlay {
     width: 30%;
-    margin: 1rem 5rem 1rem 14rem;
+    margin: 1rem 5rem 1rem 15rem;
+    position: relative;
   }
   .cornerBar {
     margin: 1rem 0rem 1rem 0rem;
     width: 100%;
   }
   .container-box {
-    float: none;
     position: relative;
+    width: 98%;
   }
   .home {
-    float: none;
     position: relative;
+    margin: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
   }
   .modos {
     display: block;
-    position: absolute;
-    float: none;
-    margin: 61rem 1rem 1rem 3rem;
-    width: auto;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    /* position: relative; */
+    flex-direction: row;
+    flex-flow: wrap;
   }
   .modo-juego h2 {
-    margin: 0rem 0rem 0rem 4rem;
+    margin: 1rem 0rem 1rem 4rem;
   }
   .lol-video {
     margin: 1rem 1rem 1rem -1rem;
@@ -1906,25 +1908,25 @@ th {
 }
 @media only screen and (max-width: 785px) {
   /* RESPONSIVE FOOTER */
-.left p {
-  font-size: 12px;
-}
-.imgredes {
-  width: 1.5rem;
-}
-#compartir {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-#imgriot {
-  width: 70px;
-}
-.boton {
-  /*3/09*/
-  width: 80px;
-  height: 40px;
-  font-size: 0.875rem;
-}
+  .left p {
+    font-size: 12px;
+  }
+  .imgredes {
+    width: 1.5rem;
+  }
+  #compartir {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #imgriot {
+    width: 70px;
+  }
+  .boton {
+    /*3/09*/
+    width: 80px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
 }
 @media (max-width: 900px) {
   .modal-content,
@@ -1932,112 +1934,105 @@ th {
     width: 100%;
     height: auto;
   }
-  }
+}
 @media only screen and (min-width: 901px) and (max-width: 1300px) {
-    .all,
-    #orderDifficulty,
-    .orderDifficulty,
-    #searchInput,
-    #order {
-      font-size: 12pt;
-      text-align: center;
-    }
-    #searchInput {
-      width: 70%;
-    }
-    #searchInput::placeholder {
-      font-size: 12pt;
-    }
-    .buscador,
-    #filtradoCampeones,
-    .orderClass,
-    .orderDifficulty {
-      align-items: center;
-      text-align: center;
-    }
-    .buscadorCampeon {
-      width: 20%;
-    }
-    #filtradoCampeones {
-      width: 45%;
-    }
-    .corner {
-      margin: 2rem auto;
-      max-width: 90vw;
-    }
-    .buscador {
-      display: flex;
-      flex-flow: wrap;
-    }
-    #lupa {
-      height: 20px;
-      width: 20px;
-    }
-    }
-    
+  .all,
+  #orderDifficulty,
+  .orderDifficulty,
+  #searchInput,
+  #order {
+    font-size: 12pt;
+    text-align: center;
+  }
+  #searchInput {
+    width: 70%;
+  }
+  #searchInput::placeholder {
+    font-size: 12pt;
+  }
+  .buscador,
+  #filtradoCampeones,
+  .orderClass,
+  .orderDifficulty {
+    align-items: center;
+    text-align: center;
+  }
+  .buscadorCampeon {
+    width: 20%;
+  }
+  #filtradoCampeones {
+    width: 45%;
+  }
+  .corner {
+    margin: 2rem auto;
+    max-width: 90vw;
+  }
+  .buscador {
+    display: flex;
+    flex-flow: wrap;
+  }
+  #lupa {
+    height: 20px;
+    width: 20px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
-      /*Se agrego 30/08 */
-      /* RESPONSIVE CAMPEONES TOTAL */
-    #container-campeones {
-      display: grid;
-      grid-gap: 1rem;
-      transition: 0.4s ease-in-out;
-      max-width: 90%;
-      margin: auto;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .card-link-Champ {
-      width: 80%;
-      margin: auto;
-    }
-    #fontname {
-        /* se hizo hoy 3/9*/
-      font-size: 12pt;
-    }
-    #fonttitle {
-      font-size: 5pt;
-    }
-    #fontdificultad {
-      font-size: 5pt;
-    }
-    .texto-champ p {
-      width: 90%;
-    }
-    .orders {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-    }
-    
-    input {
-      outline: none;
-    }
-    .card-link-Champ:hover figure {
-      /*Se agrego 30/08 */
-      -webkit-transform: perspective(200px) rotateY(180deg);
-      -ms-transform: perspective(200px) rotateY(180deg);
-      -o-transform: perspective(200px) rotateY(180deg);
-      transform: perspective(200px) rotateY(180deg);
-    }
-    .card-link-Champ figure {
-      margin: 0;
-      position: relative;
-      transition: all ease 0.3s;
-      transform-style: preserve-3d;
-    }
-    .traseraCampeon {
-      overflow: hidden;
-    }
-    }
+  /*Se agrego 30/08 */
+  /* RESPONSIVE CAMPEONES TOTAL */
+  #container-campeones {
+    display: grid;
+    grid-gap: 1rem;
+    transition: 0.4s ease-in-out;
+    max-width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-link-Champ {
+    width: 80%;
+    margin: auto;
+  }
+  #fontname {
+    /* se hizo hoy 3/9*/
+    font-size: 12pt;
+  }
+  #fonttitle {
+    font-size: 5pt;
+  }
+  #fontdificultad {
+    font-size: 5pt;
+  }
+  .texto-champ p {
+    width: 90%;
+  }
+  .orders {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  input {
+    outline: none;
+  }
+  .card-link-Champ:hover figure {
+    /*Se agrego 30/08 */
+    -webkit-transform: perspective(200px) rotateY(180deg);
+    -ms-transform: perspective(200px) rotateY(180deg);
+    -o-transform: perspective(200px) rotateY(180deg);
+    transform: perspective(200px) rotateY(180deg);
+  }
+  .card-link-Champ figure {
+    margin: 0;
+    position: relative;
+    transition: all ease 0.3s;
+    transform-style: preserve-3d;
+  }
+  .traseraCampeon {
+    overflow: hidden;
+  }
+}
 @media (max-width: 910px) {
-.texto-top5 p {
-  max-width: 90%;
+  .texto-top5 p {
+    max-width: 90%;
+  }
 }
-
-}
-
-
-
-
-
-

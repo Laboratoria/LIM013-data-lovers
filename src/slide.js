@@ -1,56 +1,56 @@
 //DOM de slides//
-const slideprev = document.getElementById("prev");
-slideprev.addEventListener("click", () => {
-  plusSlides(-1);
+const slideAnterior = document.getElementById("prev");
+slideAnterior.addEventListener("click", () => {
+  nextSlides(-1);
 });
-const slidenext = document.getElementById("next");
-slidenext.addEventListener("click", () => {
-  plusSlides(1);
+const slideSiguiente = document.getElementById("next");
+slideSiguiente.addEventListener("click", () => {
+  nextSlides(1);
 });
 const slide1 = document.getElementById("dot1");
 slide1.addEventListener("click", () => {
-  currentSlide(1);
+  presentSlide(1);
 });
 
 const slide2 = document.getElementById("dot2");
 slide2.addEventListener("click", () => {
-  currentSlide(2);
+  presentSlide(2);
 });
 
 const slide3 = document.getElementById("dot3");
 slide3.addEventListener("click", () => {
-  currentSlide(3);
+  presentSlide(3);
 });
 
 const slide4 = document.getElementById("dot4");
 slide4.addEventListener("click", () => {
-  currentSlide(4);
+  presentSlide(4);
 });
 
 //slides de modo de juego//
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndice = 1;
+mostradoSlides(slideIndice);
 let num = [];
 
-function plusSlides(num) {
-  showSlides((slideIndex += num));
+function nextSlides(num) {
+  mostradoSlides((slideIndice += num));
 }
-plusSlides(num);
+nextSlides(num);
 
-function currentSlide(num) {
-  showSlides((slideIndex = num));
+function presentSlide(num) {
+  mostradoSlides((slideIndice = num));
 }
-currentSlide(num);
+presentSlide(num);
 
-function showSlides(num) {
-  let i;
+function mostradoSlides(num) {
+  let i = "";
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
   if (num > slides.length) {
-    slideIndex = 1;
+    slideIndice = 1;
   }
   if (num < 1) {
-    slideIndex = slides.length;
+    slideIndice = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -58,6 +58,6 @@ function showSlides(num) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace("active-slide-img", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += "active-slide-img";
+  slides[slideIndice - 1].style.display = "block";
+  dots[slideIndice - 1].className += "active-slide-img";
 }

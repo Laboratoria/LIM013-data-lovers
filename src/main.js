@@ -258,9 +258,7 @@ const buscador = () => {
       <div class="modal-back_Reverse">
         <h1>${campeones.name}</h1>
         <h2>"${campeones.title}"</h2>
-        <p><strong class="strong_Reverse">Lore: </strong> ${
-          campeones.blurb
-        }</p>
+        <p><strong class="strong_Reverse">Lore: </strong> ${campeones.blurb}</p>
       </div>
   
       <h2 class="frontalTextTable_Reverse">Tabla de estadística por rango de nivel:</h2>
