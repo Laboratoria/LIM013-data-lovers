@@ -88,9 +88,12 @@ document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=
 
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.querySelector('.searchButton');
+
 const conditionSearch = ()=>{
-    if(searchByNameandNum(searchInput,data.pokemon).length!==0){
-        showPokDisplay(searchByNameandNum(searchInput,data.pokemon));
+    let text = searchInput.value.toLowerCase();
+    if(searchByNameandNum(text,data.pokemon).length!==0){
+        showPokDisplay(searchByNameandNum(text,data.pokemon));
+        
     }else{
         pokemonDisplay.innerHTML=`
         <section class="warningSearch">
@@ -147,13 +150,15 @@ const showPokDisplay = (dataSelect) => {
     const pokemonArea = document.querySelector('.pokemonArea');
     for (let index = 0; index < btnMorePok.length; index++) {
         btnMorePok[index].addEventListener('click',()=>{
+           
             document.querySelector('.informationDisplay').style.display="block";
             resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
             showInformationPok(informationDisplay,index);
             //funcion que siente un cambio en el tamaño de la pantalla
             window.onresize=()=>{
-                resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
+            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
             }  
+            
         });  
     }
 
@@ -161,7 +166,7 @@ const showPokDisplay = (dataSelect) => {
 
 //funcion para redimensionar contenedor de pokemones y contenedor de información
 const resizeInformation = (a,b,c)=> {
-    if (a.clientWidth<=1025) { 
+    if (a.clientWidth<=800) { 
         b.style.width="0%";
         c.style.width="100%";
     } else {
@@ -254,7 +259,9 @@ const showInformationPok = (display,indexSelect) => {
     //ocultar contenido de la sección de información
     document.querySelector('.closePokSelectButton').addEventListener('click',()=>{
     display.style.display="none";
-    pokemonDisplay.style.width="100%" });
+    pokemonDisplay.style.width="100%";
+
+});
 }
 
 
