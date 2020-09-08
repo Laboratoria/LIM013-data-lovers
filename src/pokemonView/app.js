@@ -4,15 +4,15 @@ google.charts.load("current", { packages: ["table"] });
 google.charts.setOnLoadCallback(drawTableFastAttacks);
 // eslint-disable-next-line no-undef
 google.charts.setOnLoadCallback(drawTableSpecialAttacks);
-
+ 
 const namePokemon = localStorage.getItem("namePokemon");
-
+ 
 let imgPokemon = document.createElement("img");
 document.getElementById("img-pokemon").appendChild(imgPokemon);
-
+ 
 document.getElementById("stats").style.display = "none";
 document.getElementById("abilities").style.display = "none";
-
+ 
 document.getElementById("button-overview").addEventListener("click", () => {
   document.getElementById("stats").style.display = "none";
   document.getElementById("abilities").style.display = "none";
@@ -28,9 +28,9 @@ document.getElementById("button-abilities").addEventListener("click", () => {
   document.getElementById("abilities").style.display = "block";
   document.getElementById("overview").style.display = "none";
 });
-
+ 
 // VISUALIZAR CON ARCHIVO .JSON
-
+ 
 let pokemon = [];
 fetch("../data/pokemon/pokemon.json")
   .then((data) => data.json())
@@ -43,7 +43,7 @@ fetch("../data/pokemon/pokemon.json")
     overview(pokemon);
     typeIcon(pokemon);
   });
-
+ 
 let basicData = (pokemon) => {
   const num = pokemon.num;
   imgPokemon.setAttribute(
@@ -56,7 +56,7 @@ let basicData = (pokemon) => {
   document.getElementById("about").innerHTML = pokemon.about;
   document.getElementById("container").classList.add(pokemon.type[0]);
 };
-
+ 
 let abilities = (pokemon) => {
   document.getElementById("fast-attacks").classList.add(pokemon.type[0]);
   document.getElementById("resistant").classList.add(pokemon.type[0]);
@@ -79,7 +79,7 @@ let abilities = (pokemon) => {
     span.innerHTML = weaknesse;
   });
 };
-
+ 
 let overview = (pokemon) => {
   let evolution = pokemon.evolution;
   if (evolution["next-evolution"]) {
@@ -124,11 +124,11 @@ let overview = (pokemon) => {
       }
     });
   }
-
+ 
   document.getElementById("height").innerHTML = pokemon.size.weight;
   document.getElementById("weight").innerHTML = pokemon.size.height;
 };
-
+ 
 function seeEvolution(num) {
   let imgPokemonEv = document.createElement("img");
   document.getElementById("image-evolution").appendChild(imgPokemonEv);
@@ -138,61 +138,63 @@ function seeEvolution(num) {
   );
   imgPokemonEv.setAttribute("class", "pokemon-evolucion");
 }
-
+ 
 // Type-icon + img
 let typeIcon = (pokemon) => {
   let type = pokemon.type;
   type.forEach((type) => {
     let poke = type;
-
+ 
     let imgType = document.createElement("img");
     document.getElementById("img-type").appendChild(imgType);
     imgType.setAttribute("src", "../type-icon/" + poke + ".png");
     imgType.setAttribute("class", "type-icon");
   });
 };
-
+ 
 function drawTableFastAttacks() {
   let fastAttacks = pokemon["quick-move"];
   let keysAttacks = Object.keys(fastAttacks[0]);
-
+ 
   // eslint-disable-next-line no-undef
   let data = new google.visualization.DataTable();
-
+ 
   keysAttacks.forEach((key) => {
     data.addColumn("string", key);
   });
-
+ 
   fastAttacks.forEach((attack) => {
     let values = Object.values(attack);
     data.addRows([[values[0], values[1], values[2], values[3], values[4]]]);
   });
-
+ 
   // eslint-disable-next-line no-undef
   var table = new google.visualization.Table(
     document.getElementById("table-fast-attacks")
   );
   table.draw(data, { showRowNumber: true, width: "100%", height: "100%" });
 }
-
+ 
 function drawTableSpecialAttacks() {
   let specialAttacks = pokemon["special-attack"];
   let keysSpecialAttacks = Object.keys(specialAttacks[0]);
   // eslint-disable-next-line no-undef
   let data = new google.visualization.DataTable();
-
+ 
   keysSpecialAttacks.forEach((key) => {
     data.addColumn("string", key);
   });
-
+ 
   specialAttacks.forEach((specialattack) => {
     let values = Object.values(specialattack);
     data.addRows([[values[0], values[1], values[2], values[3], values[4]]]);
   });
-
+ 
   // eslint-disable-next-line no-undef
   var table = new google.visualization.Table(
     document.getElementById("table-special-attacks")
   );
   table.draw(data, { showRowNumber: true, width: "100%", height: "100%" });
 }
+ 
+
