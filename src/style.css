@@ -1133,6 +1133,16 @@ input[type="checkbox"]:checked + label {
     text-align: center;
     color: #88D9E5;
 }
+.warningSearch{
+    display: flex;
+    flex-direction: row;
+    height: 12%;
+}
+.warningSearch p{
+    margin-bottom: auto;
+    margin-top: auto;
+    color: whitesmoke;
+}
 
 /********************flex contenedor de evoluciones**************************/
 /*.evolutionsPok{
