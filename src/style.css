@@ -402,7 +402,7 @@ input[type="checkbox"]:checked + label {
     visibility: visible;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptext::cafter {
     content: "";
     position: absolute;
     top: 100%;
@@ -1144,6 +1144,16 @@ input[type="checkbox"]:checked + label {
     font-size: 16px;
     text-align: center;
     color: #88D9E5;
+}
+.warningSearch{
+    display: flex;
+    flex-direction: row;
+    height: 12%;
+}
+.warningSearch p{
+    margin-bottom: auto;
+    margin-top: auto;
+    color: whitesmoke;
 }
 
 /********************flex contenedor de evoluciones**************************/
