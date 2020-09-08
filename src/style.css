@@ -126,20 +126,25 @@ main p{
 text-align: center;
 font-family: 'Marcellus SC', serif;
 font-size: 25px;
-color: #07dffc;
+color: #DBB74C;
 }
 h1{
 text-align: center;
 font-family: 'Marcellus SC', serif;
 /*font-family:'Bangers', cursive;*/
 font-size: 90px;
-color: #07dffc;
+color: #EFB810;;
 text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
 }
 label{
 font-family: 'Marcellus SC', serif;
 color: #07dffc;	
 font-size: 16px;
+}
+.order{
+	color: #07dffc;	
+	background-color:transparent;
+	border: 2px solid #07dffc;
 }
 .champion{
 	background-color: none;
@@ -153,7 +158,7 @@ font-size: 16px;
 	background-color:transparent;
 	font-family: 'Bangers', cursive;
 	text-align: center;
-	font-size: 22px;
+	font-size: 25px;
 	width: 100px;
 	height: 25px;
 	text-decoration: none;
@@ -177,6 +182,13 @@ select {
 	height: 25px;
 	margin: 0% 0% 0% 1%;
 }
+.form-groups input{
+	background-color:transparent;
+	border: 2px solid #07dffc;
+}
+.form-groups ::placeholder {
+	color: #997406d3;
+}
 .form-groups-rol{
 	display:inline-flex;
 	padding: 10px 0px;
@@ -192,76 +204,101 @@ select {
 
 #imgChampions{
 	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	grid-gap: 1rem;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 20px;
 	object-fit: cover;
+	padding:2%;
 }
-.cardBox{
-	perspective: 1000px;
-}
-/*.frontCard{
 
-	transform: rotateX(0deg)
-}*/
 .bothFace{
 	position: relative;
-	width: 100%;
-	height: 100%;
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-	margin: 5%;
+	
 }
 .cardBox:hover .bothFace{ 
 	transform: rotateY(180deg);
+	transition: all ease 0.6s;
+	
 }
 /*.frontCard:hover {
 	transform: perspective(500px) rotateY(180deg);
 	transition: all ease 0.8s;
 }*/
+
 .personalImage{
-	width: 100%;
-	height: 100%;
-	border: 2px solid #e9be23;
+	width: 220px;
+	height: 250px;
 	padding: 0%;
+	border: 2px solid #DBB74C;
+	position: absolute;
 }
+
 .nameDiv{
 	background-color: rgb(6, 28, 37);
-	width: 100%;
+	border:2px solid rgb(6, 28, 37);
+	width: 220px;
 	height: fit-content;
-	padding: 5px 0px;
 	/*position: absolute;*/
 	text-align: center;
 	float: none ;
+	
 }
-
+.cardBox:hover .nameDiv{
+transform: rotateY(180deg);
+}
 /*.frontCard:hover .personalName{
 	transform: rotateY(180deg);
 
 }*/
-.frontCard, .backCard{
+
+
+/*aquii*/
+/*.frontCard, .backCard{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
+	
+	
 }
   
 .backCard {
 	backface-visibility: visible;
 	transform: rotateX(180deg);
-	width: 100%;
-	height: 100%;
-}
+	
+}*/
 
 .backCardInfo{
-	background-color: rgb(45, 226, 226);
 	transform: rotateY(180deg);
-	width: 100%;
-	height: 100%;
-  }
-.apodo{
-	background-color: rgb(6, 28, 37);
-	transform: rotateY(180deg);
+	backface-visibility: visible;
+	width: 220px;
+	height: 250px;
+	border: 2px solid rgb(63, 189, 194);
+	box-shadow: inset 0 0 10px #25b9cc;
+  	background: rgba(6, 28, 37, 0.78);;
+	transition: all ease 0.5s;
+}
+.backCardInfo p{
+font-family:'Marcellus SC', serif;
+font-size: 16px;
+}
+.backCardInfo .apodo{
+	font-family:'Marcellus SC', serif;
+	font-size: 17px;
+	text-shadow:0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
+	}
+.personalImage2{
+	width: 40%;
+	height: 40%;
+	padding:0%;
+	margin:5%;
+	border: 2px solid #DBB74C;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #c59c21;
+	display: inline-block;
+	align-items: center;
 }
 
 .rolIcon{
@@ -284,8 +321,6 @@ display:inline-flex;
 
 .imagen-categoria3{
 	display: block;
-
-
 }
 footer {
 	background: #000000;
@@ -332,5 +367,6 @@ footer p{
 		float:right;
 	
 	}
+
 }
 
