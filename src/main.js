@@ -47,29 +47,23 @@ const cardStructure=(listData)=>{
         /* Back Card*/
         const backCard = document.createElement('div');
         bothFace.appendChild(backCard);
-        backCard.className = 'back-card';
-
-        /*const backCardName=document.createElement('h3');
-        backCardName.innerHTML = `' ${champ.id} '`;
-        backCard.appendChild(backCardName);*/
-        
+        backCard.className = 'back-card'
+    
+        const backCardInfo=document.createElement("div");
+        backCardInfo.className="backCardInfo";
+        backCard.appendChild(backCardInfo);
 
         const backCardTitle=document.createElement('p');
         backCardTitle.innerHTML = `' ${champ.title} '`;
         backCardTitle.className="apodo";
-        backCard.appendChild(backCardTitle);
+        backCardInfo.appendChild(backCardTitle);
 
-        const backCardInfo=document.createElement("div");
-        backCardInfo.className="backCardInfo";
-        /*backCardInfo.innerHTML=`Info`;*/
-        backCard.appendChild(backCardInfo);
         const infoChamp=champ.info;
             for (var [key, value] of Object.entries(infoChamp)){
                 const infoChampDiv=document.createElement("p");
                 infoChampDiv.innerHTML=` ${key}:${value}`;
                 backCardInfo.appendChild(infoChampDiv);
             }
-
     });
 };
 /* -------Efecto hover ---------- */
@@ -141,13 +135,6 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("statsRolPage").style.display="block";
 });
 /* ------Estadísticas por rol-------- */
-const rolStructure=(listRol)=>{
-    const cardRol=document.querySelector(".infoCard");
-    cardRol.innerHTML="";
-    const rolTittle=document.createElement("h1");
-    rolTittle.innerHTML=`${listRol.name}`
-    cardRol.appendChild(rolTittle);
-}
 const rolIcon=document.querySelectorAll(".imagen-categoria3 a");
 console.log(rolIcon);
 rolIcon.forEach((el)=>{
@@ -160,7 +147,6 @@ rolIcon.forEach((el)=>{
         rolTittle.innerHTML=`${clickRol}`
         cardRol.appendChild(rolTittle);
         const filterRol = filterByRol(allArray, clickRol);
-        console.log(filterRol);
 
         const averageInfoDiv=document.createElement("div");
         averageInfoDiv.classList="averageInfoDiv";
@@ -188,44 +174,11 @@ rolIcon.forEach((el)=>{
         difficultyAvgDiv.classList="difficultyAvgDiv";
         const difficultyAvg = averageInfo('difficulty', filterRol);
         difficultyAvgDiv.innerHTML=`Difficulty: ${difficultyAvg.toFixed(1)}`;
-        averageInfoDiv.appendChild(difficultyAvgDiv);
-        /*const champType=filterByRol(allArray,clickRol);*/
-        
+        averageInfoDiv.appendChild(difficultyAvgDiv);  
     });
 });
-const mages = filterByRol(allArray, 'Mage');
-const attackMages = averageInfo('attack', mages);
-const defenseMages = averageInfo('defense', mages);
-const magicMages = averageInfo('magic', mages);
-const difficultyMages = averageInfo('difficulty', mages);
-
-const fighter = filterByRol(allArray, 'Mage');
-const attackFighter = averageInfo('attack', fighter);
-const defenseFighter = averageInfo('defense',fighter);
-const magicFighter = averageInfo('magic', fighter);
-const difficultyFighter = averageInfo('difficulty', fighter);
 
 
 
-/*const getAvgOnStats = (property, championList) => championList.reduce(
-    (acc, champion) => acc + champion.stats[property], 0,
-) / championList.length;
-
-console.log(getAvgOnStats(`${allArray.info.attack}`,allArray));*/
-    /*const arrayInfo=[];
-    console.log(arrayInfo);
-    const allArray=infoChamp.push(arrayInfo);
-    console.log(allArray);/*
-/*Object.entries(infoChamp) 
-console.log(Object.entries(infoChamp))})*/
-/*for (var [key, value] of Object.entries(infoChamp)) {*/
-    /*console.log(key + ' ' + value);*/ // "a 5", "b 7", "c 9"*
-   /* if(key==="attack"){
-    const newArrayValue=[];
-    console.log(newArrayValue);
-    
-    var totalValue= newArrayValue.push(value);
-    console.log(totalValue);} */
-    
 
 

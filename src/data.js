@@ -19,12 +19,6 @@ export const order=(championList,term)=>{
     console.log(sort);
         return sort
     }
-/*export const orderZa=(championList,term)=>{
-    const sort=championList.sort(()=>term==="ZA"?-1:1)
-    console.log(sort);
-    return sort
-        }*/
-/*export let averageInfo = (championList,value) =>championList.reduce((a, b) => a + b[value]) / championList.length;*/
 
 export const averageInfo = (property, championList) => championList.reduce(
     (acc, champion) => acc + champion.info[property], 0,
