@@ -1,5 +1,7 @@
-import { orderData } from './data.js';
 import data from './data/pokemon/pokemon.js';
+import { orderData,filterDataType } from './data.js';
+
+//MOSTRAR LA DATA
 let dataPokemon = data.pokemon;
 
 const dataCarte = (dataPokemon) => {
@@ -51,11 +53,12 @@ const dataCarte = (dataPokemon) => {
 		labelTipo.innerHTML = tipo;
 	}
 };
+window.onload = dataCarte(dataPokemon);
+// FIN MOSTRAR LA DATA
 
-window.onload = dataCarte(data.pokemon);
-
+//ORDENAR LA DATA
 const ordenarSelectBox = document.getElementById('ordenar');
-/* ordenarSelectBox.addEventListener('chance',() => { constordenarSelectBox.value; */
+
 ordenarSelectBox.addEventListener('change', function (e) {
 	const valor = e.target.value;
 	console.log(valor);
@@ -64,3 +67,15 @@ ordenarSelectBox.addEventListener('change', function (e) {
 	document.getElementById('dataPoke').innerHTML = '';
 	dataCarte(dataPokemon);
 });
+//FIN DE ORDENAR LA DATA
+
+//FILTRANDO LA DATA
+
+const selectFilter = document.querySelectorAll('seleccionar');
+
+selectFilter[0].addEventListener('change', () => {
+	const valueSelect = selectFilter[0].value;
+
+	dataCarte(filterDataType(data.pokemon, valueSelect));
+});
+  

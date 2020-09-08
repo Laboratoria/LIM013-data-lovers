@@ -2487,7 +2487,7 @@ export default {
 		},
 		{
 			num: '029',
-			name: 'nidoran ♀ (female)',
+			name: 'nidoran ♀',
 			generation: {
 				num: 'generation i',
 				name: 'kanto',
@@ -2754,7 +2754,7 @@ export default {
 		},
 		{
 			num: '032',
-			name: 'nidoran ♂ (male)',
+			name: 'nidoran ♂',
 			generation: {
 				num: 'generation i',
 				name: 'kanto',
