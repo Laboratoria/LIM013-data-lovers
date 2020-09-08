@@ -9,6 +9,9 @@
     #table-special-attacks {
         height: 18%;
     }
+    #cp-candy h5 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 666px) {
@@ -43,5 +46,15 @@
     #num {
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+    #height-weight {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    #cp-candy h5 {
+        font-size: 12px;
     }
 }
