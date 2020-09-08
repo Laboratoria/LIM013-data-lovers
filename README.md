@@ -30,6 +30,7 @@ El objetivo del proyecto es facilitar al usuario la ejecucion del filtrado de po
 De esta forma tener una mejor interactividad entre los usuarios y nuestra aplicacion ya que nuestra aplicacion tambien es responsive design.
 
 Antes de plantearnos una solución fue necesario hacer una investigación con usuarios mediante entrevistas y/o encuestas elaboradas con el objetivo de conocer sus preferencias.
+
 [ ] [Investigación con usuarios / entrevistas.](https://docs.google.com/forms/d/18i1QWx7-gARlxvGW0XuStDgD-ANs4kPQA8Gr95P7Z5A/edit)
 
 * ¿Quiénes son los principales usuarios de producto?
