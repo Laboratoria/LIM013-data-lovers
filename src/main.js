@@ -389,8 +389,15 @@ const extractTypePok = (dataType) => {
     })}
 
 
-//**************Egda****************
 
+//**************Egda****************
+/*************Intro***************/
+document.getElementById("enterBtn").onclick = function() { 
+  
+    document.getElementById("landingPage").style.display = "none"; 
+    document.getElementById("container").style.display = "block";
+
+} 
 
 
 
