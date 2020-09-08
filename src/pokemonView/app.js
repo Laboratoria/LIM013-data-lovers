@@ -42,6 +42,7 @@ fetch("../data/pokemon/pokemon.json")
         abilities(pokemon);
         overview(pokemon);
         typeIcon(pokemon);
+        getPokemon(pokemon)
     });
 
 let basicData = (pokemon) => {
@@ -203,3 +204,48 @@ function drawTableSpecialAttacks() {
     );
     table.draw(data, { showRowNumber: true, width: "100%", height: "100%" });
 }
+
+
+let getPokemon=(pokemon) =>{
+  let pokeNUm= pokemon;
+  let stats= pokeNUm.stats;
+  let hp= stats["max-cp"];
+  hp= Object.values(hp);
+  console.log(hp);
+  let atk= stats["base-attack"];
+  atk= Object.values(atk);
+  let def= stats["base-defense"];
+  def=Object.values(def);
+  let stam=stats["base-stamina"];
+  stam=Object.values(stam);
+  
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+ 
+function drawBasic() {
+ 
+      var data = google.visualization.arrayToDataTable([
+    
+        ['Stats', 'maximo',],
+        ['hp', hp],
+        ['atk', atk],
+        ['def', def],
+        ['stam', stam],
+        
+      ]);
+ 
+      var options = {
+        title: 'Stats',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'maximo',
+          minValue: 0
+        },
+        
+      };
+ 
+      var chart = new google.visualization.BarChart(document.getElementById('stats'));
+ 
+      chart.draw(data, options);
+    }
+  }
