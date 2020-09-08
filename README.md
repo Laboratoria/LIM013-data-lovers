@@ -4,7 +4,7 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [3. Objetivos de aprendizaje](#3'objetivos'de'aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
@@ -16,60 +16,165 @@
 
 ## 1. Preámbulo
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+Pokemon Go hace uso de la aplicación realidad aumentada de los teléfonos móviles para mostrar a los Pokémon en nuestro mundo, utilizando para ello nuestra propia localización y funciones de GPS , como si de Google Maps se tratase.
+La aplicación de por sí contiene todo lo necesario para llevar a cabo nuestra aventura, funcionando de esta forma como Pokédex, Mochila, Equipo, entre otros tantos escenarios típicos de los juegos clásicos, así como nuevos, tales como el rádar de localización de especies cercanas.
+Asimismo, para poder hacer uso de la misma, será necesario salir a la calle, moviéndose por nuestra zona para encontrar o bien Pokémon salvajes que podremos capturar por un nuevo método, así como encontrar las Poképaradas, zonas especiales que nos darán objetos de todo tipo, incluso huevos.
 
 ## 2. Resumen del proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+En Data Lovers se desarrollo una pagina Web titulada PokeInfo basada en las necesidades que mostraron de forma porcentual nuestros usuarios encuestados.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+### Definición del producto [UX Research]
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+El objetivo del proyecto es facilitar al usuario la ejecucion del filtrado de pokemones por tipo,ordenar los pokemones de forma ascendente,descendente y ordenar de forma numerica,asi mismo mostrar toda la variedad de pokemones que tenemos en la Data.
+De esta forma tener una mejor interactividad entre los usuarios y nuestra aplicacion ya que nuestra aplicacion tambien es responsive design.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+Antes de plantearnos una solución fue necesario hacer una investigación con usuarios mediante entrevistas y/o encuestas elaboradas con el objetivo de conocer sus preferencias.
+[ ] [Investigación con usuarios / entrevistas.](https://docs.google.com/forms/d/18i1QWx7-gARlxvGW0XuStDgD-ANs4kPQA8Gr95P7Z5A/edit)
 
-Estos son datos que te proponemos:
+* ¿Quiénes son los principales usuarios de producto?
+ - Jugadores Principiantes(los que recien esta empezando a jugar Pokémon)
+ - Jugadores con experiencia (Los Maestros pokémon)
+* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+- Facilitarles la informacion(nombre,numero,tipos, entre otros), oportuna  del pokémon que solicitan.
+- Obtener informacion relevante para escoger un pokémon mediante su PC, vital para saber que un pokémon es mas fuerte que otro pokémon.
+* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+Los Pokémon tienen características únicas que determinara las decisiones que toma el usuario a continuación sus datos:
+- Orden de numeracion donde se hubica el pokémon.
+- Nombre del pokémon.
+- Tipo de especie al que pertenece el pokémon.
+- stats: base de ataque,defensa, salud, max CP(combat points) y max HP (health points).
+* ¿Cuándo utilizan o utilizarían el producto?
+Cuando lo requiera y/o necesite el usuario la aplicacion se adapta tanto en escritorio como en movil.
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+* [Definicion de Usuario]
+Sexo: Varones - Mujeres 
+Edad: Mayores de 20 años
+Público objetivo: jugadores vigentes o ex jugadores, de diferente nivel, de Pokémon GO
+Necesidad primaria: Qué y cuales son los mejores Pokemones para atrapar y ganar en  las batallas.
+Necesidad secundaria: información adicional como datos y estadisticas de Pokémon GO
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+### Historias de usuario
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+#### Historia 1:
+Yo, como jugador profesional de Pokemon Go
+quiero visualizar la lista completa de pokemon 
+para conocer a cada pokemon de Pokemon Go
+
+Criterios de Aceptación:
+1. El usuario puede ingresar a la página Pokeinfo.
+2. El usuario puede visualizar la lista de pokemon.
+3. El usuario puede manipular la lista (filtro/orden).
+
+Definición de término:
+1. La interfaz tiene una tabla/lista de todos los pokemon Go.
+2. La interfaz es responsive (mobile-desktop) utilizando flexbox.
+3. El diseño de la interfaz cumple con la guía de estilos establecida.
+4. El código tiene, y pasa, los test unitarios en Jest y Eslint.
+5. El código se desarrolla con vanilla JS y no hace uso de this.
+6. El código está en  GitHub y será desplegado usando GitHub Pages.
+
+#### Historia 2:
+Yo, como jugador profesional de Pokemon Go
+quiero filtrar la lista de pokemon por tipo ("ice")
+para elegir al mejor pokemon para cada batalla
+
+Criterios de Aceptación:
+1. El usuario puede visualizar los tipos de pokemon.
+2. El usuario puede seleccionar el tipo de pokemon.
+3. El usuario puede visualizar los pokemon por tipo.
+
+Definición de término:
+1. La interfaz tiene una lista despegable de los pokemon por tipo.
+2. La interfaz es responsive (mobile-desktop) utilizando flexbox.
+3. El diseño de la interfaz cumple con la guía de estilos establecida.
+4. El código tiene, y pasa, los test unitarios en Jest y Eslint.
+5. El código se desarrolla con vanilla JS y no hace uso de this.
+6. El código está en  GitHub y será desplegado usando GitHub Pages.
+
+#### Historia 3:
+Yo, como jugador profesional de Pokemon Go
+quiero ordenar la lista de pokemon (A-Z/(Z-A)
+para encontrar el pokemon mucho más rápido
+
+Criterios de Aceptación:
+1. El usuario puede visualizar la opción de ver la lista alfabética.
+2. El usuario puede seleccionar la opción de ver lista alfabética.
+3. El usuario puede visualizar los pokemon en orden alfabético.
+
+Definición de término:
+1. La interfaz tiene una lista despegable de los pokemon por tipo.
+2. La interfaz es responsive (mobile-desktop) utilizando flexbox.
+3. El diseño de la interfaz cumple con la guía de estilos establecida.
+4. El código tiene, y pasa, los test unitarios en Jest y Eslint.
+5. El código se desarrolla con vanilla JS y no hace uso de this.
+6. El código está en  GitHub y será desplegado usando GitHub Pages.
+
+#### Historia 4:
+Yo, como jugador profesional de Pokemon Go
+quiero encontrar el pokemon por nombre ("abra")
+para ubicar más rápido un pokemon en particular
+
+Criterios de Aceptación:
+1. El usuario puede visualizar la barra de búsqueda.
+2. El usuario puede ingresar el nombre de pokemon.
+3. El usuario puede visualizar el pokemon ingresado.
+
+Definición de término:
+1. La interfaz tiene una barra de búsqueda donde ingresar el nombre.
+2. La interfaz es responsive (mobile-desktop) utilizando flexbox.
+3. El diseño de la interfaz cumple con la guía de estilos establecida.
+4. El código tiene, y pasa, los test unitarios en Jest y Eslint.
+5. El código se desarrolla con vanilla JS y no hace uso de this.
+6. El código está en  GitHub y será desplegado usando GitHub Pages.
+
+#### Historia 5:
+Yo, como jugador profesional de Pokemon Go
+quiero calcular qué tan fuerte es un pokemon (PC)
+para utilizar al pokemon más fuerte para la batalla
+
+Criterios de Aceptación:
+1. El usuario puede visualizar toda la lista de pokemon 
+2. El usuario puede seleccionar un pokemon de interés
+3. El usuario puede visualizar los PC de aquel pokemon 
+
+Definición de término:
+1. La interfaz tiene una tabla con los datos de puntos de combate.
+2. La interfaz es responsive (mobile-desktop) utilizando flexbox.
+3. El diseño de la interfaz cumple con la guía de estilos establecida
+4. El código tiene, y pasa, los test unitarios en Jest y Eslint.
+5. El código se desarrolla con vanilla JS y no hace uso de this.
+6. El código está en  GitHub y será desplegado usando GitHub Pages.
+
+### Diseño de la Interfaz de Usuario [UX Design]
+
+#### Prototipo de baja fidelidad
+
+Durante nuestro trabajo hemos hecho e iterado bocetos (_sketches_) de la
+solución usando papel y lápiz. 
+
+[ ] [Prototipo de baja fidelidad.](https://drive.google.com/file/d/1Q955IZuBogATv_gAyg0OFS0KIpr5swPD/view)
+
+#### Prototipo de alta fidelidad
+
+El siguiente paso ha sido diseñar la Interfaz de Usuario utilizando la herramienta 
+de diseño visual Figma. El diseño representa el _ideal_ de la solución, siguiendo
+los fundamentos de _visual design_.
+
+[ ] [Prototipo de alta fidelidad-desktop.](https://www.figma.com/file/EmiFCoS4ulGkvGH0oVXlhz/LIM013-data-lovers(desktop))
+[ ] [Prototipo de alta fidelidad-mobile.](https://www.figma.com/file/D0hcJcTRFtnejKg6PMAHOS/LIM013-data-lovers(mobile))
+
+#### Testeos de usabilidad
+
+Durante el proyecto hemos hecho _tests_ de usabilidad y hemos identificado los siguientes problemas 
+de usabilidad y gracias al feedback recibido hemos podido mejorar nuestra propuesta final.
+
+* [Fundamentos de diseño visual-color]
+Usar una paleta de colores acorde a los colores e imagen del juego Pokemon Go.
+
+* [Fundamentos de diseño visual-jerarquía]
+Destacar la información más relevante al mostrar la tabla-lista de pokemon en la pantalla principal.
+
 
 ## 3. Objetivos de aprendizaje
 
