@@ -2,14 +2,25 @@
 <html>
   <link rel="shortcut icon" type="image/x-icon" href="images/peicon.png">
   <head>
-    <meta charset="utf-8">
     <title>POKÉDEX</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 1025px)" href="smallResolution.css" />
     <script src="https://use.fontawesome.com/972b224447.js"></script>
   </head>
   <body>
-    <section class="container">
+    <section class="landingPage" id="landingPage">
+        <section class="intro">
+            <section class="introLogo">
+            <h1>P O K É D E X</h1>
+            </section>
+        </section>
+        <section class="enterApp">
+            <button type="button" id="enterBtn" class="enterButton">| Enter |</button>
+        </section> 
+    </section>
+    <section class="container" id="container">
       <header class="header">
       <!-- Navigation bar -->
         <section class="topnav">

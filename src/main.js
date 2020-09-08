@@ -105,6 +105,24 @@ const conditionSearch = ()=>{
 searchButton.addEventListener('click',()=>{conditionSearch();})
 searchInput.addEventListener('keyup',()=>{conditionSearch();})
 
+// Buscar ecribiendo el nombre o número de pokémon
+
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.querySelector('.searchButton');
+const conditionSearch = ()=>{
+    if(searchByNameandNum(searchInput,data.pokemon).length!==0){
+        showPokDisplay(searchByNameandNum(searchInput,data.pokemon));
+    }else{
+        pokemonDisplay.innerHTML=`
+        <section class="warningSearch">
+        <section><img class="imgPokEv" src="images/warning.png"></section>
+        <p> No matches found </p>
+        </section>`
+    }
+}
+searchButton.addEventListener('click',()=>{conditionSearch();})
+searchInput.addEventListener('keyup',()=>{conditionSearch();})
+
 
 //crear dinamicamente elemntos section y asignarle imagen
 //función que recibe un array y lo  en el display de pokemones
@@ -396,9 +414,15 @@ const extractTypePok = (dataType) => {
     })}
 
 
+
 //**************Egda****************
+/*************Intro***************/
+document.getElementById("enterBtn").onclick = function() { 
+  
+    document.getElementById("landingPage").style.display = "none"; 
+    document.getElementById("container").style.display = "block";
 
-
+} 
 
 
 
