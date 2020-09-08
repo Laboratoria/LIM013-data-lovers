@@ -41,19 +41,19 @@ Antes de plantearnos una solución fue necesario hacer una investigación con us
 - Necesidad secundaria: información adicional como datos y estadisticas de Pokémon GO
 
 [Primeros pasos]
-* ¿Quiénes son los principales usuarios de producto?
+1. ¿Quiénes son los principales usuarios de producto?
  - Jugadores Principiantes(los que recien esta empezando a jugar Pokémon)
  - Jugadores con experiencia (Los Maestros pokémon)
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+2. ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 - Facilitarles la informacion(nombre,numero,tipos, entre otros), oportuna  del pokémon que solicitan.
 - Obtener informacion relevante para escoger un pokémon mediante su PC, vital para saber que un pokémon es mas fuerte que otro pokémon.
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 Los Pokémon tienen características únicas que determinara las decisiones que toma el usuario a continuación sus datos:
 - Orden de numeracion donde se hubica el pokémon.
 - Nombre del pokémon.
 - Tipo de especie al que pertenece el pokémon.
 - stats: base de ataque,defensa, salud, max CP(combat points) y max HP (health points).
-* ¿Cuándo utilizan o utilizarían el producto?
+4. ¿Cuándo utilizan o utilizarían el producto?
 Cuando lo requiera y/o necesite el usuario la aplicacion se adapta tanto en escritorio como en movil.
 
 [Entrevistas]
@@ -167,6 +167,7 @@ de diseño visual Figma. El diseño representa el _ideal_ de la solución, sigui
 los fundamentos de _visual design_.
 
 [ ] [Prototipo de alta fidelidad-desktop.](https://www.figma.com/file/EmiFCoS4ulGkvGH0oVXlhz/LIM013-data-lovers(desktop))
+
 [ ] [Prototipo de alta fidelidad-mobile.](https://www.figma.com/file/D0hcJcTRFtnejKg6PMAHOS/LIM013-data-lovers(mobile))
 
 #### Testeos de usabilidad
