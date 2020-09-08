@@ -1,102 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="responsive.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
- 
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
     <!--Header containing logo, title and navigation menu-->
     <div id="container">
-      <header id="header">
-        <div id="logo">
-          <a href="../index.html"
-            ><img
-              id="image-logo"
-              src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png"
-              width="50px"
-          /></a>
-          <h1 id="pokedex">POKEDEX</h1>
-        </div>
-      </header>
-      <!--End of header-->
-      <div id="content">
-        <div id="data-pokemon">
-          <div id="img-pokemon">
-            <img id="shine" src="../type-icon/shine.gif" />
-          </div>
-          <div id="text-info">
-            <p id="num"></p>
-            <p id="name"></p>
-            <p id="about"></p>
-          </div>
-        </div>
-        <div id="overview-stat-abilitie">
-          <div id="menu">
-            <h3 id="button-overview">Overview</h3>
-            <h3 id="buttton-stats">Stats</h3>
-            <h3 id="button-abilities">Abilities</h3>
-          </div>
-          <div class="content-details">
-            <div id="overview">
-              <div id="height-weight">
-                <div id="height-weight-title">
-                  <h3 class="white">Weight</h3>
-                  
-                  <h3 class="white">Height</h3>
+        <header id="header">
+            <div id="logo">
+                <a href="../index.html"><img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" /></a>
+                <h1 id="pokedex">POKEDEX</h1>
+            </div>
+        </header>
+        <!--End of header-->
+        <div id="content">
+            <div id="data-pokemon">
+                <div id="img-pokemon">
+                    <img id="shine" src="../type-icon/shine.gif" />
                 </div>
-                <p id="height" class="white"></p>
-                <div class="verticalLine"></div>
-                <div id= "img-type" ></div>
-               
-                <div class="verticalLine"></div>
-                <p id="weight" class="white">Weight</p>
-                <div id="title-evolution" >
-                  <h3 class="white" >Evolution</h3>
+                <div id="text-info">
+                    <p id="num"></p>
+                    <p id="name"></p>
+                    <p id="about"></p>
                 </div>
-                <div id="image-evolution"></div>
-              </div>
             </div>
-            <div id="stats">
-              <p class="white">TEXTO DE PRUEBA PARA STATS</p>
+            <div id="overview-stat-abilitie">
+                <div id="menu">
+                    <h3 id="button-overview">Overview</h3>
+                    <h3 id="buttton-stats">Stats</h3>
+                    <h3 id="button-abilities">Abilities</h3>
+                </div>
+                <div class="content-details">
+                    <div id="overview">
+                        <div id="height-weight">
+                            <div id="height" class="white">
+                                <h5 class="white">Height</h5>
+                            </div>
+                            <div class="verticalLine"></div>
+                            <div id="img-type">
+                                <h5 class="white">Type</h5>
+                            </div>
+                            <div class="verticalLine"></div>
+                            <div id="weight" class="white">
+                                <h5 class="white">Weight</h5>
+                            </div>
+                        </div>
+                        <div id="cp-candy">
+                            <div id="cp" class="white">
+                                <h5 class="white">Maximum CP</h5>
+                            </div>
+                            <div id="candy" class="white">
+                                <h5 class="white">Buddy candy distance</h5>
+                            </div>
+
+                        </div>
+
+                        <div id="title-evolution">
+                            <h3 class="white">Evolution</h3>
+                            <div id="image-evolution"></div>
+                        </div>
+                    </div>
+                    <div id="stats">
+                        <p class="white">TEXTO DE PRUEBA PARA STATS</p>
+                    </div>
+                    <div id="abilities">
+                        <h3 id="fast-attacks">FAST ATTACKS</h3>
+                        <div id="table-fast-attacks"></div>
+                        <h3 id="resistant">RESISTANT</h3>
+                        <p id="span-resistant"></p>
+                        <h3 id="weaknesses">WEAKNESSES</h3>
+                        <p id="span-weaknesses"></p>
+                        <h3 id="special-attacks">SPECIAL ATTACK</h3>
+                        <div id="table-special-attacks"></div>
+                    </div>
+                </div>
             </div>
-            <div id="abilities">
-              <h3 id="fast-attacks">FAST ATTACKS</h3>
-              <div id="table-fast-attacks"></div>
-              <h3 id="resistant">RESISTANT</h3>
-              <p id="span-resistant"></p>
-              <h3 id="weaknesses">WEAKNESSES</h3>
-              <p id="span-weaknesses"></p>
-              <h3 id="special-attacks">SPECIAL ATTACK</h3>
-              <div id="table-special-attacks"></div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="app.js" type="module"></script>
-    <script
-      src="https://kit.fontawesome.com/0451b6060d.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://kit.fontawesome.com/0451b6060d.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
