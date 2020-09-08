@@ -35,7 +35,7 @@ const cardStructure=(listData)=>{
         const nameDiv=document.createElement("div");
         nameDiv.className='nameDiv'
         const p=document.createElement('p');
-        p.className='personalName'
+        p.className='personalName';
         img.src=`${champ.splash}`;
         p.innerHTML=`${champ.name}`;
         bothFace.appendChild(div);
@@ -53,15 +53,21 @@ const cardStructure=(listData)=>{
         backCard.appendChild(backCardName);*/
         
 
-        const backCardTitle=document.createElement('p');
-        backCardTitle.innerHTML = `' ${champ.title} '`;
-        backCardTitle.className="apodo";
-        backCard.appendChild(backCardTitle);
-
         const backCardInfo=document.createElement("div");
         backCardInfo.className="backCardInfo"
     /*backCardInfo.innerHTML=`Info`;*/
         backCard.appendChild(backCardInfo);
+
+        const backCardTitle=document.createElement('p');
+        backCardTitle.innerHTML = `' ${champ.title} '`;
+        backCardTitle.className="apodo";
+        backCardInfo.appendChild(backCardTitle);
+
+        const img2=document.createElement('img');
+        img2.src=`${champ.splash}`;
+        img2.className="personalImage2";
+        backCardInfo.appendChild(img2);
+
 
         const infoAttack=document.createElement("p");
         infoAttack.innerHTML=`Attack: ${champ.info.attack}`;
