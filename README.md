@@ -33,6 +33,13 @@ Antes de plantearnos una solución fue necesario hacer una investigación con us
 
 [ ] [Investigación con usuarios / entrevistas.](https://docs.google.com/forms/d/18i1QWx7-gARlxvGW0XuStDgD-ANs4kPQA8Gr95P7Z5A/edit)
 
+* [Definicion de Usuario]
+Sexo: Varones - Mujeres 
+Edad: Mayores de 20 años
+Público objetivo: jugadores vigentes o ex jugadores, de diferente nivel, de Pokémon GO
+Necesidad primaria: Qué y cuales son los mejores Pokemones para atrapar y ganar en  las batallas.
+Necesidad secundaria: información adicional como datos y estadisticas de Pokémon GO
+
 * ¿Quiénes son los principales usuarios de producto?
  - Jugadores Principiantes(los que recien esta empezando a jugar Pokémon)
  - Jugadores con experiencia (Los Maestros pokémon)
@@ -47,13 +54,6 @@ Los Pokémon tienen características únicas que determinara las decisiones que 
 - stats: base de ataque,defensa, salud, max CP(combat points) y max HP (health points).
 * ¿Cuándo utilizan o utilizarían el producto?
 Cuando lo requiera y/o necesite el usuario la aplicacion se adapta tanto en escritorio como en movil.
-
-* [Definicion de Usuario]
-Sexo: Varones - Mujeres 
-Edad: Mayores de 20 años
-Público objetivo: jugadores vigentes o ex jugadores, de diferente nivel, de Pokémon GO
-Necesidad primaria: Qué y cuales son los mejores Pokemones para atrapar y ganar en  las batallas.
-Necesidad secundaria: información adicional como datos y estadisticas de Pokémon GO
 
 ### Historias de usuario
 
