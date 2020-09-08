@@ -9,7 +9,6 @@ import {sortByMorePwr} from './data.js';
 import {filterByType} from './data.js';
 
 
-//console.log(orderByAsc(data.pokemon));
 
 //Agregar clase para hacer visible los items de barra de navegación
 const menudeploy = document.querySelector('.menu-deploy');
@@ -26,34 +25,42 @@ document.querySelectorAll(".accordionButton").forEach(button => {
 //Se activa cuando el documento HTML inicial se ha cargado
 window.onload=()=>{
     showPokDisplay(data.pokemon);
+    orderByAsc(data.pokemon);
+    orderByDes(data.pokemon);
+    orderByLessPwr(data.pokemon);
+    orderByMorePwr(data.pokemon);
+
 }
 
 //ordenar en forma Ascendente
+const orderByAsc= (arrayPok)=>{
 const alphaAscButton = document.getElementById("alphaAsc");
 alphaAscButton.addEventListener('click',()=>{
-    showPokDisplay(sortByAsc(data.pokemon));
-});
+    showPokDisplay(sortByAsc(arrayPok));
+});}
 
 //ordenar en forma Descendente
+const orderByDes= (arrayPok)=>{
 const alphaDescButton = document.getElementById("alphaDesc");
 alphaDescButton.addEventListener('click',()=>{
-    showPokDisplay(sortByDesc(data.pokemon));
-});
-
+    showPokDisplay(sortByDesc(arrayPok));
+});}
 //ordenar por menos poder (max-cp)
+const orderByLessPwr= (arrayPok)=>{
 const lessPwrButton = document.getElementById("lessPwr");
 lessPwrButton.addEventListener('click',()=>{
-    showPokDisplay(sortByLessPwr(data.pokemon));
-});
+    showPokDisplay(sortByLessPwr(arrayPok));
+});}
 
 //ordenar por mas poder (max-cp)
+const orderByMorePwr= (arrayPok)=>{
 const morePwrButton = document.getElementById("morePwr");
 morePwrButton.addEventListener('click',()=>{
-    showPokDisplay(sortByMorePwr(data.pokemon));
-});
+    showPokDisplay(sortByMorePwr(arrayPok));
+});}
+
 //Buscar por tipo
 document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=>{
-    //event.preventDefault();
     const arrayCheck = document.querySelectorAll('.typeContainerBody input[type="checkbox"]')
     let contenedor =[];
     let contador=-1;    
@@ -66,8 +73,14 @@ document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=
     if (contador>=2) {
         alert("¡ Please select only two types !")
     } else {
-        showPokDisplay(filterByType(contenedor,data.pokemon));
+        const arrayType =filterByType(contenedor,data.pokemon);
+        showPokDisplay(arrayType);
+        orderByAsc(arrayType);
+        orderByDes(arrayType);
+        orderByLessPwr(arrayType);
+        orderByMorePwr(arrayType);
     }  
+    
 });
 
 
@@ -358,9 +371,15 @@ const extractTypePok = (dataType) => {
     })}
 
 
+
 //**************Egda****************
+/*************Intro***************/
+document.getElementById("enterBtn").onclick = function() { 
+  
+    document.getElementById("landingPage").style.display = "none"; 
+    document.getElementById("container").style.display = "block";
 
-
+} 
 
 
 
