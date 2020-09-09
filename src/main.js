@@ -185,7 +185,7 @@ const resizeInformation = (a,b,c)=> {
     if (a.clientWidth<=800) { 
         b.style.width="0%";
         c.style.width="100%";
-    } else {
+    } else if(a.clientWidth>=800){
         b.style.width="60%"; 
         c.style.width="40%";
     }   

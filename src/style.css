@@ -1170,7 +1170,7 @@ input[type="checkbox"]:checked + label {
     height: 100vh;
     top:0;
     left: 0;
-    background: rgb(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1178,9 +1178,9 @@ input[type="checkbox"]:checked + label {
     visibility: hidden;
 }
 .modal{
-    width: 50%;
+    width: 55%;
     height: 30%;
-    background: #18383b;
+    background: #ffffff;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1188,8 +1188,6 @@ input[type="checkbox"]:checked + label {
     align-items: center;
     border-radius: 10px 10px 10px 10px;
     position: relative;
-    
-
 }
 
 .imgWarning{
@@ -1202,9 +1200,9 @@ input[type="checkbox"]:checked + label {
     height: 100%;
 }
 .mensajeModal {
-    height: 25%;
+    height: 30%;
     width: 90%;
-    color:#888888;
+    color:#18383b;
     display: flex;
     justify-content: center;
 }
@@ -1214,9 +1212,10 @@ input[type="checkbox"]:checked + label {
     height: 30px;
     font-size: 16px;
     cursor: pointer;
-    color: #88D9E5;
-    background-color: black;
-    border: solid 2px #88D9E5;
+    color:#18383b;
+    background-color: #88D9E5;
+    border: solid 2px #18383b;
+    border-radius: 5px;
 }
 .closeModal{
     display: flex;
@@ -1225,8 +1224,6 @@ input[type="checkbox"]:checked + label {
     height: 5%;
    
 }
-
-
 
 /*Footer*/
 .footer {
