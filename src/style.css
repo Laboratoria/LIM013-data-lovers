@@ -926,27 +926,6 @@ input[type="checkbox"]:checked + label {
     cursor: pointer; 
 }    
 
-.pkmBefore {
-    width: 40px;
-    height: 40px;
-    padding: 0px 10px;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
-    cursor: pointer;
-    display: block;
-    margin-right: 0px;
-    margin-top: 5px;
-    margin-left: auto;
-    color: #88D9E5;
-    background-image:url(images/fondo_button.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    border: none;
-}
-
-
 .pokemonSize {
     height: 140px;
     margin-left: 15px;
