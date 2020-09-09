@@ -36,7 +36,7 @@ const cardStructure=(listData)=>{
         const nameDiv=document.createElement("div");
         nameDiv.className='nameDiv'
         const p=document.createElement('p');
-        p.className='personalName'
+        p.className='personalName';
         img.src=`${champ.splash}`;
         p.innerHTML=`${champ.name}`;
         bothFace.appendChild(div);
@@ -57,6 +57,11 @@ const cardStructure=(listData)=>{
         backCardTitle.innerHTML = `' ${champ.title} '`;
         backCardTitle.className="apodo";
         backCardInfo.appendChild(backCardTitle);
+
+        const img2=document.createElement('img');
+        img2.src=`${champ.splash}`;
+        img2.className="personalImage2";
+        backCardInfo.appendChild(img2);
 
         const infoChamp=champ.info;
             for (var [key, value] of Object.entries(infoChamp)){
@@ -117,7 +122,7 @@ window.onload = function() {
     cardStructure(allArray);
 };
 /* ------Página Rol-------- */
-const rolPage=document.getElementById("championsButton");
+const rolPage=document.querySelector(".championsButton");
 rolPage.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
@@ -127,13 +132,17 @@ rolPage.addEventListener("click",e=>{
 });
 
 /* ------Página Estadísticas-------- */
-  const statsPage=document.getElementById("statButton");
+  const statsPage=document.querySelector(".statButton");
 statsPage.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
     document.getElementById("championPage").style.display="none";
     document.getElementById("statsRolPage").style.display="block";
 });
+
+
+
+
 /* ------Estadísticas por rol-------- */
 const rolIcon=document.querySelectorAll(".imagen-categoria3 a");
 console.log(rolIcon);
@@ -141,11 +150,13 @@ rolIcon.forEach((el)=>{
     el.addEventListener('click',()=>{
         const clickRol=el.getAttribute('data-value');
         console.log(clickRol);
+
         const cardRol=document.querySelector(".infoCard");
         cardRol.innerHTML="";
         const rolTittle=document.createElement("h1");
         rolTittle.innerHTML=`${clickRol}`
         cardRol.appendChild(rolTittle);
+
         const filterRol = filterByRol(allArray, clickRol);
 
         const averageInfoDiv=document.createElement("div");
