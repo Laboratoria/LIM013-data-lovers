@@ -122,7 +122,6 @@ const conditionSearch = ()=>{
 searchButton.addEventListener('click',()=>{conditionSearch();})
 searchInput.addEventListener('keyup',()=>{conditionSearch();})
 
-
 //crear dinamicamente elemntos section y asignarle imagen
 //función que recibe un array y lo  en el display de pokemones
 const pokemonDisplay = document.getElementById("pokemonDisplay");
