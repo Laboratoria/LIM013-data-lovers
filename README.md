@@ -3,7 +3,7 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Resúmen de la aplicación](#2-resúmen-de-la-aplicación)
+* [2. Resumen de la aplicación](#2-resumen-de-la-aplicación)
 * [3. Definición del producto](#3-definición-del-producto)
 * [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-interfaz-de-usuario)
 * [5. Historias de usuario](#5-historias-de-usuario)
@@ -65,7 +65,7 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 
 * Adicionalmente, nos hicieron la observación de mejorar el mensaje de error retornado a la hora de filtrar por tipo (alert). En consecuencia, implementamos un modal más afin con el resto del diseño.
 
-* En general, recibimos buenas opiniones sobre la apariencia y funcionamiento de la interfaz.
+* En general, recibimos opiniones positivas sobre la apariencia y funcionamiento de la interfaz.
 
 ## 7. Vista de la aplicación en distintos dispositivos
 
