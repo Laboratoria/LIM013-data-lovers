@@ -1,12 +1,10 @@
 # POKÉDEX. Data escogida: POKÉMON 
-![] (images/index html desktop.JPG)
-![] (images/index html - Search by type toggle - desktop.JPG)
-![] (images/index html - Pokémon card - desktop.JPG)
-![] (images/index html - Tablet.JPG)
-![] (images/index html - Celphone.JPG)
-
+![prototipo desktop](src/index-html-desktop.jpg)
+![prototipo desktop toggle](src/index-html-toggle-desktop.jpg)
+![prototipo desktop card](src/index-html-card-desktop.jpg)
+![prototipo tablet](src/index-html-Tablet.jpg)
+![prototipo Celphone](src/index-html-Celphone.jpg)
 ***
-
 ## 1. Ejercicio a desarrollar
 
 Interfaz de usuario en función a una Base de Datos suministrada.
