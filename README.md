@@ -13,7 +13,9 @@
 
 ## 1. Introducción
 
-Interfaz de usuario en función a una Base de Datos suministrada.
+Esta aplicación a sido diseñada en función a una base de datos suministrada, para mostrar, filtrar y manipular data de pokemones, logrando asi que los jugadores tanto experimentados como jugadores
+que recien empiezan en el juego tengan la información necesaria para escoger adecuadamente sus pokemones para las diversas batallas en las que se enfrenten,
+esta aplicación nos permite interactuar de una manera muy facil e intuitiva con la infomación.
 
 ## 2. Resumen de la aplicación
 
@@ -21,16 +23,16 @@ Página web POKÉDEX, donde el usuario (jugador de la app Pokémon Go) podrá vi
 
 ## 3. Definición del producto
 
-Iniciamos realizando una encuesta al usuario objetivo para conocer tanto sus necesidades como sus estrategias, de manera de poder desarrollar un producto capaz de satisfacerlas. (Enlace:
+Iniciamos realizando una encuesta al usuario objetivo para conocer tanto sus necesidades como sus estrategias y preferencias, de tal manera de poder desarrollar un producto capaz de satisfacerlas. (Enlace:
 https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edit?ts=5f32c74f).
 
 Una vez analizada la data, planteamos nuestras Historias de usuario, de acuerdo a las cuales planificamos su implementación. (Enlaces: https://trello.com/b/r0DujdY4 ; https://docs.google.com/spreadsheets/d/1bW6udeKvTBkZCFtt94m5wwy2nXC1ITs6LFBFT76I72E/edit?usp=sharing).
 
 Teniendo en cuenta lo anterior, dimos inicio al diseño de la primera interfaz con el prototipo en papel (baja fidelidad):  
-![prototipo baja fidelidad] (images/Propotipo papel - baja fidelidad.JPG)
+![prototipo baja fidelidad](srcimages/Propotipo-papel-baja-fidelidad.jpg)
 
 El cual sometimos a feedback y pulimos hasta obtener el prototipo de alta:
-![] (images/Propotipo Figma - alta fidelidad.JPG)
+![prototipo en alta fidelidad](src/images/Propotipo-Figma-alta-fidelidad.jpg)
 
 Con toda esta información sobre la mesa, continuamos con la implementación de nuestra página web dirigida a usuarios que ya conocen y juegan Pokémon Go. 
 
@@ -73,7 +75,9 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 ### Vista en desktop
 
 ![prototipo desktop](src/images/index-html-desktop.jpg)
+
 ![prototipo desktop toggle](src/images/index-html-toggle-desktop.jpg)
+
 ![prototipo desktop card](src/images/index-html-card-desktop.jpg)
 
 ### Vista en tablet

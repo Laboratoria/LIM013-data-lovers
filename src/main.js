@@ -172,9 +172,8 @@ const showPokDisplay = (dataSelect) => {
             resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
             showInformationPok(informationDisplay,index);
             //funcion que siente un cambio en el tamaño de la pantalla
-            window.onresize=()=>{
-            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
-            }  
+            //window.onresize=()=>{
+            //resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);}  
             
         });  
     }
