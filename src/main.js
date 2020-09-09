@@ -190,6 +190,14 @@ daño_de_ataque.addEventListener('change', (e) => {
   }
 })
 
+/*MAP*/
+
+/*const attackrange=arrayLegends.map((objLegend)=>{
+  return objLegend.stats.attackrange;
+});
+console.log(Math.max.apply(null, attackrange))
+  console.log(Math.min.apply(null, attackrange))*/
+
 /*ORDER */
 const selector = document.querySelector("#order");
 
@@ -233,5 +241,3 @@ const search = () => {
 }
 
 inputSearch.addEventListener('keyup', search);
-
-

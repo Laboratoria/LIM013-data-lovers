@@ -64,7 +64,7 @@ const getStats = (objLegend, selected, iddiv) => {
     let attackdamage = objLegend[i].stats.attackdamage;
     let attackActual = order.attackperLevel(objLegend, level, i);
 
-    if (objLegend[i].name == selected) {
+    if (objLegend[i].name == selected && level <=18) {
       listStats(name, splash, hp, hpActual, mp, mpActual, attackdamage, attackActual, iddiv);
     }
   }
@@ -107,7 +107,10 @@ inputLevel.addEventListener('change', (e) => {
   //console.log('level', level)
   if (level === '') {
     level = 1
+  } else if (level >18){
+    alert('Just only numbers between 1 and 18')
   }
   getStats(arrayLegends, document.querySelector('#select01').value, "#legends_list_izquierda");
   getStats(arrayLegends, document.querySelector('#select02').value, "#legends_list_derecha")
 });
+

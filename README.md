@@ -66,9 +66,11 @@ Hicimos nuestra planificación en Trello: Product Backlog, Sprint Backlog. Les c
 
 4.	ORDER. YO COMO jugador de LOL QUIERO ordernar a los campeones desde A-Z y de Z-A, PARA encontrar el campeón que quiero.
 
-5.	FILTRO DAÑO-ATAQUE: YO COMO jugador de LoL QUIERO filtrar a los campeones, por nivel daño-ataque PARA facilitar la fase inicio de mi ataque a mi contrincante.
+5. ESTADÍSTICAS. YO COMO: Jugador de lol QUIERO hacer una comparación del mana, vida y ataque de mis campeones PARA evaluarlos según el nivel del juego
 
-6.	CARACTERÍSTICAS DEL CAMPEÓN. YO COMO: Jugador de lol QUIERO: ver las características de cada campeón. PARA: Conocer mejor las características de mi campeón.
+6.	FILTRO DAÑO-ATAQUE: YO COMO jugador de LoL QUIERO filtrar a los campeones, por nivel daño-ataque PARA facilitar la fase inicio de mi ataque a mi contrincante.
+
+7.	CARACTERÍSTICAS DEL CAMPEÓN. YO COMO: Jugador de lol QUIERO: ver las características de cada campeón. PARA: Conocer mejor las características de mi campeón.
 
 ## 3. Ideación
 

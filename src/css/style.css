@@ -487,9 +487,9 @@ footer i:hover {
 
 .overlay .info p {
   display: inline-block;
-  padding: 10px 5px;
+  padding: 10px 6px;
   background: #986E1E;
-  width: 30%;
+  width: 75px;
   text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -613,6 +613,7 @@ footer i:hover {
     z-index: 100;
     cursor: pointer;
     margin-left: 80px;
+    font-size:35px;
   }
 
   .search {
