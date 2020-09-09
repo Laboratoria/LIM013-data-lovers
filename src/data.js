@@ -8,7 +8,7 @@ export const orderData = (data, condition) => {
       }
       return -1;
     });
-  } else {
+  } else if (condition === 'z-a') {
     result = data.sort((a, b) => {
       if (a.name < b.name) {
         return 1;
@@ -18,6 +18,7 @@ export const orderData = (data, condition) => {
   }
   return result;
 };
+
 //FIN DE FUNCION ORDENAR DATA
 export const filterDataType = (arrayFilter, typePokemon) => {
 	if (typePokemon !== '' && typePokemon !== 'all') {
