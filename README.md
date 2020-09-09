@@ -3,23 +3,21 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Resumen de la aplicación](#2-resumen-de-la-aplicación)
+* [2. Resúmen de la aplicación](#2-resúmen-de-la-aplicación)
 * [3. Definición del producto](#3-definición-del-producto)
 * [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-interfaz-de-usuario)
 * [5. Historias de usuario](#5-historias-de-usuario)
 * [6. Test de usabilidad](#6-test-de-usabilidad)
-* [7. Vista de la aplicación en distinto dispositivos](#7-vista-de-la-aplicación-en-distinto-dispositivos)
+* [7. Vista de la aplicación en distintos dispositivos](#7-vista-de-la-aplicación-en-distintos-dispositivos)
 
 
 ## 1. Introducción
 
-Esta aplicación a sido diseñada en función a una base de datos suministrada, para mostrar, filtrar y manipular data de pokemones, logrando asi que los jugadores tanto experimentados como jugadores
-que recién empiezan en el juego tengan la información necesaria para escoger adecuadamente sus pokemones para las diversas batallas en las que se enfrenten,
-esta aplicación nos permite interactuar de una manera muy facil e intuitiva con la infomación.
+Esta aplicación ha sido diseñada y desarrollada en función a una base de datos suministrada, para mostrar, filtrar y manipular data de pokemones.
 
 ## 2. Resumen de la aplicación
 
-Página web POKÉDEX, donde el usuario (jugador de la app Pokémon Go) podrá visualizar, buscar, e interactuar con la información necesaria a la hora de escoger los personajes que integrarán su equipo y así ganar la(s) batalla(s) contra otro(s) "entrenador(es)".
+Página web POKÉDEX, donde el usuario (jugador, tanto novato como experimentado, de la app Pokémon Go) podrá visualizar, buscar, e interactuar fácil e intuitivamente con la información necesaria a la hora de escoger los pokemones que integrarán su equipo y serán utilizados en batalla, considerando que el objetivo del juego es ganar la(s) batalla(s) contra otro(s) "entrenador(es)".
 
 ## 3. Definición del producto
 
@@ -69,7 +67,7 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 
 * En general, recibimos buenas opiniones sobre la apariencia y funcionamiento de la interfaz.
 
-## 7. Vista de la aplicación en distinto dispositivos
+## 7. Vista de la aplicación en distintos dispositivos
 
 ### Vista en desktop
 
