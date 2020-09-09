@@ -8,6 +8,8 @@ let valueregion = null;
 let x = 0; //to for seePokemon (i=x) and then add + count
 const count = 8; //to show pokemons 8 by 8
 
+//pasar el e-target a pokemonVIew
+
 let classPokemon = (divsPokemons) => {
     for (let i = 0; i < divsPokemons.length; i++) {
         localStorage.clear();
@@ -68,7 +70,7 @@ document.getElementById("more").addEventListener("click", () => {
     x = x + count;
     seePokemon(x);
 });
-
+//NO MATCHES
 const noMatches = () => {
     document.getElementById("content").innerHTML = "";
     let box = document.createElement("div");

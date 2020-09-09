@@ -45,7 +45,7 @@ fetch("../data/pokemon/pokemon.json")
     getPokemon(pokemon);
     document.getElementById("loading").style.display= "none";
   });
-
+ 
 let basicData = (pokemon) => {
   const num = pokemon.num;
   imgPokemon.setAttribute(

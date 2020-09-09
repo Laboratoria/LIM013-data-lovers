@@ -14,6 +14,11 @@
         width: 100%;
         height: 100%;
     }
+    .loading{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px ;
+    }
     /*Container styles*/
     
     #container {
