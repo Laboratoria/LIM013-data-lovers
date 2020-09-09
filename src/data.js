@@ -22,7 +22,6 @@ export const orderData = (data, condition) => {
 
 //FUNCION FILTRAR
 export const filterDataType = (arrayFilter, typePokemon) => {
-  
 	if (typePokemon !== '' && typePokemon !== 'all') {
 		arrayFilter = arrayFilter.filter(
 			(pokemon) => pokemon.type.indexOf(typePokemon) !== -1
@@ -32,8 +31,20 @@ export const filterDataType = (arrayFilter, typePokemon) => {
 	return arrayFilter;
 };
 
+export const filterDataGeneracion = (arrayFilter, genepokemon) => {
+	if (genepokemon !== '' && genepokemon !== 'all') {
+		arrayFilter = arrayFilter.filter(
+			(pokemon) => pokemon.generation.name === genepokemon
+		);
+	}
+	return arrayFilter;
+};
+
+export const filterDataEgg = (arrayFilter, eggpokemon) => {
+	if (eggpokemon !== '' && eggpokemon !== 'all') {
+		arrayFilter = arrayFilter.filter((pokemon) => pokemon.egg === eggpokemon);
+	}
+	return arrayFilter;
+};
+
 //FIN DE FUNCION FILTRAR
-
-// FUNCION CALCULAR
-
-// FIN DE FUNCION CALCULAR
