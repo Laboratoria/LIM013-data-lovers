@@ -1,36 +1,58 @@
-// estas funciones son de ejemplo
-/* 
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-}; */
-
-export const orderData = (data,condition) => {
+// FUNCION ORDENAR DATA
+export const orderData = (data, condition) => {
   let result;
-  if (condition==='a-z'){
-    result=data.sort((a,b) => {
-      /* return (a.name>b.name ? 1:  -1) */
-       
-       if (a.name>b.name){
-       return 1; 
-    }
-       return -1; 
-    }); 
-}
-  else{
-    result=data.sort((a,b) =>{
-     /*  return (a.name<b.name ? 1:  -1) */
-      if (a.name<b.name){
-      return 1;
+  if (condition === 'a-z') {
+    result = data.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
       }
-      return -1;  
+      return -1;
     });
-  
-}
-return result;
+  } else {
+    result = data.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      }
+      return -1;
+    });
+  }
+  return result;
+};
+//FIN DE FUNCION ORDENAR DATA
+
+//FUNCION FILTRAR
+export const filterDataType = (arrayFilter, typePokemon) => {
+
+  if (typePokemon !== '' && typePokemon !== 'all') {
+    arrayFilter = arrayFilter.filter(
+      (pokemon) => pokemon.type.indexOf(typePokemon) !== -1
+    );
+  }
+
+  export const orderData = (data, condition) => {
+    let result;
+    if (condition === 'a-z') {
+      result = data.sort((a, b) => {
+        /* return (a.name>b.name ? 1:  -1) */
+
+        if (a.name > b.name) {
+          return 1;
+        }
+        return -1;
+      });
+    }
+    else {
+      result = data.sort((a, b) => {
+        /*  return (a.name<b.name ? 1:  -1) */
+        if (a.name < b.name) {
+          return 1;
+        }
+        return -1;
+      });
+
+    }
+    return result;
+  }
 }
 
 
