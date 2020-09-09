@@ -145,6 +145,7 @@ rolPage.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="block";
+    document.getElementById("aboutPage").style.display="none";
     
 });
 
@@ -155,4 +156,15 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("championPage").style.display="none";
     document.getElementById("statsRolPage").style.display="block";
+    document.getElementById("aboutPage").style.display="none";
+});
+
+/* ------Página ¿Qué es LOL?------- */
+  const aboutLolPage=document.getElementById("lolButton");
+aboutLolPage.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("aboutPage").style.display="block";
 });
