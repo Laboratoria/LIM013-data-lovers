@@ -1,10 +1,10 @@
 # POKÉDEX. Data escogida: POKÉMON 
-<<<<<<< HEAD
-![prototipo desktop](src/index-html-desktop.jpg)
-![prototipo desktop toggle](src/index-html-toggle-desktop.jpg)
-![prototipo desktop card](src/index-html-card-desktop.jpg)
-![prototipo tablet](src/index-html-Tablet.jpg)
-![prototipo Celphone](src/index-html-Celphone.jpg)
+
+![prototipo desktop](src/images/index-html-desktop.jpg)
+![prototipo desktop toggle](src/images/index-html-toggle-desktop.jpg)
+![prototipo desktop card](src/images/index-html-card-desktop.jpg)
+![prototipo tablet](src/images/index-html-Tablet.jpg)
+![prototipo Celphone](src/images/index-html-Celphone.jpg)
 
 ## 1. Ejercicio a desarrollar
 
