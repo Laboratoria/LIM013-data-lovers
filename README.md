@@ -29,7 +29,7 @@ https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edi
 Una vez analizada la data, planteamos nuestras Historias de usuario, de acuerdo a las cuales planificamos su implementación. (Enlaces: https://trello.com/b/r0DujdY4 ; https://docs.google.com/spreadsheets/d/1bW6udeKvTBkZCFtt94m5wwy2nXC1ITs6LFBFT76I72E/edit?usp=sharing).
 
 Teniendo en cuenta lo anterior, dimos inicio al diseño de la primera interfaz con el prototipo en papel (baja fidelidad):  
-![prototipo baja fidelidad](srcimages/Propotipo-papel-baja-fidelidad.jpg)
+![prototipo baja fidelidad](src/images/Propotipo-papel-baja-fidelidad.jpg)
 
 El cual sometimos a feedback y pulimos hasta obtener el prototipo de alta:
 ![prototipo en alta fidelidad](src/images/Propotipo-Figma-alta-fidelidad.jpg)
