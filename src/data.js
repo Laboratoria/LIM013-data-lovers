@@ -47,4 +47,7 @@ export const filterDataEgg = (arrayFilter, eggpokemon) => {
 	return arrayFilter;
 };
 
+/// solucionando conflictos
+
+
 //FIN DE FUNCION FILTRAR
