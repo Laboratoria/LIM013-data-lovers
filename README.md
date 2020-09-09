@@ -3,7 +3,7 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Resúmen de la aplicación](#2-resúmen-de-la-aplicación)
+* [2. Resumen de la aplicación](#2-resumen-de-la-aplicación)
 * [3. Definición del producto](#3-definición-del-producto)
 * [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-interfaz-de-usuario)
 * [5. Historias de usuario](#5-historias-de-usuario)
@@ -15,7 +15,7 @@
 
 Esta aplicación ha sido diseñada y desarrollada en función a una base de datos suministrada, para mostrar, filtrar y manipular data de pokemones.
 
-## 2. Resúmen de la aplicación
+## 2. Resumen de la aplicación
 
 Página web POKÉDEX, donde el usuario (jugador, tanto novato como experimentado, de la app Pokémon Go) podrá visualizar, buscar, e interactuar fácil e intuitivamente con la información necesaria a la hora de escoger los pokemones que integrarán su equipo y serán utilizados en batalla, considerando que el objetivo del juego es ganar la(s) batalla(s) contra otro(s) "entrenador(es)".
 
