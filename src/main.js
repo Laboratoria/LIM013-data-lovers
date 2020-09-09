@@ -23,6 +23,19 @@ document.querySelectorAll(".accordionButton").forEach(button => {
         button.classList.toggle("accordionButtonActive");
     })
 })
+//***********modal para warning ******************/
+const modalWarning= (warningModal)=>{
+    const modalC= document.querySelector('.modal-container');
+    modalC.style.opacity="1";
+    modalC.style.visibility="visible";
+    const mensajeModal= document.querySelector('.mensajeModal');
+    mensajeModal.textContent=`${warningModal}`
+    const modalClose=document.getElementById('modalClose');
+    modalClose.addEventListener("click",()=>{
+    modalC.style.opacity="0";
+    modalC.style.visibility="hidden";
+    })
+}
 
 //Se activa cuando el documento HTML inicial se ha cargado
 window.onload=()=>{
@@ -73,14 +86,18 @@ document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=
         } 
     }
     if (contador>=2) {
-        alert("¡ Please select only two types !")
+        modalWarning("¡ Please select only two types !");
     } else {
         const arrayType =filterByType(contenedor,data.pokemon);
-        showPokDisplay(arrayType);
-        orderByAsc(arrayType);
-        orderByDes(arrayType);
-        orderByLessPwr(arrayType);
-        orderByMorePwr(arrayType);
+        if(arrayType.length!==0){
+            showPokDisplay(arrayType);
+            orderByAsc(arrayType);
+            orderByDes(arrayType);
+            orderByLessPwr(arrayType);
+            orderByMorePwr(arrayType);
+        }else{
+            modalWarning("¡There is no pokemon with that type combination, please choose a new combination!");
+        }
     }  
     
 });
