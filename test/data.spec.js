@@ -1,24 +1,24 @@
 import {filterForNumber, extractImgPok,sortByAsc, sortByDesc } from '../src/data.js';
 import {sortByLessPwr, sortByMorePwr,filterByType, searchByNameandNum } from '../src/data.js';
 
-const dataPok = [{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-hp":"10"}},
-                {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"],"stats":{"max-hp":"30"}},
-                {"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-hp":"40"}},
-                {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-hp":"20"}}];
+const dataPok = [{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-cp":"10"}},
+                {"num": "002","name": "ivysaur","img": "002.png","type":["grass", "poison"],"stats":{"max-cp":"30"}},
+                {"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-cp":"40"}},
+                {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-cp":"20"}}];
 
 
-const arrayPok003 =[{"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-hp":"40"}}];
+const arrayPok003 =[{"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-cp":"40"}}];
 
 
-const resultsortByAscLP=[{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-hp":"10"}},
-                        {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-hp":"20"}},
-                        {"num": "002","name": "ivysaur","img": "002.png","type":["grass","poison"],"stats":{"max-hp":"30"}},
-                        {"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-hp":"40"}}];
+const resultsortByAscLP=[{"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-cp":"10"}},
+                        {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-cp":"20"}},
+                        {"num": "002","name": "ivysaur","img": "002.png","type":["grass","poison"],"stats":{"max-cp":"30"}},
+                        {"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-cp":"40"}}];
                       
-const resultsortByDescMP=[{"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-hp":"40"}},
-                        {"num": "002","name": "ivysaur","img": "002.png","type":["grass","poison"],"stats":{"max-hp":"30"}},
-                        {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-hp":"20"}},
-                        {"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-hp":"10"}}];
+const resultsortByDescMP=[{"num": "003","name": "venusaur","img": "003.png","type":["rock"],"stats":{"max-cp":"40"}},
+                        {"num": "002","name": "ivysaur","img": "002.png","type":["grass","poison"],"stats":{"max-cp":"30"}},
+                        {"num": "004","name": "charmander","img": "004.png","type":["fire"],"stats":{"max-cp":"20"}},
+                        {"num": "001","name": "bulbasaur","img": "001.png","type":["grass", "poison"],"stats":{"max-cp":"10"}}];
                               
 describe('filtrar por número de pokedex', () => {
   it('is a function', () => {
@@ -69,12 +69,12 @@ describe('Devolver array ordenado de forma descendente', () => {
   
 });
 
-describe('Devolver array ordenado de +poder a -poder', () => {
+describe('Devolver array ordenado de -poder a +poder', () => {
   it('is a function', () => {
     expect(typeof sortByLessPwr).toBe('function');
   });
   it('return dataPok ordenado de menor a mayor poder', () => {
-    expect(sortByLessPwr(dataPok)).toEqual(resultsortByDescMP);
+    expect(sortByLessPwr(dataPok)).toEqual(resultsortByAscLP);
   });
   it('return array de longitud 4', () => {
     expect(sortByLessPwr(dataPok)).toHaveLength(4);
@@ -82,7 +82,7 @@ describe('Devolver array ordenado de +poder a -poder', () => {
 
 });
 
-describe('Devolver array ordenado de -poder a +poder', () => {
+describe('Devolver array ordenado de +poder a -poder', () => {
   it('is a function', () => {
     expect(typeof sortByMorePwr).toBe('function');
   });
@@ -92,8 +92,6 @@ describe('Devolver array ordenado de -poder a +poder', () => {
   it('return array de longitud 4', () => {
     expect(sortByMorePwr(dataPok)).toHaveLength(4);
   });
-  
-  
 });
 
 describe('Devolver array cuyo tipo sea el mismo que introducimos', () => {
