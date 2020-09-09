@@ -66,7 +66,7 @@ window.onload = dataCarte(dataPokemon);
 const ordenarSelectBox = document.getElementById('ordenar');
 const selectFilter = document.querySelectorAll('.seleccionar');
 
-const filtros = (e) => {
+const filtros = () => {
 	const valueSelecttype = selectFilter[0].value;
 	const valueSelectGene = selectFilter[1].value;
 	const valueSelectEgg = selectFilter[2].value;
