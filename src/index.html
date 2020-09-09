@@ -15,8 +15,9 @@
 				<nav>
 					<ul>
 						<li class="caja">
-							<select id="ordenar" class="ordenar">
+							<select name="ordenar" id="ordenar" class="ordenar">
 								<option value="">Ordenalos</option>
+								<option value="all">Todos</option>
 								<option value="a-z">A-Z</option>
 								<option value="downward">Z-A</option>
 								<option value="ascendingOrder">Num ↑</option>
@@ -28,8 +29,9 @@
 							</select>
 						</li>
 						<li class="caja">
-							<select name="seleccionar" id="tipo" class="tipo">
-								<option value="">Tipos</option>
+							<select name="seleccionar" id="tipo" class="seleccionar">
+								<option value="">Tipo</option>
+								<option value="all">Todos</option>
 								<option value="Grass">Planta</option>
 								<option value="Poison">Veneno</option>
 								<option value="Fire">Fuego</option>
@@ -49,15 +51,17 @@
 							</select>
 						</li>
 						<li class="caja">
-							<select>
+							<select name="generacion" id="generacion" class="seleccionar">
 								<option value="">Generacion</option>
+								<option value="all">Todos</option>
 								<option value="Kanto">Kanto</option>
 								<option value="Johto">Johto</option>
 							</select>
 						</li>
 						<li class="caja">
-							<select>
-								<option value="">Egg x Km</option>
+							<select name="Huevos" id="huevos" class="seleccionar">
+								<option value="">Huevos</option>
+								<option value="all">Todos</option>
 								<option value="doskm">2 km</option>
 								<option value="cincokm">5 km</option>
 								<option value="sietekm">7 km</option>
@@ -79,9 +83,7 @@
 			</main>
 			<!-- ----------------------------------------------PIE DE PAGINA -->
 		</div>
-		<!-- <footer>
-			<p class="copy">&copy; infopoke 2020 - Todos los derechos</p>
-		</footer> -->
+		<footer></footer> 
 		<!-- ------------------------------ENLAZANDO CON ARCHIVOS JAVA SCRIPT -->
 		<script src="main.js" type="module"></script>
 	</body>
