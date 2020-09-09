@@ -7,7 +7,7 @@ describe('example', () => {
   });
 
   it('returns `a-z`', () => {
-    expect(orderData(imputA_Z)).toEqual('outputA_Z');
+    expect(orderData(inputA_Z)).toEqual('outputA_Z');
   });
 });
 

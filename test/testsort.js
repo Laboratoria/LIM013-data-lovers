@@ -1,4 +1,4 @@
-export const imputA_Z=[
+export const inputA_Z=[
     {
     "num": 78,
     "name": "rapidash",

@@ -12,22 +12,27 @@ export const orderData = (data,condition) => {
   let result;
   if (condition==='a-z'){
     result=data.sort((a,b) => {
+      /* return (a.name>b.name ? 1:  -1) */
+       
        if (a.name>b.name){
-       return 1;
+       return 1; 
     }
-       return -1;
-    });
+       return -1; 
+    }); 
 }
   else{
     result=data.sort((a,b) =>{
+     /*  return (a.name<b.name ? 1:  -1) */
       if (a.name<b.name){
       return 1;
       }
       return -1;  
     });
-  }
+  
+}
 return result;
 }
+
 
 // export const filterData = (data, condition) => {
 //   const conditionType = condition[0].value;
