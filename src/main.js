@@ -16,12 +16,12 @@ const dataCarte = (dataPokemon) => {
 		let name = dataPokemon[i].name;
 		let imgUrl = dataPokemon[i].img;
 		let tipo = dataPokemon[i].type;
-		let dataNueva = document.getElementById('dataPoke');
+		let dataNew = document.getElementById('dataPoke');
 
 		//AGREGANDO DIV POKEMON
 		let labelPokemon = document.createElement('div');
 		labelPokemon.classList.add('pokemon');
-		dataNueva.appendChild(labelPokemon);
+		dataNew.appendChild(labelPokemon);
 
 		//AGREGANDO DIV IMG-CONTAINER
 		let labelimgContainer = document.createElement('div');
