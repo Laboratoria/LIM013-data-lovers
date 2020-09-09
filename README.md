@@ -1,10 +1,5 @@
 # POKÉDEX. Data escogida: POKÉMON 
 
-![prototipo desktop](src/images/index-html-desktop.jpg)
-![prototipo desktop toggle](src/images/index-html-toggle-desktop.jpg)
-![prototipo desktop card](src/images/index-html-card-desktop.jpg)
-![prototipo tablet](src/images/index-html-Tablet.jpg)
-![prototipo Celphone](src/images/index-html-Celphone.jpg)
 ## Índice
 
 * [1. Introducción](#1-introducción)
@@ -13,7 +8,7 @@
 * [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-interfaz-de-usuario)
 * [5. Historias de usuario](#5-historias-de-usuario)
 * [6. Test de usabilidad](#6-test-de-usabilidad)
-* [7. Información extra](#7-informacion-extra)
+* [7. Vista de la aplicación en distinto dispositivos](#7-vista-de-la-aplicación-en-distinto-dispositivos)
 
 
 ## 1. Introducción
@@ -73,4 +68,18 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 
 * En general, recibimos buenas opiniones sobre la apariencia y funcionamiento de la interfaz.
 
-## 7. Información extra
+## 7. Vista de la aplicación en distinto dispositivos
+
+### Vista en desktop
+
+![prototipo desktop](src/images/index-html-desktop.jpg)
+![prototipo desktop toggle](src/images/index-html-toggle-desktop.jpg)
+![prototipo desktop card](src/images/index-html-card-desktop.jpg)
+
+### Vista en tablet
+
+![prototipo tablet](src/images/index-html-Tablet.jpg)
+
+### Vista en smartphone
+
+![prototipo Celphone](src/images/index-html-Celphone.jpg)
