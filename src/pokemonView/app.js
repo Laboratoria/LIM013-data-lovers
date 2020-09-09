@@ -43,6 +43,7 @@ fetch("../data/pokemon/pokemon.json")
     overview(pokemon);
     typeIcon(pokemon);
     getPokemon(pokemon);
+    document.getElementById("loading").style.display= "none";
   });
 
 let basicData = (pokemon) => {
