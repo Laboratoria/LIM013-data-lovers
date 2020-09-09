@@ -23,7 +23,7 @@ export const sortByAsc = (dataPok) => {
     if (a.name < b.name) {
         return -1;
     }
-    return 0;
+    //return 0;
 })
 }
 
@@ -35,32 +35,20 @@ export const sortByDesc = (dataPok) => {
     if (a.name < b.name) {
         return 1;
     }
-    return 0;
+   // return 0;
 })
 }
 
 export const sortByLessPwr = (dataPok) => {
   return dataPok.sort((a, b) => {
-    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
-        return 1;
-    }
-    if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
-        return -1;
-    }
-    return 0;
+    return parseInt(a.stats["max-cp"])-parseInt(b.stats["max-cp"]);
 })
 }
 
 
 export const sortByMorePwr = (dataPok) => {
   return dataPok.sort((a, b) => {
-    if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
-        return 1;
-    }
-    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
-        return -1;
-    }
-    return 0;
+    return parseInt(b.stats["max-cp"])-parseInt(a.stats["max-cp"]);
 })
 }
 
