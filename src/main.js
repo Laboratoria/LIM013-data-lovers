@@ -1,4 +1,4 @@
-import { filterByRol ,search,order,averageInfo} from './data.js';
+import { filterByRol ,search,order,averageInfo,rolDescription} from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -17,7 +17,6 @@ toggle.addEventListener("click",()=>{
   /* -------Estructura de la tarjeta  ---------- */
 const allChampion=data.data;
 const allArray=Object.values(allChampion);
-console.log(allArray)
 const cardStructure=(listData)=>{
     const createArray=Object.values(listData);
     const currentDiv=document.getElementById("imgChampions");
@@ -87,9 +86,7 @@ const cardStructure=(listData)=>{
         el.addEventListener("click",(e)=>{
             e.preventDefault();
             const term=el.getAttribute('data-value');
-            console.log(term);
             const championByType = filterByRol(allArray, term);
-            console.log(championByType);
             if (term==="All") {
                 cardStructure(allArray);
             } else {
@@ -99,21 +96,18 @@ const cardStructure=(listData)=>{
     })
 /* ------Búsqueda por nombre---------- */
 const inputclass=document.querySelector("#form-name2");
-console.log(inputclass);
 inputclass.addEventListener("keyup",e=>{
     const searchName=e.target.value.toLowerCase();
-    console.log(searchName);
     const champByName=search(allArray,searchName);
     cardStructure(champByName);
-    console.log(champByName);
 });
+/* ------Ordenar descendente/ascendente---------- */
 const orderSelect = document.querySelector('.order');
     orderSelect.addEventListener('change', () => {
         const term = orderSelect.value;
         //const lol=data.data;
         //const champ=Object.values(lol)
         const filteredChampions = order(allArray, term);
-        console.log(filteredChampions);
         cardStructure(filteredChampions);
     });
 
@@ -140,17 +134,12 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("statsRolPage").style.display="block";
 });
 
-
-
-
 /* ------Estadísticas por rol-------- */
 const rolIcon=document.querySelectorAll(".imagen-categoria3 a");
-console.log(rolIcon);
 rolIcon.forEach((el)=>{
     el.addEventListener('click',()=>{
         const clickRol=el.getAttribute('data-value');
-        console.log(clickRol);
-
+        
         const cardRol=document.querySelector(".infoCard");
         cardRol.innerHTML="";
         const rolTittle=document.createElement("h1");
@@ -188,6 +177,8 @@ rolIcon.forEach((el)=>{
         averageInfoDiv.appendChild(difficultyAvgDiv);  
     });
 });
+
+
 
 
 

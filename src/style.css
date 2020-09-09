@@ -1,17 +1,17 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-}
 
+}
 .menuSuperior {
     background-color: black;
-    padding:10px 0px 0px 0px;
+    padding:10px 0px;
     width: 100%;
     top:0px;
      /*Flexbox*/
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -26,13 +26,14 @@ header ul{
     align-items: center;
 }
 .barsNavigation a {
-    display: inline-flex;
+    display: relative;
     color: #dbb74c;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Fira Sans', sans-serif;
+    width: 100%;
     text-align: center;
-    padding: 20px 8px;
+    padding: 18px 8px;
 }
 .barsNavigation a:hover {
     border-bottom: 3px solid rgba(41, 208, 230, 0.842);
@@ -56,8 +57,6 @@ header ul{
     border-bottom:  solid rgba(41, 208, 230, 0.842);
 }
 
-
-
 #home{
     background-image: url("https://media.giphy.com/media/5h9jqglckLc1HQbPvT/giphy.gif");
     background-size: cover;
@@ -65,17 +64,40 @@ header ul{
     background-position: center center;
 
 }
-
-/*#championPage{
-    background-image: url(images/lol_fondo5.jpg);
-    background-attachment: fixed;
-
-}*/
+#aboutPage img{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    border:2px solid #15e915;
+}
+.categoriaAboutPage{
+    width: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.categoriaAboutPage a {
+    color: #EFB810;
+    background-color: #0e0d0d;
+    text-decoration: none;
+    font-family:'Marcellus SC', serif;
+    width: 100%;
+    text-align: center;
+    padding: 18px 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.categoriaAboutPage a:hover {
+    color: rgb(0, 0, 0);
+    background-color: #F2C94C;
+}
 main{
     background-image: url(images/lol_fondo5.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 
 }
 main img{
@@ -137,7 +159,7 @@ color: #DBB74C;
 h1{
 text-align: center;
 font-family: 'Marcellus SC', serif;
-/*font-family:'Bangers', cursive;*/
+
 font-size: 90px;
 color: #EFB810;;
 text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
@@ -145,12 +167,16 @@ text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
 label{
 font-family: 'Marcellus SC', serif;
 color: #07dffc; 
-font-size: 16px;
+font-size: 20px;
 }
 .order{
 	color: #07dffc;	
 	background-color:transparent;
 	border: 2px solid #07dffc;
+}
+.order option{
+    color: #ffffff; 
+    background-color: #000000;  
 }
 .champion{
     background-color: none;
@@ -184,20 +210,21 @@ font-size: 16px;
     margin: 0% 0% 0% 1%;
   }
 select {
-    width: 20%;
+    width: 165px;
     height: 25px;
     margin: 0% 0% 0% 1%;
 }
 .form-groups input{
 	background-color:transparent;
-	border: 2px solid #07dffc;
+    border: 2px solid #07dffc;
+    color:#fce307f3;
 }
 .form-groups ::placeholder {
 	color: #997406d3;
 }
 .form-groups-rol{
     display:inline-flex;
-    padding: 10px 0px;
+    padding: 15px 0px;
 }
 .rol-type-todo{
     display:inline-flex;
@@ -212,14 +239,14 @@ select {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	grid-gap: 20px;
-	object-fit: cover;
-	padding:2%;
+    padding:2%;
+    justify-content: center;
 }
 
 .bothFace{
 	position: relative;
 	text-align: center;
-	transition: transform 0.8s;
+	transition: all ease 0.5s;
 	transform-style: preserve-3d;
 	
 }
@@ -228,11 +255,6 @@ select {
 	transition: all ease 0.6s;
 	
 }
-/*.frontCard:hover {
-    transform: perspective(500px) rotateY(180deg);
-    transition: all ease 0.8s;
-}*/
-
 .personalImage{
 	width: 220px;
 	height: 250px;
@@ -254,27 +276,7 @@ select {
 .cardBox:hover .nameDiv{
 transform: rotateY(180deg);
 }
-/*.frontCard:hover .personalName{
-    transform: rotateY(180deg);
 
-}*/
-
-
-/*aquii*/
-/*.frontCard, .backCard{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	
-	
-}
-  
-.backCard {
-	backface-visibility: visible;
-	transform: rotateX(180deg);
-	
-}*/
 
 .backCardInfo{
 	transform: rotateY(180deg);
@@ -293,8 +295,7 @@ font-size: 16px;
 .backCardInfo .apodo{
 	font-family:'Marcellus SC', serif;
 	font-size: 17px;
-	text-shadow:0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
-	}
+    text-shadow:0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;	}
 .personalImage2{
 	width: 40%;
 	height: 40%;
@@ -309,11 +310,9 @@ font-size: 16px;
 
 .rolIcon{
     display: flex;
-    flex-direction:row;
     align-items: center;
     justify-content: space-evenly;
     padding: 5%;
-    
 }
 .rolIcon img{
     width: 100%;
@@ -329,6 +328,10 @@ display:inline-flex;
 .imagen-categoria3{
     display: block;
 }
+.infoCard{
+    padding: 20px;
+    position: relative;
+}
 .averageInfoDiv{
     display: grid;
     grid-gap: 1.5rem;
@@ -340,7 +343,7 @@ display:inline-flex;
 .averageInfoDiv div{
     font-family: 'Marcellus', serif;
     color:#ffffff;
-    font-size: 60px;
+    font-size: 30px;
 }
 footer {
     background: #000000;
@@ -369,7 +372,42 @@ footer p{
     
 }
 /*Media queries*/
-@media screen and (max-width:700px){
+@media (min-width: 415px) and (max-width:719px){
+	.barsNavigation a{
+		display:none;
+	}
+	.menuSuperior .btnMenu i{
+		display:block;
+	}
+	.menuLateral.responsive{	
+        background-color:#000000;
+        opacity:0.9;
+        position: absolute;
+		width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+    }
+    .menuLateral.responsive ul li{
+        list-style: none;
+    }
+    h1{
+        font-size: 47px;
+    }
+    .htext {
+        font-size: 20px;
+    }
+    #imgChampions{
+        grid-template-columns: auto auto;
+    } 
+}
+@media (min-width: 720px) and (max-width: 980px) {
+    #imgChampions{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media (max-width: 414px){
 	.barsNavigation a{
 		display:none;
 	}
@@ -390,6 +428,14 @@ footer p{
     .menuLateral.responsive ul li{
         list-style: none;
     }
-    
+    #imgChampions{
+        grid-template-columns: auto;
+    }
+    h1{
+        font-size: 47px;
+    }
+    .htext {
+        font-size: 20px;
+    }
 }
 
