@@ -23,10 +23,9 @@ Página web POKÉDEX, donde el usuario (jugador de la app Pokémon Go) podrá vi
 
 ## 3. Definición del producto
 
-Iniciamos realizando una encuesta al usuario objetivo para conocer tanto sus necesidades como sus estrategias y preferencias, de tal manera de poder desarrollar un producto capaz de satisfacerlas. (Enlace:
-https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edit?ts=5f32c74f).
+Iniciamos realizando una encuesta al usuario objetivo para conocer tanto sus necesidades como sus estrategias y preferencias, de tal manera de poder desarrollar un producto capaz de satisfacerlas.([Link a encuesta](https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edit?ts=5f32c74f))
 
-Una vez analizada la data, planteamos nuestras Historias de usuario, de acuerdo a las cuales planificamos su implementación. (Enlaces: https://trello.com/b/r0DujdY4 ; https://docs.google.com/spreadsheets/d/1bW6udeKvTBkZCFtt94m5wwy2nXC1ITs6LFBFT76I72E/edit?usp=sharing).
+Una vez analizada la data, planteamos nuestras Historias de usuario, de acuerdo a las cuales planificamos su implementación. (Enlaces: [Planificación en Trello](https://trello.com/b/r0DujdY4) ; [Documento con historias de usuario](https://docs.google.com/spreadsheets/d/1bW6udeKvTBkZCFtt94m5wwy2nXC1ITs6LFBFT76I72E/edit?usp=sharing))
 
 Teniendo en cuenta lo anterior, dimos inicio al diseño de la primera interfaz con el prototipo en papel (baja fidelidad):  
 ![prototipo baja fidelidad](src/images/Propotipo-papel-baja-fidelidad.jpg)
