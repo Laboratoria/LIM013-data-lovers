@@ -101,6 +101,7 @@ document.getElementById('searchByTypeButtonSearch').addEventListener('click',()=
     }  
     
 });
+
 // Buscar ecribiendo el nombre o número de pokémon
 
 const searchInput = document.getElementById('searchInput');
