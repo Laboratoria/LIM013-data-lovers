@@ -88,4 +88,6 @@ selectFilter[1].addEventListener('change', filtros);
 selectFilter[2].addEventListener('change', filtros);
 ordenarSelectBox.addEventListener('change', filtros);
 
+console.log(filtros ); // cambio para probar 
+
 //FIN DE ORDENANDO Y FILTRANDO LA DATA
