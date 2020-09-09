@@ -5,16 +5,26 @@
 ![prototipo desktop card](src/images/index-html-card-desktop.jpg)
 ![prototipo tablet](src/images/index-html-Tablet.jpg)
 ![prototipo Celphone](src/images/index-html-Celphone.jpg)
+## Índice
 
-## 1. Ejercicio a desarrollar
+* [1. Introducción](#1-introducción)
+* [2. Resumen de la aplicación](#2-resumen-de-la-aplicación)
+* [3. Definición del producto](#3-definición-del-producto)
+* [4. Diseño de la Interfaz de Usuario](#4-diseño-de-la-interfaz-de-usuario)
+* [5. Historias de usuario](#5-historias-de-usuario)
+* [6. Test de usabilidad](#6-test-de-usabilidad)
+* [7. Información extra](#7-informacion-extra)
+
+
+## 1. Introducción
 
 Interfaz de usuario en función a una Base de Datos suministrada.
 
-## 2. Resumen del proyecto
+## 2. Resumen de la aplicación
 
 Página web POKÉDEX, donde el usuario (jugador de la app Pokémon Go) podrá visualizar, buscar, e interactuar con la información necesaria a la hora de escoger los personajes que integrarán su equipo y así ganar la(s) batalla(s) contra otro(s) "entrenador(es)".
 
-### Definición del producto
+## 3. Definición del producto
 
 Iniciamos realizando una encuesta al usuario objetivo para conocer tanto sus necesidades como sus estrategias, de manera de poder desarrollar un producto capaz de satisfacerlas. (Enlace:
 https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edit?ts=5f32c74f).
@@ -22,14 +32,14 @@ https://docs.google.com/forms/d/14CkMw0mnuVfLxTn-C_Vaui2eQLNA8Q0KiS8fswzEhWo/edi
 Una vez analizada la data, planteamos nuestras Historias de usuario, de acuerdo a las cuales planificamos su implementación. (Enlaces: https://trello.com/b/r0DujdY4 ; https://docs.google.com/spreadsheets/d/1bW6udeKvTBkZCFtt94m5wwy2nXC1ITs6LFBFT76I72E/edit?usp=sharing).
 
 Teniendo en cuenta lo anterior, dimos inicio al diseño de la primera interfaz con el prototipo en papel (baja fidelidad):  
-![] (images/Propotipo papel - baja fidelidad.JPG)
+![prototipo baja fidelidad] (images/Propotipo papel - baja fidelidad.JPG)
 
 El cual sometimos a feedback y pulimos hasta obtener el prototipo de alta:
 ![] (images/Propotipo Figma - alta fidelidad.JPG)
 
 Con toda esta información sobre la mesa, continuamos con la implementación de nuestra página web dirigida a usuarios que ya conocen y juegan Pokémon Go. 
 
-### Diseño de la Interfaz de Usuario
+## 4. Diseño de la Interfaz de Usuario
 
 En ella se presenta la información básica y detallada de los diferentes personajes, con una interfaz llamativa inspirada en las pantallas de alta definicón de los centros Pokémon (Pokémon Center) en Japón, que invita a interactuar libremente sobre ella. 
 
@@ -37,7 +47,7 @@ En primera instancia se muestra una lista de personajes con sus carácterística
 
 De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivos móviles, por lo que hemos implementado la teoria de "mobile first"; a la hora de diseñar la versión del desktop hemos decidido cambiar el formato de la interfaz sacando provecho a todo el ancho de la pantalla, compartiéndola.
 
-### Historias de usuario
+## 5. Historias de usuario
 
 1. Yo como jugador Pokémon Go, quiero ver el número, nombre e imagen de todos los pokemones, para poder seleccionar el pokémon de mi interés y del cuál quiero tener más infomación.
 
@@ -51,7 +61,7 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 
 6. Yo como jugador Pokémon Go, quiero poder ordenar los pokemones por  promedio de estadísticas , para poder encontrar los mas fuertes primero.
 
-### Tests de usabilidad
+## 6. Test de usabilidad
 
 * En el prototipo inicial el logo tenía un fondo y mayor dimensión. En un feedback, recomendaron bajarle la intensidad, para no competir y/o distraer del resto de la información.
 
@@ -62,3 +72,5 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 * Adicionalmente, nos hicieron la observación de mejorar el mensaje de error retornado a la hora de filtrar por tipo (alert). En consecuencia, implementamos un modal más afin con el resto del diseño.
 
 * En general, recibimos buenas opiniones sobre la apariencia y funcionamiento de la interfaz.
+
+## 7. Información extra
