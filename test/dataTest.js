@@ -333,12 +333,31 @@ export const outputFiltertype = [
 }
 ];
 
-/*
-export let dataTest= ()=>{
-for (let i = 10 ; i <= 10; i++) {
-    let num = data.pokemon[i].num;
-    let name = data.pokemon[i].name;
-
-    return num, name;
-}}
-//console.log(dataTest);*/
+export  const inputSearch=[
+    
+    {  "num": 68,
+        "name":"machamp",
+        "type": [
+            "fighting"
+        ],
+    },
+    {
+    
+        "num": 137,
+        "name": "porygon",
+        "type": [
+            "normal"
+        ],
+    
+    
+}
+];
+export const outputSearch=[
+    {
+        "num": 68,
+        "name":"machamp",
+        "type": [
+            "fighting"
+        ],
+    },
+];
