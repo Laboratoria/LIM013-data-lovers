@@ -1,11 +1,3 @@
-// estas funciones son de ejemplo
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
 
 export const filterForNumber = (dataPokemon,numPokSelect) => {
   return dataPokemon.filter((dataPokemon)=>{ 
@@ -62,11 +54,11 @@ export const sortByLessPwr = (dataPok) => {
 
 export const sortByMorePwr = (dataPok) => {
   return dataPok.sort((a, b) => {
-    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
-        return -1;
-    }
     if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
         return 1;
+    }
+    if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
+        return -1;
     }
     return 0;
 })
@@ -80,17 +72,13 @@ export const filterByType = (arrayTypeSelect,dataPokemon) =>{
       })    
   }
   else if(arrayTypeSelect.length===2){
-    const newArray = dataPokemon.filter((dataPokemon)=>{ 
+    return dataPokemon.filter((dataPokemon)=>{ 
     const condition1=arrayTypeSelect[0]===dataPokemon.type[0]||arrayTypeSelect[0]===dataPokemon.type[1];
     const condition2=arrayTypeSelect[1]===dataPokemon.type[0]||arrayTypeSelect[1]===dataPokemon.type[1];
     
     return condition1 && condition2;
       })
-      if(newArray.length!==0){
-          return newArray;
-      } else {
-          alert("¡There is no pokemon with that type combination, please choose a new combination!");
-      }
+      
   }
 }
 
