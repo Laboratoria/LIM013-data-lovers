@@ -43,8 +43,9 @@ fetch("../data/pokemon/pokemon.json")
     overview(pokemon);
     typeIcon(pokemon);
     getPokemon(pokemon);
+    document.querySelector(".loading").style.display="none";
   });
-
+ 
 let basicData = (pokemon) => {
   const num = pokemon.num;
   imgPokemon.setAttribute(
