@@ -1,5 +1,10 @@
 import data from './data/pokemon/pokemon.js';
-import { orderData,filterDataType } from './data.js';
+import {
+	orderData,
+	filterDataType,
+	filterDataGeneracion,
+	filterDataEgg,
+} from './data.js';
 
 //MOSTRAR LA DATA
 let dataPokemon = data.pokemon;
@@ -56,26 +61,33 @@ const dataCarte = (dataPokemon) => {
 window.onload = dataCarte(dataPokemon);
 // FIN MOSTRAR LA DATA
 
-//ORDENAR LA DATA
+//ORDENANDO Y FILTRANDO LA DATA
+
 const ordenarSelectBox = document.getElementById('ordenar');
+const selectFilter = document.querySelectorAll('.seleccionar');
 
-ordenarSelectBox.addEventListener('change', function (e) {
-	const valor = e.target.value;
-	console.log(valor);
-	const dataOrdenado = orderData(data.pokemon, valor);
-	dataPokemon = dataOrdenado;
-	document.getElementById('dataPoke').innerHTML = '';
-	dataCarte(dataPokemon);
-});
-//FIN DE ORDENAR LA DATA
+const filtros = (e) => {
+	const valueSelecttype = selectFilter[0].value;
+	const valueSelectGene = selectFilter[1].value;
+	const valueSelectEgg = selectFilter[2].value;
+	const valueOrdenar = ordenarSelectBox.value;
 
-//FILTRANDO LA DATA
+	let arrayfiltrado = data.pokemon;
 
-const selectFilter = document.querySelectorAll('seleccionar');
+	arrayfiltrado = filterDataType(arrayfiltrado, valueSelecttype);
+	arrayfiltrado = filterDataGeneracion(arrayfiltrado, valueSelectGene);
+	arrayfiltrado = filterDataEgg(arrayfiltrado, valueSelectEgg);
+	arrayfiltrado = orderData(arrayfiltrado, valueOrdenar);
 
-selectFilter[0].addEventListener('change', () => {
-	const valueSelect = selectFilter[0].value;
+	document.getElementById('dataPoke').innerHTML = ''; //mostrando data sin repetir
+	dataCarte(arrayfiltrado);
+};
 
-	dataCarte(filterDataType(data.pokemon, valueSelect));
-});
-  
+selectFilter[0].addEventListener('change', filtros);
+selectFilter[1].addEventListener('change', filtros);
+selectFilter[2].addEventListener('change', filtros);
+ordenarSelectBox.addEventListener('change', filtros);
+
+
+
+//FIN DE ORDENANDO Y FILTRANDO LA DATA
