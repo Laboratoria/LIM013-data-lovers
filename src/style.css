@@ -37,6 +37,7 @@ header{
     background: cornsilk;
     box-shadow: 0 4px 25 -22px #000;
     z-index: 2;
+    
  }
  
  .header-content{
@@ -75,14 +76,22 @@ header{
 }
 
 .container{
-    height: 100%;
-    margin: 100px 20px;
+    margin: 40px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+    
+}
+.filterData{
+   margin: 30px;
 }
 
-
+select{
+    background: #756;
+    width: 8cm;
+    height: 1cm;
+    border-radius: 3cm;
+}
 
 #dataCompleta {
     padding: 20px 0;
