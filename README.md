@@ -14,7 +14,7 @@
 ## 1. Introducción
 
 Esta aplicación a sido diseñada en función a una base de datos suministrada, para mostrar, filtrar y manipular data de pokemones, logrando asi que los jugadores tanto experimentados como jugadores
-que recien empiezan en el juego tengan la información necesaria para escoger adecuadamente sus pokemones para las diversas batallas en las que se enfrenten,
+que recién empiezan en el juego tengan la información necesaria para escoger adecuadamente sus pokemones para las diversas batallas en las que se enfrenten,
 esta aplicación nos permite interactuar de una manera muy facil e intuitiva con la infomación.
 
 ## 2. Resumen de la aplicación
