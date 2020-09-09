@@ -65,7 +65,7 @@ De acuerdo a nuestra investigación, la mayoría de usuarios utiliza dispositivo
 
 * Adicionalmente, nos hicieron la observación de mejorar el mensaje de error retornado a la hora de filtrar por tipo (alert). En consecuencia, implementamos un modal más afin con el resto del diseño.
 
-* En general, recibimos buenas opiniones sobre la apariencia y funcionamiento de la interfaz.
+* En general, recibimos opiniones positivas sobre la apariencia y funcionamiento de la interfaz.
 
 ## 7. Vista de la aplicación en distintos dispositivos
 
