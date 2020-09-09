@@ -1,4 +1,4 @@
-import { filterByRol ,search,order} from './data.js';
+import { filterByRol ,search,order,averageInfo,rolDescription} from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -46,16 +46,10 @@ const cardStructure=(listData)=>{
         /* Back Card*/
         const backCard = document.createElement('div');
         bothFace.appendChild(backCard);
-        backCard.className = 'back-card';
-
-        /*const backCardName=document.createElement('h3');
-        backCardName.innerHTML = `' ${champ.id} '`;
-        backCard.appendChild(backCardName);*/
-        
-
+        backCard.className = 'back-card'
+    
         const backCardInfo=document.createElement("div");
-        backCardInfo.className="backCardInfo"
-    /*backCardInfo.innerHTML=`Info`;*/
+        backCardInfo.className="backCardInfo";
         backCard.appendChild(backCardInfo);
 
         const backCardTitle=document.createElement('p');
@@ -68,30 +62,18 @@ const cardStructure=(listData)=>{
         img2.className="personalImage2";
         backCardInfo.appendChild(img2);
 
-
-        const infoAttack=document.createElement("p");
-        infoAttack.innerHTML=`Attack: ${champ.info.attack}`;
-        backCardInfo.appendChild(infoAttack);
-
-        const infoDefense=document.createElement("p");
-        infoDefense.innerHTML=`Defense: ${champ.info.defense}`;
-        backCardInfo.appendChild(infoDefense);
-
-        const infoMagic=document.createElement("p");
-        infoMagic.innerHTML=`Magic: ${champ.info.magic}`;
-        backCardInfo.appendChild(infoMagic);
-
-        const infoDifficulty=document.createElement("p");
-        infoDifficulty.innerHTML=`Difficulty: ${champ.info.defense}`;
-        backCardInfo.appendChild(infoDifficulty);
-        
-
-    })
-}
+        const infoChamp=champ.info;
+            for (var [key, value] of Object.entries(infoChamp)){
+                const infoChampDiv=document.createElement("p");
+                infoChampDiv.innerHTML=` ${key}:${value}`;
+                backCardInfo.appendChild(infoChampDiv);
+            }
+    });
+};
 /* -------Efecto hover ---------- */
     const menuRol = document.querySelectorAll('#categoria a');
     menuRol.forEach((element) => {
-		element.addEventListener("click", (event) => {
+        element.addEventListener("click", (event) => {
             event.preventDefault();
             menuRol.forEach((link) => {
                 link.classList.remove('active');
@@ -104,9 +86,7 @@ const cardStructure=(listData)=>{
         el.addEventListener("click",(e)=>{
             e.preventDefault();
             const term=el.getAttribute('data-value');
-            console.log(term);
             const championByType = filterByRol(allArray, term);
-            console.log(championByType);
             if (term==="All") {
                 cardStructure(allArray);
             } else {
@@ -116,21 +96,18 @@ const cardStructure=(listData)=>{
     })
 /* ------Búsqueda por nombre---------- */
 const inputclass=document.querySelector("#form-name2");
-console.log(inputclass);
 inputclass.addEventListener("keyup",e=>{
     const searchName=e.target.value.toLowerCase();
-    console.log(searchName);
     const champByName=search(allArray,searchName);
     cardStructure(champByName);
-    console.log(champByName);
 });
+/* ------Ordenar descendente/ascendente---------- */
 const orderSelect = document.querySelector('.order');
     orderSelect.addEventListener('change', () => {
         const term = orderSelect.value;
         //const lol=data.data;
         //const champ=Object.values(lol)
         const filteredChampions = order(allArray, term);
-        console.log(filteredChampions);
         cardStructure(filteredChampions);
     });
 
@@ -139,7 +116,7 @@ window.onload = function() {
     cardStructure(allArray);
 };
 /* ------Página Rol-------- */
-const rolPage=document.getElementById("championsButton");
+const rolPage=document.querySelector(".championsButton");
 rolPage.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
@@ -150,7 +127,7 @@ rolPage.addEventListener("click",e=>{
 });
 
 /* ------Página Estadísticas-------- */
-  const statsPage=document.getElementById("statButton");
+  const statsPage=document.querySelector(".statButton");
 statsPage.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
@@ -168,3 +145,54 @@ aboutLolPage.addEventListener("click",e=>{
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("aboutPage").style.display="block";
 });
+
+/* ------Estadísticas por rol-------- */
+const rolIcon=document.querySelectorAll(".imagen-categoria3 a");
+rolIcon.forEach((el)=>{
+    el.addEventListener('click',()=>{
+        const clickRol=el.getAttribute('data-value');
+        
+        const cardRol=document.querySelector(".infoCard");
+        cardRol.innerHTML="";
+        const rolTittle=document.createElement("h1");
+        rolTittle.innerHTML=`${clickRol}`
+        cardRol.appendChild(rolTittle);
+
+        const filterRol = filterByRol(allArray, clickRol);
+
+        const averageInfoDiv=document.createElement("div");
+        averageInfoDiv.classList="averageInfoDiv";
+        cardRol.appendChild(averageInfoDiv);
+        
+        const attackAvgDiv=document.createElement("div");
+        attackAvgDiv.classList="attackAvgDiv";
+        const attackAvg = averageInfo('attack', filterRol);
+        attackAvgDiv.innerHTML=`Attack: ${attackAvg.toFixed(1)}`;
+        averageInfoDiv.appendChild(attackAvgDiv);
+
+        const defenseAvgDiv=document.createElement("div");
+        defenseAvgDiv.classList="defenseAvgDiv";
+        const defenseAvg = averageInfo('defense', filterRol);
+        defenseAvgDiv.innerHTML=`Defense: ${defenseAvg.toFixed(1)}`;
+        averageInfoDiv.appendChild(defenseAvgDiv);
+
+        const magicAvgDiv=document.createElement("div");
+        magicAvgDiv.classList="magicAvgDiv";
+        const magicAvg = averageInfo('magic', filterRol);
+        magicAvgDiv.innerHTML=`Magic: ${magicAvg.toFixed(1)}`;
+        averageInfoDiv.appendChild(magicAvgDiv);
+
+        const difficultyAvgDiv=document.createElement("div");
+        difficultyAvgDiv.classList="difficultyAvgDiv";
+        const difficultyAvg = averageInfo('difficulty', filterRol);
+        difficultyAvgDiv.innerHTML=`Difficulty: ${difficultyAvg.toFixed(1)}`;
+        averageInfoDiv.appendChild(difficultyAvgDiv);  
+    });
+});
+
+
+
+
+
+
+
