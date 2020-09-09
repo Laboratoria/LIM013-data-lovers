@@ -1,9 +1,10 @@
 # POKÉDEX. Data escogida: POKÉMON 
-![] (images/index html desktop.JPG)
-![] (images/index html - Search by type toggle - desktop.JPG)
-![] (images/index html - Pokémon card - desktop.JPG)
-![] (images/index html - Tablet.JPG)
-![] (images/index html - Celphone.JPG)
+![] (src/images/index html desktop.JPG)
+![] (src/images/index html - Search by type toggle - desktop.JPG)
+![] (src/images/index html - Pokémon card - desktop.JPG)
+![] (src/images/index html - Tablet.JPG)
+![] (src/images/index html - Celphone.JPG)
+
 
 ***
 
