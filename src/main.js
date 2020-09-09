@@ -173,8 +173,7 @@ const showPokDisplay = (dataSelect) => {
             showInformationPok(informationDisplay,index);
             //funcion que siente un cambio en el tamaño de la pantalla
             window.onresize=()=>{
-            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);
-            }  
+            resizeInformation(pokemonArea,pokemonDisplay,informationDisplay);}  
             
         });  
     }
@@ -211,12 +210,10 @@ const showInformationPok = (display,indexSelect) => {
         <section class="pokemonType">
           <p class="sectionTitle">Type:</p> 
           <section class="typePok2">
-            <p class="${arrayPokSelect[0].type[0]}">${arrayPokSelect[0].type.join(`</p>
-            <p class="${arrayPokSelect[0].type[1]}">`)}</p>
+          ${extractTypePok(arrayPokSelect[0].type).join("")}
           </section>
         </section>
         <section class="pokemonBefore">
-          <button class="pkmBefore">&lt</button>
         </section>
         <section class="pokemonSize">
           <p class="sectionTitle">Size:</p>
@@ -237,7 +234,6 @@ const showInformationPok = (display,indexSelect) => {
           ${extractTypePok(arrayPokSelect[0].resistant).join("")}
         </section>        
         <section class="pokemonAfter">
-          <button class="pkmBefore">&gt</button>
         </section>
         <section class="pokemonWeaknesses">
           <p class="sectionTitle">Weaknesses:</p>
@@ -276,9 +272,8 @@ const showInformationPok = (display,indexSelect) => {
     //ocultar contenido de la sección de información
     document.querySelector('.closePokSelectButton').addEventListener('click',()=>{
     display.style.display="none";
-    pokemonDisplay.style.width="100%";
+    pokemonDisplay.style.width="100%";});
 
-});
 }
 
 
