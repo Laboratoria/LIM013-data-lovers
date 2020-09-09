@@ -1,0 +1,420 @@
+    /*Universal style*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        color: #212529;
+        font-family: "Roboto", sans-serif;
+    }
+    /*Container styles*/
+    
+    #container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 96%;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    /*Header styles*/
+    
+    #header {
+        position: fixed;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 80px;
+        width: 96%;
+        background-color: #fff;
+        border-radius: 0px 0px 5px 5px;
+        filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
+        z-index: 1;
+        justify-content: space-between;
+    }
+    
+    #logo {
+        display: flex;
+        flex-flow: row wrap;
+        flex-grow: 1;
+        height: 100%;
+        align-items: center;
+    }
+    
+    #logo img {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+    
+    #logo h1 {
+        font-family: "Press Start 2P", cursive;
+        font-size: 30px;
+        text-shadow: 0px 4px 4px #9e9e9e;
+    }
+    
+    #search {
+        display: flex;
+        flex-flow: row wrap;
+        flex-grow: 1;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+    
+    #search-box {
+        border: 2px #212529 solid;
+        border-radius: 10px;
+    }
+    
+    #search input {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+        border-style: none;
+        font-size: 14px;
+        padding: 0px 10px;
+        color: #212529;
+    }
+    
+    #search i {
+        margin-left: 10px;
+        color: #212529;
+    }
+    
+    #nav-drop {
+        display: flex;
+    }
+    
+    #menu-icon {
+        visibility: hidden;
+    }
+    /*General information  styles*/
+    
+    #information {
+        margin-top: 80px;
+        display: flex;
+        flex-flow: column wrap;
+        width: 99.9%;
+        justify-content: center;
+    }
+    
+    #information iframe {
+        width: 100%;
+        height: 380px;
+        margin-top: 10px;
+        filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
+    }
+    
+    #information h2,
+    #information h3 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #information h2 {
+        margin-top: 30px;
+    }
+    
+    #information h3 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    h3 strong {
+        color: #fe0707;
+    }
+    /*Buttons (ORDER & FILTER) styles*/
+    
+    #button-order-filter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0px 12%;
+        width: 100%;
+    }
+    
+    .btn-order-filter {
+        background-color: #212529;
+        color: white;
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 2px #212529 solid;
+    }
+    
+    .btn-order-filter i {
+        color: white;
+        margin-left: 30px;
+    }
+    
+    #button-order {
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .drop-down {
+        position: absolute;
+        border-radius: 10px;
+        width: 150px;
+        border: 1px #e7e7e9 solid;
+        background-color: #fff;
+    }
+    
+    #ul-filter {
+        position: absolute;
+        display: flex;
+        flex-flow: column wrap;
+        width: 220px;
+        padding-top: 7px;
+        margin-left: -70px;
+        height: 250px;
+    }
+    
+    #ul-filter select {
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    
+    #ul-filter li {
+        width: 50px;
+        cursor: auto;
+    }
+    
+    #button-order:hover>ul {
+        visibility: visible;
+        width: 150px;
+    }
+    
+    #button-filter:hover>#ul-filter {
+        visibility: visible;
+    }
+    
+    #button-order:hover .fa-caret-down {
+        transform: rotate(-180deg);
+    }
+    
+    .drop-down li {
+        height: 30px;
+        padding: 4px 8px;
+        text-align: left;
+        border-bottom: 1px #e7e7e9 solid;
+        color: #6e6d7a;
+        border-radius: 8px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    
+    #button-order ul li i,
+    #ul-filter li i {
+        margin-right: 10px;
+        color: #6e6d7a;
+        font-size: 18px;
+    }
+    
+    #button-order ul li:hover {
+        background-color: #e7e7e9;
+        border-radius: 8px;
+    }
+    
+    #button-order ul,
+    #ul-filter {
+        visibility: hidden;
+    }
+    
+    #ul-filter li,
+    #ul-filter select {
+        width: 90%;
+    }
+    
+    #ul-filter li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 20px;
+        font-size: 18px;
+    }
+    
+    #ul-filter select {
+        margin-top: 10px;
+        height: 38px;
+        border: 1px #b4b4b4 solid;
+        font-size: 14px;
+    }
+    
+    #ul-filter #select-type {
+        height: 100px;
+    }
+    /*Number of pokemons styles*/
+    
+    #p-count {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    #p-count p {
+        font-size: 18px;
+        margin: 15px 12% 0px 0px;
+    }
+    /*List of pokemon styles*/
+    
+    #content {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin: 0px 8%;
+        justify-content: space-between;
+    }
+    
+    .pokemon {
+        margin: 2%;
+        border: 2px #212529 solid;
+        border-radius: 15px;
+    }
+    
+    .img-pokemon {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+    
+    .info-pokemon {
+        display: flex;
+        flex-flow: row wrap;
+        background: #212529;
+        justify-content: space-between;
+        height: 40px;
+        border-radius: 0px 0px 12px 12px;
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    
+    .info-pokemon span {
+        color: white;
+        font-size: 16px;
+        text-transform: capitalize;
+        display: flex;
+        flex-flow: column wrap;
+        flex-basis: 74%;
+    }
+    
+    .info-pokemon .type {
+        width: 22px;
+        height: 22px;
+        margin-top: 5px;
+        justify-content: space-between;
+    }
+    
+    .info-pokemon span strong {
+        color: #9e9e9e;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        margin-top: 2px;
+    }
+    /*Button SEE MORE styles*/
+    
+    #box-more {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #more {
+        width: 200px;
+        height: 50px;
+        background-color: #fe0707;
+        color: #212529;
+        font-family: "Russo One", sans-serif;
+        border: none;
+        border-radius: 10px;
+        margin: 20px 0px;
+        font-size: 22px;
+        transition: all 0.2s ease;
+    }
+    
+    #more:hover {
+        color: #e7e7e9;
+        background-color: #212529;
+    }
+    /*Removing pseudo-class focus with border*/
+    
+    button[type="button"] {
+        outline: none;
+    }
+    
+    input[type="search"]:focus {
+        outline: none;
+        background-color: #fff;
+    }
+    /*footer styles */
+    
+    footer {
+        left: 0;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        background-color: #212529;
+        color: white;
+        text-align: center;
+    }
+    
+    footer i {
+        color: #fe0707;
+    }
+    
+    #menu-icon {
+        visibility: hidden;
+    }
+    
+    #box-icon-menu {
+        display: none;
+    }
+    
+    #labelToFilter {
+        display: flex;
+        width: 100%;
+    }
+    
+    .pToFilter {
+        text-transform: capitalize;
+        margin: 20px 10px 0px 20px;
+        padding: 8px;
+        border: 1.5px #e7e7e9 solid;
+        border-radius: 10px;
+        color: #24282c;
+    }
+    
+    .close {
+        background-color: #e7e7e9;
+        margin: 0px 0px 30px 5px;
+        padding: 2px 4.5px;
+        border-radius: 10px;
+        color: #212529;
+        font-size: 8px;
+        font-weight: bolder;
+        cursor: pointer;
+        text-align: center;
+        border: 1px #c6c6c9 solid;
+    }
+    
+    #content>.no-matches {
+        display: flex;
+        justify-content: center;
+        background-color: #4167A8;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 15px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    
+    .no-matches p {
+        color: #fff;
+    }

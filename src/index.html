@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-sacalable=no" />
+    <title>Pokedex</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="responsive.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--All content begins here-->
+    <div id="container">
+
+        <!--Header containing logo, title and navigation menu-->
+        <header id="header">
+            <div id="logo">
+                <img id="image-logo" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" width="50px" />
+                <h1 id="pokedex">POKEDEX</h1>
+            </div>
+            <div id="nav-drop">
+                <input id="box-icon-menu" type="checkbox" name="menu" />
+                <label id="label-nav" for="box-icon-menu"><i id="menu-icon" class="fas fa-search"></i></label>
+                <div id="search">
+                    <div id="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="search" id="inputSearch" placeholder="Search by number or name" autocomplete="off" spellcheck="false" />
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!--End of header-->
+
+        <!--div that contains general information about the page-->
+        <div id="information">
+            <iframe src="https://www.youtube.com/embed/pChaiOKV1vA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <h2>Find all the information of your favorite pokemon</h2>
+            <h3>Discover the<strong> pokemon’s </strong>world</h3>
+        </div>
+        <!--end of div "information"-->
+
+        <!--Buttons section (order & filter)-->
+        <div id="button-order-filter">
+            <!--only button order-->
+            <div id="button-order">
+                <button type="button" id="order" class="btn-order-filter">
+                    ORDER <i class="fas fa-caret-down"></i>
+                </button>
+                <ul id="order-drop-down" class="drop-down">
+                    <li id="num1_N">
+                        <i class="fas fa-sort-numeric-down"></i>Lower number</li>
+                    <li id="numN_1"><i class="fas fa-sort-numeric-down-alt"></i>Top number</li>
+                    <li id="nameA_Z"><i class="fas fa-sort-alpha-up"></i>A - Z</li>
+                    <li id="nameZ_A"><i class="fas fa-sort-alpha-up-alt"></i>Z - A</li>
+                </ul>
+            </div>
+            <!--End button order-->
+
+            <!--Only button filter-->
+            <div id="button-filter">
+                <button type="button" id="filter" class="btn-order-filter">
+                    FILTER <i class="fas fa-filter"></i>
+                </button>
+                <ul id="ul-filter" class="drop-down">
+                    <li><i class="fas fa-ghost"></i> Type</li>
+                    <select name="select" id="select-type" size="6">
+                        <option value="bug">Bug</option>
+                        <option value="dark">Dark</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="electric">Electric</option>
+                        <option value="fairy">Fairy</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="fire">Fire</option>
+                        <option value="flying">Flying</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="grass">Grass</option>
+                        <option value="ground">Ground</option>
+                        <option value="ice">Ice</option>
+                        <option value="normal">Normal</option>
+                        <option value="poison">Poison</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="rock">Rock</option>
+                        <option value="steel">Steel</option>
+                        <option value="water">Water</option>
+                    </select>
+                    <li><i class="fas fa-location-arrow"></i> Region</li>
+                    <select name="select" id="select-region" size="2">
+                        <option value="kanto">Kanto</option>
+                        <option value="johto">Johto</option>
+                    </select>
+                </ul>
+
+            </div>
+            <!--End button filter-->
+        </div>
+
+        <!--End of buttons section (order & filter)-->
+        <div id="labelToFilter">
+        </div>
+        <!--paragraph with pokemon number on screen-->
+        <div id="p-count">
+            <p id="count">251 Pokemons found</p>
+        </div>
+        <!--End of paragraph with pokemon number on screen-->
+
+        <!--All the pokemon with their information-->
+        <div id="content"></div>
+        <!--End div all the pokemon with their information-->
+
+        <!--Button to see more pokemon-->
+        <div id="box-more">
+            <button type="button" id="more">See more</button>
+        </div>
+        <!--End button to see more-->
+    </div>
+    <footer>Vivian & Sharon with <i class="fas fa-heart"></i> and a lot of <i class="fas fa-coffee"></i> </footer>
+    <!--All content ends here-->
     <script src="main.js" type="module"></script>
-  </body>
+    <script src="https://kit.fontawesome.com/0451b6060d.js" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

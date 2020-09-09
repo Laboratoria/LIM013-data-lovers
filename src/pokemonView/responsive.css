@@ -1,0 +1,60 @@
+@media (max-width: 370px) {
+    #logo h1 {
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 854px) {
+    #table-fast-attacks,
+    #table-special-attacks {
+        height: 18%;
+    }
+    #cp-candy h5 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 666px) {
+    #table-fast-attacks,
+    #table-special-attacks {
+        height: 14%;
+    }
+}
+
+@media (max-width: 612px) {
+    #container {
+        height: auto;
+    }
+    #data-pokemon {
+        width: 100%;
+    }
+    #about {
+        display: none;
+    }
+    #overview-stat-abilitie {
+        width: 100%;
+        height: auto;
+    }
+    #name {
+        margin-bottom: 20px;
+    }
+    #img-pokemon,
+    .img-pokemon-img,
+    #shine {
+        width: 150px;
+    }
+    #num {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #height-weight {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    #cp-candy h5 {
+        font-size: 12px;
+    }
+}
