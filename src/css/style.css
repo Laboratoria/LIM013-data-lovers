@@ -513,6 +513,9 @@ footer i:hover {
   top: -20px;
 }
 
+#canvas{
+  background: white;
+}
 
 /*--------------MEDIA-QUERYS---------------*/
 @media screen and (max-width:768px) {

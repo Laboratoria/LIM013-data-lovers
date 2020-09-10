@@ -114,3 +114,59 @@ inputLevel.addEventListener('change', (e) => {
   getStats(arrayLegends, document.querySelector('#select02').value, "#legends_list_derecha")
 });
 
+/*CANVAS */
+let stats = ['hpperlevel','hpActual','mpperlevel','mpActual','attackdamage','attackActual']
+let color= Chart.helpers.color;
+window.chartColors = {
+  red: 'rgb(255, 99, 132)',
+  orange: 'rgb(255, 159, 64)',
+  yellow: 'rgb(255, 205, 86)',
+  green: 'rgb(75, 192, 192)',
+  blue: 'rgb(54, 162, 235)',
+  purple: 'rgb(153, 102, 255)',
+  grey: 'rgb(201, 203, 207)'
+};
+let barChartData ={
+  labels: ['hpActual', 'mpActual', 'attackActual'],
+  datasets:[{
+    label: 'Campeón 1',
+    backgroundColor: color(window.chartColors.orange,).alpha(0.5).rgbString(),
+    borderColor:window.chartColors.orange,
+    borderWidth:1,
+    data:[
+      order.hpperLevel(arrayLegends, level, 0),
+      order.mpperLevel(arrayLegends, level, 0),
+      order.attackperLevel(arrayLegends, level, 0)
+    ]
+  },{
+    label: 'Campeón 2',
+    backgroundColor: color(window.chartColors.blue,).alpha(0.5).rgbString(),
+    borderColor:window.chartColors.blue,
+    borderWidth:1,
+    data:[
+      order.hpperLevel(arrayLegends, level, 1),
+      order.mpperLevel(arrayLegends, level, 1),
+      order.attackperLevel(arrayLegends, level, 1)
+    ]
+  }]
+};
+
+window.onload = function() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+  window.myBar = new Chart(ctx, {
+    //type: 'pie',-- en caso quieras cambiar e tipo de gráfico, solo se cambia el type
+    type: 'bar',
+    data: barChartData,
+    options: {
+      responsive: true,
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Bar Chart'
+      }
+    }
+  });
+
+};
