@@ -11,12 +11,19 @@ export const searchData=(pokemonData,condition)=>{
   let filterSearch=pokemonData.filter(pokemonfilter=>{
 
     if(isNaN(condition)){ //Si la condición no es un número
-      return pokemonfilter.name===condition;
+      if(condition==='nidoran'){
+        return pokemonfilter.name.includes(condition);
+        }
+        else
+        {
+          return pokemonfilter.name===condition;
+        }
     } 
     else{
       return pokemonfilter.num===condition;
     }
   })
+  // console.log(filterSearch);
   return filterSearch;
 };
 
@@ -31,22 +38,11 @@ export const sortData=(pokemonData, sortBy, sortOrder)=>{
         function(a,b){
           if(a.name>b.name){return 1;}
           else if(a.name<b.name){return -1;}
-          return 0;
+          // return 0;
           }
-      );
-    }
+      ); }
     else if(sortOrder==="valueFour"){//Z-A
-      filterOrder=pokemonData.sort(
-        function(a,b){
-          if(a.name<b.name){return 1;}
-          else if(a.name>b.name){return -1;}
-          return 0;
-          }
-      );
-    }
-  
-  
-  
+      filterOrder=pokemonData.reverse(); }
   }
   //Ordenar por Número:
   else if (sortBy==="number"){
@@ -55,8 +51,7 @@ export const sortData=(pokemonData, sortBy, sortOrder)=>{
         function(a,b){
           return b.num-a.num;
           }
-      );
-    }
+      );}
     else  if(sortOrder==="valueFive"){//1-251
       filterOrder=pokemonData.sort(
         function(a,b){
@@ -64,9 +59,33 @@ export const sortData=(pokemonData, sortBy, sortOrder)=>{
           }
       );
     }
+
+    else  if(sortOrder==="optionStrongest"){//MaxCP
+      filterOrder=pokemonData.sort(
+        function(a,b){
+          return b.stats["max-cp"]-a.stats["max-cp"];
+          }
+      ); }
+
+      else  if(sortOrder==="optionDefense"){//MaxDef
+        filterOrder=pokemonData.sort(
+          function(a,b){
+            return b.stats["base-defense"]-a.stats["base-defense"];
+            }
+        ); }
+
+
+
+
+
   }
-  
-  
   return filterOrder;
-  
+  };
+
+
+// Funcion para Calcular Caramelos
+  export const candyCalculate=(candyPokemon, candyCost)=>{
+    
+      return  candyCost-candyPokemon;
+
   };
