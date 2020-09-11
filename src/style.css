@@ -205,6 +205,21 @@ font-size: 20px;
 	margin:5px;
 	padding-left: 30px;
 }
+
+.imagen-categoria3{
+	width: 120px;
+    height: 100px;
+	margin: 5%;
+}
+.imagen-categoria3 p{
+	display:none;
+}
+.imagen-categoria3:hover p{
+	color: #DBB74C;
+	font-family: 'Marcellus SC', serif;
+	line-height: 38px;
+	display:inline-flex;
+}
 .categoria a:hover{
     text-shadow: 0 0 1px #f5db8d,0 0 3px #f5db8d,0 0 5px #f5db8d;
 }
@@ -314,43 +329,58 @@ font-size: 16px;
 	display: inline-block;
 	align-items: center;
 }
-
+#statsRolPage{
+    width: 100%;
+    height: 100%;
+}
 .rolIcon{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 5%;
+    padding: 3% 20%;
 }
 .rolIcon img{
     width: 100%;
     height: 100%;
-    padding: 0%;
+	padding: 0%;
 }
-.rolIcon p{
-color: #DBB74C;
-font-family: 'Marcellus SC', serif;
-display:inline-flex;
+/*.rolIcon p{
+	color: #DBB74C;
+	font-family: 'Marcellus SC', serif;
+	line-height: 38px;
+	display:inline-flex;
+}*/
+
+.infoCard{
+    width: 80%;
+    position: relative;
+    border: 2px solid  #DBB74C;
+    border-radius: 5px;
+    margin: 2% 10%;
+}
+.infoCard h1{
+    font-family: 'Marcellus', serif;
+    font-size: 65px;
+    filter: drop-shadow(0px 4px 4px rgba(0 0 0 0.25));
 }
 
-.imagen-categoria3{
-    display: block;
-}
-.infoCard{
-    padding: 20px;
-    position: relative;
+.infoCard p{
+    font-family: 'Marcellus', serif;
+    font-size: 30px;
+    margin:2%
 }
 .averageInfoDiv{
     display: grid;
     grid-gap: 1.5rem;
+    text-align: center;
     margin-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    border: 2px solid  #DBB74C;
-    border-radius: 5px;
+    margin: 0% 20%;
 }
 .averageInfoDiv div{
     font-family: 'Marcellus', serif;
     color:#ffffff;
-    font-size: 30px;
+    font-size: 40px;
 }
 footer {
     background: #000000;
@@ -386,17 +416,7 @@ footer p{
 	.menuSuperior .btnMenu i{
 		display:block;
 	}
-	.menuLateral.responsive{	
-		background-color:#333333;
-		width: 70%;
-		float:right;
-	}
-	h1{
-		font-size: 47px;
-	}
-	.htext {
-		font-size: 20px;
-	}
+
 	#imgChampions{
 		grid-template-columns: auto auto;
 	}
@@ -417,15 +437,16 @@ footer p{
     .menuLateral.responsive ul li{
         list-style: none;
     }
-    #imgChampions{
-        grid-template-columns: auto;
-    }
     h1{
         font-size: 47px;
     }
     .htext {
         font-size: 20px;
-    }
+	}
+	.rolIcon{
+		display:grid;
+		grid-template-columns: auto auto auto;
+}
 }
 @media (min-width: 720px) and (max-width: 980px) {
 	#imgChampions{
@@ -458,5 +479,9 @@ footer p{
 	}
 	.htext {
 		font-size: 20px;
+	}
+	.rolIcon{
+		display:grid;
+		grid-template-columns: auto auto auto;
 	}
 }

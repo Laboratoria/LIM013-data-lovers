@@ -111,13 +111,22 @@ const orderSelect = document.querySelector('.order');
         cardStructure(filteredChampions);
     });
 
-
 window.onload = function() { 
     cardStructure(allArray);
 };
+
 /* ------Página Rol-------- */
 const rolPage=document.querySelector(".championsButton");
 rolPage.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="block";
+    document.getElementById("aboutPage").style.display="none";
+    
+});
+const rolPage2=document.querySelector(".championsButton2");
+rolPage2.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
@@ -135,10 +144,26 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("statsRolPage").style.display="block";
     document.getElementById("aboutPage").style.display="none";
 });
+const statsPage2=document.querySelector(".statButton2");
+statsPage2.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("statsRolPage").style.display="block";
+    document.getElementById("aboutPage").style.display="none";
+});
 
 /* ------Página ¿Qué es LOL?------- */
-  const aboutLolPage=document.getElementById("lolButton");
+  const aboutLolPage=document.querySelector(".lolButton");
 aboutLolPage.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("aboutPage").style.display="block";
+});
+const aboutLolPage2=document.querySelector(".lolButton");
+aboutLolPage2.addEventListener("click",e=>{
     e.preventDefault();
     document.getElementById("home").style.display="none";
     document.getElementById("championPage").style.display="none";
@@ -157,6 +182,10 @@ rolIcon.forEach((el)=>{
         const rolTittle=document.createElement("h1");
         rolTittle.innerHTML=`${clickRol}`
         cardRol.appendChild(rolTittle);
+
+        const divDescription=document.createElement("p");
+        divDescription.innerHTML=rolDescription[clickRol];
+        cardRol.appendChild(divDescription);
 
         const filterRol = filterByRol(allArray, clickRol);
 
