@@ -73,11 +73,6 @@ export const sortData=(pokemonData, sortBy, sortOrder)=>{
             return b.stats["base-defense"]-a.stats["base-defense"];
             }
         ); }
-
-
-
-
-
   }
   return filterOrder;
   };

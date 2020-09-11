@@ -25,14 +25,14 @@
               <li><a class="menu" id="aboutOption">About</a></li>
               <li><a class="menu" id="pokemonOption">Pokémon</a></li>
               <select class="menu-top"><a class="menu">Top</a>
-                <option value="topSelected" selected>TOP</option>
+                <option value="topSelected" disabled selected>TOP</option>
                 <option class="options-top" value="optionStrongest">Top 10 Strongest</option>
                 <option class="options-top" value="optionDefense">Top 10 Defense</option>
               </select>
               <li class="hide-top"><a class="topOption">Top</a>
                 <ul>
-                  <li><a class="options-top" value="optionStrongest">Top 10 Strongest</a></li>
-                  <li><a class="options-top" value="optionDefense">Top 10 Defense</a></li>
+                  <li><a class="options-top" id="optionStrongest">Top 10 Strongest</a></li>
+                  <li><a class="options-top" id="optionDefense">Top 10 Defense</a></li>
                 </ul>
               </li>
               <li><a class="menu" id="calculateOption">Calculate</a></li>
@@ -105,16 +105,17 @@
       </section>
 
       <section id="calculate">
+        <h2>Calculate candies</h2>
+        <p>Calculate how many candies need your Pókemon to evolve</p>
+        <div class="optionCalculate"><br>
         <select name="all-pokemon" id="allPokemon" class="allPokemon">
-
-        </select>
-        <input type="number" id="candyPokemon" class="candyPokemon">
+        </select><br>
+        <input placeholder="Current candies amount" type="number" id="candyPokemon" class="candyPokemon"><br>
         <button id="calculateBtn">Calculate</button>
+        <p>Candies' amount that your Pókemon need is:</p>
         <p id="candy"></p>
+      </div>
       </section>
-
-
-
     </div>
 
     <footer>

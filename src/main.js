@@ -11,7 +11,8 @@ const loadPokemon=document.getElementById("loadPokemon");
 const calculateSection = document.getElementById("calculate");
 const calculateOption = document.getElementById("calculateOption");
 const topSection = document.getElementById("top");
-const topOption=document.getElementsByClassName("menu-top")[0];
+const topStrongest=document.getElementById("optionStrongest");
+const topDefense=document.getElementById("optionDefense");
 
 
   pokemonSection.classList.add("hide");
@@ -26,6 +27,7 @@ const openPokemonSection = () => {
   searchInput.classList.remove("hide");
   calculateSection.classList.add("hide");
   topSection.classList.add("hide");
+  selectionType.value = 'all';
   displayPokemon(sortData(pokemonData,'number','valueFive').slice(0,cont));
 }
 
@@ -53,15 +55,6 @@ const openCalculateSection = () => {
 
 calculateOption.addEventListener("click", openCalculateSection); 
 
-const openTopSection = () => {
-  pokemonSection.classList.add("hide");
-  searchInput.classList.add("hide");
-  aboutSection.classList.add("hide");
-  calculateSection.classList.add("hide");
-  topSection.classList.remove("hide");
-  }
-
-topOption.addEventListener("click", openTopSection); 
 // Menu Responsive// 
 
 const menuBurger= document.getElementsByClassName("toggleBtn")[0];
@@ -81,9 +74,9 @@ const displayMenuBurger = () => {
 const containerRoot=document.getElementById("rootPokemon");
 //Contenedor Principal Modal
 const containerModal=document.getElementById("rootPokemonModal");
-//Contenedor Principal 'root'
+//Contenedor Principal Top 'root'
 const containerRootTop=document.getElementById("rootPokemonTop");
-//Contenedor Principal Modal
+//Contenedor Principal Modal Top
 const containerModalTop=document.getElementById("rootPokemonModalTop");
 
 // Data Pokemon
@@ -95,7 +88,18 @@ const selectionTop= document.querySelector('.menu-top');
 
   selectionTop.addEventListener('change', (t) => {
   let topResult;
-  if(t.target.value==='optionStrongest'){
+
+  pokemonSection.classList.add("hide");
+  searchInput.classList.add("hide");
+  aboutSection.classList.add("hide");
+  calculateSection.classList.add("hide");
+  topSection.classList.remove("hide");
+
+if(t.target.value==='topSelected'){
+  topResult=sortData(pokemonData,'number',t.target.value);
+  titleTop.innerHTML="Top 10 Strongest"; 
+}
+  else if(t.target.value==='optionStrongest'){
     topResult=sortData(pokemonData,'number',t.target.value);
     titleTop.innerHTML="Top 10 Strongest"; 
     }
@@ -107,6 +111,42 @@ const selectionTop= document.querySelector('.menu-top');
     selectionTop.value = 'topSelected';
     displayPokemonTop(topResult.slice(0,10)) ;
   });
+
+//Top 10 Menu Responsive
+const opentopStrongest = () => {
+  pokemonSection.classList.add("hide");
+  searchInput.classList.add("hide");
+  aboutSection.classList.add("hide");
+  calculateSection.classList.add("hide");
+  topSection.classList.remove("hide");
+
+  const topResult=sortData(pokemonData,'number','optionStrongest');
+  titleTop.innerHTML="Top 10 Strongest"; 
+
+  selectionType.value = 'all';
+  selectionTop.value = 'topSelected';
+  displayPokemonTop(topResult.slice(0,10)) ;
+  }
+
+topStrongest.addEventListener("click", opentopStrongest); 
+
+const opentopDefense = () => {
+  pokemonSection.classList.add("hide");
+  searchInput.classList.add("hide");
+  aboutSection.classList.add("hide");
+  calculateSection.classList.add("hide");
+  topSection.classList.remove("hide");
+
+  const topResult=sortData(pokemonData,'number','optionDefense');
+  titleTop.innerHTML="Top 10 Defense"; 
+
+  selectionType.value = 'all';
+  selectionTop.value = 'topSelected';
+  displayPokemonTop(topResult.slice(0,10));
+  }
+
+topDefense.addEventListener("click", opentopDefense); 
+
 
 //Ordenar
 const selectionOrder = document.querySelector('.sort');
@@ -190,8 +230,6 @@ displayPokemon(searchResult) ;
   }
 
 });
-
-
 
 //Al dar clic en el campo para buscar se limpiara el campo y mostrarán todos los pokemones:
 //const searchInput=document.getElementById('Search');
@@ -390,9 +428,6 @@ else
       <div class="img-container">
       <img src="${img}" alt="${name}">
       </div>
-      
-      
-      
       `
 
       pokemonElement.innerHTML=cardPokemon;
@@ -537,16 +572,9 @@ Close.addEventListener("click", closeModal);
 
 /* */
 
-
-
 });
 
 };
-
-
-
-
-
 
 
 //Funcion para Mostrar los tipos:
@@ -690,7 +718,6 @@ const objnextEvolution = pokemons.evolution["next-evolution"];
 /* - Fin Next Evolución - */
 
 
-
 let cont=8; //Iniciamos contador en 8
 
 // displayPokemon(pokemonData);//Mostrar Todos Los Pokemones
@@ -724,7 +751,6 @@ let displaycandyCost = (i)=>{
   };
     /* -Candy Cost Next Evolución  - */
 
-  
   
 const pokemonToCalculate = () => {
 
@@ -762,7 +788,6 @@ calculateBtn.addEventListener("click", () => {
     document.getElementById("candy").innerHTML= candyCalculate(candyPokemon,selectionCandy);
 }
 });
-
 
 
 // *********  Top 10 Display *******
@@ -954,9 +979,6 @@ else
       <div class="img-container">
       <img src="${img}" alt="${name}">
       </div>
-      
-      
-      
       `
 
       pokemonElement.innerHTML=cardPokemon;
