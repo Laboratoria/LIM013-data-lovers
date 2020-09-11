@@ -734,7 +734,14 @@ footer{
     margin: 40px 0px;
     outline: 0;
 }
+
+.optionCalculate{
+    display: inline-block;
+    background-color: #a0b4cc;
+    padding: 40px;
+    border-radius: 10px;
 }
+
 
 
 /***Media Queries***/
