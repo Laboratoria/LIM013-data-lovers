@@ -105,9 +105,10 @@ inputclass.addEventListener("keyup",e=>{
 const orderSelect = document.querySelector('.order');
     orderSelect.addEventListener('change', () => {
         const term = orderSelect.value;
-        //const lol=data.data;
-        //const champ=Object.values(lol)
+
+   
         const filteredChampions = order(allArray, term);
+
         cardStructure(filteredChampions);
     });
 
@@ -122,9 +123,16 @@ rolPage.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="block";
-    
+    document.getElementById("playProfessional").style.display="none"; 
 });
-
+const rolPageLat=document.querySelector(".championsButton2");
+rolPageLat.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="block"; 
+    document.getElementById("playProfessional").style.display="none"; 
+});
 /* ------Página Estadísticas-------- */
   const statsPage=document.querySelector(".statButton");
 statsPage.addEventListener("click",e=>{
@@ -132,19 +140,52 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("championPage").style.display="none";
     document.getElementById("statsRolPage").style.display="block";
+    document.getElementById("playProfessional").style.display="none"; 
 });
+const statsPageLat=document.querySelector(".statButton2");
+statsPageLat.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("statsRolPage").style.display="block";
+    document.getElementById("playProfessional").style.display="none"; 
+});
+/* ------Página Juega Pro-------- */
+const playProPage=document.querySelector(".playPro");
+playProPage.addEventListener("click",(e)=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("playProfessional").style.display="block";  
+})
+const playProPage1=document.querySelector(".playPro2");
+playProPage1.addEventListener("click",(e)=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("playProfessional").style.display="block";  
+})
 
 /* ------Estadísticas por rol-------- */
 const rolIcon=document.querySelectorAll(".imagen-categoria3 a");
 rolIcon.forEach((el)=>{
+
     el.addEventListener('click',()=>{
         const clickRol=el.getAttribute('data-value');
         
         const cardRol=document.querySelector(".infoCard");
         cardRol.innerHTML="";
+
+
         const rolTittle=document.createElement("h1");
         rolTittle.innerHTML=`${clickRol}`
         cardRol.appendChild(rolTittle);
+
+        const divDescription=document.createElement("p");
+        divDescription.innerHTML=rolDescription[clickRol];
+        cardRol.appendChild(divDescription);
 
         const filterRol = filterByRol(allArray, clickRol);
 
