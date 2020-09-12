@@ -1,9 +1,13 @@
 // estas funciones son de ejemplo
 
-export const filtrarTipo = (filtertype, datapoke) => {
+const metodos= {
 
-  console.log("filtratTipo")
+filtrarPokemon: function(data, type){
+  const result= data.filter(e =>(e.type[0]===type || e.type[1]=== type));
+  return result;
+  }
 };
 
+export default metodos;
 
 
