@@ -1,4 +1,4 @@
-import { orderData} from '../src/data.js';
+import { orderData, filterDataEgg} from '../src/data.js';
 import { inputA_Z, outputA_Z,outputZ_A} from './testsort.js';
 
 
@@ -22,3 +22,4 @@ describe('anotherExample', () => {
     expect(orderData(inputA_Z, "z-a")).toEqual(outputZ_A);
   });
 });
+
