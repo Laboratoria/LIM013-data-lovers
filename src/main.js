@@ -17,6 +17,7 @@ const dataCarte = (dataPokemon) => {
 		let imgUrl = dataPokemon[i].img;
 		let tipo = dataPokemon[i].type;
 		let dataNew = document.getElementById('dataPoke');
+		let footer = document.getElementById('footer');
 
 		//AGREGANDO DIV POKEMON
 		let labelPokemon = document.createElement('div');
@@ -87,7 +88,5 @@ selectFilter[0].addEventListener('change', filtros);
 selectFilter[1].addEventListener('change', filtros);
 selectFilter[2].addEventListener('change', filtros);
 ordenarSelectBox.addEventListener('change', filtros);
-
-
 
 //FIN DE ORDENANDO Y FILTRANDO LA DATA
