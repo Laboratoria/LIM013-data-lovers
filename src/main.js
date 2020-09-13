@@ -8,7 +8,7 @@ const toggle = document.querySelector(".btnMenu");
 toggle.addEventListener("click",()=>{
     var menuLat = document.querySelector(".menuLateral");
     if (menuLat.className === "menuLateral") {
-      menuLat.className += "responsive";
+      menuLat.className += " responsive";
     } else {
       menuLat.className = "menuLateral";
     }
