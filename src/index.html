@@ -11,7 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/1ad419416d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +29,7 @@
         </a>
       </div>
       <ul class="barsNavigation" id="barsNavigation">
-        <li><a href="#">¿Qué es LOL?</a></li>
+        <li><a href="#" class="lolButton">¿Qué es LOL?</a></li>
         <li><a href="#" class="championsButton">Campeones</a></li>
         <li><a href="#" class="statButton">Estadísticas por rol</a></li>
         <li><a href="#" class="playPro">¡Juega Profesionalmente!</a></li>
@@ -38,15 +40,15 @@
     </div>
     <div class="menuLateral">
       <ul class="barsNavigation2" id="barsNavigation2">
-        <li><a href="#">¿Qué es LOL?</a></li>
+        <li><a href="#" class="lolButton2">¿Qué es LOL?</a></li>
         <li><a href="#" class="championsButton2">Campeones</a></li>
         <li><a href="#" class="statButton2">Estadísticas por rol</a></li>
         <li><a href="#" class="playPro2">¡Juega Profesionalmente!</a></li>
       </ul>
     </div>
   </header>
-  <main>
 
+  <main>
     <div id="home">
       <img src="images/lol2.png" alt="league">
       <a href="javascript:void(0);"
@@ -75,7 +77,6 @@
             <a href="#" data-value="Support"> Soporte</a>
           </div>
         </div>
-
         <div class="form-groups">
           <label>Ordenar: </label>
           <select class="order">
@@ -90,48 +91,97 @@
 
     <div id="statsRolPage" style="display: none;">
       <h1 class="tittle">ROLES </h1>
+      <p>Selecciona el rol de tu preferencia y descubre los datos más importantes que te servirá para escoger al mejor
+        campeón</p>
       <div class="rolIcon">
         <div class="imagen-categoria3">
-          <p>Asesino</p>
+          <p>ASESINO</p>
           <a href="#" data-value="Assassin"><img src="images/roles/asesino.png"></a>
         </div>
         <div class="imagen-categoria3">
-          <p>Tanque</p>
+          <p>TANQUE</p>
           <a href="#" data-value="Tank"><img src="images/roles/tanque.png"></a>
         </div>
         <div class="imagen-categoria3">
-          <p>Luchador</p>
-          <a href="#" data-value="Fighter"><img src="images/roles/luchador.png">
+          <p>LUCHADOR</p>
+          <a href="#" data-value="Fighter"> <img src="images/roles/luchador.png">
           </a>
         </div>
         <div class="imagen-categoria3">
-          <p>Mago</p>
-          <a href="#" data-value="Mage"><img src="images/roles/mago.png">
+          <p>MAGO</p>
+          <a href="#" data-value="Mage"> <img src="images/roles/mago.png">
           </a>
         </div>
         <div class="imagen-categoria3">
-          <p>soporte</p>
-          <a href="#" data-value="Support"><img src="images/roles/soporte.png">
+          <p>SOPORTE</p>
+          <a href="#" data-value="Support"> <img src="images/roles/soporte.png">
           </a>
         </div>
         <div class="imagen-categoria3">
-          <p>Tirador</p>
-          <a href="#" data-value="Marksman"><img src="images/roles/tirador.png">
+          <p>TIRADOR</p>
+          <a href="#" data-value="Marksman"> <img src="images/roles/tirador.png">
           </a>
         </div>
       </div>
-      <div class="infoCard"></div>
+      <div class=" infoCard"></div>
     </div>
+
+    <div id="aboutPage" style="display: none;">
+      <div class="gifContainer"><img src="https://i.imgur.com/yTbHn5S.gif"></div>
+      <div class="categoriaAboutPage" id="categoriaAboutPage">
+        <a href="#" class="aboutGameButton">Sobre el Juego</a>
+        <a href="#" class="aboutObjectiveButton">Objetivo</a>
+        <a href="#" class="aboutChampionButton">Campeones y Roles</a>
+        <a href="#" class="aboutMapButton">El Mapa</a>
+      </div>
+      <div id="aboutGame" class="infoLol">
+        <img src="images/riot5.jpg">
+        <p>League of Legends fue creado por la empresa estadunidense Riot Games Inc.
+          <br /><br />pertenece al género Multiplayer Online Battle Arena (MOBA),
+          cuya traducción al español es 'Arena de batalla para varios jugadores en línea'.
+          <br /><br />comúnmente emplean el término 'MOBA' para referirse a esta
+          categoría de videojuegos, y 'LOL' para referirse a League of Legends.
+        </p>
+      </div>
+      <div id="aboutObjective" class="infoLol" style="display: none;">
+        <img src="images/info/victory.jpg">
+        <p>LoL posee una curva de aprendizaje explosiva de inicio, que ayuda a los jugadores más inexpertos y dificulta la progresión de los más experimentados debido a dos conceptos clave: micro y macro.
+          <br/><br/>El objetivo principal es conquistar el
+          territorio enemigo, mediante acciones colaborativas y de contienda
+          en batallas sucesivas para asesinar a sus contrincantes, destruir las
+          construcciones defensivas y la base principal del equipo contrario.
+        <br/><br/>Los jugadores más expertos están acostumbrados a formas de jugar en constante cambio, fundamentalmente por el entorno competitivo y la presencia de multitud de streamers o youtubers que experimentan con diferentes builds (itemización de personajes) y composiciones de equipo, siendo éstos un ejemplo imitable para la comunidad y generando modas.
+        </p>
+      </div>
+      <div id="aboutChampions" class="infoLol" style="display: none;">
+        <img src="images/info/champions.png">
+        <p>LoL cuenta con cientos de campeones distintos, cada uno con una historia, un estilo de juego y unas
+          habilidades
+          diferentes. Hay personajes que atacan cuerpo a cuerpo, otros a distancia, algunos que resisten más daño o
+          incluso que el daño que hacen lo realizan con habilidades. Prueba con varios en tus primeras partidas hasta
+          que
+          descubras cuál se adecúa mejor a tu estilo.
+        </p>
+      </div>
+      <div id="aboutMap" class="infoLol" style="display: none;">
+        <img src="images/info/map1.png">
+        <img src="images/info/map2.PNG">
+        <img src="images/info/map3.PNG">
+        
+      </div>
+    </div>
+
     <div id="playProfessional" style="display: none;">
       <h3>CAMPEONATO MUNDIAL DE LEAGUE OF LEGENDS</h3>
       <div class="bodyPro">
-        <p>Es un torneo anual de League of Legends organizado por Riot Games y que supone la culminación de cada temporada. Los equipos compiten por el título de campeón, la Copa del Invocador, y un premio de un 1 millón de dólares.1​ En 2018, las finales fueron vistas por 99,6 millones de personas, rompiendo el récord de la edición de 2017.2​ El torneo ha sido ampliamente elogiado por sus actuaciones ceremoniales.</p>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/OXLj87_N4MM?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <p>Es un torneo anual de League of Legends organizado por Riot Games y que supone la culminación de cada
+          temporada. Los equipos compiten por el título de campeón, la Copa del Invocador, y un premio de un 1 millón de
+          dólares.1​ En 2018, las finales fueron vistas por 99,6 millones de personas, rompiendo el récord de la edición
+          de 2017.2​ El torneo ha sido ampliamente elogiado por sus actuaciones ceremoniales.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OXLj87_N4MM?start=10" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
       </div>
-    
-
   </main>
 
   <footer>
@@ -140,12 +190,12 @@
       <a href="https://www.instagram.com/leagueoflegends/?hl=es-la"><i class="fab fa-instagram"></i></a>
       <a href="https://twitter.com/lollatam"><i class="fab fa-twitter"></i></a>
       <a href="https://www.youtube.com/user/RiotGamesInc"><i class="fab fa-youtube"></i></a>
-
       <p>@2020 Laboratoria.Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>

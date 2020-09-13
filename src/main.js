@@ -8,11 +8,11 @@ const toggle = document.querySelector(".btnMenu");
 toggle.addEventListener("click",()=>{
     var menuLat = document.querySelector(".menuLateral");
     if (menuLat.className === "menuLateral") {
-      menuLat.className += " responsive";
+      menuLat.className += "responsive";
     } else {
       menuLat.className = "menuLateral";
     }
-  })
+  });
 
   /* -------Estructura de la tarjeta  ---------- */
 const allChampion=data.data;
@@ -112,10 +112,63 @@ const orderSelect = document.querySelector('.order');
         cardStructure(filteredChampions);
     });
 
-
 window.onload = function() { 
     cardStructure(allArray);
 };
+/* ------Página Lol-------- */
+const lolPage=document.querySelector(".lolButton");
+lolPage.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="none";
+    document.getElementById("playProfessional").style.display="none";
+    document.getElementById("aboutPage").style.display="block"; 
+});
+const lolPageLat=document.querySelector(".lolButton2");
+lolPageLat.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("home").style.display="none";
+    document.getElementById("statsRolPage").style.display="none";
+    document.getElementById("championPage").style.display="none"; 
+    document.getElementById("playProfessional").style.display="none"; 
+    document.getElementById("aboutPage").style.display="block";
+});
+
+/*-----Opciones de Página Lol----*/
+const lolPage1=document.querySelector(".aboutGameButton");
+lolPage1.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("aboutGame").style.display="inline-flex";
+    document.getElementById("aboutObjective").style.display="none";
+    document.getElementById("aboutChampions").style.display="none";
+    document.getElementById("aboutMap").style.display="none";
+});
+const lolPage2=document.querySelector(".aboutObjectiveButton");
+lolPage2.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("aboutGame").style.display="none";
+    document.getElementById("aboutObjective").style.display="inline-flex";
+    document.getElementById("aboutChampions").style.display="none";
+    document.getElementById("aboutMap").style.display="none";
+});
+const lolPage3=document.querySelector(".aboutChampionButton");
+lolPage3.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("aboutGame").style.display="none";
+    document.getElementById("aboutObjective").style.display="none";
+    document.getElementById("aboutChampions").style.display="inline-flex";
+    document.getElementById("aboutMap").style.display="none";
+});
+const lolPage4=document.querySelector(".aboutMapButton");
+lolPage4.addEventListener("click",e=>{
+    e.preventDefault();
+    document.getElementById("aboutGame").style.display="none";
+    document.getElementById("aboutObjective").style.display="none";
+    document.getElementById("aboutChampions").style.display="none";
+    document.getElementById("aboutMap").style.display="inline-flex";
+});
+
 /* ------Página Rol-------- */
 const rolPage=document.querySelector(".championsButton");
 rolPage.addEventListener("click",e=>{
@@ -123,7 +176,8 @@ rolPage.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="block";
-    document.getElementById("playProfessional").style.display="none"; 
+    document.getElementById("playProfessional").style.display="none";
+    document.getElementById("aboutPage").style.display="none";
 });
 const rolPageLat=document.querySelector(".championsButton2");
 rolPageLat.addEventListener("click",e=>{
@@ -131,7 +185,8 @@ rolPageLat.addEventListener("click",e=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="block"; 
-    document.getElementById("playProfessional").style.display="none"; 
+    document.getElementById("playProfessional").style.display="none";
+    document.getElementById("aboutPage").style.display="none"; 
 });
 /* ------Página Estadísticas-------- */
   const statsPage=document.querySelector(".statButton");
@@ -141,6 +196,7 @@ statsPage.addEventListener("click",e=>{
     document.getElementById("championPage").style.display="none";
     document.getElementById("statsRolPage").style.display="block";
     document.getElementById("playProfessional").style.display="none"; 
+    document.getElementById("aboutPage").style.display="none";
 });
 const statsPageLat=document.querySelector(".statButton2");
 statsPageLat.addEventListener("click",e=>{
@@ -149,6 +205,7 @@ statsPageLat.addEventListener("click",e=>{
     document.getElementById("championPage").style.display="none";
     document.getElementById("statsRolPage").style.display="block";
     document.getElementById("playProfessional").style.display="none"; 
+    document.getElementById("aboutPage").style.display="none";
 });
 /* ------Página Juega Pro-------- */
 const playProPage=document.querySelector(".playPro");
@@ -157,7 +214,8 @@ playProPage.addEventListener("click",(e)=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="none";
-    document.getElementById("playProfessional").style.display="block";  
+    document.getElementById("playProfessional").style.display="block"; 
+    document.getElementById("aboutPage").style.display="none"; 
 })
 const playProPage1=document.querySelector(".playPro2");
 playProPage1.addEventListener("click",(e)=>{
@@ -165,7 +223,8 @@ playProPage1.addEventListener("click",(e)=>{
     document.getElementById("home").style.display="none";
     document.getElementById("statsRolPage").style.display="none";
     document.getElementById("championPage").style.display="none";
-    document.getElementById("playProfessional").style.display="block";  
+    document.getElementById("playProfessional").style.display="block"; 
+    document.getElementById("aboutPage").style.display="none"; 
 })
 
 /* ------Estadísticas por rol-------- */
