@@ -1,46 +1,34 @@
 /* Nuestro argumento es como empieza esta funcion, es el example */
-import filters from './data.js';
+import metodos from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(data);
-const infoPokemon = data.pokemon;
-const divData= document.getElementById("dataCompleta")
+const arrPokemon = data.pokemon;
+const divData= document.getElementById("dataCompleta");
 
-function showPokemon(poke) {
-    const pokeTypes = poke.type;
-    console.log(pokeTypes);
-    const elementPokemon = pokeTypes.map((type) => {
-        return `<p>${type}</p>`
-    }).join("")
 
-  return `
-      <div class='dataPoke' data-num='${poke.num}'>     
-          <p class='poke-num'>#${poke.num}</p>
-          <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'>${poke.name.toUpperCase()}</p> 
-          <div class='poke-type'>${elementPokemon}</div>
-      </div>
-      `
-}
-divData.innerHTML = `
-    ${infoPokemon.map(showPokemon).join("")}
+const cardCrear = (poke) => {
+    return`
+    <div class="dataPoke" id="dataPoke">
+        <h2> #${poke.num}</h2> 
+        <img src=${poke.img}> 
+        <p> ${poke.name}</>
+       <button> Info </button>
+    </div>
     `;
-
-const callingType = document.querySelector("#Type");
-    callingType.addEventListener("change", (e) => {
-        const valueType = e.target.value;
-        if (valueType !== infoPokemon) {
-            const showPokeTypes = filters.filtrarPokemon(infoPokemon,valueType)
-            console.log(showPokeTypes);
-            }
-            divData.innerHTML = `
-            ${infoPokemon.map(showPokemon).join("")}
-            `;
-    }
-    
-    );
+  };
+    divData.innerHTML= arrPokemon.map(cardCrear).join(" ");
 
 
+    const type= document.querySelector("#Type");
+    type.addEventListener("change", (e)=> {
+    const result=e.target.value;
+    const prueba=metodos.filtrarPokemon(arrPokemon,result);
+        console.log(prueba);
+    divData.innerHTML="";
         
+        
+    //cardCrear(metodos.filtrarPokemon(arrPokemon, result));
+});
