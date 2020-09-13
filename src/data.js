@@ -1,13 +1,9 @@
 // estas funciones son de ejemplo
-
-const metodos= {
-
-filtrarPokemon: function(data, type){
-  const result= data.filter(e =>(e.type[0]===type || e.type[1]=== type));
-  return result;
-  }
+const filters = {
+    filtrarPokemon: function (data, type) {
+        const pokeFilter = data.filter (e => (e.type[0] === type || e.type[1] === type));
+        return pokeFilter;             
+    }
 };
-
-export default metodos;
-
+export default filters; 
 
