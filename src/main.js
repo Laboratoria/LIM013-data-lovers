@@ -22,6 +22,20 @@ const cardCrear = (poke) => {
     divData.innerHTML= arrPokemon.map(cardCrear).join(" ");
 
 
+const callingType = document.querySelector("#Type");
+    callingType.addEventListener("change", (e) => {
+        const valueType = e.target.value;
+        if (valueType !== infoPokemon) {
+            const showPokeTypes = filters.filtrarPokemon(infoPokemon,valueType)
+            console.log(showPokeTypes);
+            }
+            divData.innerHTML = `
+            ${infoPokemon.map(showPokemon).join("")}
+            `;
+    }
+    
+    );    
+
     const type= document.querySelector("#Type");
     type.addEventListener("change", (e)=> {
     const result=e.target.value;
@@ -32,3 +46,4 @@ const cardCrear = (poke) => {
         
     //cardCrear(metodos.filtrarPokemon(arrPokemon, result));
 });
+
