@@ -13,7 +13,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position:fixed;
+    z-index: 100;
+
 }
+
 header ul{
     list-style: none;
 }
@@ -61,7 +65,7 @@ header ul{
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
-
+    margin-top:10vh;
 }
 
 /*#championPage{
@@ -69,17 +73,34 @@ header ul{
 	background-attachment: fixed;
 
 }*/
+#aboutPage .gifContainer{
+    background-color: rgb(0, 0, 0);
+}
+#aboutPage .infoLol{
+    display:inline-flex;
+    padding:5% 10%;
 
+}
+#aboutPage .infoLol img{
+    padding:0% 5% 0% 0%;
+    width: 30%;
+    height: 30%;
+    margin-top:0%;
+}
+#aboutPage .infoLol p{
+    font-size: 18px;
+}
 #aboutPage img{
-	width: 100%;
-	height: 100%;
-	padding: 0%;
-	border:2px solid #15e915;
+	width: 30%;
+    height: 30%;
+    padding: 0% 0% 0% 35%;
+    margin-top: 5%;
 }
 .categoriaAboutPage{
-	width: 100vh;
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
+    background-color: #0e0d0d;
 }
 .categoriaAboutPage a {
 	color: #EFB810;
@@ -88,9 +109,9 @@ header ul{
     font-family:'Marcellus SC', serif;
     width: 100%;
 	text-align: center;
-	padding: 18px 10px;
 	align-items: center;
-	justify-content: space-evenly;
+    justify-content: space-evenly;
+    padding:5% 0%;
 }
 .categoriaAboutPage a:hover {
 	color: rgb(0, 0, 0);
@@ -101,7 +122,7 @@ main{
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
-	min-height: 80vh;
+	min-height: 90vh;
 	display: flex;
 	align-items: center;
 }
@@ -165,10 +186,10 @@ color: #DBB74C;
 h1{
 text-align: center;
 font-family: 'Marcellus SC', serif;
-
 font-size: 90px;
-color: #EFB810;;
+color: #EFB810;
 text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
+margin-top: 10vh;
 }
 label{
 font-family: 'Marcellus SC', serif;
@@ -207,9 +228,10 @@ font-size: 20px;
 }
 
 .imagen-categoria3{
-	width: 120px;
-    height: 100px;
-	margin: 5%;
+	width: 130px;
+	height: 130px;
+	text-align: center;
+	margin: 2%;
 }
 .imagen-categoria3 p{
 	display:none;
@@ -217,8 +239,9 @@ font-size: 20px;
 .imagen-categoria3:hover p{
 	color: #DBB74C;
 	font-family: 'Marcellus SC', serif;
-	line-height: 38px;
 	display:inline-flex;
+	font-size: 23px;
+	text-shadow:0 0 5px #997406,0 0 10px #c59c21,0 0 15px #997406;
 }
 .categoria a:hover{
     text-shadow: 0 0 1px #f5db8d,0 0 3px #f5db8d,0 0 5px #f5db8d;
@@ -331,25 +354,26 @@ font-size: 16px;
 }
 #statsRolPage{
     width: 100%;
-    height: 100%;
+	height: 100%;
+}
+#statsRolPage>p{
+	font-size :22px;
+	font-family: 'Marcellus SC', serif;
+	text-shadow:0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #07dffc;
+	margin: 2% 20% 0%;
 }
 .rolIcon{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     padding: 3% 20%;
 }
 .rolIcon img{
-    width: 100%;
-    height: 100%;
+    width: 130px;
+    height: 130px;
 	padding: 0%;
 }
-/*.rolIcon p{
-	color: #DBB74C;
-	font-family: 'Marcellus SC', serif;
-	line-height: 38px;
-	display:inline-flex;
-}*/
 
 .infoCard{
     width: 80%;
@@ -359,14 +383,15 @@ font-size: 16px;
     margin: 2% 10%;
 }
 .infoCard h1{
-    font-family: 'Marcellus', serif;
-    font-size: 65px;
+    font-family: 'Marcellus SC', serif;
+    font-size: 40px;
     filter: drop-shadow(0px 4px 4px rgba(0 0 0 0.25));
+    margin-top:0%;
 }
 
 .infoCard p{
-    font-family: 'Marcellus', serif;
-    font-size: 30px;
+    font-family: 'Marcellus SC', serif;
+    font-size: 25px;
     margin:2%
 }
 .averageInfoDiv{
@@ -375,20 +400,48 @@ font-size: 16px;
     text-align: center;
     margin-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0% 20%;
+	margin: 0% 20%;
+	font-family: 'Marcellus SC', serif;
 }
 .averageInfoDiv div{
-    font-family: 'Marcellus', serif;
+    font-family: 'Marcellus SC', serif;
     color:#ffffff;
-    font-size: 40px;
+	font-size: 25px;
+	text-shadow:0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
+}
+
+h3{
+    width:70%;
+    padding: 1% 15%;
+    text-align: center;
+    font-family: 'Marcellus SC', serif;
+    font-size: 50px;
+    color: #EFB810;
+    text-shadow: 0px 0px 8px #F2C94C;
+}
+#playProfessional>h3{
+    margin-top:10vh;
+}
+.bodyPro{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:90%;
+    margin:0% 3%;
+}
+.bodyPro p{
+    font-style: normal;
+    font-weight: normal;
+    font-size :25px;
+    margin:6% 3%;
+    width:50%;
 }
 footer {
     background: #000000;
     padding:10px 0px;
     width: 100%;
     bottom:0%;
-    
- 
+
     /* Flexbox */
     display: flex;
     flex-wrap:wrap;
@@ -417,11 +470,89 @@ footer p{
 		display:block;
 	}
 
-	#imgChampions{
+	#imgChampions, .categoriaAboutPage{
 		grid-template-columns: auto auto;
+	}
+	.menuLateral.responsive{	
+        background-color:#000000;
+        opacity:0.9;
+        position: absolute;
+		width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+    }
+    .menuLateral.responsive ul li{
+        list-style: none;
+    }
+    h1{
+        font-size: 47px;
+    }
+    .htext {
+        font-size: 20px;
+    }
+    .infoCard p{
+        font-size: 15px;
+    }
+
+    .averageInfoDiv div{
+        font-size: 18px;
+    }
+    h3{
+        font-size:35px;
+    }
+    .bodyPro p{
+        font-size :15px;
+    }
+    .bodyPro iframe{
+        width: 460px;
+        height: 215px;
+	}
+	.rolIcon{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	#statsRolPage>p{
+			font-size :18px;
+	}
+}
+@media (min-width: 720px) and (max-width: 980px) {
+    #imgChampions{
+        grid-template-columns: auto auto auto;
+    };
+    .averageInfoDiv div{
+    font-size: 18px;
+    };
+    h3{
+    font-size: 35px;
+    };
+    .bodyPro{
+        align-items: center;
+    }
+    .bodyPro p{
+        font-size: 20px;
+	}
+	.rolIcon{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	#statsRolPage>p{
+		font-size :18px;
+}
+}
+
+@media (max-width: 414px){
+	.barsNavigation a{
+		display:none;
 	}
 	.menuSuperior .btnMenu i{
 		display:block;
+	}
+	.menuSuperior.responsive .btnMenu i{
+		position: block;
+		right: 0;
+		top: 0;
 	}
 	.menuLateral.responsive{	
         background-color:#000000;
@@ -437,51 +568,43 @@ footer p{
     .menuLateral.responsive ul li{
         list-style: none;
     }
+    #imgChampions{
+        grid-template-columns: auto;
+    }
     h1{
         font-size: 47px;
     }
     .htext {
         font-size: 20px;
+    }
+    .infoCard p{
+        font-size: 10px;
+    }
+    .averageInfoDiv div{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 25px;
+
+    }
+    .bodyPro{
+
+        flex-direction: column;
+        align-items: center;
+    }
+    .bodyPro p, #aboutPage .infoLol p{
+        font-size :10px;
+        width:80%;
+    }
+    .bodyPro iframe{
+        width: 300px;
+        height: 215px;
 	}
-	.rolIcon{
-		display:grid;
-		grid-template-columns: auto auto auto;
+	.rolIcon, .categoriaAboutPage{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	#statsRolPage>p{
+		font-size :18px;
 }
-}
-@media (min-width: 720px) and (max-width: 980px) {
-	#imgChampions{
-		grid-template-columns: auto auto auto;
-	}
-}
-@media (max-width: 414px){
-	.barsNavigation a{
-		display:none;
-	}
-	.menuSuperior .btnMenu i{
-		display:block;
-	}
-	.menuSuperior.responsive .btnMenu i{
-		position: block;
-		right: 0;
-		top: 0;
-	}
-	.menuLateral.responsive{	
-		background-color:#333333;
-		width: 70%;
-		float:right;
-	
-	}
-	#imgChampions{
-		grid-template-columns: auto;
-	}
-	h1{
-		font-size: 47px;
-	}
-	.htext {
-		font-size: 20px;
-	}
-	.rolIcon{
-		display:grid;
-		grid-template-columns: auto auto auto;
-	}
 }
