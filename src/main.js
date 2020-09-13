@@ -40,7 +40,6 @@ const callingType = document.querySelector("#Type");
             `;
     }
     
-    );
+    );    
 
-
-        
+    <p>Conflicto</p>     
