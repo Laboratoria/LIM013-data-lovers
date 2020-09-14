@@ -130,7 +130,10 @@ main {
 	letter-spacing: 1px;
 	text-transform: capitalize;
 }
-
+.type {
+	background: lightsalmon;
+	border-radius: 5px;
+}
 /* ------------------------------ESTILOS DEL FOOTER */
 
 footer {

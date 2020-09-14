@@ -1,25 +1,27 @@
-// FUNCION ORDENAR DATA
+// FUNCION ORDENAR DATA A-Z / Z-A
 export const orderData = (data, condition) => {
-  let result;
-  if (condition === 'a-z') {
-    result = data.sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      }
-    return -1;
-    });
-  } else {
-    result = data.sort((a, b) => {
-      if (a.name < b.name) {
-        return 1;
-      }
-      return -1;
-    });
-  }
-  return result;
+	let result;
+	if (condition === 'a-z') {
+		result = data.sort((a, b) => {
+			if (a.name > b.name) {
+				return 1;
+			}
+			return -1;
+		});
+	} else {
+		result = data.sort((a, b) => {
+			if (a.name < b.name) {
+				return 1;
+			}
+			return -1;
+		});
+	}
+	return result;
 };
 
-//FIN DE FUNCION ORDENAR DATA
+//FIN DE FUNCION ORDENAR DATA A-Z / Z-A
+
+//FUNCION FILTRAR POR TIPO GENERACION Y HUEVOS
 export const filterDataType = (arrayFilter, typePokemon) => {
 	if (typePokemon !== '' && typePokemon !== 'all') {
 		arrayFilter = arrayFilter.filter(
@@ -46,6 +48,4 @@ export const filterDataEgg = (arrayFilter, eggpokemon) => {
 	return arrayFilter;
 };
 
-//FIN DE FUNCION FILTRAR
-
-
+//FIN DE FUNCION FILTRAR POR TIPO GENERACION Y HUEVOS
