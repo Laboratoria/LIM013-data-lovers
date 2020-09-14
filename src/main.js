@@ -17,8 +17,7 @@ const dataCarte = (dataPokemon) => {
 		let imgUrl = dataPokemon[i].img;
 		let tipo = dataPokemon[i].type;
 		let dataNew = document.getElementById('dataPoke');
-		let footer = document.getElementById('footer');
-
+		
 		//AGREGANDO DIV POKEMON
 		let labelPokemon = document.createElement('div');
 		labelPokemon.classList.add('pokemon');
