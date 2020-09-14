@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>The World League of Legends</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="imagenes/l.ico" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo_icon">
+        <div class="logo">
+          <img src="imagenes/logo.png">
+        </div>
+        <div id="icon" class="icon">
+          <span>&#9776;</span>
+        </div>
+      </div>
+      <nav class="links openMenu" id="links">
+        <a href="index.html">HOME</a>
+        <a href="campeones.html">CHAMPIONS</a>
+        <a href="estadisticas.html" class="active">STATS</a>
+      </nav>
+    </header>
+    <section class="legends_container">
+      <div class="inputs">
+        <select id="select01">
+          <option selected class="option">Champion 01</option>
+        </select>
+        <input type="number" id="number" min="1" max="18" placeholder="Input the Level">
+        <select id="select02">
+          <option selected class="option">Champion 02</option>
+        </select>
+      </div>
+
+      <div class="legends_list" id="legends_list_izquierda">
+        <!-- <div class="legends_stats1">
+           <p class="name">Aatrox</p>
+           <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="">
+         </div>
+         <div class="legends_stats1">
+           <p class="name">Aatrox</p>
+           <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="">
+         </div>  -->
+      </div>
+      <div><canvas id="canvas"></canvas></div>
+      <div class="legends_list" id="legends_list_derecha">
+        <!-- <div class="legends_stats1">
+           <p class="name">Aatrox</p>
+           <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="">
+         </div>
+         <div class="legends_stats1">
+           <p class="name">Aatrox</p>
+           <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="">
+         </div>  -->
+      </div>
+
+    </section>
+  </div>
+  <script src="stats.js" type="module"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+</body>
+
+</html>

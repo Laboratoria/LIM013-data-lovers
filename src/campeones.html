@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The World League of Legends</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="imagenes/l.ico" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo_icon">
+        <div class="logo">
+          <img src="imagenes/logo.png">
+        </div>
+        <div id="icon" class="icon">
+          <span>&#9776;</span>
+        </div>
+      </div>
+      <nav class="links openMenu" id="links">
+        <a href="index.html">HOME</a>
+        <a href="campeones.html" class="active">CHAMPIONS</a>
+        <a href="estadisticas.html">STATS</a>
+      </nav>
+    </header>
+
+
+    <section class="search">
+      <div class="search1">
+        <input type="text" id="inputSearch" placeholder="Search a ...">
+      </div>
+      <div class="responsive">
+        <select id="filter">
+          <option value="All">ALL</option>
+          <option value="Assassin">ASSASSIN</option>
+          <option value="Fighter">FIGHTER</option>
+          <option value="Mage">MAGE</option>
+          <option value="Marksman">MARKSMAN</option>
+          <option value="Support">SUPPORT</option>
+          <option value="Tank">TANK</option>
+        </select>
+
+        <select class="daño_de_ataque">
+          <option value="">Attack damage</option>
+          <option value="rango1">125-230</option>
+          <option value="rango2">231-335</option>
+          <option value="rango3">336-440</option>
+          <option value="rango4">441-545</option>
+          <option value="rango5">546-650</option>
+        </select>
+
+        <select name="order" id="order">
+          <option value="asc">Sort A-Z</option>
+          <option value="desc">Sort Z-A</option>
+        </select>
+      </div>
+    </section>
+    <section id="legends_container" class="legends_container">
+      <!-- <div class="legends">
+          <img class="img-container" src="" alt="">
+          <div class="name"></div>
+        </div> -->
+    </section>
+    <section class="overlay" id="overlay">
+      <div class="container-img">
+        <button id="btn-closed"><i class="fas fa-times"></i></button>
+        <img src="imagenes/notFound.gif">
+      </div>
+      <p class="description"></p>
+      <div class="info">
+        <p id="attack"></p>
+        <p id="defense"></p>
+        <p id="magic"></p>
+      </div>
+    </section>
+    <section class="pagenumbers" id="pagination">
+
+    </section>
+
+  </div>
+  <script src="./main.js" type="module"></script>
+</body>
+
+</html>
