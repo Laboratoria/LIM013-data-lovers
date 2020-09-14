@@ -6,7 +6,7 @@ export const orderData = (data, condition) => {
       if (a.name > b.name) {
         return 1;
       }
-      return -1;
+    return -1;
     });
   } else {
     result = data.sort((a, b) => {
@@ -46,7 +46,6 @@ export const filterDataEgg = (arrayFilter, eggpokemon) => {
 	return arrayFilter;
 };
 
-/// solucionando conflictos
-
-
 //FIN DE FUNCION FILTRAR
+
+

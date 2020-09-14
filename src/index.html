@@ -7,83 +7,81 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- --------------------------------------------AGRUPANDO TODO -->
-		<div class="agrupar-todo">
+		<header class="header">
 			<img src="img/logo.png" alt="Logo de Infopoke" class="logo" />
-			<!-- ----------------------------------------------MENU DE NAVEGACION-->
-			<header>
-				<nav>
-					<ul>
-						<li class="caja">
-							<select name="ordenar" id="ordenar" class="ordenar">
-								<option value="">Ordenalos</option>
-								<option value="all">Todos</option>
-								<option value="a-z">A-Z</option>
-								<option value="z-a">Z-A</option>
-								<option value="ascendingOrder">Num ↑</option>
-								<option value="descendingOrder">Num ↓</option>
-								<option value="ascendingOrder">PC ↑</option>
-								<option value="descendingOrder">PC ↓</option>
-								<option value="ascendingOrder">PS ↑</option>
-								<option value="descendingOrder">PS ↓</option>
-							</select>
-						</li>
-						<li class="caja">
-							<select name="seleccionar" id="tipo" class="seleccionar">
-								<option value="">Tipo</option>
-								<option value="all">Todos</option>
-								<option value="grass">Planta</option>
-								<option value="poison">Veneno</option>
-								<option value="fire">Fuego</option>
-								<option value="water">Agua</option>
-								<option value="normal">Normal</option>
-								<option value="ground">Tierra</option>
-								<option value="fighting">Lucha</option>
-								<option value="rock">Roca</option>
-								<option value="ice">Hielo</option>
-								<option value="flying">Volador</option>
-								<option value="bug">Bicho</option>
-								<option value="electric">Eléctrico</option>
-								<option value="fairy">Hada</option>
-								<option value="psychic">Psíquico</option>
-								<option value="ghost">Fantasma</option>
-								<option value="dragon">Dragón</option>
-							</select>
-						</li>
-						<li class="caja">
-							<select name="generacion" id="generacion" class="seleccionar">
-								<option value="">Generacion</option>
-								<option value="all">Todos</option>
-								<option value="kanto">Kanto</option>
-								<option value="johto">Johto</option>
-							</select>
-						</li>
-						<li class="caja">
-							<select name="Huevos" id="huevos" class="seleccionar">
-								<option value="">Huevos</option>
-								<option value="all">Todos</option>
-								<option value="2 km">2 km</option>
-								<option value="5 km">5 km</option>
-								<option value="7 km">7 km</option>
-								<option value="10 km">10 km</option>
-							</select>
-						</li>
-					</ul>
-					<input
-						type="text"
-						name="buscar"
-						class="input"
-						placeholder="Buscalos por nombre y numero..."
-					/>
-				</nav>
-			</header>
-			<!-- --------------------------------------------------CONTENIDO PRINCIPAL -->
-			<main>
-				<div id="dataPoke" class="dataPoke"></div>
-			</main>
-			<!-- ----------------------------------------------PIE DE PAGINA -->
-		</div>
-		<footer></footer>
+			
+			<div class="select">
+				<select name="ordenar" id="ordenar" class="ordenar">
+					<option value="">Ordenar</option>
+					<option value="all">Todos</option>
+					<option value="a-z">A-Z</option>
+					<option value="z-a">Z-A</option>
+					<option value="ascendingOrder">Num ↑</option>
+					<option value="descendingOrder">Num ↓</option>
+					<option value="ascendingOrder">PC ↑</option>
+					<option value="descendingOrder">PC ↓</option>
+					<option value="ascendingOrder">PS ↑</option>
+					<option value="descendingOrder">PS ↓</option>
+				</select>
+
+				<select name="seleccionar" id="tipo" class="seleccionar">
+					<option value="">Tipo</option>
+					<option value="all">Todos</option>
+					<option value="grass">Planta</option>
+					<option value="poison">Veneno</option>
+					<option value="fire">Fuego</option>
+					<option value="water">Agua</option>
+					<option value="normal">Normal</option>
+					<option value="ground">Tierra</option>
+					<option value="fighting">Lucha</option>
+					<option value="rock">Roca</option>
+					<option value="ice">Hielo</option>
+					<option value="flying">Volador</option>
+					<option value="bug">Bicho</option>
+					<option value="electric">Eléctrico</option>
+					<option value="fairy">Hada</option>
+					<option value="psychic">Psíquico</option>
+					<option value="ghost">Fantasma</option>
+					<option value="dragon">Dragón</option>
+				</select>
+
+				<select name="generacion" id="generacion" class="seleccionar">
+					<option value="">Generación</option>
+					<option value="all">Todos</option>
+					<option value="kanto">Kanto</option>
+					<option value="johto">Johto</option>
+				</select>
+
+				<select name="Huevos" id="huevos" class="seleccionar">
+					<option value="">Huevos</option>
+					<option value="all">Todos</option>
+					<option value="2 km">2 km</option>
+					<option value="5 km">5 km</option>
+					<option value="7 km">7 km</option>
+					<option value="10 km">10 km</option>
+				</select>
+
+				<input
+					type="text"
+					name="buscar"
+					class="input"
+					placeholder="Buscalos por nombre y numero..."
+				/>
+			</div>
+			
+		</header>
+		<!-- --------------------------------------------------CONTENIDO PRINCIPAL -->
+		<main>
+			<div id="dataPoke" class="dataPoke"></div>
+		</main>
+		<!-- ----------------------------------------------PIE DE PAGINA -->
+
+		<br class= "footer" id="footer">
+			<p class="copy">&copy; 
+		InfoPoke 2020 - Todos los derechos - Aurelis & Estefania</p>
+			
+
+		</footer>
 		<!-- ------------------------------ENLAZANDO CON ARCHIVOS JAVA SCRIPT -->
 		<script src="main.js" type="module"></script>
 	</body>
