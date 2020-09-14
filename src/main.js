@@ -7,7 +7,7 @@ import data from './data/pokemon/pokemon.js';
 console.log(data);
 const infoPokemon = data.pokemon;
 const divData= document.getElementById("dataCompleta")
-const selecType= document.getElementById("fullTypes")
+const fullTypes= document.getElementById("fullTypes")
 const ordenPoke= document.getElementById("ordenPoke")
 
 function showPokemon(poke) {

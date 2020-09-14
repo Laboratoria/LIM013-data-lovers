@@ -12,8 +12,8 @@ const filters = {
     //     const pokeFilter = data.filter (e => (e.type[0] === type || e.type[1] === type));
     //     return pokeFilter;             
     // }
-    
-    orderPokemonUpward : (cadaObjeto) => {
+
+    orderPokemonAz : (cadaObjeto) => {
         cadaObjeto.sort(function(a,b){
               let x = a.name;
               let y = b.name;
