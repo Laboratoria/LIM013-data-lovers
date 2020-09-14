@@ -52,8 +52,7 @@ Para definir las historia de usuario entrevistamos a 5 usuarios de Pokemon Go , 
 
 ## 7. Organización del trabajo
 
-Para la organizacion y distribucion de trabajo en equipo utilizamos la herramienta trello [aqui] (https://trello.com/b/xexFDDtJ/infopoke)
-
+Para la organizacion y distribucion de trabajo en equipo utilizamos la herramienta trello [aqui](https://trello.com/b/xexFDDtJ/infopoke)
 ## 8. Testeo de Usabilidad
 
 - Primer testeo Testeo realizado a 3 posibles usuarios con el prototipo mínimo viable
