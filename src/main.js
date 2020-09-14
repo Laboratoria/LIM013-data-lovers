@@ -8,7 +8,8 @@ console.log(data);
 const infoPokemon = data.pokemon;
 const divData= document.getElementById("dataCompleta")
 const fullTypes= document.getElementById("fullTypes")
-const ordenPoke= document.getElementById("ordenPoke")
+const orderPoke= document.getElementById("orderPoke")
+const selectRegion= document.getElementById("selectRegion")
 
 function showPokemon(poke) {
     const pokeTypes = poke.type;
@@ -29,7 +30,7 @@ function showPokemon(poke) {
 divData.innerHTML = `
     ${infoPokemon.map(showPokemon).join("")}
     `;
-//orden por tipo
+//filtrar por tipo
 fullTypes.addEventListener("change", () => {
         let typePokemon = infoPokemon;
         let selectType = fullTypes.value;
@@ -43,24 +44,38 @@ fullTypes.addEventListener("change", () => {
         `;   
     });
 
-
-//Ordenar en orden alfabetico
-ordenPoke.addEventListener("change",()=>{
-
-    let selectOrden = ordenPoke.value;
+//filtrar por orden alfabetico
+orderPoke.addEventListener("change", ()=>{
+    let selectOrden = orderPoke.value;
     let pokedexFilter = infoPokemon; 
-    ///-------------------- Ordenar--------------------------
     if (selectOrden === 'up') {
-        filters.orderPokemonAz(pokedexFilter)
+        filters.sortByNameUpward(pokedexFilter)
     }
     if (selectOrden === 'down') {
-        filters.orderPokemonAz(pokedexFilter).reverse();
+        filters.sortByNameUpward(pokedexFilter).reverse();
     }
-    //----------------- Mostrar pokemones ordenados --------------
     divData.innerHTML = `
         ${infoPokemon.map(showPokemon).join("")}
         `;    
+
 });
 
-
-
+//filtrar por region
+selectRegion.addEventListener("change",()=>{
+    let regionSelect= selectRegion.value;
+    let infoRegion= infoPokemon;
+    let selectTipo= fullTypes.value
+    if(selectTipo !== 'infoPokemon'){
+        regionSelect = filters.filterRegion(infoPokemon,selectTipo);
+    }
+    let regionPoke=regionSelect;
+    if (regionSelect !== 'infoPokemon') {
+        regionPoke= filters.filterRegion(infoPokemon, regionSelect);
+    }
+   
+    divData.innerHTML = `
+    ${regionPoke
+        .map(showPokemon)
+        .join("")}
+    `;
+});

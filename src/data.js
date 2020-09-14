@@ -7,23 +7,24 @@ const filters = {
         }); 
         return cadaObjeto;
       },
-    
-    // filtrarPokemon: function (data, type) {
-    //     const pokeFilter = data.filter (e => (e.type[0] === type || e.type[1] === type));
-    //     return pokeFilter;             
-    // }
-
-    orderPokemonAz : (cadaObjeto) => {
-        cadaObjeto.sort(function(a,b){
+    sortByNameUpward : (Objetouno) => {
+        Objetouno.sort(function(a,b){
               let x = a.name;
               let y = b.name;
               if (x < y){return -1;}
               if (x > y){return 1;}
               return 0;
-        })
-          //console.log(myArray);
-          return cadaObjeto;
-    },    
-};
-export default filters; 
+        });
+          return Objetouno;
+    },  
+  
+    filterRegion: (data, selectRegio) => {
+        const objetoRegion = data.filter((objetoRegion)=> {
+            return objetoRegion.generation.name.includes(selectRegio);
+        });
+        return objetoRegion;
+    },
 
+}
+
+export default filters; 
