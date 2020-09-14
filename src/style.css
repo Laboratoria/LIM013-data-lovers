@@ -14,6 +14,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position:fixed;
+    z-index: 100;
+    height: 45px;
 }
 header ul{
     list-style: none;
@@ -183,6 +186,7 @@ font-family: 'Marcellus SC', serif;
 font-size: 90px;
 color: #EFB810;
 text-shadow: 0 0 5px #c59c21,0 0 10px #c59c21,0 0 15px #c59c21;
+margin-top: 12vh;
 }
 label{
 font-family: 'Marcellus SC', serif;
@@ -396,6 +400,7 @@ h3{
     font-size: 50px;
     color: #EFB810;
     text-shadow: 0px 0px 8px #F2C94C;
+    margin-top: 10%;
 }
 .bodyPro{
     display:flex;
@@ -437,20 +442,24 @@ footer p{
     
 }
 /*Media queries*/
-@media (min-width: 415px) and (max-width:719px){
+@media (min-width: 415px) and (max-width:759px){
 	.barsNavigation a{
 		display:none;
 	}
 	.menuSuperior .btnMenu i{
 		display:block;
     }
+
     #imgChampions, .categoriaAboutPage{
-		grid-template-columns: auto auto;
+        grid-template-columns: auto auto;
+        
 	}
-	.menuLateral.responsive{	
+    .menuLateral.responsive{	
         background-color:#000000;
         opacity:0.9;
-        position: absolute;
+        position: fixed;
+        z-index: 100;
+        margin-top: 65px;
 		width: 100%;
         display:flex;
         flex-direction: column;
@@ -463,11 +472,15 @@ footer p{
     h1{
         font-size: 47px;
     }
+    #aboutPage img{
+        margin-top: 15%;
+    }
     .htext {
         font-size: 20px;
     }
     #imgChampions{
         grid-template-columns: auto auto;
+        padding:4% 0%;
     } 
     .categoria a{
         font-size: 15px;
@@ -481,6 +494,7 @@ footer p{
     }
     h3{
         font-size:35px;
+        margin-top:15%;
     }
     .bodyPro p{
         font-size :15px;
@@ -497,9 +511,10 @@ footer p{
 			font-size :18px;
 	}
 }
-@media (min-width: 720px) and (max-width: 980px) {
+@media (min-width: 760px) and (max-width: 980px) {
     #imgChampions{
         grid-template-columns: auto auto auto;
+        padding:4% 0%;
     };
     .averageInfoDiv div{
     font-size: 25px;
@@ -529,19 +544,23 @@ footer p{
 	.menuSuperior .btnMenu i{
 		display:block;
 	}
-	.menuLateral.responsive{	
+.menuLateral.responsive{	
         background-color:#000000;
         opacity:0.9;
-        position: absolute;
+        position: fixed;
+        z-index: 100;
+        margin-top: 65px;
 		width: 100%;
         display:flex;
         flex-direction: column;
         align-items: center;
         text-align:center;
-
     }
     .menuLateral.responsive ul li{
         list-style: none;
+    }
+    #aboutPage img{
+        margin-top: 15%;
     }
     #imgChampions{
         grid-template-columns: auto;
@@ -564,7 +583,7 @@ footer p{
     }
     h3{
         font-size: 25px;
-
+        margin-top:15%;
     }
     .bodyPro{
 
