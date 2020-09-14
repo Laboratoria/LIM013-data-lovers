@@ -34,7 +34,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background: cornsilk;
+    background: #2A3073;
     box-shadow: 0 4px 25 -22px #000;
     z-index: 2;
     
@@ -49,10 +49,72 @@ header{
 
  .logo{
      height: 80px;
+     width: 80px;
      display: flex;
      justify-content: center;
      align-items: center;
+    
  }
+
+
+
+/* social bar */
+
+.social-bar {
+	position: fixed;
+	right: 0;
+	top: 35%;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.icon {
+	color: white;
+	text-decoration: none;
+	padding: .7rem;
+	display: flex;
+	transition: all .5s;
+}
+
+.icon-facebook {
+	background: #2E406E;
+}
+
+.icon-twitter {
+	background: #339DC5;
+}
+
+.icon-youtube {
+	background: #E83028;
+}
+
+.icon-instagram {
+background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );;
+}
+
+.icon:first-child {
+	border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child {
+	border-radius: 0 0 0 1rem;
+}
+
+.icon:hover {
+	padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+
+
 .menu{
     height: 80px; 
 }
@@ -73,6 +135,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+.textoLogo{
+color: #DEDEDE ;
 }
 
 .container{
@@ -87,7 +153,7 @@ header{
 }
 
 select{
-    background: #756;
+    background:#DFE5F2;
     width: 8cm;
     height: 1cm;
     

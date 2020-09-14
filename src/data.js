@@ -7,25 +7,24 @@ const filters = {
         }); 
         return cadaObjeto;
       },
-
-      sortByNameUpward : (cadaObjeto) => {
-        cadaObjeto.sort(function(a,b){
+    sortByNameUpward : (Objetouno) => {
+        Objetouno.sort(function(a,b){
               let x = a.name;
               let y = b.name;
               if (x < y){return -1;}
               if (x > y){return 1;}
               return 0;
         });
-          console.log(cadaObjeto);
-          return cadaObjeto;
-    },   
-    
-    filterGeneration : (data, selectGeneration) => {
-        const cadaObjeto = data.filter((cadaObjeto)=> {
-            return cadaObjeto.generation.name.includes(selectGeneration);
+          return Objetouno;
+    },  
+  
+    filterRegion: (data, selectRegio) => {
+        const objetoRegion = data.filter((objetoRegion)=> {
+            return objetoRegion.generation.name.includes(selectRegio);
         });
-        return cadaObjeto;
+        return objetoRegion;
     },
 
-};  
+}
+
 export default filters; 

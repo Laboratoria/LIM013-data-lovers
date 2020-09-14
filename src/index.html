@@ -5,33 +5,30 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css"/>
   </head>
-  
   <body>
     <header>
       <div class="header-content">
-
         <div class="logo">
-          <h1>Pokémon<b>GO!</b></h1>
+          <h1 class="textoLogo">Pokémon<b>GO!</b></h1>
         </div>
         <div class="menu">
            <nav>
              <ul>
-               <li><a href="index.html">INICIO</a></li>
-               <li><a href="https://vandal.elespanol.com/guias/guia-pokemon-go/como-jugar_">Como jugar</a></li>
-               <li><a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE">Descarga aquí</a></li>
-               <li><a href="#">Batalla Pokémon</a></li>
+               <li><a class="textoLogo" href="index.html">INICIO</a></li>
+               <li><a class="textoLogo" href="https://vandal.elespanol.com/guias/guia-pokemon-go/como-jugar_">Como jugar</a></li>
+               <li><a class="textoLogo" href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE">Descarga aquí</a></li>
+               <li><a class="textoLogo" href="#">Batalla Pokémon</a></li>
              </ul>
            </nav> 
         </div>
       </div>
     </header>
-    <main>
       <div class="container">
         <div class="filterData">
-          <select class="select" id="OrderPoke">
+          <select class="select" id="orderPoke">
             <option value="seleccione_opcion">Orden</option>
-            <option value="a-z"> A-Z</option>  
-            <option value="z-a"> Z-A</option>
+            <option value="up"> A-Z</option>  
+            <option value="down"> Z-A</option>
           </select>
         </div>
         <div class="filterData">
@@ -59,10 +56,10 @@
           </select>
         </div>
         <div class="filterData">
-          <select class="select" id="region">
+          <select class="select" id="selectRegion">
             <option value="seleccione_opcion">Region</option>
-            <option value="a-z">Kanto</option>  
-            <option value="z-a">Johto</option>
+            <option value="kanto">Kanto</option>  
+            <option value="johto">Johto</option>
           </select>
         </div>
         <div class="filterData">
@@ -74,14 +71,23 @@
           </form>
         </div>
       </div>
-     
-    </main>
+    
+      <div class="social-bar">
+        <a href="https://www.facebook.com/PokemonGO" class="icon icon-facebook" target="_blank">
+          <img src="img/iconoFb.png"/></a>
+        <a href="https://twitter.com/pokemongoapp?lang=es" class="icon icon-twitter" target="_blank">
+          <img src="img/iconoTw.png"/></a>
+        <a href="https://www.youtube.com/channel/UClSYqPopacBGbxUxBsJyOLQ" class="icon icon-youtube" target="_blank">
+          <img src="img/iconoYt.png"/></a>
+        <a href="https://www.instagram.com/pokemongoapp/" class="icon icon-instagram" target="_blank">
+          <img src="img/iconoIt.png"/></a>
+      </div>
 
     <div id="dataCompleta">
     </div>
      
     <footer>
-
+      <p> Shirley Ramos || Sheyla Ramírez </p>
     </footer>
     <script src="main.js" type="module"></script>
   </body>
