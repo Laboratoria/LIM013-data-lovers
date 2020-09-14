@@ -39,19 +39,19 @@ Para definir las historia de usuario entrevistamos a 5 usuarios de Pokemon Go , 
 
 ## 5. Prototipo de Baja Fidelidad
 
-![Primera Historia de Usuario](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg)
-![Segunda Historia de Usuario]()
-![Tercera Historia de Usuario]()
-![Cuarta Historia de Usuario]()
-![Quinta Historia de Usuario]()
+![Primera Historia de Usuario](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-baja/primera-historia-de-usuario.jpeg)
+![Segunda Historia de Usuario](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-baja/segunda-historia-de-usuario.jpeg)
+![Tercera Historia de Usuario](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-baja/tercera-historia-de-usuario.jpeg)
+![Cuarta Historia de Usuario](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-baja/cuarta-historia-de-usuario.jpeg)
+![Quinta Historia de Usuario](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-baja/quinta-historia-de-usuario.jpeg)
 
 ## 6. Prototipo de Alta Fidelidad
 
-![desktop 1](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg) ![responsive]()
-![desktop 2](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg) ![responsive]()
-![desktop 3](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg) ![responsive]()
-![desktop 4](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg) ![responsive]()
-![desktop 5](src\img\prototipos-de-baja\primera-historia-de-usuario.jpg) ![responsive]()
+![desktop 1](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-alta/primera-historia-usuario-alta.svg) ![responsive]()
+![desktop 2]() ![responsive]()
+![desktop 3]() ![responsive]()
+![desktop 4]() ![responsive]()
+![desktop 5]() ![responsive]()
 
 ## 7. Organización del trabajo
 
