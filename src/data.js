@@ -7,23 +7,25 @@ const filters = {
         }); 
         return cadaObjeto;
       },
-    
-    // filtrarPokemon: function (data, type) {
-    //     const pokeFilter = data.filter (e => (e.type[0] === type || e.type[1] === type));
-    //     return pokeFilter;             
-    // }
-    
-    orderPokemonUpward : (cadaObjeto) => {
+
+      sortByNameUpward : (cadaObjeto) => {
         cadaObjeto.sort(function(a,b){
               let x = a.name;
               let y = b.name;
               if (x < y){return -1;}
               if (x > y){return 1;}
               return 0;
-        })
-          //console.log(myArray);
+        });
+          console.log(cadaObjeto);
           return cadaObjeto;
-    },    
-};
-export default filters; 
+    },   
+    
+    filterGeneration : (data, selectGeneration) => {
+        const cadaObjeto = data.filter((cadaObjeto)=> {
+            return cadaObjeto.generation.name.includes(selectGeneration);
+        });
+        return cadaObjeto;
+    },
 
+};  
+export default filters; 
