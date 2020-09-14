@@ -47,7 +47,7 @@ Para definir las historia de usuario entrevistamos a 5 usuarios de Pokemon Go , 
 
 ## 6. Prototipo de Alta Fidelidad
 
-![desktop 1](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-alta/primera-historia-usuario-alta.svg) ![responsive]()
+![desktop 1](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-alta/primera-historia-usuario-alta.svg) 
 
 
 ## 7. Organización del trabajo
