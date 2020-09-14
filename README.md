@@ -48,14 +48,11 @@ Para definir las historia de usuario entrevistamos a 5 usuarios de Pokemon Go , 
 ## 6. Prototipo de Alta Fidelidad
 
 ![desktop 1](https://github.com/aurelismoreno/LIM013-data-lovers/blob/master/src/img/prototipos-de-alta/primera-historia-usuario-alta.svg) ![responsive]()
-![desktop 2]() ![responsive]()
-![desktop 3]() ![responsive]()
-![desktop 4]() ![responsive]()
-![desktop 5]() ![responsive]()
+
 
 ## 7. Organización del trabajo
 
-Para la organizacion y distribucion de trabajo en equipo utilizamos la herramienta trello ![Tablero InfoPoke](https://trello.com/b/xexFDDtJ/infopoke)
+Para la organizacion y distribucion de trabajo en equipo utilizamos la herramienta trello .[aqui].(https://trello.com/b/xexFDDtJ/infopoke)
 
 ## 8. Testeo de Usabilidad
 
