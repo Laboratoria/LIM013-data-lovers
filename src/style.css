@@ -66,14 +66,14 @@ input[type='text'] {
 .lupa .buscar {
 	position: absolute;
 	width: 35px;
-}
+} 
 header .buscar {
-	position: absolute;
+	position: absolute ;
 	width: 35px;
 	height: 35px;
 	top: 180px;
 	right: 250px;
-}
+} 
 /* ----------ESTILOS PARA MOSTRAR LOS POKEMON */
 main {
 	margin-bottom: 100px;
@@ -149,3 +149,11 @@ p {
 	font-size: 18px;
 }
 
+ @media (max-width: 400px) {
+	header .buscar {
+		display: flex;
+	  }
+	header .buscar {
+		display: flex;
+	  }
+} 
