@@ -174,6 +174,9 @@ font-family: 'Marcellus SC', serif;
 font-size: 25px;
 color: #DBB74C;
 }
+#championPage{
+    padding-left:3.5% ;
+}
 h1{
 text-align: center;
 font-family: 'Marcellus SC', serif;
@@ -256,7 +259,7 @@ select {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	grid-gap: 20px;
-    padding:2%;
+    padding:4% 8%;
     justify-content: center;
 }
 
@@ -571,6 +574,7 @@ footer p{
     .bodyPro p, #aboutPage .infoLol p{
         font-size :10px;
         width:80%;
+        font-family: 'Montserrat', sans-serif;
     }
     .bodyPro iframe{
         width: 300px;
@@ -581,7 +585,8 @@ footer p{
 		grid-template-columns: auto auto;
 	}
 	#statsRolPage>p{
-		font-size :18px;
+        font-size :18px;
+        font-family: 'Montserrat', sans-serif;
 }
 }
 
