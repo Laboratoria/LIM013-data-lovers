@@ -22,7 +22,7 @@ function showPokemon(poke) {
       <div class='dataPoke' data-num='${poke.num}'>     
           <p class='poke-num'>#${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'>${poke.name.toUpperCase()}</p> 
+          <p class='poke-name'><strong>${poke.name.toUpperCase()}</strong></p> 
           <button>INFO</button>
       </div>
       `
@@ -30,7 +30,9 @@ function showPokemon(poke) {
 divData.innerHTML = `
     ${infoPokemon.map(showPokemon).join("")}
     `;
-//filtrar por tipo
+    
+// Filtro por tipo
+
 fullTypes.addEventListener("change", () => {
         let typePokemon = infoPokemon;
         let selectType = fullTypes.value;
@@ -44,7 +46,8 @@ fullTypes.addEventListener("change", () => {
         `;   
     });
 
-//filtrar por orden alfabetico
+// Filtro por orden alfabético
+
 orderPoke.addEventListener("change", ()=>{
     let selectOrden = orderPoke.value;
     let pokedexFilter = infoPokemon; 
@@ -60,22 +63,26 @@ orderPoke.addEventListener("change", ()=>{
 
 });
 
-//filtrar por region
-selectRegion.addEventListener("change",()=>{
-    let regionSelect= selectRegion.value;
-    let infoRegion= infoPokemon;
-    let selectTipo= fullTypes.value
-    if(selectTipo !== 'infoPokemon'){
-        regionSelect = filters.filterRegion(infoPokemon,selectTipo);
+// Filtro por Región
+
+selectRegion.addEventListener("change", () => {
+    let filterByRegion = selectRegion.value;
+    let pokedexRegion = infoPokemon;
+    let selectTipo = fullTypes.value;
+
+    if (selectTipo !== 'infoPokemon') {
+        pokedexRegion = filters.filterRegion(infoPokemon, selectTipo);
     }
-    let regionPoke=regionSelect;
-    if (regionSelect !== 'infoPokemon') {
-        regionPoke= filters.filterRegion(infoPokemon, regionSelect);
+
+    let regionPokemon = pokedexRegion;
+    if (filterByRegion !== 'infoPokemon') {
+        regionPokemon = filters.filterRegion(infoPokemon, filterByRegion);
     }
-   
     divData.innerHTML = `
-    ${regionPoke
-        .map(showPokemon)
-        .join("")}
-    `;
+        ${regionPokemon.map(showPokemon).join("")}    
+    `
+    
 });
+
+
+
