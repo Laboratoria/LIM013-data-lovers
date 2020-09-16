@@ -191,5 +191,29 @@ select{
 
 footer {
     background: #2A3073;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Verdana';
+    justify-content: space-evenly;
+    color: white;
+    display: flex; 
+    position: fixed;
+    padding: 10px 0;
+    border-top:1px solid #77d2d8;
+}
 
+.logo-footer {
+    width: 20px;
+    height: 20px;
+}
+
+footer div{
+    display: flex;
 }
