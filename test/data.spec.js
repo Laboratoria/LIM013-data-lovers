@@ -1,5 +1,5 @@
-import { orderData, filterDataEgg, filterDataGeneracion, filterDataType} from '../src/data.js';
-import { inputA_Z, outputA_Z,outputZ_A} from './testsort.js';
+import { orderData, filterDataEgg, filterDataGeneracion, filterDataType } from '../src/data.js';
+import { inputA_Z, outputA_Z, outputZ_A } from './testsort.js';
 
 
 describe('example', () => {
