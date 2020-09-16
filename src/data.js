@@ -18,9 +18,9 @@ const filters = {
           return Objetouno;
     },  
   
-    filterRegion: (data, selectRegio) => {
+    filterRegion: (data, selectRegion) => {
         const objetoRegion = data.filter((objetoRegion)=> {
-            return objetoRegion.generation.name.includes(selectRegio);
+            return objetoRegion.generation.name.includes(selectRegion);
         });
         return objetoRegion;
     },
