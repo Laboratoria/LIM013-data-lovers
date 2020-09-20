@@ -24,7 +24,9 @@ const filters = {
         });
         return objetoRegion;
     },
-
+    
+   
+    
 }
 
 export default filters; 

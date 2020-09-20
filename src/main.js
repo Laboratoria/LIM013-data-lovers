@@ -9,7 +9,9 @@ const infoPokemon = data.pokemon;
 const divData= document.getElementById("dataCompleta")
 const fullTypes= document.getElementById("fullTypes")
 const orderPoke= document.getElementById("orderPoke")
+const orderCp= document.getElementById("orderCp") 
 const selectRegion= document.getElementById("selectRegion")
+const container= document.getElementById("container")
 
 function showPokemon(poke) {
     const pokeTypes = poke.type;
@@ -30,7 +32,7 @@ function showPokemon(poke) {
 divData.innerHTML = `
     ${infoPokemon.map(showPokemon).join("")}
     `;
-    
+
 // Filtro por tipo
 
 fullTypes.addEventListener("change", () => {
@@ -63,6 +65,10 @@ orderPoke.addEventListener("change", ()=>{
 
 });
 
+// Filtro por CP
+
+
+
 // Filtro por Región
 
 selectRegion.addEventListener("change", () => {
@@ -83,6 +89,14 @@ selectRegion.addEventListener("change", () => {
     `
     
 });
+
+
+const pokeBattle = document.querySelector("a[href='#']");
+pokeBattle.addEventListener("click", ()=>{
+    divData.classList.add('hide');
+    container.classList.add('hide'); 
+        
+}); 
 
 
 

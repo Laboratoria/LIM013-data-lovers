@@ -162,12 +162,12 @@ select{
     
 }
 
-#dataCompleta {
+.dataCompleta {
     padding: 20px 0;
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-content: space/around;
     flex-wrap: wrap;
+    justify-content: space-around;
 
 }
 
@@ -187,6 +187,10 @@ select{
 .dataPoke p{
     font-size: 20px;
     font-family: 'Fredoka One', cursive;
+}
+
+.hide{
+    display: none;
 }
 
 footer {

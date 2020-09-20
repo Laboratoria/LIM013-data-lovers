@@ -24,7 +24,8 @@
         </div>
       </div>
     </header>
-      <div class="container">
+
+      <div class="container" id="container">
         <div class="filterData">
           <select class="select" id="orderPoke">
             <option value="seleccione_opcion">Orden</option>
@@ -32,7 +33,16 @@
             <option value="down"> Z-A</option>
           </select>
         </div>
-        <div class="filterData">
+
+        <div clas="container">
+          <select class="select" id="orderCp">
+            <option value="seleccione_opcion">PC</option>
+            <option value="max">Máx PC</option>
+            <option value="min">Min PC</option>
+          </select>
+        </div>
+        
+        <div class="filterData"> 
           <select class="select" id="fullTypes">
             <option value="infoPokemon">Tipos</option>
             <option value="flying">Aire</option>
@@ -70,7 +80,7 @@
                 <img src="https://img.icons8.com/fluent-systems-regular/24/000000/pokeball.png"/>
               </button>
           </form>
-        </div>
+        </div> 
       </div>
     
       <div class="social-bar">
@@ -84,10 +94,28 @@
           <img src="img/iconoIt.png"/></a>
       </div>
 
-    <div id="dataCompleta">
+    <div class="dataCompleta" id="dataCompleta">
+    </div>
+      
+    <div class="showCards">
+      <h1>Info</h1>
+      <a href="#" id="open"></a>
+    </div>
+    <div id="pokeModal" class="modal">
+      <div class="flex" id="flex">
+        <div class="content-modal">
+          <div class="modal-header flex">
+              <span class="close" id="close">&times;</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-      <footer>
+    <div class="" id="batalla">
+
+    </div>
+
+        <footer>
           <div>
             <small>&copy; Copyright 2020. All Rights Reserved.</small>  
           </div>
