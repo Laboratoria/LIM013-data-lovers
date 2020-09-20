@@ -7,6 +7,7 @@ const filters = {
         }); 
         return cadaObjeto;
       },
+
     sortByNameUpward : (Objetouno) => {
         Objetouno.sort(function(a,b){
               let x = a.name;
@@ -24,6 +25,15 @@ const filters = {
         });
         return objetoRegion;
     },
+
+    filterSearch:(data,selectName) => {
+      const myArray= data.filter((myObject)=>{
+        
+        return myObject.name.includes(selectName);
+      })
+      return myArray;
+    },
+
 
 }
 
