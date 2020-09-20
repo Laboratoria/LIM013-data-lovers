@@ -25,7 +25,6 @@ function showPokemon(poke) {
           <p class='poke-num'>#${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
           <p class='poke-name'><strong>${poke.name.toUpperCase()}</strong></p> 
-          <button>INFO</button>
       </div>
       `
 }
@@ -67,7 +66,19 @@ orderPoke.addEventListener("change", ()=>{
 
 // Filtro por CP
 
-
+orderCp.addEventListener("change", () =>{
+    let selectCp = orderCp.value;
+    let pokedexCp = infoPokemon;
+    if (selectCp === 'max') {
+        filters.sortByCp(pokedexCp)
+    }
+    if (selectCp === 'min'){
+        filters.sortByCp(pokedexCp).reverse();
+    }
+    divData.innerHTML =  `
+        ${infoPokemon.stats['max-cp'].map(showPokemon).join("")}
+    `;
+});
 
 // Filtro por Región
 
@@ -85,9 +96,8 @@ selectRegion.addEventListener("change", () => {
         regionPokemon = filters.filterRegion(infoPokemon, filterByRegion);
     }
     divData.innerHTML = `
-        ${regionPokemon.map(showPokemon).join("")}    
+        ${regionPokemon.map(showPokemon).join("")} 
     `
-    
 });
 
 
@@ -100,3 +110,11 @@ pokeBattle.addEventListener("click", ()=>{
 
 
 
+const selectName = document.getElementById('selectName');
+    selectName.addEventListener('keyup', () => {
+        let selectNameV = selectName.value;
+        const searchName = filters.filterSearch(infoPokemon,selectNameV); 
+        divData.innerHTML = `
+        ${searchName.map(showPokemon).join("")}
+        `;
+ });

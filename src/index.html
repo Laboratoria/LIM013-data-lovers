@@ -18,7 +18,7 @@
                <li><a class="textoLogo" href="index.html">INICIO</a></li>
                <li><a class="textoLogo" href="https://vandal.elespanol.com/guias/guia-pokemon-go/como-jugar_">Cómo jugar</a></li>
                <li><a class="textoLogo" href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE">Descarga aquí</a></li>
-               <li><a class="textoLogo" href="#">Batalla Pokémon</a></li>
+               <li><a class="textoLogo" href="batalla.html">Batalla Pokémon</a></li>
              </ul>
            </nav> 
         </div>
@@ -27,7 +27,7 @@
 
       <div class="container" id="container">
         <div class="filterData">
-          <select class="select" id="orderPoke">
+          <select class="select-css" id="orderPoke">
             <option value="seleccione_opcion">Orden</option>
             <option value="up"> A-Z</option>  
             <option value="down"> Z-A</option>
@@ -35,7 +35,7 @@
         </div>
 
         <div clas="container">
-          <select class="select" id="orderCp">
+          <select class="select-css" id="orderCp">
             <option value="seleccione_opcion">PC</option>
             <option value="max">Máx PC</option>
             <option value="min">Min PC</option>
@@ -43,7 +43,7 @@
         </div>
         
         <div class="filterData"> 
-          <select class="select" id="fullTypes">
+          <select class="select-css" id="fullTypes">
             <option value="infoPokemon">Tipos</option>
             <option value="flying">Aire</option>
             <option value="water">Agua</option>
@@ -66,19 +66,18 @@
              
           </select>
         </div>
+
         <div class="filterData">
-          <select class="select" id="selectRegion">
+          <select class="select-css" id="selectRegion">
             <option value="seleccione_opcion">Región</option>
             <option value="kanto">Kanto</option>  
             <option value="johto">Johto</option>
           </select>
         </div>
+
         <div class="filterData">
           <form>
-            <input type="text" placeholder="Escribe aquí">
-              <button>
-                <img src="https://img.icons8.com/fluent-systems-regular/24/000000/pokeball.png"/>
-              </button>
+            <input class="input-css" type="text" id="selectName" placeholder="Busca tu pokémon aquí">       
           </form>
         </div> 
       </div>
@@ -106,6 +105,46 @@
         <div class="content-modal">
           <div class="modal-header flex">
               <span class="close" id="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img class="poke-img-modal-body" src='${poke.img}'>
+            
+            <div class="info-modal-body">
+              <p class="poke-num">${poke.num}</p>
+              <p class="poke-name">${poke.name.toUpperCase()}</p>
+            </div>
+
+            <div class="details-modal-body">
+              <div class="details">
+                <img src="img/egg.png">
+                <p>${poke.egg}</p> 
+              </div>
+
+              <div class="details">
+                <img src="img/height.png">
+                <p>${poke.height}</p> 
+              </div>
+
+              <div class="details">
+                <img src="img/weight.png">
+                <p>${poke.weight}</p> 
+              </div>
+
+              <div class="details">
+                <img src="img/hp.png">
+                <p>${poke.stats['max-hp']}</p> 
+              </div>
+            </div>
+
+            <div class="details">
+              <img src="img/cp.png">
+              <p>${poke.stats['max-cp']}</p> 
+            </div>
+            
+            <div class="details">
+              <img src="img/power.png">
+              <p>${totalStats}</p> 
+            </div>
           </div>
         </div>
       </div>

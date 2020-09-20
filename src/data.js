@@ -7,6 +7,7 @@ const filters = {
         }); 
         return cadaObjeto;
       },
+
     sortByNameUpward : (Objetouno) => {
         Objetouno.sort(function(a,b){
               let x = a.name;
@@ -24,9 +25,26 @@ const filters = {
         });
         return objetoRegion;
     },
-    
-   
-    
+
+    filterSearch:(data,selectName) => {
+      const myArray= data.filter((myObject)=>{
+        
+        return myObject.name.includes(selectName);
+      })
+      return myArray;
+    },
+
+    sortByCp: (objectCp) => {
+      objectCp.sort(function (a,b){
+        let x = a.max-cp;
+        let y = b.max-cp;
+        if (x < y) {return stats['max-cp'];}
+        if (x > y) {return stats['max-cp'];}
+        return 0;
+      });
+      return objectCp;
+    },
+
 }
 
 export default filters; 
