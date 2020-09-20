@@ -18,7 +18,7 @@
                <li><a class="textoLogo" href="index.html">INICIO</a></li>
                <li><a class="textoLogo" href="https://vandal.elespanol.com/guias/guia-pokemon-go/como-jugar_">Cómo jugar</a></li>
                <li><a class="textoLogo" href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE">Descarga aquí</a></li>
-               <li><a class="textoLogo" href="#">Batalla Pokémon</a></li>
+               <li><a class="textoLogo" href="batalla.html">Batalla Pokémon</a></li>
              </ul>
            </nav> 
         </div>
@@ -26,14 +26,14 @@
     </header>
       <div class="container">
         <div class="filterData">
-          <select class="select" id="orderPoke">
+          <select class="select-css" id="orderPoke">
             <option value="seleccione_opcion">Orden</option>
             <option value="up"> A-Z</option>  
             <option value="down"> Z-A</option>
           </select>
         </div>
         <div class="filterData">
-          <select class="select" id="fullTypes">
+          <select class="select-css" id="fullTypes">
             <option value="infoPokemon">Tipos</option>
             <option value="flying">Aire</option>
             <option value="water">Agua</option>
@@ -57,7 +57,7 @@
           </select>
         </div>
         <div class="filterData">
-          <select class="select" id="selectRegion">
+          <select class="select-css" id="selectRegion">
             <option value="seleccione_opcion">Región</option>
             <option value="kanto">Kanto</option>  
             <option value="johto">Johto</option>
@@ -65,10 +65,8 @@
         </div>
         <div class="filterData">
           <form>
-            <input type="text" placeholder="Escribe aquí">
-              <button>
-                <img src="https://img.icons8.com/fluent-systems-regular/24/000000/pokeball.png"/>
-              </button>
+            <input class="input-css" type="text" id="selectName" placeholder="Busca tu pokémon aquí">
+             
           </form>
         </div>
       </div>

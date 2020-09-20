@@ -79,10 +79,18 @@ selectRegion.addEventListener("change", () => {
         regionPokemon = filters.filterRegion(infoPokemon, filterByRegion);
     }
     divData.innerHTML = `
-        ${regionPokemon.map(showPokemon).join("")}    
+        ${regionPokemon.map(showPokemon).join("")} 
     `
-    
 });
 
 
+//------ Filtro por buscar pokemon ------ //
 
+const selectName = document.getElementById('selectName');
+    selectName.addEventListener('keyup', () => {
+        let selectNameV = selectName.value;
+        const searchName = filters.filterSearch(infoPokemon,selectNameV); 
+        divData.innerHTML = `
+        ${searchName.map(showPokemon).join("")}
+        `;
+ });
