@@ -34,17 +34,39 @@ const filters = {
       return myArray;
     },
 
-    sortByCp: (objectCp) => {
-      objectCp.sort(function (a,b){
-        let x = a.max-cp;
-        let y = b.max-cp;
-        if (x < y) {return stats['max-cp'];}
-        if (x > y) {return stats['max-cp'];}
-        return 0;
-      });
-      return objectCp;
-    },
-
+    sortByCp: (pokeCp, valueSelect) => {
+      console.log(valueSelect);
+      if (valueSelect === 'max') {
+        pokeCp.sort(function (a,b){
+          let cp1 = parseInt(a.stats["max-cp"]);
+          let cp2 = parseInt(b.stats["max-cp"]);
+          if(cp1 > cp2){
+          return 1;
+          } 
+          
+          if(cp1 < cp2){
+          return -1;
+          }
+          return 0;
+        }); 
+        return pokeCp.reverse();         
+      }
+      if (valueSelect === 'min') {
+        pokeCp.sort(function (a,b){
+          let cp1 = parseInt(a.stats["max-cp"]);
+          let cp2 = parseInt(b.stats["max-cp"]);
+          
+          if(cp1 < cp2){
+          return -1;
+          }
+          if(cp1 > cp2){
+            return 1; 
+          }
+          return 0;
+         });
+        return pokeCp;
+      } 
+    }
 }
 
 export default filters; 

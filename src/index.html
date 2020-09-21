@@ -95,60 +95,17 @@
 
     <div class="dataCompleta" id="dataCompleta">
     </div>
-      
-    <div class="showCards">
-      <h1>Info</h1>
-      <a href="#" id="open"></a>
-    </div>
-    <div id="pokeModal" class="modal">
-      <div class="flex" id="flex">
-        <div class="content-modal">
-          <div class="modal-header flex">
-              <span class="close" id="close">&times;</span>
-          </div>
-          <div class="modal-body">
-            <img class="poke-img-modal-body" src='${poke.img}'>
-            
-            <div class="info-modal-body">
-              <p class="poke-num">${poke.num}</p>
-              <p class="poke-name">${poke.name.toUpperCase()}</p>
-            </div>
-
-            <div class="details-modal-body">
-              <div class="details">
-                <img src="img/egg.png">
-                <p>${poke.egg}</p> 
-              </div>
-
-              <div class="details">
-                <img src="img/height.png">
-                <p>${poke.height}</p> 
-              </div>
-
-              <div class="details">
-                <img src="img/weight.png">
-                <p>${poke.weight}</p> 
-              </div>
-
-              <div class="details">
-                <img src="img/hp.png">
-                <p>${poke.stats['max-hp']}</p> 
-              </div>
-            </div>
-
-            <div class="details">
-              <img src="img/cp.png">
-              <p>${poke.stats['max-cp']}</p> 
-            </div>
-            
-            <div class="details">
-              <img src="img/power.png">
-              <p>${totalStats}</p> 
-            </div>
-          </div>
-        </div>
+    <section>
+      <div class="cont-text">
+        <h1>PokeInfo</h1>
+        <a href="#" id="open"></a>
       </div>
-    </div>
+    </section> 
+
+    <section class="hidden" id="pokeModal">
+      <div class="closeModal" id="closeModal">+</div>
+      <div id="infoPokeModal"></div>
+    </section>
 
     <div class="" id="batalla">
 

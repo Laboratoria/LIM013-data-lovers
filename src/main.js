@@ -24,13 +24,16 @@ function showPokemon(poke) {
       <div class='dataPoke' data-num='${poke.num}'>     
           <p class='poke-num'>#${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'><strong>${poke.name.toUpperCase()}</strong></p> 
+          <p class='poke-name'><strong>${poke.name}</strong></p> 
       </div>
       `
 }
 divData.innerHTML = `
     ${infoPokemon.map(showPokemon).join("")}
     `;
+
+// Modal 
+
 
 // Filtro por tipo
 
@@ -65,19 +68,13 @@ orderPoke.addEventListener("change", ()=>{
 });
 
 // Filtro por CP
-
 orderCp.addEventListener("change", () =>{
     let selectCp = orderCp.value;
     let pokedexCp = infoPokemon;
-    if (selectCp === 'max') {
-        filters.sortByCp(pokedexCp)
-    }
-    if (selectCp === 'min'){
-        filters.sortByCp(pokedexCp).reverse();
-    }
-    divData.innerHTML =  `
-        ${infoPokemon.stats['max-cp'].map(showPokemon).join("")}
-    `;
+    const pokeCpSorted = filters.sortByCp (infoPokemon, selectCp);
+    console.log(pokeCpSorted);
+    divData.innerHTML = `
+    ${pokeCpSorted.map(showPokemon).join("")}`   
 });
 
 // Filtro por Región
@@ -100,7 +97,7 @@ selectRegion.addEventListener("change", () => {
     `
 });
 
-
+// Ocultar divs
 const pokeBattle = document.querySelector("a[href='#']");
 pokeBattle.addEventListener("click", ()=>{
     divData.classList.add('hide');
@@ -108,7 +105,7 @@ pokeBattle.addEventListener("click", ()=>{
         
 }); 
 
-
+// Buscar por nombre
 
 const selectName = document.getElementById('selectName');
     selectName.addEventListener('keyup', () => {
