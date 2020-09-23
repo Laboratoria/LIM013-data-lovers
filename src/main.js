@@ -24,7 +24,12 @@ function showPokemon(poke) {
       <div class='dataPoke' data-num='${poke.num}'>     
           <p class='poke-num'>#${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'><strong>${poke.name}</strong></p> 
+          <p class='poke-name'><strong>${poke.name.toUpperCase()}</strong></p>
+          <p class= 'poke-type'>Type: ${poke.type}</p>
+          <p class= 'poke-stats["max-cp]'>CP: ${poke.stats["max-cp"]}</p>
+          <p class= 'poke-stats["max-hp]'>HP: ${poke.stats["max-hp"]}</p>
+          <p class= 'poke-size["height"]'>Height: ${poke.size["height"]}</p>
+          <p class= 'poke-size["weight"]'>Weight: ${poke.size["weight"]}</p>
       </div>
       `
 }
