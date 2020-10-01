@@ -26,12 +26,13 @@ const filters = {
         return objetoRegion;
     },
 
-    filterSearch:(data,selectName) => {
-      const myArray= data.filter((myObject)=>{
+    filterSearch:(data, selectName) => {
+      const myArray= data.filter((myObject)=> {
         
         return myObject.name.includes(selectName);
-      })
+      });
       return myArray;
+
     },
 
     sortByCp: (pokeCp, valueSelect) => {

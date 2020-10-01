@@ -101,14 +101,13 @@ selectRegion.addEventListener("change", () => {
         ${regionPokemon.map(showPokemon).join("")} 
     `
 });
-
-// Ocultar divs
-const pokeBattle = document.querySelector("a[href='#']");
-pokeBattle.addEventListener("click", ()=>{
-    divData.classList.add('hide');
-    container.classList.add('hide'); 
+// // Ocultar divs
+// const pokeBattle = document.querySelector("a[href='#']");
+// pokeBattle.addEventListener("click", ()=>{
+//     divData.classList.add('hide');
+//     container.classList.add('hide'); 
         
-}); 
+// }); 
 
 // Buscar por nombre
 
@@ -118,5 +117,5 @@ const selectName = document.getElementById('selectName');
         const searchName = filters.filterSearch(infoPokemon,selectNameV); 
         divData.innerHTML = `
         ${searchName.map(showPokemon).join("")}
-        `;
+        `; 
  });
