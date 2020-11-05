@@ -9,17 +9,20 @@ export const search=(championList,nameChamp)=>{
 };
 
 export const order=(data, orden)=> {
-    return data.sort(function (a, b) {
+    const dataCopy=[...data];
+    const orderCopy= dataCopy.sort(function (a, b) {
         let x = a.name;
         let y = b.name;
         if (orden === 'Ascendente') {
-            return ((x > y) ? 1 : ((x < y) ? -1 : 0));
+            return ((x > y) ? 1 : (x < y) ? -1:0);
         }
         if (orden === 'Descendente') {
-            return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+            return ((x < y) ? 1 : (x > y) ? -1 : 0);
         }
     });
+    return orderCopy;
 }
+
 export const averageInfo = (property, championList) =>{
     const avg=championList.reduce(
     (acc, champion) => acc + champion.info[property], 0,) / championList.length;

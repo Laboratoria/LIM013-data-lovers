@@ -178,7 +178,7 @@ font-size: 25px;
 color: #DBB74C;
 }
 #championPage{
-    padding-left:3.5% ;
+    margin: 0% 12%
 }
 h1{
 text-align: center;
@@ -347,19 +347,6 @@ font-size: 16px;
     height: 130px;
 	padding: 0%;
 }
-/*.rolIcon p{
-    display:inline-flex;
-    color: #DBB74C;
-    font-family: 'Marcellus SC', serif;
-    line-height: 38px;
-}*/
-/*.imagen-categoria3{
-    display: block;
-    margin:1%
-}
-.imagen-categoria3 p{
-    font-size:25px;
-}*/
 .infoCard{
     width: 80%;
     position: relative;
@@ -400,7 +387,7 @@ h3{
     font-size: 50px;
     color: #EFB810;
     text-shadow: 0px 0px 8px #F2C94C;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .bodyPro{
     display:flex;
@@ -443,6 +430,9 @@ footer p{
 }
 /*Media queries*/
 @media (min-width: 415px) and (max-width:759px){
+    #championPage{
+        padding-left: 3.5%;
+    }
 	.barsNavigation a{
 		display:none;
 	}
@@ -512,6 +502,9 @@ footer p{
 	}
 }
 @media (min-width: 760px) and (max-width: 980px) {
+    #championPage{
+        padding-left: 3.5%;
+    }
     #imgChampions{
         grid-template-columns: auto auto auto;
         padding:4% 0%;
@@ -538,6 +531,9 @@ footer p{
 }
 
 @media (max-width: 414px){
+    #championPage{
+        padding-left: 3.5%;
+    }
 	.barsNavigation a{
 		display:none;
 	}

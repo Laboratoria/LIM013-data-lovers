@@ -105,10 +105,7 @@ inputclass.addEventListener("keyup",e=>{
 const orderSelect = document.querySelector('.order');
     orderSelect.addEventListener('change', () => {
         const term = orderSelect.value;
-
-   
         const filteredChampions = order(allArray, term);
-
         cardStructure(filteredChampions);
     });
 
