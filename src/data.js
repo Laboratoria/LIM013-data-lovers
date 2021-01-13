@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 const filters = {
 
-    filtroPorPokemon : (data,selectType) => {
+    filtroPorPokemon : (data, selectType) => {
         const cadaObjeto= data.filter((unObjeto)=>{ 
           return unObjeto.type.includes(selectType); 
         }); 

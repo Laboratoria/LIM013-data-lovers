@@ -28,8 +28,6 @@ function showPokemon(poke) {
           <p class= 'poke-type'>Type: ${poke.type}</p>
           <p class= 'poke-stats["max-cp]'>CP: ${poke.stats["max-cp"]}</p>
           <p class= 'poke-stats["max-hp]'>HP: ${poke.stats["max-hp"]}</p>
-          <p class= 'poke-size["height"]'>Height: ${poke.size["height"]}</p>
-          <p class= 'poke-size["weight"]'>Weight: ${poke.size["weight"]}</p>
       </div>
       `
 }
