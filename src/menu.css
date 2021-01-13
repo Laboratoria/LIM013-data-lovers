@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI Emoji Regular";
+    font-size: 18px;
+    line-height: 1.6;
+    background: #cbe3ee9b;
+}
+
+header {
+    width: 100%;
+    font-weight: bold;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: none;
+}
+
+/* Hover: le da efecto sombra cuando pasa el mouse */
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;   
+}
+
+.menu li{
+    text-align: center;
+    flex-grow: 1;
+    border-right: none;
+    
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu ul ul {
+    display: none;
+}
+
+.menu ul li:hover ul{
+    display: block;
+    position: absolute;
+}
+
+/* Submenúes 1 y 2 */
+/* Para la próxima darle id o li class si es más de uno
+al primero y así, para evitar confusiones */
+
+.menu a{
+    background: #4062BA;
+    
+}
+
+.menu a:hover {
+    background: rgba(100, 165, 111, 0.3);
+}
+
+.submenu{
+    background: #1d694186;
+}
+
+.submmenu:hover {
+    background: rgba(100, 165, 111, 0.3);
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    header label {
+        display: block;
+    }
+
+    .menu {
+        margin: auto;
+        position: absolute;
+        background: #1d694186;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+        font-weight: bold;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: none;
+    }
+
+    .menu ul li:hover ul {
+        display: block;
+        background: rgba(0,0,0,0.3);
+        width: 80%;
+        transition: all 0.5s;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+    /* Submenúes */
+
+    .menu a {
+        flex-direction: column;
+        font-size: 16px;
+        background: #1d694186;
+    }
+
+    .submenu {
+        flex-direction: column;
+        font-size: 16px;
+    }
+} 
