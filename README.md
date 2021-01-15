@@ -1,4 +1,7 @@
-# POKÉDEX. Data escogida: POKÉMON 
+# POKÉDEX. Data: POKÉMON 
+
+![prototipo baja fidelidad](src/images/portfolio-3.jpg)
+
 
 ## Índice
 
