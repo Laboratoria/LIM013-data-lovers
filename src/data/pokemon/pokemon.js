@@ -2668,12 +2668,12 @@ export default {
   },
   {
     "num": "029",
-    "name": "nidoran ♀ (female)",
+    "name": "nidoran ♀",
     "generation": {
       "num": "generation i",
       "name": "kanto"
     },
-    "about": "Nidoran ♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
+    "about": "Nidoran ♀ (female) has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
     "img": "https://www.serebii.net/pokemongo/pokemon/029.png",
     "size": {
       "height": "0.41 m",
@@ -2956,7 +2956,7 @@ export default {
   },
   {
     "num": "032",
-    "name": "nidoran ♂ (male)",
+    "name": "nidoran ♂",
     "generation": {
       "num": "generation i",
       "name": "kanto"
@@ -3264,7 +3264,7 @@ export default {
     },
     "pokemon-rarity": "normal",
     "type": [
-      "normal"
+      "fairy"
     ],
     "encounter": {
       "base-flee-rate": "0.1",
@@ -3357,7 +3357,7 @@ export default {
     },
     "pokemon-rarity": "normal",
     "type": [
-      "normal"
+      "fairy"
     ],
     "encounter": {
       "base-flee-rate": "0.06",

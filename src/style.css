@@ -1,0 +1,1231 @@
+/*******index.html*****/
+
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body {
+    background-color: black;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+#landingPage {
+    display: none;
+}
+
+#container {
+    display: block;
+}
+
+.container {
+    width: 98%;
+    height: auto;
+    max-width: 1600px;
+    min-width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*************todo referente a barra de navegación***************/
+/*navigator flex*/
+.container header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.topnav{
+    padding-top: 40px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*navigator flex*/
+.flexNav{
+    width: 70%;  
+    display: flex;   
+}
+/*container icon de menu*/
+.menu-deploy{
+    /*para que este oculto*/
+    display: none;
+    font-size: 25px;
+    cursor: pointer; 
+}
+/*icon de menu*/
+.menu-deploy i{
+    color:#88D9E5;
+}
+/*propiedades para las opciones de menú*/
+.listItem{
+    justify-content: center;
+    width: 500px;
+    min-width: 400px;
+}
+
+.listItem li{
+    font-size: 16px;
+    display: inline-block;
+    border-right:#88D9E5 1px solid;
+   
+}
+.listItem li a{
+    display: inline-block;
+    position: relative;
+    color:#88D9E5;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 20px;
+    transition: .2s;
+}
+.listItem li a:hover{
+    color: #00C1EC;
+}
+/*POKEMON(TITULO)*/
+.logo{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #00C1EC;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 30px;
+    font-family: "Lucida Console", Courier, monospace;    
+}
+
+.logo a {
+    color: #00C1EC;
+    font-size: 32px;
+    text-decoration: bold;
+}
+/*Container Serch*/
+.search-container{
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    line-height: 30px;
+    width: 500px;
+}
+.search-container input{
+    padding: 7px;
+    margin-top: 0px;
+    font-size: 14px;
+    font-family: "Lucida Console", Courier, monospace;
+    color:#88D9E5;
+    border: none;
+    border-bottom:#88D9E5 2px solid;
+    background: black;
+    text-align: left;
+    outline: none;
+    width: 200px;
+}
+.search-container button{
+    float: right;
+    padding: 6px 11px;
+    margin-top: 0px;
+    background: #88D9E5;
+    font-size: 16px;
+    border: none;
+    border-bottom:#88D9E5 2px solid;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-image: url(images/search.png);
+}
+.search-container button:hover{
+background: #00C1EC;
+border-bottom:#88D9E5 2px solid;
+border-radius: 0px 5px 5px 0px;
+}
+/*inactivo hasta que se agregue la clase mediante js*/
+.show{
+    height: 120px !important;
+}
+
+/*************todo referente al main***************/
+.displayContainer {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    background: transparent;
+    display:block
+}
+
+/************acordion, toggle**********************/
+
+.accordionButton {
+    height: 68px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    font-family: "Lucida Console", Courier, monospace;
+    transition: background 0.2s;
+    background-image: url(images/fondo_menuTipo.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+
+.accordionButton::after {
+    content: "Search by Type | \25bc";
+    float: center;
+    transform: scale(1.2);
+}
+
+.accordionButtonActive + .accordionContent {
+  display: block;
+}
+.accordionButtonActive {
+    background-image: url(images/fondo_menuTipo.png);
+    height: auto;
+}
+
+.accordionButtonActive::after {
+    content: "Close search | \25b4";
+    padding: 0px 35px;
+}
+
+.accordionContent {
+    padding: 0px 15px;
+    font-family: "Lucida Console", Courier, monospace;
+    color: white;
+    background: #18383b;
+    display: none;
+    overflow: auto;
+}
+
+.typeContainerHeader {
+    background-size: 100%;
+    height: 5px;
+}
+
+.typeContainerHeader h2 {
+    background-size: 100%;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: "Lucida Console", Courier, monospace;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.typeContainerHeader hr {
+    background-size: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.typeContainerBody {
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 10px 0px;
+    display: block; 
+}
+
+.typeContainerBody ul {
+    margin-left: 8px;
+    margin-right: 8px;
+    clear: both;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0px;
+    justify-content: space-between;
+}
+  
+.typeContainerBody li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 14px;
+    float: left;
+
+}
+
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999%;
+}
+  
+input[type="checkbox"] + label {
+    width: 115px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    background-color: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+  
+input[type="checkbox"]:checked + label {
+    border: 1px solid white;
+    color: #18383b;
+    background-color: white;
+}
+
+.typeContainerBodySearchByTypeButtons {
+    background-color: none;  
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 80px;
+}
+
+.typeContainerBodySearchByTypeButtons button {
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;    
+    cursor: pointer;
+    width: 300px;
+    margin: 10px 15px;
+}
+
+.searchByTypeButtonReset {
+    background-color: #18383b;
+    border: 2px solid #00A9CF;
+    color: #00A9CF;   
+}
+
+.searchByTypeButtonReset:hover {
+    background-color: #00A9CF;
+    border: 1px solid #00A9CF;
+    color: #18383b;
+}
+
+.searchByTypeButtonSearch {
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;       
+}
+
+.searchByTypeButtonSearch:hover {
+    background-color: #88D9E5;
+    border: 1px solid #88D9E5;
+    color: black;
+}
+
+/***********fin de toggle***************/
+
+.displayAll {
+    margin-top: -67px;
+    width: 100%;
+    height: auto;
+    display:block;
+    background-color:transparent;
+}
+
+.orderByButtons {
+    width: 100%;
+    height: 67px;
+    background-image: url(images/fondo_displayAll.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.orderBy {
+    width: 200px;
+    height: 40px;
+    margin-left: 530px;
+    background-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.orderBy button {
+    /*width: 100%;
+    height: 66px;*/
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    content: "";
+    cursor: pointer;
+    background-color: transparent; 
+    background-repeat: no-repeat;
+    background-size:100%;
+    border: black;
+}
+
+.sortByAlphaAscButton {    
+    background-image: url(images/AlphaAscButton.png);
+}
+
+/*Mensaje explicativo sobre botones de ordenamiento (sort)*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: white;
+    font-size: 12px;
+    color: #18383b;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -90px;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::cafter {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.sortByAlphaDescButton {
+    background-image: url(images/AlphaDescButton.png);
+}
+
+.sortByLessPwrButton {
+    background-image: url(images/LessPwrButton.png);
+}
+
+.sortByMorePwrButton {
+    background-image: url(images/MorePwrButton.png);
+}
+
+/*distribución de pokemones*/
+.pokemonArea{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.pokemonDisplay {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0px;
+    justify-content: center;
+    height: 820px;
+    width: 100%;
+    background-color: transparent;
+    overflow-y: scroll; 
+}
+
+.informationDisplay{
+    display: none;
+    height: 820px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 400px;
+    background: transparent;    
+}
+
+/*distribución de pokemones display principal*/
+.picture {
+    width: 200px;
+    height: 234px;
+    margin: 5px;
+    background-image: url(images/hexagono2.png);
+    /*para que ocupe todo el espacio*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width:130px;
+    height:130px;
+}
+
+.essentialInformation {
+    display: none;
+    width: 200px;
+    height: 200px;
+    margin: 30px 15px;
+}
+
+/***************informacion principal de pokemones*******************/
+.numPokH2 {
+/*numero de pokemon*/
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 18px;
+    line-height: 2;
+    text-decoration: none;
+    color: black;
+
+}
+
+.namePok {
+/*nombre de pokemon*/
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: center;
+    padding: 0px 0px;
+    font-size: 22px;
+    line-height: 2;
+    text-decoration: bold;
+    text-transform: capitalize;
+    color: black;
+
+}
+
+.typePok {
+    width: 100%;
+    height: 20px;
+    margin: 0px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: flex;
+    align-self: left;     
+}
+
+.typePok p {
+    width: 60px;
+    height: 16px;
+    margin: 8px;
+    padding: 2px 5px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;    
+}
+
+.grass {
+    color: black;
+    background-color: rgb(146, 219, 35);
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.poison {
+    color: black;
+    background-color: #bd62bd;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.fire {
+    color: white;
+    background-color: #e45411;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.flying {
+    color: black;
+    background-color: #839e9e;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.water {
+    color: white;
+    background-color: #1190e4;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.bug {
+    color: black;
+    background-color: #34ce20;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.normal {
+    color: white;
+    background-color: #528585;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.electric {
+    color: black;
+    background-color: #f1bc0b;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.ground {
+    color: black;
+    background-color: #c2a64b;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.fighting {
+    color: white;
+    background-color: #927822;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.fairy {
+    color: black;
+    background-color: #fb98c1;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.psychic {
+    color: black;
+    background-color: #fd4b95;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.rock {
+    color: black;
+    background-color:  #e4b92f;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.ice {
+    color: black;
+    background-color:  #2fe4d5;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.ghost {
+    color: white;
+    background-color:  #b529c2;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.dragon {
+    color: white;
+    background-color:  #3829c2;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.dark {
+    color: white;
+    background-color:  #424247;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.steel {
+    color: black;
+    background-color:  #bebec3;
+    width: 60px;
+    height: 16px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.morePok {
+    width: 100px;
+    padding: 5px;
+    margin: 20px 40px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    border: solid 1px black;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 5px;
+    background-color: #88D9E5;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.morePok span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: "Lucida Console", Courier, monospace;
+}
+  
+.morePok span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+  
+.morePok:hover span {
+    padding-right: 10px;
+}
+  
+.morePok:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.morePok:hover {
+    background-color: #00C1EC;
+}
+
+/*informacion adicional de pokemones en informationDisplay*/
+/*boton cerrar*/
+.close {
+    width: 100%;
+    height: 40px;
+    margin: 0px 0px;
+    display: flex;
+    border: none;
+    background-color: none;
+    cursor: pointer; 
+}
+
+.closePokSelectButton {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    color: #88D9E5;
+    background-color: black;
+    border-left: solid 2px #88D9E5;
+    border-right: black;
+    border-top: black;
+    border-bottom: black;   
+}
+
+.closePokSelectButton:hover {
+    color: black;
+    background-color: #00C1EC;
+    border: #00C1EC;  
+}
+
+/****************/
+.nameAndNum {
+    width: 100%;
+    height: 30px;
+    margin: 0px 0px;
+    display: flex;
+    align-self: left;
+}
+
+.nameAndNum p {
+    width: 50%;
+    text-decoration: bold;    
+}
+
+.num {
+    font-size: 26px;
+    margin-right: 15px;
+    text-align: right;
+    color: #88D9E5;
+}
+
+.name {
+    font-size: 26px;
+    padding-left: 5px;
+    color: #00C1EC;
+    border-left: solid 1px #00C1EC;
+    border-bottom: solid 1px #00C1EC;
+    text-transform: capitalize;
+}
+
+.mainInfo {
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-between; 
+    background-color: transparent;
+}
+
+.sectionTitle {
+    width: 94%;
+    height:12%;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #00C1EC;
+}
+
+.leftInfo {
+    width: 22%;
+    margin-left: 0px;
+    margin-right: 5px;        
+}
+
+.pokemonType {
+    height: 145px; 
+    margin-left: 15px;      
+}
+
+.typePok2 p {
+    width: 60px;
+    height: 18px;
+    margin: 1px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;    
+}
+
+.pokemonBefore {
+    height: 60px;
+    margin: 0px 0px;
+    margin-right: 10px;
+    display: flex;
+    cursor: pointer; 
+}    
+
+.pokemonSize {
+    height: 140px;
+    margin-left: 15px;
+    text-align: left;
+    line-height: 1.4;             
+}
+
+.pokemonHAndW {
+    color: #88D9E5;
+    font-size: 14px;    
+}
+
+.pokemonHAndWResult {
+    color: white;
+    text-align: left;
+    font-size: 16px;
+}
+
+.centerInfo {
+    width: 57%;
+    background-image: url(images/7kmF.gif);
+    background-repeat: no-repeat;
+    background-position: center;       
+}
+
+.circleImg {
+    background-image: url(images/fondo_pokemon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0px;
+}
+
+.imgPokSelect {
+    display: flex;
+    margin: auto;
+    padding: 50px 0px;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightInfo {
+    width: 22%;
+    margin-left: 0px;
+    margin-right: 15px;
+    text-transform: capitalize;       
+        
+}
+
+.pokemonResistant {
+    height: 145px;    
+    margin-left: 40px;
+}
+
+.pokemonAfter {
+    height: 60px;
+    margin: 0px 15px;
+    margin-right: 85px;
+    display: flex;
+    cursor: pointer;    
+}
+
+.pkmAfter {
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    color: #88D9E5;
+    background-image:url(images/fondo_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: none;
+}
+
+.pokemonWeaknesses {
+    height: 140px;
+    align-content: right;
+    margin-left: 40px;    
+}
+
+.midContainer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-between;
+}
+
+.featuresPok, .aboutPokContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 14px;
+    color: #88D9E5;
+}
+.featuresPok p{
+    width: 90%;
+    height:10%;
+    text-align: left;
+    font-size: 16px;
+    color: #00C1EC;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleaboutPok{
+    width: 90%;
+    height:18%;
+    text-align: left;
+    font-size: 16px;
+    color: #00C1EC;
+}
+.sectionAboutPok{
+    display: flex;
+    align-items: center;
+    height: 88%;
+    width: 93%;
+    padding-left: 5px;
+    font-size: 14px;
+    text-align: left;
+    color: #88D9E5;
+    border:#00C1EC 1px dashed;
+  
+}
+
+.tableStats{ 
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    justify-items: center;
+}
+.tableStats,td{
+   
+    border: 1px solid #00C1EC;
+    border-collapse: collapse;
+    padding: 6px;
+}
+
+.lastContainer {
+    margin-top: 2%;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;            
+    justify-content:space-between;
+    align-items: center;
+}
+
+.evolutionsPokImages {
+    width: 94%;
+    height: 86%;
+    display: flex;
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-around; 
+    border-radius: 10px 10px 10px 10px;
+    border: solid 1px #00C1EC;
+}
+
+.evolutionsPokImages p{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.evoSectionPokNum {
+    font-size: 14px;
+    color: #88D9E5;
+}
+
+.evoSectionPokName {
+    font-size: 16px;
+    color: #00C1EC;
+}
+
+.evoSectionPokCandy {
+    font-size: 12px;
+    color: white;
+}
+
+.noEvolution {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 93%;
+    font-size: 16px;
+    text-align: center;
+    color: #88D9E5;
+}
+.warningSearch{
+    display: flex;
+    flex-direction: row;
+    height: 12%;
+}
+.warningSearch p{
+    margin-bottom: auto;
+    margin-top: auto;
+    color: whitesmoke;
+}
+
+/********************flex contenedor de evoluciones**************************/
+/*.evolutionsPok{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}*/
+/* *****************************************************************/
+/*css de ventana modal*/
+.modal-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal{
+    width: 55%;
+    height: 30%;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+}
+
+.imgWarning{
+    height: 15%;
+    height: 45%;
+}
+
+.imgWarning img{
+    width: 100%;
+    height: 100%;
+}
+.mensajeModal {
+    height: 30%;
+    width: 90%;
+    color:#18383b;
+    display: flex;
+    justify-content: center;
+}
+
+#modalClose {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    color:#18383b;
+    background-color: #88D9E5;
+    border: solid 2px #18383b;
+    border-radius: 5px;
+}
+.closeModal{
+    display: flex;
+    justify-content:flex-end;
+    width: 95%;
+    height: 5%;
+   
+}
+
+/*Footer*/
+.footer {
+    /*background: #15393C;*/
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url(images/fondo_footer.png);
+    background-size: cover;
+    background-color: none;
+    text-align: center;
+    padding: 20px 50px;
+    display:block
+}
+
+.footer1 {
+    font-size: 15px;
+    line-height: 2;
+    text-decoration: bold;
+    color: white;
+}
+
+.footer2 {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
