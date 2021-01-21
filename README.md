@@ -1,4 +1,7 @@
-# POKÉDEX. Data: POKÉMON 
+# POKÉDEX. 
+
+![Aplicacíon en diferentes vistas](src/images/portfolio-3.jpg)
+
 
 ## Índice
 
