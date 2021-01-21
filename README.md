@@ -1,6 +1,6 @@
 # POKÉDEX. 
 
-![Aplicacíon en diferentes vistas](src/images/portfolio-3.jpg)
+![Aplicacíon en diferentes vistas](src/images/portfolio-3.png)
 
 
 ## Índice
