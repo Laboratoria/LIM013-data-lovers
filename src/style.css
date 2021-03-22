@@ -1,47 +1,35 @@
 /*@import url(menu.css);*/ 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
 }
 
 body, html {
-    background: url(img/fondo2.png);
-    background-position: center center;
-    background-repeat: no-repeat;
+    margin: 0px;
+    background: url(img/poke-wall1.png);
     background-attachment: fixed;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    font-family: 'Fredoka One', cursive;
-
-    margin: 20 px;
-    padding: 20px;
+    width: 100vw;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
     text-align: center;
     font-size: 1em; 
 }
 
-body {
-    font-family: 'Fredoka One', cursive;
-    background-color: #DEDEDE;
-    padding: 20px 0 20px 0;
-    margin: 0;
-    font-size: 1; 
-}
 header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);  
-    box-shadow: 0 4px 25 -22px #000;
+    background-color: rgba(255, 255, 255, 0.932); 
     z-index: 2;
-
 }
- 
+
 .header-content{
      max-width: 1200px;
      margin: auto;
@@ -49,15 +37,29 @@ header{
      justify-content: space-between;
 }
 
-.logo{
-     height: 80px;
-     width: 80px;
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
+.logo img{
+    width: 200px;
+    transform: rotate(-5deg);
+    margin: 15px;
     
 }
-  
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    width: 100vw;
+    align-items: center;
+}
+
+section{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 290px;
+  height: 48px;
+}
 /* social bar */
 
 .social-bar {
@@ -115,7 +117,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 /* Menú */
 .menu{
-    height: 80px; 
+    height: 85px; 
 }
 
 .menu nav{
@@ -137,7 +139,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     
 }
 .textoLogo{
-color: #DEDEDE ;
+color: #252424 ;
 }
 
 .container{
@@ -164,15 +166,13 @@ color: #DEDEDE ;
     max-width: 120px;
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 1px 0 1px rgb(255, 255, 255);
     border-radius: .3em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-color: linear-gradient(to bottom, #a3bded 0%, #6991c7 100%);
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-    linear-gradient(to top, #cffdf0 0%, #72afd3 100%); 
+    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .85em auto, 100%;
@@ -185,14 +185,14 @@ color: #DEDEDE ;
     border-color: #888;
    }
    .select-css:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1px 3px rgba(148, 177, 207, 0.7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
     color: #222;
     outline: none;
    }
    .selecct-css option-value{
-    background-image: linear-gradient(to bottom, #b9cef5 0%, #6991c7 100%);
+    background-color:rgb(255, 255, 255);
    }
    .input-css{
     display: block;
@@ -206,13 +206,13 @@ color: #DEDEDE ;
     max-width: 220px;
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid #aaa;
+    border: 1px solid rgb(255, 255, 255);
     box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-    border-radius: .7em;
+    border-radius: .3em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-image: linear-gradient(to top, #cffdf0 0%, #72afd3 100%);
+    background-color: rgb(255, 255, 255);
     text-align: center;
    }
    .input-css::-ms-expand {
@@ -223,7 +223,7 @@ color: #DEDEDE ;
    }
    .input-css:focus {
     border-color: #aaa;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 1px 3px rgba(177, 202, 230, 0.7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
     color: #222;
     outline: none;
@@ -232,25 +232,27 @@ color: #DEDEDE ;
 /* Div de la data */
 
 .dataCompleta {
-    padding: 20px 0;
-    display:flex;
+    padding: auto;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
 }
 
 .dataPoke {
-    background-color: #9ce5f1b2;
-    border-radius: 30px;
-    width: 230px;
-    height: 270px;
-    color:  #27134d;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.664);
+    background-color: #ffffffcc;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 300px;
+    height: 250px;
+    padding: 8px;
+    margin: 30px;
+    color:  #000000;
     text-align: center;
-    margin: 30px 20px 20px 20px;
-    font-family: 'Fredoka One', cursive;
-
+    font-family: 'Pangolin', cursive;
 }
 
 .dataPoke p{
@@ -259,45 +261,23 @@ color: #DEDEDE ;
 }
 
 .poke-name{
-    color:#02154b; 
+    color:#000000; 
     font-size: 35px;
+    text-transform: capitalize;
 }
+
 .poke-img{
-    width: 148px;
-    height: 148px;
+    width: 130px;
+    height: 130px;
 }
 
-.hide{
-    display: none;
-}
+@media screen and (max-width: 501px) {
+    .dataCompleta {
+      display: grid;
+      grid-template-columns: 250px;
+    }
 
-/* Footer info */
-
-footer {
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    left: 0;
-    bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    width: 100%;
-    height: 50px;
-    font-size: 14px;
-    font-weight: 300;
-    font-family: 'Verdana';
-    justify-content: space-evenly;
-    color: white;
-    display: flex; 
-    position: fixed;
-    padding: 10px 0;
-
-}
-
-.logo-footer {
-    width: 20px;
-    height: 20px;
-}
-
-footer div{
-    display: flex;
+    .hide{
+        display: none;
+    }
 }

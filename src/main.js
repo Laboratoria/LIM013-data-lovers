@@ -21,13 +21,11 @@ function showPokemon(poke) {
     }).join("")
 
   return `
-      <div class='dataPoke' data-num='${poke.num}'>     
-          <p class='poke-num'>#${poke.num}</p>
+      <div class='dataPoke' data-num='${poke.num}'>
+      <br>
+          <p class='poke-num'>N°${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'><strong>${poke.name.toUpperCase()}</strong></p>
-          <p class= 'poke-type'>Type: ${poke.type}</p>
-          <p class= 'poke-stats["max-cp]'>CP: ${poke.stats["max-cp"]}</p>
-          <p class= 'poke-stats["max-hp]'>HP: ${poke.stats["max-hp"]}</p>
+          <p class='poke-name'><strong>${poke.name}</strong></p>
       </div>
       `
 }
