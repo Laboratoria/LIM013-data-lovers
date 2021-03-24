@@ -25,7 +25,7 @@ function showPokemon(poke) {
       <br>
           <p class='poke-num'>N°${poke.num}</p>
           <img class='poke-img' src='${poke.img}'>
-          <p class='poke-name'><strong>${poke.name}</strong></p>
+          <div class="poke-name-wall"><p class='poke-name'><strong>${poke.name}</strong></p></div>
       </div>
       `
 }

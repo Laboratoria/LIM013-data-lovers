@@ -53,7 +53,7 @@ main {
 }
 
 section{
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
@@ -78,6 +78,8 @@ section{
 	text-decoration: none;
 	padding: .7rem;
 	display: flex;
+    width: 23px;
+    height: 23px;
 	transition: all .5s;
 }
 
@@ -159,7 +161,7 @@ color: #252424 ;
     font-size: 15px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
-    color: #444;
+    color: rgb(59, 56, 56);
     line-height: 1.3;
     padding: .4em 1.4em .3em .8em;
     width: 400px;
@@ -192,14 +194,14 @@ color: #252424 ;
     outline: none;
    }
    .selecct-css option-value{
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(167, 11, 11);
    }
    .input-css{
     display: block;
     font-size: 13px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
-    color: rgb(38, 7, 66);
+    color: rgb(26, 8, 43);
     line-height: 1.3;
     padding: .4em 1.4em .3em .8em;
     width: 400px;
@@ -241,7 +243,8 @@ color: #252424 ;
 }
 
 .dataPoke {
-    background-color: #ffffffcc;
+    background-image: url(img/pokegold.png);
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -249,10 +252,10 @@ color: #252424 ;
     max-width: 300px;
     height: 250px;
     padding: 8px;
-    margin: 30px;
-    color:  #000000;
+    color:  #D4AF37;
     text-align: center;
     font-family: 'Pangolin', cursive;
+    margin: 30px 20px 20px;
 }
 
 .dataPoke p{
@@ -261,9 +264,16 @@ color: #252424 ;
 }
 
 .poke-name{
-    color:#000000; 
+    color:#D4AF37; 
     font-size: 35px;
     text-transform: capitalize;
+    background-image: url(img/wall-green.jpg);
+    border-radius: 10px;
+    justify-content: center;
+    width: 130px;
+    height: 30px;
+    padding: 5px;
+    margin: 30px;
 }
 
 .poke-img{
