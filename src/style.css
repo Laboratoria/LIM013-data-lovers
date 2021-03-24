@@ -1,7 +1,8 @@
 /*@import url(menu.css);*/ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+
 
 * {
     text-decoration: none;
@@ -13,7 +14,7 @@ body, html {
     background-attachment: fixed;
     background-size: cover;
     width: 100vw;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Syne', sans-serif;
     display: flex;
     flex-direction: column;
     text-transform: capitalize;
@@ -120,6 +121,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 /* Menú */
 .menu{
     height: 85px; 
+    color: #bf930d;
 }
 
 .menu nav{
@@ -141,7 +143,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     
 }
 .textoLogo{
-color: #252424 ;
+color: #534005;
 }
 
 .container{
@@ -159,9 +161,9 @@ color: #252424 ;
 .select-css {
     display: block;
     font-size: 15px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Syne', sans-serif;
     font-weight: 400;
-    color: rgb(59, 56, 56);
+    color: rgb(110, 73, 4);
     line-height: 1.3;
     padding: .4em 1.4em .3em .8em;
     width: 400px;
@@ -190,27 +192,27 @@ color: #252424 ;
     border-color: rgb(255, 255, 255);
     box-shadow: 0 0 1px 3px rgba(148, 177, 207, 0.7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
-    color: #222;
+    color: rgb(121, 73, 11);
     outline: none;
    }
    .selecct-css option-value{
-    background-color:rgb(167, 11, 11);
+    color:rgb(151, 8, 8);
    }
    .input-css{
     display: block;
-    font-size: 13px;
-    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-family: 'Syne', sans-serif;
     font-weight: 400;
-    color: rgb(26, 8, 43);
+    color: rgb(121, 73, 11);
     line-height: 1.3;
-    padding: .4em 1.4em .3em .8em;
+    padding: .7em 1.5em .3em .8em;
     width: 400px;
-    max-width: 220px;
+    max-width: 250px;
     box-sizing: border-box;
     margin: 0;
     border: 1px solid rgb(255, 255, 255);
     box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-    border-radius: .3em;
+    border-radius: .8em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -227,7 +229,7 @@ color: #252424 ;
     border-color: #aaa;
     box-shadow: 0 0 1px 3px rgba(177, 202, 230, 0.7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
-    color: #222;
+    color: rgb(121, 73, 11);
     outline: none;
    }
 
@@ -243,42 +245,39 @@ color: #252424 ;
 }
 
 .dataPoke {
-    background-image: url(img/pokegold.png);
+    background-image: url(img/poke-card.png);
     background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    max-width: 300px;
-    height: 250px;
-    padding: 8px;
-    color:  #D4AF37;
+    max-width: 200px;
+    height: 213px;
+    padding: 20px;
+    color:  #806105ce;
     text-align: center;
     font-family: 'Pangolin', cursive;
-    margin: 30px 20px 20px;
+    margin: 20px 10px 20px 10px;
 }
 
 .dataPoke p{
-    font-size: 18px;
+    font-size: 17px;
     display: space-around;
+    margin: -3px;
 }
 
 .poke-name{
-    color:#D4AF37; 
-    font-size: 35px;
+    color:#806105ce;
+    font-size: 15px;
     text-transform: capitalize;
-    background-image: url(img/wall-green.jpg);
-    border-radius: 10px;
-    justify-content: center;
-    width: 130px;
-    height: 30px;
-    padding: 5px;
-    margin: 30px;
+    margin: 1px;
+    font-family: 'Syne', sans-serif;
+    font-weight: bold;
 }
 
 .poke-img{
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+    margin: 5px 20px 2px 25px; 
 }
 
 @media screen and (max-width: 501px) {
