@@ -73,8 +73,8 @@ section{
     right: 23px;
     top: 220px;
     display: flex;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 }
 .redes a{
     display: block;
@@ -82,9 +82,9 @@ section{
     background-color:rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     margin: 7px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
     text-align: center;
     border-radius: 55%;
     box-shadow: 0px 1px 10px rgba(230, 155, 44, 0.4);
@@ -92,10 +92,23 @@ section{
 }
 .redes a:hover{
     background: #ffffff;
-    color: rgb(151, 88, 6);
+    color: rgb(255, 255, 255);
     width: 45px;
     height: 45px;
     line-height: 45px;
+}
+#instagram{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+#twitter{
+    background: #00acee;
+}
+#youtube{
+    background: #c4302b;
+}
+#facebook{
+    background: #1f5cd6;
 }
 #btn-mas:checked~ .redes a{
     margin-bottom: 20px;
