@@ -10,7 +10,7 @@
 body,
 html {
   margin: 0px;
-  background: url(image/poke-wall1.png);
+  background: url(../image/poke-wall1.png);
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
@@ -260,7 +260,7 @@ section {
 }
 
 .dataPoke {
-  background-image: url(image/poke-card.png);
+  background-image: url(../image/poke-card.png);
   background-size: cover;
   flex-direction: column;
   justify-content: center;
