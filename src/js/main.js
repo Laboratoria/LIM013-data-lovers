@@ -1,5 +1,5 @@
 /* Nuestro argumento es como empieza esta funcion, es el example */
-import filters from './data.js';
+import filters from './js/data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
