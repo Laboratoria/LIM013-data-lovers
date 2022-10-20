@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Poke-Search</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="shortcut icon" href="src/image/pokeball.png" />
+  <script src="https://kit.fontawesome.com/10331f4f57.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="src/image/poke-logo.png">
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li><a class="textoLogo" href="index.html">INICIO</a></li>
+            <li><a class="textoLogo" href="https://vandal.elespanol.com/guias/guia-pokemon-go/como-jugar_">Cómo
+                jugar</a></li>
+            <li><a class="textoLogo"
+                href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE">Descarga
+                aquí</a></li>
+            <li><a class="textoLogo" href="batalla.html">Batalla Pokémon</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="index">
+      <div class="container" id="container">
+        <div class="filterData">
+          <select class="select-css" id="orderPoke">
+            <option value="seleccione_opcion">Orden</option>
+            <option value="up"> A-Z</option>
+            <option value="down"> Z-A</option>
+          </select>
+        </div>
+
+        <div clas="container">
+          <select class="select-css" id="orderCp">
+            <option value="seleccione_opcion">PC</option>
+            <option value="max">Máx PC</option>
+            <option value="min">Min PC</option>
+          </select>
+        </div>
+
+        <div class="filterData">
+          <select class="select-css" id="fullTypes">
+            <option value="infoPokemon">Tipos</option>
+            <option value="flying">Aire</option>
+            <option value="water">Agua</option>
+            <option value="steel">Acero</option>
+            <option value="bug">Bicho</option>
+            <option value="dragon">Dragón</option>
+            <option value="electric">Eléctrico</option>
+            <option value="ghost">Fantasma</option>
+            <option value="fire">Fuego</option>
+            <option value="ice">Hielo</option>
+            <option value="fairy">Hada</option>
+            <option value="normal">Normal</option>
+            <option value="dark">Oscuro</option>
+            <option value="grass">Planta</option>
+            <option value="fighting">Peleador</option>
+            <option value="psychic">Psíquico</option>
+            <option value="rock">Roca</option>
+            <option value="ground">Tierra</option>
+            <option value="poison">Veneno</option>
+          </select>
+        </div>
+
+        <div class="filterData">
+          <select class="select-css" id="selectRegion">
+            <option value="seleccione_opcion">Región</option>
+            <option value="kanto">Kanto</option>
+            <option value="johto">Johto</option>
+          </select>
+        </div>
+
+        <div class="filterData">
+            <input class="input-css" type="text" id="selectName" placeholder="Busca tu Pokémon aquí">
+            <div class="btn">
+              <i class="fas fa-search icon"></i>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="social-bar">
+      <input type="checkbox" id="btn-mas">
+      <div class="redes">
+          <a href="https://www.facebook.com/PokemonGO" class="fab fa-facebook-f" id="facebook"></a>
+          <a href="https://twitter.com/pokemongoapp?lang=es" class="fab fa-twitter" id="twitter"></a>
+          <a href="https://www.youtube.com/channel/UClSYqPopacBGbxUxBsJyOLQ" class="fab fa-youtube" id="youtube"></a>
+          <a href="https://www.instagram.com/pokemongoapp/" class="fab fa-instagram" id="instagram"></a>
+      </div>
+  </div>
+
+    <div class="dataCompleta" id="dataCompleta">
+    </div>
+  </main>
+
+  <footer>
+    <p></p>
+  </footer>
+
+  <script src="src/main.js" type="module"></script>
+</body>
+
+</html>
